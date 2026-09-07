@@ -48,7 +48,12 @@ const Entity = defineTable({
     name: column.text(),
     aka: column.json({ default: [] }),
     role: column.text(),        // short label, shown under the name
-    tagline: column.text(),     // one line, safe from `revealedAt` onward
+    /* Taglines are progressive. A tagline is a summary, and a summary of a
+       span has to be gated at the end of that span — the same rule floors
+       follow. One entry is the common case (safe from `revealedAt`); a
+       character whose one-liner changes as their story does gets several, and
+       the page shows the latest one the reader has reached. */
+    taglines: column.json(),
     revealedAt: column.text(),  // when the entity may be *named* at all
     sort: column.number({ default: 0 }),
   },

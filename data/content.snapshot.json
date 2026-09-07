@@ -431,7 +431,13 @@
         "Crawler Carl"
       ],
       "role": "Protagonist",
-      "tagline": "Twenty-seven, US Coast Guard, marine technician. Went outside for a cigarette and lived.",
+      "taglines": [
+        {
+          "at": "1:1",
+          "sortKey": 1001,
+          "text": "Twenty-seven, US Coast Guard, marine technician. Went outside for a cigarette and lived."
+        }
+      ],
       "revealedAt": "1:1",
       "sort": 1
     },
@@ -444,7 +450,13 @@
         "Princess Donut the Queen Anne Chonk"
       ],
       "role": "Co-protagonist",
-      "tagline": "A pedigreed tortoiseshell Persian with a bedroom full of ribbons, a sultry and pompous voice, and no doubt whatsoever about her own importance.",
+      "taglines": [
+        {
+          "at": "1:1",
+          "sortKey": 1001,
+          "text": "A pedigreed tortoiseshell Persian with a bedroom full of ribbons, a sultry and pompous voice, and no doubt whatsoever about her own importance."
+        }
+      ],
       "revealedAt": "1:1",
       "sort": 2
     },
@@ -456,7 +468,13 @@
         "Mongoliensis"
       ],
       "role": "Dinosaur",
-      "tagline": "A food-motivated velociraptor who regards Princess Donut as his mother and will die for her without pausing to think about it.",
+      "taglines": [
+        {
+          "at": "1:46",
+          "sortKey": 1046,
+          "text": "A food-motivated velociraptor who regards Princess Donut as his mother and will die for her without pausing to think about it."
+        }
+      ],
       "revealedAt": "1:46",
       "sort": 3
     },
@@ -466,7 +484,13 @@
       "name": "Mordecai",
       "aka": [],
       "role": "Guide & manager",
-      "tagline": "An indentured Borant guide, a crawler from a season that ended badly, and the sharpest memory in the dungeon.",
+      "taglines": [
+        {
+          "at": "1:2",
+          "sortKey": 1002,
+          "text": "An indentured Borant guide, a crawler from a season that ended badly, and the sharpest memory in the dungeon."
+        }
+      ],
       "revealedAt": "1:2",
       "sort": 4
     },
@@ -478,7 +502,13 @@
         "Katia"
       ],
       "role": "Party",
-      "tagline": "A university art professor from Reykjavík who can mould her own mass like clay, once she works out how.",
+      "taglines": [
+        {
+          "at": "2:21",
+          "sortKey": 2021,
+          "text": "A university art professor from Reykjavík who can mould her own mass like clay, once she works out how."
+        }
+      ],
       "revealedAt": "2:21",
       "sort": 5
     },
@@ -488,7 +518,18 @@
       "name": "Imani",
       "aka": [],
       "role": "Crawler · Meadow Lark",
-      "tagline": "Out of the Meadow Lark Elder Care Facility, and still standing on the tenth floor.",
+      "taglines": [
+        {
+          "at": "1:22",
+          "sortKey": 1022,
+          "text": "Out of the Meadow Lark Elder Care Facility, and nowhere near finished."
+        },
+        {
+          "at": "8:87",
+          "sortKey": 8087,
+          "text": "Out of the Meadow Lark Elder Care Facility, and holding a portal open on the racing floor."
+        }
+      ],
       "revealedAt": "1:22",
       "sort": 6
     },
@@ -498,7 +539,18 @@
       "name": "Agatha",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Introduced as the mysterious one at Meadow Lark. Nine floors later a warlord calls her an enemy to them all.",
+      "taglines": [
+        {
+          "at": "1:22",
+          "sortKey": 1022,
+          "text": "The mysterious one at the Meadow Lark Elder Care Facility, who fought a boss beside them and then took her leave."
+        },
+        {
+          "at": "7:78",
+          "sortKey": 7078,
+          "text": "The mysterious one from Meadow Lark — and, a warlord tells the Warlord Chat, an enemy to all of them."
+        }
+      ],
       "revealedAt": "1:22",
       "sort": 7
     },
@@ -510,7 +562,18 @@
         "Elle"
       ],
       "role": "Crawler",
-      "tagline": "Dragged into a safe room on the first floor, and running a squad by the eighth.",
+      "taglines": [
+        {
+          "at": "1:31",
+          "sortKey": 1031,
+          "text": "Hauled into a first-floor safe room as the next episode tunnelled through."
+        },
+        {
+          "at": "6:63",
+          "sortKey": 6063,
+          "text": "Hauled into a safe room on the first floor, and running her own squad on the card floor."
+        }
+      ],
       "revealedAt": "1:31",
       "sort": 8
     },
@@ -520,7 +583,13 @@
       "name": "Zev",
       "aka": [],
       "role": "Borant liaison",
-      "tagline": "Production's point of contact with the Royal Court, and a serious Gossip Girl fan.",
+      "taglines": [
+        {
+          "at": "1:35",
+          "sortKey": 1035,
+          "text": "Production's point of contact with the Royal Court, and a serious Gossip Girl fan."
+        }
+      ],
       "revealedAt": "1:35",
       "sort": 9
     },
@@ -532,7 +601,13 @@
         "Signet"
       ],
       "role": "NPC · Vengeance of the Daughter",
-      "tagline": "Star of a scripted Syndicate revenge drama, with producers steering her grief for the ratings.",
+      "taglines": [
+        {
+          "at": "2:6",
+          "sortKey": 2006,
+          "text": "Star of a scripted Syndicate revenge drama, with producers steering her grief for the ratings."
+        }
+      ],
       "revealedAt": "2:6",
       "sort": 10
     },
@@ -544,7 +619,13 @@
         "Grimaldi"
       ],
       "role": "NPC · ringmaster",
-      "tagline": "Ringmaster of Grimaldi's Traveling Circus, and the man who took Signet in.",
+      "taglines": [
+        {
+          "at": "2:6",
+          "sortKey": 2006,
+          "text": "Ringmaster of Grimaldi's Traveling Circus, and the man who took Signet in."
+        }
+      ],
       "revealedAt": "2:6",
       "sort": 11
     },
@@ -556,7 +637,13 @@
         "Psamathe"
       ],
       "role": "Withering spirit",
-      "tagline": "Half the soul of a goddess, sealed in a sex doll's head, and extremely loud about it.",
+      "taglines": [
+        {
+          "at": "4:24",
+          "sortKey": 4024,
+          "text": "Half the soul of a goddess, sealed in a sex doll's head, and extremely loud about it."
+        }
+      ],
       "revealedAt": "4:24",
       "sort": 12
     },
@@ -566,7 +653,23 @@
       "name": "Shi Maria",
       "aka": [],
       "role": "Crawler · card",
-      "tagline": "Let herself be turned into a playing card in exchange for passage, and did not stay in it.",
+      "taglines": [
+        {
+          "at": "6:25",
+          "sortKey": 6025,
+          "text": "Samantha's new friend on the card floor, who says she can give her a body back."
+        },
+        {
+          "at": "6:46",
+          "sortKey": 6046,
+          "text": "Traded being turned into a playing card for passage, then won the floor's boss fight almost single-handed."
+        },
+        {
+          "at": "7:19",
+          "sortKey": 7019,
+          "text": "Traded being turned into a card for passage. She is not in the card now."
+        }
+      ],
       "revealedAt": "6:25",
       "sort": 13
     },
@@ -576,7 +679,13 @@
       "name": "Juice Box",
       "aka": [],
       "role": "Ally",
-      "tagline": "A changeling prostitute Louis brought along, who ended up carrying the most dangerous message in the crawl.",
+      "taglines": [
+        {
+          "at": "4:5",
+          "sortKey": 4005,
+          "text": "A changeling prostitute Louis brought along, who ended up carrying the most dangerous message in the crawl."
+        }
+      ],
       "revealedAt": "4:5",
       "sort": 14
     },
@@ -586,7 +695,18 @@
       "name": "Louis",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Found in the desert with Firas, and still being pulled through portals six floors later.",
+      "taglines": [
+        {
+          "at": "4:3",
+          "sortKey": 4003,
+          "text": "Found in the desert quadrant with Firas, alongside a team of car-salesman archers."
+        },
+        {
+          "at": "8:87",
+          "sortKey": 8087,
+          "text": "Found in the desert on the fifth floor, and still going through other people's portals on the tenth."
+        }
+      ],
       "revealedAt": "4:3",
       "sort": 15
     },
@@ -596,7 +716,13 @@
       "name": "Tran",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Helped flood a necropolis, then walked out of a boss through a hole in reality.",
+      "taglines": [
+        {
+          "at": "4:22",
+          "sortKey": 4022,
+          "text": "Helped flood a necropolis, then walked out of a boss through a hole in reality."
+        }
+      ],
       "revealedAt": "4:22",
       "sort": 16
     },
@@ -606,7 +732,13 @@
       "name": "Ferdinand",
       "aka": [],
       "role": "Cat",
-      "tagline": "Bea's other cat. Donut loves him. On the sixth floor he turns up working for a High Elf queen.",
+      "taglines": [
+        {
+          "at": "1:34",
+          "sortKey": 1034,
+          "text": "Bea's other cat. Donut loves him. On the sixth floor he turns up working for a High Elf queen."
+        }
+      ],
       "revealedAt": "1:34",
       "sort": 17
     },
@@ -616,7 +748,13 @@
       "name": "Emberus",
       "aka": [],
       "role": "God",
-      "tagline": "The god Carl worshipped in a falling plane because there was nothing else left to try.",
+      "taglines": [
+        {
+          "at": "4:30",
+          "sortKey": 4030,
+          "text": "The god Carl worshipped in a falling plane because there was nothing else left to try."
+        }
+      ],
       "revealedAt": "4:30",
       "sort": 18
     },
@@ -626,7 +764,23 @@
       "name": "Miriam Dom",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Worked the Tangle with Prepotente, became a vampire on the Hunting Grounds, and was killed for a television programme.",
+      "taglines": [
+        {
+          "at": "3:32",
+          "sortKey": 3032,
+          "text": "Working the Iron Tangle from the far side of the knot, with a goat."
+        },
+        {
+          "at": "5:6",
+          "sortKey": 5006,
+          "text": "Worked the Tangle with Prepotente, and came onto the Hunting Grounds a vampire."
+        },
+        {
+          "at": "7:45",
+          "sortKey": 7045,
+          "text": "Worked the Tangle with Prepotente, turned vampire on the Hunting Grounds, and was spent to make a television programme."
+        }
+      ],
       "revealedAt": "3:32",
       "sort": 19
     },
@@ -636,7 +790,23 @@
       "name": "Prepotente",
       "aka": [],
       "role": "Crawler · goat",
-      "tagline": "A profane, opera-singing Boer goat who destroyed an entire floor of the world dungeon and killed an army over a friend.",
+      "taglines": [
+        {
+          "at": "3:3",
+          "sortKey": 3003,
+          "text": "A profane, opera-singing Boer goat."
+        },
+        {
+          "at": "5:end",
+          "sortKey": 5999,
+          "text": "A profane, opera-singing Boer goat who reduced an entire floor of the world dungeon to dust."
+        },
+        {
+          "at": "7:45",
+          "sortKey": 7045,
+          "text": "A profane, opera-singing Boer goat who reduced a floor to dust, and took an army apart for a friend."
+        }
+      ],
       "revealedAt": "3:3",
       "sort": 20
     },
@@ -648,7 +818,23 @@
         "Team Li Na"
       ],
       "role": "Crawler",
-      "tagline": "Rescued off a game show on the first floor; running a squad and lending out Dread by the tenth.",
+      "taglines": [
+        {
+          "at": "1:42",
+          "sortKey": 1042,
+          "text": "Pulled off a live game show on the second floor, with her brother and his team."
+        },
+        {
+          "at": "6:63",
+          "sortKey": 6063,
+          "text": "Pulled off a game show on the second floor; running her own squad by the card floor."
+        },
+        {
+          "at": "8:73",
+          "sortKey": 8073,
+          "text": "Pulled off a game show on the second floor, and lending her Dread out to watch over everyone by the races."
+        }
+      ],
       "revealedAt": "1:42",
       "sort": 21
     },
@@ -658,7 +844,18 @@
       "name": "Florin",
       "aka": [],
       "role": "Crawler",
-      "tagline": "On screen from the third floor to the eleventh, and carried down the last set of stairs unconscious.",
+      "taglines": [
+        {
+          "at": "2:14",
+          "sortKey": 2014,
+          "text": "First seen on a recap, partied with Ifechi."
+        },
+        {
+          "at": "5:71",
+          "sortKey": 5071,
+          "text": "The one who worked out what is actually inside Lucia's head."
+        }
+      ],
       "revealedAt": "2:14",
       "sort": 22
     },
@@ -668,7 +865,28 @@
       "name": "Lucia Mar",
       "aka": [],
       "role": "Crawler",
-      "tagline": "On the first broadcast, hunting the Royal Court by the third floor, and carrying something nobody can account for.",
+      "taglines": [
+        {
+          "at": "1:14",
+          "sortKey": 1014,
+          "text": "Seen on the very first broadcast."
+        },
+        {
+          "at": "2:21",
+          "sortKey": 2021,
+          "text": "Seen on the first broadcast, and hunting the Royal Court by the Over City."
+        },
+        {
+          "at": "5:71",
+          "sortKey": 5071,
+          "text": "Hunting the Royal Court since the Over City, with more than one voice in her head."
+        },
+        {
+          "at": "7:end",
+          "sortKey": 7999,
+          "text": "There is more than one voice in her head, and more than a hundred thousand children in her body."
+        }
+      ],
       "revealedAt": "1:14",
       "sort": 23
     },
@@ -678,7 +896,23 @@
       "name": "Quan Ch",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Opened the Celestial box that put Borant in court, ruined a good plan, and left Donut his cloak.",
+      "taglines": [
+        {
+          "at": "2:end",
+          "sortKey": 2999,
+          "text": "Opened the Celestial box that put Borant in front of a Syndicate court."
+        },
+        {
+          "at": "4:4",
+          "sortKey": 4004,
+          "text": "Opened the Celestial box that put Borant in court, and wrecked a good plan on the recap."
+        },
+        {
+          "at": "7:3",
+          "sortKey": 7003,
+          "text": "Opened the box that put Borant in court, wrecked a good plan, and left Donut his cloak."
+        }
+      ],
       "revealedAt": "2:end",
       "sort": 24
     },
@@ -688,7 +922,18 @@
       "name": "Bomo",
       "aka": [],
       "role": "Mercenary",
-      "tagline": "Hired out of the Desperado Club with The Sledge, and later handed over as part of a bargain for the Gate.",
+      "taglines": [
+        {
+          "at": "3:8",
+          "sortKey": 3008,
+          "text": "A mercenary hired out of the Desperado Club, alongside The Sledge."
+        },
+        {
+          "at": "5:3",
+          "sortKey": 5003,
+          "text": "A mercenary hired at the Desperado, handed over as part of the bargain for the Gate."
+        }
+      ],
       "revealedAt": "3:8",
       "sort": 25
     },
@@ -698,7 +943,13 @@
       "name": "Quasar",
       "aka": [],
       "role": "Lawyer",
-      "tagline": "Carl's lawyer, who turned handing over the most dangerous artifact in the crawl into a decent trade.",
+      "taglines": [
+        {
+          "at": "5:3",
+          "sortKey": 5003,
+          "text": "Carl's lawyer, who turned handing over the most dangerous artifact in the crawl into a decent trade."
+        }
+      ],
       "revealedAt": "5:3",
       "sort": 26
     },
@@ -711,7 +962,13 @@
         "Maggie My"
       ],
       "role": "Antagonists",
-      "tagline": "Two crawlers who worked out that killing humans in safe rooms pays better than fighting monsters.",
+      "taglines": [
+        {
+          "at": "1:13",
+          "sortKey": 1013,
+          "text": "Two crawlers who worked out that killing humans in safe rooms pays better than fighting monsters."
+        }
+      ],
       "revealedAt": "1:13",
       "sort": 27
     },
@@ -723,7 +980,13 @@
         "Bea"
       ],
       "role": "Earth",
-      "tagline": "Carl's ex, Donut's owner, and the reason there were pink Crocs by the door.",
+      "taglines": [
+        {
+          "at": "1:1",
+          "sortKey": 1001,
+          "text": "Carl's ex, Donut's owner, and the reason there were pink Crocs by the door."
+        }
+      ],
       "revealedAt": "1:1",
       "sort": 28
     },
@@ -733,7 +996,13 @@
       "name": "Hekla",
       "aka": [],
       "role": "Crawler · Brynhild's Daughters",
-      "tagline": "Leads Brynhild's Daughters, and hands Katia to the Royal Court before the gap kills her.",
+      "taglines": [
+        {
+          "at": "1:20",
+          "sortKey": 1020,
+          "text": "Leads Brynhild's Daughters, and hands Katia to the Royal Court before the gap kills her."
+        }
+      ],
       "revealedAt": "1:20",
       "sort": 29
     },
@@ -743,7 +1012,13 @@
       "name": "Eva",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Katia's friend and fellow professor, who did not wait for her.",
+      "taglines": [
+        {
+          "at": "2:21",
+          "sortKey": 2021,
+          "text": "Katia's friend and fellow professor, who did not wait for her."
+        }
+      ],
       "revealedAt": "2:21",
       "sort": 30
     },
@@ -753,7 +1028,13 @@
       "name": "Odette",
       "aka": [],
       "role": "Advisor",
-      "tagline": "Told them Mordecai's memory was worth more than anything they could pull out of a box.",
+      "taglines": [
+        {
+          "at": "1:28",
+          "sortKey": 1028,
+          "text": "Told them Mordecai's memory was worth more than anything they could pull out of a box."
+        }
+      ],
       "revealedAt": "1:28",
       "sort": 31
     },
@@ -765,7 +1046,13 @@
         "the AI"
       ],
       "role": "Announcer & referee",
-      "tagline": "Announcer, referee, loot dispenser and comedian. Not neutral, and not pretending to be.",
+      "taglines": [
+        {
+          "at": "1:1",
+          "sortKey": 1001,
+          "text": "Announcer, referee, loot dispenser and comedian. Not neutral, and not pretending to be."
+        }
+      ],
       "revealedAt": "1:1",
       "sort": 32
     },
@@ -775,7 +1062,13 @@
       "name": "Orren",
       "aka": [],
       "role": "Syndicate liaison",
-      "tagline": "The Syndicate's man, who keeps having to let them go because he cannot prove anything.",
+      "taglines": [
+        {
+          "at": "4:19",
+          "sortKey": 4019,
+          "text": "The Syndicate's man, who keeps having to let them go because he cannot prove anything."
+        }
+      ],
       "revealedAt": "4:19",
       "sort": 33
     },
@@ -787,7 +1080,23 @@
         "Justice"
       ],
       "role": "Former crawler",
-      "tagline": "Joined fifty thousand retired crawlers under a cat's banner, then let every god out of its cell.",
+      "taglines": [
+        {
+          "at": "7:11",
+          "sortKey": 7011,
+          "text": "One of fifty thousand retired crawlers who came back in under a cat's banner."
+        },
+        {
+          "at": "7:end",
+          "sortKey": 7999,
+          "text": "Came back in with the Princess Posse, and opened every cell the old gods were kept in."
+        },
+        {
+          "at": "8:1",
+          "sortKey": 8001,
+          "text": "Came back in with the Princess Posse, opened every cell, and did not outlive it."
+        }
+      ],
       "revealedAt": "7:11",
       "sort": 34
     },
@@ -797,7 +1106,13 @@
       "name": "Tipid",
       "aka": [],
       "role": "Former crawler",
-      "tagline": "Came back into the dungeon voluntarily, and brought the institutional memory with him.",
+      "taglines": [
+        {
+          "at": "7:11",
+          "sortKey": 7011,
+          "text": "Came back into the dungeon voluntarily, and brought the institutional memory with him."
+        }
+      ],
       "revealedAt": "7:11",
       "sort": 35
     },
@@ -809,7 +1124,18 @@
         "Sister Ines Quiteria"
       ],
       "role": "Crawler",
-      "tagline": "A Cat Girl who had every reason to distrust Donut on sight, and ended up holding a demon prince on a leash.",
+      "taglines": [
+        {
+          "at": "6:5",
+          "sortKey": 6005,
+          "text": "A Cat Girl with every reason to distrust Donut on sight."
+        },
+        {
+          "at": "6:61",
+          "sortKey": 6061,
+          "text": "A Cat Girl with every reason to distrust Donut, holding a demon prince on a leash."
+        }
+      ],
       "revealedAt": "6:5",
       "sort": 36
     },
@@ -819,7 +1145,13 @@
       "name": "Amayon",
       "aka": [],
       "role": "Demon prince",
-      "tagline": "A major demon in a giant snake's body, trying to cast his way off the floor while somebody else holds the reins.",
+      "taglines": [
+        {
+          "at": "6:58",
+          "sortKey": 6058,
+          "text": "A major demon in a giant snake's body, trying to cast his way off the floor while somebody else holds the reins."
+        }
+      ],
       "revealedAt": "6:58",
       "sort": 37
     },
@@ -829,7 +1161,23 @@
       "name": "Britney",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Joined in the desert with Vadim, came out of the Hunting Grounds burned, and settled an account on the eleventh floor.",
+      "taglines": [
+        {
+          "at": "4:25",
+          "sortKey": 4025,
+          "text": "Joined the party in the desert quadrant with Vadim."
+        },
+        {
+          "at": "5:77",
+          "sortKey": 5077,
+          "text": "Joined in the desert with Vadim, and came off the Hunting Grounds badly burned."
+        },
+        {
+          "at": "8:83",
+          "sortKey": 8083,
+          "text": "Burned on the Hunting Grounds, and settling accounts at the portals to the eleventh floor."
+        }
+      ],
       "revealedAt": "4:25",
       "sort": 38
     },
@@ -839,7 +1187,18 @@
       "name": "Osvaldo",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Collects the dead, belongs to no army, and takes deals from nobody.",
+      "taglines": [
+        {
+          "at": "5:77",
+          "sortKey": 5077,
+          "text": "Collects the dead, and belongs to no army."
+        },
+        {
+          "at": "8:79",
+          "sortKey": 8079,
+          "text": "Collects the dead, belongs to no army, and will not take a deal from anyone."
+        }
+      ],
       "revealedAt": "5:77",
       "sort": 39
     },
@@ -851,7 +1210,18 @@
         "Imogen"
       ],
       "role": "High Elf queen",
-      "tagline": "A queen of the High Elves who is probably a repurposed human, and whose familiar used to live in Carl's flat.",
+      "taglines": [
+        {
+          "at": "5:20",
+          "sortKey": 5020,
+          "text": "A High Elf queen who, the word is, will turn out to be a repurposed human."
+        },
+        {
+          "at": "5:51",
+          "sortKey": 5051,
+          "text": "A High Elf queen, probably a repurposed human, whose familiar used to live in Carl's flat."
+        }
+      ],
       "revealedAt": "5:20",
       "sort": 40
     },
@@ -863,7 +1233,18 @@
         "Warlord Akuma"
       ],
       "role": "Warlord",
-      "tagline": "Co-warlord of the War Mages, and not happy about who he shares it with.",
+      "taglines": [
+        {
+          "at": "7:61",
+          "sortKey": 7061,
+          "text": "A warlord on the ninth floor."
+        },
+        {
+          "at": "7:69",
+          "sortKey": 7069,
+          "text": "Co-warlord of the War Mages, and not happy about who he shares it with."
+        }
+      ],
       "revealedAt": "7:61",
       "sort": 41
     },
@@ -873,7 +1254,18 @@
       "name": "Eris",
       "aka": [],
       "role": "Summoned power",
-      "tagline": "Summoned into a war, freezes almost everyone in it, and later empties every crawler's pockets at once.",
+      "taglines": [
+        {
+          "at": "7:61",
+          "sortKey": 7061,
+          "text": "Summoned into the middle of a war, and freezes almost everyone standing in it."
+        },
+        {
+          "at": "8:97",
+          "sortKey": 8097,
+          "text": "Froze almost everyone in a war, and empties every crawler's pockets into somebody else's."
+        }
+      ],
       "revealedAt": "7:61",
       "sort": 42
     },
@@ -883,7 +1275,18 @@
       "name": "Chaco",
       "aka": [],
       "role": "Presenter",
-      "tagline": "Arrived out of a prize wheel and put Mordecai in a seven-day time-out. It does not end well for him.",
+      "taglines": [
+        {
+          "at": "3:7",
+          "sortKey": 3007,
+          "text": "Arrived out of a prize wheel and put Mordecai in a seven-day time-out."
+        },
+        {
+          "at": "8:92",
+          "sortKey": 8092,
+          "text": "Arrived out of a prize wheel, and found out what the AI does to a presenter who freezes."
+        }
+      ],
       "revealedAt": "3:7",
       "sort": 43
     },
@@ -893,7 +1296,18 @@
       "name": "Li Jun",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Bullied on live television on the second floor, and holding doors open in Club Vanquisher on the ninth.",
+      "taglines": [
+        {
+          "at": "1:42",
+          "sortKey": 1042,
+          "text": "Bullied on live television on the second floor, until someone gambled on being too valuable to punish."
+        },
+        {
+          "at": "7:50",
+          "sortKey": 7050,
+          "text": "Bullied on live television on the second floor, and holding a door open in Club Vanquisher on the ninth."
+        }
+      ],
       "revealedAt": "1:42",
       "sort": 44
     },
@@ -903,7 +1317,13 @@
       "name": "The Maestro",
       "aka": [],
       "role": "Presenter",
-      "tagline": "Runs Death Watch Extreme Dungeon Mayhem, and picks on people who cannot answer back.",
+      "taglines": [
+        {
+          "at": "1:42",
+          "sortKey": 1042,
+          "text": "Runs Death Watch Extreme Dungeon Mayhem, and picks on people who cannot answer back."
+        }
+      ],
       "revealedAt": "1:42",
       "sort": 45
     },
@@ -913,7 +1333,18 @@
       "name": "Firas",
       "aka": [],
       "role": "Crawler",
-      "tagline": "Found in the desert with Louis, detoxed by Mordecai, and dead before the Hunting Grounds were over.",
+      "taglines": [
+        {
+          "at": "4:3",
+          "sortKey": 4003,
+          "text": "Found in the desert quadrant with Louis, and detoxed on the spot by Mordecai."
+        },
+        {
+          "at": "5:77",
+          "sortKey": 5077,
+          "text": "Found in the desert with Louis. He did not come off the Hunting Grounds."
+        }
+      ],
       "revealedAt": "4:3",
       "sort": 46
     },
@@ -923,7 +1354,18 @@
       "name": "Vrah",
       "aka": [],
       "role": "Antagonist",
-      "tagline": "Killed by a dinosaur and a cat in the battle for a submerged castle.",
+      "taglines": [
+        {
+          "at": "5:10",
+          "sortKey": 5010,
+          "text": "An obstacle between the party and the submerged castle."
+        },
+        {
+          "at": "5:75",
+          "sortKey": 5075,
+          "text": "Killed by a dinosaur and a cat in the battle for the submerged castle."
+        }
+      ],
       "revealedAt": "5:10",
       "sort": 47
     },
@@ -935,7 +1377,13 @@
         "the Gate"
       ],
       "role": "Artifact · legendary/celestial",
-      "tagline": "A teleport that works by tearing a hole in the prison the old gods were thrown into. Something always comes back through.",
+      "taglines": [
+        {
+          "at": "4:9",
+          "sortKey": 4009,
+          "text": "A teleport that works by tearing a hole in the prison the old gods were thrown into. Something always comes back through."
+        }
+      ],
       "revealedAt": "4:9",
       "sort": 1
     },
@@ -947,7 +1395,13 @@
         "the Doomsday Scenario"
       ],
       "role": "Unstable custom explosive",
-      "tagline": "An explosion large enough to rattle the teeth of a god. It goes off the instant it leaves his inventory.",
+      "taglines": [
+        {
+          "at": "2:25",
+          "sortKey": 2025,
+          "text": "An explosion large enough to rattle the teeth of a god. It goes off the instant it leaves his inventory."
+        }
+      ],
       "revealedAt": "2:25",
       "sort": 2
     },
@@ -960,7 +1414,13 @@
         "the Crown"
       ],
       "role": "Tiara · fleeting, unique",
-      "tagline": "A tiara of dark smoky gems that enrols the wearer in a royal succession eight floors down.",
+      "taglines": [
+        {
+          "at": "1:7",
+          "sortKey": 1007,
+          "text": "A tiara of dark smoky gems that enrols the wearer in a royal succession eight floors down."
+        }
+      ],
       "revealedAt": "1:7",
       "sort": 3
     },
@@ -972,7 +1432,13 @@
         "the Cookbook"
       ],
       "role": "Document",
-      "tagline": "Passed hand to hand by the crawlers of earlier seasons. Carl is its twenty-fifth holder.",
+      "taglines": [
+        {
+          "at": "3:8",
+          "sortKey": 3008,
+          "text": "Passed hand to hand by the crawlers of earlier seasons. Carl is its twenty-fifth holder."
+        }
+      ],
       "revealedAt": "3:8",
       "sort": 4
     },
@@ -982,7 +1448,13 @@
       "name": "Enhanced Pet Biscuit",
       "aka": [],
       "role": "Consumable",
-      "tagline": "Makes an animal sapient. One biscuit, one cat, and the shape of the entire crawl changes.",
+      "taglines": [
+        {
+          "at": "1:5",
+          "sortKey": 1005,
+          "text": "Makes an animal sapient. One biscuit, one cat, and the shape of the entire crawl changes."
+        }
+      ],
       "revealedAt": "1:5",
       "sort": 5
     },
@@ -994,7 +1466,13 @@
         "the Ring of Divine Suffering"
       ],
       "role": "Jewellery",
-      "tagline": "Mark a target, kill it, take its stats. Mordecai says it is addictive, and he is not being figurative.",
+      "taglines": [
+        {
+          "at": "5:5",
+          "sortKey": 5005,
+          "text": "Mark a target, kill it, take its stats. Mordecai says it is addictive, and he is not being figurative."
+        }
+      ],
       "revealedAt": "5:5",
       "sort": 6
     },
@@ -1006,7 +1484,13 @@
         "the Orchid boon"
       ],
       "role": "Consumable · boon",
-      "tagline": "Eat the flower, spend an hour at one percent, and a goddess decides what you become.",
+      "taglines": [
+        {
+          "at": "6:19",
+          "sortKey": 6019,
+          "text": "Eat the flower, spend an hour at one percent, and a goddess decides what you become."
+        }
+      ],
       "revealedAt": "6:19",
       "sort": 7
     },
@@ -1016,7 +1500,13 @@
       "name": "Memorial Crystal",
       "aka": [],
       "role": "Remains",
-      "tagline": "What is left of someone when the dungeon is finished with them, and worth stealing.",
+      "taglines": [
+        {
+          "at": "5:69",
+          "sortKey": 5069,
+          "text": "What is left of someone when the dungeon is finished with them, and worth stealing."
+        }
+      ],
       "revealedAt": "5:69",
       "sort": 8
     },
@@ -1026,7 +1516,13 @@
       "name": "Tiara of a Thousand Lights",
       "aka": [],
       "role": "Jewellery · celestial",
-      "tagline": "Out of a celestial box, from a waste-management company, on the eve of a war.",
+      "taglines": [
+        {
+          "at": "7:3",
+          "sortKey": 7003,
+          "text": "Out of a celestial box, from a waste-management company, on the eve of a war."
+        }
+      ],
       "revealedAt": "7:3",
       "sort": 9
     },
@@ -1036,7 +1532,13 @@
       "name": "The Scavenger's Daughter",
       "aka": [],
       "role": "Upgrade patch",
-      "tagline": "Worth a war-mage extraction to get hold of, and it swaps every crawler's inventory with the nearest crawler's.",
+      "taglines": [
+        {
+          "at": "7:78",
+          "sortKey": 7078,
+          "text": "Worth a war-mage extraction to get hold of, and it swaps every crawler's inventory with the nearest crawler's."
+        }
+      ],
       "revealedAt": "7:78",
       "sort": 10
     },
@@ -1046,7 +1548,13 @@
       "name": "The Nothing",
       "aka": [],
       "role": "Prison dimension",
-      "tagline": "Where the pantheon put the old gods and demons. Every shortcut the Gate takes goes through it.",
+      "taglines": [
+        {
+          "at": "4:24",
+          "sortKey": 4024,
+          "text": "Where the pantheon put the old gods and demons. Every shortcut the Gate takes goes through it."
+        }
+      ],
       "revealedAt": "4:24",
       "sort": 11
     },
@@ -1056,7 +1564,13 @@
       "name": "The Transformation",
       "aka": [],
       "role": "The end of Earth",
-      "tagline": "Every structure on the planet comes down at once. Everyone indoors dies.",
+      "taglines": [
+        {
+          "at": "1:1",
+          "sortKey": 1001,
+          "text": "Every structure on the planet comes down at once. Everyone indoors dies."
+        }
+      ],
       "revealedAt": "1:1",
       "sort": 1
     },
@@ -1066,7 +1580,13 @@
       "name": "Eighteen Floors, On a Clock",
       "aka": [],
       "role": "Structure",
-      "tagline": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it.",
+      "taglines": [
+        {
+          "at": "1:1",
+          "sortKey": 1001,
+          "text": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it."
+        }
+      ],
       "revealedAt": "1:1",
       "sort": 2
     },
@@ -1079,7 +1599,13 @@
         "the broadcast"
       ],
       "role": "The show",
-      "tagline": "The crawl is a television programme, broadcast across the galaxy. The survivors are the cast.",
+      "taglines": [
+        {
+          "at": "1:4",
+          "sortKey": 1004,
+          "text": "The crawl is a television programme, broadcast across the galaxy. The survivors are the cast."
+        }
+      ],
       "revealedAt": "1:4",
       "sort": 3
     },
@@ -1089,7 +1615,13 @@
       "name": "The Recap",
       "aka": [],
       "role": "Broadcast",
-      "tagline": "Between-floor highlight shows. The only reliable way a crawler learns what anyone else is doing.",
+      "taglines": [
+        {
+          "at": "1:14",
+          "sortKey": 1014,
+          "text": "Between-floor highlight shows. The only reliable way a crawler learns what anyone else is doing."
+        }
+      ],
       "revealedAt": "1:14",
       "sort": 4
     },
@@ -1099,7 +1631,13 @@
       "name": "Loot Boxes",
       "aka": [],
       "role": "Economy",
-      "tagline": "Six tiers — Bronze, Silver, Gold, Platinum, Legendary, Celestial — each dramatically rarer than the last.",
+      "taglines": [
+        {
+          "at": "1:5",
+          "sortKey": 1005,
+          "text": "Six tiers — Bronze, Silver, Gold, Platinum, Legendary, Celestial — each dramatically rarer than the last."
+        }
+      ],
       "revealedAt": "1:5",
       "sort": 5
     },
@@ -1109,7 +1647,13 @@
       "name": "Compensated Anarchist",
       "aka": [],
       "role": "Class · Carl",
-      "tagline": "A unique monk/rogue hybrid. Trapmaker, bomb-maker, social-media dynamo.",
+      "taglines": [
+        {
+          "at": "2:2",
+          "sortKey": 2002,
+          "text": "A unique monk/rogue hybrid. Trapmaker, bomb-maker, social-media dynamo."
+        }
+      ],
       "revealedAt": "2:2",
       "sort": 6
     },
@@ -1119,7 +1663,13 @@
       "name": "Former Child Actor",
       "aka": [],
       "role": "Class · Donut",
-      "tagline": "A bard/rogue class that lets her choose another class at every single level.",
+      "taglines": [
+        {
+          "at": "2:1",
+          "sortKey": 2001,
+          "text": "A bard/rogue class that lets her choose another class at every single level."
+        }
+      ],
       "revealedAt": "2:1",
       "sort": 7
     },
@@ -1129,7 +1679,13 @@
       "name": "The Desperado Club",
       "aka": [],
       "role": "Institution",
-      "tagline": "The crawlers-only bar that persists between floors. Bouncer, house rules, a stage, and a hiring hall.",
+      "taglines": [
+        {
+          "at": "1:19",
+          "sortKey": 1019,
+          "text": "The crawlers-only bar that persists between floors. Bouncer, house rules, a stage, and a hiring hall."
+        }
+      ],
       "revealedAt": "1:19",
       "sort": 8
     },
@@ -1141,7 +1697,13 @@
         "the Doggy Door"
       ],
       "role": "Rules",
-      "tagline": "A pocket room you carry with you. Upgrade it far enough and other people can walk into yours.",
+      "taglines": [
+        {
+          "at": "3:2",
+          "sortKey": 3002,
+          "text": "A pocket room you carry with you. Upgrade it far enough and other people can walk into yours."
+        }
+      ],
       "revealedAt": "3:2",
       "sort": 9
     },
@@ -1151,7 +1713,13 @@
       "name": "The NPCs Are People",
       "aka": [],
       "role": "Revelation",
-      "tagline": "The dungeon's non-player characters have histories, families, and scripts written for them by producers.",
+      "taglines": [
+        {
+          "at": "4:9",
+          "sortKey": 4009,
+          "text": "The dungeon's non-player characters have histories, families, and scripts written for them by producers."
+        }
+      ],
       "revealedAt": "4:9",
       "sort": 10
     },
@@ -1161,7 +1729,13 @@
       "name": "Death Is Final Here",
       "aka": [],
       "role": "Rules · Floor 9",
-      "tagline": "On the ninth floor there are no respawns and no loopholes.",
+      "taglines": [
+        {
+          "at": "7:1",
+          "sortKey": 7001,
+          "text": "On the ninth floor there are no respawns and no loopholes."
+        }
+      ],
       "revealedAt": "7:1",
       "sort": 11
     },
@@ -1173,7 +1747,13 @@
         "Borant"
       ],
       "role": "Producer",
-      "tagline": "Runs the show on the cheap, holds the foreclosure on Earth, and gets one veto a season.",
+      "taglines": [
+        {
+          "at": "1:1",
+          "sortKey": 1001,
+          "text": "Runs the show on the cheap, holds the foreclosure on Earth, and gets one veto a season."
+        }
+      ],
       "revealedAt": "1:1",
       "sort": 1
     },
@@ -1183,7 +1763,13 @@
       "name": "The Syndicate",
       "aka": [],
       "role": "Galactic order",
-      "tagline": "Makes all of this legal — and, now and then, is where it can be fought.",
+      "taglines": [
+        {
+          "at": "1:4",
+          "sortKey": 1004,
+          "text": "Makes all of this legal — and, now and then, is where it can be fought."
+        }
+      ],
       "revealedAt": "1:4",
       "sort": 2
     },
@@ -1195,7 +1781,13 @@
         "the Royal Court"
       ],
       "role": "The party",
-      "tagline": "Named by a cat on the first floor, on the grounds that she had the highest stat total and nobody could stop her.",
+      "taglines": [
+        {
+          "at": "1:7",
+          "sortKey": 1007,
+          "text": "Named by a cat on the first floor, on the grounds that she had the highest stat total and nobody could stop her."
+        }
+      ],
       "revealedAt": "1:7",
       "sort": 3
     },
@@ -1207,7 +1799,13 @@
         "Meadow Lark Elder Care Facility"
       ],
       "role": "Crawler group",
-      "tagline": "An elder care facility whose residents came down the stairs together and kept going.",
+      "taglines": [
+        {
+          "at": "1:22",
+          "sortKey": 1022,
+          "text": "An elder care facility whose residents came down the stairs together and kept going."
+        }
+      ],
       "revealedAt": "1:22",
       "sort": 4
     },
@@ -1219,7 +1817,13 @@
         "the Daughters"
       ],
       "role": "Crawler group",
-      "tagline": "Hekla's group, and the one Katia and Eva came in with.",
+      "taglines": [
+        {
+          "at": "1:20",
+          "sortKey": 1020,
+          "text": "Hekla's group, and the one Katia and Eva came in with."
+        }
+      ],
       "revealedAt": "1:20",
       "sort": 5
     },
@@ -1229,7 +1833,13 @@
       "name": "The Blood Sultanate",
       "aka": [],
       "role": "Ninth-floor power",
-      "tagline": "A royal house on the ninth floor whose succession a cat joined by accident on the first.",
+      "taglines": [
+        {
+          "at": "1:7",
+          "sortKey": 1007,
+          "text": "A royal house on the ninth floor whose succession a cat joined by accident on the first."
+        }
+      ],
       "revealedAt": "1:7",
       "sort": 6
     },
@@ -1239,7 +1849,13 @@
       "name": "Le Mouvement",
       "aka": [],
       "role": "Crawler faction",
-      "tagline": "Arrived as a recap segment and left as a wipe.",
+      "taglines": [
+        {
+          "at": "1:26",
+          "sortKey": 1026,
+          "text": "Arrived as a recap segment and left as a wipe."
+        }
+      ],
       "revealedAt": "1:26",
       "sort": 7
     },
@@ -1249,7 +1865,13 @@
       "name": "The Princess Posse",
       "aka": [],
       "role": "Crawler army",
-      "tagline": "Fifty thousand retired crawlers who came back in, under the banner of a cat.",
+      "taglines": [
+        {
+          "at": "7:11",
+          "sortKey": 7011,
+          "text": "Fifty thousand retired crawlers who came back in, under the banner of a cat."
+        }
+      ],
       "revealedAt": "7:11",
       "sort": 8
     },
@@ -1259,7 +1881,13 @@
       "name": "The crown's bill",
       "aka": [],
       "role": "Opened on floor 1",
-      "tagline": "A cat put on a hat on the first floor. It is payable on the ninth.",
+      "taglines": [
+        {
+          "at": "1:7",
+          "sortKey": 1007,
+          "text": "A cat put on a hat on the first floor. It is payable on the ninth."
+        }
+      ],
       "revealedAt": "1:7",
       "sort": 1
     },
@@ -1269,7 +1897,13 @@
       "name": "Agatha is an enemy to all of you",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "The mysterious one from the elder care facility, nine floors on.",
+      "taglines": [
+        {
+          "at": "7:78",
+          "sortKey": 7078,
+          "text": "The mysterious one from the elder care facility, named on the ninth floor as an enemy to all of them."
+        }
+      ],
       "revealedAt": "7:78",
       "sort": 2
     },
@@ -1279,7 +1913,13 @@
       "name": "Justice, and the gods",
       "aka": [],
       "role": "Advancing",
-      "tagline": "Something the dungeon was built to contain gets out, and the man who did it does not survive it.",
+      "taglines": [
+        {
+          "at": "7:end",
+          "sortKey": 7999,
+          "text": "Something the dungeon was built to contain gets out, and the man who did it does not survive it."
+        }
+      ],
       "revealedAt": "7:end",
       "sort": 3
     },
@@ -1289,7 +1929,13 @@
       "name": "What is inside Carl",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "Shi Maria went into him and did not come out.",
+      "taglines": [
+        {
+          "at": "7:19",
+          "sortKey": 7019,
+          "text": "Shi Maria went into him and did not come out."
+        }
+      ],
       "revealedAt": "7:19",
       "sort": 4
     },
@@ -1299,7 +1945,13 @@
       "name": "A hundred and twenty thousand children",
       "aka": [],
       "role": "Opened on floor 6",
-      "tagline": "Lucia Mar is carrying them. Nobody has said what for.",
+      "taglines": [
+        {
+          "at": "5:71",
+          "sortKey": 5071,
+          "text": "Lucia Mar is carrying them. Nobody has said what for."
+        }
+      ],
       "revealedAt": "5:71",
       "sort": 5
     },
@@ -1309,7 +1961,13 @@
       "name": "The tenth faction",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "The dungeon's own population declared itself on live galactic television.",
+      "taglines": [
+        {
+          "at": "7:end",
+          "sortKey": 7999,
+          "text": "The dungeon's own population declared itself on live galactic television."
+        }
+      ],
       "revealedAt": "7:end",
       "sort": 6
     },
@@ -1319,7 +1977,13 @@
       "name": "Scolopendra",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "A Nine-Tier Attack poison, and a note saying the Gate was essential to beating whatever carries it.",
+      "taglines": [
+        {
+          "at": "5:1",
+          "sortKey": 5001,
+          "text": "A Nine-Tier Attack poison, and a note saying the Gate was essential to beating whatever carries it."
+        }
+      ],
       "revealedAt": "5:1",
       "sort": 7
     },
@@ -1329,7 +1993,13 @@
       "name": "The system is glitching",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "Strange faults on the tenth floor, and they are getting more frequent.",
+      "taglines": [
+        {
+          "at": "8:1",
+          "sortKey": 8001,
+          "text": "Strange faults on the tenth floor, and they are getting more frequent."
+        }
+      ],
       "revealedAt": "8:1",
       "sort": 8
     },
@@ -1339,7 +2009,13 @@
       "name": "The order is cracking",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "Borant's grip and the Syndicate's authority both start to give.",
+      "taglines": [
+        {
+          "at": "7:end",
+          "sortKey": 7999,
+          "text": "Borant's grip and the Syndicate's authority both start to give."
+        }
+      ],
       "revealedAt": "7:end",
       "sort": 9
     },
@@ -1349,7 +2025,13 @@
       "name": "The AI is a Primal",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "It says so itself, on stage, through somebody else's mouth.",
+      "taglines": [
+        {
+          "at": "8:92",
+          "sortKey": 8092,
+          "text": "It says so itself, on stage, through somebody else's mouth."
+        }
+      ],
       "revealedAt": "8:92",
       "sort": 10
     },
@@ -1359,7 +2041,13 @@
       "name": "The Crawler Project",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "Doctor Hu, and something the retired crawlers know that the current ones do not.",
+      "taglines": [
+        {
+          "at": "7:11",
+          "sortKey": 7011,
+          "text": "Doctor Hu, and something the retired crawlers know that the current ones do not."
+        }
+      ],
       "revealedAt": "7:11",
       "sort": 11
     },
@@ -1369,7 +2057,13 @@
       "name": "The Demon Eviction",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "Every exit failing at once, worldwide, while a demon prince tries to cast his way home.",
+      "taglines": [
+        {
+          "at": "6:61",
+          "sortKey": 6061,
+          "text": "Every exit failing at once, worldwide, while a demon prince tries to cast his way home."
+        }
+      ],
       "revealedAt": "6:61",
       "sort": 12
     }
@@ -1385,18 +2079,6 @@
       "sortKey": 1001,
       "headline": "The Bahamas, with Brad",
       "text": "She went away for Christmas with her ex and posted the photograph. Carl ended it by phone days before the Transformation. Her cat, her family's breeding line and her shoes all go down the stairs without her.",
-      "confidence": "verified"
-    },
-    {
-      "entityId": "borant-corporation",
-      "kind": "origin",
-      "book": 1,
-      "chapter": 1,
-      "floor": 1,
-      "at": "1:1",
-      "sortKey": 1001,
-      "headline": "The foreclosure",
-      "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once. Its guides work on indenture — Mordecai among them.",
       "confidence": "verified"
     },
     {
@@ -1432,7 +2114,7 @@
       "at": "1:1",
       "sortKey": 1001,
       "headline": "The first voice after the world ends",
-      "text": "A minute after the Transformation it makes a planet-wide announcement: Dungeon Crawler World: Earth is open, the dungeon has eighteen levels, and the planet can be reclaimed from the Borant Corporation by conquering it. Then the staircases appear.",
+      "text": "A minute after the Transformation it makes a planet-wide announcement: the dungeon has eighteen levels, and Earth can be reclaimed from the Borant Corporation by conquering it. Then the staircases appear. Every rule, notification and insult from here comes in its voice.",
       "confidence": "verified"
     },
     {
@@ -1444,7 +2126,19 @@
       "at": "1:1",
       "sortKey": 1001,
       "headline": "January 3rd, and then the announcement",
-      "text": "It takes a minute. Then the System AI speaks planet-wide: Dungeon Crawler World: Earth is open, the dungeon has eighteen levels, and the planet can be reclaimed from the Borant Corporation by conquering it. The staircases appear. The survivors are, near enough without exception, the people who happened to be standing outside — smokers, insomniacs, night-shift workers and anyone chasing a pet.",
+      "text": "It takes a minute. Then the System AI speaks planet-wide: the dungeon has eighteen levels, and the planet can be reclaimed from the Borant Corporation by conquering it. The staircases appear. The survivors are, near enough without exception, the people who happened to be standing outside — smokers, insomniacs, night-shift workers and anyone chasing a pet.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "borant-corporation",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 2,
+      "floor": 1,
+      "at": "1:2",
+      "sortKey": 1002,
+      "headline": "The foreclosure",
+      "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once. Its guides work on indenture — Mordecai among them.",
       "confidence": "verified"
     },
     {
@@ -2224,7 +2918,7 @@
       "at": "2:end",
       "sortKey": 2999,
       "headline": "It burns a veto rather than pay",
-      "text": "Eighty-three Celestial boxes are owed. Borant voids them with its one seasonal veto and still ends up in court over the one that was already open. A production company that cheap has seams worth looking for.",
+      "text": "Eighty-three Celestial boxes are owed. Borant voids them with its one seasonal veto and is still liable for the one that was already open, which lands it in front of a Syndicate court. A production company that cheap has seams worth looking for.",
       "confidence": "verified"
     },
     {
@@ -2392,7 +3086,7 @@
       "at": "3:8",
       "sortKey": 3008,
       "headline": "Introduced in the Iron Tangle",
-      "text": "It arrives with the sponsor tab unlocking. Twenty-four crawlers carried it first, across seasons and species, on worlds that lost. Rosetta Thagra, later found hosting Shadow Boxer, is one of the authors.",
+      "text": "It arrives with the sponsor tab unlocking. Twenty-four crawlers carried it first, across seasons and species, on worlds that lost. Rosetta Thagra, who turns up hosting Shadow Boxer, is one of the authors.",
       "confidence": "verified"
     },
     {
@@ -2504,18 +3198,6 @@
       "confidence": "verified"
     },
     {
-      "entityId": "gate-of-the-feral-gods",
-      "kind": "use",
-      "book": 4,
-      "chapter": null,
-      "floor": 5,
-      "at": "4:9",
-      "sortKey": 4009,
-      "headline": "How to work it",
-      "text": "Dial a time standing for coordinates on one watch and the other mirrors it. Both go in the box, which winds and must not move more than about five feet or the count resets. Pulling the watches out opens a one-way portal twenty feet high, good for roughly twenty minutes. Afterwards it stays where it was opened as a two-way passage into the Nothing until something comes out — usually a feral god, mad from however long it has been down there. A weak constitution too near an open portal gets painted with the same madness.",
-      "confidence": "verified"
-    },
-    {
       "entityId": "npcs-are-people",
       "kind": "origin",
       "book": 4,
@@ -2585,6 +3267,18 @@
       "sortKey": 4023,
       "headline": "She turns the watches into a map",
       "text": "The linked watches read as a reverse compass — a time, an altitude, and an exact position relative to anywhere else. She uses them to work out that the Gate could open onto the city of Larracos on the ninth floor, and starts mapping ground nobody has stood on.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 4,
+      "chapter": 24,
+      "floor": 5,
+      "at": "4:24",
+      "sortKey": 4024,
+      "headline": "How to work it",
+      "text": "Dial a time standing for coordinates on one watch and the other mirrors it. Both go in the box, which winds and must not move more than about five feet or the count resets. Pulling the watches out opens a one-way portal twenty feet high, good for roughly twenty minutes. Afterwards it stays where it was opened as a two-way passage into the Nothing until something comes out — usually a feral god, mad from however long it has been down there. A weak constitution too near an open portal gets painted with the same madness.",
       "confidence": "verified"
     },
     {
@@ -3176,18 +3870,6 @@
       "confidence": "draft"
     },
     {
-      "entityId": "princess-donut",
-      "kind": "arc",
-      "book": 6,
-      "chapter": null,
-      "floor": 8,
-      "at": "6:1",
-      "sortKey": 6001,
-      "headline": "She fights with people",
-      "text": "On the card floor her deck includes Alpha Male Carl and Shi Maria, and both of them are somebody. She plays them anyway.",
-      "confidence": "draft"
-    },
-    {
       "entityId": "sister-ines",
       "kind": "origin",
       "book": 6,
@@ -3236,6 +3918,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "princess-donut",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 26,
+      "floor": 8,
+      "at": "6:26",
+      "sortKey": 6026,
+      "headline": "She fights with people",
+      "text": "On the card floor her deck includes Alpha Male Carl and Shi Maria, and both of them are somebody. She plays them anyway.",
+      "confidence": "draft"
+    },
+    {
       "entityId": "shi-maria",
       "kind": "origin",
       "book": 6,
@@ -3268,7 +3962,7 @@
       "at": "6:58",
       "sortKey": 6058,
       "headline": "Announced in an area message",
-      "text": "The Madre de Aguas is killed and comes back as a zombie, and the demon prince is named in the same breath.",
+      "text": "The Madre de Aguas dies and returns as a zombie, and the demon prince is named in the same breath.",
       "confidence": "verified"
     },
     {
@@ -4000,7 +4694,7 @@
       "at": "8:97",
       "sortKey": 8097,
       "headline": "Every inventory swaps at once",
-      "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut ends up with Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit.",
+      "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut receives Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit.",
       "confidence": "verified"
     },
     {
@@ -4012,7 +4706,7 @@
       "at": "8:97",
       "sortKey": 8097,
       "headline": "Every inventory changes hands at once",
-      "text": "Eris fires the effect and each crawler's inventory swaps with whoever is nearest. Donut ends up holding Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit.",
+      "text": "Eris fires the effect and each crawler's inventory swaps with whoever is nearest. Donut receives Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit.",
       "confidence": "verified"
     },
     {

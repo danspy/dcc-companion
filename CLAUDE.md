@@ -128,6 +128,31 @@ page rather than in the gate. That is the whole "general, nothing spoiler" surfa
 Defaulting to book 1 (as this did) spoils book 1 for someone who has not read it. Clicking the
 currently-selected book again clears back to unset, which is the only route home.
 
+### A tagline is a summary, so it obeys the summary rule
+
+This shipped badly. Taglines were written as whole-character one-liners and shown from the
+entity's own reveal point, which meant Agatha's read *"Introduced as the mysterious one at Meadow
+Lark. Nine floors later a warlord calls her an enemy to them all"* on a page that opens in **book
+1, chapter 22**. Eighteen of eighty-nine were doing some version of this.
+
+It is the same rule floors already follow — *a summary of a span must be gated at the end of that
+span* — and taglines now work the same way. `tagline` is either a string (safe from `revealedAt`)
+or a list of `{ at, text }` that supersede as the reader advances; `taglineFor()` picks the latest
+one reached. Lucia Mar goes from *"Seen on the very first broadcast"* to *"…more than a hundred
+thousand children in her body"* across four steps.
+
+**Two lint rules now enforce it, both errors:**
+
+- **Forward phrasing.** `"later"`, `"by the eighth"`, `"floors later"`, `"was killed"`, `"ends
+  up"`, `"does not end well"` and friends, in a tagline or a beat, fail the build. It is a
+  heuristic and it does produce false positives — three legitimate phrases had to be reworded.
+  **That is the right trade and there is deliberately no exemption list**: this bug class has now
+  shipped three times, and an escape hatch is how it ships a fourth.
+- **Forward references.** Text may not name an entity revealed later than the text itself. This
+  caught real ones the phrase check could not: a book-6 Donut beat naming Shi Maria (6:25), the
+  Gate's operating notes naming the Nothing (4:24), and two book-1 beats naming *Dungeon Crawler
+  World* three chapters before the text does.
+
 ### Structure leaks, not just prose
 
 A sealed entry used to render its own stamp: `Bk 7 · Fate · Floor 9`. That tells you the
@@ -379,7 +404,7 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/fetch-chapters.mjs` | `npm run chapters:refresh` — pulls the chapter tables |
 | `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
 | `scripts/check-pages.mjs` | Fails the build if gated content is hardcoded into page source |
-| `data/entities/*.json` | The curated graph |
+| `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |
 | `scripts/lib/lint.mjs` | Every rule that stops the gate leaking |
 | `src/components/GateBar.astro` | The position control |

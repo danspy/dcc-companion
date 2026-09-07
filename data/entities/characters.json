@@ -208,10 +208,11 @@
           "kind": "arc",
           "book": 6,
           "floor": 8,
-          "at": "6:1",
+          "at": "6:26",
           "confidence": "draft",
           "headline": "She fights with people",
-          "text": "On the card floor her deck includes Alpha Male Carl and Shi Maria, and both of them are somebody. She plays them anyway."
+          "text": "On the card floor her deck includes Alpha Male Carl and Shi Maria, and both of them are somebody. She plays them anyway.",
+          "chapter": 26
         },
         {
           "kind": "arc",
@@ -483,7 +484,16 @@
       "role": "Crawler · Meadow Lark",
       "revealedAt": "1:22",
       "sort": 6,
-      "tagline": "Out of the Meadow Lark Elder Care Facility, and still standing on the tenth floor.",
+      "tagline": [
+        {
+          "at": "1:22",
+          "text": "Out of the Meadow Lark Elder Care Facility, and nowhere near finished."
+        },
+        {
+          "at": "8:87",
+          "text": "Out of the Meadow Lark Elder Care Facility, and holding a portal open on the racing floor."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -532,7 +542,16 @@
       "role": "Crawler",
       "revealedAt": "1:22",
       "sort": 7,
-      "tagline": "Introduced as the mysterious one at Meadow Lark. Nine floors later a warlord calls her an enemy to them all.",
+      "tagline": [
+        {
+          "at": "1:22",
+          "text": "The mysterious one at the Meadow Lark Elder Care Facility, who fought a boss beside them and then took her leave."
+        },
+        {
+          "at": "7:78",
+          "text": "The mysterious one from Meadow Lark — and, a warlord tells the Warlord Chat, an enemy to all of them."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -573,7 +592,16 @@
       "role": "Crawler",
       "revealedAt": "1:31",
       "sort": 8,
-      "tagline": "Dragged into a safe room on the first floor, and running a squad by the eighth.",
+      "tagline": [
+        {
+          "at": "1:31",
+          "text": "Hauled into a first-floor safe room as the next episode tunnelled through."
+        },
+        {
+          "at": "6:63",
+          "text": "Hauled into a safe room on the first floor, and running her own squad on the card floor."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -813,7 +841,20 @@
       "role": "Crawler · card",
       "revealedAt": "6:25",
       "sort": 13,
-      "tagline": "Let herself be turned into a playing card in exchange for passage, and did not stay in it.",
+      "tagline": [
+        {
+          "at": "6:25",
+          "text": "Samantha's new friend on the card floor, who says she can give her a body back."
+        },
+        {
+          "at": "6:46",
+          "text": "Traded being turned into a playing card for passage, then won the floor's boss fight almost single-handed."
+        },
+        {
+          "at": "7:19",
+          "text": "Traded being turned into a card for passage. She is not in the card now."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -911,7 +952,16 @@
       "role": "Crawler",
       "revealedAt": "4:3",
       "sort": 15,
-      "tagline": "Found in the desert with Firas, and still being pulled through portals six floors later.",
+      "tagline": [
+        {
+          "at": "4:3",
+          "text": "Found in the desert quadrant with Firas, alongside a team of car-salesman archers."
+        },
+        {
+          "at": "8:87",
+          "text": "Found in the desert on the fifth floor, and still going through other people's portals on the tenth."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1071,7 +1121,20 @@
       "role": "Crawler",
       "revealedAt": "3:32",
       "sort": 19,
-      "tagline": "Worked the Tangle with Prepotente, became a vampire on the Hunting Grounds, and was killed for a television programme.",
+      "tagline": [
+        {
+          "at": "3:32",
+          "text": "Working the Iron Tangle from the far side of the knot, with a goat."
+        },
+        {
+          "at": "5:6",
+          "text": "Worked the Tangle with Prepotente, and came onto the Hunting Grounds a vampire."
+        },
+        {
+          "at": "7:45",
+          "text": "Worked the Tangle with Prepotente, turned vampire on the Hunting Grounds, and was spent to make a television programme."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1120,7 +1183,20 @@
       "role": "Crawler · goat",
       "revealedAt": "3:3",
       "sort": 20,
-      "tagline": "A profane, opera-singing Boer goat who destroyed an entire floor of the world dungeon and killed an army over a friend.",
+      "tagline": [
+        {
+          "at": "3:3",
+          "text": "A profane, opera-singing Boer goat."
+        },
+        {
+          "at": "5:end",
+          "text": "A profane, opera-singing Boer goat who reduced an entire floor of the world dungeon to dust."
+        },
+        {
+          "at": "7:45",
+          "text": "A profane, opera-singing Boer goat who reduced a floor to dust, and took an army apart for a friend."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1180,7 +1256,20 @@
       "role": "Crawler",
       "revealedAt": "1:42",
       "sort": 21,
-      "tagline": "Rescued off a game show on the first floor; running a squad and lending out Dread by the tenth.",
+      "tagline": [
+        {
+          "at": "1:42",
+          "text": "Pulled off a live game show on the second floor, with her brother and his team."
+        },
+        {
+          "at": "6:63",
+          "text": "Pulled off a game show on the second floor; running her own squad by the card floor."
+        },
+        {
+          "at": "8:73",
+          "text": "Pulled off a game show on the second floor, and lending her Dread out to watch over everyone by the races."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1223,7 +1312,16 @@
       "role": "Crawler",
       "revealedAt": "2:14",
       "sort": 22,
-      "tagline": "On screen from the third floor to the eleventh, and carried down the last set of stairs unconscious.",
+      "tagline": [
+        {
+          "at": "2:14",
+          "text": "First seen on a recap, partied with Ifechi."
+        },
+        {
+          "at": "5:71",
+          "text": "The one who worked out what is actually inside Lucia's head."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1272,7 +1370,24 @@
       "role": "Crawler",
       "revealedAt": "1:14",
       "sort": 23,
-      "tagline": "On the first broadcast, hunting the Royal Court by the third floor, and carrying something nobody can account for.",
+      "tagline": [
+        {
+          "at": "1:14",
+          "text": "Seen on the very first broadcast."
+        },
+        {
+          "at": "2:21",
+          "text": "Seen on the first broadcast, and hunting the Royal Court by the Over City."
+        },
+        {
+          "at": "5:71",
+          "text": "Hunting the Royal Court since the Over City, with more than one voice in her head."
+        },
+        {
+          "at": "7:end",
+          "text": "There is more than one voice in her head, and more than a hundred thousand children in her body."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1330,7 +1445,20 @@
       "role": "Crawler",
       "revealedAt": "2:end",
       "sort": 24,
-      "tagline": "Opened the Celestial box that put Borant in court, ruined a good plan, and left Donut his cloak.",
+      "tagline": [
+        {
+          "at": "2:end",
+          "text": "Opened the Celestial box that put Borant in front of a Syndicate court."
+        },
+        {
+          "at": "4:4",
+          "text": "Opened the Celestial box that put Borant in court, and wrecked a good plan on the recap."
+        },
+        {
+          "at": "7:3",
+          "text": "Opened the box that put Borant in court, wrecked a good plan, and left Donut his cloak."
+        }
+      ],
       "beats": [
         {
           "kind": "arc",
@@ -1382,7 +1510,16 @@
       "role": "Mercenary",
       "revealedAt": "3:8",
       "sort": 25,
-      "tagline": "Hired out of the Desperado Club with The Sledge, and later handed over as part of a bargain for the Gate.",
+      "tagline": [
+        {
+          "at": "3:8",
+          "text": "A mercenary hired out of the Desperado Club, alongside The Sledge."
+        },
+        {
+          "at": "5:3",
+          "text": "A mercenary hired at the Desperado, handed over as part of the bargain for the Gate."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1629,7 +1766,7 @@
           "at": "1:1",
           "confidence": "verified",
           "headline": "The first voice after the world ends",
-          "text": "A minute after the Transformation it makes a planet-wide announcement: Dungeon Crawler World: Earth is open, the dungeon has eighteen levels, and the planet can be reclaimed from the Borant Corporation by conquering it. Then the staircases appear."
+          "text": "A minute after the Transformation it makes a planet-wide announcement: the dungeon has eighteen levels, and Earth can be reclaimed from the Borant Corporation by conquering it. Then the staircases appear. Every rule, notification and insult from here comes in its voice."
         },
         {
           "kind": "arc",
@@ -1703,7 +1840,20 @@
       "role": "Former crawler",
       "revealedAt": "7:11",
       "sort": 34,
-      "tagline": "Joined fifty thousand retired crawlers under a cat's banner, then let every god out of its cell.",
+      "tagline": [
+        {
+          "at": "7:11",
+          "text": "One of fifty thousand retired crawlers who came back in under a cat's banner."
+        },
+        {
+          "at": "7:end",
+          "text": "Came back in with the Princess Posse, and opened every cell the old gods were kept in."
+        },
+        {
+          "at": "8:1",
+          "text": "Came back in with the Princess Posse, opened every cell, and did not outlive it."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1807,7 +1957,16 @@
       "role": "Crawler",
       "revealedAt": "6:5",
       "sort": 36,
-      "tagline": "A Cat Girl who had every reason to distrust Donut on sight, and ended up holding a demon prince on a leash.",
+      "tagline": [
+        {
+          "at": "6:5",
+          "text": "A Cat Girl with every reason to distrust Donut on sight."
+        },
+        {
+          "at": "6:61",
+          "text": "A Cat Girl with every reason to distrust Donut, holding a demon prince on a leash."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1876,7 +2035,7 @@
           "at": "6:58",
           "confidence": "verified",
           "headline": "Announced in an area message",
-          "text": "The Madre de Aguas is killed and comes back as a zombie, and the demon prince is named in the same breath."
+          "text": "The Madre de Aguas dies and returns as a zombie, and the demon prince is named in the same breath."
         },
         {
           "kind": "use",
@@ -1899,7 +2058,20 @@
       "role": "Crawler",
       "revealedAt": "4:25",
       "sort": 38,
-      "tagline": "Joined in the desert with Vadim, came out of the Hunting Grounds burned, and settled an account on the eleventh floor.",
+      "tagline": [
+        {
+          "at": "4:25",
+          "text": "Joined the party in the desert quadrant with Vadim."
+        },
+        {
+          "at": "5:77",
+          "text": "Joined in the desert with Vadim, and came off the Hunting Grounds badly burned."
+        },
+        {
+          "at": "8:83",
+          "text": "Burned on the Hunting Grounds, and settling accounts at the portals to the eleventh floor."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1942,7 +2114,16 @@
       "role": "Crawler",
       "revealedAt": "5:77",
       "sort": 39,
-      "tagline": "Collects the dead, belongs to no army, and takes deals from nobody.",
+      "tagline": [
+        {
+          "at": "5:77",
+          "text": "Collects the dead, and belongs to no army."
+        },
+        {
+          "at": "8:79",
+          "text": "Collects the dead, belongs to no army, and will not take a deal from anyone."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1993,7 +2174,16 @@
       "role": "High Elf queen",
       "revealedAt": "5:20",
       "sort": 40,
-      "tagline": "A queen of the High Elves who is probably a repurposed human, and whose familiar used to live in Carl's flat.",
+      "tagline": [
+        {
+          "at": "5:20",
+          "text": "A High Elf queen who, the word is, will turn out to be a repurposed human."
+        },
+        {
+          "at": "5:51",
+          "text": "A High Elf queen, probably a repurposed human, whose familiar used to live in Carl's flat."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2044,7 +2234,16 @@
       "role": "Warlord",
       "revealedAt": "7:61",
       "sort": 41,
-      "tagline": "Co-warlord of the War Mages, and not happy about who he shares it with.",
+      "tagline": [
+        {
+          "at": "7:61",
+          "text": "A warlord on the ninth floor."
+        },
+        {
+          "at": "7:69",
+          "text": "Co-warlord of the War Mages, and not happy about who he shares it with."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2083,7 +2282,16 @@
       "role": "Summoned power",
       "revealedAt": "7:61",
       "sort": 42,
-      "tagline": "Summoned into a war, freezes almost everyone in it, and later empties every crawler's pockets at once.",
+      "tagline": [
+        {
+          "at": "7:61",
+          "text": "Summoned into the middle of a war, and freezes almost everyone standing in it."
+        },
+        {
+          "at": "8:97",
+          "text": "Froze almost everyone in a war, and empties every crawler's pockets into somebody else's."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2113,7 +2321,7 @@
           "at": "8:97",
           "confidence": "verified",
           "headline": "Every inventory swaps at once",
-          "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut ends up with Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit."
+          "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut receives Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit."
         }
       ],
       "relations": [
@@ -2132,7 +2340,16 @@
       "role": "Presenter",
       "revealedAt": "3:7",
       "sort": 43,
-      "tagline": "Arrived out of a prize wheel and put Mordecai in a seven-day time-out. It does not end well for him.",
+      "tagline": [
+        {
+          "at": "3:7",
+          "text": "Arrived out of a prize wheel and put Mordecai in a seven-day time-out."
+        },
+        {
+          "at": "8:92",
+          "text": "Arrived out of a prize wheel, and found out what the AI does to a presenter who freezes."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2165,7 +2382,16 @@
       "role": "Crawler",
       "revealedAt": "1:42",
       "sort": 44,
-      "tagline": "Bullied on live television on the second floor, and holding doors open in Club Vanquisher on the ninth.",
+      "tagline": [
+        {
+          "at": "1:42",
+          "text": "Bullied on live television on the second floor, until someone gambled on being too valuable to punish."
+        },
+        {
+          "at": "7:50",
+          "text": "Bullied on live television on the second floor, and holding a door open in Club Vanquisher on the ninth."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2237,7 +2463,16 @@
       "role": "Crawler",
       "revealedAt": "4:3",
       "sort": 46,
-      "tagline": "Found in the desert with Louis, detoxed by Mordecai, and dead before the Hunting Grounds were over.",
+      "tagline": [
+        {
+          "at": "4:3",
+          "text": "Found in the desert quadrant with Louis, and detoxed on the spot by Mordecai."
+        },
+        {
+          "at": "5:77",
+          "text": "Found in the desert with Louis. He did not come off the Hunting Grounds."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2270,7 +2505,16 @@
       "role": "Antagonist",
       "revealedAt": "5:10",
       "sort": 47,
-      "tagline": "Killed by a dinosaur and a cat in the battle for a submerged castle.",
+      "tagline": [
+        {
+          "at": "5:10",
+          "text": "An obstacle between the party and the submerged castle."
+        },
+        {
+          "at": "5:75",
+          "text": "Killed by a dinosaur and a cat in the battle for the submerged castle."
+        }
+      ],
       "beats": [
         {
           "kind": "fate",

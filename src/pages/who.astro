@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
 import { reveals, UNSET_COPY } from '../lib/spoiler';
-import { getEntities, getAllBeats, coverage, readGate, KIND_LABELS, KIND_ORDER } from '../lib/content';
+import { getEntities, getAllBeats, coverage, readGate, taglineFor, KIND_LABELS, KIND_ORDER } from '../lib/content';
 import { parseAt } from '../lib/progress';
 
 const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
@@ -55,7 +55,7 @@ const groups = KIND_ORDER.map(kind => ({
                 )}
               </div>
               <p class="role">{known ? e.role : 'Not yet met'}</p>
-              {known ? <p class="tagline">{e.tagline}</p> : <Sealed at={e.revealedAt} compact />}
+              {known ? <p class="tagline">{taglineFor(e, gate)}</p> : <Sealed at={e.revealedAt} compact />}
             </div>
           );
         })}

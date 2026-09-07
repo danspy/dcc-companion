@@ -10,6 +10,16 @@ const VALID_KINDS = new Set(['character', 'item', 'mechanic', 'faction', 'thread
 const VALID_BEATS = new Set(['origin', 'arc', 'use', 'fate']);
 const VALID_CONFIDENCE = new Set(['verified', 'draft']);
 
+/* Prose that points past its own reveal point. A tagline is the worst offender
+   because it is a summary of a whole character shown from the moment they walk
+   in — "Nine floors later a warlord calls her an enemy to them all" sat on a
+   page that opens in book 1 chapter 22. The rule is the same one floors follow:
+   a summary of a span belongs at the end of that span. */
+const FORWARD_PHRASE =
+  /\b(later|eventually|ends? up|ends the|by the (second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh)|floors? (later|on)|turns out|does not end well|in the end|before the [a-z ]+ (was|were) over|and (then )?(killed|died|dies|dead)|was killed|is killed|settled an account|did not stay|would (go on|later))\b/i;
+
+const escapeRe = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 export function lint({ books, floors, entities }) {
   const errors = [];
   const warnings = [];
@@ -37,11 +47,53 @@ export function lint({ books, floors, entities }) {
     if (!floor.premise) errors.push(`floor ${floor.id}: no premise — nothing safe to show on arrival`);
   }
 
+  /* Names that are not safe from the very beginning, for the forward-reference
+     check below. Short names are skipped — too many false hits. */
+  const gatedNames = entities
+    .filter(e => e.name.length >= 4)
+    .map(e => ({ name: e.name, at: at(e.revealedAt, `entity ${e.id}`) ?? 0,
+                 re: new RegExp(`\\b${escapeRe(e.name)}\\b`, 'i') }));
+
+  /* One text, one reveal point: does it point past itself? */
+  const checkForward = (text, atValue, where) => {
+    if (!text) return;
+    const phrase = text.match(FORWARD_PHRASE);
+    if (phrase) {
+      errors.push(`${where}: "${phrase[0]}" points past its own reveal point — split it, or gate it later`);
+    }
+    for (const n of gatedNames) {
+      if (n.at > atValue && n.re.test(text)) {
+        errors.push(`${where}: names "${n.name}", which is not revealed until later`);
+      }
+    }
+  };
+
   for (const e of entities) {
     const where = `entity ${e.id}`;
     if (!VALID_KINDS.has(e.kind)) errors.push(`${where}: unknown kind "${e.kind}"`);
     const entityAt = at(e.revealedAt, where);
     if (entityAt === null) continue;
+
+    /* Taglines: a string means "safe from revealedAt"; a list supersedes as the
+       reader advances, and each entry is checked against its own point. */
+    const taglines = typeof e.tagline === 'string'
+      ? [{ at: e.revealedAt, text: e.tagline }]
+      : e.tagline;
+    if (!Array.isArray(taglines) || !taglines.length) {
+      errors.push(`${where}: no tagline`);
+    } else {
+      let prev = -1;
+      taglines.forEach((t, i) => {
+        const tAt = at(t.at, `${where} tagline ${i + 1}`);
+        if (tAt === null) return;
+        if (i === 0 && tAt !== entityAt) {
+          errors.push(`${where}: the first tagline must open at "${e.revealedAt}", not "${t.at}"`);
+        }
+        if (tAt <= prev) errors.push(`${where}: tagline ${i + 1} does not come after the one before it`);
+        prev = tAt;
+        checkForward(t.text, tAt, `${where} tagline ${i + 1}`);
+      });
+    }
 
     for (const b of e.beats ?? []) {
       const bw = `${where} beat "${b.headline}"`;
@@ -82,6 +134,9 @@ export function lint({ books, floors, entities }) {
       if (b.chapter != null && book?.chapters && b.chapter > book.chapters) {
         errors.push(`${bw}: chapter ${b.chapter} is past the end of book ${b.book} (${book.chapters})`);
       }
+      /* A beat may not name something the reader has not met yet either. */
+      checkForward(b.text, beatAt, `${bw}`);
+
       if ((b.confidence ?? 'draft') === 'draft') {
         warnings.push(`draft — ${e.id}: ${b.headline}`);
       }

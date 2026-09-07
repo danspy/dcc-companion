@@ -4,7 +4,7 @@ import Sealed from '../../components/Sealed.astro';
 import { reveals } from '../../lib/spoiler';
 import {
   getEntity, getBeats, getRelations, getEntities, getFloors,
-  KIND_LABELS, readGate,
+  KIND_LABELS, readGate, taglineFor,
 } from '../../lib/content';
 
 const { id } = Astro.params;
@@ -52,7 +52,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
     <header class="hero">
       <p class="eyebrow">{KIND_LABELS[entity.kind]} · {entity.role}</p>
       <h1>{entity.name}</h1>
-      <p class="tagline">{entity.tagline}</p>
+      <p class="tagline">{taglineFor(entity, gate)}</p>
       {aka.length > 0 && <p class="aka">Also known as {aka.join(', ')}</p>}
     </header>
 

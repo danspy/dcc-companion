@@ -15,9 +15,9 @@
         {
           "kind": "origin",
           "book": 1,
-          "chapter": 1,
+          "chapter": 2,
           "floor": 1,
-          "at": "1:1",
+          "at": "1:2",
           "confidence": "verified",
           "headline": "The foreclosure",
           "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once. Its guides work on indenture — Mordecai among them."
@@ -29,7 +29,7 @@
           "at": "2:end",
           "confidence": "verified",
           "headline": "It burns a veto rather than pay",
-          "text": "Eighty-three Celestial boxes are owed. Borant voids them with its one seasonal veto and still ends up in court over the one that was already open. A production company that cheap has seams worth looking for."
+          "text": "Eighty-three Celestial boxes are owed. Borant voids them with its one seasonal veto and is still liable for the one that was already open, which lands it in front of a Syndicate court. A production company that cheap has seams worth looking for."
         }
       ],
       "relations": [

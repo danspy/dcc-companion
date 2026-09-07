@@ -56,9 +56,16 @@ const resolvedRelations = [];
 
 for (const e of entities) {
   const entityAt = parseAt(e.revealedAt);
+  /* A bare string is the common case and means "safe from revealedAt". */
+  const taglines = (typeof e.tagline === 'string'
+    ? [{ at: e.revealedAt, text: e.tagline }]
+    : e.tagline
+  ).map(t => ({ at: t.at, sortKey: Math.max(parseAt(t.at), entityAt), text: t.text }))
+   .sort((a, b) => a.sortKey - b.sortKey);
+
   resolvedEntities.push({
     id: e.id, kind: e.kind, name: e.name, aka: e.aka ?? [],
-    role: e.role, tagline: e.tagline, revealedAt: e.revealedAt, sort: e.sort ?? 0,
+    role: e.role, taglines, revealedAt: e.revealedAt, sort: e.sort ?? 0,
   });
 
   for (const b of e.beats ?? []) {

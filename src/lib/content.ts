@@ -40,6 +40,14 @@ export async function getRelations(entityId: string) {
 /** Every beat in the book, newest last — the spine of the reading-position view. */
 export const getAllBeats = () => db.select().from(Beat).orderBy(asc(Beat.sortKey), asc(Beat.id));
 
+/** The latest tagline the reader has reached — see the note on Entity.taglines. */
+export function taglineFor(entity: EntityRow, gate: Gate): string {
+  const rows = (entity.taglines ?? []) as { sortKey: number; text: string }[];
+  let out = rows[0]?.text ?? '';
+  for (const t of rows) if (gate.frontier >= t.sortKey) out = t.text;
+  return out;
+}
+
 export const KIND_LABELS: Record<string, string> = {
   character: 'Characters',
   item: 'Items & artifacts',
