@@ -49,11 +49,19 @@ export function lint({ books, floors, entities }) {
   }
 
   /* Names that are not safe from the very beginning, for the forward-reference
-     check below. Short names are skipped — too many false hits. */
-  const gatedNames = entities
-    .filter(e => e.name.length >= 4)
-    .map(e => ({ name: e.name, at: at(e.revealedAt, `entity ${e.id}`) ?? 0,
-                 re: new RegExp(`\\b${escapeRe(e.name)}\\b`, 'i') }));
+     check below. Short names are skipped — too many false hits.
+
+     Floors are in here alongside entities because a floor's *name* is gated
+     too — floor 11 stays redacted for the first 87 chapters of book 8 — and
+     "the Great Race" dropped into a book-4 beat leaks it just as surely as a
+     character's name would. Prose written in a character's voice is where this
+     nearly happened: a speaker naturally names the ground they are standing on. */
+  const gatedNames = [
+    ...entities.map(e => ({ name: e.name, at: at(e.revealedAt, `entity ${e.id}`) ?? 0 })),
+    ...floors.map(f => ({ name: f.name, at: at(f.revealedAt, `floor ${f.id}`) ?? 0 })),
+  ]
+    .filter(n => n.name && n.name.length >= 4)
+    .map(n => ({ ...n, re: new RegExp(`\\b${escapeRe(n.name)}\\b`, 'i') }));
 
   /* One text, one reveal point: does it point past itself? A verbatim quotation
      of something the reader has already seen in the book cannot point forward

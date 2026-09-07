@@ -273,3 +273,19 @@ test('descriptions are a list in reading order, floored to the entity', () => {
   assert.ok(errors.some(e => e.includes('entity x description 2')));
   assert.ok(warnings.some(w => w.includes('y: description 1')));
 });
+
+test("a floor's name may not appear before the floor does", () => {
+  const base = {
+    books: [{ id: 4, title: 'Four', chapters: 34 }, { id: 5, title: 'Five', chapters: 77 }],
+    floors: [{ id: 7, name: 'The Great Race', revealedAt: '5:end', recapAt: '5:end', premise: 'p' }],
+  };
+  const mkE = (text) => ([{
+    id: 'carl', kind: 'character', name: 'Carl', role: 'r', tagline: 't', revealedAt: '4',
+    voiceNote: 'n', relations: [],
+    beats: [{ kind: 'arc', book: 4, at: '4', headline: 'h', text, confidence: 'draft' }],
+  }]);
+  const leak = lint({ ...base, entities: mkE('They are already talking about the Great Race.') });
+  assert.ok(leak.errors.some(e => e.includes('The Great Race')), 'a floor named early must fail');
+  const fine = lint({ ...base, entities: mkE('They are already talking about what comes next.') });
+  assert.equal(fine.errors.length, 0);
+});

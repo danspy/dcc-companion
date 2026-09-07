@@ -152,6 +152,9 @@ thousand children in her body"* across four steps.
   caught real ones the phrase check could not: a book-6 Donut beat naming Shi Maria (6:25), the
   Gate's operating notes naming the Nothing (4:24), and two book-1 beats naming *Dungeon Crawler
   World* three chapters before the text does.
+  **Floor names are in the same list as entity names**, because a floor's name is gated too and
+  "the Great Race" dropped into a book-4 beat leaks it exactly as a character's name would. The
+  in-character rewrite is what made this urgent: a speaker naturally names the ground under them.
 
 ### Who speaks: three voices, resolved in the build
 
@@ -174,8 +177,13 @@ A `fate` in `self` is a lint error: a dead crawler does not narrate their own de
 speaking character carries a `voiceNote` (register, tics, what they call people, what they never
 say); it is committed as guidance and dropped from the snapshot. **A character without one stays in
 the narrator's voice, fate included**, so the cast never shows third-person prose behind a
-quotation mark while the rewrite is underway; the lint's "no voice note" warning is that queue.
-Headlines are chrome and stay in the narrator's hand.
+quotation mark while the rewrite is underway; the lint's "no voice note" warning is that queue,
+and it is currently empty. Headlines are chrome and stay in the narrator's hand.
+
+All 47 characters are converted: **38 speak, 9 carry a dossier** (Agatha, Grimaldi, Ferdinand,
+Quan Ch, Bomo, Beatrice, Osvaldo, Firas, Vrah). The dossier is the honest answer when the books
+give someone almost no lines of their own — inventing a register for them would be inventing
+character. Whole-page, never mixed: a page that changes register halfway reads as a mistake.
 
 **Items open on the System's own words.** `description` on an entity is the AI's verbatim text,
 a string or a progressive `{ at, source, text }` list with exactly the tagline rules, shown above
@@ -450,7 +458,11 @@ currently has a dev server running. It is not this deployment, and only one proj
   it rather than guessing. **Read the surrounding summary before trusting an anchor**: the top hit
   for "Louis" is a stack of Louis L'Amour books, four floors before the crawler turns up.
 - Chapter-accurate reveal points for the entities still tagged at book level
-- A verification pass over the remaining `draft` beats (`npm run content:check` lists them)
+- **A verification pass over the `draft` beats — now 150 of 232**, because the whole cast was
+  rewritten in voice from the existing record. The facts were carried over, not re-checked
+  against the books; `npm run content:check` lists every one.
+- The Crown of the Sepsis Whore and the Nothing are the two items with no `description`: the
+  wiki has no System text for either, so they need the book
 - Books 3, 6 and 8 have the thinnest entity coverage relative to their chapter counts
 - Deeper coverage: more items, per-floor mechanics, quotes with chapter anchors
 - Accounts (`data/users.db` + sessions), so progress follows the reader across devices
