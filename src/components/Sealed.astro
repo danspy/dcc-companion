@@ -1,0 +1,8 @@
+---
+import { sealCopy } from '../lib/spoiler';
+interface Props { at: string | number; compact?: boolean }
+const { at, compact = false } = Astro.props;
+---
+<div class="sealed" style={compact ? 'padding:9px 12px' : undefined}>
+  <b>*** Sealed ***</b>{sealCopy(at)}
+</div>

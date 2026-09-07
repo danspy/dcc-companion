@@ -1,0 +1,37 @@
+{
+  "entities": [
+    {
+      "id": "borant-corporation", "kind": "faction", "name": "The Borant Corporation",
+      "aka": ["Borant"], "role": "Producer", "revealedAt": "1", "sort": 1,
+      "tagline": "Runs the show on the cheap, and holds the foreclosure on Earth.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "headline": "The foreclosure",
+          "text": "Borant claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal fig leaf and the revenue stream at the same time." }
+      ],
+      "relations": [{ "to": "the-syndicate", "kind": "answers-to", "at": "1" }]
+    },
+    {
+      "id": "the-syndicate", "kind": "faction", "name": "The Syndicate",
+      "aka": [], "role": "Galactic order", "revealedAt": "1", "sort": 2,
+      "tagline": "The body that makes all of this legal.",
+      "beats": [
+        { "kind": "arc", "book": 5, "floor": 6, "at": "5:end", "confidence": "draft",
+          "headline": "It starts paying attention",
+          "text": "After the Hunting Grounds, Carl and Donut are famous enough to be a Syndicate problem rather than a Borant one. Fame used to be protection. Now it is a target." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "royal-court", "kind": "faction", "name": "The Royal Court of Princess Donut",
+      "aka": ["the Royal Court"], "role": "The party", "revealedAt": "1", "sort": 3,
+      "tagline": "A joke, a brand, and — because this is a show — an actual source of power.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 2, "at": "1", "confidence": "draft",
+          "headline": "Formed on the second floor",
+          "text": "Carl, Donut and Mongo descend as a titled court. Naming the thing is what makes the audience invest in it, and audience investment is the only currency that matters." }
+      ],
+      "relations": []
+    }
+  ]
+}

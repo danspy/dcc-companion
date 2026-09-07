@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sealed from '../components/Sealed.astro';
+import { readPrefs } from '../lib/prefs';
+import { gateFor, reveals } from '../lib/spoiler';
+import { getEntities, getAllBeats, coverage, KIND_LABELS, KIND_ORDER } from '../lib/content';
+import { parseAt } from '../lib/progress';
+
+const prefs = readPrefs(Astro.cookies);
+const gate = gateFor(prefs, prefs.spoilers, prefs.fresh);
+const [entities, beats] = await Promise.all([getEntities(), getAllBeats()]);
+
+const beatsByEntity = new Map<string, typeof beats>();
+for (const b of beats) {
+  const list = beatsByEntity.get(b.entityId) ?? [];
+  list.push(b);
+  beatsByEntity.set(b.entityId, list);
+}
+
+const groups = KIND_ORDER.map(kind => ({
+  kind,
+  label: KIND_LABELS[kind],
+  rows: entities.filter(e => e.kind === kind),
+})).filter(g => g.rows.length);
+---
+<Layout title="Who & What">
+  <section class="wrap head">
+    <p class="eyebrow">02</p>
+    <h1>Who &amp; What</h1>
+    <p class="standfirst">Names and one-line descriptions appear from the book each thing walks
+      into. Arcs, uses and fates are sealed separately, so a cast list never hands you an ending.</p>
+    {gate.spoilers && gate.fresh && (
+      <p class="sys" style="max-width:var(--measure);margin-top:20px">
+        <b>*** No position set ***</b>You haven't told the dungeon how far you've read, so it is
+        assuming book one. Set your position in the bar above to unseal more.
+      </p>
+    )}
+  </section>
+
+  {groups.map(group => (
+    <section class="wrap group">
+      <h2>{group.label}</h2>
+      <div class="grid-cells">
+        {group.rows.map(e => {
+          const known = reveals(gate, e.revealedAt);
+          const own = beatsByEntity.get(e.id) ?? [];
+          const cov = coverage(own, gate);
+          return (
+            <div class="cell">
+              <div class="cell-head">
+                {known
+                  ? <h3><a href={`/entity/${e.id}`}>{e.name}</a></h3>
+                  : <h3 class="redact">▓▓▓▓▓▓▓▓</h3>}
+                {known && own.length > 0 && (
+                  <span class="cov" title={`${cov.shown} of ${cov.total} entries unsealed`}>
+                    {cov.shown}/{cov.total}
+                  </span>
+                )}
+              </div>
+              <p class="role">{known ? e.role : 'Not yet met'}</p>
+              {known ? <p class="tagline">{e.tagline}</p> : <Sealed at={e.revealedAt} compact />}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</Layout>
+
+<style>
+  .head { padding-block: 48px 8px; }
+  h1 { font-size: clamp(40px, 7vw, 72px); font-weight: 800; margin-top: 10px; }
+  .standfirst { font-size: 16.5px; color: var(--color-grey-200); max-width: var(--measure); margin-top: 18px; }
+  .group { padding-top: 40px; }
+  .group h2 { font-size: 26px; font-weight: 700; color: var(--color-gold); margin-bottom: 14px; }
+  .cell-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .cell h3 { font-size: 21px; font-weight: 700; color: #fff; }
+  .cell h3 a { color: inherit; }
+  .cell h3 a:hover { color: var(--color-gold); text-decoration: none; }
+  .cov { font-family: var(--font-mono); font-size: 11px; color: var(--color-grey-700); flex: none; }
+  .role { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
+          text-transform: uppercase; color: var(--color-gold); margin: 2px 0 10px; }
+  .tagline { font-size: 14.5px; color: var(--color-grey-200); margin: 0; }
+</style>

@@ -1,0 +1,87 @@
+{
+  "entities": [
+    {
+      "id": "eighteen-floors", "kind": "mechanic", "name": "Eighteen Floors, On a Clock",
+      "aka": [], "role": "Structure", "revealedAt": "1", "sort": 1,
+      "tagline": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "headline": "The deal",
+          "text": "Reach the bottom and humanity gets Earth back. Almost nobody is expected to. The clock is the only rule the dungeon never bends, because the collapse is the show's season structure." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "dungeon-crawler-world", "kind": "mechanic", "name": "Dungeon Crawler World",
+      "aka": ["the show", "the broadcast"], "role": "The show", "revealedAt": "1", "sort": 2,
+      "tagline": "The crawl is a television programme, broadcast across the galaxy. The survivors are the cast.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "headline": "Ratings are currency",
+          "text": "Ratings buy sponsors; sponsors send gold and loot; gold and loot buy another floor of life. Being entertaining is a survival stat, and production will bend the dungeon itself to get a better episode." },
+        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "draft",
+          "headline": "The audience can be turned",
+          "text": "The Hunting Grounds prove the format cuts both ways. A broadcast that humiliates the people who paid for it is still a broadcast, and production cannot switch it off without admitting why." }
+      ],
+      "relations": [{ "to": "borant-corporation", "kind": "produced-by", "at": "1" }]
+    },
+    {
+      "id": "loot-boxes", "kind": "mechanic", "name": "Loot Boxes",
+      "aka": [], "role": "Economy", "revealedAt": "1", "sort": 3,
+      "tagline": "Loot arrives in tiered boxes, from bronze up through platinum, legendary and celestial.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "draft",
+          "headline": "The tiers",
+          "text": "The top tiers are rare enough to change the rules of a floor on their own, which is why sponsorship — and therefore entertainment value — decides who lives." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "classes-and-achievements", "kind": "mechanic", "name": "Classes & Achievements",
+      "aka": [], "role": "Rules", "revealedAt": "1", "sort": 4,
+      "tagline": "Race and class are chosen, not assigned — and the strange ones are the good ones.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "draft",
+          "headline": "Donut's Former Child Actor, Carl's Compensated Anarchist",
+          "text": "Achievements fire for combat, invention and moral choices alike, and they stick to you permanently. The system is always watching for a story, and it pays for one." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "desperado-club", "kind": "mechanic", "name": "The Desperado Club",
+      "aka": [], "role": "Institution", "revealedAt": "2", "sort": 5,
+      "tagline": "The crawlers-only bar that persists between floors. Bouncer, house rules, and a stage.",
+      "beats": [
+        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "draft",
+          "headline": "Opens in the Over City",
+          "text": "It becomes the social and political spine of the entire series — the one place crawlers can coordinate, which makes it the most dangerous room in the dungeon for everyone running it." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "npcs-are-people", "kind": "mechanic", "name": "The NPCs Are People",
+      "aka": [], "role": "Revelation", "revealedAt": "4", "sort": 6,
+      "tagline": "The dungeon's 'non-player characters' are farmed populations with memory across seasons.",
+      "beats": [
+        { "kind": "origin", "book": 4, "floor": 5, "at": "4", "confidence": "draft",
+          "headline": "Through Signet and the Ink Marauders",
+          "text": "Once Carl accepts it, the pool of potential allies stops being just the humans — and the show's victim count stops being a number about Earth." },
+        { "kind": "arc", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "headline": "They organise",
+          "text": "Floor 9's NPCs form their own independent tenth faction. No season has ever recorded it, and the system has no answer for it." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "no-respawns", "kind": "mechanic", "name": "Death Is Final Here",
+      "aka": [], "role": "Rules · Floor 9", "revealedAt": "7", "sort": 7,
+      "tagline": "On the ninth floor there are no respawns and no loopholes.",
+      "beats": [
+        { "kind": "origin", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "headline": "Thirty days, nine armies, one castle",
+          "text": "Tens of thousands of conscripted and retired crawlers against a far larger armed enemy, fighting for Larracos at the centre of the map. Everything the series has spent six books making you care about is on a board where nothing comes back." }
+      ],
+      "relations": []
+    }
+  ]
+}

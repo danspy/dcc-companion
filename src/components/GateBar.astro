@@ -1,0 +1,103 @@
+---
+import type { Prefs } from '../lib/prefs';
+import type { BookRow } from '../lib/content';
+import { BOOK_COUNT } from '../lib/progress';
+
+interface Props { prefs: Prefs; books: BookRow[] }
+const { prefs, books } = Astro.props;
+const current = books.find(b => b.id === prefs.book);
+---
+<div class="gate">
+  <div class="gate-inner wrap">
+    <span class="eyebrow">
+      Crawler position —
+      <b>{prefs.spoilers
+        ? `Book ${prefs.book}${prefs.finished ? ' · finished' : prefs.chapter ? ` · ch ${prefs.chapter}` : ''}`
+        : 'spoilers off'}</b>
+    </span>
+
+    <div class="books" role="group" aria-label="How far have you read?">
+      {Array.from({ length: BOOK_COUNT }, (_, i) => i + 1).map(n => (
+        <button class="bk" data-book={n} aria-pressed={String(prefs.spoilers && n === prefs.book)}
+                title={books.find(b => b.id === n)?.title}>{n}</button>
+      ))}
+    </div>
+
+    <label class="chapter" title={current?.chapters
+      ? `Book ${prefs.book} has ${current.chapters} chapters`
+      : 'No chapter count recorded for this book yet'}>
+      <span class="eyebrow">Ch</span>
+      <input type="number" id="chapter" min="0" max={current?.chapters ?? 999}
+             value={prefs.chapter || ''} placeholder="—"
+             disabled={!current?.chapters} />
+    </label>
+
+    <button class="btn" id="finished" aria-pressed={String(prefs.finished)}>Finished it</button>
+    <span class="spacer"></span>
+    <button class="btn" id="spoilers" aria-pressed={String(!prefs.spoilers)}>Spoil me</button>
+  </div>
+</div>
+
+<style>
+  .gate { position: sticky; top: 0; z-index: 50; background: #0b0b0bf2;
+          backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-line); }
+  .gate-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;
+                padding-block: 12px; }
+  .eyebrow b { color: var(--color-gold); font-weight: 700; }
+  .books { display: flex; gap: 4px; flex-wrap: wrap; }
+  .bk { font-family: var(--font-mono); font-size: 13px; font-weight: 600;
+        width: 32px; height: 30px; background: transparent; color: var(--color-grey-300);
+        border: 1px solid var(--color-line); cursor: pointer;
+        transition: background .12s, color .12s, border-color .12s; }
+  .bk:hover { border-color: var(--color-grey-700); color: var(--color-grey-100); }
+  .bk[aria-pressed="true"] { background: var(--color-gold); color: #101010;
+                             border-color: var(--color-gold); font-weight: 700; }
+  .chapter { display: inline-flex; align-items: center; gap: 6px; }
+  .chapter input { font-family: var(--font-mono); font-size: 13px; width: 58px; height: 30px;
+                   background: transparent; color: var(--color-grey-100);
+                   border: 1px solid var(--color-line); padding: 0 7px; }
+  .chapter input:disabled { color: var(--color-grey-700); cursor: not-allowed; }
+  .spacer { flex: 1 1 auto; }
+</style>
+
+<script>
+  /* The position lives in one cookie the server reads on every request, so a
+     change has to round-trip: write, then reload. Delegated on document because
+     the header survives navigations. */
+  const COOKIE = 'dcc_pos';
+
+  function read() {
+    const hit = document.cookie.split('; ').find(c => c.startsWith(COOKIE + '='));
+    if (!hit) return { book: 1, chapter: 0, finished: false, spoilers: true };
+    try { return JSON.parse(decodeURIComponent(hit.slice(COOKIE.length + 1))); }
+    catch { return { book: 1, chapter: 0, finished: false, spoilers: true }; }
+  }
+
+  function write(next: Record<string, unknown>) {
+    const value = encodeURIComponent(JSON.stringify(next));
+    document.cookie = `${COOKIE}=${value}; path=/; max-age=31536000; samesite=lax`;
+    location.reload();
+  }
+
+  document.addEventListener('click', e => {
+    const target = e.target as HTMLElement;
+    const book = target.closest<HTMLElement>('.bk');
+    const state = read();
+
+    if (book) {
+      // Moving to a different book clears a chapter that belonged to the old one.
+      const n = Number(book.dataset.book);
+      write({ ...state, book: n, chapter: n === state.book ? state.chapter : 0,
+              finished: n === state.book ? state.finished : false, spoilers: true });
+      return;
+    }
+    if (target.closest('#finished')) { write({ ...state, finished: !state.finished, spoilers: true }); return; }
+    if (target.closest('#spoilers')) { write({ ...state, spoilers: !state.spoilers }); return; }
+  });
+
+  document.addEventListener('change', e => {
+    const input = (e.target as HTMLElement).closest<HTMLInputElement>('#chapter');
+    if (!input) return;
+    write({ ...read(), chapter: Math.max(0, Number(input.value) || 0), spoilers: true });
+  });
+</script>

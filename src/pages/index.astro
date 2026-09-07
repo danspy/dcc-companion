@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sealed from '../components/Sealed.astro';
+import { readPrefs } from '../lib/prefs';
+import { gateFor, reveals } from '../lib/spoiler';
+import { getBooks, getFloors } from '../lib/content';
+
+const prefs = readPrefs(Astro.cookies);
+const gate = gateFor(prefs, prefs.spoilers, prefs.fresh);
+const [books, floors] = await Promise.all([getBooks(), getFloors()]);
+const bookById = new Map(books.map(b => [b.id, b]));
+---
+<Layout title="The Descent">
+  <section class="wrap intro">
+    <p class="eyebrow" style="color:var(--color-blood)">Dungeon Crawler World · Season: Earth</p>
+    <h1>The Crawl<em>So Far</em></h1>
+    <p class="standfirst">
+      Eleven floors across eight books, sealed to where you are. Nothing below the premise
+      shows until your position reaches it.
+    </p>
+
+    <div class="prose premise">
+      <p><strong>Carl</strong> is a Coast Guard veteran in Seattle. At three in the morning, in
+        January, he goes outside in a t-shirt, boxer shorts and no shoes to catch his ex-girlfriend's
+        prize-winning Persian show cat, <strong>Princess Donut</strong>. It is the only reason
+        either of them lives past the next ninety seconds.</p>
+      <p>Every man-made structure on Earth collapses at once and everyone indoors dies. The
+        <strong>Borant Corporation</strong> has foreclosed on the planet under the laws of the
+        galactic <strong>Syndicate</strong>. The survivors get a countdown and a choice: go down
+        into the dungeon, or die up here when the mining crews arrive.</p>
+      <p>The dungeon has <strong>eighteen floors</strong>, each on a clock, and when a clock stops
+        the floor collapses with everyone still on it. It is also a television programme, broadcast
+        across the galaxy, and the survivors are the cast. Ratings buy sponsors, sponsors send loot,
+        and loot buys another floor of life. <strong>Being entertaining is a survival stat.</strong></p>
+      <p class="sys"><b>*** Notice ***</b>Everything below this point is sealed by reading position.
+        The dungeon shows you your floor and nothing beyond it. That's not cruelty, crawler.
+        That's format.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">01</span>
+      <h2>The Descent</h2>
+    </div>
+    <p class="sec-intro">Floor numbers and book titles are printed on the covers, so they stay
+      visible. What happened on them does not.</p>
+
+    {floors.map(floor => {
+      const open = reveals(gate, floor.revealedAt);
+      const book = bookById.get(floor.book);
+      return (
+        <article class="slab floor">
+          <div class="floor-head">
+            <div class="floorno" style={`background: var(${floor.accent})`}>
+              {String(floor.id).padStart(2, '0')}
+            </div>
+            <div class="floor-titles">
+              <span class="eyebrow">Book <b>{floor.bookSpan ?? floor.book}</b> · {book?.title}</span>
+              {open
+                ? <h3>{floor.name}</h3>
+                : <h3 class="redact" style="font-size:17px;font-weight:400">▓▓▓▓▓▓▓▓▓</h3>}
+            </div>
+          </div>
+          <div class="floor-body">
+            {open ? <div class="prose"><p>{floor.summary}</p></div> : <Sealed at={floor.revealedAt} />}
+          </div>
+        </article>
+      );
+    })}
+  </section>
+</Layout>
+
+<style>
+  .intro { padding-block: 56px 44px; }
+  h1 { font-size: clamp(52px, 10vw, 116px); font-weight: 800; letter-spacing: -.01em; margin-top: 14px; }
+  h1 em { font-style: normal; color: var(--color-gold); display: block; }
+  .standfirst { font-size: 17px; color: var(--color-grey-200); max-width: var(--measure); margin: 22px 0 30px; }
+  .premise { border-top: 1px solid var(--color-line); padding-top: 26px; }
+  .premise .sys { margin-top: 22px; max-width: var(--measure); }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; }
+  .sec-head h2 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 700; }
+  .sec-intro { color: var(--color-grey-300); max-width: var(--measure); margin: 8px 0 30px; font-size: 15.5px; }
+  .floor { margin-bottom: 18px; }
+  .floor-head { display: flex; border-bottom: 1px solid var(--color-line); background: var(--color-raised); }
+  .floorno { font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: 1;
+             color: #0e0e0e; min-width: 86px; flex: none;
+             display: flex; align-items: center; justify-content: center; padding: 16px 18px 12px; }
+  .floor-titles { padding: 13px 18px; display: flex; flex-direction: column;
+                  justify-content: center; gap: 3px; min-width: 0; }
+  .floor-titles h3 { font-size: 26px; font-weight: 700; color: #fff; }
+  .eyebrow b { color: var(--color-grey-200); font-weight: 600; }
+  .floor-body { padding: 22px 18px 24px; }
+  @media (max-width: 560px) {
+    .floorno { font-size: 34px; min-width: 64px; padding: 12px 10px; }
+    .floor-titles h3 { font-size: 21px; }
+  }
+</style>

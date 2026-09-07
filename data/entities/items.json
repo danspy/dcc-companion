@@ -1,0 +1,87 @@
+{
+  "$comment": "Items carry a usage log: `kind: \"use\"` beats record where and when the thing is actually used, each gated on its own. That log is the point of an item page — an item that only has a description is a glossary entry, not a companion.",
+  "entities": [
+    {
+      "id": "gate-of-the-feral-gods", "kind": "item", "name": "The Gate of the Feral Gods",
+      "aka": ["the Gate"], "role": "Artifact", "revealedAt": "4", "sort": 1,
+      "tagline": "A portable gate that opens onto things which should not be given doors.",
+      "beats": [
+        { "kind": "origin", "book": 4, "floor": 5, "at": "4", "confidence": "draft",
+          "headline": "Acquired on the fifth floor",
+          "text": "The Bubbles run on portals, and Carl ends up holding the artifact that makes his own. It is powerful, unstable, and permanently a bad idea — which is precisely why he keeps it." },
+        { "kind": "use", "book": 4, "floor": 5, "at": "4", "confidence": "draft",
+          "headline": "Opened inside the bubbles",
+          "text": "Using it drops gods and disasters into pocket worlds built for neither. The floor's sealed-off structure is what makes an unstable gate strategically valuable and catastrophically dangerous at the same time." },
+        { "kind": "use", "book": 4, "floor": 5, "at": "4:end", "confidence": "draft",
+          "headline": "It names the book for a reason",
+          "text": "By the end of the fifth floor the Gate has stopped being loot and become one of the levers Carl expects to pull on the institution itself." }
+      ],
+      "relations": [
+        { "to": "carl", "kind": "wielded-by", "at": "4" },
+        { "to": "npcs-are-people", "kind": "connected-to", "at": "4",
+          "note": "The bubbles are where the dungeon's populations stop reading as scenery." }
+      ]
+    },
+    {
+      "id": "carls-doomsday-scenario", "kind": "item", "name": "Carl's Doomsday Scenario",
+      "aka": ["the Doomsday Scenario"], "role": "Artifact", "revealedAt": "2", "sort": 2,
+      "tagline": "A bomb of obscene yield that cannot be removed from his inventory or safely disarmed.",
+      "beats": [
+        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "draft",
+          "headline": "Acquired in the Over City",
+          "text": "Weapon, bargaining chip and permanent liability in a single object. He cannot drop it, cannot sell it, and cannot make it safe. It names the book." },
+        { "kind": "use", "book": 2, "floor": 3, "at": "2:end", "confidence": "draft",
+          "headline": "Leverage before ordnance",
+          "text": "Its first real value is not the blast. It is that everyone who matters now knows he is carrying it, and has to price that in." }
+      ],
+      "relations": [{ "to": "carl", "kind": "wielded-by", "at": "2" }]
+    },
+    {
+      "id": "dungeon-anarchists-cookbook", "kind": "item", "name": "The Dungeon Anarchist's Cookbook",
+      "aka": ["the Cookbook"], "role": "Document", "revealedAt": "3", "sort": 3,
+      "tagline": "A manual left behind by the crawlers of earlier seasons.",
+      "beats": [
+        { "kind": "origin", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "headline": "Found in the Iron Tangle",
+          "text": "Proof that Earth is not the first season, that the show has run before, and that resistance to it has a written tradition — tested, recorded, and waiting for someone to pick it up." },
+        { "kind": "use", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "headline": "It reframes the whole series",
+          "text": "Everything Carl does after reading it is a continuation of somebody else's work. That is the difference between a survivor and a movement." }
+      ],
+      "relations": [{ "to": "carl", "kind": "wielded-by", "at": "3" }]
+    },
+    {
+      "id": "enhanced-pet-biscuit", "kind": "item", "name": "Enhanced Pet Biscuit",
+      "aka": [], "role": "Consumable", "revealedAt": "1", "sort": 4,
+      "tagline": "Makes an animal sapient. Used exactly once, to enormous effect.",
+      "beats": [
+        { "kind": "use", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "headline": "Donut eats one",
+          "text": "The single most consequential piece of loot in the series, and it is a snack." }
+      ],
+      "relations": [{ "to": "princess-donut", "kind": "transformed", "at": "1" }]
+    },
+    {
+      "id": "crown-of-the-sepsis-whore", "kind": "item", "name": "The Crown of the Sepsis Whore",
+      "aka": [], "role": "Artifact", "revealedAt": "6", "sort": 5,
+      "tagline": "A crown that threatens to force one of Carl's own party into a fight against Donut.",
+      "beats": [
+        { "kind": "use", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "headline": "Aimed at Katia",
+          "text": "The eighth floor turns people into pieces, and this is the object that threatens to do it to someone Carl cannot afford to lose." }
+      ],
+      "relations": [{ "to": "katia", "kind": "threatens", "at": "6" }]
+    },
+    {
+      "id": "orchid-boon", "kind": "item", "name": "The Orchid Boon",
+      "aka": [], "role": "Boon", "revealedAt": "7:end", "sort": 6,
+      "tagline": "A way out of the dungeon, and it costs.",
+      "beats": [
+        { "kind": "use", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "headline": "Katia takes it",
+          "text": "She leaves the crawl entirely, returned to human form and missing parts of herself. It is the first time the series shows an exit that is neither death nor the eighteenth floor." }
+      ],
+      "relations": [{ "to": "katia", "kind": "used-by", "at": "7:end" }]
+    }
+  ]
+}

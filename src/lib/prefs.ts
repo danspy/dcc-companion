@@ -1,0 +1,44 @@
+import type { AstroCookies } from 'astro';
+import { DEFAULT_POSITION, clampBook, type Position } from './progress';
+
+/* Reading position lives in one cookie today. When accounts land this module
+   is the only place that changes: signed-in readers read from the user DB and
+   guests keep the cookie, exactly as the other apps here do it. */
+
+const COOKIE = 'dcc_pos';
+const YEAR = 60 * 60 * 24 * 365;
+
+export interface Prefs extends Position {
+  spoilers: boolean;
+  /** No cookie yet — the reader has told us nothing. */
+  fresh: boolean;
+}
+
+export const DEFAULT_PREFS: Prefs = { ...DEFAULT_POSITION, spoilers: true, fresh: true };
+
+export function readPrefs(cookies: AstroCookies): Prefs {
+  const raw = cookies.get(COOKIE)?.value;
+  if (!raw) return { ...DEFAULT_PREFS };
+  try {
+    const v = JSON.parse(decodeURIComponent(raw));
+    return {
+      book: clampBook(v.book),
+      chapter: Math.max(0, Number(v.chapter) || 0),
+      finished: Boolean(v.finished),
+      spoilers: v.spoilers !== false,
+      fresh: false,
+    };
+  } catch {
+    return { ...DEFAULT_PREFS };
+  }
+}
+
+export function writePrefs(cookies: AstroCookies, prefs: Prefs): void {
+  const { book, chapter, finished, spoilers } = prefs;
+  cookies.set(COOKIE, encodeURIComponent(JSON.stringify({ book, chapter, finished, spoilers })), {
+    path: '/',
+    maxAge: YEAR,
+    sameSite: 'lax',
+    httpOnly: false,
+  });
+}

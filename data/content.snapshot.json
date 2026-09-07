@@ -1,0 +1,1294 @@
+{
+  "generatedAt": "2026-09-07T13:32:40.813Z",
+  "books": [
+    {
+      "id": 1,
+      "slug": "dungeon-crawler-carl",
+      "title": "Dungeon Crawler Carl",
+      "published": "2020-10-02",
+      "chapters": 47,
+      "pages": null,
+      "blurb": "Earth is foreclosed on, and the only humans left standing are the ones who happened to be outside. Carl goes down into the dungeon barefoot, carrying a cat."
+    },
+    {
+      "id": 2,
+      "slug": "carls-doomsday-scenario",
+      "title": "Carl's Doomsday Scenario",
+      "published": "2021-01-02",
+      "chapters": null,
+      "pages": null,
+      "blurb": "The Over City is the first floor that behaves like a place rather than a level — and Carl picks up a bomb he can never put down."
+    },
+    {
+      "id": 3,
+      "slug": "the-dungeon-anarchists-cookbook",
+      "title": "The Dungeon Anarchist's Cookbook",
+      "published": "2021-03-19",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Every subway on Earth, welded into one knot of moving trains — and a manual left behind by the crawlers of an earlier season."
+    },
+    {
+      "id": 4,
+      "slug": "the-gate-of-the-feral-gods",
+      "title": "The Gate of the Feral Gods",
+      "published": "2021-06-14",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Sealed pocket worlds, a portable gate that opens onto things which should not be given doors, and the discovery that the NPCs are people."
+    },
+    {
+      "id": 5,
+      "slug": "the-butchers-masquerade",
+      "title": "The Butcher's Masquerade",
+      "published": "2022-02-19",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Wealthy aliens buy licences to hunt crawlers for sport. Carl's answer is to hunt them back, on camera."
+    },
+    {
+      "id": 6,
+      "slug": "the-eye-of-the-bedlam-bride",
+      "title": "The Eye of the Bedlam Bride",
+      "published": "2023-06-14",
+      "chapters": null,
+      "pages": null,
+      "blurb": "A floor that runs on cards, built out of Earth's own dead, where people become playable pieces — and Mordecai's past stops being backstory."
+    },
+    {
+      "id": 7,
+      "slug": "this-inevitable-ruin",
+      "title": "This Inevitable Ruin",
+      "published": "2024-11-07",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Nine armies, thirty days, one castle, and no respawns. The floor where the dungeon's props declare independence on live galactic television."
+    },
+    {
+      "id": 8,
+      "slug": "a-parade-of-horribles",
+      "title": "A Parade of Horribles",
+      "published": "2026-05-12",
+      "chapters": null,
+      "pages": 704,
+      "blurb": "A racing floor with a worsening track, a system that has started to glitch, and a coming-out party for the ages."
+    }
+  ],
+  "floors": [
+    {
+      "id": 1,
+      "name": "The First Floor",
+      "book": 1,
+      "accent": "--f1",
+      "revealedAt": "1",
+      "summary": "Dirt, corridors and safe rooms, and the discovery that the tutorial is lethal. Carl enters barefoot and mostly undressed, and the dungeon makes that permanent — an entry condition he can never undo and which the audience adores. Donut eats an Enhanced Pet Biscuit and wakes up sapient. Mordecai teaches them the rules Borant would rather they never learned. Carl saves the Meadow Lark by exploiting a boundary the dungeon didn't think to close: the first of hundreds of times he beats a room by reading its rules instead of its monsters.",
+      "sortKey": 1000
+    },
+    {
+      "id": 2,
+      "name": "The Second Floor",
+      "book": 1,
+      "accent": "--f2",
+      "revealedAt": "1",
+      "summary": "The floor that formalises the party. Mongo joins as Donut's mount, pet and single greatest source of pride, and the three of them descend as the Royal Court of Princess Donut — a joke, a brand, and, because this is a show, an actual source of power. The thesis of the first book lands here: the dungeon rewards spectacle and punishes decency, unless you can make decency spectacular.",
+      "sortKey": 1000
+    },
+    {
+      "id": 3,
+      "name": "The Over City",
+      "book": 2,
+      "accent": "--f3",
+      "revealedAt": "2",
+      "summary": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions — shops, quest-givers, neighbours and politics. The Desperado Club opens here and becomes the social spine of the whole series. Carl acquires Carl's Doomsday Scenario. Underneath the comedy the first real horror lands: the dungeon is built out of Earth — its buildings, its dead, its history, dressed as set decoration.",
+      "sortKey": 2000
+    },
+    {
+      "id": 4,
+      "name": "The Iron Tangle",
+      "book": 3,
+      "accent": "--f4",
+      "revealedAt": "3",
+      "summary": "Every subway system on Earth welded into one impossible knot of moving trains — a puzzle the size of a continent, and the trains do not stop. Carl finds The Dungeon Anarchist's Cookbook and learns that humanity is not the first and that resistance has a written tradition. The floor cannot be solved alone: beating the Tangle takes hundreds of crawlers coordinating at once, which is precisely what production exists to prevent. Carl learns that organising people is the exploit.",
+      "sortKey": 3000
+    },
+    {
+      "id": 5,
+      "name": "The Bubbles",
+      "book": 4,
+      "accent": "--f5",
+      "revealedAt": "4",
+      "summary": "The survivors are split into sealed pocket worlds, each with its own biome, civilisation and way to kill you. Moving between them means portals, and Carl ends up holding the Gate of the Feral Gods. Through Signet and the Ink Marauders the series stops treating NPCs as scenery: they are farmed populations who remember the seasons before this one. This is the turn — Carl stops playing to survive and starts playing to break the game.",
+      "sortKey": 4000
+    },
+    {
+      "id": 6,
+      "name": "The Hunting Grounds",
+      "book": 5,
+      "accent": "--f6",
+      "revealedAt": "5",
+      "summary": "Outsiders are let in: wealthy aliens buy hunting licences, walk into the dungeon and kill crawlers for sport with a full broadcast package. Carl inverts it — the crawlers coordinate, bait, trap and butcher the hunters on camera, turning a scheduled massacre into the most humiliating live television in the show's history. The bill comes due immediately: they are now famous enough that the Syndicate itself starts paying attention.",
+      "sortKey": 5000
+    },
+    {
+      "id": 7,
+      "name": "The Great Race",
+      "book": 5,
+      "bookSpan": "5–6",
+      "accent": "--f7",
+      "revealedAt": "5:end",
+      "summary": "The one floor that refuses to line up with a book boundary: it opens at the close of The Butcher's Masquerade and resolves at the start of The Eye of the Bedlam Bride. It is the single clearest argument for gating this companion on books rather than on floors.",
+      "sortKey": 5999
+    },
+    {
+      "id": 8,
+      "name": "The Ghosts of Earth",
+      "book": 6,
+      "accent": "--f8",
+      "revealedAt": "6",
+      "summary": "A floor that runs on cards: crawlers collect, build and combine decks, capture totems, and fight with whatever they have assembled. The most explicitly game-like floor yet and, because the material is Earth's own dead, the most personal. Donut comes into real power commanding Alpha Carl and Shi Maria — people turned into playable pieces — and the book keeps pressing on what it means to own someone you can put in a deck. Nothing detonates; instead a stack of bargains gets signed, all of them coming due on the ninth floor.",
+      "sortKey": 6000
+    },
+    {
+      "id": 9,
+      "name": "Faction Wars",
+      "book": 7,
+      "accent": "--f9",
+      "revealedAt": "7",
+      "summary": "A war. Nine armies, each fronted by a rich alien faction, fight for thirty days over one castle — Larracos — at the centre of the map, with tens of thousands of conscripted and retired crawlers against a far larger armed enemy. There are no respawns and no loopholes: death on the ninth floor is final. Carl commands one of the nine, Donut stops being a mascot and becomes a political instrument, and the floor's NPCs do something no season has ever recorded — they form their own tenth faction, live, in front of the galaxy.",
+      "sortKey": 7000
+    },
+    {
+      "id": 10,
+      "name": "Don't Come in Last",
+      "book": 8,
+      "accent": "--f10",
+      "revealedAt": "8",
+      "summary": "A racing floor: get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile. Underneath the format, glitches in the system start appearing more and more often — the dungeon itself is no longer running clean.",
+      "sortKey": 8000
+    },
+    {
+      "id": 11,
+      "name": "The Parade of Horribles",
+      "book": 8,
+      "accent": "--f11",
+      "revealedAt": "8",
+      "summary": "Billed in-universe as a coming-out party for the ages. The scale of the story has changed underneath the characters: Carl and Donut are not a two-person party any more, they are the centre of a movement, and the question has stopped being how do we reach the stairs and become which of these institutions do we use, expose, or destroy.",
+      "sortKey": 8000
+    }
+  ],
+  "entities": [
+    {
+      "id": "carl",
+      "kind": "character",
+      "name": "Carl",
+      "aka": [
+        "Carl the Compensated Anarchist"
+      ],
+      "role": "Protagonist",
+      "tagline": "Coast Guard veteran, competent with his hands, angry in a slow and useful way.",
+      "revealedAt": "1",
+      "sort": 1
+    },
+    {
+      "id": "princess-donut",
+      "kind": "character",
+      "name": "Princess Donut",
+      "aka": [
+        "Donut",
+        "Princess Donut the Queen Anne Chonk"
+      ],
+      "role": "Co-protagonist",
+      "tagline": "Award-winning Persian show cat, made sapient by a biscuit. Vain, imperious, genuinely powerful.",
+      "revealedAt": "1",
+      "sort": 2
+    },
+    {
+      "id": "mongo",
+      "kind": "character",
+      "name": "Mongo",
+      "aka": [],
+      "role": "Dinosaur",
+      "tagline": "Donut's dinosaur. Mount, pet, weapon, and the thing she is proudest of in the world.",
+      "revealedAt": "1",
+      "sort": 3
+    },
+    {
+      "id": "mordecai",
+      "kind": "character",
+      "name": "Mordecai",
+      "aka": [],
+      "role": "Guide & manager",
+      "tagline": "The alien they hire to explain the rules — and a crawler himself, once.",
+      "revealedAt": "1",
+      "sort": 4
+    },
+    {
+      "id": "katia",
+      "kind": "character",
+      "name": "Katia",
+      "aka": [
+        "Katia Grim"
+      ],
+      "role": "Party",
+      "tagline": "Icelandic art professor whose race lets her reshape her own body.",
+      "revealedAt": "2",
+      "sort": 5
+    },
+    {
+      "id": "signet",
+      "kind": "character",
+      "name": "Signet",
+      "aka": [],
+      "role": "Ally",
+      "tagline": "An Ink Marauder, and the character through whom the series stops treating NPCs as scenery.",
+      "revealedAt": "4",
+      "sort": 6
+    },
+    {
+      "id": "prepotente",
+      "kind": "character",
+      "name": "Prepotente",
+      "aka": [],
+      "role": "Ally",
+      "tagline": "A profane, opera-singing goat. Exactly as good as that sounds.",
+      "revealedAt": "5",
+      "sort": 7
+    },
+    {
+      "id": "frank-and-maggie",
+      "kind": "character",
+      "name": "Frank Q & Maggie My",
+      "aka": [
+        "Frank Q",
+        "Maggie My"
+      ],
+      "role": "Antagonists",
+      "tagline": "Two crawlers who worked out early that murdering humans in safe rooms beats fighting monsters.",
+      "revealedAt": "1",
+      "sort": 8
+    },
+    {
+      "id": "lucia-mar",
+      "kind": "character",
+      "name": "Lucia Mar",
+      "aka": [],
+      "role": "Crawler",
+      "tagline": "A crawler whose presence gets steadily harder to explain away.",
+      "revealedAt": "7",
+      "sort": 9
+    },
+    {
+      "id": "gate-of-the-feral-gods",
+      "kind": "item",
+      "name": "The Gate of the Feral Gods",
+      "aka": [
+        "the Gate"
+      ],
+      "role": "Artifact",
+      "tagline": "A portable gate that opens onto things which should not be given doors.",
+      "revealedAt": "4",
+      "sort": 1
+    },
+    {
+      "id": "carls-doomsday-scenario",
+      "kind": "item",
+      "name": "Carl's Doomsday Scenario",
+      "aka": [
+        "the Doomsday Scenario"
+      ],
+      "role": "Artifact",
+      "tagline": "A bomb of obscene yield that cannot be removed from his inventory or safely disarmed.",
+      "revealedAt": "2",
+      "sort": 2
+    },
+    {
+      "id": "dungeon-anarchists-cookbook",
+      "kind": "item",
+      "name": "The Dungeon Anarchist's Cookbook",
+      "aka": [
+        "the Cookbook"
+      ],
+      "role": "Document",
+      "tagline": "A manual left behind by the crawlers of earlier seasons.",
+      "revealedAt": "3",
+      "sort": 3
+    },
+    {
+      "id": "enhanced-pet-biscuit",
+      "kind": "item",
+      "name": "Enhanced Pet Biscuit",
+      "aka": [],
+      "role": "Consumable",
+      "tagline": "Makes an animal sapient. Used exactly once, to enormous effect.",
+      "revealedAt": "1",
+      "sort": 4
+    },
+    {
+      "id": "crown-of-the-sepsis-whore",
+      "kind": "item",
+      "name": "The Crown of the Sepsis Whore",
+      "aka": [],
+      "role": "Artifact",
+      "tagline": "A crown that threatens to force one of Carl's own party into a fight against Donut.",
+      "revealedAt": "6",
+      "sort": 5
+    },
+    {
+      "id": "orchid-boon",
+      "kind": "item",
+      "name": "The Orchid Boon",
+      "aka": [],
+      "role": "Boon",
+      "tagline": "A way out of the dungeon, and it costs.",
+      "revealedAt": "7:end",
+      "sort": 6
+    },
+    {
+      "id": "eighteen-floors",
+      "kind": "mechanic",
+      "name": "Eighteen Floors, On a Clock",
+      "aka": [],
+      "role": "Structure",
+      "tagline": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it.",
+      "revealedAt": "1",
+      "sort": 1
+    },
+    {
+      "id": "dungeon-crawler-world",
+      "kind": "mechanic",
+      "name": "Dungeon Crawler World",
+      "aka": [
+        "the show",
+        "the broadcast"
+      ],
+      "role": "The show",
+      "tagline": "The crawl is a television programme, broadcast across the galaxy. The survivors are the cast.",
+      "revealedAt": "1",
+      "sort": 2
+    },
+    {
+      "id": "loot-boxes",
+      "kind": "mechanic",
+      "name": "Loot Boxes",
+      "aka": [],
+      "role": "Economy",
+      "tagline": "Loot arrives in tiered boxes, from bronze up through platinum, legendary and celestial.",
+      "revealedAt": "1",
+      "sort": 3
+    },
+    {
+      "id": "classes-and-achievements",
+      "kind": "mechanic",
+      "name": "Classes & Achievements",
+      "aka": [],
+      "role": "Rules",
+      "tagline": "Race and class are chosen, not assigned — and the strange ones are the good ones.",
+      "revealedAt": "1",
+      "sort": 4
+    },
+    {
+      "id": "desperado-club",
+      "kind": "mechanic",
+      "name": "The Desperado Club",
+      "aka": [],
+      "role": "Institution",
+      "tagline": "The crawlers-only bar that persists between floors. Bouncer, house rules, and a stage.",
+      "revealedAt": "2",
+      "sort": 5
+    },
+    {
+      "id": "npcs-are-people",
+      "kind": "mechanic",
+      "name": "The NPCs Are People",
+      "aka": [],
+      "role": "Revelation",
+      "tagline": "The dungeon's 'non-player characters' are farmed populations with memory across seasons.",
+      "revealedAt": "4",
+      "sort": 6
+    },
+    {
+      "id": "no-respawns",
+      "kind": "mechanic",
+      "name": "Death Is Final Here",
+      "aka": [],
+      "role": "Rules · Floor 9",
+      "tagline": "On the ninth floor there are no respawns and no loopholes.",
+      "revealedAt": "7",
+      "sort": 7
+    },
+    {
+      "id": "borant-corporation",
+      "kind": "faction",
+      "name": "The Borant Corporation",
+      "aka": [
+        "Borant"
+      ],
+      "role": "Producer",
+      "tagline": "Runs the show on the cheap, and holds the foreclosure on Earth.",
+      "revealedAt": "1",
+      "sort": 1
+    },
+    {
+      "id": "the-syndicate",
+      "kind": "faction",
+      "name": "The Syndicate",
+      "aka": [],
+      "role": "Galactic order",
+      "tagline": "The body that makes all of this legal.",
+      "revealedAt": "1",
+      "sort": 2
+    },
+    {
+      "id": "royal-court",
+      "kind": "faction",
+      "name": "The Royal Court of Princess Donut",
+      "aka": [
+        "the Royal Court"
+      ],
+      "role": "The party",
+      "tagline": "A joke, a brand, and — because this is a show — an actual source of power.",
+      "revealedAt": "1",
+      "sort": 3
+    },
+    {
+      "id": "justice-and-the-gods",
+      "kind": "thread",
+      "name": "Justice releases the gods",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "The end of Faction Wars lets loose something the dungeon was built to contain.",
+      "revealedAt": "7:end",
+      "sort": 1
+    },
+    {
+      "id": "spider-in-carls-chest",
+      "kind": "thread",
+      "name": "The spider in Carl's chest",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "Still there, still tied to Shi Maria, still not explained.",
+      "revealedAt": "7:end",
+      "sort": 2
+    },
+    {
+      "id": "lucia-mars-children",
+      "kind": "thread",
+      "name": "120,000 children",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "Lucia Mar is carrying them. Nobody has said what for.",
+      "revealedAt": "7:end",
+      "sort": 3
+    },
+    {
+      "id": "tenth-faction",
+      "kind": "thread",
+      "name": "The tenth faction",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "The dungeon's props declared independence on live galactic television.",
+      "revealedAt": "7:end",
+      "sort": 4
+    },
+    {
+      "id": "system-glitches",
+      "kind": "thread",
+      "name": "The system is glitching",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "Floor 10's malfunctions are getting more frequent.",
+      "revealedAt": "8",
+      "sort": 5
+    },
+    {
+      "id": "cracking-order",
+      "kind": "thread",
+      "name": "The order is cracking",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "Borant's grip and the Syndicate's authority both start to fracture.",
+      "revealedAt": "7:end",
+      "sort": 6
+    }
+  ],
+  "beats": [
+    {
+      "entityId": "borant-corporation",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The foreclosure",
+      "text": "Borant claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal fig leaf and the revenue stream at the same time.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "carl",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Goes outside at the worst possible moment",
+      "text": "At three in the morning in January he leaves his Seattle apartment in a t-shirt, boxer shorts and no shoes to catch his ex-girlfriend's cat. Ninety seconds later every man-made structure on Earth collapses and everyone indoors dies. It is the only reason he is alive.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "carl",
+      "kind": "arc",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Barefoot, permanently",
+      "text": "The dungeon takes his entry condition and makes it a rule he can never undo. It should be a crippling handicap. Because this is a television programme, it becomes his brand.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "classes-and-achievements",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Donut's Former Child Actor, Carl's Compensated Anarchist",
+      "text": "Achievements fire for combat, invention and moral choices alike, and they stick to you permanently. The system is always watching for a story, and it pays for one.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "dungeon-crawler-world",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Ratings are currency",
+      "text": "Ratings buy sponsors; sponsors send gold and loot; gold and loot buy another floor of life. Being entertaining is a survival stat, and production will bend the dungeon itself to get a better episode.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "eighteen-floors",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The deal",
+      "text": "Reach the bottom and humanity gets Earth back. Almost nobody is expected to. The clock is the only rule the dungeon never bends, because the collapse is the show's season structure.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "enhanced-pet-biscuit",
+      "kind": "use",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Donut eats one",
+      "text": "The single most consequential piece of loot in the series, and it is a snack.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "frank-and-maggie",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Safe rooms are not morally neutral",
+      "text": "They are the first proof that the dungeon's worst hazard is the other survivors, and that production is delighted to broadcast it.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "loot-boxes",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The tiers",
+      "text": "The top tiers are rare enough to change the rules of a floor on their own, which is why sponsorship — and therefore entertainment value — decides who lives.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "mongo",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 2,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Joins the Royal Court",
+      "text": "He completes the party on the second floor, and the three of them descend as the Royal Court of Princess Donut.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "mordecai",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Hired as a guide",
+      "text": "He teaches Carl and Donut the mechanics the production would rather they picked up too late to use, and stays as Donut's manager.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The Enhanced Pet Biscuit",
+      "text": "She eats one and wakes up articulate. Her class is Former Child Actor, which sounds like a joke and is not — it makes her the breakout star of a galaxy-wide broadcast within hours.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "royal-court",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 2,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Formed on the second floor",
+      "text": "Carl, Donut and Mongo descend as a titled court. Naming the thing is what makes the audience invest in it, and audience investment is the only currency that matters.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "mordecai",
+      "kind": "arc",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1:end",
+      "sortKey": 1999,
+      "headline": "He has done this before",
+      "text": "Mordecai was a crawler on an earlier season — one his own world did not survive. He is not a tutorial NPC. He is a survivor of the same machine.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "carls-doomsday-scenario",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Acquired in the Over City",
+      "text": "Weapon, bargaining chip and permanent liability in a single object. He cannot drop it, cannot sell it, and cannot make it safe. It names the book.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "desperado-club",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Opens in the Over City",
+      "text": "It becomes the social and political spine of the entire series — the one place crawlers can coordinate, which makes it the most dangerous room in the dungeon for everyone running it.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "katia",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Becomes a fixture",
+      "text": "She settles into the party as its tank, and gradually into the series as its most quietly capable fighter.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "carls-doomsday-scenario",
+      "kind": "use",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2:end",
+      "sortKey": 2999,
+      "headline": "Leverage before ordnance",
+      "text": "Its first real value is not the blast. It is that everyone who matters now knows he is carrying it, and has to price that in.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "carl",
+      "kind": "arc",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "Stops fighting rooms and starts reading them",
+      "text": "The Iron Tangle cannot be beaten by any one crawler. Solving it takes hundreds of people coordinating at once — the exact thing production is designed to prevent. Carl works out that his real weapon is not explosives. It is organising people.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "dungeon-anarchists-cookbook",
+      "kind": "origin",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "Found in the Iron Tangle",
+      "text": "Proof that Earth is not the first season, that the show has run before, and that resistance to it has a written tradition — tested, recorded, and waiting for someone to pick it up.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "dungeon-anarchists-cookbook",
+      "kind": "use",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "It reframes the whole series",
+      "text": "Everything Carl does after reading it is a continuation of somebody else's work. That is the difference between a survivor and a movement.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "frank-and-maggie",
+      "kind": "fate",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "The Scree parasite",
+      "text": "Maggie returns riding another crawler, Chris; Frank dies of it. Carl extracts her, she lunges for him, and Mongo finishes it.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "katia",
+      "kind": "arc",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "Comes into her own",
+      "text": "The Iron Tangle is where she stops being someone Carl protects.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "mongo",
+      "kind": "arc",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "Finishes Maggie My",
+      "text": "When the Scree parasite lunges for Carl, Mongo kills it.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "carl",
+      "kind": "arc",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "Stops playing to survive",
+      "text": "After Signet, he stops treating the dungeon as a gauntlet to be endured and starts treating it as an institution to be destroyed. From here everything he does has two audiences: the one watching the show, and the one he is quietly recruiting.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "origin",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "Acquired on the fifth floor",
+      "text": "The Bubbles run on portals, and Carl ends up holding the artifact that makes his own. It is powerful, unstable, and permanently a bad idea — which is precisely why he keeps it.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "Opened inside the bubbles",
+      "text": "Using it drops gods and disasters into pocket worlds built for neither. The floor's sealed-off structure is what makes an unstable gate strategically valuable and catastrophically dangerous at the same time.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "npcs-are-people",
+      "kind": "origin",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "Through Signet and the Ink Marauders",
+      "text": "Once Carl accepts it, the pool of potential allies stops being just the humans — and the show's victim count stops being a number about Earth.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "signet",
+      "kind": "origin",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "The Ink Marauders",
+      "text": "Her history exposes what the dungeon does to the populations it calls non-player characters: farming them across generations, with memory carrying between seasons.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4:end",
+      "sortKey": 4999,
+      "headline": "It names the book for a reason",
+      "text": "By the end of the fifth floor the Gate has stopped being loot and become one of the levers Carl expects to pull on the institution itself.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "signet",
+      "kind": "fate",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4:end",
+      "sortKey": 4999,
+      "headline": "Sacrifice and liberation",
+      "text": "Her arc ends in sacrifice. It is the loss that turns Carl from surviving the game to breaking it.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "dungeon-crawler-world",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "The audience can be turned",
+      "text": "The Hunting Grounds prove the format cuts both ways. A broadcast that humiliates the people who paid for it is still a broadcast, and production cannot switch it off without admitting why.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "prepotente",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5:end",
+      "sortKey": 5999,
+      "headline": "Left carrying on",
+      "text": "Miriam Dom's vampirism finally kills her, leaving Prepotente and Bianca to continue without her.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "the-syndicate",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5:end",
+      "sortKey": 5999,
+      "headline": "It starts paying attention",
+      "text": "After the Hunting Grounds, Carl and Donut are famous enough to be a Syndicate problem rather than a Borant one. Fame used to be protection. Now it is a target.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "crown-of-the-sepsis-whore",
+      "kind": "use",
+      "book": 6,
+      "chapter": null,
+      "floor": 8,
+      "at": "6",
+      "sortKey": 6000,
+      "headline": "Aimed at Katia",
+      "text": "The eighth floor turns people into pieces, and this is the object that threatens to do it to someone Carl cannot afford to lose.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "katia",
+      "kind": "arc",
+      "book": 6,
+      "chapter": null,
+      "floor": 8,
+      "at": "6",
+      "sortKey": 6000,
+      "headline": "The Crown threatens to turn her",
+      "text": "The Crown of the Sepsis Whore puts her on course for a forced fight against Donut.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "mordecai",
+      "kind": "arc",
+      "book": 6,
+      "chapter": null,
+      "floor": 8,
+      "at": "6",
+      "sortKey": 6000,
+      "headline": "The past stops being backstory",
+      "text": "Odette's price for her help is the truth about an old catastrophe involving Huanxin, Mordecai and Uzzi.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "arc",
+      "book": 6,
+      "chapter": null,
+      "floor": 8,
+      "at": "6",
+      "sortKey": 6000,
+      "headline": "Commands people as pieces",
+      "text": "On the card floor she comes into real power, commanding Alpha Carl and Shi Maria. The book keeps pressing on the question underneath it: what does it mean to own someone you can put in a deck?",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "carl",
+      "kind": "arc",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Commands an army",
+      "text": "He takes one of the nine factions on the ninth floor and fights a thirty-day war for the castle at Larracos. The book is logistics, diplomacy and atrocity at scale — and it works.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "no-respawns",
+      "kind": "origin",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Thirty days, nine armies, one castle",
+      "text": "Tens of thousands of conscripted and retired crawlers against a far larger armed enemy, fighting for Larracos at the centre of the map. Everything the series has spent six books making you care about is on a board where nothing comes back.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "arc",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Becomes a political instrument",
+      "text": "By Faction Wars she is no longer a mascot with a spell list. She is a public figure the factions have to negotiate with, and the Princess Posse runs supply and diplomacy alongside the fighting.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "cracking-order",
+      "kind": "origin",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "The show may not survive its own season",
+      "text": "The galactic power structure that built Dungeon Crawler World begins to come apart around it.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "justice-and-the-gods",
+      "kind": "origin",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "Opened at the close of book 7",
+      "text": "Someone called Justice releases all of the gods. The consequences are still landing.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "katia",
+      "kind": "fate",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "Takes the Orchid boon and leaves",
+      "text": "At the end of Faction Wars she uses the Orchid boon to exit the dungeon entirely — restored to human, and missing parts of herself.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "lucia-mar",
+      "kind": "fate",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "She is carrying 120,000 children",
+      "text": "The end of Faction Wars reveals that her body contains more than 120,000 human children. Nobody has yet said what for.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "lucia-mars-children",
+      "kind": "origin",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "Revealed at the end of book 7",
+      "text": "More than 120,000 human children are inside her body.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "mongo",
+      "kind": "fate",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "Nearly dies, and becomes a father",
+      "text": "He is very nearly lost on the ninth floor and is pulled out by Ser Rendelgor. He ends the book a parent.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "npcs-are-people",
+      "kind": "arc",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "They organise",
+      "text": "Floor 9's NPCs form their own independent tenth faction. No season has ever recorded it, and the system has no answer for it.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "orchid-boon",
+      "kind": "use",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "Katia takes it",
+      "text": "She leaves the crawl entirely, returned to human form and missing parts of herself. It is the first time the series shows an exit that is neither death nor the eighteenth floor.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "spider-in-carls-chest",
+      "kind": "origin",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "Carried out of Faction Wars",
+      "text": "He leaves the ninth floor with it unresolved, and the connection to Shi Maria unaddressed.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "tenth-faction",
+      "kind": "origin",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "Unprecedented",
+      "text": "Floor 9's NPCs formed their own independent faction. Nothing in the show's history has a procedure for it.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "system-glitches",
+      "kind": "origin",
+      "book": 8,
+      "chapter": null,
+      "floor": 10,
+      "at": "8",
+      "sortKey": 8000,
+      "headline": "Increasingly frequent",
+      "text": "Whatever is running the dungeon is no longer running it cleanly.",
+      "confidence": "verified"
+    }
+  ],
+  "relations": [
+    {
+      "fromId": "carl",
+      "toId": "princess-donut",
+      "kind": "partner",
+      "note": "The Royal Court, such as it is.",
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "carl",
+      "toId": "mordecai",
+      "kind": "student-of",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "carl",
+      "toId": "carls-doomsday-scenario",
+      "kind": "wields",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
+    },
+    {
+      "fromId": "carl",
+      "toId": "gate-of-the-feral-gods",
+      "kind": "wields",
+      "note": null,
+      "revealedAt": "4",
+      "sortKey": 4000
+    },
+    {
+      "fromId": "carl",
+      "toId": "dungeon-anarchists-cookbook",
+      "kind": "wields",
+      "note": null,
+      "revealedAt": "3",
+      "sortKey": 3000
+    },
+    {
+      "fromId": "princess-donut",
+      "toId": "mongo",
+      "kind": "owns",
+      "note": "Mount, pet, and her single greatest source of pride.",
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "princess-donut",
+      "toId": "mordecai",
+      "kind": "managed-by",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "signet",
+      "toId": "npcs-are-people",
+      "kind": "embodies",
+      "note": null,
+      "revealedAt": "4",
+      "sortKey": 4000
+    },
+    {
+      "fromId": "lucia-mar",
+      "toId": "lucia-mars-children",
+      "kind": "subject-of",
+      "note": null,
+      "revealedAt": "7:end",
+      "sortKey": 7999
+    },
+    {
+      "fromId": "gate-of-the-feral-gods",
+      "toId": "carl",
+      "kind": "wielded-by",
+      "note": null,
+      "revealedAt": "4",
+      "sortKey": 4000
+    },
+    {
+      "fromId": "gate-of-the-feral-gods",
+      "toId": "npcs-are-people",
+      "kind": "connected-to",
+      "note": "The bubbles are where the dungeon's populations stop reading as scenery.",
+      "revealedAt": "4",
+      "sortKey": 4000
+    },
+    {
+      "fromId": "carls-doomsday-scenario",
+      "toId": "carl",
+      "kind": "wielded-by",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
+    },
+    {
+      "fromId": "dungeon-anarchists-cookbook",
+      "toId": "carl",
+      "kind": "wielded-by",
+      "note": null,
+      "revealedAt": "3",
+      "sortKey": 3000
+    },
+    {
+      "fromId": "enhanced-pet-biscuit",
+      "toId": "princess-donut",
+      "kind": "transformed",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "crown-of-the-sepsis-whore",
+      "toId": "katia",
+      "kind": "threatens",
+      "note": null,
+      "revealedAt": "6",
+      "sortKey": 6000
+    },
+    {
+      "fromId": "orchid-boon",
+      "toId": "katia",
+      "kind": "used-by",
+      "note": null,
+      "revealedAt": "7:end",
+      "sortKey": 7999
+    },
+    {
+      "fromId": "dungeon-crawler-world",
+      "toId": "borant-corporation",
+      "kind": "produced-by",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "borant-corporation",
+      "toId": "the-syndicate",
+      "kind": "answers-to",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "spider-in-carls-chest",
+      "toId": "carl",
+      "kind": "afflicts",
+      "note": null,
+      "revealedAt": "7:end",
+      "sortKey": 7999
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readPrefs } from '../lib/prefs';
+import { gateFor, reveals } from '../lib/spoiler';
+import { getBooks, getEntities, getAllBeats } from '../lib/content';
+import { frontierOf, percentFromChapter } from '../lib/progress';
+
+const prefs = readPrefs(Astro.cookies);
+const gate = gateFor(prefs, prefs.spoilers, prefs.fresh);
+const [books, entities, beats] = await Promise.all([getBooks(), getEntities(), getAllBeats()]);
+
+const entityShown = entities.filter(e => reveals(gate, e.revealedAt)).length;
+const beatShown = beats.filter(b => gate.frontier >= b.sortKey).length;
+const current = books.find(b => b.id === prefs.book);
+const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
+---
+<Layout title="Position">
+  <section class="wrap head">
+    <p class="eyebrow">03</p>
+    <h1>Your Position</h1>
+    <p class="standfirst">Everything in this companion is gated on one number. Here is what it is
+      and what it currently unseals.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="stats">
+      <div class="stat">
+        <span class="k">Frontier</span>
+        <span class="v">{prefs.spoilers ? frontierOf(prefs) : '∞'}</span>
+        <span class="n">{prefs.spoilers
+          ? `book ${prefs.book}${prefs.finished ? ', finished' : prefs.chapter ? `, chapter ${prefs.chapter}` : ''}`
+          : 'spoilers off — everything shown'}</span>
+      </div>
+      <div class="stat">
+        <span class="k">Entries unsealed</span>
+        <span class="v">{entityShown}<i>/{entities.length}</i></span>
+        <span class="n">characters, items, mechanics, factions, threads</span>
+      </div>
+      <div class="stat">
+        <span class="k">Timeline entries</span>
+        <span class="v">{beatShown}<i>/{beats.length}</i></span>
+        <span class="n">arcs, uses and fates across the series</span>
+      </div>
+    </div>
+
+    <div class="prose explain">
+      <h2>How the gate works</h2>
+      <p>A reading position is a book plus a chapter inside it, and both collapse to a single
+        integer: <code>book × 1000 + chapter</code>. Every piece of content declares the earliest
+        position at which it is safe to read, written as <code>4</code> (anywhere in book 4),
+        <code>4:12</code> (book 4, chapter 12) or <code>4:end</code> (once book 4 is finished).
+        Showing something is then one comparison.</p>
+      <p><strong>Books gate; floors navigate.</strong> Floor 7 — the Great Race — opens at the
+        close of book 5 and resolves at the start of book 6, so a floor-based gate would leak.
+        Floors are how the story is shaped, and they are how you browse it, but the book is what
+        the reader actually knows they have finished.</p>
+      {current?.chapters ? (
+        <p>Book {prefs.book} has <strong>{current.chapters} chapters</strong>. You are at
+          chapter {prefs.chapter || 0} — about <strong>{pct}%</strong> through, which is the figure
+          to use if you are listening rather than reading.</p>
+      ) : (
+        <p class="sys"><b>*** No chapter count ***</b>Book {prefs.book} has no chapter count
+          recorded yet, so the chapter dial and the percentage readout are unavailable for it.
+          Counts have to be taken from the books themselves — the fan wikis disagree with each
+          other and several are machine-generated.</p>
+      )}
+    </div>
+
+    <h2 class="tbl-head">The books</h2>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>#</th><th>Title</th><th>Published</th><th class="num">Chapters</th><th>Floors</th></tr>
+        </thead>
+        <tbody>
+          {books.map(b => (
+            <tr class={b.id === prefs.book && prefs.spoilers ? 'here' : undefined}>
+              <td class="num mono">{b.id}</td>
+              <td>{b.title}</td>
+              <td class="mono">{b.published}</td>
+              <td class="num mono">{b.chapters ?? '—'}</td>
+              <td class="mono">{
+                b.id === 1 ? '1–2' : b.id === 5 ? '6, 7' : b.id === 6 ? '7, 8'
+                : b.id === 8 ? '10–11' : String(b.id + 1)
+              }</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .head { padding-block: 48px 30px; }
+  h1 { font-size: clamp(40px, 7vw, 72px); font-weight: 800; margin-top: 10px; }
+  .standfirst { font-size: 16.5px; color: var(--color-grey-200); max-width: var(--measure); margin-top: 18px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+           gap: 1px; background: var(--color-line); border: 1px solid var(--color-line); }
+  .stat { background: var(--color-panel); padding: 18px; display: flex; flex-direction: column; gap: 4px; }
+  .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em;
+       text-transform: uppercase; color: var(--color-grey-500); }
+  .v { font-family: var(--font-display); font-weight: 800; font-size: 44px; line-height: 1;
+       color: var(--color-gold); font-variant-numeric: tabular-nums; }
+  .v i { font-style: normal; font-size: 22px; color: var(--color-grey-700); }
+  .n { font-size: 13px; color: var(--color-grey-300); }
+  .explain { padding-top: 38px; }
+  .explain h2 { font-size: 24px; font-weight: 700; color: var(--color-gold); margin-bottom: 12px; }
+  .explain code { font-family: var(--font-mono); font-size: 13.5px; color: var(--color-gold);
+                  background: var(--color-panel); border: 1px solid var(--color-line); padding: 1px 5px; }
+  .explain .sys { max-width: var(--measure); }
+  .tbl-head { font-size: 24px; font-weight: 700; color: var(--color-gold); margin: 40px 0 12px; }
+  .tbl-scroll { overflow-x: auto; border: 1px solid var(--color-line); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--color-line-soft); font-size: 14px; }
+  th { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
+       text-transform: uppercase; color: var(--color-grey-500); background: var(--color-raised); }
+  tr:last-child td { border-bottom: none; }
+  tr.here td { background: #1a1508; color: #fff; }
+  .num { text-align: right; }
+  .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--color-grey-300); }
+</style>

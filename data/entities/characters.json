@@ -1,0 +1,159 @@
+{
+  "$comment": "confidence: 'verified' = corroborated against a source during curation. 'draft' = written from reading knowledge and awaiting a pass against the book. `npm run content:check` prints every draft beat as a work queue.",
+  "entities": [
+    {
+      "id": "carl", "kind": "character", "name": "Carl", "aka": ["Carl the Compensated Anarchist"],
+      "role": "Protagonist", "revealedAt": "1", "sort": 1,
+      "tagline": "Coast Guard veteran, competent with his hands, angry in a slow and useful way.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "headline": "Goes outside at the worst possible moment",
+          "text": "At three in the morning in January he leaves his Seattle apartment in a t-shirt, boxer shorts and no shoes to catch his ex-girlfriend's cat. Ninety seconds later every man-made structure on Earth collapses and everyone indoors dies. It is the only reason he is alive." },
+        { "kind": "arc", "book": 1, "floor": 1, "at": "1", "confidence": "draft",
+          "headline": "Barefoot, permanently",
+          "text": "The dungeon takes his entry condition and makes it a rule he can never undo. It should be a crippling handicap. Because this is a television programme, it becomes his brand." },
+        { "kind": "arc", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "headline": "Stops fighting rooms and starts reading them",
+          "text": "The Iron Tangle cannot be beaten by any one crawler. Solving it takes hundreds of people coordinating at once — the exact thing production is designed to prevent. Carl works out that his real weapon is not explosives. It is organising people." },
+        { "kind": "arc", "book": 4, "floor": 5, "at": "4", "confidence": "draft",
+          "headline": "Stops playing to survive",
+          "text": "After Signet, he stops treating the dungeon as a gauntlet to be endured and starts treating it as an institution to be destroyed. From here everything he does has two audiences: the one watching the show, and the one he is quietly recruiting." },
+        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "headline": "Commands an army",
+          "text": "He takes one of the nine factions on the ninth floor and fights a thirty-day war for the castle at Larracos. The book is logistics, diplomacy and atrocity at scale — and it works." }
+      ],
+      "relations": [
+        { "to": "princess-donut", "kind": "partner", "at": "1", "note": "The Royal Court, such as it is." },
+        { "to": "mordecai", "kind": "student-of", "at": "1" },
+        { "to": "carls-doomsday-scenario", "kind": "wields", "at": "2" },
+        { "to": "gate-of-the-feral-gods", "kind": "wields", "at": "4" },
+        { "to": "dungeon-anarchists-cookbook", "kind": "wields", "at": "3" }
+      ]
+    },
+    {
+      "id": "princess-donut", "kind": "character", "name": "Princess Donut",
+      "aka": ["Donut", "Princess Donut the Queen Anne Chonk"],
+      "role": "Co-protagonist", "revealedAt": "1", "sort": 2,
+      "tagline": "Award-winning Persian show cat, made sapient by a biscuit. Vain, imperious, genuinely powerful.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "headline": "The Enhanced Pet Biscuit",
+          "text": "She eats one and wakes up articulate. Her class is Former Child Actor, which sounds like a joke and is not — it makes her the breakout star of a galaxy-wide broadcast within hours." },
+        { "kind": "arc", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "headline": "Commands people as pieces",
+          "text": "On the card floor she comes into real power, commanding Alpha Carl and Shi Maria. The book keeps pressing on the question underneath it: what does it mean to own someone you can put in a deck?" },
+        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "headline": "Becomes a political instrument",
+          "text": "By Faction Wars she is no longer a mascot with a spell list. She is a public figure the factions have to negotiate with, and the Princess Posse runs supply and diplomacy alongside the fighting." }
+      ],
+      "relations": [
+        { "to": "mongo", "kind": "owns", "at": "1", "note": "Mount, pet, and her single greatest source of pride." },
+        { "to": "mordecai", "kind": "managed-by", "at": "1" }
+      ]
+    },
+    {
+      "id": "mongo", "kind": "character", "name": "Mongo", "aka": [],
+      "role": "Dinosaur", "revealedAt": "1", "sort": 3,
+      "tagline": "Donut's dinosaur. Mount, pet, weapon, and the thing she is proudest of in the world.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 2, "at": "1", "confidence": "draft",
+          "headline": "Joins the Royal Court",
+          "text": "He completes the party on the second floor, and the three of them descend as the Royal Court of Princess Donut." },
+        { "kind": "arc", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "headline": "Finishes Maggie My",
+          "text": "When the Scree parasite lunges for Carl, Mongo kills it." },
+        { "kind": "fate", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "headline": "Nearly dies, and becomes a father",
+          "text": "He is very nearly lost on the ninth floor and is pulled out by Ser Rendelgor. He ends the book a parent." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "mordecai", "kind": "character", "name": "Mordecai", "aka": [],
+      "role": "Guide & manager", "revealedAt": "1", "sort": 4,
+      "tagline": "The alien they hire to explain the rules — and a crawler himself, once.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "draft",
+          "headline": "Hired as a guide",
+          "text": "He teaches Carl and Donut the mechanics the production would rather they picked up too late to use, and stays as Donut's manager." },
+        { "kind": "arc", "book": 1, "floor": 1, "at": "1:end", "confidence": "draft",
+          "headline": "He has done this before",
+          "text": "Mordecai was a crawler on an earlier season — one his own world did not survive. He is not a tutorial NPC. He is a survivor of the same machine." },
+        { "kind": "arc", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "headline": "The past stops being backstory",
+          "text": "Odette's price for her help is the truth about an old catastrophe involving Huanxin, Mordecai and Uzzi." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "katia", "kind": "character", "name": "Katia", "aka": ["Katia Grim"],
+      "role": "Party", "revealedAt": "2", "sort": 5,
+      "tagline": "Icelandic art professor whose race lets her reshape her own body.",
+      "beats": [
+        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "draft",
+          "headline": "Becomes a fixture",
+          "text": "She settles into the party as its tank, and gradually into the series as its most quietly capable fighter." },
+        { "kind": "arc", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "headline": "Comes into her own",
+          "text": "The Iron Tangle is where she stops being someone Carl protects." },
+        { "kind": "arc", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "headline": "The Crown threatens to turn her",
+          "text": "The Crown of the Sepsis Whore puts her on course for a forced fight against Donut." },
+        { "kind": "fate", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "headline": "Takes the Orchid boon and leaves",
+          "text": "At the end of Faction Wars she uses the Orchid boon to exit the dungeon entirely — restored to human, and missing parts of herself." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "signet", "kind": "character", "name": "Signet", "aka": [],
+      "role": "Ally", "revealedAt": "4", "sort": 6,
+      "tagline": "An Ink Marauder, and the character through whom the series stops treating NPCs as scenery.",
+      "beats": [
+        { "kind": "origin", "book": 4, "floor": 5, "at": "4", "confidence": "draft",
+          "headline": "The Ink Marauders",
+          "text": "Her history exposes what the dungeon does to the populations it calls non-player characters: farming them across generations, with memory carrying between seasons." },
+        { "kind": "fate", "book": 4, "floor": 5, "at": "4:end", "confidence": "draft",
+          "headline": "Sacrifice and liberation",
+          "text": "Her arc ends in sacrifice. It is the loss that turns Carl from surviving the game to breaking it." }
+      ],
+      "relations": [{ "to": "npcs-are-people", "kind": "embodies", "at": "4" }]
+    },
+    {
+      "id": "prepotente", "kind": "character", "name": "Prepotente", "aka": [],
+      "role": "Ally", "revealedAt": "5", "sort": 7,
+      "tagline": "A profane, opera-singing goat. Exactly as good as that sounds.",
+      "beats": [
+        { "kind": "arc", "book": 5, "floor": 6, "at": "5:end", "confidence": "draft",
+          "headline": "Left carrying on",
+          "text": "Miriam Dom's vampirism finally kills her, leaving Prepotente and Bianca to continue without her." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "frank-and-maggie", "kind": "character", "name": "Frank Q & Maggie My", "aka": ["Frank Q", "Maggie My"],
+      "role": "Antagonists", "revealedAt": "1", "sort": 8,
+      "tagline": "Two crawlers who worked out early that murdering humans in safe rooms beats fighting monsters.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "draft",
+          "headline": "Safe rooms are not morally neutral",
+          "text": "They are the first proof that the dungeon's worst hazard is the other survivors, and that production is delighted to broadcast it." },
+        { "kind": "fate", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "headline": "The Scree parasite",
+          "text": "Maggie returns riding another crawler, Chris; Frank dies of it. Carl extracts her, she lunges for him, and Mongo finishes it." }
+      ],
+      "relations": []
+    },
+    {
+      "id": "lucia-mar", "kind": "character", "name": "Lucia Mar", "aka": [],
+      "role": "Crawler", "revealedAt": "7", "sort": 9,
+      "tagline": "A crawler whose presence gets steadily harder to explain away.",
+      "beats": [
+        { "kind": "fate", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "headline": "She is carrying 120,000 children",
+          "text": "The end of Faction Wars reveals that her body contains more than 120,000 human children. Nobody has yet said what for." }
+      ],
+      "relations": [{ "to": "lucia-mars-children", "kind": "subject-of", "at": "7:end" }]
+    }
+  ]
+}
