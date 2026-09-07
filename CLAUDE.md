@@ -100,10 +100,25 @@ reading knowledge and awaiting a pass against the book — it renders with an `u
 and is listed by `npm run content:check`. **Most of the current content is draft.** Curated
 prose is written from knowledge, so the lint validates structure and never truth.
 
-**Do not fill chapter counts or plot detail from the fan wikis.** During curation
-`crawlerscookbook.com` was found to be openly AI-generated with incomplete book 8 coverage, and
-`dungeoncrawlercarlwiki.com` gave demonstrably wrong character-introduction books. The books
-themselves are the only source worth trusting here.
+### Sourcing
+
+The **Dungeon Crawler Carl Fandom wiki** is the one usable secondary source, and it is only
+reachable through its MediaWiki API — `WebFetch` gets a 402, so pull raw wikitext with
+`curl 'https://dungeon-crawler-carl.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=...'`.
+
+**`crawlerscookbook.com` and `dungeoncrawlercarlwiki.com` are not usable.** The first is openly
+AI-generated with incomplete book 8 coverage; the second gave demonstrably wrong
+character-introduction books. Curating from them produced four errors that the Fandom pull later
+corrected — Katia's race and class (she is a **Doppelgänger / Monster Truck Driver**, not a
+Changeling), Signet's book (**5**, not 4), the Crown of the Sepsis Whore's acquisition (**book 1**,
+not 6), and the floor on which Carl and Donut pick classes (**3**, not 1).
+
+**Even the Fandom wiki files events under the wrong book.** Its *Gate of the Feral Gods* page puts
+the Larracos flood, the Syndicate lawsuit and Juice Box — all book 7 — under a "Book 4" heading.
+Copying a wiki section's heading as a reveal tag would have leaked three books early. Read what the
+prose actually describes, not the heading above it.
+
+For chapter counts and chapter-level reveal points, **the books themselves are the only source**.
 
 ## Tech stack
 
@@ -170,7 +185,8 @@ ASTRO_DATABASE_FILE=./.astro/build.db npm run build
 ## Next
 
 - Chapter counts for books 2–8, taken from the books, to switch the chapter dial on
-- A verification pass over every `draft` beat
+- A verification pass over the remaining 18 `draft` beats (`npm run content:check` lists them)
+- Books 6 and 8 are the thinnest — book 8 has almost no reliable secondary coverage yet
 - Deeper coverage: more items, per-floor mechanics, quotes with chapter anchors
 - Accounts (`data/users.db` + sessions), so progress follows the reader across devices
 - Search / command palette across entities and floors

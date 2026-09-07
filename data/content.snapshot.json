@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T13:32:40.813Z",
+  "generatedAt": "2026-09-07T13:49:40.421Z",
   "books": [
     {
       "id": 1,
@@ -81,7 +81,7 @@
       "book": 1,
       "accent": "--f1",
       "revealedAt": "1",
-      "summary": "Dirt, corridors and safe rooms, and the discovery that the tutorial is lethal. Carl enters barefoot and mostly undressed, and the dungeon makes that permanent — an entry condition he can never undo and which the audience adores. Donut eats an Enhanced Pet Biscuit and wakes up sapient. Mordecai teaches them the rules Borant would rather they never learned. Carl saves the Meadow Lark by exploiting a boundary the dungeon didn't think to close: the first of hundreds of times he beats a room by reading its rules instead of its monsters.",
+      "summary": "Dirt, corridors and safe rooms, and the discovery that the tutorial is lethal. Carl comes down in a leather jacket, heart boxers and his ex-girlfriend's pink Crocs; within the hour he has a Goblin Pass Tattoo and a Trollskin Shirt. Donut eats an Enhanced Pet Biscuit and wakes up talking, takes party leadership on stat points, renames the party after herself, and equips the Crown of the Sepsis Whore without reading the warning — quietly enrolling herself in a royal succession eight floors below. Mordecai, an indentured Borant guide who was once a crawler himself, starts teaching them the rules production would rather they learned too late to use.",
       "sortKey": 1000
     },
     {
@@ -90,7 +90,7 @@
       "book": 1,
       "accent": "--f2",
       "revealedAt": "1",
-      "summary": "The floor that formalises the party. Mongo joins as Donut's mount, pet and single greatest source of pride, and the three of them descend as the Royal Court of Princess Donut — a joke, a brand, and, because this is a show, an actual source of power. The thesis of the first book lands here: the dungeon rewards spectacle and punishes decency, unless you can make decency spectacular.",
+      "summary": "Where the party takes its final shape. Carl and Donut find Mongo — a level-1 pet-class mob, seven inches of pink downy feathers — locked in a cage in a secret pet reward room, and Donut wins him over by teaching him to open Brindle Grubs. From this floor the Enchanted Pedicure Kit of the Sylph leaves Carl's bare feet permanently shiny, which the audience adores. The thesis of the first book lands here: the dungeon rewards spectacle and punishes decency, unless you can make decency spectacular.",
       "sortKey": 1000
     },
     {
@@ -99,7 +99,7 @@
       "book": 2,
       "accent": "--f3",
       "revealedAt": "2",
-      "summary": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions — shops, quest-givers, neighbours and politics. The Desperado Club opens here and becomes the social spine of the whole series. Carl acquires Carl's Doomsday Scenario. Underneath the comedy the first real horror lands: the dungeon is built out of Earth — its buildings, its dead, its history, dressed as set decoration.",
+      "summary": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions. Class selection happens here: Carl takes Primal and the unique Compensated Anarchist, Donut takes Cat and Former Child Actor, and on Odette's advice they manoeuvre Mordecai into becoming Donut's manager — an appointment that had to look like an accident. Katia, ten levels behind and abandoned by Eva, is taken into the Royal Court. The Desperado Club opens. During the Fools Who Broke the Glass Quest, Carl builds Carl's Doomsday Scenario by wrapping a Sheol Glass Reaper Case around an exploding Soul Crystal — a 45-kilometre blast he can never put down. The floor ends with Borant spending its one annual veto rather than pay out 83 Celestial boxes.",
       "sortKey": 2000
     },
     {
@@ -108,7 +108,7 @@
       "book": 3,
       "accent": "--f4",
       "revealedAt": "3",
-      "summary": "Every subway system on Earth welded into one impossible knot of moving trains — a puzzle the size of a continent, and the trains do not stop. Carl finds The Dungeon Anarchist's Cookbook and learns that humanity is not the first and that resistance has a written tradition. The floor cannot be solved alone: beating the Tangle takes hundreds of crawlers coordinating at once, which is precisely what production exists to prevent. Carl learns that organising people is the exploit.",
+      "summary": "Every subway system on Earth welded into one impossible knot of moving trains — a puzzle the size of a continent, and the trains do not stop. Carl becomes the twenty-fifth holder of The Dungeon Anarchist's Cookbook and learns that Earth is not the first season and that resistance to the show has a written tradition. Maggie My returns as a Scree parasite riding another crawler; Frank dies of it, and Mongo finishes her. Boxes and achievements get dramatically harder from this floor on. The Tangle cannot be solved alone — beating it takes hundreds of crawlers coordinating at once, which is exactly what production exists to prevent.",
       "sortKey": 3000
     },
     {
@@ -117,7 +117,7 @@
       "book": 4,
       "accent": "--f5",
       "revealedAt": "4",
-      "summary": "The survivors are split into sealed pocket worlds, each with its own biome, civilisation and way to kill you. Moving between them means portals, and Carl ends up holding the Gate of the Feral Gods. Through Signet and the Ink Marauders the series stops treating NPCs as scenery: they are farmed populations who remember the seasons before this one. This is the turn — Carl stops playing to survive and starts playing to break the game.",
+      "summary": "The survivors are split into sealed pocket worlds, each with its own biome and civilisation. Buried in the Necropolis of Anser is the Gate of the Feral Gods, an artifact so far above this floor's grade that the AI times out repeatedly reconciling the rule conflict. Carl gathers its three pieces, and assembles it trapped at the bottom of the water quadrant inside the city boss Lusca — teleporting himself, Katia and Tran out and dragging an ocean through behind them, nearly flattening the pazuzu town of Pandinus. The escape looses a feral god and enrages the true pantheon. Katia, meanwhile, turns the Gate's linked watches into a reverse compass and starts mapping the ninth floor four books early.",
       "sortKey": 4000
     },
     {
@@ -126,7 +126,7 @@
       "book": 5,
       "accent": "--f6",
       "revealedAt": "5",
-      "summary": "Outsiders are let in: wealthy aliens buy hunting licences, walk into the dungeon and kill crawlers for sport with a full broadcast package. Carl inverts it — the crawlers coordinate, bait, trap and butcher the hunters on camera, turning a scheduled massacre into the most humiliating live television in the show's history. The bill comes due immediately: they are now famous enough that the Syndicate itself starts paying attention.",
+      "summary": "Outsiders are let in: wealthy aliens buy hunting licences and kill crawlers for sport with a full broadcast package. Carl takes the Agent Provocateur specialisation and inverts the floor, coordinating crawlers to bait, trap and butcher the hunters on camera. Here the series stops treating NPCs as scenery — Tsarina Signet turns out to be the protagonist of a scripted Syndicate drama, Vengeance of the Daughter, with producers steering her grief for the ratings. Hekla's earlier choices fracture the alliance around Katia, Eva and the Daughters, and Miriam Dom's vampirism kills her.",
       "sortKey": 5000
     },
     {
@@ -145,7 +145,7 @@
       "book": 6,
       "accent": "--f8",
       "revealedAt": "6",
-      "summary": "A floor that runs on cards: crawlers collect, build and combine decks, capture totems, and fight with whatever they have assembled. The most explicitly game-like floor yet and, because the material is Earth's own dead, the most personal. Donut comes into real power commanding Alpha Carl and Shi Maria — people turned into playable pieces — and the book keeps pressing on what it means to own someone you can put in a deck. Nothing detonates; instead a stack of bargains gets signed, all of them coming due on the ninth floor.",
+      "summary": "A floor that runs on cards: crawlers collect, build and combine decks, capture totems, and fight with whatever they have assembled — and the material is Earth's own dead. Donut comes into real power commanding Alpha Male Carl and Shi Maria, people turned into playable pieces, and the book keeps pressing on what it means to own someone you can put in a deck. The Crown of the Sepsis Whore puts Katia on course for a forced fight against Donut. Huanxin Jinx trades help for placing Odette as adjutant, and Odette's price is the truth about an old catastrophe involving Huanxin, Mordecai and Uzzi. Nothing detonates; a stack of bargains gets signed, all due on the ninth floor.",
       "sortKey": 6000
     },
     {
@@ -154,7 +154,7 @@
       "book": 7,
       "accent": "--f9",
       "revealedAt": "7",
-      "summary": "A war. Nine armies, each fronted by a rich alien faction, fight for thirty days over one castle — Larracos — at the centre of the map, with tens of thousands of conscripted and retired crawlers against a far larger armed enemy. There are no respawns and no loopholes: death on the ninth floor is final. Carl commands one of the nine, Donut stops being a mascot and becomes a political instrument, and the floor's NPCs do something no season has ever recorded — they form their own tenth faction, live, in front of the galaxy.",
+      "summary": "A war. Nine armies fight for thirty days over the castle at Larracos — roughly 32,000 conscripted crawlers and 50,000 retired ones against some 100,000 armed enemies, with no respawns and no loopholes. Seven of the nine factions sue in Syndicate court to strip the Gate of the Feral Gods from Carl and lose for lack of standing. He had planned to drop a feral god onto the Skull Empire army; instead he keeps the artifact and floods the faction market with ocean water, timed charges and sharks, while Juice Box slips through the portal to tell the NPCs what they are. Donut's crown comes due against the Blood Sultanate. Katia takes the Orchid boon and leaves the dungeon. Then floor 9's NPCs form their own independent tenth faction, live, in front of the galaxy.",
       "sortKey": 7000
     },
     {
@@ -163,7 +163,7 @@
       "book": 8,
       "accent": "--f10",
       "revealedAt": "8",
-      "summary": "A racing floor: get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile. Underneath the format, glitches in the system start appearing more and more often — the dungeon itself is no longer running clean.",
+      "summary": "A racing floor: get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile. Underneath the format, glitches in the system start appearing more and more often — whatever is running the dungeon is no longer running it cleanly.",
       "sortKey": 8000
     },
     {
@@ -182,10 +182,11 @@
       "kind": "character",
       "name": "Carl",
       "aka": [
-        "Carl the Compensated Anarchist"
+        "Carl the Compensated Anarchist",
+        "Crawler Carl"
       ],
       "role": "Protagonist",
-      "tagline": "Coast Guard veteran, competent with his hands, angry in a slow and useful way.",
+      "tagline": "A 27-year-old Coast Guard veteran and marine technician who went outside for a cigarette at the worst possible moment.",
       "revealedAt": "1",
       "sort": 1
     },
@@ -198,7 +199,7 @@
         "Princess Donut the Queen Anne Chonk"
       ],
       "role": "Co-protagonist",
-      "tagline": "Award-winning Persian show cat, made sapient by a biscuit. Vain, imperious, genuinely powerful.",
+      "tagline": "A pedigreed tortoiseshell Persian show cat, made sapient by a biscuit, with a voice described as sultry yet pompous.",
       "revealedAt": "1",
       "sort": 2
     },
@@ -206,9 +207,11 @@
       "id": "mongo",
       "kind": "character",
       "name": "Mongo",
-      "aka": [],
+      "aka": [
+        "Mongoliensis"
+      ],
       "role": "Dinosaur",
-      "tagline": "Donut's dinosaur. Mount, pet, weapon, and the thing she is proudest of in the world.",
+      "tagline": "A food-motivated velociraptor who considers Princess Donut his mommy and will die for her without hesitating.",
       "revealedAt": "1",
       "sort": 3
     },
@@ -218,41 +221,55 @@
       "name": "Mordecai",
       "aka": [],
       "role": "Guide & manager",
-      "tagline": "The alien they hire to explain the rules — and a crawler himself, once.",
+      "tagline": "An indentured Borant employee, a former crawler, and the Royal Court's memory.",
       "revealedAt": "1",
       "sort": 4
     },
     {
       "id": "katia",
       "kind": "character",
-      "name": "Katia",
+      "name": "Katia Grim",
       "aka": [
-        "Katia Grim"
+        "Katia"
       ],
       "role": "Party",
-      "tagline": "Icelandic art professor whose race lets her reshape her own body.",
+      "tagline": "A university art professor from Reykjavík who can mould her own mass like clay, once she works out how.",
       "revealedAt": "2",
       "sort": 5
     },
     {
       "id": "signet",
       "kind": "character",
-      "name": "Signet",
-      "aka": [],
-      "role": "Ally",
-      "tagline": "An Ink Marauder, and the character through whom the series stops treating NPCs as scenery.",
-      "revealedAt": "4",
+      "name": "Tsarina Signet",
+      "aka": [
+        "Signet"
+      ],
+      "role": "NPC · Hunting Grounds",
+      "tagline": "The star of a scripted Syndicate revenge drama, who turns out to be a person having it done to her.",
+      "revealedAt": "5",
       "sort": 6
+    },
+    {
+      "id": "grimaldi",
+      "kind": "character",
+      "name": "Redstone Grimaldi",
+      "aka": [
+        "Grimaldi"
+      ],
+      "role": "NPC · Hunting Grounds",
+      "tagline": "Ringmaster of Grimaldi's Traveling Circus, and the man who took Signet in.",
+      "revealedAt": "5",
+      "sort": 7
     },
     {
       "id": "prepotente",
       "kind": "character",
       "name": "Prepotente",
       "aka": [],
-      "role": "Ally",
-      "tagline": "A profane, opera-singing goat. Exactly as good as that sounds.",
+      "role": "Crawler",
+      "tagline": "A profane, opera-singing Boer goat. Exactly as good as that sounds.",
       "revealedAt": "5",
-      "sort": 7
+      "sort": 8
     },
     {
       "id": "frank-and-maggie",
@@ -265,7 +282,49 @@
       "role": "Antagonists",
       "tagline": "Two crawlers who worked out early that murdering humans in safe rooms beats fighting monsters.",
       "revealedAt": "1",
-      "sort": 8
+      "sort": 9
+    },
+    {
+      "id": "beatrice",
+      "kind": "character",
+      "name": "Beatrice",
+      "aka": [
+        "Bea"
+      ],
+      "role": "Earth · Carl's ex",
+      "tagline": "Carl's ex-girlfriend, Donut's owner, and the reason he owned a pair of pink Crocs.",
+      "revealedAt": "1",
+      "sort": 10
+    },
+    {
+      "id": "hekla",
+      "kind": "character",
+      "name": "Hekla",
+      "aka": [],
+      "role": "Crawler · Brynhild's Daughters",
+      "tagline": "Leader of Brynhild's Daughters, and the one who asks the Royal Court to take Katia in.",
+      "revealedAt": "2",
+      "sort": 11
+    },
+    {
+      "id": "eva",
+      "kind": "character",
+      "name": "Eva",
+      "aka": [],
+      "role": "Crawler",
+      "tagline": "Katia's friend and fellow professor, who left her behind on the third floor.",
+      "revealedAt": "2",
+      "sort": 12
+    },
+    {
+      "id": "odette",
+      "kind": "character",
+      "name": "Odette",
+      "aka": [],
+      "role": "Advisor",
+      "tagline": "The one who told them Mordecai's memory was worth more than any item in the dungeon.",
+      "revealedAt": "2",
+      "sort": 13
     },
     {
       "id": "lucia-mar",
@@ -275,7 +334,29 @@
       "role": "Crawler",
       "tagline": "A crawler whose presence gets steadily harder to explain away.",
       "revealedAt": "7",
-      "sort": 9
+      "sort": 14
+    },
+    {
+      "id": "juice-box",
+      "kind": "character",
+      "name": "Juice Box",
+      "aka": [],
+      "role": "Ally",
+      "tagline": "Slipped through a portal into the enemy's own market to tell the NPCs what they are.",
+      "revealedAt": "7",
+      "sort": 15
+    },
+    {
+      "id": "system-ai",
+      "kind": "character",
+      "name": "The System AI",
+      "aka": [
+        "the AI"
+      ],
+      "role": "Narrator & antagonist",
+      "tagline": "Announcer, referee, loot dispenser and comedian. It is not neutral and it is not pretending to be.",
+      "revealedAt": "1",
+      "sort": 16
     },
     {
       "id": "gate-of-the-feral-gods",
@@ -284,8 +365,8 @@
       "aka": [
         "the Gate"
       ],
-      "role": "Artifact",
-      "tagline": "A portable gate that opens onto things which should not be given doors.",
+      "role": "Artifact · legendary/celestial",
+      "tagline": "A teleport that works by tearing a hole in the prison dimension where the old gods are kept — and something always comes back through.",
       "revealedAt": "4",
       "sort": 1
     },
@@ -296,10 +377,22 @@
       "aka": [
         "the Doomsday Scenario"
       ],
-      "role": "Artifact",
-      "tagline": "A bomb of obscene yield that cannot be removed from his inventory or safely disarmed.",
+      "role": "Unstable custom explosive",
+      "tagline": "An explosion large enough to rattle the teeth of a god, and it detonates the instant it leaves his inventory.",
       "revealedAt": "2",
       "sort": 2
+    },
+    {
+      "id": "crown-of-the-sepsis-whore",
+      "kind": "item",
+      "name": "Enchanted Crown of the Sepsis Whore",
+      "aka": [
+        "the Crown"
+      ],
+      "role": "Tiara · fleeting, unique",
+      "tagline": "A tiara of dark smoky gems that quietly enrols the wearer in a royal succession eight floors below.",
+      "revealedAt": "1",
+      "sort": 3
     },
     {
       "id": "dungeon-anarchists-cookbook",
@@ -309,9 +402,9 @@
         "the Cookbook"
       ],
       "role": "Document",
-      "tagline": "A manual left behind by the crawlers of earlier seasons.",
+      "tagline": "A manual passed down by the crawlers of earlier seasons. Carl is its twenty-fifth holder.",
       "revealedAt": "3",
-      "sort": 3
+      "sort": 4
     },
     {
       "id": "enhanced-pet-biscuit",
@@ -319,29 +412,41 @@
       "name": "Enhanced Pet Biscuit",
       "aka": [],
       "role": "Consumable",
-      "tagline": "Makes an animal sapient. Used exactly once, to enormous effect.",
+      "tagline": "Makes an animal sapient. Used once, on a cat, to enormous effect.",
       "revealedAt": "1",
-      "sort": 4
-    },
-    {
-      "id": "crown-of-the-sepsis-whore",
-      "kind": "item",
-      "name": "The Crown of the Sepsis Whore",
-      "aka": [],
-      "role": "Artifact",
-      "tagline": "A crown that threatens to force one of Carl's own party into a fight against Donut.",
-      "revealedAt": "6",
       "sort": 5
     },
     {
-      "id": "orchid-boon",
+      "id": "orchid-of-eileithyias-grace",
       "kind": "item",
-      "name": "The Orchid Boon",
-      "aka": [],
-      "role": "Boon",
-      "tagline": "A way out of the dungeon, and it costs.",
-      "revealedAt": "7:end",
+      "name": "Orchid of Eileithyia's Grace",
+      "aka": [
+        "the Orchid boon"
+      ],
+      "role": "Consumable · boon",
+      "tagline": "Eat the flower, spend an hour at one percent health, and a goddess decides what you become.",
+      "revealedAt": "7",
       "sort": 6
+    },
+    {
+      "id": "the-nothing",
+      "kind": "item",
+      "name": "The Nothing",
+      "aka": [],
+      "role": "Prison dimension",
+      "tagline": "The dimension the pantheon banished the old gods and demons into. The Gate's shortcuts run straight through it.",
+      "revealedAt": "4",
+      "sort": 7
+    },
+    {
+      "id": "the-transformation",
+      "kind": "mechanic",
+      "name": "The Transformation",
+      "aka": [],
+      "role": "The end of Earth",
+      "tagline": "Every man-made structure on Earth collapses at once. Everyone indoors dies.",
+      "revealedAt": "1",
+      "sort": 1
     },
     {
       "id": "eighteen-floors",
@@ -351,7 +456,7 @@
       "role": "Structure",
       "tagline": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it.",
       "revealedAt": "1",
-      "sort": 1
+      "sort": 2
     },
     {
       "id": "dungeon-crawler-world",
@@ -362,9 +467,9 @@
         "the broadcast"
       ],
       "role": "The show",
-      "tagline": "The crawl is a television programme, broadcast across the galaxy. The survivors are the cast.",
+      "tagline": "The crawl is a television programme broadcast across the galaxy. The survivors are the cast.",
       "revealedAt": "1",
-      "sort": 2
+      "sort": 3
     },
     {
       "id": "loot-boxes",
@@ -372,19 +477,29 @@
       "name": "Loot Boxes",
       "aka": [],
       "role": "Economy",
-      "tagline": "Loot arrives in tiered boxes, from bronze up through platinum, legendary and celestial.",
-      "revealedAt": "1",
-      "sort": 3
-    },
-    {
-      "id": "classes-and-achievements",
-      "kind": "mechanic",
-      "name": "Classes & Achievements",
-      "aka": [],
-      "role": "Rules",
-      "tagline": "Race and class are chosen, not assigned — and the strange ones are the good ones.",
+      "tagline": "Six tiers: Bronze, Silver, Gold, Platinum, Legendary, Celestial — each dramatically rarer than the last.",
       "revealedAt": "1",
       "sort": 4
+    },
+    {
+      "id": "compensated-anarchist",
+      "kind": "mechanic",
+      "name": "Compensated Anarchist",
+      "aka": [],
+      "role": "Class · Carl",
+      "tagline": "A unique monk/rogue hybrid. Trapmaker, bomb-maker, social-media dynamo.",
+      "revealedAt": "2",
+      "sort": 5
+    },
+    {
+      "id": "former-child-actor",
+      "kind": "mechanic",
+      "name": "Former Child Actor",
+      "aka": [],
+      "role": "Class · Donut",
+      "tagline": "A bard/rogue class that lets her pick a new class at every single level.",
+      "revealedAt": "2",
+      "sort": 6
     },
     {
       "id": "desperado-club",
@@ -394,7 +509,7 @@
       "role": "Institution",
       "tagline": "The crawlers-only bar that persists between floors. Bouncer, house rules, and a stage.",
       "revealedAt": "2",
-      "sort": 5
+      "sort": 7
     },
     {
       "id": "npcs-are-people",
@@ -402,9 +517,9 @@
       "name": "The NPCs Are People",
       "aka": [],
       "role": "Revelation",
-      "tagline": "The dungeon's 'non-player characters' are farmed populations with memory across seasons.",
+      "tagline": "The dungeon's 'non-player characters' are populations with histories, families and scripts written for them.",
       "revealedAt": "4",
-      "sort": 6
+      "sort": 8
     },
     {
       "id": "no-respawns",
@@ -414,7 +529,7 @@
       "role": "Rules · Floor 9",
       "tagline": "On the ninth floor there are no respawns and no loopholes.",
       "revealedAt": "7",
-      "sort": 7
+      "sort": 9
     },
     {
       "id": "borant-corporation",
@@ -424,7 +539,7 @@
         "Borant"
       ],
       "role": "Producer",
-      "tagline": "Runs the show on the cheap, and holds the foreclosure on Earth.",
+      "tagline": "Runs the show on the cheap, holds the foreclosure on Earth, and gets one veto per season.",
       "revealedAt": "1",
       "sort": 1
     },
@@ -434,7 +549,7 @@
       "name": "The Syndicate",
       "aka": [],
       "role": "Galactic order",
-      "tagline": "The body that makes all of this legal.",
+      "tagline": "The body that makes all of this legal — and, occasionally, the venue where it can be fought.",
       "revealedAt": "1",
       "sort": 2
     },
@@ -446,9 +561,41 @@
         "the Royal Court"
       ],
       "role": "The party",
-      "tagline": "A joke, a brand, and — because this is a show — an actual source of power.",
+      "tagline": "Named by a cat on the first floor because she had the highest stat total and nobody could stop her.",
       "revealedAt": "1",
       "sort": 3
+    },
+    {
+      "id": "brynhilds-daughters",
+      "kind": "faction",
+      "name": "Brynhild's Daughters",
+      "aka": [
+        "the Daughters"
+      ],
+      "role": "Crawler group",
+      "tagline": "Hekla's group, and the one Katia and Eva came in with.",
+      "revealedAt": "2",
+      "sort": 4
+    },
+    {
+      "id": "blood-sultanate",
+      "kind": "faction",
+      "name": "The Blood Sultanate",
+      "aka": [],
+      "role": "Ninth-floor power",
+      "tagline": "A royal house on the ninth floor whose line of succession a cat joined by accident on floor one.",
+      "revealedAt": "1",
+      "sort": 5
+    },
+    {
+      "id": "crown-obligation",
+      "kind": "thread",
+      "name": "The crown's bill",
+      "aka": [],
+      "role": "Planted book 1",
+      "tagline": "A cat put on a hat on floor one. The invoice is payable on floor nine.",
+      "revealedAt": "1",
+      "sort": 1
     },
     {
       "id": "justice-and-the-gods",
@@ -456,9 +603,9 @@
       "name": "Justice releases the gods",
       "aka": [],
       "role": "Unresolved",
-      "tagline": "The end of Faction Wars lets loose something the dungeon was built to contain.",
+      "tagline": "The end of Faction Wars lets loose what the dungeon was built to contain.",
       "revealedAt": "7:end",
-      "sort": 1
+      "sort": 2
     },
     {
       "id": "spider-in-carls-chest",
@@ -468,7 +615,7 @@
       "role": "Unresolved",
       "tagline": "Still there, still tied to Shi Maria, still not explained.",
       "revealedAt": "7:end",
-      "sort": 2
+      "sort": 3
     },
     {
       "id": "lucia-mars-children",
@@ -478,7 +625,7 @@
       "role": "Unresolved",
       "tagline": "Lucia Mar is carrying them. Nobody has said what for.",
       "revealedAt": "7:end",
-      "sort": 3
+      "sort": 4
     },
     {
       "id": "tenth-faction",
@@ -488,7 +635,17 @@
       "role": "Unresolved",
       "tagline": "The dungeon's props declared independence on live galactic television.",
       "revealedAt": "7:end",
-      "sort": 4
+      "sort": 5
+    },
+    {
+      "id": "scolopendra",
+      "kind": "thread",
+      "name": "Scolopendra",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "A threat the Gate was reportedly essential to beating — and the Gate nearly got spent.",
+      "revealedAt": "5",
+      "sort": 6
     },
     {
       "id": "system-glitches",
@@ -498,7 +655,7 @@
       "role": "Unresolved",
       "tagline": "Floor 10's malfunctions are getting more frequent.",
       "revealedAt": "8",
-      "sort": 5
+      "sort": 7
     },
     {
       "id": "cracking-order",
@@ -508,10 +665,34 @@
       "role": "Unresolved",
       "tagline": "Borant's grip and the Syndicate's authority both start to fracture.",
       "revealedAt": "7:end",
-      "sort": 6
+      "sort": 8
     }
   ],
   "beats": [
+    {
+      "entityId": "beatrice",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The Bahamas, and Brad",
+      "text": "She went away for Christmas with her ex, Brad, and posted the photo. Carl broke up with her by phone days before the Transformation. Her cat, her family's breeding line, her shoes — and Carl is the one who ends up carrying all three into the dungeon.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "blood-sultanate",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Named in the crown's warning",
+      "text": "Anyone in the Blood Sultanate's royal line must slay the Sultan and every other member of the royal family before they are permitted to descend to the tenth floor. Donut reads this after putting the crown on.",
+      "confidence": "verified"
+    },
     {
       "entityId": "borant-corporation",
       "kind": "origin",
@@ -521,7 +702,7 @@
       "at": "1",
       "sortKey": 1000,
       "headline": "The foreclosure",
-      "text": "Borant claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal fig leaf and the revenue stream at the same time.",
+      "text": "Borant claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal fig leaf and the revenue stream at the same time. It also employs its guides on indenture — Mordecai among them.",
       "confidence": "verified"
     },
     {
@@ -532,8 +713,8 @@
       "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "Goes outside at the worst possible moment",
-      "text": "At three in the morning in January he leaves his Seattle apartment in a t-shirt, boxer shorts and no shoes to catch his ex-girlfriend's cat. Ninety seconds later every man-made structure on Earth collapses and everyone indoors dies. It is the only reason he is alive.",
+      "headline": "January 3rd, 2:23 in the morning",
+      "text": "Carl steps onto his Seattle balcony for a smoke. Donut — his ex-girlfriend Beatrice's show cat — bolts out the cracked window and into the tree. He goes after her in a brown leather jacket, heart-print boxers and Bea's ill-fitting pink Crocs, carrying a Zippo and half a pack of Marlboro Reds. While he is out there the Transformation levels every structure on Earth and kills everyone inside. That cigarette is the entire reason the series exists.",
       "confidence": "verified"
     },
     {
@@ -544,21 +725,45 @@
       "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "Barefoot, permanently",
-      "text": "The dungeon takes his entry condition and makes it a rule he can never undo. It should be a crippling handicap. Because this is a television programme, it becomes his brand.",
-      "confidence": "draft"
+      "headline": "He goes down dressed for nothing",
+      "text": "Within an hour of entering he has a Goblin Pass Tattoo on his forearm, a Trollskin Shirt of Pummeling, a Nightgaunt Cloak of Stoutness clipped to the leather coat, and a Toe Ring of the Splatter Skunk. The footwear situation never really improves; from the second floor the Enchanted Pedicure Kit of the Sylph leaves his bare feet shiny and glittering, and the audience adores it.",
+      "confidence": "verified"
     },
     {
-      "entityId": "classes-and-achievements",
+      "entityId": "crown-obligation",
       "kind": "origin",
       "book": 1,
       "chapter": null,
       "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "Donut's Former Child Actor, Carl's Compensated Anarchist",
-      "text": "Achievements fire for combat, invention and moral choices alike, and they stick to you permanently. The system is always watching for a story, and it pays for one.",
-      "confidence": "draft"
+      "headline": "Eight floors of fuse",
+      "text": "The Crown of the Sepsis Whore enrols Donut in the Blood Sultanate's line of succession, and taking it off does not undo it. The series sets this up in its first hours and does not touch it again for years.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "crown-of-the-sepsis-whore",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Donut puts it on without reading it",
+      "text": "It comes out of the Legendary Quadruped Box she gets for being the first cat into the dungeon. Mordecai warns her. She equips it anyway. +5 Intelligence, +5 Good First Impression, and a 15% chance for any attack to inflict Sepsis.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "crown-of-the-sepsis-whore",
+      "kind": "use",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The warning nobody read",
+      "text": "\"Placing this crown upon your head permanently places you within the royal line of succession for the Blood Sultanate on the ninth floor. Removing this item will not remove this status. Royal members of the Blood Sultanate will be required to slay the Sultan and all other members of the royal family before descending to the tenth floor. You'll only want to wear this if you're a blood-thirsty, raging psychopath.\"",
+      "confidence": "verified"
     },
     {
       "entityId": "dungeon-crawler-world",
@@ -581,7 +786,7 @@
       "at": "1",
       "sortKey": 1000,
       "headline": "The deal",
-      "text": "Reach the bottom and humanity gets Earth back. Almost nobody is expected to. The clock is the only rule the dungeon never bends, because the collapse is the show's season structure.",
+      "text": "Reach the bottom and humanity gets Earth back. Almost nobody is expected to. The clock is the one rule the dungeon never bends, because the collapse is the show's season structure.",
       "confidence": "verified"
     },
     {
@@ -592,8 +797,8 @@
       "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "Donut eats one",
-      "text": "The single most consequential piece of loot in the series, and it is a snack.",
+      "headline": "Donut takes it out of his hand",
+      "text": "It arrives in the Legendary Pet Box Carl earns for being the first crawler to bring a cat down the stairs. She snatches it, melts into a furry heap of goo, and gets up talking. The single most consequential piece of loot in the series is a snack.",
       "confidence": "verified"
     },
     {
@@ -605,7 +810,7 @@
       "at": "1",
       "sortKey": 1000,
       "headline": "Safe rooms are not morally neutral",
-      "text": "They are the first proof that the dungeon's worst hazard is the other survivors, and that production is delighted to broadcast it.",
+      "text": "They are the first proof that the dungeon's worst hazard is the other survivors — and that production is delighted to broadcast it.",
       "confidence": "draft"
     },
     {
@@ -616,9 +821,33 @@
       "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "The tiers",
-      "text": "The top tiers are rare enough to change the rules of a floor on their own, which is why sponsorship — and therefore entertainment value — decides who lives.",
-      "confidence": "draft"
+      "headline": "Where boxes come from",
+      "text": "Achievements, bosses (Boss Boxes, scaling with the boss's rank), quests (Quest Boxes), and viewers (Fan Boxes and Benefactor Boxes). Boxes stay locked in the Awards and Boxes tab until the crawler reaches a safe room or guildhall, and then it is all-or-nothing — every accumulated box opens in sequence, lowest tier first.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "loot-boxes",
+      "kind": "use",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The tiers cost the house real money",
+      "text": "Borant owes the Syndicate a tax on the tier of every non-sponsored box it awards, which is why the top tiers are so vanishingly rare. Across the entire history of the show only 2,145 Celestial boxes have ever been given out, and no single crawler has ever received more than four. Drops key to a crawler's race rather than their class, so a barbarian can easily end up holding a necromancer's staff.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "loot-boxes",
+      "kind": "use",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Benefactor Boxes break the theme",
+      "text": "Only patrons can send them, and they are the one category that ignores the dungeon's fantasy dressing — a pulse rifle, powered armour, gear from the sponsor's own homeworld. A Bronze Benefactor Box outclasses a plain Gold Adventurer Box.",
+      "confidence": "verified"
     },
     {
       "entityId": "mongo",
@@ -628,9 +857,9 @@
       "floor": 2,
       "at": "1",
       "sortKey": 1000,
-      "headline": "Joins the Royal Court",
-      "text": "He completes the party on the second floor, and the three of them descend as the Royal Court of Princess Donut.",
-      "confidence": "draft"
+      "headline": "Found in a cage on the second floor",
+      "text": "A level-1 pet-class mob locked in a secret pet reward room. Newly hatched he is seven inches of pink downy feathers — \"a chicken dinosaur thing\" — and he attacks both of them the moment the cage opens. Donut wins him over by releasing him onto Brindle Grubs and teaching him to slash their bellies open for the juicy parts.",
+      "confidence": "verified"
     },
     {
       "entityId": "mordecai",
@@ -640,9 +869,21 @@
       "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "Hired as a guide",
-      "text": "He teaches Carl and Donut the mechanics the production would rather they picked up too late to use, and stays as Donut's manager.",
-      "confidence": "draft"
+      "headline": "Game Guide for the first three floors",
+      "text": "He is an indentured employee of the Borant Corporation, contracted to help run crawls: guide on the early floors, magic guild master on the later ones, where he mostly wants to be left alone to brew potions and see old friends.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "mordecai",
+      "kind": "arc",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "He has done this before, and lost",
+      "text": "Mordecai is a former crawler. He took the Changeling race during his own crawl and can no longer shift at will, so the dungeon assigns him a new body at the start of every floor — rat-kin, then a seven-foot obsidian bugaboo, then an incubus in a tuxedo, then a warty grulke toad. His natural form is a golden, eagle-like thing with wings. When he drinks he gets emotional about the family that crawl cost him.",
+      "confidence": "verified"
     },
     {
       "entityId": "princess-donut",
@@ -652,8 +893,44 @@
       "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "The Enhanced Pet Biscuit",
-      "text": "She eats one and wakes up articulate. Her class is Former Child Actor, which sounds like a joke and is not — it makes her the breakout star of a galaxy-wide broadcast within hours.",
+      "headline": "The first cat into the dungeon",
+      "text": "An award-winning show cat with a whole bedroom of the apartment given over to her ribbons. Carl carries her down the stairs, which earns her a Legendary Quadruped Box for being the first cat to enter — and earns him a Legendary Pet Box for being the first crawler to bring one. Inside his is an Enhanced Pet Biscuit. She snatches it out of his hand.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "arc",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "She names the party after herself",
+      "text": "She wakes up talking, with the Enhanced Growth Buff and four automatically-assigned stat points per level. Highest total stats makes her party leader, and she immediately renames the party \"the Royal Court of Princess Donut.\" It is a joke that turns into a brand that turns into actual political power.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "arc",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "She puts on the crown without reading it",
+      "text": "Her Quadruped Box contains the Enchanted Crown of the Sepsis Whore. Mordecai warns her. She equips it anyway — permanently entering the royal line of succession of the Blood Sultanate on the ninth floor. Eight floors early, the series quietly loads a gun.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "arc",
+      "book": 1,
+      "chapter": null,
+      "floor": 2,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "She adopts a dinosaur",
+      "text": "Near the end of the second floor she insists on keeping Mongo, and treats him as her child from that moment on.",
       "confidence": "verified"
     },
     {
@@ -661,24 +938,84 @@
       "kind": "origin",
       "book": 1,
       "chapter": null,
-      "floor": 2,
+      "floor": 1,
       "at": "1",
       "sortKey": 1000,
-      "headline": "Formed on the second floor",
-      "text": "Carl, Donut and Mongo descend as a titled court. Naming the thing is what makes the audience invest in it, and audience investment is the only currency that matters.",
-      "confidence": "draft"
+      "headline": "She renames the party",
+      "text": "Party leadership goes to the highest total stat points, which is Donut, and her first act is to rename it after herself. It is a joke that becomes a brand that becomes an actual source of power — because on this show, audience investment is the only currency that matters.",
+      "confidence": "verified"
     },
     {
-      "entityId": "mordecai",
+      "entityId": "system-ai",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "The first voice after the world ends",
+      "text": "A minute after the Transformation it makes a planet-wide announcement opening Dungeon Crawler World: Earth, and the staircases appear. Every rule, notification and insult from here comes in its voice.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "system-ai",
       "kind": "arc",
       "book": 1,
       "chapter": null,
       "floor": 1,
-      "at": "1:end",
-      "sortKey": 1999,
-      "headline": "He has done this before",
-      "text": "Mordecai was a crawler on an earlier season — one his own world did not survive. He is not a tutorial NPC. He is a survivor of the same machine.",
-      "confidence": "draft"
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Loot is only semi-random",
+      "text": "Box contents may be genuinely randomised, or the AI may have picked them by hand to help or hurt a crawler for the sake of ratings. It also hands out pointedly insulting boxes for unusual or taboo feats — Carl's Bronze and Gold Asshole's Boxes on the first floor being the model.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "the-syndicate",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "Law, tax and standing",
+      "text": "It licenses the crawl, taxes Borant per loot-box tier, and runs the courts. Which means it is also the one institution in the setting that can be argued with.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "the-transformation",
+      "kind": "origin",
+      "book": 1,
+      "chapter": null,
+      "floor": 1,
+      "at": "1",
+      "sortKey": 1000,
+      "headline": "January 3rd",
+      "text": "It takes a minute. Then the System AI makes a planet-wide announcement opening Dungeon Crawler World: Earth, and staircases appear. The survivors are, almost without exception, the people who happened to be outside at the time — which is why the cast of this series is so weighted toward smokers, insomniacs and people chasing a pet.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "brynhilds-daughters",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "They carry Katia as far as they can",
+      "text": "The Daughters get Katia and Eva through a neighbourhood boss and a borough boss before class selection splits everyone up on the third floor.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "carl",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Primal, and a Compensated Anarchist",
+      "text": "Class selection on the third floor. He takes the Primal race and a unique monk/rogue hybrid the System AI describes as \"a trapmaking, bomb-making, social-media dynamo\" that \"will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" It is the most accurate character summary in the series, and the dungeon wrote it.",
+      "confidence": "verified"
     },
     {
       "entityId": "carls-doomsday-scenario",
@@ -688,9 +1025,33 @@
       "floor": 3,
       "at": "2",
       "sortKey": 2000,
-      "headline": "Acquired in the Over City",
-      "text": "Weapon, bargaining chip and permanent liability in a single object. He cannot drop it, cannot sell it, and cannot make it safe. It names the book.",
-      "confidence": "draft"
+      "headline": "Built by accident, during the Fools Who Broke the Glass",
+      "text": "Carl drops a Sheol Glass Reaper Case around a Soul Crystal that is about to go off and yanks the result into his inventory. The system rates it \"Pretty Damn Rare\" and files its status as Explosion Imminent, then adds: \"This item can no longer be stabilized.\"",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "carls-doomsday-scenario",
+      "kind": "use",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Forty-five kilometres wide",
+      "text": "The blast radius is about 45 km — enough to level a city and every suburb around it. He cannot drop it, sell it, or make it safe. It will detonate the millisecond it leaves him.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "compensated-anarchist",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "The system's own description",
+      "text": "\"Will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" Carl takes it alongside the Primal race at class selection on the third floor.",
+      "confidence": "verified"
     },
     {
       "entityId": "desperado-club",
@@ -700,9 +1061,57 @@
       "floor": 3,
       "at": "2",
       "sortKey": 2000,
-      "headline": "Opens in the Over City",
-      "text": "It becomes the social and political spine of the entire series — the one place crawlers can coordinate, which makes it the most dangerous room in the dungeon for everyone running it.",
-      "confidence": "draft"
+      "headline": "Entry is a tattoo",
+      "text": "Access comes with a Desperado Pass Tattoo — Carl's on his neck, Donut's on her right shoulder blade, glowing gold through the fur. It is the one place crawlers can reliably coordinate, which makes it the most dangerous room in the dungeon for the people running the show.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "eva",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "She goes on without her",
+      "text": "The two entered the dungeon together. Class selection split them up, and Eva did not wait.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "former-child-actor",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Taken with the Cat race on the third floor",
+      "text": "Her constitution is far too low for melee, so she fights on charisma and spells. The per-level class pick is what turns her into a jack-of-all-trades rather than a novelty — and the reason a show cat ends up out-scaling most of the human crawlers.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "hekla",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "She hands Katia over",
+      "text": "Her group carries Katia and Eva through the early floors, and it is Hekla who asks Carl and Donut to take Katia on when the gap becomes unsurvivable.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "katia",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Abandoned on the third floor",
+      "text": "She enters the dungeon with her friend and fellow professor Eva and joins Hekla's Brynhild's Daughters. Class selection separates them, Eva leaves her behind, and by the time Hekla asks the Royal Court to take her in she is ten levels behind and the System AI has only just upgraded her displayed race from \"What the f-word?\" to \"Human.\"",
+      "confidence": "verified"
     },
     {
       "entityId": "katia",
@@ -712,9 +1121,93 @@
       "floor": 3,
       "at": "2",
       "sortKey": 2000,
-      "headline": "Becomes a fixture",
-      "text": "She settles into the party as its tank, and gradually into the series as its most quietly capable fighter.",
-      "confidence": "draft"
+      "headline": "Doppelgänger, Monster Truck Driver",
+      "text": "Her guide Bannon talks her into a momentum-based constitution tank who can reshape her mass — body and equipped gear alike — into any form of equal mass. She spends the third floor sculpting her own face using the reflection off a health potion bottle, and it shows: Carl charitably compares the result to a Juan Gris painting.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "katia",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "She is fundamentally good, which nearly kills her",
+      "text": "When the Fools Who Broke the Glass Quest triggers shortly after she joins — all but guaranteeing her death — she spends it trying to save NPCs and telling Carl and Donut to save themselves instead.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "mongo",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "He stands over her",
+      "text": "When Donut is paralysed by a trap on the third floor, Mongo plants himself over her body and nearly dies holding off a swarm of spiky Street Urchins. Whatever he is to Carl, his loyalty to Donut is absolute.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "mordecai",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Manoeuvred into being Donut's manager",
+      "text": "On Odette's advice — she rates his memory as the single most valuable resource a crawler could have — Carl and Donut engineer his appointment during class selection, and it has to look like an accident. He would forgive Donut for it. He would never forgive Carl.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "mordecai",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "What he is allowed to say",
+      "text": "Most of what he knows he is forbidden to volunteer; on some subjects he may only answer a direct question, and viewers cannot see or hear him without press credentials. As manager he may not fight mobs directly. His advice is relentlessly conservative — stay ahead of the curve, never trust an elite, stay away from gods — which puts him permanently at odds with what Carl intends to do.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "odette",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Her advice makes the party",
+      "text": "It is Odette who identifies Mordecai's memory as the single most valuable resource a crawler could have, and Odette's plan that installs him as Donut's manager without him realising he was steered.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2",
+      "sortKey": 2000,
+      "headline": "Cat, and a Former Child Actor",
+      "text": "Her class lets her pick a new class every level. With a constitution far too low for melee she fights on charisma and spells instead, and becomes a jack-of-all-trades and a genuine galactic social-media force.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "borant-corporation",
+      "kind": "arc",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2:end",
+      "sortKey": 2999,
+      "headline": "It burns its veto on 83 crawlers",
+      "text": "Rather than pay out 83 Celestial boxes, Borant spends its single per-season veto — and still ends up in Syndicate court over the one that got opened first. A production company that cheap is a production company with exploitable seams.",
+      "confidence": "verified"
     },
     {
       "entityId": "carls-doomsday-scenario",
@@ -725,8 +1218,20 @@
       "at": "2:end",
       "sortKey": 2999,
       "headline": "Leverage before ordnance",
-      "text": "Its first real value is not the blast. It is that everyone who matters now knows he is carrying it, and has to price that in.",
+      "text": "Its first real value is not the explosion. It is that everyone who matters now knows he is carrying it, and has to price that in.",
       "confidence": "draft"
+    },
+    {
+      "entityId": "loot-boxes",
+      "kind": "use",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2:end",
+      "sortKey": 2999,
+      "headline": "The Celestial veto",
+      "text": "At the end of the third floor a quest reward is double-upgraded all the way to Celestial for 83 crawlers. Borant spends its single per-season veto to negate the prizes — but not before the crawler Quan Ch opens his, leaving Borant liable for it and triggering an expensive Syndicate court fight. The upgrade achievements responsible are patched out immediately.",
+      "confidence": "verified"
     },
     {
       "entityId": "carl",
@@ -736,8 +1241,20 @@
       "floor": 4,
       "at": "3",
       "sortKey": 3000,
-      "headline": "Stops fighting rooms and starts reading them",
-      "text": "The Iron Tangle cannot be beaten by any one crawler. Solving it takes hundreds of people coordinating at once — the exact thing production is designed to prevent. Carl works out that his real weapon is not explosives. It is organising people.",
+      "headline": "The twenty-fifth holder of the Cookbook",
+      "text": "He is not the first person to try this. The Dungeon Anarchist's Cookbook has had twenty-four owners before him, across seasons and species, and inheriting it turns his improvisation into the continuation of somebody else's work.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "carl",
+      "kind": "arc",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "Organising people is the exploit",
+      "text": "The Iron Tangle cannot be beaten by any one crawler. Solving it takes hundreds coordinating at once — precisely what production exists to prevent. From here his real weapon stops being explosives.",
       "confidence": "draft"
     },
     {
@@ -748,9 +1265,9 @@
       "floor": 4,
       "at": "3",
       "sortKey": 3000,
-      "headline": "Found in the Iron Tangle",
-      "text": "Proof that Earth is not the first season, that the show has run before, and that resistance to it has a written tradition — tested, recorded, and waiting for someone to pick it up.",
-      "confidence": "draft"
+      "headline": "Twenty-four people had it first",
+      "text": "Proof that Earth is not the first season, that the show has run before, and that resistance to it has a written tradition — tested, recorded, and handed on.",
+      "confidence": "verified"
     },
     {
       "entityId": "dungeon-anarchists-cookbook",
@@ -761,8 +1278,20 @@
       "at": "3",
       "sortKey": 3000,
       "headline": "It reframes the whole series",
-      "text": "Everything Carl does after reading it is a continuation of somebody else's work. That is the difference between a survivor and a movement.",
+      "text": "Everything Carl does after reading it is the continuation of somebody else's work. That is the difference between a survivor and a movement.",
       "confidence": "draft"
+    },
+    {
+      "entityId": "eighteen-floors",
+      "kind": "arc",
+      "book": 3,
+      "chapter": null,
+      "floor": 4,
+      "at": "3",
+      "sortKey": 3000,
+      "headline": "The difficulty cliff at floor four",
+      "text": "The early floors are deliberately built to drown crawlers in low-tier loot and beginner skills. From the fourth floor on, boxes and achievements get dramatically harder to come by — the point where the show stops subsidising its cast.",
+      "confidence": "verified"
     },
     {
       "entityId": "frank-and-maggie",
@@ -773,19 +1302,7 @@
       "at": "3",
       "sortKey": 3000,
       "headline": "The Scree parasite",
-      "text": "Maggie returns riding another crawler, Chris; Frank dies of it. Carl extracts her, she lunges for him, and Mongo finishes it.",
-      "confidence": "draft"
-    },
-    {
-      "entityId": "katia",
-      "kind": "arc",
-      "book": 3,
-      "chapter": null,
-      "floor": 4,
-      "at": "3",
-      "sortKey": 3000,
-      "headline": "Comes into her own",
-      "text": "The Iron Tangle is where she stops being someone Carl protects.",
+      "text": "Maggie returns riding another crawler, Chris Andrews; Frank dies of it. Carl extracts her, she lunges for him, and Mongo finishes it.",
       "confidence": "draft"
     },
     {
@@ -796,20 +1313,8 @@
       "floor": 4,
       "at": "3",
       "sortKey": 3000,
-      "headline": "Finishes Maggie My",
+      "headline": "He finishes Maggie My",
       "text": "When the Scree parasite lunges for Carl, Mongo kills it.",
-      "confidence": "draft"
-    },
-    {
-      "entityId": "carl",
-      "kind": "arc",
-      "book": 4,
-      "chapter": null,
-      "floor": 5,
-      "at": "4",
-      "sortKey": 4000,
-      "headline": "Stops playing to survive",
-      "text": "After Signet, he stops treating the dungeon as a gauntlet to be endured and starts treating it as an institution to be destroyed. From here everything he does has two audiences: the one watching the show, and the one he is quietly recruiting.",
       "confidence": "draft"
     },
     {
@@ -820,9 +1325,9 @@
       "floor": 5,
       "at": "4",
       "sortKey": 4000,
-      "headline": "Acquired on the fifth floor",
-      "text": "The Bubbles run on portals, and Carl ends up holding the artifact that makes his own. It is powerful, unstable, and permanently a bad idea — which is precisely why he keeps it.",
-      "confidence": "draft"
+      "headline": "Three pieces, buried in the Necropolis of Anser",
+      "text": "A winding box and two magically linked pocket watches. An artifact this powerful should not surface before the eighth or ninth floor, and its appearance on the fifth triggers repeated system timeouts while the AI reconciles the rule conflict. Its pieces are split three ways — Henrik the Changeling holds one watch, the gnomish Commandant Kane the other, and Ghazi the box — and the system hands Carl a quest to take all three. Reward: \"Oh boy-oh-boy.\"",
+      "confidence": "verified"
     },
     {
       "entityId": "gate-of-the-feral-gods",
@@ -832,9 +1337,45 @@
       "floor": 5,
       "at": "4",
       "sortKey": 4000,
-      "headline": "Opened inside the bubbles",
-      "text": "Using it drops gods and disasters into pocket worlds built for neither. The floor's sealed-off structure is what makes an unstable gate strategically valuable and catastrophically dangerous at the same time.",
-      "confidence": "draft"
+      "headline": "How it actually works",
+      "text": "Dial a \"time\" standing for coordinates on one watch and the other mirrors it. Both go in the box; it winds, and must not move more than about five feet or it resets. Pulling the watches out opens a one-way portal roughly twenty feet tall, good for about twenty minutes. Then it lingers as a two-way passage into the Nothing until something comes through — usually a feral god, driven mad by however long the pantheon kept it down there. Stand too near an open portal with a weak constitution and it paints your mind with the same madness.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "Escaping Lusca — and drowning a town",
+      "text": "Trapped at the bottom of the water quadrant inside the city boss Lusca, Carl assembles the complete Gate and teleports himself, Katia and Tran to the surface outside the pazuzu town of Pandinus. The still-open portal drags a wall of ocean through behind them and nearly flattens the place. True to the artifact, the escape looses a feral god — and enrages the true pantheon, whose deities go rampaging across the floor's popped bubbles.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "Katia turns it into a map",
+      "text": "The linked watches double as a reverse compass: read the displayed time, factor in altitude, and you have your exact position relative to anywhere else. Katia uses this to begin mapping the ninth floor four books before anyone stands on it.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "katia",
+      "kind": "arc",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4",
+      "sortKey": 4000,
+      "headline": "She maps the ninth floor four books early",
+      "text": "Given the Gate of the Feral Gods' linked watches, she works out the time-and-coordinate combinations that let the pair act as a reverse compass — and begins mapping the ninth floor before anyone has set foot on it.",
+      "confidence": "verified"
     },
     {
       "entityId": "npcs-are-people",
@@ -844,45 +1385,57 @@
       "floor": 5,
       "at": "4",
       "sortKey": 4000,
-      "headline": "Through Signet and the Ink Marauders",
-      "text": "Once Carl accepts it, the pool of potential allies stops being just the humans — and the show's victim count stops being a number about Earth.",
+      "headline": "The bubbles are inhabited",
+      "text": "The fifth floor's pocket worlds hold whole civilisations — the Necropolis of Anser, the pazuzu town of Pandinus, a colony of dirigible gnomes — that were living there before any crawler arrived and will be there after.",
       "confidence": "draft"
     },
     {
-      "entityId": "signet",
+      "entityId": "the-nothing",
       "kind": "origin",
       "book": 4,
       "chapter": null,
       "floor": 5,
       "at": "4",
       "sortKey": 4000,
-      "headline": "The Ink Marauders",
-      "text": "Her history exposes what the dungeon does to the populations it calls non-player characters: farming them across generations, with memory carrying between seasons.",
+      "headline": "Where the feral gods come from",
+      "text": "Every teleport the Gate performs tears a hole through it, and every closing portal lets one of its inmates out on the opening side. The winding box on its own is a direct conduit — wound and fed a stream of charged energy, it can drop an entire location, up to a whole necropolis, into the void.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "brynhilds-daughters",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "The fracture",
+      "text": "The Masquerade is where the group's earlier choices come apart across Katia, Eva and Hekla.",
       "confidence": "draft"
     },
     {
-      "entityId": "gate-of-the-feral-gods",
-      "kind": "use",
-      "book": 4,
+      "entityId": "carl",
+      "kind": "arc",
+      "book": 5,
       "chapter": null,
-      "floor": 5,
-      "at": "4:end",
-      "sortKey": 4999,
-      "headline": "It names the book for a reason",
-      "text": "By the end of the fifth floor the Gate has stopped being loot and become one of the levers Carl expects to pull on the institution itself.",
-      "confidence": "draft"
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "Agent Provocateur",
+      "text": "On the sixth floor he takes the bomb-focused specialisation. The Hunting Grounds are built to have crawlers hunted for sport by paying outsiders, and he answers by making himself the most expensive thing on the field to point a gun at.",
+      "confidence": "verified"
     },
     {
-      "entityId": "signet",
-      "kind": "fate",
-      "book": 4,
+      "entityId": "compensated-anarchist",
+      "kind": "arc",
+      "book": 5,
       "chapter": null,
-      "floor": 5,
-      "at": "4:end",
-      "sortKey": 4999,
-      "headline": "Sacrifice and liberation",
-      "text": "Her arc ends in sacrifice. It is the loss that turns Carl from surviving the game to breaking it.",
-      "confidence": "draft"
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "Agent Provocateur",
+      "text": "The bomb-focused specialisation, taken on the sixth floor.",
+      "confidence": "verified"
     },
     {
       "entityId": "dungeon-crawler-world",
@@ -897,15 +1450,111 @@
       "confidence": "draft"
     },
     {
-      "entityId": "prepotente",
+      "entityId": "grimaldi",
+      "kind": "origin",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "He rescued her from the High Elves",
+      "text": "Signet was a child when the circus took her in. As she grew up she fell in love with him, and when she told him she would have been a tsarina had she been full-blooded Naiad, he renamed her Tsarina Signet.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "hekla",
       "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "The fracture",
+      "text": "Her earlier choices come apart across Katia, Eva and the Daughters during the Masquerade.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "npcs-are-people",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "Signet has a writers' room",
+      "text": "Tsarina Signet is the protagonist of a scripted Syndicate drama, Vengeance of the Daughter, with producers steering her grief and her vengeance for the audience. She is not a person the dungeon generated. She is a person the dungeon is doing this to.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "prepotente",
+      "kind": "origin",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "The goat sings",
+      "text": "One of the crawl's more improbable success stories, and a reminder that the Enhanced Pet Biscuit was never going to be a one-off.",
+      "confidence": "draft"
+    },
+    {
+      "entityId": "scolopendra",
+      "kind": "origin",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "A note from Tish",
+      "text": "According to a note left by his associate Tish, the Gate of the Feral Gods was considered essential to defeating Scolopendra, whose Nine-Tier Attack poison has already done its damage on the Hunting Grounds.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "signet",
+      "kind": "origin",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "Vengeance of the Daughter",
+      "text": "Signet is the protagonist of an in-universe Syndicate melodrama built around her quest for revenge — daughter of the High Elf King Finian and a Naiad princess, rejected by both sides, exiled after her mother's murder. The producers lean on every trope available, so her motives lurch between vengeance, romance and whatever the showrunners need next. That is the horror of her: she is a person with a writers' room.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "signet",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "Blood magic, and the Ink Marauders",
+      "text": "She raises Blood and Ink Elementals from the tattoos covering her body, casting the Ink Marauder Spell on a creature she judges will lose a fight — before it takes its first injury. She may not bleed the sacrifice herself; only a killing blow releases the blood. Her charisma is over 100, which projects a passive allure Carl can only break by breaking his own finger.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "signet",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5",
+      "sortKey": 5000,
+      "headline": "Ruthless toward outsiders",
+      "text": "She tries to use Carl as an involuntary blood sacrifice, puts Donut under the Water Lily Spell, and forces Carl to help her reach the cursed circus. Her loyalty runs entirely to Grimaldi's Traveling Circus, the family that took her in — and not at all to the crawlers the script has assigned her.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "prepotente",
+      "kind": "fate",
       "book": 5,
       "chapter": null,
       "floor": 6,
       "at": "5:end",
       "sortKey": 5999,
-      "headline": "Left carrying on",
-      "text": "Miriam Dom's vampirism finally kills her, leaving Prepotente and Bianca to continue without her.",
+      "headline": "Left carrying on with Bianca",
+      "text": "Miriam Dom's vampirism finally kills her, and the two goats continue without her.",
       "confidence": "draft"
     },
     {
@@ -921,18 +1570,6 @@
       "confidence": "draft"
     },
     {
-      "entityId": "crown-of-the-sepsis-whore",
-      "kind": "use",
-      "book": 6,
-      "chapter": null,
-      "floor": 8,
-      "at": "6",
-      "sortKey": 6000,
-      "headline": "Aimed at Katia",
-      "text": "The eighth floor turns people into pieces, and this is the object that threatens to do it to someone Carl cannot afford to lose.",
-      "confidence": "draft"
-    },
-    {
       "entityId": "katia",
       "kind": "arc",
       "book": 6,
@@ -940,8 +1577,8 @@
       "floor": 8,
       "at": "6",
       "sortKey": 6000,
-      "headline": "The Crown threatens to turn her",
-      "text": "The Crown of the Sepsis Whore puts her on course for a forced fight against Donut.",
+      "headline": "The crown threatens to turn her",
+      "text": "The eighth floor turns people into pieces, and the Crown of the Sepsis Whore puts her on course for a forced fight against Donut.",
       "confidence": "draft"
     },
     {
@@ -957,6 +1594,18 @@
       "confidence": "draft"
     },
     {
+      "entityId": "odette",
+      "kind": "arc",
+      "book": 6,
+      "chapter": null,
+      "floor": 8,
+      "at": "6",
+      "sortKey": 6000,
+      "headline": "Her price is the truth",
+      "text": "Huanxin Jinx trades help for placing Odette as adjutant, and Odette's own price is the old catastrophe involving Huanxin, Mordecai and Uzzi.",
+      "confidence": "draft"
+    },
+    {
       "entityId": "princess-donut",
       "kind": "arc",
       "book": 6,
@@ -964,8 +1613,8 @@
       "floor": 8,
       "at": "6",
       "sortKey": 6000,
-      "headline": "Commands people as pieces",
-      "text": "On the card floor she comes into real power, commanding Alpha Carl and Shi Maria. The book keeps pressing on the question underneath it: what does it mean to own someone you can put in a deck?",
+      "headline": "People as playable pieces",
+      "text": "On the card floor she comes into real power, commanding Alpha Male Carl and Shi Maria. The book keeps pressing on the question underneath it: what does it mean to own someone you can put in a deck?",
       "confidence": "draft"
     },
     {
@@ -976,8 +1625,68 @@
       "floor": 9,
       "at": "7",
       "sortKey": 7000,
-      "headline": "Commands an army",
-      "text": "He takes one of the nine factions on the ninth floor and fights a thirty-day war for the castle at Larracos. The book is logistics, diplomacy and atrocity at scale — and it works.",
+      "headline": "Commands one of nine armies",
+      "text": "Thirty days, no respawns, and a castle at Larracos in the middle of it. The book is logistics, diplomacy and atrocity at scale — and it works.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "crown-obligation",
+      "kind": "arc",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Due before anyone descends",
+      "text": "The ninth floor is where the Sultanate lives, and the succession requirement has to be discharged before the tenth floor opens.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "crown-of-the-sepsis-whore",
+      "kind": "use",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "The bill arrives on the ninth floor",
+      "text": "Six books after a cat picked up a shiny hat, the obligation is due — and it cannot be discharged by taking the crown off.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Seven factions sue to take it off him",
+      "text": "Merely holding the Gate makes Carl a target. Seven of the nine Faction Wars factions go to Syndicate court to strip the pieces from him and are thrown out for lack of standing — earning Carl seven Fight the Power achievements. A last-minute challenge from the Skull Empire fails too.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Larracos: ocean water, timed charges and sharks",
+      "text": "The plan was to open a gate onto the Skull Empire army and drop a feral god into the middle of it — exactly what the factions had sued to prevent. At the last moment Carl changes course, keeps the artifact rather than spending it, and floods the ninth-floor faction market instead: ocean water, timed explosives and a frenzy of sharks, gutting the factions' ability to resupply. Juice Box goes through with the water.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "juice-box",
+      "kind": "arc",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Through the Gate, into Larracos",
+      "text": "When Carl floods the ninth-floor faction market, Juice Box goes through the portal with the water and hides among the survivors — spreading word of what the NPCs truly are. The flood was the distraction. This was the operation.",
       "confidence": "verified"
     },
     {
@@ -989,7 +1698,31 @@
       "at": "7",
       "sortKey": 7000,
       "headline": "Thirty days, nine armies, one castle",
-      "text": "Tens of thousands of conscripted and retired crawlers against a far larger armed enemy, fighting for Larracos at the centre of the map. Everything the series has spent six books making you care about is on a board where nothing comes back.",
+      "text": "Roughly 32,000 conscripted crawlers and 50,000 retired ones against something like 100,000 armed enemies, fighting for Larracos at the centre of the map. Everything the series has spent six books making you care about is on a board where nothing comes back.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "npcs-are-people",
+      "kind": "arc",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Juice Box tells them",
+      "text": "Under cover of the Larracos flood, Juice Box hides among the survivors and spreads word of what the NPCs truly are. It is the single most consequential thing anyone does on the ninth floor.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "orchid-of-eileithyias-grace",
+      "kind": "origin",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Inside the Engaged Lock Box of the Night Wyrm",
+      "text": "The system's own description is characteristically unhelpful: \"It's a flower. You're supposed to eat it, though it might be a good decoration instead.\" Eating it drops the user unconscious for an hour at 1% of maximum health, unable to heal. Survive, and Eileithyia grants one of three permanent boons — her choice, not yours, unless you worship her first, in which case she will expand the descriptions and ask your preference. Her cooperation is not guaranteed.",
       "confidence": "verified"
     },
     {
@@ -1000,8 +1733,20 @@
       "floor": 9,
       "at": "7",
       "sortKey": 7000,
-      "headline": "Becomes a political instrument",
-      "text": "By Faction Wars she is no longer a mascot with a spell list. She is a public figure the factions have to negotiate with, and the Princess Posse runs supply and diplomacy alongside the fighting.",
+      "headline": "The crown comes due",
+      "text": "The ninth floor is where the Blood Sultanate lives. What she picked up on floor one as a bit of shiny loot is now an obligation that has to be discharged before anyone can descend — and she has become a political instrument the factions must negotiate with rather than a mascot with a spell list.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "the-syndicate",
+      "kind": "arc",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7",
+      "sortKey": 7000,
+      "headline": "Seven factions lose in court",
+      "text": "Seven of the nine Faction Wars factions sue to strip the Gate of the Feral Gods from Carl and are dismissed for lack of standing — which nets him seven Fight the Power achievements and demonstrates, on the record, that the machine can be beaten with its own paperwork.",
       "confidence": "verified"
     },
     {
@@ -1036,8 +1781,8 @@
       "floor": 9,
       "at": "7:end",
       "sortKey": 7999,
-      "headline": "Takes the Orchid boon and leaves",
-      "text": "At the end of Faction Wars she uses the Orchid boon to exit the dungeon entirely — restored to human, and missing parts of herself.",
+      "headline": "She takes the Orchid and leaves",
+      "text": "At the end of Faction Wars she uses the Orchid boon to exit the dungeon entirely — restored to human form, and missing parts of herself. It is the first exit the series shows that is neither death nor the eighteenth floor.",
       "confidence": "verified"
     },
     {
@@ -1072,8 +1817,8 @@
       "floor": 9,
       "at": "7:end",
       "sortKey": 7999,
-      "headline": "Nearly dies, and becomes a father",
-      "text": "He is very nearly lost on the ninth floor and is pulled out by Ser Rendelgor. He ends the book a parent.",
+      "headline": "Nearly lost, and a father",
+      "text": "He very nearly dies on the ninth floor and is pulled out by Ser Rendelgor. He ends the book a parent.",
       "confidence": "verified"
     },
     {
@@ -1085,19 +1830,19 @@
       "at": "7:end",
       "sortKey": 7999,
       "headline": "They organise",
-      "text": "Floor 9's NPCs form their own independent tenth faction. No season has ever recorded it, and the system has no answer for it.",
+      "text": "Floor 9's NPCs form their own independent tenth faction. No season has ever recorded it, and the system has no procedure for it.",
       "confidence": "verified"
     },
     {
-      "entityId": "orchid-boon",
+      "entityId": "orchid-of-eileithyias-grace",
       "kind": "use",
       "book": 7,
       "chapter": null,
       "floor": 9,
       "at": "7:end",
       "sortKey": 7999,
-      "headline": "Katia takes it",
-      "text": "She leaves the crawl entirely, returned to human form and missing parts of herself. It is the first time the series shows an exit that is neither death nor the eighteenth floor.",
+      "headline": "Katia's way out",
+      "text": "She takes it and leaves the crawl entirely, restored to human and missing parts of herself.",
       "confidence": "verified"
     },
     {
@@ -1121,7 +1866,7 @@
       "at": "7:end",
       "sortKey": 7999,
       "headline": "Unprecedented",
-      "text": "Floor 9's NPCs formed their own independent faction. Nothing in the show's history has a procedure for it.",
+      "text": "Floor 9's NPCs formed their own independent faction. Nothing in the show's history has a procedure for it, and Juice Box lit the fuse from inside the faction market.",
       "confidence": "verified"
     },
     {
@@ -1148,11 +1893,27 @@
     },
     {
       "fromId": "carl",
+      "toId": "beatrice",
+      "kind": "former-partner",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "carl",
       "toId": "mordecai",
       "kind": "student-of",
       "note": null,
       "revealedAt": "1",
       "sortKey": 1000
+    },
+    {
+      "fromId": "carl",
+      "toId": "katia",
+      "kind": "ally",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
     },
     {
       "fromId": "carl",
@@ -1164,6 +1925,14 @@
     },
     {
       "fromId": "carl",
+      "toId": "dungeon-anarchists-cookbook",
+      "kind": "wields",
+      "note": null,
+      "revealedAt": "3",
+      "sortKey": 3000
+    },
+    {
+      "fromId": "carl",
       "toId": "gate-of-the-feral-gods",
       "kind": "wields",
       "note": null,
@@ -1172,17 +1941,17 @@
     },
     {
       "fromId": "carl",
-      "toId": "dungeon-anarchists-cookbook",
-      "kind": "wields",
+      "toId": "compensated-anarchist",
+      "kind": "has-class",
       "note": null,
-      "revealedAt": "3",
-      "sortKey": 3000
+      "revealedAt": "2",
+      "sortKey": 2000
     },
     {
       "fromId": "princess-donut",
       "toId": "mongo",
       "kind": "owns",
-      "note": "Mount, pet, and her single greatest source of pride.",
+      "note": "She considers him her son. He agrees.",
       "revealedAt": "1",
       "sortKey": 1000
     },
@@ -1191,16 +1960,104 @@
       "toId": "mordecai",
       "kind": "managed-by",
       "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
+    },
+    {
+      "fromId": "princess-donut",
+      "toId": "crown-of-the-sepsis-whore",
+      "kind": "wields",
+      "note": null,
       "revealedAt": "1",
       "sortKey": 1000
+    },
+    {
+      "fromId": "princess-donut",
+      "toId": "beatrice",
+      "kind": "owned-by",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "princess-donut",
+      "toId": "former-child-actor",
+      "kind": "has-class",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
+    },
+    {
+      "fromId": "mongo",
+      "toId": "princess-donut",
+      "kind": "protects",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "mordecai",
+      "toId": "borant-corporation",
+      "kind": "indentured-to",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "mordecai",
+      "toId": "odette",
+      "kind": "ally",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
+    },
+    {
+      "fromId": "katia",
+      "toId": "eva",
+      "kind": "former-ally",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
+    },
+    {
+      "fromId": "katia",
+      "toId": "hekla",
+      "kind": "former-ally",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
+    },
+    {
+      "fromId": "katia",
+      "toId": "orchid-of-eileithyias-grace",
+      "kind": "wields",
+      "note": null,
+      "revealedAt": "7:end",
+      "sortKey": 7999
+    },
+    {
+      "fromId": "signet",
+      "toId": "grimaldi",
+      "kind": "loyal-to",
+      "note": null,
+      "revealedAt": "5",
+      "sortKey": 5000
     },
     {
       "fromId": "signet",
       "toId": "npcs-are-people",
       "kind": "embodies",
       "note": null,
-      "revealedAt": "4",
-      "sortKey": 4000
+      "revealedAt": "5",
+      "sortKey": 5000
+    },
+    {
+      "fromId": "hekla",
+      "toId": "brynhilds-daughters",
+      "kind": "leads",
+      "note": null,
+      "revealedAt": "2",
+      "sortKey": 2000
     },
     {
       "fromId": "lucia-mar",
@@ -1209,6 +2066,14 @@
       "note": null,
       "revealedAt": "7:end",
       "sortKey": 7999
+    },
+    {
+      "fromId": "juice-box",
+      "toId": "gate-of-the-feral-gods",
+      "kind": "travelled-through",
+      "note": null,
+      "revealedAt": "7",
+      "sortKey": 7000
     },
     {
       "fromId": "gate-of-the-feral-gods",
@@ -1220,9 +2085,17 @@
     },
     {
       "fromId": "gate-of-the-feral-gods",
-      "toId": "npcs-are-people",
-      "kind": "connected-to",
-      "note": "The bubbles are where the dungeon's populations stop reading as scenery.",
+      "toId": "katia",
+      "kind": "used-by",
+      "note": null,
+      "revealedAt": "4",
+      "sortKey": 4000
+    },
+    {
+      "fromId": "gate-of-the-feral-gods",
+      "toId": "the-nothing",
+      "kind": "opens-onto",
+      "note": null,
       "revealedAt": "4",
       "sortKey": 4000
     },
@@ -1235,9 +2108,25 @@
       "sortKey": 2000
     },
     {
+      "fromId": "crown-of-the-sepsis-whore",
+      "toId": "princess-donut",
+      "kind": "worn-by",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
+      "fromId": "crown-of-the-sepsis-whore",
+      "toId": "blood-sultanate",
+      "kind": "binds-to",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
       "fromId": "dungeon-anarchists-cookbook",
       "toId": "carl",
-      "kind": "wielded-by",
+      "kind": "held-by",
       "note": null,
       "revealedAt": "3",
       "sortKey": 3000
@@ -1251,15 +2140,7 @@
       "sortKey": 1000
     },
     {
-      "fromId": "crown-of-the-sepsis-whore",
-      "toId": "katia",
-      "kind": "threatens",
-      "note": null,
-      "revealedAt": "6",
-      "sortKey": 6000
-    },
-    {
-      "fromId": "orchid-boon",
+      "fromId": "orchid-of-eileithyias-grace",
       "toId": "katia",
       "kind": "used-by",
       "note": null,
@@ -1275,6 +2156,14 @@
       "sortKey": 1000
     },
     {
+      "fromId": "loot-boxes",
+      "toId": "system-ai",
+      "kind": "administered-by",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
       "fromId": "borant-corporation",
       "toId": "the-syndicate",
       "kind": "answers-to",
@@ -1283,9 +2172,25 @@
       "sortKey": 1000
     },
     {
+      "fromId": "crown-obligation",
+      "toId": "crown-of-the-sepsis-whore",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "1",
+      "sortKey": 1000
+    },
+    {
       "fromId": "spider-in-carls-chest",
       "toId": "carl",
       "kind": "afflicts",
+      "note": null,
+      "revealedAt": "7:end",
+      "sortKey": 7999
+    },
+    {
+      "fromId": "tenth-faction",
+      "toId": "npcs-are-people",
+      "kind": "concerns",
       "note": null,
       "revealedAt": "7:end",
       "sortKey": 7999

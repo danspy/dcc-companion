@@ -1,64 +1,168 @@
 {
   "$comment": "The spine. `chapters` is null wherever the count has not been taken from the book itself — `npm run content:check` reports those as a work queue. Do not fill them in from fan wikis; several are AI-generated and demonstrably wrong.",
   "books": [
-    { "id": 1, "slug": "dungeon-crawler-carl", "title": "Dungeon Crawler Carl",
-      "published": "2020-10-02", "chapters": 47, "pages": null,
-      "blurb": "Earth is foreclosed on, and the only humans left standing are the ones who happened to be outside. Carl goes down into the dungeon barefoot, carrying a cat." },
-    { "id": 2, "slug": "carls-doomsday-scenario", "title": "Carl's Doomsday Scenario",
-      "published": "2021-01-02", "chapters": null, "pages": null,
-      "blurb": "The Over City is the first floor that behaves like a place rather than a level — and Carl picks up a bomb he can never put down." },
-    { "id": 3, "slug": "the-dungeon-anarchists-cookbook", "title": "The Dungeon Anarchist's Cookbook",
-      "published": "2021-03-19", "chapters": null, "pages": null,
-      "blurb": "Every subway on Earth, welded into one knot of moving trains — and a manual left behind by the crawlers of an earlier season." },
-    { "id": 4, "slug": "the-gate-of-the-feral-gods", "title": "The Gate of the Feral Gods",
-      "published": "2021-06-14", "chapters": null, "pages": null,
-      "blurb": "Sealed pocket worlds, a portable gate that opens onto things which should not be given doors, and the discovery that the NPCs are people." },
-    { "id": 5, "slug": "the-butchers-masquerade", "title": "The Butcher's Masquerade",
-      "published": "2022-02-19", "chapters": null, "pages": null,
-      "blurb": "Wealthy aliens buy licences to hunt crawlers for sport. Carl's answer is to hunt them back, on camera." },
-    { "id": 6, "slug": "the-eye-of-the-bedlam-bride", "title": "The Eye of the Bedlam Bride",
-      "published": "2023-06-14", "chapters": null, "pages": null,
-      "blurb": "A floor that runs on cards, built out of Earth's own dead, where people become playable pieces — and Mordecai's past stops being backstory." },
-    { "id": 7, "slug": "this-inevitable-ruin", "title": "This Inevitable Ruin",
-      "published": "2024-11-07", "chapters": null, "pages": null,
-      "blurb": "Nine armies, thirty days, one castle, and no respawns. The floor where the dungeon's props declare independence on live galactic television." },
-    { "id": 8, "slug": "a-parade-of-horribles", "title": "A Parade of Horribles",
-      "published": "2026-05-12", "chapters": null, "pages": 704,
-      "blurb": "A racing floor with a worsening track, a system that has started to glitch, and a coming-out party for the ages." }
+    {
+      "id": 1,
+      "slug": "dungeon-crawler-carl",
+      "title": "Dungeon Crawler Carl",
+      "published": "2020-10-02",
+      "chapters": 47,
+      "pages": null,
+      "blurb": "Earth is foreclosed on, and the only humans left standing are the ones who happened to be outside. Carl goes down into the dungeon barefoot, carrying a cat."
+    },
+    {
+      "id": 2,
+      "slug": "carls-doomsday-scenario",
+      "title": "Carl's Doomsday Scenario",
+      "published": "2021-01-02",
+      "chapters": null,
+      "pages": null,
+      "blurb": "The Over City is the first floor that behaves like a place rather than a level — and Carl picks up a bomb he can never put down."
+    },
+    {
+      "id": 3,
+      "slug": "the-dungeon-anarchists-cookbook",
+      "title": "The Dungeon Anarchist's Cookbook",
+      "published": "2021-03-19",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Every subway on Earth, welded into one knot of moving trains — and a manual left behind by the crawlers of an earlier season."
+    },
+    {
+      "id": 4,
+      "slug": "the-gate-of-the-feral-gods",
+      "title": "The Gate of the Feral Gods",
+      "published": "2021-06-14",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Sealed pocket worlds, a portable gate that opens onto things which should not be given doors, and the discovery that the NPCs are people."
+    },
+    {
+      "id": 5,
+      "slug": "the-butchers-masquerade",
+      "title": "The Butcher's Masquerade",
+      "published": "2022-02-19",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Wealthy aliens buy licences to hunt crawlers for sport. Carl's answer is to hunt them back, on camera."
+    },
+    {
+      "id": 6,
+      "slug": "the-eye-of-the-bedlam-bride",
+      "title": "The Eye of the Bedlam Bride",
+      "published": "2023-06-14",
+      "chapters": null,
+      "pages": null,
+      "blurb": "A floor that runs on cards, built out of Earth's own dead, where people become playable pieces — and Mordecai's past stops being backstory."
+    },
+    {
+      "id": 7,
+      "slug": "this-inevitable-ruin",
+      "title": "This Inevitable Ruin",
+      "published": "2024-11-07",
+      "chapters": null,
+      "pages": null,
+      "blurb": "Nine armies, thirty days, one castle, and no respawns. The floor where the dungeon's props declare independence on live galactic television."
+    },
+    {
+      "id": 8,
+      "slug": "a-parade-of-horribles",
+      "title": "A Parade of Horribles",
+      "published": "2026-05-12",
+      "chapters": null,
+      "pages": 704,
+      "blurb": "A racing floor with a worsening track, a system that has started to glitch, and a coming-out party for the ages."
+    }
   ],
-
   "floors": [
-    { "id": 1, "name": "The First Floor", "book": 1, "accent": "--f1", "revealedAt": "1",
-      "summary": "Dirt, corridors and safe rooms, and the discovery that the tutorial is lethal. Carl enters barefoot and mostly undressed, and the dungeon makes that permanent — an entry condition he can never undo and which the audience adores. Donut eats an Enhanced Pet Biscuit and wakes up sapient. Mordecai teaches them the rules Borant would rather they never learned. Carl saves the Meadow Lark by exploiting a boundary the dungeon didn't think to close: the first of hundreds of times he beats a room by reading its rules instead of its monsters." },
-
-    { "id": 2, "name": "The Second Floor", "book": 1, "accent": "--f2", "revealedAt": "1",
-      "summary": "The floor that formalises the party. Mongo joins as Donut's mount, pet and single greatest source of pride, and the three of them descend as the Royal Court of Princess Donut — a joke, a brand, and, because this is a show, an actual source of power. The thesis of the first book lands here: the dungeon rewards spectacle and punishes decency, unless you can make decency spectacular." },
-
-    { "id": 3, "name": "The Over City", "book": 2, "accent": "--f3", "revealedAt": "2",
-      "summary": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions — shops, quest-givers, neighbours and politics. The Desperado Club opens here and becomes the social spine of the whole series. Carl acquires Carl's Doomsday Scenario. Underneath the comedy the first real horror lands: the dungeon is built out of Earth — its buildings, its dead, its history, dressed as set decoration." },
-
-    { "id": 4, "name": "The Iron Tangle", "book": 3, "accent": "--f4", "revealedAt": "3",
-      "summary": "Every subway system on Earth welded into one impossible knot of moving trains — a puzzle the size of a continent, and the trains do not stop. Carl finds The Dungeon Anarchist's Cookbook and learns that humanity is not the first and that resistance has a written tradition. The floor cannot be solved alone: beating the Tangle takes hundreds of crawlers coordinating at once, which is precisely what production exists to prevent. Carl learns that organising people is the exploit." },
-
-    { "id": 5, "name": "The Bubbles", "book": 4, "accent": "--f5", "revealedAt": "4",
-      "summary": "The survivors are split into sealed pocket worlds, each with its own biome, civilisation and way to kill you. Moving between them means portals, and Carl ends up holding the Gate of the Feral Gods. Through Signet and the Ink Marauders the series stops treating NPCs as scenery: they are farmed populations who remember the seasons before this one. This is the turn — Carl stops playing to survive and starts playing to break the game." },
-
-    { "id": 6, "name": "The Hunting Grounds", "book": 5, "accent": "--f6", "revealedAt": "5",
-      "summary": "Outsiders are let in: wealthy aliens buy hunting licences, walk into the dungeon and kill crawlers for sport with a full broadcast package. Carl inverts it — the crawlers coordinate, bait, trap and butcher the hunters on camera, turning a scheduled massacre into the most humiliating live television in the show's history. The bill comes due immediately: they are now famous enough that the Syndicate itself starts paying attention." },
-
-    { "id": 7, "name": "The Great Race", "book": 5, "bookSpan": "5–6", "accent": "--f7", "revealedAt": "5:end",
-      "summary": "The one floor that refuses to line up with a book boundary: it opens at the close of The Butcher's Masquerade and resolves at the start of The Eye of the Bedlam Bride. It is the single clearest argument for gating this companion on books rather than on floors." },
-
-    { "id": 8, "name": "The Ghosts of Earth", "book": 6, "accent": "--f8", "revealedAt": "6",
-      "summary": "A floor that runs on cards: crawlers collect, build and combine decks, capture totems, and fight with whatever they have assembled. The most explicitly game-like floor yet and, because the material is Earth's own dead, the most personal. Donut comes into real power commanding Alpha Carl and Shi Maria — people turned into playable pieces — and the book keeps pressing on what it means to own someone you can put in a deck. Nothing detonates; instead a stack of bargains gets signed, all of them coming due on the ninth floor." },
-
-    { "id": 9, "name": "Faction Wars", "book": 7, "accent": "--f9", "revealedAt": "7",
-      "summary": "A war. Nine armies, each fronted by a rich alien faction, fight for thirty days over one castle — Larracos — at the centre of the map, with tens of thousands of conscripted and retired crawlers against a far larger armed enemy. There are no respawns and no loopholes: death on the ninth floor is final. Carl commands one of the nine, Donut stops being a mascot and becomes a political instrument, and the floor's NPCs do something no season has ever recorded — they form their own tenth faction, live, in front of the galaxy." },
-
-    { "id": 10, "name": "Don't Come in Last", "book": 8, "accent": "--f10", "revealedAt": "8",
-      "summary": "A racing floor: get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile. Underneath the format, glitches in the system start appearing more and more often — the dungeon itself is no longer running clean." },
-
-    { "id": 11, "name": "The Parade of Horribles", "book": 8, "accent": "--f11", "revealedAt": "8",
-      "summary": "Billed in-universe as a coming-out party for the ages. The scale of the story has changed underneath the characters: Carl and Donut are not a two-person party any more, they are the centre of a movement, and the question has stopped being how do we reach the stairs and become which of these institutions do we use, expose, or destroy." }
+    {
+      "id": 1,
+      "name": "The First Floor",
+      "book": 1,
+      "accent": "--f1",
+      "revealedAt": "1",
+      "summary": "Dirt, corridors and safe rooms, and the discovery that the tutorial is lethal. Carl comes down in a leather jacket, heart boxers and his ex-girlfriend's pink Crocs; within the hour he has a Goblin Pass Tattoo and a Trollskin Shirt. Donut eats an Enhanced Pet Biscuit and wakes up talking, takes party leadership on stat points, renames the party after herself, and equips the Crown of the Sepsis Whore without reading the warning — quietly enrolling herself in a royal succession eight floors below. Mordecai, an indentured Borant guide who was once a crawler himself, starts teaching them the rules production would rather they learned too late to use."
+    },
+    {
+      "id": 2,
+      "name": "The Second Floor",
+      "book": 1,
+      "accent": "--f2",
+      "revealedAt": "1",
+      "summary": "Where the party takes its final shape. Carl and Donut find Mongo — a level-1 pet-class mob, seven inches of pink downy feathers — locked in a cage in a secret pet reward room, and Donut wins him over by teaching him to open Brindle Grubs. From this floor the Enchanted Pedicure Kit of the Sylph leaves Carl's bare feet permanently shiny, which the audience adores. The thesis of the first book lands here: the dungeon rewards spectacle and punishes decency, unless you can make decency spectacular."
+    },
+    {
+      "id": 3,
+      "name": "The Over City",
+      "book": 2,
+      "accent": "--f3",
+      "revealedAt": "2",
+      "summary": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions. Class selection happens here: Carl takes Primal and the unique Compensated Anarchist, Donut takes Cat and Former Child Actor, and on Odette's advice they manoeuvre Mordecai into becoming Donut's manager — an appointment that had to look like an accident. Katia, ten levels behind and abandoned by Eva, is taken into the Royal Court. The Desperado Club opens. During the Fools Who Broke the Glass Quest, Carl builds Carl's Doomsday Scenario by wrapping a Sheol Glass Reaper Case around an exploding Soul Crystal — a 45-kilometre blast he can never put down. The floor ends with Borant spending its one annual veto rather than pay out 83 Celestial boxes."
+    },
+    {
+      "id": 4,
+      "name": "The Iron Tangle",
+      "book": 3,
+      "accent": "--f4",
+      "revealedAt": "3",
+      "summary": "Every subway system on Earth welded into one impossible knot of moving trains — a puzzle the size of a continent, and the trains do not stop. Carl becomes the twenty-fifth holder of The Dungeon Anarchist's Cookbook and learns that Earth is not the first season and that resistance to the show has a written tradition. Maggie My returns as a Scree parasite riding another crawler; Frank dies of it, and Mongo finishes her. Boxes and achievements get dramatically harder from this floor on. The Tangle cannot be solved alone — beating it takes hundreds of crawlers coordinating at once, which is exactly what production exists to prevent."
+    },
+    {
+      "id": 5,
+      "name": "The Bubbles",
+      "book": 4,
+      "accent": "--f5",
+      "revealedAt": "4",
+      "summary": "The survivors are split into sealed pocket worlds, each with its own biome and civilisation. Buried in the Necropolis of Anser is the Gate of the Feral Gods, an artifact so far above this floor's grade that the AI times out repeatedly reconciling the rule conflict. Carl gathers its three pieces, and assembles it trapped at the bottom of the water quadrant inside the city boss Lusca — teleporting himself, Katia and Tran out and dragging an ocean through behind them, nearly flattening the pazuzu town of Pandinus. The escape looses a feral god and enrages the true pantheon. Katia, meanwhile, turns the Gate's linked watches into a reverse compass and starts mapping the ninth floor four books early."
+    },
+    {
+      "id": 6,
+      "name": "The Hunting Grounds",
+      "book": 5,
+      "accent": "--f6",
+      "revealedAt": "5",
+      "summary": "Outsiders are let in: wealthy aliens buy hunting licences and kill crawlers for sport with a full broadcast package. Carl takes the Agent Provocateur specialisation and inverts the floor, coordinating crawlers to bait, trap and butcher the hunters on camera. Here the series stops treating NPCs as scenery — Tsarina Signet turns out to be the protagonist of a scripted Syndicate drama, Vengeance of the Daughter, with producers steering her grief for the ratings. Hekla's earlier choices fracture the alliance around Katia, Eva and the Daughters, and Miriam Dom's vampirism kills her."
+    },
+    {
+      "id": 7,
+      "name": "The Great Race",
+      "book": 5,
+      "bookSpan": "5–6",
+      "accent": "--f7",
+      "revealedAt": "5:end",
+      "summary": "The one floor that refuses to line up with a book boundary: it opens at the close of The Butcher's Masquerade and resolves at the start of The Eye of the Bedlam Bride. It is the single clearest argument for gating this companion on books rather than on floors."
+    },
+    {
+      "id": 8,
+      "name": "The Ghosts of Earth",
+      "book": 6,
+      "accent": "--f8",
+      "revealedAt": "6",
+      "summary": "A floor that runs on cards: crawlers collect, build and combine decks, capture totems, and fight with whatever they have assembled — and the material is Earth's own dead. Donut comes into real power commanding Alpha Male Carl and Shi Maria, people turned into playable pieces, and the book keeps pressing on what it means to own someone you can put in a deck. The Crown of the Sepsis Whore puts Katia on course for a forced fight against Donut. Huanxin Jinx trades help for placing Odette as adjutant, and Odette's price is the truth about an old catastrophe involving Huanxin, Mordecai and Uzzi. Nothing detonates; a stack of bargains gets signed, all due on the ninth floor."
+    },
+    {
+      "id": 9,
+      "name": "Faction Wars",
+      "book": 7,
+      "accent": "--f9",
+      "revealedAt": "7",
+      "summary": "A war. Nine armies fight for thirty days over the castle at Larracos — roughly 32,000 conscripted crawlers and 50,000 retired ones against some 100,000 armed enemies, with no respawns and no loopholes. Seven of the nine factions sue in Syndicate court to strip the Gate of the Feral Gods from Carl and lose for lack of standing. He had planned to drop a feral god onto the Skull Empire army; instead he keeps the artifact and floods the faction market with ocean water, timed charges and sharks, while Juice Box slips through the portal to tell the NPCs what they are. Donut's crown comes due against the Blood Sultanate. Katia takes the Orchid boon and leaves the dungeon. Then floor 9's NPCs form their own independent tenth faction, live, in front of the galaxy."
+    },
+    {
+      "id": 10,
+      "name": "Don't Come in Last",
+      "book": 8,
+      "accent": "--f10",
+      "revealedAt": "8",
+      "summary": "A racing floor: get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile. Underneath the format, glitches in the system start appearing more and more often — whatever is running the dungeon is no longer running it cleanly."
+    },
+    {
+      "id": 11,
+      "name": "The Parade of Horribles",
+      "book": 8,
+      "accent": "--f11",
+      "revealedAt": "8",
+      "summary": "Billed in-universe as a coming-out party for the ages. The scale of the story has changed underneath the characters: Carl and Donut are not a two-person party any more, they are the centre of a movement, and the question has stopped being how do we reach the stairs and become which of these institutions do we use, expose, or destroy."
+    }
   ]
 }

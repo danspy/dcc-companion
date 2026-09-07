@@ -1,16 +1,29 @@
 {
-  "$comment": "Open threads are the hardest-gated content in the app. Every one of these is a genuine spoiler and none of them is resolved yet.",
+  "$comment": "Open threads are the hardest-gated content in the app. Every one is a genuine spoiler, and none is resolved yet.",
   "entities": [
+    { "id": "crown-obligation", "kind": "thread", "name": "The crown's bill",
+      "aka": [], "role": "Planted book 1", "revealedAt": "1", "sort": 1,
+      "tagline": "A cat put on a hat on floor one. The invoice is payable on floor nine.",
+      "beats": [
+        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "headline": "Eight floors of fuse",
+          "text": "The Crown of the Sepsis Whore enrols Donut in the Blood Sultanate's line of succession, and taking it off does not undo it. The series sets this up in its first hours and does not touch it again for years." },
+        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "headline": "Due before anyone descends",
+          "text": "The ninth floor is where the Sultanate lives, and the succession requirement has to be discharged before the tenth floor opens." }
+      ],
+      "relations": [{ "to": "crown-of-the-sepsis-whore", "kind": "concerns", "at": "1" }] },
+
     { "id": "justice-and-the-gods", "kind": "thread", "name": "Justice releases the gods",
-      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 1,
-      "tagline": "The end of Faction Wars lets loose something the dungeon was built to contain.",
+      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 2,
+      "tagline": "The end of Faction Wars lets loose what the dungeon was built to contain.",
       "beats": [{ "kind": "origin", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
         "headline": "Opened at the close of book 7",
         "text": "Someone called Justice releases all of the gods. The consequences are still landing." }],
       "relations": [] },
 
     { "id": "spider-in-carls-chest", "kind": "thread", "name": "The spider in Carl's chest",
-      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 2,
+      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 3,
       "tagline": "Still there, still tied to Shi Maria, still not explained.",
       "beats": [{ "kind": "origin", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
         "headline": "Carried out of Faction Wars",
@@ -18,7 +31,7 @@
       "relations": [{ "to": "carl", "kind": "afflicts", "at": "7:end" }] },
 
     { "id": "lucia-mars-children", "kind": "thread", "name": "120,000 children",
-      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 3,
+      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 4,
       "tagline": "Lucia Mar is carrying them. Nobody has said what for.",
       "beats": [{ "kind": "origin", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
         "headline": "Revealed at the end of book 7",
@@ -26,15 +39,23 @@
       "relations": [] },
 
     { "id": "tenth-faction", "kind": "thread", "name": "The tenth faction",
-      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 4,
+      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 5,
       "tagline": "The dungeon's props declared independence on live galactic television.",
       "beats": [{ "kind": "origin", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
         "headline": "Unprecedented",
-        "text": "Floor 9's NPCs formed their own independent faction. Nothing in the show's history has a procedure for it." }],
+        "text": "Floor 9's NPCs formed their own independent faction. Nothing in the show's history has a procedure for it, and Juice Box lit the fuse from inside the faction market." }],
+      "relations": [{ "to": "npcs-are-people", "kind": "concerns", "at": "7:end" }] },
+
+    { "id": "scolopendra", "kind": "thread", "name": "Scolopendra",
+      "aka": [], "role": "Unresolved", "revealedAt": "5", "sort": 6,
+      "tagline": "A threat the Gate was reportedly essential to beating — and the Gate nearly got spent.",
+      "beats": [{ "kind": "origin", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+        "headline": "A note from Tish",
+        "text": "According to a note left by his associate Tish, the Gate of the Feral Gods was considered essential to defeating Scolopendra, whose Nine-Tier Attack poison has already done its damage on the Hunting Grounds." }],
       "relations": [] },
 
     { "id": "system-glitches", "kind": "thread", "name": "The system is glitching",
-      "aka": [], "role": "Unresolved", "revealedAt": "8", "sort": 5,
+      "aka": [], "role": "Unresolved", "revealedAt": "8", "sort": 7,
       "tagline": "Floor 10's malfunctions are getting more frequent.",
       "beats": [{ "kind": "origin", "book": 8, "floor": 10, "at": "8", "confidence": "verified",
         "headline": "Increasingly frequent",
@@ -42,7 +63,7 @@
       "relations": [] },
 
     { "id": "cracking-order", "kind": "thread", "name": "The order is cracking",
-      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 6,
+      "aka": [], "role": "Unresolved", "revealedAt": "7:end", "sort": 8,
       "tagline": "Borant's grip and the Syndicate's authority both start to fracture.",
       "beats": [{ "kind": "origin", "book": 7, "floor": 9, "at": "7:end", "confidence": "draft",
         "headline": "The show may not survive its own season",
