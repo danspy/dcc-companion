@@ -4,14 +4,14 @@ import Sealed from '../../components/Sealed.astro';
 import { reveals } from '../../lib/spoiler';
 import {
   getEntity, getBeats, getRelations, getEntities, getFloors,
-  BEAT_LABELS, KIND_LABELS, readGate,
+  KIND_LABELS, readGate,
 } from '../../lib/content';
 
 const { id } = Astro.params;
 const entity = id ? await getEntity(id) : null;
 if (!entity) return Astro.redirect('/who', 302);
 
-const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
+const { gate } = await readGate(Astro.cookies);
 
 /* An entity the reader has not met yet is not rendered as a redacted page —
    the URL itself would confirm the name. Send them back to the index. */
@@ -20,6 +20,8 @@ if (!reveals(gate, entity.revealedAt)) return Astro.redirect('/who', 302);
 const [beats, relations, all, floors] = await Promise.all([
   getBeats(entity.id), getRelations(entity.id), getEntities(), getFloors(),
 ]);
+// `aka` round-trips through column.json(), so it arrives as unknown.
+const aka = (entity.aka ?? []) as string[];
 const nameById = new Map(all.map(e => [e.id, e]));
 const floorById = new Map(floors.map(f => [f.id, f]));
 
@@ -27,6 +29,21 @@ const floorById = new Map(floors.map(f => [f.id, f]));
    a different question from "what happened to this character". */
 const uses = beats.filter(b => b.kind === 'use');
 const story = beats.filter(b => b.kind !== 'use');
+
+/* Beats arrive sorted by sortKey, so everything still sealed sits at the end.
+   They collapse into a single line rather than a stack of stamped placeholders:
+   a sealed entry reading "Bk 7 · Fate · Floor 9" tells you the character dies
+   on the ninth floor without opening anything, and four of them tells you how
+   the rest of their story is shaped. The count and the next unlock point are
+   all a reader needs to know there is more coming. */
+const split = (rows: typeof beats) => {
+  const shown = rows.filter(b => gate.frontier >= b.sortKey);
+  const hidden = rows.filter(b => gate.frontier < b.sortKey);
+  return { shown, hidden, nextAt: hidden.length ? Math.min(...hidden.map(b => b.sortKey)) : null };
+};
+const useLog = split(uses);
+const storyLog = split(story);
+
 const visibleRelations = relations.filter(r => gate.frontier >= r.sortKey);
 const hiddenRelations = relations.length - visibleRelations.length;
 ---
@@ -36,9 +53,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
       <p class="eyebrow">{KIND_LABELS[entity.kind]} · {entity.role}</p>
       <h1>{entity.name}</h1>
       <p class="tagline">{entity.tagline}</p>
-      {entity.aka.length > 0 && (
-        <p class="aka">Also known as {(entity.aka as string[]).join(', ')}</p>
-      )}
+      {aka.length > 0 && <p class="aka">Also known as {aka.join(', ')}</p>}
     </header>
 
     <div class="cols">
@@ -47,8 +62,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
           <section>
             <h2>Where it's used</h2>
             <ol class="log">
-              {uses.map(b => {
-                const open = gate.frontier >= b.sortKey;
+              {useLog.shown.map(b => {
                 const floor = b.floor ? floorById.get(b.floor) : null;
                 return (
                   <li class="entry">
@@ -56,20 +70,24 @@ const hiddenRelations = relations.length - visibleRelations.length;
                       <span class="bk">Bk {b.book}{b.chapter ? `·${b.chapter}` : ''}</span>
                       {floor && (
                         <span class="fl" style={`--dot: var(${floor.accent})`}>
-                          Floor {floor.id}{open ? ` — ${floor.name}` : ''}
+                          Floor {floor.id} — {floor.name}
                         </span>
                       )}
                     </div>
-                    {open ? (
-                      <div class="entry-body">
-                        <h3>{b.headline}</h3>
-                        <p>{b.text}</p>
-                        {b.confidence === 'draft' && <span class="draft">unverified</span>}
-                      </div>
-                    ) : <Sealed at={b.sortKey} compact />}
+                    <div class="entry-body">
+                      <h3>{b.headline}</h3>
+                      <p>{b.text}</p>
+                      {b.confidence === 'draft' && <span class="draft">unverified</span>}
+                    </div>
                   </li>
                 );
               })}
+              {useLog.hidden.length > 0 && (
+                <li class="entry more">
+                  <Sealed at={useLog.nextAt!} compact
+                          count={useLog.hidden.length} noun="use" />
+                </li>
+              )}
             </ol>
           </section>
         )}
@@ -78,30 +96,32 @@ const hiddenRelations = relations.length - visibleRelations.length;
           <section>
             <h2>{entity.kind === 'character' ? 'Arc' : 'History'}</h2>
             <ol class="log">
-              {story.map(b => {
-                const open = gate.frontier >= b.sortKey;
+              {storyLog.shown.map(b => {
                 const floor = b.floor ? floorById.get(b.floor) : null;
                 return (
                   <li class="entry">
                     <div class="stamp">
                       <span class="bk">Bk {b.book}{b.chapter ? `·${b.chapter}` : ''}</span>
-                      <span class="kind">{BEAT_LABELS[b.kind] ?? b.kind}</span>
                       {floor && (
                         <span class="fl" style={`--dot: var(${floor.accent})`}>
-                          Floor {floor.id}{open ? ` — ${floor.name}` : ''}
+                          Floor {floor.id} — {floor.name}
                         </span>
                       )}
                     </div>
-                    {open ? (
-                      <div class="entry-body">
-                        <h3>{b.headline}</h3>
-                        <p>{b.text}</p>
-                        {b.confidence === 'draft' && <span class="draft">unverified</span>}
-                      </div>
-                    ) : <Sealed at={b.sortKey} compact />}
+                    <div class="entry-body">
+                      <h3>{b.headline}</h3>
+                      <p>{b.text}</p>
+                      {b.confidence === 'draft' && <span class="draft">unverified</span>}
+                    </div>
                   </li>
                 );
               })}
+              {storyLog.hidden.length > 0 && (
+                <li class="entry more">
+                  <Sealed at={storyLog.nextAt!} compact
+                          count={storyLog.hidden.length} noun="entry" />
+                </li>
+              )}
             </ol>
           </section>
         )}
@@ -148,10 +168,10 @@ const hiddenRelations = relations.length - visibleRelations.length;
   .log { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px;
          background: var(--color-line); border: 1px solid var(--color-line); }
   .entry { background: var(--color-panel); padding: 16px 18px; }
+  .entry.more { padding: 12px 14px; }
   .stamp { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-bottom: 9px;
            font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
   .bk { color: #0e0e0e; background: var(--color-grey-300); padding: 2px 6px; font-weight: 700; }
-  .kind { color: var(--color-grey-500); }
   .fl { color: var(--color-grey-300); display: inline-flex; align-items: center; gap: 6px; }
   .fl::before { content: ''; width: 8px; height: 8px; background: var(--dot); flex: none; }
   .entry-body h3 { font-size: 19px; font-weight: 700; color: #fff; }

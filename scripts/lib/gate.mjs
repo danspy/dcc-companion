@@ -27,5 +27,5 @@ export function describeAt(value) {
   const chapter = value % CHAPTER_STRIDE;
   if (chapter === END_OF_BOOK) return `you finish book ${book}`;
   if (chapter === 0) return `you reach book ${book}`;
-  return `book ${book}, chapter ${chapter}`;
+  return `you reach book ${book}, chapter ${chapter}`;
 }

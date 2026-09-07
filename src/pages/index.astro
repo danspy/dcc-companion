@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
-import { reveals } from '../lib/spoiler';
+import { reveals, UNSET_COPY } from '../lib/spoiler';
 import { getBooks, getFloors, readGate } from '../lib/content';
 
 const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
@@ -30,9 +30,11 @@ const bookById = new Map(books.map(b => [b.id, b]));
         the floor collapses with everyone still on it. It is also a television programme, broadcast
         across the galaxy, and the survivors are the cast. Ratings buy sponsors, sponsors send loot,
         and loot buys another floor of life. <strong>Being entertaining is a survival stat.</strong></p>
-      <p class="sys"><b>*** Notice ***</b>Everything below this point is sealed by reading position.
-        The dungeon shows you your floor and nothing beyond it. That's not cruelty, crawler.
-        That's format.</p>
+      {gate.spoilers && gate.fresh
+        ? <p class="sys"><b>*** No position set ***</b>{UNSET_COPY}</p>
+        : <p class="sys"><b>*** Notice ***</b>Everything below this point is sealed by reading
+            position. The dungeon shows you your floor and nothing beyond it. That's not cruelty,
+            crawler. That's format.</p>}
     </div>
   </section>
 

@@ -23,6 +23,10 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
+      - name: Types
+        # `tsc --noEmit` does not look inside .astro files; this does, and it
+        # caught three real errors that had been sitting in the tree.
+        run: npm run check
       - name: Gate arithmetic and lint rules
         run: npm run test:gate
       - name: Curation lint

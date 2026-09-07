@@ -11,29 +11,33 @@ const current = books.find(b => b.id === prefs.book);
   <div class="gate-inner wrap">
     <span class="eyebrow">
       Crawler position —
-      <b>{prefs.spoilers
-        ? `Book ${prefs.book}${prefs.finished ? ' · finished' : prefs.chapter ? ` · ch ${prefs.chapter}` : ''}`
-        : 'spoilers off'}</b>
+      <b class={prefs.spoilers && !prefs.book ? 'unset' : undefined}>{!prefs.spoilers
+        ? 'spoilers off'
+        : prefs.book
+          ? `Book ${prefs.book}${prefs.chapter ? ` · ch ${prefs.chapter}` : ' · finished'}`
+          : 'not set — pick a book'}</b>
     </span>
 
     <div class="books" role="group" aria-label="How far have you read?">
       {Array.from({ length: BOOK_COUNT }, (_, i) => i + 1).map(n => (
-        <button class="bk" data-book={n} aria-pressed={String(prefs.spoilers && n === prefs.book)}
+        <button class="bk" data-book={n} aria-pressed={prefs.spoilers && n === prefs.book}
                 title={books.find(b => b.id === n)?.title}>{n}</button>
       ))}
     </div>
 
-    <label class="chapter" title={current?.chapters
-      ? `Book ${prefs.book} has ${current.chapters} chapters — leave blank if you finished it`
-      : 'No chapter count recorded for this book yet'}>
+    <label class="chapter" title={!prefs.book
+      ? 'Choose a book first'
+      : current?.chapters
+        ? `Book ${prefs.book} has ${current.chapters} chapters — leave blank if you finished it`
+        : 'No chapter count recorded for this book yet'}>
       <span class="eyebrow">Ch</span>
       <input type="number" id="chapter" min="0" max={current?.chapters ?? 999}
-             value={prefs.chapter || ''} placeholder="all"
+             value={prefs.chapter || ''} placeholder={prefs.book ? 'all' : '—'}
              disabled={!current?.chapters} />
       {current?.chapters && <span class="of">/ {current.chapters}</span>}
     </label>
     <span class="spacer"></span>
-    <button class="btn" id="spoilers" aria-pressed={String(!prefs.spoilers)}>Spoil me</button>
+    <button class="btn" id="spoilers" aria-pressed={!prefs.spoilers}>Spoil me</button>
   </div>
 </div>
 
@@ -43,6 +47,8 @@ const current = books.find(b => b.id === prefs.book);
   .gate-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;
                 padding-block: 12px; }
   .eyebrow b { color: var(--color-gold); font-weight: 700; }
+  /* Nothing chosen yet is a prompt, not a value — colour it differently. */
+  .eyebrow b.unset { color: var(--color-blood); }
   .books { display: flex; gap: 4px; flex-wrap: wrap; }
   .bk { font-family: var(--font-mono); font-size: 13px; font-weight: 600;
         width: 32px; height: 30px; background: transparent; color: var(--color-grey-300);
@@ -69,9 +75,9 @@ const current = books.find(b => b.id === prefs.book);
 
   function read() {
     const hit = document.cookie.split('; ').find(c => c.startsWith(COOKIE + '='));
-    if (!hit) return { book: 1, chapter: 0, spoilers: true };
+    if (!hit) return { book: 0, chapter: 0, spoilers: true };
     try { return JSON.parse(decodeURIComponent(hit.slice(COOKIE.length + 1))); }
-    catch { return { book: 1, chapter: 0, spoilers: true }; }
+    catch { return { book: 0, chapter: 0, spoilers: true }; }
   }
 
   function write(next: Record<string, unknown>) {
@@ -87,8 +93,14 @@ const current = books.find(b => b.id === prefs.book);
 
     if (book) {
       // Moving to a different book clears a chapter that belonged to the old one.
-      // A chapter belongs to the book it was set on, so switching books clears it.
+      // A chapter belongs to the book it was set on, so switching books clears
+      // it. Clicking the current book again clears the position altogether,
+      // which is the only way back to the spoiler-free opening state.
       const n = Number(book.dataset.book);
+      if (n === state.book && state.spoilers) {
+        write({ ...state, book: 0, chapter: 0, spoilers: true });
+        return;
+      }
       write({ ...state, book: n, chapter: n === state.book ? state.chapter : 0, spoilers: true });
       return;
     }

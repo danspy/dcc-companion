@@ -20,7 +20,12 @@ test('a book-level tag is chapter zero, so it never hides mid-book content', () 
 test('describeAt renders the three shapes', () => {
   assert.equal(describeAt(parseAt('4')), 'you reach book 4');
   assert.equal(describeAt(parseAt('4:end')), 'you finish book 4');
-  assert.equal(describeAt(parseAt('4:12')), 'book 4, chapter 12');
+  // Every branch has to read grammatically after "come back when …" and
+  // "the next one opens when …", which is the only place it is used.
+  assert.equal(describeAt(parseAt('4:12')), 'you reach book 4, chapter 12');
+  for (const tag of ['4', '4:12', '4:end']) {
+    assert.ok(describeAt(parseAt(tag)).startsWith('you '), `"${tag}" must read as a clause`);
+  }
   assert.equal(bookOf(parseAt('4:12')), 4);
 });
 
@@ -118,6 +123,7 @@ test('a chapter tag past the end of its book fails the build', () => {
 /* frontierOf lives in src/lib/progress.ts (TypeScript, imported by Astro).
    Mirror its contract here so the semantics are pinned by a test either way. */
 const frontierOf = (pos, chapters) => {
+  if (!pos.book) return 0;
   const asked = Math.max(0, pos.chapter | 0);
   const chapter =
     asked === 0 ? END_OF_BOOK
@@ -165,4 +171,17 @@ test('a floor with no premise fails the build', () => {
     entities: [],
   });
   assert.ok(errors.some(e => e.includes('no premise')));
+});
+
+test('an unset position reveals nothing at all', () => {
+  const f = frontierOf({ book: 0, chapter: 0 }, null);
+  assert.equal(f, 0);
+  // Every reveal tag in the data is at least 1:1, so none of them can pass.
+  assert.ok(f < parseAt('1:1'), 'must not reach even the first chapter');
+  assert.ok(f < parseAt('1'), 'must not reach a book-level tag');
+});
+
+test('choosing book 1 is what unseals book 1', () => {
+  assert.ok(frontierOf({ book: 1, chapter: 0 }, 47) >= parseAt('1:end'));
+  assert.ok(frontierOf({ book: 0, chapter: 0 }, 47) < parseAt('1:2'));
 });

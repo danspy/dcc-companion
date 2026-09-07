@@ -1,8 +1,18 @@
 ---
-import { sealCopy } from '../lib/spoiler';
-interface Props { at: string | number; compact?: boolean }
-const { at, compact = false } = Astro.props;
+import { sealCopy, describeAt, parseAt } from '../lib/spoiler';
+
+interface Props {
+  at: string | number;
+  compact?: boolean;
+  /** When set, this seal stands in for several entries rather than one. */
+  count?: number;
+  noun?: string;
+}
+const { at, compact = false, count, noun = 'entry' } = Astro.props;
+const plural = count && count > 1 ? `${noun === 'entry' ? 'entries' : noun + 's'}` : noun;
 ---
-<div class="sealed" style={compact ? 'padding:9px 12px' : undefined}>
-  <b>*** Sealed ***</b>{sealCopy(at)}
+<div class="sealed" style={compact ? 'padding:10px 13px' : undefined}>
+  <b>*** Sealed ***</b>{count
+    ? `${count} more ${plural}. The next one opens when ${describeAt(parseAt(at))}.`
+    : sealCopy(at)}
 </div>

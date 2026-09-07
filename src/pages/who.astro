@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
-import { reveals } from '../lib/spoiler';
+import { reveals, UNSET_COPY } from '../lib/spoiler';
 import { getEntities, getAllBeats, coverage, readGate, KIND_LABELS, KIND_ORDER } from '../lib/content';
 import { parseAt } from '../lib/progress';
 
@@ -29,8 +29,7 @@ const groups = KIND_ORDER.map(kind => ({
       into. Arcs, uses and fates are sealed separately, so a cast list never hands you an ending.</p>
     {gate.spoilers && gate.fresh && (
       <p class="sys" style="max-width:var(--measure);margin-top:20px">
-        <b>*** No position set ***</b>You haven't told the dungeon how far you've read, so it is
-        assuming book one. Set your position in the bar above to unseal more.
+        <b>*** No position set ***</b>{UNSET_COPY}
       </p>
     )}
   </section>

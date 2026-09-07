@@ -27,13 +27,23 @@ export const FRONTIER_NONE = 0;
 /** Spoilers off — every gate passes. */
 export const FRONTIER_ALL = (BOOK_COUNT + 1) * CHAPTER_STRIDE;
 
+/** Book 0 is the opening state: the reader has told us nothing. */
+export const BOOK_UNSET = 0;
+
 export interface Position {
+  /** 0 = not set. 1..BOOK_COUNT = how far they have read. */
   book: number;
   /** 0 means "no chapter given" — see frontierOf. */
   chapter: number;
 }
 
-export const DEFAULT_POSITION: Position = { book: 1, chapter: 0 };
+/**
+ * Nothing from any book. A first-time visitor gets the premise — which is back
+ * cover material and lives in the page, not the gate — and every single gated
+ * fact stays sealed until they say where they are. Defaulting to "finished book
+ * one" would spoil book one for someone who has not read it.
+ */
+export const DEFAULT_POSITION: Position = { book: BOOK_UNSET, chapter: 0 };
 
 /**
  * An unspecified chapter means the reader has *finished* this book, not that
@@ -44,6 +54,7 @@ export const DEFAULT_POSITION: Position = { book: 1, chapter: 0 };
  * last chapter of a book and "finished it" are the same position.
  */
 export function frontierOf(pos: Position, chapters?: number | null): number {
+  if (!pos.book) return FRONTIER_NONE;
   const asked = Math.max(0, pos.chapter | 0);
   const chapter =
     asked === 0 ? END_OF_BOOK
@@ -79,11 +90,14 @@ export function describeAt(value: number): string {
   const chapter = value % CHAPTER_STRIDE;
   if (chapter === END_OF_BOOK) return `you finish book ${book}`;
   if (chapter === 0) return `you reach book ${book}`;
-  return `book ${book}, chapter ${chapter}`;
+  return `you reach book ${book}, chapter ${chapter}`;
 }
 
-export const clampBook = (n: number) =>
-  Math.min(BOOK_COUNT, Math.max(1, Math.round(Number(n) || 1)));
+/** Clamps to a real book, or to BOOK_UNSET when nothing valid was given. */
+export const clampBook = (n: number) => {
+  const b = Math.round(Number(n) || 0);
+  return b >= 1 ? Math.min(BOOK_COUNT, b) : BOOK_UNSET;
+};
 
 /** Percentage through a book -> chapter, for readers who track by audiobook. */
 export function chapterFromPercent(percent: number, chapters: number | null): number {

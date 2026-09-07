@@ -10,7 +10,7 @@ const YEAR = 60 * 60 * 24 * 365;
 
 export interface Prefs extends Position {
   spoilers: boolean;
-  /** No cookie yet — the reader has told us nothing. */
+  /** No position recorded — either no cookie, or the reader cleared it. */
   fresh: boolean;
 }
 
@@ -25,7 +25,7 @@ export function readPrefs(cookies: AstroCookies): Prefs {
       book: clampBook(v.book),
       chapter: Math.max(0, Number(v.chapter) || 0),
       spoilers: v.spoilers !== false,
-      fresh: false,
+      fresh: clampBook(v.book) === 0,
     };
   } catch {
     return { ...DEFAULT_PREFS };

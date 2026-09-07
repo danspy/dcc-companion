@@ -116,18 +116,52 @@ undocumented escape hatches is just the bug again.
 `book × 1000 + chapter` and the reveal-tag syntax to readers. That belongs here, not in the
 product; the page now says only enough to explain the numbers on it.
 
+### The opening state reveals nothing
+
+`DEFAULT_POSITION` is `{ book: 0 }` — **book 0 means the reader has told us nothing**, and
+`frontierOf` short-circuits to `FRONTIER_NONE`. Every reveal tag in the data is at least `1:1`,
+so a first-time visitor gets zero gated facts: no character names, no floor names, no arcs.
+
+What they do get is the premise on the front page, which is back-cover material living in the
+page rather than in the gate. That is the whole "general, nothing spoiler" surface.
+
+Defaulting to book 1 (as this did) spoils book 1 for someone who has not read it. Clicking the
+currently-selected book again clears back to unset, which is the only route home.
+
+### Structure leaks, not just prose
+
+A sealed entry used to render its own stamp: `Bk 7 · Fate · Floor 9`. That tells you the
+character dies on the ninth floor without opening anything, and four of them tells you the shape
+of the rest of their story. Two rules came out of it:
+
+- **No `kind` label on a beat.** `origin` / `arc` / `use` / `fate` still exist in the data and
+  still decide which section a beat lands in, but "Fate" is never rendered. The word itself is a
+  spoiler.
+- **Sealed beats collapse into one line.** Beats arrive sorted by `sortKey`, so everything still
+  sealed sits at the end; the page shows a single "N more entries, the next when you reach X"
+  instead of a stack of stamped placeholders. The count is all a reader needs.
+
+The same reasoning already applies to relations, which have always been summarised as a count.
+
+### `astro check`, not just `tsc`
+
+`tsc --noEmit` does not look inside `.astro` files. When `npm run check` was first added it found
+three real errors sitting in the tree — including a `prefs.finished` reference left behind when
+that field was removed, which had been silently evaluating to `undefined`. It runs in CI now.
+
 ### Three states, and the middle one is the point
 
 | `spoilers` | Progress | Behaviour |
 |---|---|---|
 | off | — | everything shown |
-| on | **none** (no cookie yet) | names and book titles show; every arc, use, fate and relation hidden |
+| on | **none** (book 0) | nothing gated at all; only the front-page premise |
 | on | some | revealed up to the frontier |
 
-The middle row exists because a first-time visitor opening the cast index must not have book 7
-handed to them by a "Fate:" line. **A list of names is not a spoiler; what happens to them is.**
-That is also why `/entity/[id]` *redirects* rather than rendering a redacted page for an entity
-the reader has not met — the URL alone would confirm the name.
+**A list of names is not a spoiler; what happens to them is** — but that only holds once the
+reader has said where they are. With no position recorded, even the names stay shut, because a
+name is a spoiler to someone who has not started. That is also why `/entity/[id]` *redirects*
+rather than rendering a redacted page for an entity the reader has not met: the URL alone would
+confirm the name.
 
 ## Content pipeline
 

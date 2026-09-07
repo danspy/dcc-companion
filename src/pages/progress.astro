@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { reveals } from '../lib/spoiler';
+import { reveals, UNSET_COPY } from '../lib/spoiler';
 import { getBooks, getEntities, getAllBeats, readGate } from '../lib/content';
 import { percentFromChapter } from '../lib/progress';
 
@@ -24,12 +24,14 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
     <div class="stats">
       <div class="stat">
         <span class="k">Reading position</span>
-        <span class="v">{prefs.spoilers ? <>Book {prefs.book}</> : 'All'}</span>
+        <span class="v">{!prefs.spoilers ? 'All' : prefs.book ? <>Book {prefs.book}</> : '—'}</span>
         <span class="n">{!prefs.spoilers
           ? 'spoilers off — everything shown'
-          : prefs.chapter
-            ? `chapter ${prefs.chapter}${currentChapters ? ` of ${currentChapters} · ${pct}%` : ''}`
-            : 'finished'}</span>
+          : !prefs.book
+            ? 'not set'
+            : prefs.chapter
+              ? `chapter ${prefs.chapter}${currentChapters ? ` of ${currentChapters} · ${pct}%` : ''}`
+              : 'finished'}</span>
       </div>
       <div class="stat">
         <span class="k">Entries unsealed</span>
@@ -48,7 +50,9 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
         loose ends you can open right now. <strong>Timeline entries</strong> counts the individual
         moments on those pages — a page fills in as you read rather than arriving whole, so someone
         two floors behind you sees the same character with less of their story attached.</p>
-      {current?.chapters ? (
+      {!prefs.book && prefs.spoilers ? (
+        <p class="sys"><b>*** No position set ***</b>{UNSET_COPY}</p>
+      ) : current?.chapters ? (
         <p>{current.title} has <strong>{current.chapters} chapters</strong>.{' '}
           {prefs.chapter
             ? <>You are at chapter {prefs.chapter}, about <strong>{pct}%</strong> in — the figure to
