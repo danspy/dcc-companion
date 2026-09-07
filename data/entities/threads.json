@@ -1,84 +1,92 @@
 {
-  "$comment": "Open threads are the hardest-gated content in the app. Every one is a genuine spoiler, and none is resolved yet.",
+  "$comment": "The hardest-gated content here. Every one of these is a genuine spoiler.",
   "entities": [
     {
       "id": "crown-obligation",
       "kind": "thread",
       "name": "The crown's bill",
       "aka": [],
-      "role": "Planted book 1",
+      "role": "Opened on floor 1",
       "revealedAt": "1:7",
       "sort": 1,
-      "tagline": "A cat put on a hat on floor one. The invoice is payable on floor nine.",
+      "tagline": "A cat put on a hat on the first floor. It is payable on the ninth.",
       "beats": [
         {
           "kind": "origin",
           "book": 1,
+          "chapter": 7,
           "floor": 1,
           "at": "1:7",
           "confidence": "verified",
           "headline": "Eight floors of fuse",
-          "text": "The Crown of the Sepsis Whore enrols Donut in the Blood Sultanate's line of succession, and taking it off does not undo it. The series sets this up in its first hours and does not touch it again for years.",
-          "chapter": 7
+          "text": "The Crown of the Sepsis Whore puts Donut in the Blood Sultanate's line of succession, and taking it off does not undo it."
         },
         {
           "kind": "arc",
           "book": 2,
           "chapter": 25,
+          "floor": 3,
           "at": "2:25",
           "confidence": "verified",
-          "headline": "Destroying the crown does not help",
-          "text": "The crown is blown apart at the end of the third floor. The obligation survives it."
+          "headline": "Destroying it does not help",
+          "text": "The crown is blown apart in the Over City's collapse. The succession survives it."
         },
         {
           "kind": "arc",
           "book": 7,
           "floor": 9,
-          "at": "7",
+          "at": "7:1",
           "confidence": "verified",
           "headline": "Due before anyone descends",
-          "text": "The ninth floor is where the Sultanate lives, and the succession requirement has to be discharged before the tenth floor opens."
+          "text": "The Sultanate holds the ninth floor, and the stairs to the tenth stay shut until the Sultan and his family are dead."
         }
       ],
       "relations": [
         {
           "to": "crown-of-the-sepsis-whore",
           "kind": "concerns",
-          "at": "1"
+          "at": "1:7"
+        }
+      ]
+    },
+    {
+      "id": "agatha-enemy",
+      "kind": "thread",
+      "name": "Agatha is an enemy to all of you",
+      "aka": [],
+      "role": "Unresolved",
+      "revealedAt": "7:78",
+      "sort": 2,
+      "tagline": "The mysterious one from the elder care facility, nine floors on.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 78,
+          "floor": 9,
+          "at": "7:78",
+          "confidence": "verified",
+          "headline": "Akuma says it in the Warlord Chat",
+          "text": "As the War Mages quit the floor with the Scavenger's Daughter, he warns Carl and Donut about her. He does not elaborate."
+        }
+      ],
+      "relations": [
+        {
+          "to": "agatha",
+          "kind": "concerns",
+          "at": "7:78"
         }
       ]
     },
     {
       "id": "justice-and-the-gods",
       "kind": "thread",
-      "name": "Justice releases the gods",
+      "name": "Justice, and the gods",
       "aka": [],
-      "role": "Unresolved",
-      "revealedAt": "7:end",
-      "sort": 2,
-      "tagline": "The end of Faction Wars lets loose what the dungeon was built to contain.",
-      "beats": [
-        {
-          "kind": "origin",
-          "book": 7,
-          "floor": 9,
-          "at": "7:end",
-          "confidence": "verified",
-          "headline": "Opened at the close of book 7",
-          "text": "Someone called Justice releases all of the gods. The consequences are still landing."
-        }
-      ],
-      "relations": []
-    },
-    {
-      "id": "spider-in-carls-chest",
-      "kind": "thread",
-      "name": "The spider in Carl's chest",
-      "aka": [],
-      "role": "Unresolved",
+      "role": "Advancing",
       "revealedAt": "7:end",
       "sort": 3,
-      "tagline": "Still there, still tied to Shi Maria, still not explained.",
+      "tagline": "Something the dungeon was built to contain gets out, and the man who did it does not survive it.",
       "beats": [
         {
           "kind": "origin",
@@ -86,36 +94,85 @@
           "floor": 9,
           "at": "7:end",
           "confidence": "verified",
-          "headline": "Carried out of Faction Wars",
-          "text": "He leaves the ninth floor with it unresolved, and the connection to Shi Maria unaddressed."
+          "headline": "He lets them all out",
+          "text": "Justice Light releases every one of the gods."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 1,
+          "floor": 10,
+          "at": "8:1",
+          "confidence": "verified",
+          "headline": "Dead, and the Nothing with him",
+          "text": "The crawlers reach the tenth floor to find Justice Light dead and the Nothing broken. 5,501 of them are left."
         }
       ],
       "relations": [
         {
-          "to": "carl",
-          "kind": "afflicts",
-          "at": "7:end"
+          "to": "the-nothing",
+          "kind": "concerns",
+          "at": "8:1"
+        }
+      ]
+    },
+    {
+      "id": "spider-in-carls-chest",
+      "kind": "thread",
+      "name": "What is inside Carl",
+      "aka": [],
+      "role": "Unresolved",
+      "revealedAt": "7:19",
+      "sort": 4,
+      "tagline": "Shi Maria went into him and did not come out.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 19,
+          "floor": 9,
+          "at": "7:19",
+          "confidence": "verified",
+          "headline": "The rampage through the Lemig base",
+          "text": "Stockade tries to pull Carl bodily to his position while Mordecai tries to force her out of him. What comes of it is hers, and the adjutant Panford is left explaining the wreckage."
+        }
+      ],
+      "relations": [
+        {
+          "to": "shi-maria",
+          "kind": "concerns",
+          "at": "7:19"
         }
       ]
     },
     {
       "id": "lucia-mars-children",
       "kind": "thread",
-      "name": "120,000 children",
+      "name": "A hundred and twenty thousand children",
       "aka": [],
-      "role": "Unresolved",
-      "revealedAt": "7:end",
-      "sort": 4,
+      "role": "Opened on floor 6",
+      "revealedAt": "5:71",
+      "sort": 5,
       "tagline": "Lucia Mar is carrying them. Nobody has said what for.",
       "beats": [
         {
           "kind": "origin",
+          "book": 5,
+          "chapter": 71,
+          "floor": 6,
+          "at": "5:71",
+          "confidence": "verified",
+          "headline": "More than one voice in there",
+          "text": "Florin says there are several presences in her head, other children among them, and that the dog is the key to it."
+        },
+        {
+          "kind": "arc",
           "book": 7,
           "floor": 9,
           "at": "7:end",
           "confidence": "verified",
-          "headline": "Revealed at the end of book 7",
-          "text": "More than 120,000 human children are inside her body."
+          "headline": "The count",
+          "text": "Her body holds more than 120,000 human children."
         }
       ],
       "relations": []
@@ -127,8 +184,8 @@
       "aka": [],
       "role": "Unresolved",
       "revealedAt": "7:end",
-      "sort": 5,
-      "tagline": "The dungeon's props declared independence on live galactic television.",
+      "sort": 6,
+      "tagline": "The dungeon's own population declared itself on live galactic television.",
       "beats": [
         {
           "kind": "origin",
@@ -137,7 +194,7 @@
           "at": "7:end",
           "confidence": "verified",
           "headline": "Unprecedented",
-          "text": "Floor 9's NPCs formed their own independent faction. Nothing in the show's history has a procedure for it, and Juice Box lit the fuse from inside the faction market."
+          "text": "The ninth floor's NPCs form an independent faction of their own. Nothing in the show's history has a procedure for it, and Juice Box lit it from inside the faction market."
         }
       ],
       "relations": [
@@ -154,18 +211,18 @@
       "name": "Scolopendra",
       "aka": [],
       "role": "Unresolved",
-      "revealedAt": "5",
-      "sort": 6,
-      "tagline": "A threat the Gate was reportedly essential to beating — and the Gate nearly got spent.",
+      "revealedAt": "5:1",
+      "sort": 7,
+      "tagline": "A Nine-Tier Attack poison, and a note saying the Gate was essential to beating whatever carries it.",
       "beats": [
         {
           "kind": "origin",
           "book": 5,
           "floor": 6,
-          "at": "5",
+          "at": "5:1",
           "confidence": "verified",
-          "headline": "A note from Tish",
-          "text": "According to a note left by his associate Tish, the Gate of the Feral Gods was considered essential to defeating Scolopendra, whose Nine-Tier Attack poison has already done its damage on the Hunting Grounds."
+          "headline": "Tish's note",
+          "text": "According to a note left by his associate Tish, the Gate of the Feral Gods was considered essential to defeating Scolopendra, whose poison has already done its work on the Hunting Grounds."
         }
       ],
       "relations": []
@@ -176,17 +233,18 @@
       "name": "The system is glitching",
       "aka": [],
       "role": "Unresolved",
-      "revealedAt": "8",
-      "sort": 7,
-      "tagline": "Floor 10's malfunctions are getting more frequent.",
+      "revealedAt": "8:1",
+      "sort": 8,
+      "tagline": "Strange faults on the tenth floor, and they are getting more frequent.",
       "beats": [
         {
           "kind": "origin",
           "book": 8,
+          "chapter": 1,
           "floor": 10,
-          "at": "8",
+          "at": "8:1",
           "confidence": "verified",
-          "headline": "Increasingly frequent",
+          "headline": "More often, and worse",
           "text": "Whatever is running the dungeon is no longer running it cleanly."
         }
       ],
@@ -199,8 +257,8 @@
       "aka": [],
       "role": "Unresolved",
       "revealedAt": "7:end",
-      "sort": 8,
-      "tagline": "Borant's grip and the Syndicate's authority both start to fracture.",
+      "sort": 9,
+      "tagline": "Borant's grip and the Syndicate's authority both start to give.",
       "beats": [
         {
           "kind": "origin",
@@ -209,7 +267,7 @@
           "at": "7:end",
           "confidence": "draft",
           "headline": "The show may not survive its own season",
-          "text": "The galactic power structure that built Dungeon Crawler World begins to come apart around it."
+          "text": "The power structure that built Dungeon Crawler World begins coming apart around it."
         }
       ],
       "relations": []

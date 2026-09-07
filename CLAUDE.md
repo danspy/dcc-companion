@@ -155,6 +155,19 @@ ordering path — instead of three near-identical sets. `use` beats are what mak
 answer *where is this used, and when*; an item with only a description is a glossary entry,
 not a companion.
 
+### Voice: written from inside the crawl
+
+Content describes events as events, in the dungeon's own vocabulary. It never says "in book 4
+Carl does X", never "the series", never "four books later", and never addresses the reader. The
+reader's position is the **gate's** job; the prose just tells them what happened.
+
+That distinction is easy to lose, because curation notes and commit messages talk about books
+constantly. The app's chrome may too — `Bk 4 · Floor 5` on a beat stamp is navigation. The body
+text may not.
+
+`npm run content:check` does not catch this; grep for `the series|the books?|books? (before|after)|
+the reader` after a writing pass.
+
 ### confidence: verified | draft
 
 `verified` means corroborated against a source during curation. `draft` means written from
@@ -244,6 +257,7 @@ ASTRO_DATABASE_FILE=./.astro/build.db npm run build
 | `data/books.json` | Books, floors, the book↔floor map |
 | `data/chapters.json` | The chapter spine: 474 chapters, counts and titles |
 | `scripts/fetch-chapters.mjs` | `npm run chapters:refresh` — pulls the chapter tables |
+| `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
 | `data/entities/*.json` | The curated graph |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |
 | `scripts/lib/lint.mjs` | Every rule that stops the gate leaking |
@@ -252,6 +266,10 @@ ASTRO_DATABASE_FILE=./.astro/build.db npm run build
 
 ## Next
 
+- `npm run content:coverage` ranks every name in the wiki's Characters and Items categories by how
+  many chapters mention it, and flags the ones with no entity yet. That is the queue — work down
+  it rather than guessing. **Read the surrounding summary before trusting an anchor**: the top hit
+  for "Louis" is a stack of Louis L'Amour books, four floors before the crawler turns up.
 - Chapter-accurate reveal points for the entities still tagged at book level
 - A verification pass over the remaining `draft` beats (`npm run content:check` lists them)
 - Books 3, 6 and 8 have the thinnest entity coverage relative to their chapter counts
