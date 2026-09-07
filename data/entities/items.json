@@ -12,6 +12,13 @@
       "revealedAt": "4:9",
       "sort": 1,
       "tagline": "A teleport that works by tearing a hole in the prison the old gods were thrown into. Something always comes back through.",
+      "description": [
+        {
+          "at": "4:15",
+          "source": "4:15",
+          "text": "New Quest. The Gate of the Feral Gods. Henrik the Changeling. Commandant Kane. The Mad Dune Mage. They all have pieces of the artifact. Take it from them. Collect all three. Put them together. What happens next is pretty damn neat. Reward: Oh boy-oh-boy."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -112,6 +119,7 @@
       "revealedAt": "2:25",
       "sort": 2,
       "tagline": "An explosion large enough to rattle the teeth of a god. It goes off the instant it leaves his inventory.",
+      "description": "Carl's Doomsday Scenario. Type: Unstable custom explosive. Effect: An explosion large enough to rattle the teeth of a god. Status: Explosion Imminent. Created by a man who murders babies and steals rare collectibles from his elders, this device is powerful enough to level an entire city and all the suburbs around it. It is created by combining a massively overloaded soul crystal and a Sheol Glass Reaper Case. Warning: This item can no longer be stabilized.",
       "beats": [
         {
           "kind": "origin",
@@ -219,6 +227,7 @@
       "revealedAt": "3:8",
       "sort": 4,
       "tagline": "Passed hand to hand by the crawlers of earlier seasons. Carl is its twenty-fifth holder.",
+      "description": "Book. The Dungeon Anarchist's Cookbook by Anonymous. This is a unique item. Chicken and Goblin recipes galore! But it's more than that, too. Each recipe is accompanied by a hilarious tale by the anonymous author, recounting some of the zany and madcap misadventures they experienced gathering these mouth-watering recipes. Fun for the whole family! This book is a real hoot.",
       "beats": [
         {
           "kind": "origin",
@@ -367,6 +376,7 @@
       "revealedAt": "6:19",
       "sort": 7,
       "tagline": "Eat the flower, spend an hour at one percent, and a goddess decides what you become.",
+      "description": "Warning: This item can only be used by a female. Or a male, if you're a seahorse. It's a flower. You're supposed to eat it, though it might be a good decoration instead. […] Anyway, if you eat this flower, it renders you unconscious for one hour with your health at 1% of your max. You cannot heal during this time. If you survive this ordeal, you will be given one of three permanent boons from the goddess Eileithyia. The given boon is at the discretion of the goddess, and it cannot be predicted. If you choose to worship Eileithyia before you consume this flower, the descriptions of the boons will be expanded. She will also ask you which of the three you'd prefer. Her cooperation is not guaranteed, especially if she doesn't like you. But Eileithyia is known to be a generous goddess.",
       "beats": [
         {
           "kind": "origin",
@@ -405,6 +415,18 @@
       "revealedAt": "5:69",
       "sort": 8,
       "tagline": "What is left of someone when the dungeon is finished with them, and worth stealing.",
+      "description": [
+        {
+          "at": "8:70",
+          "source": "8:70",
+          "text": "Memorial Crystal. Apito. This item is 0% charged."
+        },
+        {
+          "at": "8:98",
+          "source": "8:98",
+          "text": "Memorial Crystal. Emberus."
+        }
+      ],
       "beats": [
         {
           "kind": "use",
@@ -471,10 +493,36 @@
       "name": "The Scavenger's Daughter",
       "aka": [],
       "role": "Upgrade patch",
-      "revealedAt": "7:78",
+      "revealedAt": "6:3",
       "sort": 10,
-      "tagline": "Worth a war-mage extraction to get hold of, and it swaps every crawler's inventory with the nearest crawler's.",
+      "tagline": [
+        {
+          "at": "6:3",
+          "text": "A back patch of stacked skulls for Carl's jacket: divine, unique, fleeting, and what it does depends on which gods are standing near."
+        },
+        {
+          "at": "7:78",
+          "text": "Worth a war-mage extraction to get hold of, and it swaps every crawler's inventory with the nearest crawler's."
+        }
+      ],
+      "description": [
+        {
+          "at": "6:3",
+          "source": "6:3",
+          "text": "The Scavenger's Daughter. Upgrade Patch. Back Patch. This is a divine item. This is a unique item. This is a fleeting item. You may only affix one back patch at a time. This patch depicts a pile of scary skulls, all stacked up nice and neat. I wonder if there's a story there? If this upgrade patch is affixed to an eligible garment, it will imbue the following upgrades: (Hidden until it is affixed and then worn.) […] Warning #2! This is a divine item. This means it gains differing abilities, buffs, and possibly debuffs depending on your proximity to certain deities and demons. It makes for new and exciting combinations!"
+        }
+      ],
       "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 3,
+          "floor": 8,
+          "at": "6:3",
+          "confidence": "draft",
+          "headline": "A pile of skulls, stacked nice and neat",
+          "text": "Out of a box on the eighth floor, alongside a tattoo kit and an automaton build-it kit: a divine back patch for Carl's jacket, its benefits varying with whichever divine entities happen to be present. The upgrades it carries stay hidden until it is affixed and worn."
+        },
         {
           "kind": "use",
           "book": 7,
