@@ -152,9 +152,14 @@ thousand children in her body"* across four steps.
   caught real ones the phrase check could not: a book-6 Donut beat naming Shi Maria (6:25), the
   Gate's operating notes naming the Nothing (4:24), and two book-1 beats naming *Dungeon Crawler
   World* three chapters before the text does.
-  **Floor names are in the same list as entity names**, because a floor's name is gated too and
-  "the Great Race" dropped into a book-4 beat leaks it exactly as a character's name would. The
-  in-character rewrite is what made this urgent: a speaker naturally names the ground under them.
+  **Floor names and capitalised aliases are in the same list as entity names.** A floor's name is
+  gated too, and "the Great Race" dropped into a book-4 beat leaks it exactly as a character's
+  name would; the in-character rewrite made this urgent, because a speaker naturally names the
+  ground under them. An alias leaks identically: "Katia" sat in Brynhild's Daughters' tagline
+  from book 1 chapter 20, three chapters into book 2 before the reader meets her. Only
+  *capitalised* aliases count — a lower-case one is a common noun phrase rather than a name, and
+  gating *Dungeon Crawler World*'s alias "the show" would flag every honest sentence about the
+  broadcast.
 
 ### Who speaks: three voices, resolved in the build
 
@@ -228,11 +233,28 @@ name is a spoiler to someone who has not started. That is also why `/entity/[id]
 rather than rendering a redacted page for an entity the reader has not met: the URL alone would
 confirm the name.
 
+### Places are not floors, and a name is not its substance
+
+`place` is a kind of its own: a city, a castle, a district, a dimension — somewhere **on** a
+floor. Floors are the spine, live in `books.json`, are numbered, and carry a premise and a recap.
+Larracos earned the kind by being named in four beats with nowhere to point.
+
+Adding an entity late in a project surfaces a specific problem: **a name often reaches the reader
+long before its substance does.** Sheol is a component in a bomb's description at 2:25 and a demon
+realm in book 6. Changeling is one word of Mordecai's at 1:29 and a population under torture in
+book 4. The Nagas are bankrupt showrunners in a loot-box aside at 1:5 and a fleet in book 7.
+Rosetta Thagra is a name in the front of the Cookbook at 3:8 and a presenter in book 6.
+
+In every case the entity **reveals where the book gives the reader the word**, and everything
+about what it *is* sits in beats at its own later tag. Tagging the entity at its substance instead
+would retro-seal text the reader has already read, and the forward-reference check would fail the
+build on the older entry — which is how each of these was found.
+
 ## Content pipeline
 
 ```
 data/books.json              books, floors, the book<->floor map
-data/entities/*.json         characters, items, mechanics, factions, threads
+data/entities/*.json         characters, items, mechanics, factions, places, threads
 data/chapters.json           chapter counts + titles   <- npm run chapters:refresh
         |  npm run content:build   (scripts/build-content.mjs — no network)
 data/content.snapshot.json   reveal tags resolved to integers, committed
@@ -382,6 +404,7 @@ character rather than an apology.
 ```bash
 npm run dev             # https://localhost:4321 (self-signed — accept the warning)
 npm run content:build   # rebuild data/content.snapshot.json after editing data/
+npm run content:anchors # is any reveal tag earlier than the first chapter naming it?
 npm run content:check   # lint only; prints the draft/chapter-count work queue
 npm run test:gate       # frontier arithmetic + the lint rules
 
@@ -445,9 +468,11 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
 | `scripts/check-pages.mjs` | Fails the build if gated content is hardcoded into page source |
 | `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |
+| `data/entities/places.json` | Places: somewhere *on* a floor, never a floor itself |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |
 | `scripts/lib/lint.mjs` | Every rule that stops the gate leaking |
 | `scripts/lib/voice.mjs` | Who speaks on a beat: self / system / narrator, resolved in the build |
+| `scripts/check-anchors.mjs` | `npm run content:anchors` — advisory: a reveal tag earlier than the first chapter naming it |
 | `src/components/GateBar.astro` | The position control |
 | `src/pages/entity/[id].astro` | Usage log + arc + connections, each gated |
 
@@ -456,7 +481,11 @@ currently has a dev server running. It is not this deployment, and only one proj
 - `npm run content:coverage` ranks every name in the wiki's Characters and Items categories by how
   many chapters mention it, and flags the ones with no entity yet. That is the queue — work down
   it rather than guessing. **Read the surrounding summary before trusting an anchor**: the top hit
-  for "Louis" is a stack of Louis L'Amour books, four floors before the crawler turns up.
+  for "Louis" is a stack of Louis L'Amour books, four floors before the crawler turns up, and the
+  first "Bautista" is a corpse called Grace, five chapters before Daniel Bautista is met.
+  It only scans two of the wiki's categories; NPCs, Deities, Groups, Dungeon Locations, Dungeon
+  Mechanics, Quests, Shows and Bosses were swept by hand for the pass that doubled the graph, and
+  a `--cat=` flag would make that reproducible.
 - Chapter-accurate reveal points for the entities still tagged at book level
 - **A verification pass over the `draft` beats — now 150 of 232**, because the whole cast was
   rewritten in voice from the existing record. The facts were carried over, not re-checked
