@@ -258,6 +258,7 @@
       "revealedAt": "1:5",
       "sort": 5,
       "tagline": "Makes an animal sapient. One biscuit, one cat, and the shape of the entire crawl changes.",
+      "description": "Enhanced Pet Biscuit. So, it looks like a regular pet biscuit. It's not. Feed to your pet at your own risk. What's the worst that can happen?",
       "beats": [
         {
           "kind": "use",
@@ -286,10 +287,46 @@
         "the Ring of Divine Suffering"
       ],
       "role": "Jewellery",
-      "revealedAt": "5:5",
+      "revealedAt": "3:19",
       "sort": 6,
-      "tagline": "Mark a target, kill it, take its stats. Mordecai says it is addictive, and he is not being figurative.",
+      "tagline": [
+        {
+          "at": "3:19",
+          "text": "A curse from a man who wanted Carl dead, worn anyway for the five percent."
+        },
+        {
+          "at": "5:6",
+          "text": "Mark a target, kill it, take its stats. Mordecai says it is addictive, and he is not being figurative."
+        }
+      ],
+      "description": [
+        {
+          "at": "3:19",
+          "source": "3:19",
+          "text": "Enchanted Night Wyrm's Ring of Divine Suffering. Oooh, that's scary sounding. For the discerning Crawler Killer, this magical ring can be one of the most formidable items in the dungeon. If utilized properly, this ring's wielder can grow exponentially in strength, especially on the deeper floors. But beware. If poorly wielded, this ring will kill you quicker than an exploding rage elemental. Either way, this ring imparts one of the dungeon's most highly sought-after skills. The wearer of this ring receives the following benefits: +5% to all stats. The Marked For Death skill."
+        }
+      ],
       "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 19,
+          "floor": 4,
+          "at": "3:19",
+          "confidence": "draft",
+          "headline": "A curse, handed over at the Desperado Club",
+          "text": "Frank Q gives it to Carl at the Desperado Club, and it is meant as a curse. He and Maggie My made their daughter Yvette wear one to level up, and Yvette marked Carl in a safe room on the first floor. A wearer cannot heal while a mark lives, so when Yvette was hurt, Maggie had to kill her own daughter. Carl keeps the ring for the five percent."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 30,
+          "floor": 4,
+          "at": "3:30",
+          "confidence": "draft",
+          "headline": "Mordecai sees it on his hand",
+          "text": "Back from his suspension for throwing a chair at Chaco, Mordecai sees the ring on Carl's finger and tells him to get rid of it at once. Carl is wearing it for the five percent to all stats and nothing else, and keeps wearing it."
+        },
         {
           "kind": "use",
           "book": 5,
@@ -401,6 +438,13 @@
       "revealedAt": "7:3",
       "sort": 9,
       "tagline": "Out of a celestial box, from a waste-management company, on the eve of a war.",
+      "description": [
+        {
+          "at": "7:3",
+          "source": "7:3",
+          "text": "The Tiara of a Thousand Lights and Accompanying Charge Pillow. This is a unique item. This item was made especially for Crawler Princess Donut by her sponsor, Long Haul Biological Waste Management Solutions. […] This particular tiara is imbued with 99 Absorption Jewels. The tiara itself has no inherent magical properties, and in its base state it gives no additional benefits or buffs except plus 10 to Charisma. However, it has the ability to be permanently charged with up to 99 different buff items. […] With some careful planning, one can turn this tiara into one of the most powerful items in the history of Dungeon Crawler World. Okay, here come the warnings."
+        }
+      ],
       "beats": [
         {
           "kind": "use",

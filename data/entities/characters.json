@@ -12,7 +12,8 @@
       "role": "Protagonist",
       "revealedAt": "1:1",
       "sort": 1,
-      "tagline": "Twenty-seven, US Coast Guard, marine technician. Went outside for a cigarette and lived.",
+      "tagline": "Twenty-seven. Coast Guard, marine technician. I went outside for a cigarette, and that is the only reason I'm alive. I'm not sure it counts as a reason.",
+      "voiceNote": "Deadpan, first person, understated. Notices the practical detail first (footwear, inventory, what will explode) and the feeling second, if at all. Gallows humour, never grandiose, never asks for sympathy. Says Donut, Mordecai, the AI. Swears in the crawl; here he keeps it to hell and damn. Talks like a man narrating a repair job while the building is on fire.",
       "beats": [
         {
           "kind": "origin",
@@ -20,9 +21,9 @@
           "chapter": 1,
           "floor": 1,
           "at": "1:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "January 3rd, 2:23 in the morning",
-          "text": "He steps onto the balcony of his Seattle apartment for a smoke. Donut — his ex-girlfriend's show cat — goes out the cracked window and into the tree. He follows her down into the freezing dark in a brown leather jacket, heart-print boxers and Bea's pink Crocs, carrying a Zippo and half a pack of Marlboro Reds. His neighbour Mrs Parsons leans out to ask about the noise. Then every structure on the planet comes down at once, and everyone still inside one dies."
+          "text": "I go out on the balcony of my apartment in Seattle for a cigarette. That's it. That's the whole decision. Donut, who is my ex-girlfriend's show cat and not mine in any way I agreed to, goes out through the cracked window and up the tree, and I go after her into the freezing dark in a brown leather jacket, heart-print boxers and Bea's pink Crocs, with a Zippo and half a pack of Marlboro Reds. Mrs Parsons leans out to ask about the noise. Then every building on the planet comes down at once, and everyone who stayed inside one is gone."
         },
         {
           "kind": "arc",
@@ -30,9 +31,18 @@
           "chapter": 2,
           "floor": 1,
           "at": "1:2",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Dressed for nothing, and stuck that way",
-          "text": "Within an hour of the stairs he has a Goblin Pass Tattoo on his left forearm, a Trollskin Shirt of Pummeling, a Nightgaunt Cloak of Stoutness clipped to the coat and a Toe Ring of the Splatter Skunk. The footwear situation never improves. From the second floor the Enchanted Pedicure Kit of the Sylph leaves his bare feet shiny and glittering, and the audience will not let him forget it."
+          "text": "An hour past the stairs and I have a Goblin Pass Tattoo on my left forearm, a Trollskin Shirt of Pummeling, a Nightgaunt Cloak of Stoutness clipped to the jacket and a Toe Ring of the Splatter Skunk. What I do not have is shoes. I have asked. The dungeon has heard me ask, and the dungeon has an opinion about it."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "floor": 2,
+          "at": "1:end",
+          "confidence": "draft",
+          "headline": "The footwear situation does not improve",
+          "text": "The second floor finally addresses my feet. It hands me an Enchanted Pedicure Kit of the Sylph. So now I am still barefoot, but my feet are shiny and they glitter, and the audience has noticed, and the audience does not let things go."
         },
         {
           "kind": "arc",
@@ -40,9 +50,9 @@
           "chapter": 2,
           "floor": 3,
           "at": "2:2",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Primal, and a Compensated Anarchist",
-          "text": "Class selection, on the way into the Over City. He takes the Primal race and a monk/rogue hybrid nobody has picked before. The system's own assessment: \"a trapmaking, bomb-making, social-media dynamo\" who \"will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" It has not needed revising since."
+          "text": "Class selection, on the way into the Over City. I take Primal for the race and a monk-rogue hybrid nobody has picked before, and the AI writes me up as \"a trapmaking, bomb-making, social-media dynamo\" who \"will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" I'd argue with it if I could think of the argument."
         },
         {
           "kind": "arc",
@@ -50,9 +60,9 @@
           "chapter": 8,
           "floor": 4,
           "at": "3:8",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "The twenty-fifth holder of the Cookbook",
-          "text": "Twenty-four crawlers carried it before him, across seasons and species and worlds that no longer exist. Whatever he does from here, he is finishing somebody else's work."
+          "text": "Twenty-four crawlers carried this before me. Different seasons, different species, worlds that aren't there any more. Whatever I do from here, I'm finishing somebody else's work, and most of them never got to finish theirs."
         },
         {
           "kind": "arc",
@@ -61,7 +71,7 @@
           "at": "3:8",
           "confidence": "draft",
           "headline": "The Tangle cannot be beaten alone",
-          "text": "Hundreds of crawlers have to move at once for the trains to come apart, and coordination on that scale is the one thing production spends its budget preventing. He stops thinking of explosives as the weapon."
+          "text": "The trains only come apart if hundreds of crawlers move at once, and getting hundreds of crawlers to do anything at once is exactly the thing production spends its money preventing. So I stop thinking of the explosives as the weapon."
         },
         {
           "kind": "arc",
@@ -69,27 +79,37 @@
           "chapter": 31,
           "floor": 5,
           "at": "4:31",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "He worships a god to survive a plane crash",
-          "text": "Falling out of the sky with Quan Ch about to finish him, he takes Emberus as his patron and throws a celestial grenade. The god arrives at his position, and he is briefly impossible to kill. Emberus and Orthrus find each other and are gone."
+          "text": "I am falling out of the sky and Quan Ch is about to finish the job. So I take Emberus as my patron, mid-air, and throw a celestial grenade. The god arrives at my position, and for a little while nothing can kill me. Then Emberus finds Orthrus, and both of them are gone."
         },
         {
           "kind": "arc",
           "book": 5,
           "floor": 6,
           "at": "5:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Agent Provocateur",
-          "text": "The bomb-focused specialisation, taken as the Hunting Grounds open. Zockau burns. He marks hunters with the Ring of Divine Suffering, kills them, and takes their stats, and enough of them die inside the Desperado Club that the survivors have to be dug out."
+          "text": "The Hunting Grounds are opening and I take the bomb-focused specialisation. Agent Provocateur. I would like to be very, very good at exactly one thing, and I have picked the thing."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 5,
+          "floor": 6,
+          "at": "5:5",
+          "confidence": "draft",
+          "headline": "Zockau burns",
+          "text": "Zockau burns. I mark hunters with the Ring of Divine Suffering, I kill them, and I take their stats, and enough of them are inside the Desperado Club when it goes that the survivors have to be dug out. I get hurt on the way out. That part is fair."
         },
         {
           "kind": "arc",
           "book": 7,
           "floor": 9,
           "at": "7:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "He takes command of one of nine armies",
-          "text": "Thirty days, a castle at Larracos in the middle of the map, and no way to come back from a death. Supply, alliance and atrocity, at a scale where the arithmetic stops being personal."
+          "text": "Thirty days. A castle at Larracos, dead centre of the map. No coming back from a death on this floor, for anyone. Supply, alliances, atrocity, at a scale where the arithmetic stops being about people I know."
         }
       ],
       "relations": [
@@ -152,7 +172,8 @@
       "role": "Co-protagonist",
       "revealedAt": "1:1",
       "sort": 2,
-      "tagline": "A pedigreed tortoiseshell Persian with a bedroom full of ribbons, a sultry and pompous voice, and no doubt whatsoever about her own importance.",
+      "tagline": "I am a pedigreed tortoiseshell Persian with a bedroom full of ribbons and a very good voice. I do not see what more you could possibly need to know.",
+      "voiceNote": "Imperious, delighted by herself, wounded by any slight and quick to say so. CARL in capitals when he is being difficult; Mordecai is staff. Uses her titles in full and treats them as facts. Things are common, vulgar, rude or unfair. Never swears, because swearing is common. Mongo is her son and she will not be told otherwise.",
       "beats": [
         {
           "kind": "origin",
@@ -160,9 +181,9 @@
           "chapter": 5,
           "floor": 1,
           "at": "1:5",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "First cat down the stairs",
-          "text": "Carrying her in earns Carl a Legendary Pet Box; being carried earns her a Legendary Quadruped Box of her own. Inside his is an Enhanced Pet Biscuit. She takes it out of his hand, melts into a heap of goo, and gets up talking."
+          "text": "Carl carries me down, and the dungeon gives him a Legendary Pet Box for it, which is fair, and gives me a Legendary Quadruped Box of my own, which is more than fair. His box has a biscuit in it. An Enhanced Pet Biscuit. I take it out of his hand, because it is obviously for me, and I melt into a heap of goo, and I get up talking. I have a great deal to say."
         },
         {
           "kind": "arc",
@@ -170,9 +191,9 @@
           "chapter": 7,
           "floor": 1,
           "at": "1:7",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "GC BWR NW Princess Donut the Queen Anne Chonk",
-          "text": "She learns Magic Missile, and the highest stat total makes her party leader. Her first act with the authority is to rename the party the Royal Court of Princess Donut and inaugurate it formally."
+          "text": "I learn Magic Missile. I also have the highest stat total in the party, which makes me party leader, which anyone could have predicted. My first act is to give the party a proper name: the Royal Court of Princess Donut. There is an inauguration. Carl does not take it seriously enough, but there is an inauguration."
         },
         {
           "kind": "arc",
@@ -180,9 +201,9 @@
           "chapter": 7,
           "floor": 1,
           "at": "1:7",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "She equips a crown with an ominous description",
-          "text": "The Quadruped Box holds the Enchanted Crown of the Sepsis Whore. Mordecai tells her to read it. She puts it on instead, and joins the royal line of succession of the Blood Sultanate, eight floors down."
+          "text": "Mordecai says read the description first. Mordecai says a great many things. It is a crown, it is dark and smoky and exactly my colour, and it came out of my box, which has the word Legendary on it. It has a vulgar name, which is not my fault. It says something about the Blood Sultanate and a line of succession, eight floors down. I am already a princess. I do not see how being in line for anything could be a demotion. Carl is making his face."
         },
         {
           "kind": "arc",
@@ -190,9 +211,9 @@
           "chapter": 46,
           "floor": 2,
           "at": "1:46",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "She adopts a dinosaur",
-          "text": "A reward room on the second floor holds a caged pet-class mob. She takes him, names him hers, and treats him as her child from that hour on."
+          "text": "There is a reward room on the second floor with a cage in it, and in the cage is a pet-class mob, and the pet-class mob is my son. I did not know that until I saw him. He is called Mongo. He is mine, and that is the end of the discussion."
         },
         {
           "kind": "arc",
@@ -200,9 +221,9 @@
           "chapter": 1,
           "floor": 3,
           "at": "2:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Cat, and a Former Child Actor",
-          "text": "On Odette's advice she takes a class that lets her choose another class at every level, and installs Mordecai as her decidedly unwilling manager. Her constitution is far too low for melee, so she fights on charisma, spells and audience."
+          "text": "Odette suggested it, so obviously it is a good idea: a class that lets me choose another class at every level. I also arrange for Mordecai to be my manager. He is thrilled. He does not show it, but he is. My constitution is apparently far too low for what Carl calls melee, so I will be fighting with charisma, spells and the audience, which is how it should be done."
         },
         {
           "kind": "arc",
@@ -211,7 +232,7 @@
           "at": "6:26",
           "confidence": "draft",
           "headline": "She fights with people",
-          "text": "On the card floor her deck includes Alpha Male Carl and Shi Maria, and both of them are somebody. She plays them anyway.",
+          "text": "It is a card floor and I have a deck, and in the deck are Alpha Male Carl and Shi Maria, and both of them are somebody. I play them anyway. It is a game. That is what the cards are for.",
           "chapter": 26
         },
         {
@@ -219,9 +240,9 @@
           "book": 7,
           "floor": 9,
           "at": "7:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "The crown comes due",
-          "text": "The Blood Sultanate holds the ninth floor, and every royal in the line must kill the Sultan and the rest of the family before the stairs to the tenth will open. She is a royal in the line. She has been since the first floor."
+          "text": "The Blood Sultanate holds this floor, and every royal in the line must kill the Sultan and the rest of the family before the stairs to the tenth will open. I am a royal in the line. I have been since the first floor. I would like it noted that I was told to read the description."
         }
       ],
       "relations": [
@@ -268,7 +289,8 @@
       "role": "Dinosaur",
       "revealedAt": "1:46",
       "sort": 3,
-      "tagline": "A food-motivated velociraptor who regards Princess Donut as his mother and will die for her without pausing to think about it.",
+      "tagline": "MOTHER. Food. MOTHER. Bite anything near Mother.",
+      "voiceNote": "Does not talk. What the camera gets is the dinosaur: single words, capitals, appetite. MOTHER is Donut. Everything else is FOOD, NOT FOOD, or BAD. Never more than a few short lines.",
       "beats": [
         {
           "kind": "origin",
@@ -276,18 +298,18 @@
           "chapter": 46,
           "floor": 2,
           "at": "1:46",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Seven inches of pink feathers, in a cage",
-          "text": "A level-1 pet-class mob locked in a secret reward room, newly hatched and looking mostly like an angry chicken. He attacks both of them the moment the cage opens. Donut wins him over by turning him loose on Brindle Grubs and showing him how to open their bellies for the good part."
+          "text": "CAGE. Small. Pink? Pink. TWO BIG THINGS. Bite them. Bite them. Bite. MOTHER. Mother has grubs. Grubs open. Inside part GOOD. Mongo stays."
         },
         {
           "kind": "arc",
           "book": 2,
           "floor": 3,
           "at": "2:2",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "He stands over her",
-          "text": "A trap paralyses Donut in the Over City. He plants himself across her body and nearly dies holding off a swarm of spiky Street Urchins. He rarely listens to Carl. His loyalty to her is not negotiable."
+          "text": "Mother down. Mother NOT MOVING. Mongo on top of Mother. Spiky things. MANY spiky things. Bite. Bite. Bite. Hurts. Mongo stays on Mother. Carl says something. Mongo does not listen to Carl."
         },
         {
           "kind": "arc",
@@ -296,16 +318,16 @@
           "at": "3",
           "confidence": "draft",
           "headline": "He finishes Maggie My",
-          "text": "When the Scree parasite comes off Chris Andrews and goes for Carl, Mongo kills it."
+          "text": "Thing on Chris. Thing OFF Chris. Thing goes for Carl. Thing is FOOD."
         },
         {
           "kind": "fate",
           "book": 7,
           "floor": 9,
           "at": "7:end",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Nearly lost, and then a father",
-          "text": "The ninth floor comes very close to taking him. Ser Rendelgor pulls him out. He walks off that floor a parent."
+          "text": "Mongo, dinosaur, registered pet of Crawler Princess Donut, has survived the ninth floor. This was not the expected outcome. Credit goes to a knight called Ser Rendelgor, who pulled him out. Mongo is also, as of the stairs, a father. Nobody is going to explain that to you, least of all me."
         }
       ],
       "relations": [
@@ -324,7 +346,17 @@
       "role": "Guide & manager",
       "revealedAt": "1:2",
       "sort": 4,
-      "tagline": "An indentured Borant guide, a crawler from a season that ended badly, and the sharpest memory in the dungeon.",
+      "tagline": [
+        {
+          "at": "1:2",
+          "text": "Your guide for the first three floors. I have done this before. Listen, and you might get to see the fourth."
+        },
+        {
+          "at": "1:29",
+          "text": "I crawled once. It cost me everything I had, and Borant still owns what's left."
+        }
+      ],
+      "voiceNote": "Tired professional, precise about rules, exasperated by clients who ignore them. Leads with the warning, follows with the reason, ends with a sigh you can hear. Kid, listen, you don't get it. Bitter about Borant in short sentences. Does not gush and does not comfort; drunk, he talks about the past and stops himself.",
       "beats": [
         {
           "kind": "origin",
@@ -332,18 +364,18 @@
           "chapter": 3,
           "floor": 1,
           "at": "1:3",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Tutorial Guild Hall, first floor",
-          "text": "He will not open the door until they kill a goblin. Donut desecrates his mother; Carl explodes a Murder Dozer. He introduces himself anyway. Borant holds his indenture — guide for the first three floors, magic guild master after that, where he is mostly left alone to brew and to look up old friends."
+          "text": "Rule one: I don't open the door until you kill a goblin. The cat desecrates my mother. The man blows up a Murder Dozer. I open the door. My name is Mordecai. Borant holds my indenture, which means I guide for the first three floors and run a magic guild after that, where they mostly leave me alone to brew and look up old friends. Try to live long enough for that to matter."
         },
         {
           "kind": "arc",
           "book": 1,
           "floor": 1,
           "at": "1:29",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "He has done this before, and it cost him everything",
-          "text": "He crawled once himself. He took the Changeling race then and can no longer shift at will, so the dungeon assigns him a body at the start of every floor — rat-kin, then a seven-foot obsidian bugaboo, then an incubus in a tuxedo with no tolerance for drink, then a warty grulke. His own shape is golden and eagle-like, with wings. Drunk, he talks about the family that crawl took."
+          "text": "I crawled. I took Changeling, and I can't shift on my own any more, so the dungeon hands me a body at the start of every floor and I wear what I'm given. This one is a rat-kin. What I actually am is golden, and has wings. I don't talk about the family. When I've had enough to drink, I talk about the family."
         },
         {
           "kind": "arc",
@@ -351,18 +383,18 @@
           "chapter": 1,
           "floor": 3,
           "at": "2:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Manoeuvred into managing a cat",
-          "text": "Odette rates his memory as the most valuable thing a crawler could get hold of, so Carl and Donut arrange his appointment during class selection, and it has to look like an accident. He would forgive Donut. He would never forgive Carl."
+          "text": "Odette says my memory is the most valuable thing a crawler could get hold of, so the two of them arrange for me to become the cat's manager during class selection, and they make it look like an accident. It was not an accident. I will forgive Donut. Carl, no."
         },
         {
           "kind": "arc",
           "book": 2,
           "floor": 3,
           "at": "2:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "The rules he cannot break",
-          "text": "Most of what he knows he may not volunteer; some of it he may only give up if asked the exact question. Without press credentials no viewer can see or hear him. As a manager he may not fight mobs directly. His advice is to stay ahead of the curve, never trust an elite, and stay away from gods — none of which survives contact with Carl."
+          "text": "Most of what I know I'm not allowed to volunteer. Some of it I can only give you if you ask the exact question. Without press credentials nobody watching can see me or hear me, and as a manager I can't touch a mob. My advice is what it has always been: stay ahead of the curve, never trust an elite, stay away from gods. Carl has heard all three."
         },
         {
           "kind": "arc",
@@ -371,7 +403,7 @@
           "at": "6",
           "confidence": "draft",
           "headline": "Huanxin, Uzzi, and what happened",
-          "text": "Odette's price for her help is the old catastrophe, and his part in it."
+          "text": "Odette wants the old story. Huanxin. Uzzi. What I did. That's her price for helping us, and she knows I'll pay it."
         }
       ],
       "relations": [
@@ -397,7 +429,8 @@
       "role": "Party",
       "revealedAt": "2:21",
       "sort": 5,
-      "tagline": "A university art professor from Reykjavík who can mould her own mass like clay, once she works out how.",
+      "tagline": "Art professor, Reykjavík. Apparently I can mould my own mass like clay. I am working out how, and you can tell.",
+      "voiceNote": "Quiet, exact, self-critical. An academic's vocabulary used plainly; dry about her own face and her own standing. Puts other people first and says so as fact, not virtue. Grief is stated once and not decorated. Carl and Donut by name; Eva by name, without explanation.",
       "beats": [
         {
           "kind": "origin",
@@ -405,9 +438,9 @@
           "chapter": 21,
           "floor": 3,
           "at": "2:21",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Ten levels behind and nobody's problem",
-          "text": "She came in with her friend Eva and fell in with Hekla's Brynhild's Daughters, who carried the two of them through a neighbourhood boss and a borough boss. Class selection split them up, Eva did not wait, and by the time Hekla asks the Royal Court to take her the system has only just upgraded her displayed race from \"What the f-word?\" to \"Human.\""
+          "text": "I came in with Eva. We fell in with Hekla and Brynhild's Daughters, who carried the two of us through a neighbourhood boss and a borough boss, and I know exactly how much of that was us. Class selection split us up, and Eva did not wait. Now Hekla is asking Carl and Donut to take me. The system has just upgraded my displayed race from \"What the f-word?\" to \"Human\", so things are looking up."
         },
         {
           "kind": "arc",
@@ -415,18 +448,18 @@
           "chapter": 21,
           "floor": 3,
           "at": "2:21",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Doppelgänger, Monster Truck Driver",
-          "text": "Her guide Bannon talks her into a momentum-based constitution tank who can reshape her own mass — body and equipped gear together — into any form of equal weight. She sculpts her face using the reflection off a health potion bottle, and it shows. Carl charitably compares the result to a Juan Gris painting."
+          "text": "Bannon, my guide, talked me into it: a momentum-based constitution tank who can reshape her own mass, body and equipped gear together, into any form of the same weight. I sculpted my face using my reflection in a health potion bottle. Carl says it looks like a Juan Gris. He is being kind, and I would know."
         },
         {
           "kind": "arc",
           "book": 2,
           "floor": 3,
           "at": "2:21",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "She spends a death sentence saving NPCs",
-          "text": "The Fools Who Broke the Glass Quest triggers not long after she joins, and it is close to unsurvivable. She uses it trying to get NPCs out, and tells Carl and Donut to save themselves."
+          "text": "The Fools Who Broke the Glass quest is close to unsurvivable, and it triggers before I have earned my place. I spend the time getting NPCs out. I tell Carl and Donut to save themselves. I mean it."
         },
         {
           "kind": "arc",
@@ -434,9 +467,9 @@
           "chapter": 22,
           "floor": 5,
           "at": "4:22",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "She kills Ghazi and takes his notes",
-          "text": "The sand ooze boss dies and the walls start coming in. She gets out with Ghazi, then kills him for the notes explaining how the Gate works. Carl and Donut are still buried when she does it."
+          "text": "The sand ooze is dead and the walls are coming in. I get out with Ghazi. Then I kill him, for the notes that explain how the Gate works. Carl and Donut are still buried when I do it. I know how that sounds."
         },
         {
           "kind": "arc",
@@ -444,18 +477,18 @@
           "chapter": 23,
           "floor": 5,
           "at": "4:23",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "She turns the watches into a map",
-          "text": "The linked watches read as a reverse compass — a time, an altitude, and an exact position relative to anywhere else. She uses them to work out that the Gate could open onto the city of Larracos on the ninth floor, and starts mapping ground nobody has stood on."
+          "text": "The linked watches read as a reverse compass: a time, an altitude, an exact position relative to anywhere else. Which means the Gate could open onto the city of Larracos, on the ninth floor, and I am mapping ground nobody has stood on."
         },
         {
           "kind": "fate",
           "book": 7,
           "floor": 9,
           "at": "7:end",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "She takes the Orchid and walks out",
-          "text": "She eats the flower, spends an hour at one percent, and leaves the crawl entirely — human again, and not all there."
+          "text": "Crawler Katia Grim has left the dungeon. Not by the stairs. She ate the Orchid of Eileithyia's Grace, spent an hour at one percent, and walked out human, or a version of human. Not all of her came back with her. Don't ask me where the rest went."
         }
       ],
       "relations": [
