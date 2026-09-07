@@ -153,6 +153,36 @@ thousand children in her body"* across four steps.
   Gate's operating notes naming the Nothing (4:24), and two book-1 beats naming *Dungeon Crawler
   World* three chapters before the text does.
 
+### Who speaks: three voices, resolved in the build
+
+Character pages are written **in the character's own voice**, as a confessional to camera spoken
+at the moment of the beat. A speaker at `1:7` knows nothing after `1:7`, which is the same
+discipline the gate already demands, so the forward-phrase and forward-reference lints apply
+unchanged and are easier to satisfy, not harder. Writing this way also surfaces beats that quietly
+bundled later chapters into an earlier tag (a 5:1 beat that narrated 5:5); those get split.
+
+`scripts/lib/voice.mjs` decides who speaks and `build-content.mjs` writes the answer into every
+beat, so no view knows the defaults:
+
+| voice | who | default for |
+|---|---|---|
+| `self` | the character, first person, present tense | every character beat and tagline |
+| `system` | the AI, in the mono `*** ... ***` register the seals use | every `fate`; a whole page when a character has too few lines to voice honestly (`"voice": "system"` on the entity) |
+| `narrator` | the wry third person | everything that is not a character |
+
+A `fate` in `self` is a lint error: a dead crawler does not narrate their own death. Every
+speaking character carries a `voiceNote` (register, tics, what they call people, what they never
+say); it is committed as guidance and dropped from the snapshot. Headlines are chrome and stay in
+the narrator's hand.
+
+**Items open on the System's own words.** `description` on an entity is the AI's verbatim text,
+a string or a progressive `{ at, source, text }` list with exactly the tagline rules, shown above
+the usage log with a `Bk b · c` stamp. Quotations skip the forward-phrase heuristic (the book's
+own text says "eventually") and keep the forward-reference check. That is a rule about a category
+of text; the deliberate absence of an exemption list for summaries stands. The Fandom wiki's item
+pages carry these under an `AI Description` heading with chapter citations; quote the description
+itself, short, never the narration around it.
+
 ### Structure leaks, not just prose
 
 A sealed entry used to render its own stamp: `Bk 7 · Fate · Floor 9`. That tells you the
@@ -407,6 +437,7 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |
 | `scripts/lib/lint.mjs` | Every rule that stops the gate leaking |
+| `scripts/lib/voice.mjs` | Who speaks on a beat: self / system / narrator, resolved in the build |
 | `src/components/GateBar.astro` | The position control |
 | `src/pages/entity/[id].astro` | Usage log + arc + connections, each gated |
 
