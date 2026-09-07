@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseAt, describeAt, bookOf, END_OF_BOOK, CHAPTER_STRIDE } from './lib/gate.mjs';
 import { lint } from './lib/lint.mjs';
+import { entityVoice, beatVoice, VOICES } from './lib/voice.mjs';
 
 test('reveal tags parse to a total order', () => {
   assert.equal(parseAt('4'), 4000);
@@ -184,4 +185,107 @@ test('an unset position reveals nothing at all', () => {
 test('choosing book 1 is what unseals book 1', () => {
   assert.ok(frontierOf({ book: 1, chapter: 0 }, 47) >= parseAt('1:end'));
   assert.ok(frontierOf({ book: 0, chapter: 0 }, 47) < parseAt('1:2'));
+});
+
+test('a character speaks for itself once there is a voice sheet; nothing else does', () => {
+  const carl = { id: 'carl', kind: 'character', voiceNote: 'deadpan' };
+  const unwritten = { id: 'zev', kind: 'character' };
+  const dossier = { id: 'quasar', kind: 'character', voice: 'system' };
+  const gate = { id: 'gate', kind: 'item' };
+  assert.equal(entityVoice(carl), 'self');
+  assert.equal(entityVoice(unwritten), 'narrator');
+  assert.equal(entityVoice(dossier), 'system');
+  assert.equal(entityVoice(gate), 'narrator');
+  assert.deepEqual([...VOICES].sort(), ['narrator', 'self', 'system']);
+});
+
+test('a fate is reported by the dungeon, everything else follows the entity', () => {
+  const carl = { id: 'carl', kind: 'character', voiceNote: 'deadpan' };
+  const unwritten = { id: 'zev', kind: 'character' };
+  const gate = { id: 'gate', kind: 'item' };
+  assert.equal(beatVoice(carl, { kind: 'arc' }), 'self');
+  assert.equal(beatVoice(carl, { kind: 'fate' }), 'system');
+  assert.equal(beatVoice(carl, { kind: 'arc', voice: 'narrator' }), 'narrator');
+  // Until someone has written how a character speaks, the narrator keeps the
+  // whole page, fate included: a page should not change register halfway.
+  assert.equal(beatVoice(unwritten, { kind: 'arc' }), 'narrator');
+  assert.equal(beatVoice(unwritten, { kind: 'fate' }), 'narrator');
+  assert.equal(beatVoice(gate, { kind: 'use' }), 'narrator');
+  assert.equal(beatVoice(gate, { kind: 'fate' }), 'narrator');
+});
+
+const one = { id: 1, title: 'One', chapters: 47 };
+const mk = (over) => ({ id: 'x', kind: 'item', name: 'Thing', role: 'r', tagline: 't', revealedAt: '1:5', beats: [], relations: [], ...over });
+
+test('only a character may speak for itself', () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ voice: 'self' }),
+    mk({ id: 'y', beats: [{ kind: 'use', book: 1, at: '1:5', voice: 'self', headline: 'h', text: '' }] }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('only a character')).length, 2);
+});
+
+test("a fate in the character's own voice is an error", () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ kind: 'character', voiceNote: 'n', beats: [
+      { kind: 'fate', book: 1, at: '1:20', voice: 'self', headline: 'h', text: '' },
+      { kind: 'fate', book: 1, at: '1:21', headline: 'default is fine', text: '' },
+    ] }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('a fate')).length, 1);
+});
+
+test('an unknown voice is an error at either level', () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ kind: 'character', voice: 'shouting', voiceNote: 'n' }),
+    mk({ id: 'y', kind: 'character', voice: 'narrator', voiceNote: 'n' }),
+    mk({ id: 'z', beats: [{ kind: 'use', book: 1, at: '1:5', voice: 'loud', headline: 'h', text: '' }] }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('voice')).length, 3);
+});
+
+test('a speaking character without a voice note is a warning', () => {
+  const { errors, warnings } = lint({ books: [one], floors: [], entities: [
+    mk({ kind: 'character' }),
+    mk({ id: 'y', kind: 'character', voice: 'system' }),
+  ] });
+  assert.equal(errors.length, 0);
+  assert.equal(warnings.filter(w => w.includes('voice note')).length, 1);
+});
+
+test('a quoted description may say "later"; a summary may not; neither may name the unmet', () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ description: 'Feed it to your pet. Later you will wish you had not.' }),
+    mk({ id: 'y', tagline: 'Later it all goes wrong.' }),
+    mk({ id: 'z', description: 'Katia will love this.' }),
+    mk({ id: 'katia', kind: 'character', name: 'Katia', revealedAt: '1:30', voiceNote: 'n' }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('entity x')).length, 0);
+  assert.ok(errors.some(e => e.includes('entity y') && /later/i.test(e)));
+  assert.ok(errors.some(e => e.includes('entity z') && e.includes('Katia')));
+});
+
+test('descriptions are a list in reading order, floored to the entity', () => {
+  const { errors, warnings } = lint({ books: [one], floors: [], entities: [
+    mk({ description: [{ at: '1:5', text: 'a' }, { at: '1:4', text: 'b' }] }),
+    mk({ id: 'y', description: [{ at: '1:2', text: 'early' }] }),
+  ] });
+  assert.ok(errors.some(e => e.includes('entity x description 2')));
+  assert.ok(warnings.some(w => w.includes('y: description 1')));
+});
+
+test("a floor's name may not appear before the floor does", () => {
+  const base = {
+    books: [{ id: 4, title: 'Four', chapters: 34 }, { id: 5, title: 'Five', chapters: 77 }],
+    floors: [{ id: 7, name: 'The Great Race', revealedAt: '5:end', recapAt: '5:end', premise: 'p' }],
+  };
+  const mkE = (text) => ([{
+    id: 'carl', kind: 'character', name: 'Carl', role: 'r', tagline: 't', revealedAt: '4',
+    voiceNote: 'n', relations: [],
+    beats: [{ kind: 'arc', book: 4, at: '4', headline: 'h', text, confidence: 'draft' }],
+  }]);
+  const leak = lint({ ...base, entities: mkE('They are already talking about the Great Race.') });
+  assert.ok(leak.errors.some(e => e.includes('The Great Race')), 'a floor named early must fail');
+  const fine = lint({ ...base, entities: mkE('They are already talking about what comes next.') });
+  assert.equal(fine.errors.length, 0);
 });

@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { parseAt } from './lib/gate.mjs';
 import { lint } from './lib/lint.mjs';
+import { entityVoice, beatVoice } from './lib/voice.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = p => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -63,9 +64,20 @@ for (const e of entities) {
   ).map(t => ({ at: t.at, sortKey: Math.max(parseAt(t.at), entityAt), text: t.text }))
    .sort((a, b) => a.sortKey - b.sortKey);
 
+  /* The System's own words, quoted. Same shape and same rule as taglines: a
+     string is safe from revealedAt, a list supersedes as the reader advances,
+     and every entry is floored to the entity's own reveal point. */
+  const descriptions = (e.description == null ? []
+    : typeof e.description === 'string' ? [{ at: e.revealedAt, text: e.description }]
+    : e.description
+  ).map(d => ({ at: d.at, source: d.source ?? d.at, sortKey: Math.max(parseAt(d.at), entityAt), text: d.text }))
+   .sort((a, b) => a.sortKey - b.sortKey);
+
   resolvedEntities.push({
     id: e.id, kind: e.kind, name: e.name, aka: e.aka ?? [],
     role: e.role, taglines, revealedAt: e.revealedAt, sort: e.sort ?? 0,
+    // voiceNote stays in the curation file: it is guidance, not content.
+    voice: entityVoice(e), descriptions,
   });
 
   for (const b of e.beats ?? []) {
@@ -75,6 +87,8 @@ for (const e of entities) {
       // Gate inheritance: a beat can never surface before its own entity.
       sortKey: Math.max(parseAt(b.at), entityAt),
       headline: b.headline, text: b.text, confidence: b.confidence ?? 'draft',
+      // Who speaks, already decided, so no view has to know the defaults.
+      voice: beatVoice(e, b),
     });
   }
 

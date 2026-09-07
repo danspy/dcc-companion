@@ -4,7 +4,7 @@ import Sealed from '../../components/Sealed.astro';
 import { reveals } from '../../lib/spoiler';
 import {
   getEntity, getBeats, getRelations, getEntities, getFloors,
-  KIND_LABELS, readGate, taglineFor,
+  KIND_LABELS, readGate, taglineFor, descriptionFor,
 } from '../../lib/content';
 
 const { id } = Astro.params;
@@ -46,18 +46,35 @@ const storyLog = split(story);
 
 const visibleRelations = relations.filter(r => gate.frontier >= r.sortKey);
 const hiddenRelations = relations.length - visibleRelations.length;
+
+const description = descriptionFor(entity, gate);
+/* Source tags read "1:5"; the stamp shows "Bk 1 · 5", or just the book for an
+   end-of-book tag. */
+const stampOf = (tag: string) => {
+  const [book, chapter] = tag.split(':');
+  return chapter && chapter !== 'end' ? `Bk ${book} · ${chapter}` : `Bk ${book}`;
+};
 ---
 <Layout title={entity.name}>
   <article class="wrap">
     <header class="hero">
       <p class="eyebrow">{KIND_LABELS[entity.kind]} · {entity.role}</p>
       <h1>{entity.name}</h1>
-      <p class="tagline">{taglineFor(entity, gate)}</p>
+      <p class={`tagline${entity.voice === 'self' ? ' spoken' : ''}`}>{taglineFor(entity, gate)}</p>
       {aka.length > 0 && <p class="aka">Also known as {aka.join(', ')}</p>}
     </header>
 
     <div class="cols">
       <div class="main">
+        {description && (
+          <section>
+            <div class="sys">
+              <b>*** Description ***</b>{description.text}
+              <span class="src">{stampOf(description.source)}</span>
+            </div>
+          </section>
+        )}
+
         {uses.length > 0 && (
           <section>
             <h2>Where it's used</h2>
@@ -75,8 +92,12 @@ const hiddenRelations = relations.length - visibleRelations.length;
                       )}
                     </div>
                     <div class="entry-body">
-                      <h3>{b.headline}</h3>
-                      <p>{b.text}</p>
+                      {b.voice === 'system'
+                        ? <div class="sys"><b>*** {b.headline} ***</b>{b.text}</div>
+                        : <>
+                            <h3>{b.headline}</h3>
+                            <p class={b.voice === 'self' ? 'spoken' : undefined}>{b.text}</p>
+                          </>}
                       {b.confidence === 'draft' && <span class="draft">unverified</span>}
                     </div>
                   </li>
@@ -109,8 +130,12 @@ const hiddenRelations = relations.length - visibleRelations.length;
                       )}
                     </div>
                     <div class="entry-body">
-                      <h3>{b.headline}</h3>
-                      <p>{b.text}</p>
+                      {b.voice === 'system'
+                        ? <div class="sys"><b>*** {b.headline} ***</b>{b.text}</div>
+                        : <>
+                            <h3>{b.headline}</h3>
+                            <p class={b.voice === 'self' ? 'spoken' : undefined}>{b.text}</p>
+                          </>}
                       {b.confidence === 'draft' && <span class="draft">unverified</span>}
                     </div>
                   </li>
