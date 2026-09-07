@@ -74,7 +74,12 @@ resolvedBeats.sort((a, b) => a.sortKey - b.sortKey || a.entityId.localeCompare(b
 const snapshot = {
   generatedAt: new Date().toISOString(),
   books,
-  floors: floors.map(f => ({ ...f, sortKey: parseAt(f.revealedAt) })),
+  floors: floors.map(f => ({
+    ...f,
+    sortKey: parseAt(f.revealedAt),
+    // A recap can never surface before its own floor does.
+    recapSortKey: Math.max(parseAt(f.recapAt), parseAt(f.revealedAt)),
+  })),
   entities: resolvedEntities,
   beats: resolvedBeats,
   relations: resolvedRelations,

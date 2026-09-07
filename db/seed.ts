@@ -13,7 +13,8 @@ export default async function () {
   await db.insert(Floor).values(
     snapshot.floors.map((f: any) => ({
       id: f.id, name: f.name, book: f.book, bookSpan: f.bookSpan ?? null,
-      accent: f.accent, revealedAt: f.revealedAt, summary: f.summary,
+      accent: f.accent, revealedAt: f.revealedAt, recapAt: f.recapAt,
+      recapSortKey: f.recapSortKey, premise: f.premise, recap: f.recap,
     })),
   );
 

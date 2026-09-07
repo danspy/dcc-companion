@@ -144,3 +144,25 @@ test('naming a chapter seals what comes after it', () => {
 test('the last chapter counts as finished', () => {
   assert.equal(frontierOf({ book: 2, chapter: 25 }, 25), frontierOf({ book: 2, chapter: 0 }, 25));
 });
+
+test("a floor's recap may not unseal before the floor is reached", () => {
+  const { errors } = lint({
+    books: [{ id: 7, title: 'Seven', chapters: 87 }],
+    floors: [{ id: 9, revealedAt: '7:1', recapAt: '7:1', premise: 'p' },
+             { id: 10, revealedAt: '8:1', recapAt: '7:end', premise: 'p' }],
+    entities: [],
+  });
+  // Reaching a floor and recapping it at the same point is allowed (a floor
+  // that resolves immediately); recapping it *before* arrival is not.
+  assert.ok(errors.some(e => e.includes('before the floor itself')));
+  assert.equal(errors.filter(e => e.includes('floor 9: recap')).length, 0);
+});
+
+test('a floor with no premise fails the build', () => {
+  const { errors } = lint({
+    books: [{ id: 7, title: 'Seven', chapters: 87 }],
+    floors: [{ id: 9, revealedAt: '7:1', recapAt: '7:end' }],
+    entities: [],
+  });
+  assert.ok(errors.some(e => e.includes('no premise')));
+});

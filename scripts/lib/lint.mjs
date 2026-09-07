@@ -26,6 +26,15 @@ export function lint({ books, floors, entities }) {
     if (f !== null && !bookIds.has(bookOf(f))) {
       errors.push(`floor ${floor.id}: reveals in book ${bookOf(f)}, which is not published`);
     }
+    /* The recap is the account of what happened on a floor, which is a
+       whole-book spoiler if it unseals the moment the crawlers arrive. It has
+       to be gated at least as late as the floor itself, and in practice at the
+       point they leave it. */
+    const r = at(floor.recapAt, `floor ${floor.id} recap`);
+    if (r !== null && f !== null && r < f) {
+      errors.push(`floor ${floor.id}: recap unseals at "${floor.recapAt}", before the floor itself ("${floor.revealedAt}")`);
+    }
+    if (!floor.premise) errors.push(`floor ${floor.id}: no premise — nothing safe to show on arrival`);
   }
 
   for (const e of entities) {

@@ -26,8 +26,15 @@ const Floor = defineTable({
     book: column.number(),
     bookSpan: column.text({ optional: true }),        // "5–6" when it straddles
     accent: column.text(),                            // css var name
+    /* A floor has two reveal points. `revealedAt` is where the crawlers set
+       foot on it, and unseals only the blurb-safe `premise`. `recapAt` is where
+       they leave it, and unseals the `recap` — the account of what actually
+       happened, which is a whole-book spoiler if shown on arrival. */
     revealedAt: column.text(),
-    summary: column.text(),
+    recapAt: column.text(),
+    recapSortKey: column.number(),
+    premise: column.text(),
+    recap: column.text(),
   },
 });
 

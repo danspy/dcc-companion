@@ -61,6 +61,38 @@ Masquerade* and resolves at the start of *The Eye of the Bedlam Bride*. A floor-
 would therefore leak. Floors are how the story is shaped and how the reader browses it; the
 book is what a reader knows they have finished. Do not move the gate onto floors.
 
+### A floor has two reveal points, not one
+
+This is the trap the design walked into once already. A floor's **recap** — the account of what
+actually happened on it — is a whole-book spoiler, so tagging it at the book's start hands a
+reader the end of the book they have just started. Floor 9 tagged `"7"` showed Katia leaving, the
+tenth faction and the Larracos flood to someone one chapter into *This Inevitable Ruin*.
+
+So each floor carries:
+
+| field | unseals at | contains |
+|---|---|---|
+| `premise` | `revealedAt` — where the crawlers **arrive** | back-cover level: what this floor is |
+| `recap` | `recapAt` — where they **leave** | what happened, who died, what changed |
+
+The boundaries come from the chapter summaries and are exact:
+
+| Floor | Arrive | Leave | | Floor | Arrive | Leave |
+|---|---|---|---|---|---|---|
+| 1 | 1:2 | 1:29 | | 7 | 5:end | 6:1 |
+| 2 | 1:30 | 1:end | | 8 | 6:1 | 6:end |
+| 3 | 2:2 | 2:25 | | 9 | 7:1 | 7:end |
+| 4 | 3 | 3:end | | 10 | 8:1 | 8:87 |
+| 5 | 4 | 4:end | | 11 | 8:88 | 8:end |
+| 6 | 5:1 | 5:end | | | | |
+
+Floor 11 starting at **book 8 chapter 88** is why its name stays redacted for the first 87
+chapters of that book. The lint fails the build on a recap gated before its floor, and on a floor
+with no premise at all.
+
+**The general rule: any field that summarises a span must be gated at the end of that span, not
+the start.** If you add per-floor bosses, quests or events, they need the same treatment.
+
 ### Three states, and the middle one is the point
 
 | `spoilers` | Progress | Behaviour |

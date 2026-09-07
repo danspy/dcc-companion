@@ -46,6 +46,7 @@ const bookById = new Map(books.map(b => [b.id, b]));
 
     {floors.map(floor => {
       const open = reveals(gate, floor.revealedAt);
+      const recapOpen = gate.frontier >= floor.recapSortKey;
       const book = bookById.get(floor.book);
       return (
         <article class="slab floor">
@@ -61,7 +62,14 @@ const bookById = new Map(books.map(b => [b.id, b]));
             </div>
           </div>
           <div class="floor-body">
-            {open ? <div class="prose"><p>{floor.summary}</p></div> : <Sealed at={floor.revealedAt} />}
+            {open
+              ? <div class="prose">
+                  <p class="premise">{floor.premise}</p>
+                  {recapOpen
+                    ? <p>{floor.recap}</p>
+                    : <Sealed at={floor.recapSortKey} compact />}
+                </div>
+              : <Sealed at={floor.revealedAt} />}
           </div>
         </article>
       );
@@ -89,6 +97,10 @@ const bookById = new Map(books.map(b => [b.id, b]));
   .floor-titles h3 { font-size: 26px; font-weight: 700; color: #fff; }
   .eyebrow b { color: var(--color-grey-200); font-weight: 600; }
   .floor-body { padding: 22px 18px 24px; }
+  /* The premise is what the back cover would tell you; the recap below it is
+     what actually happened, and unseals only once the floor is behind you. */
+  .premise { color: var(--color-grey-200); }
+  .prose .premise + * { margin-top: 15px; }
   @media (max-width: 560px) {
     .floorno { font-size: 34px; min-width: 64px; padding: 12px 10px; }
     .floor-titles h3 { font-size: 21px; }
