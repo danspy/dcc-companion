@@ -781,6 +781,739 @@
           "at": "5:66"
         }
       ]
+    },
+    {
+      "id": "faction-wars",
+      "kind": "mechanic",
+      "name": "Faction Wars",
+      "aka": [],
+      "role": "Floor event · ninth floor",
+      "revealedAt": "5:77",
+      "sort": 40,
+      "tagline": [
+        {
+          "at": "5:77",
+          "text": "Nine armies, bought and paid for by people who will never stand in one of them, fight for the castle at the bottom of the ninth floor's funnel city. Crawlers are meant to keep their heads down and let it pass over."
+        },
+        {
+          "at": "7:1",
+          "text": "Ten teams, the sponsors' safety protections voted away, and a crawler army holding one of the slots. Faction Wars with the crawlers inside it rather than beside it."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 77,
+          "floor": 6,
+          "at": "5:77",
+          "confidence": "verified",
+          "headline": "Two of the slots change hands",
+          "text": "Carl and Donut are notified that their team is in. Donut's fan club and Princess D'Nadia between them secured two of the nine spots, and no crawler team has ever held one. Carl spends his airtime telling the watching galaxy that the teams can vote the ninth floor's safety protocols off, and telling anyone out there with a say in what their own government does to use it. The feed is cut."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 21,
+          "floor": 8,
+          "at": "6:21",
+          "confidence": "verified",
+          "headline": "The planning meetings",
+          "text": "Warlords and their representatives meet in a boardroom months before the floor opens: introductions, precedence, and action items filed into a queue for a vote. Zev advises against Odette as the team's adjutant, because of what sits between Odette and Mordecai. Juice Box arrives wearing somebody else's face and kills one of the representatives. She is an NPC on nobody's team, so nothing in the rules covers what she just did."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 22,
+          "floor": 8,
+          "at": "6:22",
+          "confidence": "verified",
+          "headline": "A tenth team",
+          "text": "Juice Box has Carl file the item she came for: seat the floor's own NPCs as a team of their own, with the same protections the nine already carry. Rishi of the Blood Sultanate offers a compromise, protections for the NPCs and nothing further, and warns that the Sultanate will answer harshly if the killing at these meetings continues."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "The audience decides",
+          "text": "About to be pulled into a stairwell and out of contact, Carl and Donut spend an emergency action item to hand every unresolved vote to the viewers. The viewers strip the safety protections from the faction sponsors, seat the tenth team, loosen the physics on long-range artillery, raise the ceiling over the field and widen it to hold an unprecedented number of surviving crawlers."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "The rules, read out on arrival",
+          "text": "Ten teams. Nine attacking, spread around the city like slices of a pie, and the NPCs defending it from inside. Take the castle at the centre. Sixty hours of ceasefire first, in which a crawler may enlist with any army that will have them or run for the woods, and after which anyone still loose can be compelled into a uniform. Two hundred and ninety-three stairwell chambers sit seeded across the floor, and not one opens until Faction Wars is won or thirty hours remain on the clock."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "owned-by",
+          "at": "5:77"
+        },
+        {
+          "to": "dungeon-crawler-world",
+          "kind": "subject-of",
+          "at": "5:77"
+        },
+        {
+          "to": "blood-sultanate",
+          "kind": "member",
+          "at": "5:77"
+        },
+        {
+          "to": "juice-box",
+          "kind": "broke",
+          "at": "6:22"
+        },
+        {
+          "to": "no-respawns",
+          "kind": "concerns",
+          "at": "7:1"
+        }
+      ]
+    },
+    {
+      "id": "protections",
+      "kind": "mechanic",
+      "name": "Protections",
+      "aka": [],
+      "role": "Rules",
+      "revealedAt": "5:77",
+      "sort": 41,
+      "tagline": "The System keeps part of a covered person's health in reserve and lifts them out of the world before it runs out. They feel every bit of the pain and none of the consequence.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "floor": 6,
+          "at": "5:77",
+          "confidence": "draft",
+          "headline": "Who is covered",
+          "text": "The show's employees, its tourists and a certain grade of NPC. Being cut down while covered is not dying; it is being lifted off the board and set down somewhere expensive. Borant declines to switch the coverage on for the earliest floors as a saving, which is why a liaison walks those floors in a padded suit."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 77,
+          "floor": 6,
+          "at": "5:77",
+          "confidence": "verified",
+          "headline": "Carl puts it to the audience",
+          "text": "On air, in the last minutes before production cuts the feed, he tells the watching galaxy that the teams on the ninth floor can vote the safety protocols off, and that anyone with a say in what their government does should go and use it."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 22,
+          "floor": 8,
+          "at": "6:22",
+          "confidence": "verified",
+          "headline": "The NPCs ask for the same",
+          "text": "The action item Juice Box has Carl file asks for a tenth team of NPCs seated with the coverage the nine already carry. Rishi of the Blood Sultanate offers a trade: give the NPCs the coverage, give them nothing else."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 35,
+          "floor": 8,
+          "at": "6:35",
+          "confidence": "draft",
+          "headline": "One post keeps it either way",
+          "text": "Whatever the vote does to the sponsors, the adjutants keep their coverage. It is a good part of what makes the post attractive to somebody famous who fancies a season on a battlefield."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "Voted away",
+          "text": "The viewers take the safety protections off the faction sponsors. Every one of them who sets foot on the ninth floor now stands to lose exactly what the crawlers stand to lose."
+        }
+      ],
+      "relations": [
+        {
+          "to": "borant-corporation",
+          "kind": "owned-by",
+          "at": "5:77"
+        },
+        {
+          "to": "system-ai",
+          "kind": "administered-by",
+          "at": "5:77"
+        },
+        {
+          "to": "no-respawns",
+          "kind": "concerns",
+          "at": "7:1"
+        }
+      ]
+    },
+    {
+      "id": "adjutant",
+      "kind": "mechanic",
+      "name": "The Adjutant",
+      "aka": [
+        "adjutant"
+      ],
+      "role": "Referee · faction teams",
+      "revealedAt": "6:17",
+      "sort": 42,
+      "tagline": "A neutral referee attached to each team on the ninth floor. Invulnerable, usually famous, and mostly there to talk to camera.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 17,
+          "floor": 8,
+          "at": "6:17",
+          "confidence": "verified",
+          "headline": "Take Odette's offer",
+          "text": "Eileithyia grants the party a floor boon, hands them a cover quest, and tells Carl to accept Odette's offer to sit as their team's adjutant. In exchange she will see that he has the votes he needs on the ninth floor and that the business with the Crown of the Sepsis Whore is put right. Nobody is to be told, Donut and Mordecai included."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 35,
+          "floor": 8,
+          "at": "6:35",
+          "confidence": "verified",
+          "headline": "She does not ask",
+          "text": "Carl and Donut go on Odette's show expecting her to raise it. She talks instead about D'Nadia trying to have their team legislated out of the planning meetings, and she never once mentions the post."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 36,
+          "floor": 8,
+          "at": "6:36",
+          "confidence": "verified",
+          "headline": "Three names, and a baroness",
+          "text": "Odette announces that she is sponsoring a deity this season instead. She offers three candidates for the team's post, and Carl picks Baroness Victory."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 13,
+          "floor": 9,
+          "at": "7:13",
+          "confidence": "verified",
+          "headline": "What one is actually for",
+          "text": "An elite walks into the team's flag room during the ceasefire, pressed into service as a bomb by a production company that wants Carl off the board. Baroness Victory puts her down before the satchels can go off. The office is classed as a non-combatant observer, which makes the moment a curiosity for the rule book as much as a rescue."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 19,
+          "floor": 9,
+          "at": "7:19",
+          "confidence": "verified",
+          "headline": "A foul, and a ceasefire cut short",
+          "text": "Panford, the Lemig Sortion's adjutant, stands up and explains to the council what his own team did: an attempt to pull Carl bodily to their base while Mordecai was working to expel what rides inside him. The Sortion is penalised for cheating and the ceasefire is cut short."
+        }
+      ],
+      "relations": [
+        {
+          "to": "odette",
+          "kind": "concerns",
+          "at": "6:35"
+        },
+        {
+          "to": "system-ai",
+          "kind": "administered-by",
+          "at": "6:17"
+        }
+      ]
+    },
+    {
+      "id": "feral",
+      "kind": "mechanic",
+      "name": "Feral",
+      "aka": [],
+      "role": "Status effect",
+      "revealedAt": "4:9",
+      "sort": 43,
+      "tagline": [
+        {
+          "at": "4:9",
+          "text": "A word the System puts in front of a name when whatever it is has been somewhere it should not have been, and came back."
+        },
+        {
+          "at": "4:27",
+          "text": "Feral is the System's word for anything the Nothing has had its hands on. Whatever comes back out of that place comes back mad, and stays mad."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "floor": 5,
+          "at": "4:27",
+          "confidence": "draft",
+          "headline": "What the word means",
+          "text": "The keyword marks a thing that has been inside the Nothing. The old gods went in at the making of the world and have had every century since to come apart. Duration is not required: standing too near an open portal will do it, and a weak constitution takes the stain fastest. There is no cure for it."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 27,
+          "floor": 5,
+          "at": "4:27",
+          "confidence": "verified",
+          "headline": "One gets out over the water quadrant",
+          "text": "Carl steps himself, Katia and Tran out of Lusca's tomb through the Gate, and the Gate shuts behind them. Something comes the other way on the opening side: a god, feral, loose in a sealed bubble with a town in it. The true pantheon takes the escape personally enough to send deities rampaging across the popped bubbles."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 34,
+          "floor": 5,
+          "at": "4:34",
+          "confidence": "verified",
+          "headline": "Slit comes for Samantha",
+          "text": "A feral demon walks into town hunting the half of a goddess who nearly climbed out of the same place he did. They open the safe room and roll her outside to meet it: one head against one demon. She calls for her mother, and her mother comes."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 32,
+          "floor": 8,
+          "at": "6:32",
+          "confidence": "verified",
+          "headline": "Minge, off the casino floor",
+          "text": "One of the ways into the Nothing sits in the Desperado Club casino, dressed up as a losing space on a wheel. Samantha overplays a distraction, goes in among the tables, and draws Minge out through it: another of the minor feral demons, in a room full of people who came to gamble."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-nothing",
+          "kind": "concerns",
+          "at": "4:27"
+        },
+        {
+          "to": "gate-of-the-feral-gods",
+          "kind": "unlocks",
+          "at": "4:27"
+        },
+        {
+          "to": "samantha",
+          "kind": "travelled-through",
+          "at": "4:27"
+        },
+        {
+          "to": "desperado-club",
+          "kind": "found-in",
+          "at": "6:32"
+        }
+      ]
+    },
+    {
+      "id": "chowder-war",
+      "kind": "mechanic",
+      "name": "The Chowder War",
+      "aka": [],
+      "role": "Quest · Floor 8",
+      "revealedAt": "6:6",
+      "sort": 44,
+      "tagline": "Land crabs spawn in the monk seals' holy water once a year. The System would like the crawlers to pick a side.",
+      "description": [
+        {
+          "at": "6:6",
+          "source": "6:6",
+          "text": "New Quest. The Chowder War. Oh, you're getting involved whether you like it or not. The Monk Seals. The Red Maníseros Land Crabs. War is brewing, as it often does in these parts. Every season, the land crabs emerge from their forests to attend their sex parties in the oceans surrounding these lands. The Monk Seals hold the ocean sacred, and the very act of spilling so much crab chowder into their holy waters is considered a sacrilege most foul... Choose a side. Put an end to this conflict, one way or another. Reward: You will receive a Platinum Quest Box."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 6,
+          "floor": 8,
+          "at": "6:6",
+          "confidence": "verified",
+          "headline": "Out hunting monk seals, home with a war",
+          "text": "The party goes looking for monk seals to fill its squad slots and picks up the quest instead. Two populations, one coastline, one annual event that neither side can negotiate around, and a platinum box waiting for whoever settles it."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 24,
+          "floor": 8,
+          "at": "6:24",
+          "confidence": "verified",
+          "headline": "The crabs go early and go south",
+          "text": "The migration opens as a sneak attack. Rather than spread along the coast the crabs mass where the seals are thinnest and run for the water together. Carl and Donut go down to flag one of them."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 25,
+          "floor": 8,
+          "at": "6:25",
+          "confidence": "verified",
+          "headline": "Sister Ines takes the other side",
+          "text": "She reaches an agreement with the Monk Seal Abbot and warns him what the crabs are doing. That turns a slaughter into a battle, and puts two crawlers at opposite ends of the same quest."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 54,
+          "floor": 8,
+          "at": "6:54",
+          "confidence": "verified",
+          "headline": "Failed, and something worse announced",
+          "text": "Samantha scouts ahead and finds Sister Ines on a giant snake, ringed by charmed crabs and seals with nothing behind their eyes. The quest fails. Hell Comes to Crawler Town is announced in its place, and the sheer count of corpses on the floor props a door open onto Sheol."
+        }
+      ],
+      "relations": [
+        {
+          "to": "sister-ines",
+          "kind": "concerns",
+          "at": "6:25"
+        },
+        {
+          "to": "samantha",
+          "kind": "used-by",
+          "at": "6:54"
+        },
+        {
+          "to": "demon-eviction",
+          "kind": "launches",
+          "at": "6:61"
+        }
+      ]
+    },
+    {
+      "id": "recital-quest",
+      "kind": "mechanic",
+      "name": "The Recital",
+      "aka": [],
+      "role": "Quest · Floor 6",
+      "revealedAt": "5:11",
+      "sort": 45,
+      "tagline": "Something is driving the dinosaurs at Point Mongo's fences. Find out what they want, or exterminate them.",
+      "description": [
+        {
+          "at": "5:11",
+          "source": "5:11",
+          "text": "New Quest! The Recital. Dinosaur attacks are becoming more and more of a problem in the large settlement of Point Mongo. It started small. A chicken here. An Ursine there. People didn't care so much at first since they were mostly picking off the annoying people. But the attacks are getting worse. The dinosaurs probing the town's defenses are getting bigger... Exterminate the threat. Or, find out what they want, and then give it to them. I'll leave it up to you. Reward: You will receive a Gold Quest Box! You will also receive a free town upgrade!"
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 11,
+          "floor": 6,
+          "at": "5:11",
+          "confidence": "verified",
+          "headline": "A town, newly named, with a dinosaur problem",
+          "text": "Donut renames the settlement Point Mongo and the quest arrives on the same day. Mongo takes her off into the jungle on his back and finds the pack: all female, all mongoliensis, headed by one called Kiwi. He does not come home alone."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 28,
+          "floor": 6,
+          "at": "5:28",
+          "confidence": "verified",
+          "headline": "A name for the thing at the fences",
+          "text": "Samantha's reconnaissance across the water finds a whole team of crawlers dead on the far shore, and the quest updates with the culprit: Big Tina, the dinosaur behind the raids on Point Mongo."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 75,
+          "floor": 6,
+          "at": "5:75",
+          "confidence": "verified",
+          "headline": "It was never about the town",
+          "text": "Donut spends an I Take It All Back potion on Kiwi and turns her back into an Ursine, and Tina recognises her mother. The raids were a daughter looking for a parent the ursines lost when Scolopendra came through. The quest closes on that."
+        }
+      ],
+      "relations": [
+        {
+          "to": "mongo",
+          "kind": "concerns",
+          "at": "5:11"
+        },
+        {
+          "to": "princess-donut",
+          "kind": "resolves",
+          "at": "5:75"
+        },
+        {
+          "to": "scolopendra",
+          "kind": "concerns",
+          "at": "5:75"
+        }
+      ]
+    },
+    {
+      "id": "crawlcon",
+      "kind": "mechanic",
+      "name": "CrawlCon",
+      "aka": [],
+      "role": "Fan convention",
+      "revealedAt": "5:21",
+      "sort": 46,
+      "tagline": "The fan convention, held once every other season. Thousands attend in the flesh, billions attend as projections, and this season a live crawler is on the programme.",
+      "description": [
+        {
+          "at": "5:21",
+          "source": "5:21",
+          "text": "Thanks to your fans, you've been added to the CrawlCon roster! You will attend three events! Your presence at the con will be virtual. Please see your outreach associate for details on your schedule."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "floor": 6,
+          "at": "5:21",
+          "confidence": "draft",
+          "headline": "What it is",
+          "text": "Panels, autograph tables, historians, retired crawlers, old game guides and a children's art contest, held once every other season at a venue somewhere in the inner system. A projected guest can sign a physical poster, because the pen moves at both ends. No active crawler has been on the roster in more than a century."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 21,
+          "floor": 6,
+          "at": "5:21",
+          "confidence": "verified",
+          "headline": "Carl gets a booth",
+          "text": "Word reaches him on the sixth floor: his fans have voted him onto the roster, and attendance is not a request."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 31,
+          "floor": 6,
+          "at": "5:31",
+          "confidence": "verified",
+          "headline": "Judging children's drawings",
+          "text": "The first event is a juvenile quickdraw contest, scored out of thirty. Between rounds he learns who is moderating his panel: the mother of a hunter he put down on this floor."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 33,
+          "floor": 6,
+          "at": "5:33",
+          "confidence": "verified",
+          "headline": "The panel goes the way it was booked to go",
+          "text": "Dosed by his own guards into losing his inhibitions, Carl picks a fight with the moderator on stage and asks the room for the best way to get to her surviving daughter. She smashes the table and walks out. A hooded woman at the back stops her cutting him off first, then reveals herself as one of his sponsors and leaves."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 41,
+          "floor": 6,
+          "at": "5:41",
+          "confidence": "verified",
+          "headline": "Autographs, and a new sponsor",
+          "text": "Carl and the Popov brothers sign for a queue of fans, a good many of them dressed as him in heart-print boxers and no shoes. His replacement sponsor is announced live at the table: the Plenty."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "concerns",
+          "at": "5:21"
+        },
+        {
+          "to": "dungeon-crawler-world",
+          "kind": "subject-of",
+          "at": "5:21"
+        },
+        {
+          "to": "zev",
+          "kind": "managed-by",
+          "at": "5:30"
+        }
+      ]
+    },
+    {
+      "id": "guilds",
+      "kind": "mechanic",
+      "name": "The Guild System",
+      "aka": [
+        "Guilds"
+      ],
+      "role": "Rules",
+      "revealedAt": "5:8",
+      "sort": 47,
+      "tagline": "Buy a charter and five parties can share one room, one set of upgrades and, for a fee, their experience. Allies stop having to be party members.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 8,
+          "floor": 6,
+          "at": "5:8",
+          "confidence": "verified",
+          "headline": "Announced on the recap",
+          "text": "The recap carries the news that the guild system is going live. Crawlers can build alliances larger than a party without having to sit inside one together."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "floor": 6,
+          "at": "5:8",
+          "confidence": "draft",
+          "headline": "What a charter costs",
+          "text": "A guild charter runs upward of five hundred thousand gold from a bopca protector. A level-one guild holds five parties or individuals, provided each has one member with a personal space of their own, and a Guild Common Area appears in every one of those spaces. Private and party rooms stay shut. Environmental upgrades can be licensed across the membership for a small fee, and shared experience can be bought outright."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 11,
+          "floor": 6,
+          "at": "5:11",
+          "confidence": "verified",
+          "headline": "Katia wants one of their own",
+          "text": "She and Carl sit down and talk about starting a guild of their own."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 21,
+          "floor": 6,
+          "at": "5:21",
+          "confidence": "verified",
+          "headline": "Safehome Yolanda",
+          "text": "The party joins an existing guild on the same day Katia finally walks out of the party. She does not go far. The charter is what keeps her within reach of people she is no longer travelling with."
+        }
+      ],
+      "relations": [
+        {
+          "to": "personal-spaces",
+          "kind": "concerns",
+          "at": "5:8"
+        },
+        {
+          "to": "recap-episodes",
+          "kind": "subject-of",
+          "at": "5:8"
+        },
+        {
+          "to": "katia",
+          "kind": "used-by",
+          "at": "5:21"
+        }
+      ]
+    },
+    {
+      "id": "vengeance-of-the-daughter",
+      "kind": "mechanic",
+      "name": "The Vengeance of the Daughter",
+      "aka": [],
+      "role": "Broadcast",
+      "revealedAt": "2:11",
+      "sort": 48,
+      "tagline": [
+        {
+          "at": "2:11",
+          "text": "A Syndicate drama serial shot inside the dungeon. A circus, a murdered mother, an exiled tsarina, and a guest slot with Carl's name on it."
+        },
+        {
+          "at": "5:73",
+          "text": "The grief is real and the schedule is not. Someone outside the floor decides when she mourns, and whether it rates."
+        },
+        {
+          "at": "7:1",
+          "text": "Bought by the Dream, which means to collect on a third season it is owed."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 11,
+          "floor": 3,
+          "at": "2:11",
+          "confidence": "verified",
+          "headline": "Carl signs on",
+          "text": "He makes a deal to appear on the programme when it moves to the sixth floor. Before giving his word he reads a Wisp Armor spellbook for cover against mind control, then buys an ice cream cone of parasitic worms from Apollon the Mighty so he can speak inside Grimaldi's head and talk him into lifting Signet's banishment."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 6,
+          "floor": 6,
+          "at": "5:6",
+          "confidence": "verified",
+          "headline": "The contract does not lapse",
+          "text": "Zev reminds Carl that his agreement with the programme is still in effect. Nothing signed on a floor above stops mattering because he has walked down a flight of stairs."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 28,
+          "floor": 6,
+          "at": "5:28",
+          "confidence": "verified",
+          "headline": "Part one done, part two named",
+          "text": "The first act completes. The second arrives as a name: Queen Imogen of the high elves, Signet's half-sister, who will be at the masquerade at the close of this floor. The reward is the run of the high elf castle, thought to hold something that blunts Scolopendra's attack."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 76,
+          "floor": 6,
+          "at": "5:76",
+          "confidence": "verified",
+          "headline": "The second act closes",
+          "text": "A boss battle with crawlers, hunters, the queen and a goddess all in the same room. The high elves do not survive it. Imogen goes down, and the second season is complete."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "Sold, with a season still owed",
+          "text": "Quasar warns Carl on arrival that the Dream has bought the programme out and intends to collect on the guaranteed third season."
+        }
+      ],
+      "relations": [
+        {
+          "to": "signet",
+          "kind": "concerns",
+          "at": "2:11"
+        },
+        {
+          "to": "grimaldi",
+          "kind": "concerns",
+          "at": "2:11"
+        },
+        {
+          "to": "carl",
+          "kind": "indentured-to",
+          "at": "2:11"
+        },
+        {
+          "to": "imogen",
+          "kind": "subject-of",
+          "at": "5:28"
+        },
+        {
+          "to": "npcs-are-people",
+          "kind": "concerns",
+          "at": "5:1"
+        }
+      ]
     }
   ]
 }
