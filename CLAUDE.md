@@ -93,6 +93,29 @@ with no premise at all.
 **The general rule: any field that summarises a span must be gated at the end of that span, not
 the start.** If you add per-floor bosses, quests or events, they need the same treatment.
 
+### Static copy in a page is ungated by construction
+
+The other half of the same problem. However correct the data is, a sentence typed into an `.astro`
+file is shown to everyone. The Position page once explained the gate with *"Floor 7 — the Great
+Race — opens at the close of book 5"*, which handed a floor name to a reader on book 1.
+
+`scripts/check-pages.mjs` (part of `npm run content:check`, so CI runs it) takes every entity and
+floor name that is **not** safe at `1:1` and fails the build if it appears in page source. Three
+details make it work rather than merely exist:
+
+- **word boundaries** — without them "Tran" matches inside `transparent` and the check drowns in CSS
+- **case-insensitive** — the copy that shipped said "the Great Race" against a floor named "The
+  Great Race", and an exact match sailed past it
+- **comments stripped first** — this codebase explains the gate in comments, which name gated
+  things constantly and legitimately
+
+Exemptions live in an `EXEMPT` array and each needs a written reason, because a strict check with
+undocumented escape hatches is just the bug again.
+
+**Keep implementation detail out of the app.** The Position page used to explain
+`book × 1000 + chapter` and the reveal-tag syntax to readers. That belongs here, not in the
+product; the page now says only enough to explain the numbers on it.
+
 ### Three states, and the middle one is the point
 
 | `spoilers` | Progress | Behaviour |
@@ -294,6 +317,7 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `data/chapters.json` | The chapter spine: 474 chapters, counts and titles |
 | `scripts/fetch-chapters.mjs` | `npm run chapters:refresh` — pulls the chapter tables |
 | `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
+| `scripts/check-pages.mjs` | Fails the build if gated content is hardcoded into page source |
 | `data/entities/*.json` | The curated graph |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |
 | `scripts/lib/lint.mjs` | Every rule that stops the gate leaking |

@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { reveals } from '../lib/spoiler';
 import { getBooks, getEntities, getAllBeats, readGate } from '../lib/content';
-import { frontierOf, percentFromChapter } from '../lib/progress';
+import { percentFromChapter } from '../lib/progress';
 
 const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
 const [books, entities, beats] = await Promise.all([getBooks(), getEntities(), getAllBeats()]);
@@ -16,18 +16,20 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
   <section class="wrap head">
     <p class="eyebrow">03</p>
     <h1>Your Position</h1>
-    <p class="standfirst">Everything in this companion is gated on one number. Here is what it is
-      and what it currently unseals.</p>
+    <p class="standfirst">Where you are in the crawl, and how much of the companion that opens.
+      Change it in the bar at the top of any page.</p>
   </section>
 
   <section class="wrap">
     <div class="stats">
       <div class="stat">
-        <span class="k">Frontier</span>
-        <span class="v">{prefs.spoilers ? frontierOf(prefs, currentChapters) : '∞'}</span>
-        <span class="n">{prefs.spoilers
-          ? `book ${prefs.book}${prefs.chapter ? `, chapter ${prefs.chapter}` : ', finished'}`
-          : 'spoilers off — everything shown'}</span>
+        <span class="k">Reading position</span>
+        <span class="v">{prefs.spoilers ? <>Book {prefs.book}</> : 'All'}</span>
+        <span class="n">{!prefs.spoilers
+          ? 'spoilers off — everything shown'
+          : prefs.chapter
+            ? `chapter ${prefs.chapter}${currentChapters ? ` of ${currentChapters} · ${pct}%` : ''}`
+            : 'finished'}</span>
       </div>
       <div class="stat">
         <span class="k">Entries unsealed</span>
@@ -37,33 +39,25 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
       <div class="stat">
         <span class="k">Timeline entries</span>
         <span class="v">{beatShown}<i>/{beats.length}</i></span>
-        <span class="n">arcs, uses and fates across the series</span>
+        <span class="n">moments on those pages, floor by floor</span>
       </div>
     </div>
 
     <div class="prose explain">
-      <h2>How the gate works</h2>
-      <p>A reading position is a book plus a chapter inside it, and both collapse to a single
-        integer: <code>book × 1000 + chapter</code>. Every piece of content declares the earliest
-        position at which it is safe to read, written as <code>4</code> (anywhere in book 4),
-        <code>4:12</code> (book 4, chapter 12) or <code>4:end</code> (once book 4 is finished).
-        Showing something is then one comparison.</p>
-      <p><strong>Books gate; floors navigate.</strong> Floor 7 — the Great Race — opens at the
-        close of book 5 and resolves at the start of book 6, so a floor-based gate would leak.
-        Floors are how the story is shaped, and they are how you browse it, but the book is what
-        the reader actually knows they have finished.</p>
+      <p><strong>Entries unsealed</strong> is how many characters, items, mechanics, factions and
+        loose ends you can open right now. <strong>Timeline entries</strong> counts the individual
+        moments on those pages — a page fills in as you read rather than arriving whole, so someone
+        two floors behind you sees the same character with less of their story attached.</p>
       {current?.chapters ? (
-        <p>Book {prefs.book} has <strong>{current.chapters} chapters</strong>.{' '}
+        <p>{current.title} has <strong>{current.chapters} chapters</strong>.{' '}
           {prefs.chapter
-            ? <>You are at chapter {prefs.chapter} — about <strong>{pct}%</strong> through, which is
-              the figure to use if you are listening rather than reading.</>
-            : <>You have not named a chapter, so the whole book is unsealed. Type a chapter number
-              in the bar above if you are only partway.</>}</p>
+            ? <>You are at chapter {prefs.chapter}, about <strong>{pct}%</strong> in — the figure to
+              use if you are listening rather than reading.</>
+            : <>You have not named a chapter, so all of it is unsealed. Type a chapter number in the
+              bar above if you are only partway.</>}</p>
       ) : (
-        <p class="sys"><b>*** No chapter count ***</b>Book {prefs.book} has no chapter count
-          recorded yet, so the chapter dial and the percentage readout are unavailable for it.
-          Counts have to be taken from the books themselves — the fan wikis disagree with each
-          other and several are machine-generated.</p>
+        <p class="sys"><b>*** No chapter count ***</b>Nothing recorded for this one yet, so the
+          chapter dial is off and the whole book counts as read.</p>
       )}
     </div>
 
