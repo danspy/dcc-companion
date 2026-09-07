@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseAt, describeAt, bookOf, END_OF_BOOK, CHAPTER_STRIDE } from './lib/gate.mjs';
 import { lint } from './lib/lint.mjs';
+import { entityVoice, beatVoice, VOICES } from './lib/voice.mjs';
 
 test('reveal tags parse to a total order', () => {
   assert.equal(parseAt('4'), 4000);
@@ -184,4 +185,24 @@ test('an unset position reveals nothing at all', () => {
 test('choosing book 1 is what unseals book 1', () => {
   assert.ok(frontierOf({ book: 1, chapter: 0 }, 47) >= parseAt('1:end'));
   assert.ok(frontierOf({ book: 0, chapter: 0 }, 47) < parseAt('1:2'));
+});
+
+test('a character speaks for itself unless told otherwise; nothing else does', () => {
+  const carl = { id: 'carl', kind: 'character' };
+  const dossier = { id: 'quasar', kind: 'character', voice: 'system' };
+  const gate = { id: 'gate', kind: 'item' };
+  assert.equal(entityVoice(carl), 'self');
+  assert.equal(entityVoice(dossier), 'system');
+  assert.equal(entityVoice(gate), 'narrator');
+  assert.deepEqual([...VOICES].sort(), ['narrator', 'self', 'system']);
+});
+
+test('a fate is reported by the dungeon, everything else follows the entity', () => {
+  const carl = { id: 'carl', kind: 'character' };
+  const gate = { id: 'gate', kind: 'item' };
+  assert.equal(beatVoice(carl, { kind: 'arc' }), 'self');
+  assert.equal(beatVoice(carl, { kind: 'fate' }), 'system');
+  assert.equal(beatVoice(carl, { kind: 'arc', voice: 'narrator' }), 'narrator');
+  assert.equal(beatVoice(gate, { kind: 'use' }), 'narrator');
+  assert.equal(beatVoice(gate, { kind: 'fate' }), 'narrator');
 });
