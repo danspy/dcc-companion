@@ -48,6 +48,16 @@ export function taglineFor(entity: EntityRow, gate: Gate): string {
   return out;
 }
 
+/* The latest of the System's own descriptions the reader has reached, or null
+   when there is none yet. Same rule as taglines: a description of an upgraded
+   item supersedes the one before it. */
+export function descriptionFor(entity: EntityRow, gate: Gate): { text: string; source: string } | null {
+  const rows = (entity.descriptions ?? []) as { sortKey: number; text: string; source: string }[];
+  let out: { text: string; source: string } | null = null;
+  for (const d of rows) if (gate.frontier >= d.sortKey) out = { text: d.text, source: d.source };
+  return out;
+}
+
 export const KIND_LABELS: Record<string, string> = {
   character: 'Characters',
   item: 'Items & artifacts',

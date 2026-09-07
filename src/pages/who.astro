@@ -3,9 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
 import { reveals, UNSET_COPY } from '../lib/spoiler';
 import { getEntities, getAllBeats, coverage, readGate, taglineFor, KIND_LABELS, KIND_ORDER } from '../lib/content';
-import { parseAt } from '../lib/progress';
 
-const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
+const { gate } = await readGate(Astro.cookies);
 const [entities, beats] = await Promise.all([getEntities(), getAllBeats()]);
 
 const beatsByEntity = new Map<string, typeof beats>();
@@ -55,7 +54,9 @@ const groups = KIND_ORDER.map(kind => ({
                 )}
               </div>
               <p class="role">{known ? e.role : 'Not yet met'}</p>
-              {known ? <p class="tagline">{taglineFor(e, gate)}</p> : <Sealed at={e.revealedAt} compact />}
+              {known
+                ? <p class={`tagline${e.voice === 'self' ? ' spoken' : ''}`}>{taglineFor(e, gate)}</p>
+                : <Sealed at={e.revealedAt} compact />}
             </div>
           );
         })}
