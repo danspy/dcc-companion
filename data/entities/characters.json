@@ -1876,17 +1876,14 @@
       "tagline": [
         {
           "at": "7:11",
-          "text": "One of fifty thousand retired crawlers who came back in under a cat's banner."
+          "text": "I got out of a crawl once. Fifty thousand of us did, and we came back in under a cat's banner. We knew what we were signing. That is rather the point."
         },
         {
           "at": "7:end",
-          "text": "Came back in with the Princess Posse, and opened every cell the old gods were kept in."
-        },
-        {
-          "at": "8:1",
-          "text": "Came back in with the Princess Posse, opened every cell, and did not outlive it."
+          "text": "The others are on the stairs. My trap has been set for a while. Every cell the old gods are kept in opens when I say, and I am about to say."
         }
       ],
+      "voiceNote": "Veteran of a crawl, back inside by choice. Even, unhurried, short sentences; a man who has already made his decisions and sees no need to defend them. Carl and Donut by name, the other retired crawlers are 'us'. Never dramatic about his own risk, never asks what anything is worth.",
       "beats": [
         {
           "kind": "origin",
@@ -1894,18 +1891,18 @@
           "chapter": 11,
           "floor": 9,
           "at": "7:11",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "In the Princess Posse",
-          "text": "Carl and Donut walk into the HQ to find Rosetta, Tipid, Justice Light and fifty thousand other former crawlers signed up. Carl gets emotional."
+          "text": "Carl and Donut walk into the HQ, and Carl stops. Fifty thousand of us in here, and he has to look at every one. Rosetta. Tipid. Me. People who got out of a crawl once and know exactly what one is, and signed up for another anyway, under the banner of a cat. He gets emotional about it. Nobody gives him a hard time. We had the same faces on when we signed."
         },
         {
           "kind": "fate",
           "book": 7,
           "floor": 9,
           "at": "7:end",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "He opens every cell",
-          "text": "He releases all of the gods."
+          "text": "Crawler Justice Light did not take the stairs with the rest of you. He stayed behind with a trap he had set some time ago, and he has now triggered it. Every cell the old gods were kept in is open. Every one of them. He did not survive it. He knew that going in, and did not appear to require my opinion on the matter. Noted for the record anyway: I have opinions."
         },
         {
           "kind": "fate",
@@ -1913,9 +1910,9 @@
           "chapter": 1,
           "floor": 10,
           "at": "8:1",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Dead, and the Nothing with him",
-          "text": "The tenth floor opens on the news. 5,501 crawlers remain."
+          "text": "Welcome to the tenth floor. Some housekeeping before the fun. Crawler Justice Light is dead. The Nothing is broken. Those are two sentences I have never had cause to put next to each other, and I would like it understood that I am saying them under protest. Five thousand five hundred and one of you remain. Proceed."
         }
       ],
       "relations": [
@@ -1939,7 +1936,8 @@
       "role": "Former crawler",
       "revealedAt": "7:11",
       "sort": 35,
-      "tagline": "Came back into the dungeon voluntarily, and brought the institutional memory with him.",
+      "tagline": "I got out once. I came back in on purpose, and I brought the institutional memory with me, because nobody hands it to the ones still inside.",
+      "voiceNote": "Measured, exact, a briefer. Short declaratives in order; repeats an instruction rather than raising his voice. Carl and Donut by name; the retired crawlers are 'us' or 'the ones who got out'. Never speculates, never dramatises, never talks about himself.",
       "beats": [
         {
           "kind": "origin",
@@ -1947,9 +1945,9 @@
           "chapter": 11,
           "floor": 9,
           "at": "7:11",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Doctor Hu, and the Crawler Project",
-          "text": "He fills Carl in on both. Retired crawlers know things current ones are never told."
+          "text": "Carl needs the whole of it, so I give it to him in order. Doctor Hu. The Crawler Project. How fifty thousand of us came to be standing in this HQ under the Princess Posse's banner. None of it is anything he would ever have been told from inside; that is the thing about being retired, you learn what the ones still crawling are not shown. He listens. That is rarer than it sounds."
         },
         {
           "kind": "use",
@@ -1957,9 +1955,9 @@
           "chapter": 12,
           "floor": 9,
           "at": "7:12",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Blood bar rules are back",
-          "text": "He warns that they apply in safe rooms again, while the NPCs, mercenaries and former crawlers dig in."
+          "text": "The blood bar rules are back in force inside the safe rooms. I tell Carl now, while knowing it still costs nothing. Around us the NPCs, the mercenaries and the rest of us former crawlers are building the defences on the same line, three kinds of people this format has always kept apart, working shoulder to shoulder. I do not have a rule for that. I am watching it closely."
         },
         {
           "kind": "use",
@@ -1967,9 +1965,9 @@
           "chapter": 74,
           "floor": 10,
           "at": "8:74",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Do not kill the shells",
-          "text": "In an apartment full of Human Shells of Tran's dead parents, he stops them. Each apartment is a what-if, and the AI is explicit about it."
+          "text": "An apartment. Human Shells inside it, wearing the faces of Tran's parents, who are dead. Carl and Donut are about to do the obvious thing and I stop them. Do not kill the shells. I say it once more, slowly, so it lands. The AI is explicit about what this is: every apartment on this course is a what-if, built around a crawler it finds interesting. You do not put a blade into a what-if. You walk through it, and you keep walking."
         }
       ],
       "relations": [
@@ -2270,13 +2268,14 @@
       "tagline": [
         {
           "at": "7:61",
-          "text": "A warlord on the ninth floor."
+          "text": "Akuma. I lead the War Mage Rebellion. We are on this floor for our own reasons, and I am not in the habit of explaining them."
         },
         {
           "at": "7:69",
-          "text": "Co-warlord of the War Mages, and not happy about who he shares it with."
+          "text": "Co-warlord. Baroness Victory's word, not mine. I hold the castle at Larracos; I did not agree to hold it beside Agatha."
         }
       ],
+      "voiceNote": "Cold, formal, exact; a commander dictating for the record. Never raises his voice, never explains his reasons, never apologises. 'The War Mage Rebellion' in full; Carl and Donut by name; Agatha by name and with contempt. Speaks of leaving as a decision already made, never as a retreat.",
       "beats": [
         {
           "kind": "origin",
@@ -2284,9 +2283,9 @@
           "chapter": 69,
           "floor": 9,
           "at": "7:69",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Sharing a command he did not ask for",
-          "text": "The War Mage Rebellion holds Larracos castle and wins if it keeps it six hours. Baroness Victory names him and Agatha co-warlords. He is upset about it."
+          "text": "We hold the castle at Larracos. Six hours more and the floor is ours. That should be the whole of the announcement. Instead Baroness Victory reads out two names as warlords of the War Mage Rebellion, and only one of them is mine. Agatha. Co-warlord. I did not bring this rebellion this far to share its title, least of all with her, and I have not hidden what I think of that. I will hold the castle. I will not pretend to be pleased."
         },
         {
           "kind": "use",
@@ -2294,9 +2293,9 @@
           "chapter": 78,
           "floor": 9,
           "at": "7:78",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "He leaves, and warns them on the way",
-          "text": "The War Mages quit the floor with the Scavenger's Daughter. He tells the Warlord Chat that Agatha is an enemy to all of them."
+          "text": "To the Warlord Chat, for the record. The War Mage Rebellion is leaving this floor. We came here for the Scavenger's Daughter. We have found the Scavenger's Daughter, and we leave with what we came for; the castle and the war are yours to finish. One thing more, and I address it to Carl and to Donut, since they are the ones who might still act on it. Agatha is an enemy to all of you. I do not explain. I am already gone."
         }
       ],
       "relations": [
@@ -2318,13 +2317,18 @@
       "tagline": [
         {
           "at": "7:61",
-          "text": "Summoned into the middle of a war, and freezes almost everyone standing in it."
+          "text": "Somebody summoned me into the middle of a war. I do hope they meant to."
+        },
+        {
+          "at": "7:65",
+          "text": "I froze almost everyone standing on a battlefield. One of the exceptions is still blinking at me. I like him."
         },
         {
           "at": "8:97",
-          "text": "Froze almost everyone in a war, and empties every crawler's pockets into somebody else's."
+          "text": "I froze a battlefield once. Today I have emptied every crawler's pockets into somebody else's. Every exit is an entrance."
         }
       ],
+      "voiceNote": "Goddess of discord, amused by everything and surprised by nothing. Speaks in the present tense as if the future were a rumour she has not decided to confirm. Warm to Carl, whom she names; everyone else is a piece on the board. Never threatens, never hurries, never explains her reasons.",
       "beats": [
         {
           "kind": "origin",
@@ -2332,9 +2336,9 @@
           "chapter": 61,
           "floor": 9,
           "at": "7:61",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Summoned, and a demon eviction starts",
-          "text": "She arrives in the realm in the middle of the Reaver fighting."
+          "text": "Someone has said my name the right way, in the middle of the Reaver fighting. So I come. It is the one predictable thing about me. The moment I set foot in the realm a demon eviction begins, the way weather begins. I did not do that. It is simply what happens when I am in a room. Now then. Let me see who is here, and what they think they are fighting for."
         },
         {
           "kind": "use",
@@ -2342,9 +2346,9 @@
           "chapter": 65,
           "floor": 9,
           "at": "7:65",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "The Ceremony of Chaos",
-          "text": "Nearly everyone on the field freezes. Carl does not — his Mind Balance reaches level 16 as the Viceroys throw their mind magic at him."
+          "text": "I call the Ceremony of Chaos and the field stops. Every soldier, every mage, every screaming thing mid-scream, held exactly where it stood. Nearly every. The Viceroys are pouring their mind magic into Carl at the same moment, and something in him tips over into a sixteenth level of Mind Balance, and he stays standing in the middle of my stillness, blinking at me. I could be offended. Instead I gather everyone I did freeze into one great pile beside the Dream castle. A gift. Unwrap it carefully."
         },
         {
           "kind": "use",
@@ -2352,9 +2356,9 @@
           "chapter": 97,
           "floor": 11,
           "at": "8:97",
-          "confidence": "verified",
+          "confidence": "draft",
           "headline": "Every inventory swaps at once",
-          "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut receives Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit."
+          "text": "Everyone holding something: hold out your hands. My Scavenger's Daughter effect goes off and every crawler here is carrying whatever the crawler nearest them was carrying. Donut gets Carl's. Carl does not blink. He asks her to put a bomb together with an enhanced pet biscuit, as though he had been waiting years for someone else to have his pockets. I adore him for it. I no longer need him to worship me, and I tell him so. Every exit is an entrance. I am leaving through one now."
         }
       ],
       "relations": [
