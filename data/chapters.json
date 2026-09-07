@@ -1,0 +1,232 @@
+{
+  "generatedAt": "2026-09-07T14:07:04.187Z",
+  "source": "https://dungeon-crawler-carl.fandom.com/wiki/Chapters",
+  "books": [
+    {
+      "book": 1,
+      "count": 47,
+      "gaps": [],
+      "divisions": [
+        "Epilogue"
+      ],
+      "titles": []
+    },
+    {
+      "book": 2,
+      "count": 25,
+      "gaps": [],
+      "divisions": [
+        "Epilogue"
+      ],
+      "titles": []
+    },
+    {
+      "book": 3,
+      "count": 34,
+      "gaps": [],
+      "divisions": [
+        "Epilogue"
+      ],
+      "titles": [
+        {
+          "chapter": 1,
+          "title": "Red Line to station 83"
+        },
+        {
+          "chapter": 2,
+          "title": "Transfer station 83 safehouse"
+        },
+        {
+          "chapter": 3,
+          "title": "Royal Palace of Princess Donut"
+        },
+        {
+          "chapter": 4,
+          "title": "Yellow Line from station 83"
+        },
+        {
+          "chapter": 5,
+          "title": "Yellow Line to station 116"
+        },
+        {
+          "chapter": 6,
+          "title": "Banshee Station"
+        },
+        {
+          "chapter": 7,
+          "title": "Transfer station 131 safehouse"
+        },
+        {
+          "chapter": 8,
+          "title": "Desperado Club"
+        },
+        {
+          "chapter": 9,
+          "title": "Desperado Club"
+        },
+        {
+          "chapter": 10,
+          "title": "Ochre line Station 149"
+        },
+        {
+          "chapter": 11,
+          "title": "Ochre line Station 149"
+        },
+        {
+          "chapter": 12,
+          "title": "Dismemberment Limited"
+        },
+        {
+          "chapter": 13,
+          "title": "Mauve Line Station 281 safehouse"
+        },
+        {
+          "chapter": 14,
+          "title": "The Nightmare Express from 283"
+        },
+        {
+          "chapter": 15,
+          "title": "Abyss Station 436"
+        },
+        {
+          "chapter": 16,
+          "title": "Back to 436"
+        },
+        {
+          "chapter": 17,
+          "title": "Trainyard E to Station 24"
+        },
+        {
+          "chapter": 18,
+          "title": "Stations 24 to 60"
+        },
+        {
+          "chapter": 19,
+          "title": "Back to 41"
+        },
+        {
+          "chapter": 20,
+          "title": "\"Planet Beautiful\""
+        },
+        {
+          "chapter": 21,
+          "title": "Personal space and back to 60"
+        },
+        {
+          "chapter": 22,
+          "title": "Vermillion line to 101"
+        },
+        {
+          "chapter": 23,
+          "title": "Vermillion line station 101"
+        },
+        {
+          "chapter": 24,
+          "title": "Vermillion line back toward to 75"
+        },
+        {
+          "chapter": 25,
+          "title": "Vermillion line station 75"
+        },
+        {
+          "chapter": 26,
+          "title": "Vermillion line station 75"
+        },
+        {
+          "chapter": 27,
+          "title": "Vermillion line station 75"
+        },
+        {
+          "chapter": 28,
+          "title": "Mindaro line to the Abyss"
+        },
+        {
+          "chapter": 29,
+          "title": "Zomp line to station 59"
+        },
+        {
+          "chapter": 30,
+          "title": "Saferoom at station 59"
+        },
+        {
+          "chapter": 31,
+          "title": "Station 36"
+        },
+        {
+          "chapter": 32,
+          "title": "To Trainyard E"
+        },
+        {
+          "chapter": 33,
+          "title": "Trainyard E"
+        },
+        {
+          "chapter": 34,
+          "title": "Stairwells"
+        }
+      ]
+    },
+    {
+      "book": 4,
+      "count": 34,
+      "gaps": [],
+      "divisions": [
+        "Epilogue"
+      ],
+      "titles": []
+    },
+    {
+      "book": 5,
+      "count": 77,
+      "gaps": [],
+      "divisions": [
+        "Epilogue"
+      ],
+      "titles": []
+    },
+    {
+      "book": 6,
+      "count": 72,
+      "gaps": [],
+      "divisions": [
+        "Prologue",
+        "Epilogue"
+      ],
+      "titles": []
+    },
+    {
+      "book": 7,
+      "count": 87,
+      "gaps": [],
+      "divisions": [
+        "Prologue",
+        "Porthus",
+        "Dante",
+        "Tipid",
+        "Everly",
+        "Christmas Morning",
+        "Milk",
+        "Volteeg",
+        "Justice Light",
+        "Several Days Earlier",
+        "Rosetta",
+        "Epilogue"
+      ],
+      "titles": []
+    },
+    {
+      "book": 8,
+      "count": 98,
+      "gaps": [],
+      "divisions": [
+        "Interlude: Chandra",
+        "Interlude: Minus",
+        "Interlude: Quasar",
+        "Interlude: Sydnee Iglacia",
+        "Interlude: Prime Minister Victory",
+        "Interlude: Louis Santiago 2"
+      ],
+      "titles": []
+    }
+  ]
+}

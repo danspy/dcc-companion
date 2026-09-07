@@ -24,15 +24,14 @@ const current = books.find(b => b.id === prefs.book);
     </div>
 
     <label class="chapter" title={current?.chapters
-      ? `Book ${prefs.book} has ${current.chapters} chapters`
+      ? `Book ${prefs.book} has ${current.chapters} chapters — leave blank if you finished it`
       : 'No chapter count recorded for this book yet'}>
       <span class="eyebrow">Ch</span>
       <input type="number" id="chapter" min="0" max={current?.chapters ?? 999}
-             value={prefs.chapter || ''} placeholder="—"
+             value={prefs.chapter || ''} placeholder="all"
              disabled={!current?.chapters} />
+      {current?.chapters && <span class="of">/ {current.chapters}</span>}
     </label>
-
-    <button class="btn" id="finished" aria-pressed={String(prefs.finished)}>Finished it</button>
     <span class="spacer"></span>
     <button class="btn" id="spoilers" aria-pressed={String(!prefs.spoilers)}>Spoil me</button>
   </div>
@@ -57,6 +56,8 @@ const current = books.find(b => b.id === prefs.book);
                    background: transparent; color: var(--color-grey-100);
                    border: 1px solid var(--color-line); padding: 0 7px; }
   .chapter input:disabled { color: var(--color-grey-700); cursor: not-allowed; }
+  .of { font-family: var(--font-mono); font-size: 12px; color: var(--color-grey-500);
+        font-variant-numeric: tabular-nums; }
   .spacer { flex: 1 1 auto; }
 </style>
 
@@ -68,9 +69,9 @@ const current = books.find(b => b.id === prefs.book);
 
   function read() {
     const hit = document.cookie.split('; ').find(c => c.startsWith(COOKIE + '='));
-    if (!hit) return { book: 1, chapter: 0, finished: false, spoilers: true };
+    if (!hit) return { book: 1, chapter: 0, spoilers: true };
     try { return JSON.parse(decodeURIComponent(hit.slice(COOKIE.length + 1))); }
-    catch { return { book: 1, chapter: 0, finished: false, spoilers: true }; }
+    catch { return { book: 1, chapter: 0, spoilers: true }; }
   }
 
   function write(next: Record<string, unknown>) {
@@ -86,12 +87,11 @@ const current = books.find(b => b.id === prefs.book);
 
     if (book) {
       // Moving to a different book clears a chapter that belonged to the old one.
+      // A chapter belongs to the book it was set on, so switching books clears it.
       const n = Number(book.dataset.book);
-      write({ ...state, book: n, chapter: n === state.book ? state.chapter : 0,
-              finished: n === state.book ? state.finished : false, spoilers: true });
+      write({ ...state, book: n, chapter: n === state.book ? state.chapter : 0, spoilers: true });
       return;
     }
-    if (target.closest('#finished')) { write({ ...state, finished: !state.finished, spoilers: true }); return; }
     if (target.closest('#spoilers')) { write({ ...state, spoilers: !state.spoilers }); return; }
   });
 

@@ -1,12 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { readPrefs } from '../lib/prefs';
-import { gateFor, reveals } from '../lib/spoiler';
-import { getBooks, getEntities, getAllBeats } from '../lib/content';
+import { reveals } from '../lib/spoiler';
+import { getBooks, getEntities, getAllBeats, readGate } from '../lib/content';
 import { frontierOf, percentFromChapter } from '../lib/progress';
 
-const prefs = readPrefs(Astro.cookies);
-const gate = gateFor(prefs, prefs.spoilers, prefs.fresh);
+const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
 const [books, entities, beats] = await Promise.all([getBooks(), getEntities(), getAllBeats()]);
 
 const entityShown = entities.filter(e => reveals(gate, e.revealedAt)).length;
@@ -26,9 +24,9 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
     <div class="stats">
       <div class="stat">
         <span class="k">Frontier</span>
-        <span class="v">{prefs.spoilers ? frontierOf(prefs) : '∞'}</span>
+        <span class="v">{prefs.spoilers ? frontierOf(prefs, currentChapters) : '∞'}</span>
         <span class="n">{prefs.spoilers
-          ? `book ${prefs.book}${prefs.finished ? ', finished' : prefs.chapter ? `, chapter ${prefs.chapter}` : ''}`
+          ? `book ${prefs.book}${prefs.chapter ? `, chapter ${prefs.chapter}` : ', finished'}`
           : 'spoilers off — everything shown'}</span>
       </div>
       <div class="stat">
@@ -55,9 +53,12 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
         Floors are how the story is shaped, and they are how you browse it, but the book is what
         the reader actually knows they have finished.</p>
       {current?.chapters ? (
-        <p>Book {prefs.book} has <strong>{current.chapters} chapters</strong>. You are at
-          chapter {prefs.chapter || 0} — about <strong>{pct}%</strong> through, which is the figure
-          to use if you are listening rather than reading.</p>
+        <p>Book {prefs.book} has <strong>{current.chapters} chapters</strong>.{' '}
+          {prefs.chapter
+            ? <>You are at chapter {prefs.chapter} — about <strong>{pct}%</strong> through, which is
+              the figure to use if you are listening rather than reading.</>
+            : <>You have not named a chapter, so the whole book is unsealed. Type a chapter number
+              in the bar above if you are only partway.</>}</p>
       ) : (
         <p class="sys"><b>*** No chapter count ***</b>Book {prefs.book} has no chapter count
           recorded yet, so the chapter dial and the percentage readout are unavailable for it.

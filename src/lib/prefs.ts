@@ -24,7 +24,6 @@ export function readPrefs(cookies: AstroCookies): Prefs {
     return {
       book: clampBook(v.book),
       chapter: Math.max(0, Number(v.chapter) || 0),
-      finished: Boolean(v.finished),
       spoilers: v.spoilers !== false,
       fresh: false,
     };
@@ -34,8 +33,8 @@ export function readPrefs(cookies: AstroCookies): Prefs {
 }
 
 export function writePrefs(cookies: AstroCookies, prefs: Prefs): void {
-  const { book, chapter, finished, spoilers } = prefs;
-  cookies.set(COOKIE, encodeURIComponent(JSON.stringify({ book, chapter, finished, spoilers })), {
+  const { book, chapter, spoilers } = prefs;
+  cookies.set(COOKIE, encodeURIComponent(JSON.stringify({ book, chapter, spoilers })), {
     path: '/',
     maxAge: YEAR,
     sameSite: 'lax',

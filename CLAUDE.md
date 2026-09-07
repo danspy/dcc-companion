@@ -31,6 +31,26 @@ Curation writes reveal points as short tags so the JSON stays readable:
 one. That is what makes the curation incremental: tag everything at book granularity first
 (cheap, complete), then refine hot entries to chapters later without rewriting the gate.
 
+### An unspecified chapter means *finished*, not *just started*
+
+`frontierOf` reads a reader position of "book 5, no chapter" as **book 5 finished**, and the
+last chapter of a book resolves to the same value as `:end`. This is the one piece of the
+arithmetic that is a product decision rather than a mechanical one, and it is load-bearing:
+"I'm on book 5" in normal speech means five books read, and the opening default — book 1, no
+chapter — has to unseal all of book 1 and nothing beyond it. Naming a chapter is how a reader
+says "actually, I'm only partway".
+
+Get this backwards and the first-visit page seals everything, because every entity is now
+chapter-tagged. There is a test pinning it.
+
+### Gate inheritance runs in the build, never in a view
+
+`build-content.mjs` resolves each beat's `sortKey` to `max(beat.at, entity.revealedAt)` and each
+relation's to `max(relation.at, from.revealedAt, to.revealedAt)`. **Views compare `sortKey`, not
+the raw tag.** A book-level beat sitting under a chapter-level entity is therefore floored
+automatically (a warning, not an error); a beat in an *earlier book* than its entity is a real
+curation mistake and fails the build.
+
 `src/lib/progress.ts` is the only place this arithmetic lives. `scripts/lib/gate.mjs` is a
 deliberate pure copy for the build scripts, and `npm run test:gate` drives both.
 
@@ -57,13 +77,23 @@ the reader has not met — the URL alone would confirm the name.
 ## Content pipeline
 
 ```
-data/books.json              books, floors, chapter counts, the book<->floor map
+data/books.json              books, floors, the book<->floor map
 data/entities/*.json         characters, items, mechanics, factions, threads
+data/chapters.json           chapter counts + titles   <- npm run chapters:refresh
         |  npm run content:build   (scripts/build-content.mjs — no network)
 data/content.snapshot.json   reveal tags resolved to integers, committed
         |  db/seed.ts
 data/dcc.db
 ```
+
+`chapters.json` is the chapter spine — **474 chapters across the eight books, no gaps** — pulled
+by `npm run chapters:refresh` from the Fandom wiki's per-book chapter tables. `books.json` does
+not carry counts; `build-content.mjs` merges them in, so there is one source. A book missing from
+`chapters.json` keeps a null count, which switches the chapter dial off for it.
+
+The same refresh writes `data/index/summaries.json`, which is **gitignored on purpose**. Those are
+the wiki's own summary sentences, kept locally as a curation aid for deciding where a reveal
+belongs. They are not this site's content and a deployed page must not republish them.
 
 The snapshot is committed, so a build is reproducible and a deploy needs no network. Re-run
 `npm run content:build` after editing anything under `data/`, and commit both.
@@ -118,7 +148,11 @@ the Larracos flood, the Syndicate lawsuit and Juice Box — all book 7 — under
 Copying a wiki section's heading as a reveal tag would have leaked three books early. Read what the
 prose actually describes, not the heading above it.
 
-For chapter counts and chapter-level reveal points, **the books themselves are the only source**.
+The wiki's **per-book chapter summary tables** are the most valuable thing on it: they gave exact
+chapter counts for all eight books and the anchors that turned book-level reveals into
+chapter-level ones. Beware that **first mention in a summary is not first appearance** — the
+Sepsis Crown's earliest hit is book 2 chapter 25, where it is *destroyed*, four books after Donut
+puts it on. Treat an anchor as a proposal and read the surrounding summary before trusting it.
 
 ## Tech stack
 
@@ -175,7 +209,9 @@ ASTRO_DATABASE_FILE=./.astro/build.db npm run build
 | `src/lib/prefs.ts` | The `dcc_pos` cookie; the seam where accounts will land |
 | `src/lib/content.ts` | DB reads; relations mirrored at read time |
 | `db/config.ts` | `Book`, `Floor`, `Entity`, `Beat`, `Relation` |
-| `data/books.json` | Books, floors, chapter counts, the book↔floor map |
+| `data/books.json` | Books, floors, the book↔floor map |
+| `data/chapters.json` | The chapter spine: 474 chapters, counts and titles |
+| `scripts/fetch-chapters.mjs` | `npm run chapters:refresh` — pulls the chapter tables |
 | `data/entities/*.json` | The curated graph |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |
 | `scripts/lib/lint.mjs` | Every rule that stops the gate leaking |
@@ -184,9 +220,9 @@ ASTRO_DATABASE_FILE=./.astro/build.db npm run build
 
 ## Next
 
-- Chapter counts for books 2–8, taken from the books, to switch the chapter dial on
-- A verification pass over the remaining 18 `draft` beats (`npm run content:check` lists them)
-- Books 6 and 8 are the thinnest — book 8 has almost no reliable secondary coverage yet
+- Chapter-accurate reveal points for the entities still tagged at book level
+- A verification pass over the remaining `draft` beats (`npm run content:check` lists them)
+- Books 3, 6 and 8 have the thinnest entity coverage relative to their chapter counts
 - Deeper coverage: more items, per-floor mechanics, quotes with chapter anchors
 - Accounts (`data/users.db` + sessions), so progress follows the reader across devices
 - Search / command palette across entities and floors

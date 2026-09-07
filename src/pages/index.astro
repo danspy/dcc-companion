@@ -1,12 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
-import { readPrefs } from '../lib/prefs';
-import { gateFor, reveals } from '../lib/spoiler';
-import { getBooks, getFloors } from '../lib/content';
+import { reveals } from '../lib/spoiler';
+import { getBooks, getFloors, readGate } from '../lib/content';
 
-const prefs = readPrefs(Astro.cookies);
-const gate = gateFor(prefs, prefs.spoilers, prefs.fresh);
+const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
 const [books, floors] = await Promise.all([getBooks(), getFloors()]);
 const bookById = new Map(books.map(b => [b.id, b]));
 ---

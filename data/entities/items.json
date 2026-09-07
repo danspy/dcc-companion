@@ -2,119 +2,332 @@
   "$comment": "Items carry a usage log: `kind: \"use\"` beats record where and when the thing is actually used, each gated on its own. That log is the point of an item page. Note the Gate's book-7 uses — the Fandom wiki files them under its Book 4 heading, which would leak three books early if copied verbatim.",
   "entities": [
     {
-      "id": "gate-of-the-feral-gods", "kind": "item", "name": "The Gate of the Feral Gods",
-      "aka": ["the Gate"], "role": "Artifact · legendary/celestial", "revealedAt": "4", "sort": 1,
+      "id": "gate-of-the-feral-gods",
+      "kind": "item",
+      "name": "The Gate of the Feral Gods",
+      "aka": [
+        "the Gate"
+      ],
+      "role": "Artifact · legendary/celestial",
+      "revealedAt": "4:9",
+      "sort": 1,
       "tagline": "A teleport that works by tearing a hole in the prison dimension where the old gods are kept — and something always comes back through.",
       "beats": [
-        { "kind": "origin", "book": 4, "floor": 5, "at": "4", "confidence": "verified",
-          "headline": "Three pieces, buried in the Necropolis of Anser",
-          "text": "A winding box and two magically linked pocket watches. An artifact this powerful should not surface before the eighth or ninth floor, and its appearance on the fifth triggers repeated system timeouts while the AI reconciles the rule conflict. Its pieces are split three ways — Henrik the Changeling holds one watch, the gnomish Commandant Kane the other, and Ghazi the box — and the system hands Carl a quest to take all three. Reward: \"Oh boy-oh-boy.\"" },
-        { "kind": "use", "book": 4, "floor": 5, "at": "4", "confidence": "verified",
+        {
+          "kind": "use",
+          "book": 4,
+          "floor": 5,
+          "at": "4",
+          "confidence": "verified",
           "headline": "How it actually works",
-          "text": "Dial a \"time\" standing for coordinates on one watch and the other mirrors it. Both go in the box; it winds, and must not move more than about five feet or it resets. Pulling the watches out opens a one-way portal roughly twenty feet tall, good for about twenty minutes. Then it lingers as a two-way passage into the Nothing until something comes through — usually a feral god, driven mad by however long the pantheon kept it down there. Stand too near an open portal with a weak constitution and it paints your mind with the same madness." },
-        { "kind": "use", "book": 4, "floor": 5, "at": "4", "confidence": "verified",
+          "text": "Dial a \"time\" standing for coordinates on one watch and the other mirrors it. Both go in the box; it winds, and must not move more than about five feet or it resets. Pulling the watches out opens a one-way portal roughly twenty feet tall, good for about twenty minutes. Then it lingers as a two-way passage into the Nothing until something comes through — usually a feral god, driven mad by however long the pantheon kept it down there. Stand too near an open portal with a weak constitution and it paints your mind with the same madness."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "floor": 5,
+          "at": "4",
+          "confidence": "verified",
           "headline": "Escaping Lusca — and drowning a town",
-          "text": "Trapped at the bottom of the water quadrant inside the city boss Lusca, Carl assembles the complete Gate and teleports himself, Katia and Tran to the surface outside the pazuzu town of Pandinus. The still-open portal drags a wall of ocean through behind them and nearly flattens the place. True to the artifact, the escape looses a feral god — and enrages the true pantheon, whose deities go rampaging across the floor's popped bubbles." },
-        { "kind": "use", "book": 4, "floor": 5, "at": "4", "confidence": "verified",
+          "text": "Trapped at the bottom of the water quadrant inside the city boss Lusca, Carl assembles the complete Gate and teleports himself, Katia and Tran to the surface outside the pazuzu town of Pandinus. The still-open portal drags a wall of ocean through behind them and nearly flattens the place. True to the artifact, the escape looses a feral god — and enrages the true pantheon, whose deities go rampaging across the floor's popped bubbles."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "floor": 5,
+          "at": "4",
+          "confidence": "verified",
           "headline": "Katia turns it into a map",
-          "text": "The linked watches double as a reverse compass: read the displayed time, factor in altitude, and you have your exact position relative to anywhere else. Katia uses this to begin mapping the ninth floor four books before anyone stands on it." },
-        { "kind": "use", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "text": "The linked watches double as a reverse compass: read the displayed time, factor in altitude, and you have your exact position relative to anywhere else. Katia uses this to begin mapping the ninth floor four books before anyone stands on it."
+        },
+        {
+          "kind": "origin",
+          "book": 4,
+          "floor": 5,
+          "at": "4:9",
+          "confidence": "verified",
+          "headline": "Three pieces, buried in the Necropolis of Anser",
+          "text": "A winding box and two magically linked pocket watches. An artifact this powerful should not surface before the eighth or ninth floor, and its appearance on the fifth triggers repeated system timeouts while the AI reconciles the rule conflict. Its pieces are split three ways — Henrik the Changeling holds one watch, the gnomish Commandant Kane the other, and Ghazi the box — and the system hands Carl a quest to take all three. Reward: \"Oh boy-oh-boy.\"",
+          "chapter": 9
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Seven factions sue to take it off him",
-          "text": "Merely holding the Gate makes Carl a target. Seven of the nine Faction Wars factions go to Syndicate court to strip the pieces from him and are thrown out for lack of standing — earning Carl seven Fight the Power achievements. A last-minute challenge from the Skull Empire fails too." },
-        { "kind": "use", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "text": "Merely holding the Gate makes Carl a target. Seven of the nine Faction Wars factions go to Syndicate court to strip the pieces from him and are thrown out for lack of standing — earning Carl seven Fight the Power achievements. A last-minute challenge from the Skull Empire fails too."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Larracos: ocean water, timed charges and sharks",
-          "text": "The plan was to open a gate onto the Skull Empire army and drop a feral god into the middle of it — exactly what the factions had sued to prevent. At the last moment Carl changes course, keeps the artifact rather than spending it, and floods the ninth-floor faction market instead: ocean water, timed explosives and a frenzy of sharks, gutting the factions' ability to resupply. Juice Box goes through with the water." }
+          "text": "The plan was to open a gate onto the Skull Empire army and drop a feral god into the middle of it — exactly what the factions had sued to prevent. At the last moment Carl changes course, keeps the artifact rather than spending it, and floods the ninth-floor faction market instead: ocean water, timed explosives and a frenzy of sharks, gutting the factions' ability to resupply. Juice Box goes through with the water."
+        }
       ],
       "relations": [
-        { "to": "carl", "kind": "wielded-by", "at": "4" },
-        { "to": "katia", "kind": "used-by", "at": "4" },
-        { "to": "the-nothing", "kind": "opens-onto", "at": "4" }
+        {
+          "to": "carl",
+          "kind": "wielded-by",
+          "at": "4"
+        },
+        {
+          "to": "katia",
+          "kind": "used-by",
+          "at": "4"
+        },
+        {
+          "to": "the-nothing",
+          "kind": "opens-onto",
+          "at": "4"
+        }
       ]
     },
     {
-      "id": "carls-doomsday-scenario", "kind": "item", "name": "Carl's Doomsday Scenario",
-      "aka": ["the Doomsday Scenario"], "role": "Unstable custom explosive", "revealedAt": "2", "sort": 2,
+      "id": "carls-doomsday-scenario",
+      "kind": "item",
+      "name": "Carl's Doomsday Scenario",
+      "aka": [
+        "the Doomsday Scenario"
+      ],
+      "role": "Unstable custom explosive",
+      "revealedAt": "2:25",
+      "sort": 2,
       "tagline": "An explosion large enough to rattle the teeth of a god, and it detonates the instant it leaves his inventory.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
-          "headline": "Built by accident, during the Fools Who Broke the Glass",
-          "text": "Carl drops a Sheol Glass Reaper Case around a Soul Crystal that is about to go off and yanks the result into his inventory. The system rates it \"Pretty Damn Rare\" and files its status as Explosion Imminent, then adds: \"This item can no longer be stabilized.\"" },
-        { "kind": "use", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
-          "headline": "Forty-five kilometres wide",
-          "text": "The blast radius is about 45 km — enough to level a city and every suburb around it. He cannot drop it, sell it, or make it safe. It will detonate the millisecond it leaves him." },
-        { "kind": "use", "book": 2, "floor": 3, "at": "2:end", "confidence": "draft",
+        {
+          "kind": "use",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
+          "confidence": "draft",
           "headline": "Leverage before ordnance",
-          "text": "Its first real value is not the explosion. It is that everyone who matters now knows he is carrying it, and has to price that in." }
-      ],
-      "relations": [{ "to": "carl", "kind": "wielded-by", "at": "2" }]
-    },
-    {
-      "id": "crown-of-the-sepsis-whore", "kind": "item", "name": "Enchanted Crown of the Sepsis Whore",
-      "aka": ["the Crown"], "role": "Tiara · fleeting, unique", "revealedAt": "1", "sort": 3,
-      "tagline": "A tiara of dark smoky gems that quietly enrols the wearer in a royal succession eight floors below.",
-      "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
-          "headline": "Donut puts it on without reading it",
-          "text": "It comes out of the Legendary Quadruped Box she gets for being the first cat into the dungeon. Mordecai warns her. She equips it anyway. +5 Intelligence, +5 Good First Impression, and a 15% chance for any attack to inflict Sepsis." },
-        { "kind": "use", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
-          "headline": "The warning nobody read",
-          "text": "\"Placing this crown upon your head permanently places you within the royal line of succession for the Blood Sultanate on the ninth floor. Removing this item will not remove this status. Royal members of the Blood Sultanate will be required to slay the Sultan and all other members of the royal family before descending to the tenth floor. You'll only want to wear this if you're a blood-thirsty, raging psychopath.\"" },
-        { "kind": "use", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
-          "headline": "The bill arrives on the ninth floor",
-          "text": "Six books after a cat picked up a shiny hat, the obligation is due — and it cannot be discharged by taking the crown off." }
+          "text": "Its first real value is not the explosion. It is that everyone who matters now knows he is carrying it, and has to price that in."
+        },
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2:25",
+          "confidence": "verified",
+          "headline": "Built by accident, during the Fools Who Broke the Glass",
+          "text": "Carl drops a Sheol Glass Reaper Case around a Soul Crystal that is about to go off and yanks the result into his inventory. The system rates it \"Pretty Damn Rare\" and files its status as Explosion Imminent, then adds: \"This item can no longer be stabilized.\"",
+          "chapter": 25
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "floor": 3,
+          "at": "2:25",
+          "confidence": "verified",
+          "headline": "Forty-five kilometres wide",
+          "text": "The blast radius is about 45 km — enough to level a city and every suburb around it. He cannot drop it, sell it, or make it safe. It will detonate the millisecond it leaves him.",
+          "chapter": 25
+        }
       ],
       "relations": [
-        { "to": "princess-donut", "kind": "worn-by", "at": "1" },
-        { "to": "blood-sultanate", "kind": "binds-to", "at": "1" }
+        {
+          "to": "carl",
+          "kind": "wielded-by",
+          "at": "2"
+        }
       ]
     },
     {
-      "id": "dungeon-anarchists-cookbook", "kind": "item", "name": "The Dungeon Anarchist's Cookbook",
-      "aka": ["the Cookbook"], "role": "Document", "revealedAt": "3", "sort": 4,
+      "id": "crown-of-the-sepsis-whore",
+      "kind": "item",
+      "name": "Enchanted Crown of the Sepsis Whore",
+      "aka": [
+        "the Crown"
+      ],
+      "role": "Tiara · fleeting, unique",
+      "revealedAt": "1:7",
+      "sort": 3,
+      "tagline": "A tiara of dark smoky gems that quietly enrols the wearer in a royal succession eight floors below.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1:7",
+          "confidence": "verified",
+          "headline": "Donut puts it on without reading it",
+          "text": "It comes out of the Legendary Quadruped Box she gets for being the first cat into the dungeon. Mordecai warns her. She equips it anyway. +5 Intelligence, +5 Good First Impression, and a 15% chance for any attack to inflict Sepsis.",
+          "chapter": 7
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "floor": 1,
+          "at": "1:7",
+          "confidence": "verified",
+          "headline": "The warning nobody read",
+          "text": "\"Placing this crown upon your head permanently places you within the royal line of succession for the Blood Sultanate on the ninth floor. Removing this item will not remove this status. Royal members of the Blood Sultanate will be required to slay the Sultan and all other members of the royal family before descending to the tenth floor. You'll only want to wear this if you're a blood-thirsty, raging psychopath.\"",
+          "chapter": 7
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 25,
+          "at": "2:25",
+          "confidence": "verified",
+          "headline": "The crown is destroyed, and it changes nothing",
+          "text": "The third blast of the Over City's collapse destroys the Sepsis Crown outright. The succession is unaffected — the item said so on the tin: \"Removing this item will not remove this status.\" Donut is still in the Blood Sultanate's line with the crown in pieces."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
+          "headline": "The bill arrives on the ninth floor",
+          "text": "Six books after a cat picked up a shiny hat, the obligation is due — and it cannot be discharged by taking the crown off."
+        }
+      ],
+      "relations": [
+        {
+          "to": "princess-donut",
+          "kind": "worn-by",
+          "at": "1"
+        },
+        {
+          "to": "blood-sultanate",
+          "kind": "binds-to",
+          "at": "1"
+        }
+      ]
+    },
+    {
+      "id": "dungeon-anarchists-cookbook",
+      "kind": "item",
+      "name": "The Dungeon Anarchist's Cookbook",
+      "aka": [
+        "the Cookbook"
+      ],
+      "role": "Document",
+      "revealedAt": "3:8",
+      "sort": 4,
       "tagline": "A manual passed down by the crawlers of earlier seasons. Carl is its twenty-fifth holder.",
       "beats": [
-        { "kind": "origin", "book": 3, "floor": 4, "at": "3", "confidence": "verified",
-          "headline": "Twenty-four people had it first",
-          "text": "Proof that Earth is not the first season, that the show has run before, and that resistance to it has a written tradition — tested, recorded, and handed on." },
-        { "kind": "use", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+        {
+          "kind": "use",
+          "book": 3,
+          "floor": 4,
+          "at": "3",
+          "confidence": "draft",
           "headline": "It reframes the whole series",
-          "text": "Everything Carl does after reading it is the continuation of somebody else's work. That is the difference between a survivor and a movement." }
+          "text": "Everything Carl does after reading it is the continuation of somebody else's work. That is the difference between a survivor and a movement."
+        },
+        {
+          "kind": "origin",
+          "book": 3,
+          "floor": 4,
+          "at": "3:8",
+          "confidence": "verified",
+          "headline": "Twenty-four people had it first",
+          "text": "Proof that Earth is not the first season, that the show has run before, and that resistance to it has a written tradition — tested, recorded, and handed on.",
+          "chapter": 8
+        }
       ],
-      "relations": [{ "to": "carl", "kind": "held-by", "at": "3" }]
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "held-by",
+          "at": "3"
+        }
+      ]
     },
     {
-      "id": "enhanced-pet-biscuit", "kind": "item", "name": "Enhanced Pet Biscuit",
-      "aka": [], "role": "Consumable", "revealedAt": "1", "sort": 5,
+      "id": "enhanced-pet-biscuit",
+      "kind": "item",
+      "name": "Enhanced Pet Biscuit",
+      "aka": [],
+      "role": "Consumable",
+      "revealedAt": "1:5",
+      "sort": 5,
       "tagline": "Makes an animal sapient. Used once, on a cat, to enormous effect.",
       "beats": [
-        { "kind": "use", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "use",
+          "book": 1,
+          "floor": 1,
+          "at": "1:5",
+          "confidence": "verified",
           "headline": "Donut takes it out of his hand",
-          "text": "It arrives in the Legendary Pet Box Carl earns for being the first crawler to bring a cat down the stairs. She snatches it, melts into a furry heap of goo, and gets up talking. The single most consequential piece of loot in the series is a snack." }
+          "text": "It arrives in the Legendary Pet Box Carl earns for being the first crawler to bring a cat down the stairs. She snatches it, melts into a furry heap of goo, and gets up talking. The single most consequential piece of loot in the series is a snack.",
+          "chapter": 5
+        }
       ],
-      "relations": [{ "to": "princess-donut", "kind": "transformed", "at": "1" }]
+      "relations": [
+        {
+          "to": "princess-donut",
+          "kind": "transformed",
+          "at": "1"
+        }
+      ]
     },
     {
-      "id": "orchid-of-eileithyias-grace", "kind": "item", "name": "Orchid of Eileithyia's Grace",
-      "aka": ["the Orchid boon"], "role": "Consumable · boon", "revealedAt": "7", "sort": 6,
+      "id": "orchid-of-eileithyias-grace",
+      "kind": "item",
+      "name": "Orchid of Eileithyia's Grace",
+      "aka": [
+        "the Orchid boon"
+      ],
+      "role": "Consumable · boon",
+      "revealedAt": "6:19",
+      "sort": 6,
       "tagline": "Eat the flower, spend an hour at one percent health, and a goddess decides what you become.",
       "beats": [
-        { "kind": "origin", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Inside the Engaged Lock Box of the Night Wyrm",
-          "text": "The system's own description is characteristically unhelpful: \"It's a flower. You're supposed to eat it, though it might be a good decoration instead.\" Eating it drops the user unconscious for an hour at 1% of maximum health, unable to heal. Survive, and Eileithyia grants one of three permanent boons — her choice, not yours, unless you worship her first, in which case she will expand the descriptions and ask your preference. Her cooperation is not guaranteed." },
-        { "kind": "use", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "text": "The system's own description is characteristically unhelpful: \"It's a flower. You're supposed to eat it, though it might be a good decoration instead.\" Eating it drops the user unconscious for an hour at 1% of maximum health, unable to heal. Survive, and Eileithyia grants one of three permanent boons — her choice, not yours, unless you worship her first, in which case she will expand the descriptions and ask your preference. Her cooperation is not guaranteed."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
           "headline": "Katia's way out",
-          "text": "She takes it and leaves the crawl entirely, restored to human and missing parts of herself." }
+          "text": "She takes it and leaves the crawl entirely, restored to human and missing parts of herself."
+        }
       ],
-      "relations": [{ "to": "katia", "kind": "used-by", "at": "7:end" }]
+      "relations": [
+        {
+          "to": "katia",
+          "kind": "used-by",
+          "at": "7:end"
+        }
+      ]
     },
     {
-      "id": "the-nothing", "kind": "item", "name": "The Nothing",
-      "aka": [], "role": "Prison dimension", "revealedAt": "4", "sort": 7,
+      "id": "the-nothing",
+      "kind": "item",
+      "name": "The Nothing",
+      "aka": [],
+      "role": "Prison dimension",
+      "revealedAt": "4:24",
+      "sort": 7,
       "tagline": "The dimension the pantheon banished the old gods and demons into. The Gate's shortcuts run straight through it.",
       "beats": [
-        { "kind": "origin", "book": 4, "floor": 5, "at": "4", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 4,
+          "floor": 5,
+          "at": "4",
+          "confidence": "verified",
           "headline": "Where the feral gods come from",
-          "text": "Every teleport the Gate performs tears a hole through it, and every closing portal lets one of its inmates out on the opening side. The winding box on its own is a direct conduit — wound and fed a stream of charged energy, it can drop an entire location, up to a whole necropolis, into the void." }
+          "text": "Every teleport the Gate performs tears a hole through it, and every closing portal lets one of its inmates out on the opening side. The winding box on its own is a direct conduit — wound and fed a stream of charged energy, it can drop an entire location, up to a whole necropolis, into the void."
+        }
       ],
       "relations": []
     }

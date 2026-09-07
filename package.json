@@ -3,7 +3,9 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
-  "engines": { "node": ">=22.12.0" },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "ASTRO_DATABASE_FILE=./data/dcc.db astro dev --host 0.0.0.0",
     "build": "astro build",
@@ -11,7 +13,8 @@
     "astro": "astro",
     "content:build": "node scripts/build-content.mjs",
     "content:check": "node scripts/build-content.mjs --check",
-    "test:gate": "node --test scripts/test-gate.mjs"
+    "test:gate": "node --test scripts/test-gate.mjs",
+    "chapters:refresh": "node scripts/fetch-chapters.mjs"
   },
   "dependencies": {
     "@astrojs/db": "^0.20.0",
@@ -28,5 +31,7 @@
     "@astrojs/check": "^0.9.7",
     "typescript": "^5.9.3"
   },
-  "overrides": { "vite": "^7" }
+  "overrides": {
+    "vite": "^7"
+  }
 }

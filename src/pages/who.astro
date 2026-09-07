@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
-import { readPrefs } from '../lib/prefs';
-import { gateFor, reveals } from '../lib/spoiler';
-import { getEntities, getAllBeats, coverage, KIND_LABELS, KIND_ORDER } from '../lib/content';
+import { reveals } from '../lib/spoiler';
+import { getEntities, getAllBeats, coverage, readGate, KIND_LABELS, KIND_ORDER } from '../lib/content';
 import { parseAt } from '../lib/progress';
 
-const prefs = readPrefs(Astro.cookies);
-const gate = gateFor(prefs, prefs.spoilers, prefs.fresh);
+const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
 const [entities, beats] = await Promise.all([getEntities(), getAllBeats()]);
 
 const beatsByEntity = new Map<string, typeof beats>();

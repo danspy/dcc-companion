@@ -1,6 +1,7 @@
 import { db, Book, Floor, Entity, Beat, Relation, asc, eq, or } from 'astro:db';
-import { parseAt } from './progress';
-import type { Gate } from './spoiler';
+import type { AstroCookies } from 'astro';
+import { readPrefs, type Prefs } from './prefs';
+import { gateFor, type Gate } from './spoiler';
 
 /* Reads. The catalogue is small enough (8 books, 11 floors, a few dozen
    entities) that every list is fetched whole and filtered in memory — which
@@ -59,6 +60,19 @@ export const BEAT_LABELS: Record<string, string> = {
 /** How much of an entity a reader can currently see — drives the index badges. */
 export function coverage(beats: BeatRow[], gate: Gate) {
   const total = beats.length;
-  const shown = beats.filter(b => gate.frontier >= parseAt(b.at)).length;
+  const shown = beats.filter(b => gate.frontier >= b.sortKey).length;
   return { shown, total, complete: total > 0 && shown === total };
+}
+
+
+/**
+ * The one place a request turns into a gate. Every page calls this instead of
+ * assembling prefs + chapter count + gateFor itself, so "what does this reader
+ * get to see" has a single answer.
+ */
+export async function readGate(cookies: AstroCookies): Promise<{ prefs: Prefs; gate: Gate; chapters: number | null }> {
+  const prefs = readPrefs(cookies);
+  const books = await getBooks();
+  const chapters = books.find(b => b.id === prefs.book)?.chapters ?? null;
+  return { prefs, gate: gateFor(prefs, prefs.spoilers, prefs.fresh, chapters), chapters };
 }

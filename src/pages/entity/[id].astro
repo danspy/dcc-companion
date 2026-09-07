@@ -1,19 +1,17 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Sealed from '../../components/Sealed.astro';
-import { readPrefs } from '../../lib/prefs';
-import { gateFor, reveals } from '../../lib/spoiler';
+import { reveals } from '../../lib/spoiler';
 import {
   getEntity, getBeats, getRelations, getEntities, getFloors,
-  BEAT_LABELS, KIND_LABELS,
+  BEAT_LABELS, KIND_LABELS, readGate,
 } from '../../lib/content';
 
 const { id } = Astro.params;
 const entity = id ? await getEntity(id) : null;
 if (!entity) return Astro.redirect('/who', 302);
 
-const prefs = readPrefs(Astro.cookies);
-const gate = gateFor(prefs, prefs.spoilers, prefs.fresh);
+const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
 
 /* An entity the reader has not met yet is not rendered as a redacted page —
    the URL itself would confirm the name. Send them back to the index. */
@@ -50,7 +48,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
             <h2>Where it's used</h2>
             <ol class="log">
               {uses.map(b => {
-                const open = reveals(gate, b.at);
+                const open = gate.frontier >= b.sortKey;
                 const floor = b.floor ? floorById.get(b.floor) : null;
                 return (
                   <li class="entry">
@@ -68,7 +66,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
                         <p>{b.text}</p>
                         {b.confidence === 'draft' && <span class="draft">unverified</span>}
                       </div>
-                    ) : <Sealed at={b.at} compact />}
+                    ) : <Sealed at={b.sortKey} compact />}
                   </li>
                 );
               })}
@@ -81,7 +79,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
             <h2>{entity.kind === 'character' ? 'Arc' : 'History'}</h2>
             <ol class="log">
               {story.map(b => {
-                const open = reveals(gate, b.at);
+                const open = gate.frontier >= b.sortKey;
                 const floor = b.floor ? floorById.get(b.floor) : null;
                 return (
                   <li class="entry">
@@ -100,7 +98,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
                         <p>{b.text}</p>
                         {b.confidence === 'draft' && <span class="draft">unverified</span>}
                       </div>
-                    ) : <Sealed at={b.at} compact />}
+                    ) : <Sealed at={b.sortKey} compact />}
                   </li>
                 );
               })}

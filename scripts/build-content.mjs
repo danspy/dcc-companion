@@ -14,6 +14,17 @@ const read = p => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const checkOnly = process.argv.includes('--check');
 
 const { books, floors } = read('data/books.json');
+
+/* Chapter counts come from data/chapters.json (npm run chapters:refresh), not
+   from books.json — one source, refreshed on its own schedule. A book with no
+   entry keeps a null count, which switches the chapter dial off for it. */
+const chapterIndex = new Map(read('data/chapters.json').books.map(b => [b.book, b]));
+for (const b of books) {
+  const entry = chapterIndex.get(b.id);
+  b.chapters = entry ? entry.count : null;
+  b.divisions = entry ? entry.divisions : [];
+  b.chapterTitles = entry ? entry.titles : [];
+}
 const entities = ['characters', 'items', 'mechanics', 'factions', 'threads']
   .flatMap(f => read(`data/entities/${f}.json`).entities);
 
@@ -41,7 +52,9 @@ for (const e of entities) {
   for (const b of e.beats ?? []) {
     resolvedBeats.push({
       entityId: e.id, kind: b.kind, book: b.book, chapter: b.chapter ?? null,
-      floor: b.floor ?? null, at: b.at, sortKey: parseAt(b.at),
+      floor: b.floor ?? null, at: b.at,
+      // Gate inheritance: a beat can never surface before its own entity.
+      sortKey: Math.max(parseAt(b.at), entityAt),
       headline: b.headline, text: b.text, confidence: b.confidence ?? 'draft',
     });
   }
@@ -68,9 +81,11 @@ const snapshot = {
 };
 
 const drafts = resolvedBeats.filter(b => b.confidence === 'draft').length;
+const chapterTotal = books.reduce((a, b) => a + (b.chapters ?? 0), 0);
 const summary =
-  `${books.length} books · ${floors.length} floors · ${resolvedEntities.length} entities · ` +
-  `${resolvedBeats.length} beats (${drafts} draft) · ${resolvedRelations.length} relations`;
+  `${books.length} books · ${chapterTotal} chapters · ${floors.length} floors · ` +
+  `${resolvedEntities.length} entities · ${resolvedBeats.length} beats (${drafts} draft) · ` +
+  `${resolvedRelations.length} relations`;
 
 if (checkOnly) {
   console.log(`\nOK — ${summary}`);

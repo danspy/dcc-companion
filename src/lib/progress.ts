@@ -29,16 +29,26 @@ export const FRONTIER_ALL = (BOOK_COUNT + 1) * CHAPTER_STRIDE;
 
 export interface Position {
   book: number;
-  /** 0 means "somewhere in this book, unspecified". */
+  /** 0 means "no chapter given" — see frontierOf. */
   chapter: number;
-  /** true once the reader marks the book finished. */
-  finished: boolean;
 }
 
-export const DEFAULT_POSITION: Position = { book: 1, chapter: 0, finished: false };
+export const DEFAULT_POSITION: Position = { book: 1, chapter: 0 };
 
-export function frontierOf(pos: Position): number {
-  const chapter = pos.finished ? END_OF_BOOK : Math.max(0, pos.chapter | 0);
+/**
+ * An unspecified chapter means the reader has *finished* this book, not that
+ * they are on page one of it. "I'm on book 5" in normal speech means five books
+ * read, and the opening default — book 1, no chapter — has to unseal all of
+ * book 1 and nothing beyond it. Naming a chapter is how you say "actually, I'm
+ * only partway", and it is also what makes `X:end` tags resolve correctly: the
+ * last chapter of a book and "finished it" are the same position.
+ */
+export function frontierOf(pos: Position, chapters?: number | null): number {
+  const asked = Math.max(0, pos.chapter | 0);
+  const chapter =
+    asked === 0 ? END_OF_BOOK
+    : chapters && asked >= chapters ? END_OF_BOOK
+    : asked;
   return clampBook(pos.book) * CHAPTER_STRIDE + chapter;
 }
 

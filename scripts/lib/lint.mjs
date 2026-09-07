@@ -44,9 +44,17 @@ export function lint({ books, floors, entities }) {
       if (beatAt === null) continue;
 
       /* A beat that unlocks before its own entity is a leak: the reader gets
-         the fact without ever having been introduced to who it is about. */
+         the fact without ever having been introduced to who it is about.
+         Across books that is a curation mistake and fails the build. Within one
+         book it is usually a book-level tag sitting under a chapter-level
+         entity, which the build floors to the entity's own reveal — the same
+         inheritance relations already get. */
       if (beatAt < entityAt) {
-        errors.push(`${bw}: unlocks at "${b.at}" but ${e.id} is not revealed until "${e.revealedAt}"`);
+        if (bookOf(beatAt) < bookOf(entityAt)) {
+          errors.push(`${bw}: unlocks in book ${bookOf(beatAt)} but ${e.id} is not revealed until "${e.revealedAt}"`);
+        } else {
+          warnings.push(`floored — ${e.id}: "${b.headline}" tag "${b.at}" raised to "${e.revealedAt}"`);
+        }
       }
       if (b.book !== bookOf(beatAt)) {
         errors.push(`${bw}: declares book ${b.book} but its tag "${b.at}" resolves to book ${bookOf(beatAt)}`);
@@ -54,6 +62,16 @@ export function lint({ books, floors, entities }) {
       if (!bookIds.has(b.book)) errors.push(`${bw}: book ${b.book} is not published`);
       if (b.floor != null && !floors.some(f => f.id === b.floor)) {
         errors.push(`${bw}: floor ${b.floor} does not exist`);
+      }
+      /* A chapter-level tag has to name a chapter the book actually has,
+         or the content silently never unseals. */
+      const book = books.find(bk => bk.id === b.book);
+      const tagChapter = beatAt % 1000;
+      if (book?.chapters && tagChapter !== 999 && tagChapter > book.chapters) {
+        errors.push(`${bw}: tag "${b.at}" names chapter ${tagChapter}, but book ${b.book} has ${book.chapters}`);
+      }
+      if (b.chapter != null && book?.chapters && b.chapter > book.chapters) {
+        errors.push(`${bw}: chapter ${b.chapter} is past the end of book ${b.book} (${book.chapters})`);
       }
       if ((b.confidence ?? 'draft') === 'draft') {
         warnings.push(`draft — ${e.id}: ${b.headline}`);

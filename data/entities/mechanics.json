@@ -1,128 +1,306 @@
 {
   "entities": [
     {
-      "id": "the-transformation", "kind": "mechanic", "name": "The Transformation",
-      "aka": [], "role": "The end of Earth", "revealedAt": "1", "sort": 1,
+      "id": "the-transformation",
+      "kind": "mechanic",
+      "name": "The Transformation",
+      "aka": [],
+      "role": "The end of Earth",
+      "revealedAt": "1:1",
+      "sort": 1,
       "tagline": "Every man-made structure on Earth collapses at once. Everyone indoors dies.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "January 3rd",
-          "text": "It takes a minute. Then the System AI makes a planet-wide announcement opening Dungeon Crawler World: Earth, and staircases appear. The survivors are, almost without exception, the people who happened to be outside at the time — which is why the cast of this series is so weighted toward smokers, insomniacs and people chasing a pet." }
+          "text": "It takes a minute. Then the System AI makes a planet-wide announcement opening Dungeon Crawler World: Earth, and staircases appear. The survivors are, almost without exception, the people who happened to be outside at the time — which is why the cast of this series is so weighted toward smokers, insomniacs and people chasing a pet."
+        }
       ],
       "relations": []
     },
     {
-      "id": "eighteen-floors", "kind": "mechanic", "name": "Eighteen Floors, On a Clock",
-      "aka": [], "role": "Structure", "revealedAt": "1", "sort": 2,
+      "id": "eighteen-floors",
+      "kind": "mechanic",
+      "name": "Eighteen Floors, On a Clock",
+      "aka": [],
+      "role": "Structure",
+      "revealedAt": "1:1",
+      "sort": 2,
       "tagline": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "The deal",
-          "text": "Reach the bottom and humanity gets Earth back. Almost nobody is expected to. The clock is the one rule the dungeon never bends, because the collapse is the show's season structure." },
-        { "kind": "arc", "book": 3, "floor": 4, "at": "3", "confidence": "verified",
+          "text": "Reach the bottom and humanity gets Earth back. Almost nobody is expected to. The clock is the one rule the dungeon never bends, because the collapse is the show's season structure."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "floor": 4,
+          "at": "3",
+          "confidence": "verified",
           "headline": "The difficulty cliff at floor four",
-          "text": "The early floors are deliberately built to drown crawlers in low-tier loot and beginner skills. From the fourth floor on, boxes and achievements get dramatically harder to come by — the point where the show stops subsidising its cast." }
+          "text": "The early floors are deliberately built to drown crawlers in low-tier loot and beginner skills. From the fourth floor on, boxes and achievements get dramatically harder to come by — the point where the show stops subsidising its cast."
+        }
       ],
       "relations": []
     },
     {
-      "id": "dungeon-crawler-world", "kind": "mechanic", "name": "Dungeon Crawler World",
-      "aka": ["the show", "the broadcast"], "role": "The show", "revealedAt": "1", "sort": 3,
+      "id": "dungeon-crawler-world",
+      "kind": "mechanic",
+      "name": "Dungeon Crawler World",
+      "aka": [
+        "the show",
+        "the broadcast"
+      ],
+      "role": "The show",
+      "revealedAt": "1:4",
+      "sort": 3,
       "tagline": "The crawl is a television programme broadcast across the galaxy. The survivors are the cast.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Ratings are currency",
-          "text": "Ratings buy sponsors; sponsors send gold and loot; gold and loot buy another floor of life. Being entertaining is a survival stat, and production will bend the dungeon itself to get a better episode." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "draft",
+          "text": "Ratings buy sponsors; sponsors send gold and loot; gold and loot buy another floor of life. Being entertaining is a survival stat, and production will bend the dungeon itself to get a better episode."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "draft",
           "headline": "The audience can be turned",
-          "text": "The Hunting Grounds prove the format cuts both ways. A broadcast that humiliates the people who paid for it is still a broadcast, and production cannot switch it off without admitting why." }
+          "text": "The Hunting Grounds prove the format cuts both ways. A broadcast that humiliates the people who paid for it is still a broadcast, and production cannot switch it off without admitting why."
+        }
       ],
-      "relations": [{ "to": "borant-corporation", "kind": "produced-by", "at": "1" }]
+      "relations": [
+        {
+          "to": "borant-corporation",
+          "kind": "produced-by",
+          "at": "1"
+        }
+      ]
     },
     {
-      "id": "loot-boxes", "kind": "mechanic", "name": "Loot Boxes",
-      "aka": [], "role": "Economy", "revealedAt": "1", "sort": 4,
+      "id": "loot-boxes",
+      "kind": "mechanic",
+      "name": "Loot Boxes",
+      "aka": [],
+      "role": "Economy",
+      "revealedAt": "1:5",
+      "sort": 4,
       "tagline": "Six tiers: Bronze, Silver, Gold, Platinum, Legendary, Celestial — each dramatically rarer than the last.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Where boxes come from",
-          "text": "Achievements, bosses (Boss Boxes, scaling with the boss's rank), quests (Quest Boxes), and viewers (Fan Boxes and Benefactor Boxes). Boxes stay locked in the Awards and Boxes tab until the crawler reaches a safe room or guildhall, and then it is all-or-nothing — every accumulated box opens in sequence, lowest tier first." },
-        { "kind": "use", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "text": "Achievements, bosses (Boss Boxes, scaling with the boss's rank), quests (Quest Boxes), and viewers (Fan Boxes and Benefactor Boxes). Boxes stay locked in the Awards and Boxes tab until the crawler reaches a safe room or guildhall, and then it is all-or-nothing — every accumulated box opens in sequence, lowest tier first."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "The tiers cost the house real money",
-          "text": "Borant owes the Syndicate a tax on the tier of every non-sponsored box it awards, which is why the top tiers are so vanishingly rare. Across the entire history of the show only 2,145 Celestial boxes have ever been given out, and no single crawler has ever received more than four. Drops key to a crawler's race rather than their class, so a barbarian can easily end up holding a necromancer's staff." },
-        { "kind": "use", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "text": "Borant owes the Syndicate a tax on the tier of every non-sponsored box it awards, which is why the top tiers are so vanishingly rare. Across the entire history of the show only 2,145 Celestial boxes have ever been given out, and no single crawler has ever received more than four. Drops key to a crawler's race rather than their class, so a barbarian can easily end up holding a necromancer's staff."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Benefactor Boxes break the theme",
-          "text": "Only patrons can send them, and they are the one category that ignores the dungeon's fantasy dressing — a pulse rifle, powered armour, gear from the sponsor's own homeworld. A Bronze Benefactor Box outclasses a plain Gold Adventurer Box." },
-        { "kind": "use", "book": 2, "floor": 3, "at": "2:end", "confidence": "verified",
+          "text": "Only patrons can send them, and they are the one category that ignores the dungeon's fantasy dressing — a pulse rifle, powered armour, gear from the sponsor's own homeworld. A Bronze Benefactor Box outclasses a plain Gold Adventurer Box."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
+          "confidence": "verified",
           "headline": "The Celestial veto",
-          "text": "At the end of the third floor a quest reward is double-upgraded all the way to Celestial for 83 crawlers. Borant spends its single per-season veto to negate the prizes — but not before the crawler Quan Ch opens his, leaving Borant liable for it and triggering an expensive Syndicate court fight. The upgrade achievements responsible are patched out immediately." }
+          "text": "At the end of the third floor a quest reward is double-upgraded all the way to Celestial for 83 crawlers. Borant spends its single per-season veto to negate the prizes — but not before the crawler Quan Ch opens his, leaving Borant liable for it and triggering an expensive Syndicate court fight. The upgrade achievements responsible are patched out immediately."
+        }
       ],
-      "relations": [{ "to": "system-ai", "kind": "administered-by", "at": "1" }]
+      "relations": [
+        {
+          "to": "system-ai",
+          "kind": "administered-by",
+          "at": "1"
+        }
+      ]
     },
     {
-      "id": "compensated-anarchist", "kind": "mechanic", "name": "Compensated Anarchist",
-      "aka": [], "role": "Class · Carl", "revealedAt": "2", "sort": 5,
+      "id": "compensated-anarchist",
+      "kind": "mechanic",
+      "name": "Compensated Anarchist",
+      "aka": [],
+      "role": "Class · Carl",
+      "revealedAt": "2:2",
+      "sort": 5,
       "tagline": "A unique monk/rogue hybrid. Trapmaker, bomb-maker, social-media dynamo.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "The system's own description",
-          "text": "\"Will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" Carl takes it alongside the Primal race at class selection on the third floor." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+          "text": "\"Will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" Carl takes it alongside the Primal race at class selection on the third floor."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "verified",
           "headline": "Agent Provocateur",
-          "text": "The bomb-focused specialisation, taken on the sixth floor." }
+          "text": "The bomb-focused specialisation, taken on the sixth floor."
+        }
       ],
       "relations": []
     },
     {
-      "id": "former-child-actor", "kind": "mechanic", "name": "Former Child Actor",
-      "aka": [], "role": "Class · Donut", "revealedAt": "2", "sort": 6,
+      "id": "former-child-actor",
+      "kind": "mechanic",
+      "name": "Former Child Actor",
+      "aka": [],
+      "role": "Class · Donut",
+      "revealedAt": "2:1",
+      "sort": 6,
       "tagline": "A bard/rogue class that lets her pick a new class at every single level.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "Taken with the Cat race on the third floor",
-          "text": "Her constitution is far too low for melee, so she fights on charisma and spells. The per-level class pick is what turns her into a jack-of-all-trades rather than a novelty — and the reason a show cat ends up out-scaling most of the human crawlers." }
+          "text": "Her constitution is far too low for melee, so she fights on charisma and spells. The per-level class pick is what turns her into a jack-of-all-trades rather than a novelty — and the reason a show cat ends up out-scaling most of the human crawlers."
+        }
       ],
       "relations": []
     },
     {
-      "id": "desperado-club", "kind": "mechanic", "name": "The Desperado Club",
-      "aka": [], "role": "Institution", "revealedAt": "2", "sort": 7,
+      "id": "desperado-club",
+      "kind": "mechanic",
+      "name": "The Desperado Club",
+      "aka": [],
+      "role": "Institution",
+      "revealedAt": "1:19",
+      "sort": 7,
       "tagline": "The crawlers-only bar that persists between floors. Bouncer, house rules, and a stage.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 3,
+          "at": "1:19",
+          "confidence": "verified",
           "headline": "Entry is a tattoo",
-          "text": "Access comes with a Desperado Pass Tattoo — Carl's on his neck, Donut's on her right shoulder blade, glowing gold through the fur. It is the one place crawlers can reliably coordinate, which makes it the most dangerous room in the dungeon for the people running the show." }
+          "text": "Access comes with a Desperado Pass Tattoo — Carl's on his neck, Donut's on her right shoulder blade, glowing gold through the fur. It is the one place crawlers can reliably coordinate, which makes it the most dangerous room in the dungeon for the people running the show.",
+          "chapter": 19
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 8,
+          "at": "3:8",
+          "confidence": "verified",
+          "headline": "Hiring out of the Desperado",
+          "text": "On the fourth floor Carl and Donut hire Bomo and The Sledge out of the club and meet up with Elle and Imani there. It stops being a bar the moment it becomes a labour market."
+        }
       ],
       "relations": []
     },
     {
-      "id": "npcs-are-people", "kind": "mechanic", "name": "The NPCs Are People",
-      "aka": [], "role": "Revelation", "revealedAt": "4", "sort": 8,
+      "id": "npcs-are-people",
+      "kind": "mechanic",
+      "name": "The NPCs Are People",
+      "aka": [],
+      "role": "Revelation",
+      "revealedAt": "4:9",
+      "sort": 8,
       "tagline": "The dungeon's 'non-player characters' are populations with histories, families and scripts written for them.",
       "beats": [
-        { "kind": "origin", "book": 4, "floor": 5, "at": "4", "confidence": "draft",
+        {
+          "kind": "origin",
+          "book": 4,
+          "floor": 5,
+          "at": "4",
+          "confidence": "draft",
           "headline": "The bubbles are inhabited",
-          "text": "The fifth floor's pocket worlds hold whole civilisations — the Necropolis of Anser, the pazuzu town of Pandinus, a colony of dirigible gnomes — that were living there before any crawler arrived and will be there after." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+          "text": "The fifth floor's pocket worlds hold whole civilisations — the Necropolis of Anser, the pazuzu town of Pandinus, a colony of dirigible gnomes — that were living there before any crawler arrived and will be there after."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "verified",
           "headline": "Signet has a writers' room",
-          "text": "Tsarina Signet is the protagonist of a scripted Syndicate drama, Vengeance of the Daughter, with producers steering her grief and her vengeance for the audience. She is not a person the dungeon generated. She is a person the dungeon is doing this to." },
-        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "text": "Tsarina Signet is the protagonist of a scripted Syndicate drama, Vengeance of the Daughter, with producers steering her grief and her vengeance for the audience. She is not a person the dungeon generated. She is a person the dungeon is doing this to."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Juice Box tells them",
-          "text": "Under cover of the Larracos flood, Juice Box hides among the survivors and spreads word of what the NPCs truly are. It is the single most consequential thing anyone does on the ninth floor." },
-        { "kind": "arc", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "text": "Under cover of the Larracos flood, Juice Box hides among the survivors and spreads word of what the NPCs truly are. It is the single most consequential thing anyone does on the ninth floor."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
           "headline": "They organise",
-          "text": "Floor 9's NPCs form their own independent tenth faction. No season has ever recorded it, and the system has no procedure for it." }
+          "text": "Floor 9's NPCs form their own independent tenth faction. No season has ever recorded it, and the system has no procedure for it."
+        }
       ],
       "relations": []
     },
     {
-      "id": "no-respawns", "kind": "mechanic", "name": "Death Is Final Here",
-      "aka": [], "role": "Rules · Floor 9", "revealedAt": "7", "sort": 9,
+      "id": "no-respawns",
+      "kind": "mechanic",
+      "name": "Death Is Final Here",
+      "aka": [],
+      "role": "Rules · Floor 9",
+      "revealedAt": "7",
+      "sort": 9,
       "tagline": "On the ninth floor there are no respawns and no loopholes.",
       "beats": [
-        { "kind": "origin", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Thirty days, nine armies, one castle",
-          "text": "Roughly 32,000 conscripted crawlers and 50,000 retired ones against something like 100,000 armed enemies, fighting for Larracos at the centre of the map. Everything the series has spent six books making you care about is on a board where nothing comes back." }
+          "text": "Roughly 32,000 conscripted crawlers and 50,000 retired ones against something like 100,000 armed enemies, fighting for Larracos at the centre of the map. Everything the series has spent six books making you care about is on a board where nothing comes back."
+        }
       ],
       "relations": []
     }

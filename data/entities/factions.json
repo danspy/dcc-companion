@@ -1,69 +1,161 @@
 {
   "entities": [
     {
-      "id": "borant-corporation", "kind": "faction", "name": "The Borant Corporation",
-      "aka": ["Borant"], "role": "Producer", "revealedAt": "1", "sort": 1,
+      "id": "borant-corporation",
+      "kind": "faction",
+      "name": "The Borant Corporation",
+      "aka": [
+        "Borant"
+      ],
+      "role": "Producer",
+      "revealedAt": "1:1",
+      "sort": 1,
       "tagline": "Runs the show on the cheap, holds the foreclosure on Earth, and gets one veto per season.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "The foreclosure",
-          "text": "Borant claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal fig leaf and the revenue stream at the same time. It also employs its guides on indenture — Mordecai among them." },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2:end", "confidence": "verified",
+          "text": "Borant claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal fig leaf and the revenue stream at the same time. It also employs its guides on indenture — Mordecai among them."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
+          "confidence": "verified",
           "headline": "It burns its veto on 83 crawlers",
-          "text": "Rather than pay out 83 Celestial boxes, Borant spends its single per-season veto — and still ends up in Syndicate court over the one that got opened first. A production company that cheap is a production company with exploitable seams." }
+          "text": "Rather than pay out 83 Celestial boxes, Borant spends its single per-season veto — and still ends up in Syndicate court over the one that got opened first. A production company that cheap is a production company with exploitable seams."
+        }
       ],
-      "relations": [{ "to": "the-syndicate", "kind": "answers-to", "at": "1" }]
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "answers-to",
+          "at": "1"
+        }
+      ]
     },
     {
-      "id": "the-syndicate", "kind": "faction", "name": "The Syndicate",
-      "aka": [], "role": "Galactic order", "revealedAt": "1", "sort": 2,
+      "id": "the-syndicate",
+      "kind": "faction",
+      "name": "The Syndicate",
+      "aka": [],
+      "role": "Galactic order",
+      "revealedAt": "1:1",
+      "sort": 2,
       "tagline": "The body that makes all of this legal — and, occasionally, the venue where it can be fought.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Law, tax and standing",
-          "text": "It licenses the crawl, taxes Borant per loot-box tier, and runs the courts. Which means it is also the one institution in the setting that can be argued with." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5:end", "confidence": "draft",
+          "text": "It licenses the crawl, taxes Borant per loot-box tier, and runs the courts. Which means it is also the one institution in the setting that can be argued with."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5:end",
+          "confidence": "draft",
           "headline": "It starts paying attention",
-          "text": "After the Hunting Grounds, Carl and Donut are famous enough to be a Syndicate problem rather than a Borant one. Fame used to be protection. Now it is a target." },
-        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "text": "After the Hunting Grounds, Carl and Donut are famous enough to be a Syndicate problem rather than a Borant one. Fame used to be protection. Now it is a target."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Seven factions lose in court",
-          "text": "Seven of the nine Faction Wars factions sue to strip the Gate of the Feral Gods from Carl and are dismissed for lack of standing — which nets him seven Fight the Power achievements and demonstrates, on the record, that the machine can be beaten with its own paperwork." }
+          "text": "Seven of the nine Faction Wars factions sue to strip the Gate of the Feral Gods from Carl and are dismissed for lack of standing — which nets him seven Fight the Power achievements and demonstrates, on the record, that the machine can be beaten with its own paperwork."
+        }
       ],
       "relations": []
     },
     {
-      "id": "royal-court", "kind": "faction", "name": "The Royal Court of Princess Donut",
-      "aka": ["the Royal Court"], "role": "The party", "revealedAt": "1", "sort": 3,
+      "id": "royal-court",
+      "kind": "faction",
+      "name": "The Royal Court of Princess Donut",
+      "aka": [
+        "the Royal Court"
+      ],
+      "role": "The party",
+      "revealedAt": "1:7",
+      "sort": 3,
       "tagline": "Named by a cat on the first floor because she had the highest stat total and nobody could stop her.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1:7",
+          "confidence": "verified",
           "headline": "She renames the party",
-          "text": "Party leadership goes to the highest total stat points, which is Donut, and her first act is to rename it after herself. It is a joke that becomes a brand that becomes an actual source of power — because on this show, audience investment is the only currency that matters." }
+          "text": "Party leadership goes to the highest total stat points, which is Donut, and her first act is to rename it after herself. It is a joke that becomes a brand that becomes an actual source of power — because on this show, audience investment is the only currency that matters.",
+          "chapter": 7
+        }
       ],
       "relations": []
     },
     {
-      "id": "brynhilds-daughters", "kind": "faction", "name": "Brynhild's Daughters",
-      "aka": ["the Daughters"], "role": "Crawler group", "revealedAt": "2", "sort": 4,
+      "id": "brynhilds-daughters",
+      "kind": "faction",
+      "name": "Brynhild's Daughters",
+      "aka": [
+        "the Daughters"
+      ],
+      "role": "Crawler group",
+      "revealedAt": "1:20",
+      "sort": 4,
       "tagline": "Hekla's group, and the one Katia and Eva came in with.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "They carry Katia as far as they can",
-          "text": "The Daughters get Katia and Eva through a neighbourhood boss and a borough boss before class selection splits everyone up on the third floor." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "draft",
+          "text": "The Daughters get Katia and Eva through a neighbourhood boss and a borough boss before class selection splits everyone up on the third floor."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "draft",
           "headline": "The fracture",
-          "text": "The Masquerade is where the group's earlier choices come apart across Katia, Eva and Hekla." }
+          "text": "The Masquerade is where the group's earlier choices come apart across Katia, Eva and Hekla."
+        }
       ],
       "relations": []
     },
     {
-      "id": "blood-sultanate", "kind": "faction", "name": "The Blood Sultanate",
-      "aka": [], "role": "Ninth-floor power", "revealedAt": "1", "sort": 5,
+      "id": "blood-sultanate",
+      "kind": "faction",
+      "name": "The Blood Sultanate",
+      "aka": [],
+      "role": "Ninth-floor power",
+      "revealedAt": "1:7",
+      "sort": 5,
       "tagline": "A royal house on the ninth floor whose line of succession a cat joined by accident on floor one.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Named in the crown's warning",
-          "text": "Anyone in the Blood Sultanate's royal line must slay the Sultan and every other member of the royal family before they are permitted to descend to the tenth floor. Donut reads this after putting the crown on." }
+          "text": "Anyone in the Blood Sultanate's royal line must slay the Sultan and every other member of the royal family before they are permitted to descend to the tenth floor. Donut reads this after putting the crown on."
+        }
       ],
       "relations": []
     }

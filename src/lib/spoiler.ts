@@ -23,9 +23,14 @@ export interface Gate {
   fresh: boolean;
 }
 
-export function gateFor(pos: Position, spoilers: boolean, fresh = false): Gate {
+export function gateFor(
+  pos: Position,
+  spoilers: boolean,
+  fresh = false,
+  chapters?: number | null,
+): Gate {
   return {
-    frontier: spoilers ? frontierOf(pos) : FRONTIER_ALL,
+    frontier: spoilers ? frontierOf(pos, chapters) : FRONTIER_ALL,
     spoilers,
     fresh,
   };
