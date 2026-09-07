@@ -1,4 +1,5 @@
 import { parseAt, bookOf } from './gate.mjs';
+import { VOICES, ENTITY_VOICES, entityVoice, beatVoice } from './voice.mjs';
 
 /* ---------------------------------------------------------------------------
    The gate lint. Curated prose is written from knowledge, so this validates
@@ -54,10 +55,14 @@ export function lint({ books, floors, entities }) {
     .map(e => ({ name: e.name, at: at(e.revealedAt, `entity ${e.id}`) ?? 0,
                  re: new RegExp(`\\b${escapeRe(e.name)}\\b`, 'i') }));
 
-  /* One text, one reveal point: does it point past itself? */
-  const checkForward = (text, atValue, where) => {
+  /* One text, one reveal point: does it point past itself? A verbatim quotation
+     of something the reader has already seen in the book cannot point forward
+     by construction, and the book's own text does say "eventually" — so a
+     quotation skips the phrase heuristic and keeps the name check. That is a
+     rule about a category of text, not an exemption list for entries. */
+  const checkForward = (text, atValue, where, { quotation = false } = {}) => {
     if (!text) return;
-    const phrase = text.match(FORWARD_PHRASE);
+    const phrase = quotation ? null : text.match(FORWARD_PHRASE);
     if (phrase) {
       errors.push(`${where}: "${phrase[0]}" points past its own reveal point — split it, or gate it later`);
     }
@@ -73,6 +78,37 @@ export function lint({ books, floors, entities }) {
     if (!VALID_KINDS.has(e.kind)) errors.push(`${where}: unknown kind "${e.kind}"`);
     const entityAt = at(e.revealedAt, where);
     if (entityAt === null) continue;
+
+    /* Voice. A character speaks for themself unless marked as a dossier; nothing
+       else has a voice of its own. */
+    if (e.voice != null) {
+      if (e.kind !== 'character') errors.push(`${where}: voice "${e.voice}" — only a character speaks for itself`);
+      else if (!ENTITY_VOICES.has(e.voice)) errors.push(`${where}: voice must be "self" or "system", not "${e.voice}"`);
+    }
+    if (e.kind === 'character' && entityVoice(e) === 'self' && !e.voiceNote) {
+      warnings.push(`no voice note — ${e.id}: whoever writes the next beat in this voice needs one`);
+    }
+
+    /* Descriptions: the System's own words, quoted. A string is "safe from
+       revealedAt"; a list supersedes as the reader advances, like taglines. */
+    const descriptions = e.description == null ? []
+      : typeof e.description === 'string' ? [{ at: e.revealedAt, text: e.description }]
+      : e.description;
+    if (!Array.isArray(descriptions)) {
+      errors.push(`${where}: description must be a string or a list of { at, text }`);
+    } else {
+      let prevD = -1;
+      descriptions.forEach((d, i) => {
+        const dw = `${where} description ${i + 1}`;
+        const dAt = at(d.at, dw);
+        if (dAt === null) return;
+        if (!d.text) errors.push(`${dw}: no text`);
+        if (dAt < entityAt) warnings.push(`floored — ${e.id}: description ${i + 1} tag "${d.at}" raised to "${e.revealedAt}"`);
+        if (dAt <= prevD) errors.push(`${dw}: does not come after the one before it`);
+        prevD = dAt;
+        checkForward(d.text, Math.max(dAt, entityAt), dw, { quotation: true });
+      });
+    }
 
     /* Taglines: a string means "safe from revealedAt"; a list supersedes as the
        reader advances, and each entry is checked against its own point. */
@@ -100,6 +136,13 @@ export function lint({ books, floors, entities }) {
       if (!VALID_BEATS.has(b.kind)) errors.push(`${bw}: unknown beat kind "${b.kind}"`);
       if (!VALID_CONFIDENCE.has(b.confidence ?? 'draft')) {
         errors.push(`${bw}: confidence must be "verified" or "draft"`);
+      }
+      if (b.voice != null && !VOICES.has(b.voice)) errors.push(`${bw}: unknown voice "${b.voice}"`);
+      if (b.voice === 'self' && e.kind !== 'character') {
+        errors.push(`${bw}: voice "self" — only a character speaks for itself`);
+      }
+      if (b.kind === 'fate' && beatVoice(e, b) === 'self') {
+        errors.push(`${bw}: a fate cannot be in the character's own voice — the dungeon reports a death`);
       }
       const beatAt = at(b.at, bw);
       if (beatAt === null) continue;

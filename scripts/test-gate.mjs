@@ -206,3 +206,63 @@ test('a fate is reported by the dungeon, everything else follows the entity', ()
   assert.equal(beatVoice(gate, { kind: 'use' }), 'narrator');
   assert.equal(beatVoice(gate, { kind: 'fate' }), 'narrator');
 });
+
+const one = { id: 1, title: 'One', chapters: 47 };
+const mk = (over) => ({ id: 'x', kind: 'item', name: 'Thing', role: 'r', tagline: 't', revealedAt: '1:5', beats: [], relations: [], ...over });
+
+test('only a character may speak for itself', () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ voice: 'self' }),
+    mk({ id: 'y', beats: [{ kind: 'use', book: 1, at: '1:5', voice: 'self', headline: 'h', text: '' }] }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('only a character')).length, 2);
+});
+
+test("a fate in the character's own voice is an error", () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ kind: 'character', voiceNote: 'n', beats: [
+      { kind: 'fate', book: 1, at: '1:20', voice: 'self', headline: 'h', text: '' },
+      { kind: 'fate', book: 1, at: '1:21', headline: 'default is fine', text: '' },
+    ] }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('a fate')).length, 1);
+});
+
+test('an unknown voice is an error at either level', () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ kind: 'character', voice: 'shouting', voiceNote: 'n' }),
+    mk({ id: 'y', kind: 'character', voice: 'narrator', voiceNote: 'n' }),
+    mk({ id: 'z', beats: [{ kind: 'use', book: 1, at: '1:5', voice: 'loud', headline: 'h', text: '' }] }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('voice')).length, 3);
+});
+
+test('a speaking character without a voice note is a warning', () => {
+  const { errors, warnings } = lint({ books: [one], floors: [], entities: [
+    mk({ kind: 'character' }),
+    mk({ id: 'y', kind: 'character', voice: 'system' }),
+  ] });
+  assert.equal(errors.length, 0);
+  assert.equal(warnings.filter(w => w.includes('voice note')).length, 1);
+});
+
+test('a quoted description may say "later"; a summary may not; neither may name the unmet', () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ description: 'Feed it to your pet. Later you will wish you had not.' }),
+    mk({ id: 'y', tagline: 'Later it all goes wrong.' }),
+    mk({ id: 'z', description: 'Katia will love this.' }),
+    mk({ id: 'katia', kind: 'character', name: 'Katia', revealedAt: '1:30', voiceNote: 'n' }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('entity x')).length, 0);
+  assert.ok(errors.some(e => e.includes('entity y') && /later/i.test(e)));
+  assert.ok(errors.some(e => e.includes('entity z') && e.includes('Katia')));
+});
+
+test('descriptions are a list in reading order, floored to the entity', () => {
+  const { errors, warnings } = lint({ books: [one], floors: [], entities: [
+    mk({ description: [{ at: '1:5', text: 'a' }, { at: '1:4', text: 'b' }] }),
+    mk({ id: 'y', description: [{ at: '1:2', text: 'early' }] }),
+  ] });
+  assert.ok(errors.some(e => e.includes('entity x description 2')));
+  assert.ok(warnings.some(w => w.includes('y: description 1')));
+});
