@@ -547,7 +547,7 @@
       ],
       "revealedAt": "1:22",
       "sort": 6,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -570,7 +570,7 @@
       ],
       "revealedAt": "1:22",
       "sort": 7,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -595,7 +595,7 @@
       ],
       "revealedAt": "1:31",
       "sort": 8,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -613,7 +613,7 @@
       ],
       "revealedAt": "1:35",
       "sort": 9,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -633,7 +633,7 @@
       ],
       "revealedAt": "2:6",
       "sort": 10,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -653,7 +653,7 @@
       ],
       "revealedAt": "2:6",
       "sort": 11,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -673,7 +673,7 @@
       ],
       "revealedAt": "4:24",
       "sort": 12,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -701,7 +701,7 @@
       ],
       "revealedAt": "6:25",
       "sort": 13,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -719,7 +719,7 @@
       ],
       "revealedAt": "4:5",
       "sort": 14,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -742,7 +742,7 @@
       ],
       "revealedAt": "4:3",
       "sort": 15,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -760,7 +760,7 @@
       ],
       "revealedAt": "4:22",
       "sort": 16,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -778,7 +778,7 @@
       ],
       "revealedAt": "1:34",
       "sort": 17,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -796,7 +796,7 @@
       ],
       "revealedAt": "4:30",
       "sort": 18,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -824,7 +824,7 @@
       ],
       "revealedAt": "3:32",
       "sort": 19,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -852,7 +852,7 @@
       ],
       "revealedAt": "3:3",
       "sort": 20,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -882,7 +882,7 @@
       ],
       "revealedAt": "1:42",
       "sort": 21,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -905,7 +905,7 @@
       ],
       "revealedAt": "2:14",
       "sort": 22,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -938,7 +938,7 @@
       ],
       "revealedAt": "1:14",
       "sort": 23,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -966,7 +966,7 @@
       ],
       "revealedAt": "2:end",
       "sort": 24,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -989,7 +989,7 @@
       ],
       "revealedAt": "3:8",
       "sort": 25,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1007,7 +1007,7 @@
       ],
       "revealedAt": "5:3",
       "sort": 26,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1028,7 +1028,7 @@
       ],
       "revealedAt": "1:13",
       "sort": 27,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1048,7 +1048,7 @@
       ],
       "revealedAt": "1:1",
       "sort": 28,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1066,7 +1066,7 @@
       ],
       "revealedAt": "1:20",
       "sort": 29,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1084,7 +1084,7 @@
       ],
       "revealedAt": "2:21",
       "sort": 30,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1102,7 +1102,7 @@
       ],
       "revealedAt": "1:28",
       "sort": 31,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1122,7 +1122,7 @@
       ],
       "revealedAt": "1:1",
       "sort": 32,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1140,7 +1140,7 @@
       ],
       "revealedAt": "4:19",
       "sort": 33,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1170,7 +1170,7 @@
       ],
       "revealedAt": "7:11",
       "sort": 34,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1188,7 +1188,7 @@
       ],
       "revealedAt": "7:11",
       "sort": 35,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1213,7 +1213,7 @@
       ],
       "revealedAt": "6:5",
       "sort": 36,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1231,7 +1231,7 @@
       ],
       "revealedAt": "6:58",
       "sort": 37,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1259,7 +1259,7 @@
       ],
       "revealedAt": "4:25",
       "sort": 38,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1282,7 +1282,7 @@
       ],
       "revealedAt": "5:77",
       "sort": 39,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1307,7 +1307,7 @@
       ],
       "revealedAt": "5:20",
       "sort": 40,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1332,7 +1332,7 @@
       ],
       "revealedAt": "7:61",
       "sort": 41,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1355,7 +1355,7 @@
       ],
       "revealedAt": "7:61",
       "sort": 42,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1378,7 +1378,7 @@
       ],
       "revealedAt": "3:7",
       "sort": 43,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1401,7 +1401,7 @@
       ],
       "revealedAt": "1:42",
       "sort": 44,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1419,7 +1419,7 @@
       ],
       "revealedAt": "1:42",
       "sort": 45,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1442,7 +1442,7 @@
       ],
       "revealedAt": "4:3",
       "sort": 46,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -1465,7 +1465,7 @@
       ],
       "revealedAt": "5:10",
       "sort": 47,
-      "voice": "self",
+      "voice": "narrator",
       "descriptions": []
     },
     {
@@ -2289,7 +2289,7 @@
       "headline": "The Bahamas, with Brad",
       "text": "She went away for Christmas with her ex and posted the photograph. Carl ended it by phone days before the Transformation. Her cat, her family's breeding line and her shoes all go down the stairs without her.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "carl",
@@ -2328,7 +2328,7 @@
       "headline": "The first voice after the world ends",
       "text": "A minute after the Transformation it makes a planet-wide announcement: the dungeon has eighteen levels, and Earth can be reclaimed from the Borant Corporation by conquering it. Then the staircases appear. Every rule, notification and insult from here comes in its voice.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "the-transformation",
@@ -2497,7 +2497,7 @@
       "headline": "Loot is only semi-random",
       "text": "A box may be genuinely randomised, or it may be picked by hand to help or hurt a crawler for the sake of ratings. It also hands out insults on purpose — Carl's Bronze and Gold Asshole's Boxes, awarded on the first floor for killing non-combatants, are the template.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "blood-sultanate",
@@ -2601,7 +2601,7 @@
       "headline": "Safe rooms are not safe",
       "text": "The worst hazard on the early floors is the other survivors, and production is glad to broadcast it.",
       "confidence": "draft",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "dungeon-crawler-world",
@@ -2627,7 +2627,7 @@
       "headline": "Seen in the first episode",
       "text": "Dungeon Crawler World: Earth airs for the first time, and Carl and Donut see her on it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "desperado-club",
@@ -2653,7 +2653,7 @@
       "headline": "The mysterious Agatha",
       "text": "She is with the Meadow Lark group when Carl and Donut find them, fights the Ball of Swine alongside them, and then takes her leave.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "imani",
@@ -2666,7 +2666,7 @@
       "headline": "The good folks from Meadow Lark",
       "text": "Carl and Donut meet her with Yolanda Martinez, the Andrews brothers and the mysterious Agatha. Tales are exchanged and plans are made.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "meadow-lark",
@@ -2692,7 +2692,7 @@
       "headline": "The Ball of Swine",
       "text": "Brandon, Chris, Yolanda, Imani, Carl, Donut and Agatha take the boss down out of the redoubt. It is the first time the group fights as a group.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "le-mouvement",
@@ -2757,7 +2757,7 @@
       "headline": "Carl gets her inside",
       "text": "He hauls her into the safe room as the next episode tunnels through. Rage Elementals are announced shortly after.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "ferdinand",
@@ -2770,7 +2770,7 @@
       "headline": "Named in a drunken confession",
       "text": "Buzzed on a blended corpse, Donut tells Carl she loves him — almost as much as Bea and Ferdinand.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "dungeon-crawler-world",
@@ -2796,7 +2796,7 @@
       "headline": "She explains how the shows work",
       "text": "Carl meets his first Borant Dungeon Admin and manages to be civil. Zev walks them through crawler participation on Syndicate programmes. She, Donut and Mordecai then bond over Gossip Girl.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "li-jun",
@@ -2809,7 +2809,7 @@
       "headline": "Death Watch Extreme Dungeon Mayhem",
       "text": "The Maestro puts him and Zhang up against Brindled Vespas for the audience. Carl gambles on being too valuable to punish and gets them out, along with their boss and Li Jun's sister Li Na.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "li-na",
@@ -2822,7 +2822,7 @@
       "headline": "Death Watch Extreme Dungeon Mayhem",
       "text": "The Maestro bullies Li Jun and Zhang on air. Carl gambles on being too valuable to punish and gets them, their boss, and Li Jun's sister Li Na out of the Brindled Vespas.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "maestro",
@@ -2835,7 +2835,7 @@
       "headline": "Glurp, glurp",
       "text": "He bullies Li Jun and Zhang on air. Carl bets that the production will not dare touch him, and takes the whole group off the show alive.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "eighteen-floors",
@@ -2952,7 +2952,7 @@
       "headline": "Her advice makes the party",
       "text": "Donut's class and Mordecai's appointment both come from her, and Mordecai is not to know he was steered.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "princess-donut",
@@ -3017,7 +3017,7 @@
       "headline": "The circus in the Over City",
       "text": "His company is pitched in one of the city's districts when Carl and Donut scout it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "signet",
@@ -3030,7 +3030,7 @@
       "headline": "Met outside Grimaldi's circus",
       "text": "Carl and Donut scout Grimaldi's Traveling Circus as night falls and the mobs form up, and escape under magical mortar fire. She is on the other side of it. Her charisma runs past a hundred and projects an allure Carl can only break by snapping his own finger.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "signet",
@@ -3043,7 +3043,7 @@
       "headline": "Carl signs on to her show",
       "text": "He agrees to appear in Vengeance of the Daughter, which films on the sixth floor. He reads the Wisp Armor Spell book first, for protection against mind control.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "florin",
@@ -3056,7 +3056,7 @@
       "headline": "First time on the recap",
       "text": "He features alongside Miriam, Pony and Bianca. In the same broadcast GumGum tries to hand out a Sex Workers Who Fell from the Heavens Quest, and Mordecai tells her where to put it — \"You can't save them all.\"",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "brynhilds-daughters",
@@ -3082,7 +3082,7 @@
       "headline": "She goes on without her",
       "text": "They entered together. Class selection separated them, and she kept moving.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "hekla",
@@ -3095,7 +3095,7 @@
       "headline": "She asks them to take her",
       "text": "The Daughters carried Katia and Eva through a neighbourhood boss and a borough boss. When the levels stop adding up, Hekla is the one who asks.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "katia",
@@ -3147,7 +3147,7 @@
       "headline": "Out for their blood",
       "text": "The recap has her hunting Carl and Donut specifically.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "carls-doomsday-scenario",
@@ -3238,7 +3238,7 @@
       "headline": "He opens his before the veto lands",
       "text": "Eighty-three crawlers are owed Celestial boxes. Borant spends its one seasonal veto to void them and is a fraction too slow: his is already open, which leaves the company liable and in front of a Syndicate court.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "eighteen-floors",
@@ -3264,7 +3264,7 @@
       "headline": "A Scree riding Chris Andrews",
       "text": "Maggie comes back inside another crawler. Frank dies of it. Carl cuts her out, she goes for him, and Mongo finishes her.",
       "confidence": "draft",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "mongo",
@@ -3303,7 +3303,7 @@
       "headline": "On the recap",
       "text": "He shows up on the between-floors broadcast with Elle, Team Li Na, Ifechi, Florin, Miriam, Hekla and Lucia.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "recap-episodes",
@@ -3329,7 +3329,7 @@
       "headline": "The Prize Carousel",
       "text": "Carl's fan box triggers it, which introduces Chaco and sidelines Mordecai for a week. Carl takes a book as his prize.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "bomo",
@@ -3342,7 +3342,7 @@
       "headline": "Hired at the bar",
       "text": "Carl and Donut take him and The Sledge on at the Desperado, meet Elle and Imani there, and Donut orders a dirty Shirley in a bowl with extra cherries.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "carl",
@@ -3420,7 +3420,7 @@
       "headline": "A thousand stranded at 101",
       "text": "Hekla's team reaches the safe room asking for help with the crawlers stuck on the Vermillion line, his among them. A train is waiting at stop 60, and Katia intends to use her own body to do it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "ring-of-divine-suffering",
@@ -3446,7 +3446,7 @@
       "headline": "Same plan, other side of the Tangle",
       "text": "Carl's group means to blow every ghoul generator and finds her and Prepotente already attempting it from the far side.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "firas",
@@ -3459,7 +3459,7 @@
       "headline": "The desert quadrant",
       "text": "He and Louis are with Langley's team of car-salesman archers when Carl's group finds them.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "louis",
@@ -3472,7 +3472,7 @@
       "headline": "The desert quadrant",
       "text": "Carl's team goes looking for other crawlers and finds him with Firas, and Langley's team of car-salesman archers. They fight a Thorny Devil and a Gnomish Drop Bear on the way to the Bactrian town, and fall back.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "prepotente",
@@ -3485,7 +3485,7 @@
       "headline": "Debuff stacking, ruined",
       "text": "Highlights from the previous floor show him and Miriam Dom stacking debuffs on a boss with real precision, and Quan Ch wrecking the plan.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "quan-ch",
@@ -3498,7 +3498,7 @@
       "headline": "He wrecks the debuff stack",
       "text": "The recap shows Miriam Dom and Prepotente working a boss down with stacked debuffs, and Quan Ch ruining it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "juice-box",
@@ -3511,7 +3511,7 @@
       "headline": "Louis brings her",
       "text": "The other crawlers in the quadrant find Carl's group, and Louis has her with him. Mordecai gives Louis and Firas a rapid detox.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "gate-of-the-feral-gods",
@@ -3563,7 +3563,7 @@
       "headline": "He cannot prove it was on purpose",
       "text": "Carl and Donut are teleported to the Desperado Club to answer for Loita. He cannot establish that they meant it, so he has to release them — and they work out they have been out of the dungeon longer than they thought.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "katia",
@@ -3589,7 +3589,7 @@
       "headline": "He opens the valve",
       "text": "With Gwen he opens a valve and floods the place while Carl and Donut are trapped under the sand.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "gate-of-the-feral-gods",
@@ -3641,7 +3641,7 @@
       "headline": "The head from Ghazi's castle",
       "text": "The Lika doll head Carl took out of Ghazi's castle un-crystallises into a withering spirit. She is half the soul of Psamathe, left like this by her own attempt to get out of the Nothing. They hire her.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "the-nothing",
@@ -3667,7 +3667,7 @@
       "headline": "Two new crawlers",
       "text": "She and Vadim fall in with the team. In the same conversation Katia tells Carl that pregnant women cannot enter the dungeon, and that nobody inside it can become pregnant.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "gate-of-the-feral-gods",
@@ -3693,7 +3693,7 @@
       "headline": "One of the three who go through the Gate",
       "text": "He, Carl and Katia kill Lusca and her babies. Then Carl opens the Gate and takes the three of them out of the water quadrant, and a feral god comes through behind them.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "gate-of-the-feral-gods",
@@ -3732,7 +3732,7 @@
       "headline": "A quest to bring Orthrus home",
       "text": "Carl and Donut fly a plane and use Meat Hooks to lead Orthrus clear, with a quest to bring the creature to Emberus — and a conflicting quest offered against it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "carl",
@@ -3758,7 +3758,7 @@
       "headline": "Summoned by a celestial grenade",
       "text": "With the plane coming down and Quan Ch about to finish him, Carl takes Emberus as patron and throws the grenade. The god arrives where Carl is and makes him briefly unkillable. Emberus and Orthrus find each other and go.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "quan-ch",
@@ -3771,7 +3771,7 @@
       "headline": "The plane, and the grenade",
       "text": "He has Carl beaten in a crashing aircraft when Carl worships Emberus and throws the celestial grenade.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "juice-box",
@@ -3784,7 +3784,7 @@
       "headline": "Waiting on the last stage",
       "text": "She is with Carl and Donut when they hold for the final part of the plan, while Katia goes for the water quadrant.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "samantha",
@@ -3797,7 +3797,7 @@
       "headline": "Her mother comes when called",
       "text": "The feral demon Slit comes hunting her, so they let her out of the safe room to fight it. What answers is her mother, who kills Slit.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "carl",
@@ -3836,7 +3836,7 @@
       "headline": "He named her Tsarina",
       "text": "He pulled her out of the hands of the High Elves when she was a child and raised her in the circus. She grew up and fell in love with him. When she told him she would have been a tsarina had she been full-blooded Naiad, he made it her name.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "hekla",
@@ -3849,7 +3849,7 @@
       "headline": "The Daughters come apart",
       "text": "What she decided earlier catches up with her, Katia and Eva on the Hunting Grounds.",
       "confidence": "draft",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "npcs-are-people",
@@ -3875,7 +3875,7 @@
       "headline": "Borant would like the Gate back",
       "text": "On the Hunting Grounds he passes on the request: hand the Gate of the Feral Gods over voluntarily until the ninth floor. Carl asks for a lawyer.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "scolopendra",
@@ -3901,7 +3901,7 @@
       "headline": "Daughter of King Finian, and of nobody",
       "text": "Her father rules the High Elves of the Liana Sector. Her mother was a Naiad princess, murdered, after which the Confederacy took the Naiad crown and Signet was exiled by both halves of her family. Grimaldi's circus took her in as a child. The programme built around all of this is watched across the galaxy.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "signet",
@@ -3914,7 +3914,7 @@
       "headline": "Blood magic, cast on a loser",
       "text": "She raises Blood and Ink Elementals out of the tattoos moving under her skin. To make one she sets two creatures against each other and casts on whichever she judges will lose, before it takes a single injury — and she may not bleed the sacrifice herself. Only a killing blow releases what she needs. One summoning a night.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "signet",
@@ -3927,7 +3927,7 @@
       "headline": "Her loyalty does not extend to crawlers",
       "text": "She tries to use Carl as an involuntary blood sacrifice, puts Donut under the Water Lily Spell, and forces Carl to help her reach the cursed circus. Everything she has goes to the family that took her in.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "bomo",
@@ -3940,7 +3940,7 @@
       "headline": "Part of the price of the Gate",
       "text": "Quasar bargains Carl's temporary surrender of the Gate for four free mercenaries — Bomo, the Sledge, Clay-ton and Very Sullen — plus two spells given to Bomo and the Sledge that reproduce two of the Gate's abilities.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "quasar",
@@ -3953,7 +3953,7 @@
       "headline": "The deal for the Gate",
       "text": "She arrives and negotiates: the Gate goes back temporarily, and in return four mercenaries come free and two spells reproducing the Gate's abilities go to Bomo and the Sledge.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "bomo",
@@ -3966,7 +3966,7 @@
       "headline": "He moves them to the stairwell",
       "text": "With the hunters about to be released, he teleports Carl and Donut to the stairwell in Zockau.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "carl",
@@ -4018,7 +4018,7 @@
       "headline": "A vampire now",
       "text": "The Hunting Grounds change what she is. In the same stretch Mordecai warns Carl off the Ring of Divine Suffering, on the grounds that it is addictive.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "ring-of-divine-suffering",
@@ -4044,7 +4044,7 @@
       "headline": "She reminds him the contract stands",
       "text": "On the Hunting Grounds she points out that his agreement with Vengeance of the Daughter is still in effect. Nothing signed on an earlier floor stops mattering.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "samantha",
@@ -4057,7 +4057,7 @@
       "headline": "She wants her body back",
       "text": "She screams to be taken to Signet, who she insists can restore her. Carl agrees to bring her if she will be quiet.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "imogen",
@@ -4070,7 +4070,7 @@
       "headline": "Lexis, speaking for Odette",
       "text": "The word is that she will most likely turn out to be a repurposed human — and with Bea accounted for, nobody is certain which one.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "ferdinand",
@@ -4083,7 +4083,7 @@
       "headline": "Familiar to Queen Imogen",
       "text": "The party runs into the High Elves, and the queen's familiar is Ferdinand. He attacks Mongo. Donut takes the blast in front of him and lives only because of her cockroach ability.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "imogen",
@@ -4096,7 +4096,7 @@
       "headline": "Her familiar is Ferdinand",
       "text": "He attacks Mongo. Donut takes the blast in front of him and survives on her cockroach ability.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "dungeon-anarchists-cookbook",
@@ -4122,7 +4122,7 @@
       "headline": "What is inside Lucia",
       "text": "He comforts her, and tells the others there are multiple presences in her head, other children among them, and that the dog is central to whatever is happening.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "lucia-mar",
@@ -4135,7 +4135,7 @@
       "headline": "More than one of her in there",
       "text": "Florin says there are several presences in her head, other children among them, and that the dog matters.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "lucia-mars-children",
@@ -4161,7 +4161,7 @@
       "headline": "Mongo and Kiwi",
       "text": "In the all-out battle around the submerged castle they take him down. Signet's tattoos are made permanently alive in the same fight, along with an incomplete flesh golem of her mother, which Carl puts in his inventory.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "britney",
@@ -4174,7 +4174,7 @@
       "headline": "Badly burned",
       "text": "Donut wakes Carl with the night's accounting: Firas and the Popovs dead, Britney's face burned.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "eva",
@@ -4187,7 +4187,7 @@
       "headline": "Katia kills her",
       "text": "On the last night of the Hunting Grounds it is settled.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "firas",
@@ -4200,7 +4200,7 @@
       "headline": "Dead, with the Popovs",
       "text": "Donut brings Carl the night's count.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "imogen",
@@ -4213,7 +4213,7 @@
       "headline": "Her crystal changes hands",
       "text": "Osvaldo takes it off her.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "memorial-crystal",
@@ -4239,7 +4239,7 @@
       "headline": "He takes Imogen's crystal",
       "text": "Prepotente goes after him for it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "prepotente",
@@ -4252,7 +4252,7 @@
       "headline": "He shatters the seventh floor",
       "text": "The Great Race was rushed in as a Valtay-funded replacement and it was structurally compromised. Minutes after it opened he broke the entire circuit of glass tunnels into fine dust. Not one crawler entered the maze. Not one mob, NPC or boss was ever met on it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "mordecai",
@@ -4278,7 +4278,7 @@
       "headline": "Her price is the truth",
       "text": "Huanxin Jinx trades help for putting Odette in as adjutant, and Odette's own price is the old catastrophe involving Huanxin, Mordecai and Uzzi.",
       "confidence": "draft",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "sister-ines",
@@ -4291,7 +4291,7 @@
       "headline": "Hostile, and fairly so",
       "text": "Carl and Donut meet her with Paz Lo and Anton Lopez. The group has heard Donut say she would murder any Cat Girl she came across. It takes some clearing up.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "sister-ines",
@@ -4304,7 +4304,7 @@
       "headline": "Pueblo de los Olvidados",
       "text": "They take the mandatory quest in a corrupted town. Paz's Santero class aggravates the undead, and they fight ghommids the whole way out.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "orchid-of-eileithyias-grace",
@@ -4330,7 +4330,7 @@
       "headline": "A new friend who can cast it",
       "text": "On the Ghosts of Earth she has found Shi Maria, who she says can work the spell that gives her a body.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "princess-donut",
@@ -4356,7 +4356,7 @@
       "headline": "Carl sees through the act",
       "text": "She has been performing for Samantha's benefit. Carl reads it, and makes a different deal: she lets them turn her into a card, and they get her to the next floor.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "shi-maria",
@@ -4369,7 +4369,7 @@
       "headline": "She wins the floor",
       "text": "Against the Reminiscence Hydra of Malicious Compliance and its totems — Alpha Male Carl and King Croissant — she does most of the work. Carl looks away at the wrong moment.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "amayon",
@@ -4382,7 +4382,7 @@
       "headline": "Announced in an area message",
       "text": "The Madre de Aguas dies and returns as a zombie, and the demon prince is named in the same breath.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "sister-ines",
@@ -4395,7 +4395,7 @@
       "headline": "She will not let them leave",
       "text": "She messages the party at Imani's exit in the church: she cannot let them through — but she can save them, if they come to her.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "demon-eviction",
@@ -4421,7 +4421,7 @@
       "headline": "Amayon fights her control",
       "text": "The demon prince, in a giant snake's body, tries to cast his way home while she holds him. Exits everywhere are failing at the same time.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "elle-mcgibbons",
@@ -4434,7 +4434,7 @@
       "headline": "At the church with the rest",
       "text": "By the Ghosts of Earth she reaches the church with her own squad, alongside Katia, Imani and Li Na's people — all of them there on Doggy Door upgrades Lucia handed out before she went down the stairs.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "li-na",
@@ -4447,7 +4447,7 @@
       "headline": "Her squad reaches the church",
       "text": "She, Katia, Elle and Imani converge there on Doggy Door upgrades Lucia handed round before descending.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "personal-spaces",
@@ -4473,7 +4473,7 @@
       "headline": "A timer on a global teleport",
       "text": "The Missing Piece quest updates to say they succeeded, and starts counting down to when his spell goes off.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "carl",
@@ -4551,7 +4551,7 @@
       "headline": "Donut wears his cloak",
       "text": "She puts it on and takes the benefits, along with the Tiara of a Thousand Lights out of a celestial box from Long Haul Biological Waste Management Solutions.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "tiara-of-a-thousand-lights",
@@ -4590,7 +4590,7 @@
       "headline": "Through the portal with the water",
       "text": "When Larracos floods she goes through with it, hides among the survivors, and tells the NPCs what they are.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "npcs-are-people",
@@ -4629,7 +4629,7 @@
       "headline": "In the Princess Posse",
       "text": "Carl and Donut walk into the HQ to find Rosetta, Tipid, Justice Light and fifty thousand other former crawlers signed up. Carl gets emotional.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "princess-posse",
@@ -4655,7 +4655,7 @@
       "headline": "Doctor Hu, and the Crawler Project",
       "text": "He fills Carl in on both. Retired crawlers know things current ones are never told.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "princess-posse",
@@ -4681,7 +4681,7 @@
       "headline": "Blood bar rules are back",
       "text": "He warns that they apply in safe rooms again, while the NPCs, mercenaries and former crawlers dig in.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "shi-maria",
@@ -4694,7 +4694,7 @@
       "headline": "Inside him, and not staying quiet",
       "text": "Stockade tries to pull Carl bodily to his position while Mordecai tries to force Shi Maria out of him. What comes of it is her rampage through the Lemig base, which the adjutant Panford is left to explain.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "spider-in-carls-chest",
@@ -4720,7 +4720,7 @@
       "headline": "Killed by the Blood Hunter show, and answered for",
       "text": "Most of the Naga army turns up dead on the ninth floor. Prepotente killed them, as payment for the programme that killed her.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "prepotente",
@@ -4733,7 +4733,7 @@
       "headline": "He kills the Naga army",
       "text": "Elle reports most of it already dead. He did it for Miriam Dom.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "li-jun",
@@ -4746,7 +4746,7 @@
       "headline": "Holding the doors at Club Vanquisher",
       "text": "He, Bautista and Zhang keep the path open while Katia, Carl, Prepotente and Samantha break in with a wire long enough to extend Li Na's auras.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "demon-eviction",
@@ -4772,7 +4772,7 @@
       "headline": "Summoned, and a demon eviction starts",
       "text": "She arrives in the realm in the middle of the Reaver fighting.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "osvaldo",
@@ -4785,7 +4785,7 @@
       "headline": "A giant rainbow in the Madness territory",
       "text": "Apito's memorial crystal shows up in his hands, and he is in none of the Faction Wars armies. It gives Carl's group away.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "eris",
@@ -4798,7 +4798,7 @@
       "headline": "The Ceremony of Chaos",
       "text": "Nearly everyone on the field freezes. Carl does not — his Mind Balance reaches level 16 as the Viceroys throw their mind magic at him.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "akuma",
@@ -4811,7 +4811,7 @@
       "headline": "Sharing a command he did not ask for",
       "text": "The War Mage Rebellion holds Larracos castle and wins if it keeps it six hours. Baroness Victory names him and Agatha co-warlords. He is upset about it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "agatha",
@@ -4824,7 +4824,7 @@
       "headline": "Akuma's warning",
       "text": "Warlord Akuma tells the Warlord Chat that the War Mages are leaving the floor with the Scavenger's Daughter — and warns Carl and Donut that Agatha is an enemy to all of them.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "agatha-enemy",
@@ -4850,7 +4850,7 @@
       "headline": "He leaves, and warns them on the way",
       "text": "The War Mages quit the floor with the Scavenger's Daughter. He tells the Warlord Chat that Agatha is an enemy to all of them.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "scavengers-daughter",
@@ -4902,7 +4902,7 @@
       "headline": "He opens every cell",
       "text": "He releases all of the gods.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "katia",
@@ -4928,7 +4928,7 @@
       "headline": "One hundred and twenty thousand",
       "text": "Her body holds more than 120,000 human children. Nobody has said what for.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "lucia-mars-children",
@@ -5019,7 +5019,7 @@
       "headline": "Dead, and the Nothing with him",
       "text": "The tenth floor opens on the news. 5,501 crawlers remain.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "system-glitches",
@@ -5058,7 +5058,7 @@
       "headline": "The trap that broke the Nothing",
       "text": "Among the Caprids, trading question for question, one of them explains what Justice Light actually did.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "li-na",
@@ -5071,7 +5071,7 @@
       "headline": "The Garden of Deliverance",
       "text": "With the transfer to the Pineapple Cabaret working, her Dread is what watches over every crawler sent across.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "tipid",
@@ -5084,7 +5084,7 @@
       "headline": "Do not kill the shells",
       "text": "In an apartment full of Human Shells of Tran's dead parents, he stops them. Each apartment is a what-if, and the AI is explicit about it.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "britney",
@@ -5097,7 +5097,7 @@
       "headline": "She kills Osvaldo at the portals",
       "text": "Carl blows a path to the roof where the portals to the eleventh floor are waiting. Osvaldo runs for it. She stops him, and takes Ysalte's memorial crystal.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "osvaldo",
@@ -5110,7 +5110,7 @@
       "headline": "Shot down at the portals",
       "text": "Carl tries one last time to get him to take a deal. Britney settles it on the roof.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "imani",
@@ -5123,7 +5123,7 @@
       "headline": "She holds the portal open",
       "text": "On the tenth floor she re-opens the portal so Louis and the crawlers from the multi-crawler heats can come through, while the rest cross the finish line and take the stairs.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "louis",
@@ -5136,7 +5136,7 @@
       "headline": "Out through Imani's portal",
       "text": "On the racing floor he and the other crawlers from the multi-crawler heats come through the portal Imani holds open.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "chaco",
@@ -5149,7 +5149,7 @@
       "headline": "He cannot get through the script",
       "text": "Too frightened to continue, and the AI takes his wings off and pulls Grigori onstage to speak through instead.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "the-ai-is-a-primal",
@@ -5175,7 +5175,7 @@
       "headline": "Every inventory swaps at once",
       "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut receives Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit.",
       "confidence": "verified",
-      "voice": "self"
+      "voice": "narrator"
     },
     {
       "entityId": "scavengers-daughter",
@@ -5201,7 +5201,7 @@
       "headline": "A memorial crystal made by his death",
       "text": "After the last boss falls, Carl finds one that came from Emberus dying.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "florin",
@@ -5214,7 +5214,7 @@
       "headline": "Carried down",
       "text": "The stairwells to the twelfth floor open, and Lucia takes him down them unconscious.",
       "confidence": "verified",
-      "voice": "system"
+      "voice": "narrator"
     },
     {
       "entityId": "memorial-crystal",

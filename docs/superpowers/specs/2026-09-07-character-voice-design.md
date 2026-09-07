@@ -38,9 +38,15 @@ paragraph with narrator beats below it (cheaper, not what was asked for).
 
 | voice | who speaks | where |
 |---|---|---|
-| `self` | the character, first person, present tense, in their register | default for every character beat |
+| `self` | the character, first person, present tense, in their register | default for every beat of a character who has a `voiceNote` |
 | `system` | the AI, in the mono `*** ... ***` register the seals already use | every `fate` beat; whole pages for characters the book gives too few lines to voice honestly |
 | `narrator` | the wry third person that exists today | items, mechanics, factions, threads; any beat explicitly marked so |
+
+A character speaks for themself only once a `voiceNote` exists. Until then the narrator
+keeps the whole page, fate included, so the half-converted cast never shows third-person
+prose behind a quotation mark; the lint's "no voice note" warning is the migration queue.
+(Refined after the proof batch: the first version defaulted every character to `self`, and
+the cast list showed 42 narrator taglines as if spoken.)
 
 A dead crawler does not narrate their own death, and a notice from the dungeon is
 exactly how a death is reported in the crawl. So fates are `system` by default and
@@ -71,7 +77,8 @@ cast list on `/who` becomes a chorus. Progressive taglines stay progressive.
 }
 ```
 
-- `voice` on a **character**: `self` (default) or `system`. Not allowed on other kinds.
+- `voice` on a **character**: `self` or `system`. When absent, `self` if a `voiceNote` exists,
+  otherwise `narrator`. Not allowed on other kinds.
 - `voiceNote` on a character: two or three lines for whoever writes in that voice next.
   Committed, because it is editorial guidance, and dropped from the snapshot, because
   it is not content.
@@ -104,9 +111,10 @@ or, for an item whose text changes when it is upgraded (tags illustrative):
 ### Effective voice (resolved in the build)
 
 ```
-entityVoice(e)  = e.kind === 'character' ? (e.voice ?? 'self') : 'narrator'
+entityVoice(e)  = e.kind === 'character' ? (e.voice ?? (e.voiceNote ? 'self' : 'narrator')) : 'narrator'
 beatVoice(e, b) = b.voice
-               ?? (e.kind === 'character' && b.kind === 'fate' ? 'system' : entityVoice(e))
+               ?? (e.kind === 'character' && b.kind === 'fate' && entityVoice(e) !== 'narrator'
+                     ? 'system' : entityVoice(e))
 ```
 
 This lives in `scripts/lib/voice.mjs`, a pure module like `gate.mjs`, so

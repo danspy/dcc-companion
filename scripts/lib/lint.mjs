@@ -85,8 +85,8 @@ export function lint({ books, floors, entities }) {
       if (e.kind !== 'character') errors.push(`${where}: voice "${e.voice}" — only a character speaks for itself`);
       else if (!ENTITY_VOICES.has(e.voice)) errors.push(`${where}: voice must be "self" or "system", not "${e.voice}"`);
     }
-    if (e.kind === 'character' && entityVoice(e) === 'self' && !e.voiceNote) {
-      warnings.push(`no voice note — ${e.id}: whoever writes the next beat in this voice needs one`);
+    if (e.kind === 'character' && e.voice !== 'system' && !e.voiceNote) {
+      warnings.push(`no voice note — ${e.id}: the narrator keeps this page until there is one`);
     }
 
     /* Descriptions: the System's own words, quoted. A string is "safe from

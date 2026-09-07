@@ -187,22 +187,29 @@ test('choosing book 1 is what unseals book 1', () => {
   assert.ok(frontierOf({ book: 0, chapter: 0 }, 47) < parseAt('1:2'));
 });
 
-test('a character speaks for itself unless told otherwise; nothing else does', () => {
-  const carl = { id: 'carl', kind: 'character' };
+test('a character speaks for itself once there is a voice sheet; nothing else does', () => {
+  const carl = { id: 'carl', kind: 'character', voiceNote: 'deadpan' };
+  const unwritten = { id: 'zev', kind: 'character' };
   const dossier = { id: 'quasar', kind: 'character', voice: 'system' };
   const gate = { id: 'gate', kind: 'item' };
   assert.equal(entityVoice(carl), 'self');
+  assert.equal(entityVoice(unwritten), 'narrator');
   assert.equal(entityVoice(dossier), 'system');
   assert.equal(entityVoice(gate), 'narrator');
   assert.deepEqual([...VOICES].sort(), ['narrator', 'self', 'system']);
 });
 
 test('a fate is reported by the dungeon, everything else follows the entity', () => {
-  const carl = { id: 'carl', kind: 'character' };
+  const carl = { id: 'carl', kind: 'character', voiceNote: 'deadpan' };
+  const unwritten = { id: 'zev', kind: 'character' };
   const gate = { id: 'gate', kind: 'item' };
   assert.equal(beatVoice(carl, { kind: 'arc' }), 'self');
   assert.equal(beatVoice(carl, { kind: 'fate' }), 'system');
   assert.equal(beatVoice(carl, { kind: 'arc', voice: 'narrator' }), 'narrator');
+  // Until someone has written how a character speaks, the narrator keeps the
+  // whole page, fate included: a page should not change register halfway.
+  assert.equal(beatVoice(unwritten, { kind: 'arc' }), 'narrator');
+  assert.equal(beatVoice(unwritten, { kind: 'fate' }), 'narrator');
   assert.equal(beatVoice(gate, { kind: 'use' }), 'narrator');
   assert.equal(beatVoice(gate, { kind: 'fate' }), 'narrator');
 });

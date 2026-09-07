@@ -166,14 +166,16 @@ beat, so no view knows the defaults:
 
 | voice | who | default for |
 |---|---|---|
-| `self` | the character, first person, present tense | every character beat and tagline |
+| `self` | the character, first person, present tense | every beat and tagline of a character who has a `voiceNote` |
 | `system` | the AI, in the mono `*** ... ***` register the seals use | every `fate`; a whole page when a character has too few lines to voice honestly (`"voice": "system"` on the entity) |
 | `narrator` | the wry third person | everything that is not a character |
 
 A `fate` in `self` is a lint error: a dead crawler does not narrate their own death. Every
 speaking character carries a `voiceNote` (register, tics, what they call people, what they never
-say); it is committed as guidance and dropped from the snapshot. Headlines are chrome and stay in
-the narrator's hand.
+say); it is committed as guidance and dropped from the snapshot. **A character without one stays in
+the narrator's voice, fate included**, so the cast never shows third-person prose behind a
+quotation mark while the rewrite is underway; the lint's "no voice note" warning is that queue.
+Headlines are chrome and stay in the narrator's hand.
 
 **Items open on the System's own words.** `description` on an entity is the AI's verbatim text,
 a string or a progressive `{ at, source, text }` list with exactly the tagline rules, shown above

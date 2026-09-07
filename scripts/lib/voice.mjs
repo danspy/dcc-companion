@@ -10,11 +10,15 @@ export const ENTITY_VOICES = new Set(['self', 'system']);
 
 export function entityVoice(e) {
   if (e.kind !== 'character') return 'narrator';
-  return e.voice ?? 'self';
+  /* A character speaks for themself once someone has written down how they
+     speak. Until then the narrator keeps the page, so a half-converted cast
+     never shows third-person prose behind a quotation mark. */
+  return e.voice ?? (e.voiceNote ? 'self' : 'narrator');
 }
 
 export function beatVoice(e, b) {
   if (b.voice) return b.voice;
-  if (e.kind === 'character' && b.kind === 'fate') return 'system';
-  return entityVoice(e);
+  const voice = entityVoice(e);
+  if (e.kind === 'character' && b.kind === 'fate' && voice !== 'narrator') return 'system';
+  return voice;
 }
