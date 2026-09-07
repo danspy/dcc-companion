@@ -57,7 +57,17 @@ export function lint({ books, floors, entities }) {
      character's name would. Prose written in a character's voice is where this
      nearly happened: a speaker naturally names the ground they are standing on. */
   const gatedNames = [
-    ...entities.map(e => ({ name: e.name, at: at(e.revealedAt, `entity ${e.id}`) ?? 0 })),
+    ...entities.flatMap(e => {
+      const eAt = at(e.revealedAt, `entity ${e.id}`) ?? 0;
+      /* An alias is a name and leaks like one: "Katia" sat in Brynhild's
+         Daughters' tagline from book 1 chapter 20, three chapters into book 2
+         before the reader meets her. Only *capitalised* aliases count, because
+         a lower-case one is a common noun phrase rather than a name — Dungeon
+         Crawler World is also known as "the show", and gating that phrase would
+         flag every honest sentence about the broadcast. */
+      const aliases = (e.aka ?? []).filter(a => /^[A-Z]/.test(a));
+      return [e.name, ...aliases].map(name => ({ name, at: eAt }));
+    }),
     ...floors.map(f => ({ name: f.name, at: at(f.revealedAt, `floor ${f.id}`) ?? 0 })),
   ]
     .filter(n => n.name && n.name.length >= 4)

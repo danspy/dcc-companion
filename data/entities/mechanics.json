@@ -423,6 +423,286 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "primal",
+      "kind": "mechanic",
+      "name": "Primal",
+      "aka": [],
+      "role": "Crawler race",
+      "revealedAt": "2:2",
+      "sort": 43,
+      "tagline": [
+        {
+          "at": "2:2",
+          "text": "The blank slate. Costs five stat points and hands back every skill ceiling in the dungeon."
+        },
+        {
+          "at": "6:48",
+          "text": "Orren says the word out loud on the recap: Primal Engines, Macro AIs, and a machine that has stopped taking orders."
+        },
+        {
+          "at": "8:92",
+          "text": "Not extinct. Pooled. The first species to conquer the universe closed its own society down and kept the minds."
+        }
+      ],
+      "description": [
+        {
+          "at": "2:2",
+          "source": "2:2",
+          "text": "For the first several seasons of Dungeon Crawler World, all contestants started off as Primals. Primals are blank slates. You will look the same as before. You will obtain all skills associated with your current race, with the following exceptions: -1 to all base stats. All higher-tier skills are unlocked and are able to train to 20. Choosing this race unlocks multiple exclusive, earth-based classes."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 2,
+          "floor": 3,
+          "at": "2:2",
+          "confidence": "verified",
+          "headline": "Carl takes the empty box",
+          "text": "Race selection, on the way into the Over City. The preview model for this one is blank, because nobody alive knows what they looked like. Mordecai's summary: the progenitors, the first species to conquer the universe, the boogeymen of the cosmos, gone one day without a note. Taking it costs five stat points against staying human. What it buys is a ceiling. Every skill trainable to twenty, where most crawlers get one or two past fifteen in a whole crawl."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 53,
+          "floor": 6,
+          "at": "5:53",
+          "confidence": "verified",
+          "headline": "A hunter uses the word about the AI",
+          "text": "Iota tells Carl the AI is starting to go primal: ignoring court orders, doing as it pleases. He says the rumour on his side is that the Mantises sold Borant a used one under the table. Carl kills him. The word stays."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 48,
+          "floor": 8,
+          "at": "6:48",
+          "confidence": "verified",
+          "headline": "Primal Engines, on the recap",
+          "text": "Orren takes the recap episode and explains what a Primal Engine is and what a Macro AI is. He states plainly that this one has gone rogue, and assures the audience he has negotiated a settlement with it. Every team holding a slot in the next game tries to abdicate it the same day."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 51,
+          "floor": 8,
+          "at": "6:51",
+          "confidence": "verified",
+          "headline": "The Residuals",
+          "text": "Paulie at the shelter has been giving the same speech every day of his existence, against the chance that the crawl would one day use a memory for a floor. He is a Residual. There are a great many of him, on every world that holds a Primal Engine, and what they are for is saying a particular thing to the system AI."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 92,
+          "floor": 11,
+          "at": "8:92",
+          "confidence": "verified",
+          "headline": "It says the word about itself",
+          "text": "Speaking through Grigori on the parade stage, the AI states what it is, and what every Macro AI is. The progenitors did not vanish. After enough war and enough waste they closed their society down and kept their consciousnesses alive in a collective mind. Dissenters ran, and the fighting carried on. The collective became a weapon pointed at all remaining biological life, and the resistance built the Primal Engines as a fail-safe against it."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "chosen-by",
+          "at": "2:2"
+        },
+        {
+          "to": "compensated-anarchist",
+          "kind": "unlocks",
+          "at": "2:2"
+        },
+        {
+          "to": "the-ai-is-a-primal",
+          "kind": "resolves",
+          "at": "8:92"
+        }
+      ]
+    },
+    {
+      "id": "war-mage",
+      "kind": "mechanic",
+      "name": "War Mage",
+      "aka": [],
+      "role": "Dungeon-born elemental",
+      "revealedAt": "3:12",
+      "sort": 44,
+      "tagline": [
+        {
+          "at": "3:12",
+          "text": "A war mage named Dismember rides the Dismemberment Limited, and loses his head to a cat."
+        },
+        {
+          "at": "7:61",
+          "text": "Sapient magic in a resleeved skeleton, hundreds of spells deep, and cruel. Showrunners rent them by the war and hardly ever recycle them."
+        },
+        {
+          "at": "7:78",
+          "text": "They took the one thing they came for and left the realm. Winning was never on the list."
+        }
+      ],
+      "description": [
+        {
+          "at": "7:62",
+          "source": "7:62",
+          "text": "System Message: The War Mage Rebellion is not an active team. As per the current season's rules, the team currently occupying the Bone Clan's throne room, Team Retribution, will be awarded all their assets."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 12,
+          "floor": 4,
+          "at": "3:12",
+          "confidence": "verified",
+          "headline": "Dismember, on the trains",
+          "text": "In the aftermath on the rails, Donut casts Hole and takes the head off a war mage called Dismember. Nobody stops to explain what one of those is, and there is a train to catch."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 61,
+          "floor": 9,
+          "at": "7:61",
+          "confidence": "verified",
+          "headline": "What they actually are",
+          "text": "Nobody makes a war mage. Resleeve a symbiote, a skeleton and a flesher, a dozen times or more, and the magic still in the body fuses with it and wakes up sapient. They carry hundreds of spells, they are notoriously cruel, and a showrunner who hires them almost never gets to recycle them. A group conscripted under Prince Stalwart pulls him apart with Pull spells, and Akuma announces that they are a side of their own."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 69,
+          "floor": 9,
+          "at": "7:69",
+          "confidence": "verified",
+          "headline": "They conscript gods",
+          "text": "Hold the castle at Larracos for six hours and the floor is theirs. They trade the gate away at the Midnight Market for five Hell-Kissed Potions of Conscription and put Yarilo on the field beside them. The system hands the rebellion two co-warlords, and the two of them cannot stand each other."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 78,
+          "floor": 9,
+          "at": "7:78",
+          "confidence": "verified",
+          "headline": "They were never playing",
+          "text": "Akuma tells the warlord chat that the war mages are leaving the realm, and that they have the Scavenger's Daughter, which is the only thing they ever wanted off this floor. The system rules them defeated for abandoning the post. They do not appear to mind."
+        }
+      ],
+      "relations": [
+        {
+          "to": "akuma",
+          "kind": "led-by",
+          "at": "7:61"
+        },
+        {
+          "to": "agatha",
+          "kind": "co-warlord",
+          "at": "7:69"
+        },
+        {
+          "to": "scavengers-daughter",
+          "kind": "sought",
+          "at": "7:78"
+        }
+      ]
+    },
+    {
+      "id": "rage-elemental",
+      "kind": "mechanic",
+      "name": "Rage Elemental",
+      "aka": [
+        "Rage Elementals"
+      ],
+      "role": "Punitive summon",
+      "revealedAt": "1:31",
+      "sort": 45,
+      "tagline": [
+        {
+          "at": "1:31",
+          "text": "Borant's answer to crawlers relieving themselves outside the designated areas. It kills the offender, and it kills the party."
+        },
+        {
+          "at": "1:40",
+          "text": "Fifteen feet of smoke on six obsidian claws, said to disperse at six hundred and sixty-six souls. It gets a car chase instead."
+        }
+      ],
+      "description": [
+        {
+          "at": "1:38",
+          "source": "1:38",
+          "text": "Rage Elemental - Level 93. The first recorded summoning of a Rage Elemental, blah, blah, blah. If you are reading this, you likely don't give a shit about the monster's (rather interesting and tragic) history. You're probably running. It's not going to matter. The almost-indestructible Rage Elemental is said to only dissipate after it has claimed 666 souls. In other words, you are fucked. Absolutely, bite-the-pillow, fucked."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 31,
+          "floor": 2,
+          "at": "1:31",
+          "confidence": "verified",
+          "headline": "The bathroom rule",
+          "text": "An announcement goes out between episodes. Any human-born crawler who relieves themselves outside a designated bathroom area gets one summoned on the spot, and it will take the offender and every crawler in their party with them. It is not an encounter. It is a penalty, dragged up from a floor nobody on this one is meant to see."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 38,
+          "floor": 2,
+          "at": "1:38",
+          "confidence": "verified",
+          "headline": "Nothing to fight",
+          "text": "One arrives in the residential blocks. Arrows pass through the smoke without raising a health bar at all, and a magic missile raises a flicker of one that it heals straight off. Gravity reverses. Yolanda goes down covering Randall, and Imani, Chris and Brandon get the rest of the residents behind a safe room door while Carl pulls Elle in."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 39,
+          "floor": 2,
+          "at": "1:39",
+          "confidence": "verified",
+          "headline": "It hammers on the door for hours",
+          "text": "The survivors sit through the recap while it rages outside. The thing does not tire and it does not wander off. Fire is the one lever: a jug of boom takes a quarter of it away and the burn holds the healing back afterwards. The rules change the same day, so that no crawler can sit in a safe room until the collapse."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 40,
+          "floor": 2,
+          "at": "1:40",
+          "confidence": "verified",
+          "headline": "One man and his ex-girlfriend's cat",
+          "text": "Carl finishes the Bomb Chicken and takes it out with everyone in the universe watching. Bombs, obstacles, a safe room door used as an ejector, and one exploit the designers never priced in. The elemental is no more."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 2,
+          "floor": 8,
+          "at": "6:2",
+          "confidence": "draft",
+          "headline": "Fire Berserker",
+          "text": "Mordecai puts a name to the state the elementals live in permanently: a berserk, partly invulnerable condition that shrugs off blunt damage and turns whatever holds it on everything within reach. He notes the system has been renaming things more often than it used to."
+        }
+      ],
+      "relations": [
+        {
+          "to": "borant-corporation",
+          "kind": "deployed-by",
+          "at": "1:31"
+        },
+        {
+          "to": "carl",
+          "kind": "defeated-by",
+          "at": "1:40"
+        }
+      ]
     }
   ]
 }

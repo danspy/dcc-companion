@@ -1,4 +1,473 @@
 {
   "$comment": "Where things happened. A place is not a floor: floors are the spine and live in books.json, while a place is somewhere on one — a city, a castle, a district, a dimension. They earn an entry when the crawl keeps coming back to them or when a beat elsewhere needs somewhere to point.",
-  "entities": []
+  "entities": [
+    {
+      "id": "larracos",
+      "kind": "place",
+      "name": "Larracos",
+      "aka": [],
+      "role": "City · ninth floor",
+      "revealedAt": "4:23",
+      "sort": 40,
+      "tagline": [
+        {
+          "at": "4:23",
+          "text": "The capital of the disputed lands, dug straight down into the ninth floor. The factions camped around it are forbidden to fight over it until crawlers arrive."
+        },
+        {
+          "at": "7:1",
+          "text": "Sixty-six rings sunk around a well, a castle at the bottom of it, and thirty days for nine armies to settle who holds it."
+        },
+        {
+          "at": "7:8",
+          "text": "Drained down to its bottom three rings, the castle still under water, and the System's welcome still calls it the City of Dreams."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 23,
+          "floor": 5,
+          "at": "4:23",
+          "confidence": "verified",
+          "headline": "A city named on the surface",
+          "text": "Carl and Donut come up out of the water with the concierge sharks behind them and head for the nearest town, and on the way Katia reads the Gate's linked watches as a fixed position rather than a door. It could open onto Larracos, the capital city four floors below them. Mordecai points out that a crawler cannot use it to skip ahead. All it would do is let something out."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 34,
+          "floor": 5,
+          "at": "4:34",
+          "confidence": "verified",
+          "headline": "The water goes down the hole",
+          "text": "The plan was never a feral god. Carl opens the Gate onto the drain of the water quadrant and empties a bubble's ocean into Larracos. The NPCs and the mercenaries in it drown, the entrance to the Desperado Club goes under, and Juice Box walks into the city ahead of the flood."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "The crawl arrives inside it",
+          "text": "Crawlers come down into Larracos at the start of a sixty-hour ceasefire. The armies that have spent eight floors drilling and drinking are allowed to fight one another at last, and the thing they are fighting over is underfoot: the castle at the bottom of the well."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 8,
+          "floor": 9,
+          "at": "7:8",
+          "confidence": "verified",
+          "headline": "Arief's tour",
+          "text": "War Leader Arief walks the group down through a city pumped out to its bottom three levels, with water still standing high enough to cover the castle. Juice Box has been waking its NPCs to the truth of what they are, and the college on level fifty is teaching again."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 85,
+          "floor": 9,
+          "at": "7:85",
+          "confidence": "verified",
+          "headline": "Zerzura",
+          "text": "The Sledge casts Zerzura and the city goes: Larracos and the shanty town outside its walls lifted whole and set down on the twelfth floor, NPC team and all. The outworlders who were standing in it are put out of the dungeon instead."
+        }
+      ],
+      "relations": [
+        {
+          "to": "gate-of-the-feral-gods",
+          "kind": "flooded-by",
+          "at": "4:34"
+        },
+        {
+          "to": "juice-box",
+          "kind": "held-by",
+          "at": "7:7",
+          "note": "Warlord for the NPC team"
+        },
+        {
+          "to": "princess-posse",
+          "kind": "fought-over-by",
+          "at": "7:11"
+        }
+      ]
+    },
+    {
+      "id": "zockau",
+      "kind": "place",
+      "name": "Zockau",
+      "aka": [],
+      "role": "City · sixth floor",
+      "revealedAt": "5:4",
+      "sort": 41,
+      "tagline": [
+        {
+          "at": "5:4",
+          "text": "The capital of the sixth floor and the door the hunters come in through: a 1950s main street with the stairwell down sitting in a park at the end of it."
+        },
+        {
+          "at": "5:7",
+          "text": "The capital of the sixth floor, until a crawler took the roof off it."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 4,
+          "floor": 6,
+          "at": "5:4",
+          "confidence": "verified",
+          "headline": "The hunters' door",
+          "text": "The stairwell down stands in a quaint little park in the middle of town, which is why every licensed hunter on this floor arrives here. Bomo is paid in Gate charges to put Carl and Donut on its steps in the hours before the release."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 5,
+          "floor": 6,
+          "at": "5:5",
+          "confidence": "verified",
+          "headline": "The roof comes down",
+          "text": "Carl marks hunters with the Night Wyrm's ring, kills them, takes their stats, and puts his explosives under the city. Enough of them are inside the Desperado Club when it goes that the survivors have to be dug out. He is hurt getting clear, and Miriam Dom and Prepotente carry him the rest of the way."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 7,
+          "floor": 6,
+          "at": "5:7",
+          "confidence": "verified",
+          "headline": "Mordecai's verdict",
+          "text": "The team says goodbye to Miriam and Prepotente at a small bugbear settlement, and Mordecai takes Carl apart for what he did to the city. A guide can teach a crawler a great many things. Levelling a capital is not one of them."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 10,
+          "floor": 6,
+          "at": "5:10",
+          "confidence": "verified",
+          "headline": "A note on the door",
+          "text": "A second bomb is ready to walk back in when Carl finds a note pinned to a door: the hunters inside are proofed against explosives now, and the Hive is hunting him. It is signed. Vrah does that."
+        }
+      ],
+      "relations": [
+        {
+          "to": "desperado-club",
+          "kind": "contains",
+          "at": "5:4"
+        },
+        {
+          "to": "vrah",
+          "kind": "warned-from",
+          "at": "5:10"
+        }
+      ]
+    },
+    {
+      "id": "hump-town",
+      "kind": "place",
+      "name": "Hump Town",
+      "aka": [],
+      "role": "Town · fifth floor",
+      "revealedAt": "4:1",
+      "sort": 42,
+      "tagline": [
+        {
+          "at": "4:1",
+          "text": "A dromedarian town out in the sand of a sealed bubble, staffed largely by changelings, and the party's ground for the whole of the fifth floor."
+        },
+        {
+          "at": "4:12",
+          "text": "The town the Wasteland wants to bomb, and the reason Carl is hanging off a hijacked airship."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 1,
+          "floor": 5,
+          "at": "4:1",
+          "confidence": "verified",
+          "headline": "Down into the bubble",
+          "text": "Carl, Donut and Katia come down into a sealed quadrant of their own and walk to the only town in it. Mordecai meets them there wearing a Skyfowl, which is what this floor has made of him. Donut takes the Glass Cannon class on the way in."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 2,
+          "floor": 5,
+          "at": "4:2",
+          "confidence": "verified",
+          "headline": "What is in the town hall",
+          "text": "Skarn lends Carl his telescope for a look out at the Wasteland, and explains why the gnomes riding it leave this town and the Bactrian village alone. It is not mercy. It is what both places keep in their town halls."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 3,
+          "floor": 5,
+          "at": "4:3",
+          "confidence": "verified",
+          "headline": "Regroup",
+          "text": "The party goes out looking for other crawlers in the quadrant and finds Firas, Louis, and Langley's team of car salesmen who have taken up the bow. A Thorny Devil and a Gnomish Drop Bear turn the whole march back short of the Bactrian town, so everybody comes back here instead."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 12,
+          "floor": 5,
+          "at": "4:12",
+          "confidence": "verified",
+          "headline": "The bombs never land",
+          "text": "Carl, Donut and Katia get aboard the Vahana and take it in mid-air with Langley's team shooting from the ground. Carl puts rounds into the Wasteland's bombs before they can be dropped on the town. The Wasteland breaks apart and comes down. The castle it carried stays up."
+        }
+      ],
+      "relations": [
+        {
+          "to": "juice-box",
+          "kind": "home-of",
+          "at": "4:5"
+        },
+        {
+          "to": "louis",
+          "kind": "sheltered",
+          "at": "4:3"
+        }
+      ]
+    },
+    {
+      "id": "point-mongo",
+      "kind": "place",
+      "name": "Point Mongo",
+      "aka": [],
+      "role": "Town · sixth floor",
+      "revealedAt": "5:11",
+      "sort": 43,
+      "tagline": [
+        {
+          "at": "5:11",
+          "text": "A settlement across the river with a rule against nearly everything, dinosaurs emphatically included. Its new mayor named it after one."
+        },
+        {
+          "at": "5:28",
+          "text": "A town with a rule against dinosaurs and a dinosaur named Big Tina working through its people."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 11,
+          "floor": 6,
+          "at": "5:11",
+          "confidence": "verified",
+          "headline": "A new mayor and a new name",
+          "text": "The settlement across the bridge keeps a long list of rules, and one of them is that Mongo does not come in. Donut kills the mayor, takes the office herself, and renames the place after the animal they would not admit."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 11,
+          "floor": 6,
+          "at": "5:11",
+          "confidence": "verified",
+          "headline": "The Recital quest",
+          "text": "Something has been coming out of the trees for the townspeople, and the job of looking into it lands on the party the same hour the new signage does. Mongo, for his part, runs off with Donut on his back and comes back attached to an all-female mongoliensis pack."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 16,
+          "floor": 6,
+          "at": "5:16",
+          "confidence": "verified",
+          "headline": "Back into town",
+          "text": "The group returns here after Clint's account of Scolopendra and the stolen thing that kept the high elves standing. The third and final sponsor signs while they are in it. The Apothecary."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 28,
+          "floor": 6,
+          "at": "5:28",
+          "confidence": "verified",
+          "headline": "The attacks have a name",
+          "text": "The quest updates with the answer: the dinosaur eating the town is called Big Tina. Samantha's recon on the far shore turns up an entire team that found this out first."
+        }
+      ],
+      "relations": [
+        {
+          "to": "princess-donut",
+          "kind": "ruled-by",
+          "at": "5:11"
+        },
+        {
+          "to": "mongo",
+          "kind": "named-for",
+          "at": "5:11"
+        }
+      ]
+    },
+    {
+      "id": "club-vanquisher",
+      "kind": "place",
+      "name": "Club Vanquisher",
+      "aka": [],
+      "role": "Club · every floor",
+      "revealedAt": "4:32",
+      "sort": 44,
+      "tagline": [
+        {
+          "at": "4:32",
+          "text": "The Desperado Club's opposite number: leather chairs, pipe smoke, clerics, and a door that does not normally open for anyone who drinks in the other place."
+        },
+        {
+          "at": "7:49",
+          "text": "A room nothing can follow you into, which makes it the finest hiding place in the dungeon."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 32,
+          "floor": 5,
+          "at": "4:32",
+          "confidence": "verified",
+          "headline": "An acolyte's key",
+          "text": "Carl takes the vows of Emberus, and the benefits come with an exception written into them: a fire god's acolyte gets through the Vanquisher door whatever other club already has him. Two quests come attached. Find Out Who Killed My Son, and Kill Hellik."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 18,
+          "floor": 8,
+          "at": "6:18",
+          "confidence": "verified",
+          "headline": "Pater Coal gives him a foot massage",
+          "text": "A high cleric walks Carl through the club to the Emberus High Temple, clears his slugpox, and tells him that Katia and Donut are each carrying something the god's quest needs. Underneath the robes, the high cleric is the AI."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 52,
+          "floor": 8,
+          "at": "6:52",
+          "confidence": "verified",
+          "headline": "He never went to the healer",
+          "text": "A look back at that visit shows the healer never saw him. Whatever Carl was doing inside the club while Pater Coal talked, he has kept it to himself."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 50,
+          "floor": 9,
+          "at": "7:50",
+          "confidence": "verified",
+          "headline": "Breaking into a country club",
+          "text": "Vinata and her guard keep stepping out of a fight and into the club, where nothing can reach them. So Katia, Carl, Prepotente and Samantha go in behind a wire long enough to carry Li Na's aura with them, and Li Jun, Bautista and Zhang stand in the doorways to keep the path open."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 54,
+          "floor": 9,
+          "at": "7:54",
+          "confidence": "verified",
+          "headline": "A bomb in the temple",
+          "text": "Katia and Prepotente drink Black Nimbus potions to get themselves thrown out of the temple. Then Carl casts Run, Little Gunter, Run and drops a bomb in the middle of a members-only room, and walks out of it on immortality. Khepri goes backwards through the air. Vinata, immortal herself, is blown out alongside him."
+        }
+      ],
+      "relations": [
+        {
+          "to": "desperado-club",
+          "kind": "counterpart-of",
+          "at": "4:32"
+        },
+        {
+          "to": "emberus",
+          "kind": "shrine-in",
+          "at": "4:32"
+        }
+      ]
+    },
+    {
+      "id": "high-elf-castle",
+      "kind": "place",
+      "name": "High Elf Castle",
+      "aka": [],
+      "role": "Castle · sixth floor",
+      "revealedAt": "5:28",
+      "sort": 45,
+      "tagline": [
+        {
+          "at": "5:28",
+          "text": "Queen Imogen's seat, the venue for the Butcher's Masquerade, and the prize written into the back half of a quest."
+        },
+        {
+          "at": "5:54",
+          "text": "The last ground on the floor the brambles have not reached, which is why everybody is walking towards it."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 28,
+          "floor": 6,
+          "at": "5:28",
+          "confidence": "verified",
+          "headline": "The quest names the house",
+          "text": "Part two of Vengeance of the Daughter comes down: kill Signet's half-sister, Queen Imogen of the high elves, who will be at the Butcher's Masquerade at the close of this floor. The reward is the run of her castle, and the castle is said to hold the thing that turns Scolopendra's attack aside."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 54,
+          "floor": 6,
+          "at": "5:54",
+          "confidence": "verified",
+          "headline": "The brambles point at it",
+          "text": "Carl and Katia work the growth rate out between them. By the last day the creepers will have taken the whole floor, and the one place they finish is here. Both parties turn and start moving that way."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 56,
+          "floor": 6,
+          "at": "5:56",
+          "confidence": "verified",
+          "headline": "The map on the table",
+          "text": "The countdown to the Masquerade starts and the team goes over a map of the castle together, room by room. Donut's applications for the pet beauty contest and the talent show are both accepted."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 58,
+          "floor": 6,
+          "at": "5:58",
+          "confidence": "verified",
+          "headline": "The changelings have to be inside",
+          "text": "Carl and Donut blackmail their way onto the hunters' level of the Desperado Club to reach the changelings, and the message they carry is an address. Be in the palace during the party, or none of the rest of it works."
+        }
+      ],
+      "relations": [
+        {
+          "to": "imogen",
+          "kind": "seat-of",
+          "at": "5:28"
+        },
+        {
+          "to": "scolopendra",
+          "kind": "holds-a-defence-against",
+          "at": "5:28"
+        }
+      ]
+    }
+  ]
 }

@@ -143,7 +143,16 @@
       "role": "Crawler group",
       "revealedAt": "1:20",
       "sort": 5,
-      "tagline": "Hekla's group, and the one Katia and Eva came in with.",
+      "tagline": [
+        {
+          "at": "1:20",
+          "text": "Hekla's group: Icelandic, disciplined, and carrying people who could not have made the stairs alone."
+        },
+        {
+          "at": "2:21",
+          "text": "Hekla's group, and the one Katia and Eva came in with."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -246,6 +255,881 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "the-dream",
+      "kind": "faction",
+      "name": "The Dream",
+      "aka": [],
+      "role": "Syndicate power",
+      "revealedAt": "5:15",
+      "sort": 40,
+      "tagline": [
+        {
+          "at": "5:15",
+          "text": "Bald, pale elves with a territory of their own marked on the hunters' map of the grounds."
+        },
+        {
+          "at": "7:1",
+          "text": "Half the food in the universe belongs to them, along with the entertainment channels, and they have a contract they intend to see honoured."
+        },
+        {
+          "at": "7:84",
+          "text": "Their warlord is dead and their army is off the board."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 15,
+          "floor": 6,
+          "at": "5:15",
+          "confidence": "verified",
+          "headline": "A hunter of theirs, and the map on his body",
+          "text": "The group takes one of their hunters down and Carl loots him: an Arrow of Enthusiastic Double Gonorrhea, and a crude map of the hunting grounds with a territory marked for every outfit working them. That is the first honest look anyone gets at how the hunt is organised. The Hive and the Skull Empire have both put a claim on Carl and Donut. The Dream have their own reasons for being here."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 22,
+          "floor": 6,
+          "at": "5:22",
+          "confidence": "verified",
+          "headline": "Elves at the door",
+          "text": "The elves come at the position in force. Carl uses Samantha to deliver missiles, delivers a villain's soliloquy while he is at it, and puts down another of their hunters."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "They buy a storyline instead of fighting for one",
+          "text": "Quasar has the warning ready before the sixty-hour ceasefire is out. The Dream have bought out the Vengeance of the Daughter and are pressing for fulfilment of the guaranteed third season written into it. An entertainment holding, aimed at a crawler, on a floor where the weapons are supposed to be swords."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 39,
+          "floor": 9,
+          "at": "7:39",
+          "confidence": "verified",
+          "headline": "They walk out of the Bloc",
+          "text": "The Bone Clan goes with them. What is left of the alliance is the Blood Sultanate, the Madness and the Reavers, which is a smaller thing than it was that morning."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 84,
+          "floor": 9,
+          "at": "7:84",
+          "confidence": "verified",
+          "headline": "Epitome Tagg is dead, the Dream is finished",
+          "text": "Emberus wants Samantha interrogated and intends to break the floor in sixty-six minutes whatever the answer. In the middle of that, the Dream is beaten. Epitome Tagg is dead. Two teams remain standing on this floor, the Princess Posse and Team Retribution, and neither of them is the one that owned half the food in the universe."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "answers-to",
+          "at": "5:15"
+        },
+        {
+          "to": "princess-posse",
+          "kind": "enemy",
+          "at": "7:11"
+        }
+      ]
+    },
+    {
+      "id": "the-plenty",
+      "kind": "faction",
+      "name": "The Plenty",
+      "aka": [
+        "The Herd"
+      ],
+      "role": "Syndicate power",
+      "revealedAt": "3:30",
+      "sort": 41,
+      "tagline": [
+        {
+          "at": "3:30",
+          "text": "Caprids. They own the tunnelling system, which is why anything that happens down here can be watched anywhere at all."
+        },
+        {
+          "at": "5:41",
+          "text": "Carl's sponsor now. A full-grown goat stood in front of the cameras for fifteen seconds, bleated, and was gone."
+        },
+        {
+          "at": "8:29",
+          "text": "Not a collective mind. A herd, and a herd bolts, which is why their matriarch treats a piece of news the way anyone else treats a loaded weapon."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 30,
+          "floor": 4,
+          "at": "3:30",
+          "confidence": "draft",
+          "headline": "The tunnelling system",
+          "text": "Mordecai catches the team up on the shape of the wider universe, and two powers come out of it: the Apothecary, and the Plenty. The Plenty built the tunnelling system a few hundred seasons ago and kept it proprietary. Before it, most of the universe got the crawl on a delay of anything from an hour to a year. Prosperity, in other words, is a thing they sell."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 41,
+          "floor": 6,
+          "at": "5:41",
+          "confidence": "verified",
+          "headline": "The vacated sponsorship goes to them",
+          "text": "Carl signs autographs with the Popov brothers, poses for photographs with a fan who has a head tentacle named Maggie and strong views on the eradication of cocker spaniels, and finds out on the same afternoon who has bought him. The Plenty."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 43,
+          "floor": 6,
+          "at": "5:43",
+          "confidence": "verified",
+          "headline": "Two sponsors, one gift",
+          "text": "The Plenty and the Apothecary each send Carl and Donut something that protects them against vampirism, and they arrive together. Sponsors are not supposed to compare notes. These two plainly do."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 49,
+          "floor": 6,
+          "at": "5:49",
+          "confidence": "verified",
+          "headline": "Carl works out who arranged it",
+          "text": "Kiwi and her dinosaurs arrive, Donut charms her with a potion, and somewhere in the middle of it Carl sees the shape of the thing: his own sponsor set the chain of events up, and wanted Miriam Dom to die at the end of it. A benefactor box is not a gift. It is a production note with a bow on it."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 29,
+          "floor": 10,
+          "at": "8:29",
+          "confidence": "verified",
+          "headline": "The herd finds out",
+          "text": "The goats start to panic and faint, certain the end times have come. Gamori, the matriarch, had known all of it and told none of them, because she knew precisely this would happen. Harbinger arrives to point out that he warned her, that he has been protecting the herd the whole time, and that they expelled him for it anyway."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "answers-to",
+          "at": "3:30"
+        },
+        {
+          "to": "carl",
+          "kind": "sponsors",
+          "at": "5:41"
+        }
+      ]
+    },
+    {
+      "id": "skull-empire",
+      "kind": "faction",
+      "name": "The Skull Empire",
+      "aka": [
+        "Skull Empire"
+      ],
+      "role": "System government",
+      "revealedAt": "2:19",
+      "sort": 42,
+      "tagline": [
+        {
+          "at": "2:19",
+          "text": "One of the oldest and largest of the system governments, orcish, rich on weapons, and famously bad at letting an insult go."
+        },
+        {
+          "at": "7:32",
+          "text": "Its army is at the wall on the ninth floor and its king has come with it."
+        },
+        {
+          "at": "8:88",
+          "text": "The books are not its own. A financial criminal lives inside the empire and pays handsomely for the address."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 19,
+          "floor": 3,
+          "at": "2:19",
+          "confidence": "verified",
+          "headline": "Carl plants a seed on Danger Zone",
+          "text": "Two sentences of provocation on a chat show, and the Skull Empire answers them. It kills Manasa, which was a mistake, and the Valtay answer that in turn by destroying Prince Stalwart's yacht with his mother and the Maestro aboard. Nobody in the studio raises their voice. Three funerals come of it anyway."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 15,
+          "floor": 6,
+          "at": "5:15",
+          "confidence": "verified",
+          "headline": "A claim staked on the hunters' map",
+          "text": "The map off the dead hunter divides the hunting grounds between the outfits working them, and two of those outfits have put a claim on Carl and Donut. The Hive is one. The Skull Empire is the other."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 32,
+          "floor": 9,
+          "at": "7:32",
+          "confidence": "verified",
+          "headline": "King Rust at the wall",
+          "text": "The enemy forces arrive and the Skull Empire army is at the front of them with the king himself leading it. The Posse shuts the saferoom against another run through the Doggy Door. Rust asks for an official parlay."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 34,
+          "floor": 9,
+          "at": "7:34",
+          "confidence": "verified",
+          "headline": "The parlay, and what his daughter told the Syndicate",
+          "text": "Rust explains it himself. Princess Formidable has commandeered one of his own warships and announced that she means to trip the Failsafe by hand. She has also told the Syndicate that the empire builds secret back doors into the security systems it sells. He asks Carl to send her a message on behalf of the people of Earth and trades a retreat for it. Rosetta shoots him as he walks away, and the army comes in regardless."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 88,
+          "floor": 11,
+          "at": "8:88",
+          "confidence": "verified",
+          "headline": "Zev's aside about Harry Tisch",
+          "text": "While the teams build their floats, Zev mentions in passing that Odette's husband Harry Tisch is a financial criminal, and that he is woven very deeply into the Skull Empire. Empires that sell weapons still have to bank somewhere."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "answers-to",
+          "at": "2:19"
+        }
+      ]
+    },
+    {
+      "id": "oipan",
+      "kind": "faction",
+      "name": "Open Intellect Pacifist Action Network",
+      "aka": [
+        "OIPAN",
+        "Open Intellect Pacifist Network",
+        "Open Intellect Action Network",
+        "The Pacifist Network"
+      ],
+      "role": "Not-for-conquest",
+      "revealedAt": "4:7",
+      "sort": 43,
+      "tagline": [
+        {
+          "at": "4:7",
+          "text": "A tax-exempt outfit nobody has heard of, which just won a sponsorship slot in a bidding war that ran to the final microsecond."
+        },
+        {
+          "at": "7:11",
+          "text": "Crawlers who got out, and who want the whole thing stopped. Fifty thousand of them have come back in."
+        },
+        {
+          "at": "8:27",
+          "text": "Every ship in orbit is theirs."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 7,
+          "floor": 5,
+          "at": "4:7",
+          "confidence": "verified",
+          "headline": "Carl's second sponsor",
+          "text": "Donut is taken by Veriluxx RealPet Companions and Katia by the Squim Conglomerate, and neither of those needs explaining: a pet brand wants the cat, a conglomerate wants the coverage. Carl is taken by the Open Intellect Pacifist Action Network, which is registered as a not-for-conquest, answers to no system government and pays no tax. Nobody can say what it wants."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 8,
+          "floor": 5,
+          "at": "4:8",
+          "confidence": "verified",
+          "headline": "One root vegetable",
+          "text": "The Valtay Corporation sends a neural enhancer, which is exactly the sort of thing a corporation sends. The Network sends a single Toraline root vegetable. Mordecai has never seen the plant, cannot price it against anything, and cannot say what it is for. The box it arrived in cost more than the gift."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 55,
+          "floor": 6,
+          "at": "5:55",
+          "confidence": "verified",
+          "headline": "A potion and an unsigned note",
+          "text": "Signet warns that the dryads may call Diwata against the spreading brambles. Then a potion turns up in the benefactor box with a note: Circe has sponsored Diwata, and Donut should drink this. Whoever writes these has a view of the board that nobody standing on it has."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 7,
+          "floor": 8,
+          "at": "6:7",
+          "confidence": "verified",
+          "headline": "The first time a sponsor asks for something",
+          "text": "The request arrives through Zev, and it is a request rather than a present: go on Shadow Boxer. Carl agrees to it, reluctantly. Sponsors are supposed to send prizes and buy airtime. They are not supposed to want a favour."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 27,
+          "floor": 10,
+          "at": "8:27",
+          "confidence": "verified",
+          "headline": "They take the orbit",
+          "text": "Lexis has the news and cannot get to the end of it. The Open Intellect Action Network has taken over every ship in orbit, and something nobody can name has appeared on the surface and is standing over the kinder facility. Then a message reaches her, and she stops talking, and she is afraid."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "answers-to",
+          "at": "4:7"
+        },
+        {
+          "to": "carl",
+          "kind": "sponsors",
+          "at": "4:7"
+        },
+        {
+          "to": "crawler-project",
+          "kind": "shares-founder",
+          "at": "7:11",
+          "note": "Doctor Hu built the Crawler Project first; the Network is the half that wants the crawl stopped."
+        },
+        {
+          "to": "tipid",
+          "kind": "member",
+          "at": "7:11"
+        },
+        {
+          "to": "justice-light",
+          "kind": "member",
+          "at": "7:11"
+        }
+      ]
+    },
+    {
+      "id": "lemig-sortion",
+      "kind": "faction",
+      "name": "The Lemig Sortion",
+      "aka": [
+        "Lemig Sortion"
+      ],
+      "role": "System government",
+      "revealedAt": "6:12",
+      "sort": 44,
+      "tagline": [
+        {
+          "at": "6:12",
+          "text": "A democratic government of many races, whose army had a castle dropped on it before the season had properly started."
+        },
+        {
+          "at": "7:19",
+          "text": "Caught cheating on the ninth floor, punished for it, and short one commander who took his own way out."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 12,
+          "floor": 8,
+          "at": "6:12",
+          "confidence": "verified",
+          "headline": "A castle lands on their army",
+          "text": "Quasar brings Carl the state of his ninth-floor team, and the state of it is that the castle came down in the middle of the Lemig Sortion's army. His people got clear and are building their own stronghold instead. The Lemig Sortion are the ones with a building in their camp."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 17,
+          "floor": 9,
+          "at": "7:17",
+          "confidence": "verified",
+          "headline": "Carl wakes up in their base",
+          "text": "Eleven hours gone, blood all over him, and everyone in the room around him killed by the thing riding inside him. The Lemig Sortion and the Madness had been arranging something together. It has come apart on top of them."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 18,
+          "floor": 9,
+          "at": "7:18",
+          "confidence": "verified",
+          "headline": "The field ruling",
+          "text": "Carl, Commander Stockade, Architect Houston and their adjutants convene for an official adjudication, and it goes on the record. The Lemig Sortion and the Madness used outside information to time a Summon Ally, meaning to pull Carl bodily to their base so that what was in him could be let loose on the rest of the Princess Posse. They got half of him, and the other half of the plan."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 19,
+          "floor": 9,
+          "at": "7:19",
+          "confidence": "verified",
+          "headline": "Punished, and the ceasefire ends early",
+          "text": "Panford, their adjutant, is left to explain the rampage through the base to everyone. Stockade looked into her eye, lost his mind, and finished it himself. Ferdinand gets an emergency action item passed for a live feed blackout so nobody can do this again. The Lemig Sortion is punished for cheating, the ceasefire ends early, and Carl goes home."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "answers-to",
+          "at": "6:12"
+        }
+      ]
+    },
+    {
+      "id": "reavers",
+      "kind": "faction",
+      "name": "The Reavers",
+      "aka": [
+        "Reavers"
+      ],
+      "role": "System government",
+      "revealedAt": "7:21",
+      "sort": 45,
+      "tagline": [
+        {
+          "at": "7:21",
+          "text": "Their pets arrive before they do: a swarm of Dumplins, every one of them carrying the Gurgles."
+        },
+        {
+          "at": "7:31",
+          "text": "Several races who traded away everything but the brain for machinery, and kept going."
+        },
+        {
+          "at": "7:80",
+          "text": "Warlord Fang hid inside his own pet, and the castle came down on the pair of them."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 21,
+          "floor": 9,
+          "at": "7:21",
+          "confidence": "verified",
+          "headline": "Dumplins with the Gurgles",
+          "text": "The southern defence is already holding against the Dream, the Prism and the Nagas when the Reavers make their contribution: a swarm of their pet Dumplins, infected. This is a power that fights by handing you something diseased and standing back."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 31,
+          "floor": 9,
+          "at": "7:31",
+          "confidence": "draft",
+          "headline": "Carl gets the background on them",
+          "text": "Tina rampages, the compromised mages are put down, and somewhere in the middle of that Carl finally hears what a Reaver actually is. Several races who replaced themselves with machinery one piece at a time until only the brain was left organic. They wear plastic skin because they have chosen to."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 39,
+          "floor": 9,
+          "at": "7:39",
+          "confidence": "verified",
+          "headline": "What is left of the Bloc",
+          "text": "The Bone Clan and the Dream leave the alliance. That leaves the Blood Sultanate, the Madness and the Reavers holding it, and the Reavers are not the sort of partner anyone chose."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 80,
+          "floor": 9,
+          "at": "7:80",
+          "confidence": "verified",
+          "headline": "The castle, the dragon and Fang",
+          "text": "The Reavers' robot dogs come at the rescue team inside the castle. Juice Box finds Louis, possesses him, teleports him out and leaves a heap of No Disassembles where he had been. Carl sets them off. The castle goes, the dragon goes, and Fang goes with it, hiding inside his own pet. Then Juice Box says the rest of it: they had been operating on Louis, and the heart and lungs he has now hold pieces of Epitome Tagg."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "answers-to",
+          "at": "7:21"
+        },
+        {
+          "to": "blood-sultanate",
+          "kind": "ally",
+          "at": "7:39"
+        }
+      ]
+    },
+    {
+      "id": "naga",
+      "kind": "faction",
+      "name": "The Nagas",
+      "aka": [
+        "Naga"
+      ],
+      "role": "Syndicate people",
+      "revealedAt": "1:5",
+      "sort": 46,
+      "tagline": [
+        {
+          "at": "1:5",
+          "text": "Showrunners once, until a season of eighteen Celestial boxes bankrupted them and kept them out of the business for centuries."
+        },
+        {
+          "at": "7:21",
+          "text": "Cobra-headed, ruled out of the Blood Sultanate, and part of the push on the southern line."
+        },
+        {
+          "at": "7:53",
+          "text": "The poverty was a performance. There were plans for the shipbuilding yards underneath it."
+        },
+        {
+          "at": "7:58",
+          "text": "A signed offer on the table: citizenship for every native of Earth, in exchange for room in Earth's system."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 21,
+          "floor": 9,
+          "at": "7:21",
+          "confidence": "verified",
+          "headline": "In the southern push",
+          "text": "Carl and Donut join the defence in the south, and the Nagas are in the line of it beside the Dream and the Prism. Cobra-headed, and a Syndicate power in their own right, whatever the Blood Sultanate is used to calling them."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 45,
+          "floor": 9,
+          "at": "7:45",
+          "confidence": "verified",
+          "headline": "Prepotente takes their army apart",
+          "text": "Elle brings the count back. Most of the Naga army is already dead, and one goat did it, as payment for what the Blood Hunter show did to Miriam Dom. Baroness Victory tells Carl he cannot work with him directly unless he signs on properly."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 47,
+          "floor": 9,
+          "at": "7:47",
+          "confidence": "verified",
+          "headline": "The airship at their castle",
+          "text": "Louis and Donut come at the Naga castle from the air. Elle and Imani go in on foot. Katia tells Carl that if this goes badly she wants him to have the flower, so that Donut at least reaches the next floor. Prepotente arrives to meet them."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 53,
+          "floor": 9,
+          "at": "7:53",
+          "confidence": "verified",
+          "headline": "Never broke at all",
+          "text": "Time freezes for the AI to announce the fight, and it uses the moment to tell everyone watching that outside the dungeon the Nagas had only been pretending to be poor. There were secret plans to seize the shipbuilding facilities. Then time restarts and the fight happens anyway."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 58,
+          "floor": 9,
+          "at": "7:58",
+          "confidence": "verified",
+          "headline": "Rishi's offer",
+          "text": "Their prisoner explains the Great Consensus, and that Vinata held to it, and that Vinata's group meant to steal the Naga fleet and leave the central system for good. Then he offers a signed document: citizenship in Naga lands for every native of Earth, if the Nagas may settle the other planets in Earth's system. Carl marks him with the ring and kills him."
+        }
+      ],
+      "relations": [
+        {
+          "to": "blood-sultanate",
+          "kind": "ruled-by",
+          "at": "7:21"
+        }
+      ]
+    },
+    {
+      "id": "team-retribution",
+      "kind": "faction",
+      "name": "Team Retribution",
+      "aka": [],
+      "role": "The defending team",
+      "revealedAt": "7:1",
+      "sort": 47,
+      "tagline": [
+        {
+          "at": "7:1",
+          "text": "The ninth floor's own people, fielded as the defending team, and allied with the crawlers from the first hour of it."
+        },
+        {
+          "at": "7:43",
+          "text": "Their warlord turned into an Unwashed on camera and told the audience that it is coming for them all."
+        },
+        {
+          "at": "7:84",
+          "text": "One of two teams still standing at the end of the war."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "The defending team names itself",
+          "text": "Carl and Donut come onto the ninth floor at Larracos, at the start of a sixty-hour ceasefire, and the defending side already has a name it chose for itself. Cascadia runs through the rules. The crawlers ally with it against the Bloc, which is every other faction on the board."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 9,
+          "floor": 9,
+          "at": "7:9",
+          "confidence": "verified",
+          "headline": "Ferdinand holds the interface",
+          "text": "Juice Box and Louis are reunited, and he is visibly uneasy about the marriage. Then she lays out the practical problem: Ferdinand is mayor of Shanty Town, just outside Larracos, and he holds the warlord interface for the team, because he is technically from outside. Nothing this side of the wall moves without a cat's cooperation. Drick is the adjutant."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 43,
+          "floor": 9,
+          "at": "7:43",
+          "confidence": "verified",
+          "headline": "It is coming for you all",
+          "text": "Odette arrives to replace Chaco, Cascadia comes apart on air, and Carl spends an emergency action item to shut the communication loophole the other teams have been using. Then Juice Box turns into an Unwashed in front of the cameras and tells everyone watching that it is coming for them all."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 84,
+          "floor": 9,
+          "at": "7:84",
+          "confidence": "verified",
+          "headline": "Two teams left",
+          "text": "Epitome Tagg is dead and the Dream is beaten, which leaves the Princess Posse and Team Retribution on the board. A team of NPCs was put on this floor to be fodder. It has outlasted eight galactic powers."
+        }
+      ],
+      "relations": [
+        {
+          "to": "princess-posse",
+          "kind": "ally",
+          "at": "7:11"
+        },
+        {
+          "to": "juice-box",
+          "kind": "led-by",
+          "at": "7:1"
+        },
+        {
+          "to": "ferdinand",
+          "kind": "led-by",
+          "at": "7:9"
+        },
+        {
+          "to": "npcs-are-people",
+          "kind": "concerns",
+          "at": "7:1"
+        }
+      ]
+    },
+    {
+      "id": "apothecary",
+      "kind": "faction",
+      "name": "The Apothecary",
+      "aka": [
+        "The Collective"
+      ],
+      "role": "Collective mind",
+      "revealedAt": "3:30",
+      "sort": 48,
+      "tagline": [
+        {
+          "at": "3:30",
+          "text": "A collective mind spreading through the universe, and the thing the dungeon keeps drawing as the Krakaren."
+        },
+        {
+          "at": "5:16",
+          "text": "Carl and Donut's third and final sponsor. Nobody on their side of it knows what she looks like."
+        },
+        {
+          "at": "8:92",
+          "text": "One Primal who refused the collective, took the nine-tier attack, and is the reason anything biological is still here to watch this."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 30,
+          "floor": 4,
+          "at": "3:30",
+          "confidence": "verified",
+          "headline": "The truer translation",
+          "text": "Mordecai puts a name to the thing the Iron Tangle keeps caricaturing. Apothecary is the closer translation, taken from what she can synthesise out of whatever she eats, and the dungeon's version bends the joke into an insult. She is a collective mind and she is spreading, which is a sentence that makes a great many people elsewhere nervous."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 16,
+          "floor": 6,
+          "at": "5:16",
+          "confidence": "verified",
+          "headline": "The third and final sponsor",
+          "text": "Clint has the account of Scolopendra's attack, and says the high elves were protected by something they had stolen. On the way back to Point Mongo the last sponsorship slot fills. The Apothecary takes it."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 43,
+          "floor": 6,
+          "at": "5:43",
+          "confidence": "verified",
+          "headline": "The same gift, the same day",
+          "text": "She and the Plenty each send protection against vampirism, and the two parcels arrive together. Sponsors are not supposed to coordinate. Carl now has two who do."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 38,
+          "floor": 9,
+          "at": "7:38",
+          "confidence": "verified",
+          "headline": "The AI asks which side to take",
+          "text": "It wants advice from Orren and from Carl, and teleports Donut in as well, and it asks in a laboured metaphor about relationships: Agatha's branch of the Residuals, or the Apothecary. Donut tells it to stay out of the whole business until it knows whether the boyfriend in prison is good, bad, or has no choice in the matter."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 92,
+          "floor": 11,
+          "at": "8:92",
+          "confidence": "verified",
+          "headline": "The whole of it, on stage",
+          "text": "The AI gives the account itself. The Primals were individuals once, and their society spread until the warring and the waste made them decide to end it and keep their minds in one collective instead. Those who refused fled. The Apothecary was one who refused. The collective became a weapon aimed at every remaining scrap of biological life, and when it let off the nine-tier attack she stood in front of it, and what grew back afterwards grew back behind her."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "sponsors",
+          "at": "5:16"
+        },
+        {
+          "to": "system-ai",
+          "kind": "courts",
+          "at": "7:38"
+        }
+      ]
+    },
+    {
+      "id": "war-mage-rebellion",
+      "kind": "faction",
+      "name": "The War Mage Rebellion",
+      "aka": [
+        "War Mage Rebellion"
+      ],
+      "role": "Rogue faction",
+      "revealedAt": "7:61",
+      "sort": 49,
+      "tagline": [
+        {
+          "at": "7:61",
+          "text": "Dungeon-born magic elementals who stopped taking orders, and took the Gate with them on the way out."
+        },
+        {
+          "at": "7:69",
+          "text": "Holding the castle at Larracos, six hours from taking the floor, and conscripting gods to keep it."
+        },
+        {
+          "at": "7:78",
+          "text": "They leave with exactly what they came for, and a warning about Agatha on the way out."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 61,
+          "floor": 9,
+          "at": "7:61",
+          "confidence": "verified",
+          "headline": "Stalwart explodes and the Gate goes with them",
+          "text": "Carl and Samantha come out of the Party Planner into Reaver territory. Stalwart teleports to them, and Akuma is beside him. Then Stalwart explodes, and Akuma teleports out holding the Gate of the Feral Gods. The war mages conscripted under Stalwart are nobody's soldiers now. They are a faction, which the rules do not have a slot for."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 69,
+          "floor": 9,
+          "at": "7:69",
+          "confidence": "verified",
+          "headline": "Two co-warlords, and a god on a leash",
+          "text": "They hold the Larracos castle, and six hours of holding it takes the floor. Baroness Victory reads out two co-warlords, Akuma and Agatha, and only one of them is pleased about it. The Gate goes onto the Midnight Market and comes back as potions, and the potions conscript Yarilo. Fopsy, adjutant for the Dream, has a theory: that Agatha now thinks the AI is a danger to the Eulogist and wants the ascendency game over so it can be shut down."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 73,
+          "floor": 9,
+          "at": "7:73",
+          "confidence": "verified",
+          "headline": "Agatha walks off her post",
+          "text": "Warlord Agatha abandons the position without explaining herself to anyone, and full leadership of the rebellion falls to Akuma. He does not appear to mind."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 78,
+          "floor": 9,
+          "at": "7:78",
+          "confidence": "verified",
+          "headline": "They quit the floor",
+          "text": "Akuma tells the Warlord Chat that the war mages are leaving. They came for the Scavenger's Daughter, they have found her, and they are taking her with them; the castle and the war belong to whoever wants them. Because they walked off a held position, the rebellion is recorded as defeated. He adds one thing on his way out, addressed to Carl and to Donut: Agatha is an enemy to them all."
+        }
+      ],
+      "relations": [
+        {
+          "to": "akuma",
+          "kind": "led-by",
+          "at": "7:61"
+        },
+        {
+          "to": "agatha",
+          "kind": "co-warlord",
+          "at": "7:69"
+        },
+        {
+          "to": "gate-of-the-feral-gods",
+          "kind": "took",
+          "at": "7:61"
+        },
+        {
+          "to": "scavengers-daughter",
+          "kind": "took",
+          "at": "7:78"
+        },
+        {
+          "to": "agatha-enemy",
+          "kind": "raises",
+          "at": "7:78"
+        }
+      ]
     }
   ]
 }

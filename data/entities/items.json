@@ -579,6 +579,200 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "xistera",
+      "kind": "item",
+      "name": "Xistera",
+      "aka": [],
+      "role": "Ranged equipment",
+      "revealedAt": "2:17",
+      "sort": 40,
+      "tagline": [
+        {
+          "at": "2:17",
+          "text": "A two-foot wicker scoop that clamps to a forearm. The fans picked it, and it throws whatever he summons into it."
+        },
+        {
+          "at": "4:34",
+          "text": "Range, accuracy, and a bolt-on slot for throwing a head. Everything Carl builds has to get somewhere."
+        }
+      ],
+      "description": [
+        {
+          "at": "4:34",
+          "source": "4:34",
+          "text": "Enchanted Xistera Extension Slot (Head-throwing attachment). This is a unique item! This item was created especially for Crawler Carl by The Open Intellect Pacifist Action Network, Intergalactic NFC. Attaches to the end of a xistera. Allows for the tossing of a head. This special edition head tosser is custom made to fit decapitated love doll heads. When tossing a head of a withering spirit, the distance traveled will be greatly enhanced. (500 meters x Strength) Tossed head will be magically returned once the extension slot is removed from xistera."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 17,
+          "floor": 3,
+          "at": "2:17",
+          "confidence": "verified",
+          "headline": "Voted in by an audience",
+          "text": "The first fan boxes come open in the Over City. Donut draws a framed photograph of Bea and Brad. Carl draws a xistera: a wicker scoop two feet long that straps to his hand and arm and hurls whatever he pulls out of his inventory into it, adjusting itself around the shape of the thing. He had been trying to make a slingshot work. The fans had watched him do it."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 34,
+          "floor": 5,
+          "at": "4:34",
+          "confidence": "draft",
+          "headline": "The extension slot",
+          "text": "An emergency box from the Open Intellect Pacifist Action Network holds an attachment built for exactly one crawler and exactly one purpose. Screwed onto the end of the scoop it lets him throw Samantha, and it multiplies his reach: five hundred metres for every point of strength. Take the slot off and she comes back to him."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 57,
+          "floor": 8,
+          "at": "6:57",
+          "confidence": "verified",
+          "headline": "Ren's exit",
+          "text": "The plan runs on teleport traps, two keys, and Samantha arriving somewhere she cannot walk to. Quan Ch surfaces at Ren's exit. Carl throws her the length of the map with the scoop, then teleports in behind her."
+        },
+        {
+          "kind": "use",
+          "book": 8,
+          "chapter": 97,
+          "floor": 11,
+          "at": "8:97",
+          "confidence": "verified",
+          "headline": "A bomb, a biscuit and an open mouth",
+          "text": "Every crawler's inventory swaps hands at once and Donut is holding Carl's. He talks her through combining a bomb with an enhanced pet biscuit, takes the result off her, and puts it down Scolopendra's throat with the scoop. She comes apart into a puddle."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "wielded-by",
+          "at": "2:17"
+        },
+        {
+          "to": "samantha",
+          "kind": "launches",
+          "at": "4:34"
+        }
+      ]
+    },
+    {
+      "id": "skill-potion",
+      "kind": "item",
+      "name": "Skill Potion",
+      "aka": [],
+      "role": "Consumable",
+      "revealedAt": "1:43",
+      "sort": 41,
+      "tagline": "One level in one named skill, and the System has opinions about how you have been spending your money.",
+      "description": [
+        {
+          "at": "1:43",
+          "source": "1:19",
+          "text": "Skill Potion. Drinking this adds a single level to the Determine Value skill. Hopefully now you'll realize all those Magic: The Gathering cards are nothing more than just meaningless pieces of paper, and you should have spent your money on something with actual value, like a treadmill. Or shampoo."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 43,
+          "floor": 2,
+          "at": "1:43",
+          "confidence": "verified",
+          "headline": "Find Crawler",
+          "text": "Carl's trap closes on Yvette, and her own mother finishes what the trap started. What Maggie My walks out of it holding is a Legendary Skill Potion of Find Crawler. There is exactly one crawler she wants found."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 13,
+          "floor": 3,
+          "at": "2:13",
+          "confidence": "verified",
+          "headline": "Acute Ears, in a safe room",
+          "text": "Donut drinks one and comes up with Acute Ears, plus fang caps for Mongo. Carl comes out of the same haul with a great deal of explosive and a Scroll of Upgrade that improves his boxers, which is roughly the ratio he has come to expect."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 4,
+          "floor": 9,
+          "at": "7:4",
+          "confidence": "verified",
+          "headline": "Hell-Kissed, Celestial, and the Prince of Woe",
+          "text": "A gold pet box, a patch that opens the Midnight Market, and the Hell-Kissed Celestial Skill Potion of the Prince of Woe. The potion hands Carl the Gloom Wraith Phase, which is a skill for walking through people."
+        }
+      ],
+      "relations": [
+        {
+          "to": "loot-boxes",
+          "kind": "found-in",
+          "at": "1:43"
+        }
+      ]
+    },
+    {
+      "id": "voodoo-book",
+      "kind": "item",
+      "name": "The Filthy Little Crawler's Book of Voodoo",
+      "aka": [
+        "Voodoo Book",
+        "Book of Voodoo"
+      ],
+      "role": "Utility item",
+      "revealedAt": "6:40",
+      "sort": 42,
+      "tagline": [
+        {
+          "at": "6:40",
+          "text": "A convention message board rendered as a book. Write under a crawler's name and only that crawler reads it."
+        },
+        {
+          "at": "7:57",
+          "text": "The System insists it is not named for anything nefarious, and keeps nudging Carl toward a second use for it."
+        }
+      ],
+      "description": [
+        {
+          "at": "6:40",
+          "source": "6:40",
+          "text": "When you meet a crawler who owns this same item, their name will permanently appear in this enchanted book. You may use the book to exchange messages. You may write your message under their name, and only they will receive it. If you write under your own name, everyone who has your entry will see the message. You may write your message manually or using the messaging interface while turned to the page. One must open the book to read the message, but you will have the option to copy the words. Message will erase on demand, allowing one to write a new note. This book is not retroactively filled with the entries of people you have already met. You must be within close-ish vicinity of them for their name to be added. Works only with crawlers who also own this book."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 40,
+          "floor": 8,
+          "at": "6:40",
+          "confidence": "verified",
+          "headline": "Out of a Gold Prepotente Box",
+          "text": "Donut has just told Carl she is frightened and does not want to be in charge. Carl opens a Gold Prepotente Box and finds a book he cannot trade, cannot destroy and cannot throw away. Drop it and it is back in his inventory. It is named for the pin boards at old conventions, and the System goes out of its way to say that this is the only reason."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 57,
+          "floor": 9,
+          "at": "7:57",
+          "confidence": "verified",
+          "headline": "The AI drops a hint",
+          "text": "Going through his boxes, Carl collects an achievement for using a borrowed skill through the ability tattoo. The System volunteers, unprompted, that there is a way to put the two together with the book, and then declines to say what it is."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "carried-by",
+          "at": "6:40"
+        }
+      ]
     }
   ]
 }

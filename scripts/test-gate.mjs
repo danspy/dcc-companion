@@ -289,3 +289,26 @@ test("a floor's name may not appear before the floor does", () => {
   const fine = lint({ ...base, entities: mkE('They are already talking about what comes next.') });
   assert.equal(fine.errors.length, 0);
 });
+
+test('an alias is a gated name, unless it is a common noun phrase', () => {
+  const base = { books: [{ id: 1, title: 'One', chapters: 47 }, { id: 2, title: 'Two', chapters: 25 }], floors: [] };
+  const other = {
+    id: 'katia', kind: 'character', name: 'Katia Grim', aka: ['Katia'], role: 'r',
+    tagline: 't', revealedAt: '2:21', voiceNote: 'n', beats: [], relations: [],
+  };
+  const show = {
+    id: 'dcw', kind: 'mechanic', name: 'Dungeon Crawler World', aka: ['the show'],
+    role: 'r', tagline: 't', revealedAt: '1:4', beats: [], relations: [],
+  };
+  const namer = (text) => ({
+    id: 'daughters', kind: 'faction', name: 'The Daughters', role: 'r',
+    tagline: text, revealedAt: '1:20', beats: [], relations: [],
+  });
+  const leak = lint({ ...base, entities: [other, show, namer('The one Katia came in with.')] });
+  assert.ok(leak.errors.some(e => e.includes('"Katia"')), 'a capitalised alias must be gated');
+
+  // "the show" is lower case: a phrase, not a name. Gating it would flag every
+  // honest sentence about the broadcast.
+  const fine = lint({ ...base, entities: [other, show, namer('They are on the show every week.')] });
+  assert.equal(fine.errors.length, 0);
+});
