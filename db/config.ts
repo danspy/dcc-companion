@@ -14,6 +14,8 @@ const Book = defineTable({
     chapters: column.number({ optional: true }),      // null until counted from the book
     pages: column.number({ optional: true }),
     blurb: column.text(),
+    accent: column.text(),                            // the book's own colour
+    ink: column.text(),                               // readable on that colour
   },
 });
 
@@ -25,7 +27,8 @@ const Floor = defineTable({
        and 6, which is exactly why gating runs on books and not on floors. */
     book: column.number(),
     bookSpan: column.text({ optional: true }),        // "5–6" when it straddles
-    accent: column.text(),                            // css var name
+    accent: column.text(),                            // inherited from the book
+    ink: column.text(),
     /* A floor has two reveal points. `revealedAt` is where the crawlers set
        foot on it, and unseals only the blurb-safe `premise`. `recapAt` is where
        they leave it, and unseals the `recap` — the account of what actually

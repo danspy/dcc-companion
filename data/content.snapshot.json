@@ -11,7 +11,9 @@
       "divisions": [
         "Epilogue"
       ],
-      "chapterTitles": []
+      "chapterTitles": [],
+      "accent": "#ffc10a",
+      "ink": "#0e0e0e"
     },
     {
       "id": 2,
@@ -24,7 +26,9 @@
       "divisions": [
         "Epilogue"
       ],
-      "chapterTitles": []
+      "chapterTitles": [],
+      "accent": "#f42bd0",
+      "ink": "#0e0e0e"
     },
     {
       "id": 3,
@@ -174,7 +178,9 @@
           "chapter": 34,
           "title": "Stairwells"
         }
-      ]
+      ],
+      "accent": "#e81514",
+      "ink": "#ffffff"
     },
     {
       "id": 4,
@@ -187,7 +193,9 @@
       "divisions": [
         "Epilogue"
       ],
-      "chapterTitles": []
+      "chapterTitles": [],
+      "accent": "#eaed19",
+      "ink": "#0e0e0e"
     },
     {
       "id": 5,
@@ -200,7 +208,9 @@
       "divisions": [
         "Epilogue"
       ],
-      "chapterTitles": []
+      "chapterTitles": [],
+      "accent": "#43ed1a",
+      "ink": "#0e0e0e"
     },
     {
       "id": 6,
@@ -214,7 +224,9 @@
         "Prologue",
         "Epilogue"
       ],
-      "chapterTitles": []
+      "chapterTitles": [],
+      "accent": "#ed6f1a",
+      "ink": "#0e0e0e"
     },
     {
       "id": 7,
@@ -238,7 +250,9 @@
         "Rosetta",
         "Epilogue"
       ],
-      "chapterTitles": []
+      "chapterTitles": [],
+      "accent": "#1aedc2",
+      "ink": "#0e0e0e"
     },
     {
       "id": 8,
@@ -256,7 +270,9 @@
         "Interlude: Prime Minister Victory",
         "Interlude: Louis Santiago 2"
       ],
-      "chapterTitles": []
+      "chapterTitles": [],
+      "accent": "#991aed",
+      "ink": "#ffffff"
     }
   ],
   "floors": [
@@ -264,11 +280,12 @@
       "id": 1,
       "name": "The First Floor",
       "book": 1,
-      "accent": "--f1",
       "revealedAt": "1:2",
       "recapAt": "1:29",
       "premise": "Dirt, corridors and safe rooms beneath the ruins of Earth. The tutorial floor, where the survivors learn the rules and how lethal they are.",
       "recap": "Dirt, corridors and safe rooms, and the discovery that the tutorial is lethal. Carl comes down in a leather jacket, heart boxers and his ex-girlfriend's pink Crocs; within the hour he has a Goblin Pass Tattoo and a Trollskin Shirt. Donut eats an Enhanced Pet Biscuit and wakes up talking, takes party leadership on stat points, renames the party after herself, and equips the Crown of the Sepsis Whore without reading the warning — quietly enrolling herself in a royal succession eight floors below. Mordecai, an indentured Borant guide who was once a crawler himself, starts teaching them the rules production would rather they learned too late to use.",
+      "accent": "#ffc10a",
+      "ink": "#0e0e0e",
       "sortKey": 1002,
       "recapSortKey": 1029
     },
@@ -276,11 +293,12 @@
       "id": 2,
       "name": "The Second Floor",
       "book": 1,
-      "accent": "--f2",
       "revealedAt": "1:30",
       "recapAt": "1:end",
       "premise": "Open ground, spawn limits and the first real bosses. The floor where the party takes its final shape and the audience starts paying attention.",
       "recap": "Where the party takes its final shape. Carl and Donut find Mongo — a level-1 pet-class mob, seven inches of pink downy feathers — locked in a cage in a secret pet reward room, and Donut wins him over by teaching him to open Brindle Grubs. From this floor the Enchanted Pedicure Kit of the Sylph leaves Carl's bare feet permanently shiny, which the audience adores. The thesis of the first book lands here: the dungeon rewards spectacle and punishes decency, unless you can make decency spectacular.",
+      "accent": "#ffc10a",
+      "ink": "#0e0e0e",
       "sortKey": 1030,
       "recapSortKey": 1999
     },
@@ -288,11 +306,12 @@
       "id": 3,
       "name": "The Over City",
       "book": 2,
-      "accent": "--f3",
       "revealedAt": "2:2",
       "recapAt": "2:25",
       "premise": "The Over City: a colossal ruin built on top of itself, cut into themed districts and run by NPC factions. The first floor that behaves like a place rather than a level.",
       "recap": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions. Class selection happens here: Carl takes Primal and the unique Compensated Anarchist, Donut takes Cat and Former Child Actor, and on Odette's advice they manoeuvre Mordecai into becoming Donut's manager — an appointment that had to look like an accident. Katia, ten levels behind and abandoned by Eva, is taken into the Royal Court. The Desperado Club opens. During the Fools Who Broke the Glass Quest, Carl builds Carl's Doomsday Scenario by wrapping a Sheol Glass Reaper Case around an exploding Soul Crystal — a 45-kilometre blast he can never put down. The floor ends with Borant spending its one annual veto rather than pay out 83 Celestial boxes.",
+      "accent": "#f42bd0",
+      "ink": "#0e0e0e",
       "sortKey": 2002,
       "recapSortKey": 2025
     },
@@ -300,11 +319,12 @@
       "id": 4,
       "name": "The Iron Tangle",
       "book": 3,
-      "accent": "--f4",
       "revealedAt": "3",
       "recapAt": "3:end",
       "premise": "The Iron Tangle — every subway system on Earth welded into one impossible knot of moving trains. A puzzle the size of a continent, and the trains do not stop.",
       "recap": "Every subway system on Earth welded into one impossible knot of moving trains — a puzzle the size of a continent, and the trains do not stop. Carl becomes the twenty-fifth holder of The Dungeon Anarchist's Cookbook and learns that Earth is not the first season and that resistance to the show has a written tradition. Maggie My returns as a Scree parasite riding another crawler; Frank dies of it, and Mongo finishes her. Boxes and achievements get dramatically harder from this floor on. The Tangle cannot be solved alone — beating it takes hundreds of crawlers coordinating at once, which is exactly what production exists to prevent.",
+      "accent": "#e81514",
+      "ink": "#ffffff",
       "sortKey": 3000,
       "recapSortKey": 3999
     },
@@ -312,11 +332,12 @@
       "id": 5,
       "name": "The Bubbles",
       "book": 4,
-      "accent": "--f5",
       "revealedAt": "4",
       "recapAt": "4:end",
       "premise": "The survivors are split into sealed pocket worlds, each with its own biome, its own civilisation and its own way to kill you. Moving between them means portals.",
       "recap": "The survivors are split between sealed pocket worlds. Buried in the Necropolis of Anser is the Gate of the Feral Gods, an artifact so far above this floor's grade that the AI times out reconciling the conflict. Carl collects its three pieces from Henrik the Changeling, Commandant Kane and Ghazi, and assembles it trapped at the bottom of the water quadrant inside the city boss Lusca — taking himself, Katia and Tran to the surface outside the pazuzu town of Pandinus and dragging an ocean through behind them. A feral god comes out when the portal shuts, and the true pantheon sends deities rampaging across the popped bubbles in answer. Katia turns the linked watches into a reverse compass and starts mapping the ninth floor. Seven factions sue for the Gate and lose. Carl, falling out of a burning plane with Quan Ch on him, takes Emberus as his patron and throws a celestial grenade.",
+      "accent": "#eaed19",
+      "ink": "#0e0e0e",
       "sortKey": 4000,
       "recapSortKey": 4999
     },
@@ -324,11 +345,12 @@
       "id": 6,
       "name": "The Hunting Grounds",
       "book": 5,
-      "accent": "--f6",
       "revealedAt": "5:1",
       "recapAt": "5:end",
       "premise": "The Hunting Grounds. Wealthy aliens buy licences, walk into the dungeon and kill crawlers for sport, with a full broadcast package.",
       "recap": "Wealthy aliens buy licences and come in to kill crawlers for sport. Carl takes the Agent Provocateur specialisation, marks hunters with the Ring of Divine Suffering and brings Zockau down on the rest of them, trapping a great many inside the Desperado Club. Tsarina Signet turns out to be the star of a scripted Syndicate programme with producers steering her grief, and the contract Carl signed on the third floor is still in force. Brynhild's Daughters come apart across Hekla, Katia and Eva; Katia kills Eva on the last night. Miriam Dom is a vampire now. Ferdinand turns up as a High Elf queen's familiar and attacks Mongo.",
+      "accent": "#43ed1a",
+      "ink": "#0e0e0e",
       "sortKey": 5001,
       "recapSortKey": 5999
     },
@@ -337,11 +359,12 @@
       "name": "The Great Race",
       "book": 5,
       "bookSpan": "5–6",
-      "accent": "--f7",
       "revealedAt": "5:end",
       "recapAt": "6:1",
       "premise": "The Great Race: a sealed circuit of glass tunnels, several hundred kilometres of branching tubes with pitstop safe rooms at the nodes, no dead ends and no backtracking, pulling crawlers toward a stack of exit portals.",
       "recap": "A sealed circuit of glass tunnels — several hundred kilometres of branching tubes with pitstop safe rooms at the nodes, no dead ends and no backtracking, pulling crawlers toward a stack of exit portals. It was a last-minute replacement for whatever had been planned for the slot, funded by the Valtay and structurally compromised from the start. Minutes after it opened, Prepotente shattered the whole thing into fine dust. No crawler ever entered the maze, and no mob, NPC or boss was ever encountered on it. The seventh floor is the only one in the crawl that was destroyed before it could be played.",
+      "accent": "#43ed1a",
+      "ink": "#0e0e0e",
       "sortKey": 5999,
       "recapSortKey": 6001
     },
@@ -349,11 +372,12 @@
       "id": 8,
       "name": "The Ghosts of Earth",
       "book": 6,
-      "accent": "--f8",
       "revealedAt": "6:1",
       "recapAt": "6:end",
       "premise": "A floor that runs on cards. Crawlers collect, build and combine decks, capture totems, and fight with whatever they have assembled — and the material is Earth's own dead.",
       "recap": "A floor that runs on cards. Crawlers collect, build and combine decks, capture totems and fight with what they have assembled, and the material is Earth's own dead. Donut plays Alpha Male Carl and Shi Maria, both of whom are somebody. Shi Maria trades being turned into a card for passage to the next floor and then does most of the work against the Reminiscence Hydra of Malicious Compliance. Katia, Elle, Imani and Li Na's squads all reach the church on Doggy Door upgrades Lucia handed round before she descended. Huanxin Jinx trades help for placing Odette as adjutant, and Odette's price is the old catastrophe involving Huanxin, Mordecai and Uzzi. Nothing detonates; a stack of bargains is signed, all of them due on the ninth floor.",
+      "accent": "#ed6f1a",
+      "ink": "#0e0e0e",
       "sortKey": 6001,
       "recapSortKey": 6999
     },
@@ -361,11 +385,12 @@
       "id": 9,
       "name": "Faction Wars",
       "book": 7,
-      "accent": "--f9",
       "revealedAt": "7:1",
       "recapAt": "7:end",
       "premise": "Nine armies, thirty days, and one castle at the centre of the map. No respawns and no loopholes: death on the ninth floor is final.",
       "recap": "A war. Nine armies fight for thirty days over the castle at Larracos — roughly 32,000 conscripted crawlers and 50,000 retired ones against some 100,000 armed enemies, with no respawns and no loopholes. Seven of the nine factions sue in Syndicate court to strip the Gate of the Feral Gods from Carl and lose for lack of standing. He had planned to drop a feral god onto the Skull Empire army; instead he keeps the artifact and floods the faction market with ocean water, timed charges and sharks, while Juice Box slips through the portal to tell the NPCs what they are. Donut's crown comes due against the Blood Sultanate. Katia takes the Orchid boon and leaves the dungeon. Then floor 9's NPCs form their own independent tenth faction, live, in front of the galaxy.",
+      "accent": "#1aedc2",
+      "ink": "#0e0e0e",
       "sortKey": 7001,
       "recapSortKey": 7999
     },
@@ -373,11 +398,12 @@
       "id": 10,
       "name": "Don't Come in Last",
       "book": 8,
-      "accent": "--f10",
       "revealedAt": "8:1",
       "recapAt": "8:87",
       "premise": "A racing floor. Get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile.",
       "recap": "A racing floor: get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile. Underneath the format, glitches in the system start appearing more and more often — whatever is running the dungeon is no longer running it cleanly.",
+      "accent": "#991aed",
+      "ink": "#ffffff",
       "sortKey": 8001,
       "recapSortKey": 8087
     },
@@ -385,11 +411,12 @@
       "id": 11,
       "name": "The Parade of Horribles",
       "book": 8,
-      "accent": "--f11",
       "revealedAt": "8:88",
       "recapAt": "8:end",
       "premise": "Billed in-universe as a coming-out party for the ages.",
       "recap": "Billed in-universe as a coming-out party for the ages. The scale of the story has changed underneath the characters: Carl and Donut are not a two-person party any more, they are the centre of a movement, and the question has stopped being how do we reach the stairs and become which of these institutions do we use, expose, or destroy.",
+      "accent": "#991aed",
+      "ink": "#ffffff",
       "sortKey": 8088,
       "recapSortKey": 8999
     }

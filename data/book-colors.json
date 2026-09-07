@@ -1,0 +1,69 @@
+{
+  "source": "https://mattdinniman.com/books/",
+  "books": [
+    {
+      "book": 1,
+      "slug": "dungeon-crawler-carl",
+      "accent": "#ffc10a",
+      "ink": "#0e0e0e",
+      "contrast": 11.84,
+      "via": "palette:contrast-1"
+    },
+    {
+      "book": 2,
+      "slug": "carls-doomsday-scenario",
+      "accent": "#f42bd0",
+      "ink": "#0e0e0e",
+      "contrast": 5.61,
+      "via": "inline"
+    },
+    {
+      "book": 3,
+      "slug": "the-dungeon-anarchists-cookbook",
+      "accent": "#e81514",
+      "ink": "#ffffff",
+      "contrast": 4.62,
+      "via": "palette:contrast-3"
+    },
+    {
+      "book": 4,
+      "slug": "the-gate-of-the-feral-gods",
+      "accent": "#eaed19",
+      "ink": "#0e0e0e",
+      "contrast": 15.28,
+      "via": "inline"
+    },
+    {
+      "book": 5,
+      "slug": "the-butchers-masquerade",
+      "accent": "#43ed1a",
+      "ink": "#0e0e0e",
+      "contrast": 12.29,
+      "via": "inline"
+    },
+    {
+      "book": 6,
+      "slug": "the-eye-of-the-bedlam-bride",
+      "accent": "#ed6f1a",
+      "ink": "#0e0e0e",
+      "contrast": 6.33,
+      "via": "inline"
+    },
+    {
+      "book": 7,
+      "slug": "this-inevitable-ruin",
+      "accent": "#1aedc2",
+      "ink": "#0e0e0e",
+      "contrast": 12.81,
+      "via": "inline"
+    },
+    {
+      "book": 8,
+      "slug": "a-parade-of-horribles",
+      "accent": "#991aed",
+      "ink": "#ffffff",
+      "contrast": 5.64,
+      "via": "inline"
+    }
+  ]
+}

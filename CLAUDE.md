@@ -277,8 +277,33 @@ reloads. It is not an Astro Action — there is no mutation to validate yet.
 
 Palette and typefaces are lifted from **mattdinniman.com**, which was the brief: Barlow
 Condensed for display, Inconsolata for anything the System says, Open Sans for prose, on
-`#131313` with the show's gold `#ffc10a` and blood-red `#e81514`. The highlight ramp from the
-same palette gives each floor its own accent, so a floor is identifiable by colour alone.
+`#131313` with the show's gold `#ffc10a` and blood-red `#e81514`.
+
+### Book colours are the official ones, stated not guessed
+
+`npm run colors:refresh` reads `mattdinniman.com/books/`, where **every book carries its own
+colour**: a `.title-background` div, inline for most of them and via the theme palette classes
+`has-contrast-1-background-color` / `has-contrast-3-…` for books 1 and 3. Both forms resolve
+against the WordPress custom properties on the same page.
+
+| Book | | Book | |
+|---|---|---|---|
+| 1 | `#ffc10a` | 5 | `#43ed1a` |
+| 2 | `#f42bd0` | 6 | `#ed6f1a` |
+| 3 | `#e81514` | 7 | `#1aedc2` |
+| 4 | `#eaed19` | 8 | `#991aed` |
+
+**A floor takes the colour of the book it is told in.** Floors 1 and 2 therefore match, as do 10
+and 11 — that is the truth about them, not a collision to design around. Floor 7 is book 5's
+green, because that is the book it opens in.
+
+The script also picks each accent's **ink** (`#0e0e0e` or `#ffffff`) by contrast and refuses to
+emit anything below 4.5:1, which is why the floor numbers on the red and the purple are white.
+That is stored per book; nothing in the CSS assumes a light accent.
+
+An earlier attempt extracted these from the cover art by decoding the PNGs and clustering hues.
+It produced plausible colours and two collisions, and was entirely unnecessary — the values were
+written in the markup the whole time. Look for the stated answer before computing one.
 
 **Single-theme on purpose** — the show is broadcast out of a black box — so every colour is
 painted explicitly and nothing borrows the host's ground.
@@ -349,6 +374,8 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `db/config.ts` | `Book`, `Floor`, `Entity`, `Beat`, `Relation` |
 | `data/books.json` | Books, floors, the book↔floor map |
 | `data/chapters.json` | The chapter spine: 474 chapters, counts and titles |
+| `data/book-colors.json` | Each book's official colour and its readable ink |
+| `scripts/fetch-book-colors.mjs` | `npm run colors:refresh` — scrapes those colours |
 | `scripts/fetch-chapters.mjs` | `npm run chapters:refresh` — pulls the chapter tables |
 | `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
 | `scripts/check-pages.mjs` | Fails the build if gated content is hardcoded into page source |

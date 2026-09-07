@@ -42,11 +42,9 @@
 }
 
 :root {
-  /* Floor accents. Straight off the official palette's highlight ramp, one per
-     floor, so a floor is identifiable by colour alone across every view. */
-  --f1:  #ffc10a; --f2:  #FFA340; --f3:  #FF6987; --f4:  #D45DFF;
-  --f5:  #84EFFF; --f6:  #A3FF40; --f7:  #40FFB9; --f8:  #e81514;
-  --f9:  #b8b8b8; --f10: #FFA340; --f11: #D45DFF;
+  /* Floor accents are not here — each floor takes the colour of the book it is
+     told in, published on mattdinniman.com and carried through the content
+     snapshot. See data/book-colors.json. */
   --measure: 66ch;
 }
 

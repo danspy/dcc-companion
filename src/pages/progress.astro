@@ -69,11 +69,12 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
     <div class="tbl-scroll">
       <table>
         <thead>
-          <tr><th>#</th><th>Title</th><th>Published</th><th class="num">Chapters</th><th>Floors</th></tr>
+          <tr><th></th><th>#</th><th>Title</th><th>Published</th><th class="num">Chapters</th><th>Floors</th></tr>
         </thead>
         <tbody>
           {books.map(b => (
             <tr class={b.id === prefs.book && prefs.spoilers ? 'here' : undefined}>
+              <td class="swatch-cell"><span class="swatch" style={`background:${b.accent}`}></span></td>
               <td class="num mono">{b.id}</td>
               <td>{b.title}</td>
               <td class="mono">{b.published}</td>
@@ -117,5 +118,9 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
   tr:last-child td { border-bottom: none; }
   tr.here td { background: #1a1508; color: #fff; }
   .num { text-align: right; }
+  .swatch-cell { width: 1px; padding-right: 0; }
+  /* Each book's own colour, as published on mattdinniman.com — the same value
+     the floors on the descent are keyed to. */
+  .swatch { display: block; width: 14px; height: 14px; }
   .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--color-grey-300); }
 </style>

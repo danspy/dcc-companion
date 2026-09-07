@@ -53,7 +53,7 @@ const bookById = new Map(books.map(b => [b.id, b]));
       return (
         <article class="slab floor">
           <div class="floor-head">
-            <div class="floorno" style={`background: var(${floor.accent})`}>
+            <div class="floorno" style={`background:${floor.accent};color:${floor.ink}`}>
               {String(floor.id).padStart(2, '0')}
             </div>
             <div class="floor-titles">
@@ -92,7 +92,7 @@ const bookById = new Map(books.map(b => [b.id, b]));
   .floor { margin-bottom: 18px; }
   .floor-head { display: flex; border-bottom: 1px solid var(--color-line); background: var(--color-raised); }
   .floorno { font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: 1;
-             color: #0e0e0e; min-width: 86px; flex: none;
+             min-width: 86px; flex: none;
              display: flex; align-items: center; justify-content: center; padding: 16px 18px 12px; }
   .floor-titles { padding: 13px 18px; display: flex; flex-direction: column;
                   justify-content: center; gap: 3px; min-width: 0; }

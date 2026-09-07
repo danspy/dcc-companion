@@ -8,12 +8,18 @@ import { readFileSync } from 'node:fs';
 const snapshot = JSON.parse(readFileSync('./data/content.snapshot.json', 'utf8'));
 
 export default async function () {
-  await db.insert(Book).values(snapshot.books);
+  await db.insert(Book).values(
+    snapshot.books.map((b: any) => ({
+      id: b.id, slug: b.slug, title: b.title, published: b.published,
+      chapters: b.chapters, pages: b.pages, blurb: b.blurb,
+      accent: b.accent, ink: b.ink,
+    })),
+  );
 
   await db.insert(Floor).values(
     snapshot.floors.map((f: any) => ({
       id: f.id, name: f.name, book: f.book, bookSpan: f.bookSpan ?? null,
-      accent: f.accent, revealedAt: f.revealedAt, recapAt: f.recapAt,
+      accent: f.accent, ink: f.ink, revealedAt: f.revealedAt, recapAt: f.recapAt,
       recapSortKey: f.recapSortKey, premise: f.premise, recap: f.recap,
     })),
   );

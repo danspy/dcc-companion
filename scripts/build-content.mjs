@@ -25,6 +25,18 @@ for (const b of books) {
   b.divisions = entry ? entry.divisions : [];
   b.chapterTitles = entry ? entry.titles : [];
 }
+
+/* Each book's own colour, as published on mattdinniman.com, plus the ink that
+   is readable on it (npm run colors:refresh). A floor takes the colour of the
+   book it is told in — two floors from one book therefore match, which is the
+   honest answer rather than a coincidence to design around. */
+const colorIndex = new Map(read('data/book-colors.json').books.map(c => [c.book, c]));
+for (const b of books) {
+  const c = colorIndex.get(b.id);
+  if (!c) throw new Error(`book ${b.id} has no colour in data/book-colors.json`);
+  b.accent = c.accent;
+  b.ink = c.ink;
+}
 const entities = ['characters', 'items', 'mechanics', 'factions', 'threads']
   .flatMap(f => read(`data/entities/${f}.json`).entities);
 
@@ -81,6 +93,8 @@ const snapshot = {
   books,
   floors: floors.map(f => ({
     ...f,
+    accent: colorIndex.get(f.book).accent,
+    ink: colorIndex.get(f.book).ink,
     sortKey: parseAt(f.revealedAt),
     // A recap can never surface before its own floor does.
     recapSortKey: Math.max(parseAt(f.recapAt), parseAt(f.revealedAt)),

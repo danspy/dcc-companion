@@ -69,7 +69,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
                     <div class="stamp">
                       <span class="bk">Bk {b.book}{b.chapter ? `·${b.chapter}` : ''}</span>
                       {floor && (
-                        <span class="fl" style={`--dot: var(${floor.accent})`}>
+                        <span class="fl" style={`--dot:${floor.accent}`}>
                           Floor {floor.id} — {floor.name}
                         </span>
                       )}
@@ -103,7 +103,7 @@ const hiddenRelations = relations.length - visibleRelations.length;
                     <div class="stamp">
                       <span class="bk">Bk {b.book}{b.chapter ? `·${b.chapter}` : ''}</span>
                       {floor && (
-                        <span class="fl" style={`--dot: var(${floor.accent})`}>
+                        <span class="fl" style={`--dot:${floor.accent}`}>
                           Floor {floor.id} — {floor.name}
                         </span>
                       )}
