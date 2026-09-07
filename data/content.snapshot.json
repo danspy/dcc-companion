@@ -1529,6 +1529,475 @@
       "descriptions": []
     },
     {
+      "id": "apito",
+      "kind": "character",
+      "name": "Apito",
+      "aka": [
+        "The Oak Mother",
+        "Oak Goddess"
+      ],
+      "role": "Mother of the gods",
+      "taglines": [
+        {
+          "at": "5:65",
+          "sortKey": 5065,
+          "text": "Apito. Tonight's host keeps a party peaceful for one evening and receives a boon from her. That is the arrangement, and everyone in the room knows the terms."
+        },
+        {
+          "at": "5:68",
+          "sortKey": 5068,
+          "text": "Apito, the Oak Mother. She put a guest in that room herself, to see whether the host could hold it. Nobody has ever collected the boon."
+        },
+        {
+          "at": "7:54",
+          "sortKey": 7054,
+          "text": "Apito, the Oak Mother, mother of all the gods. A deity shouting through a portal tells a crawler she has been corrupted, and names who did it."
+        },
+        {
+          "at": "7:64",
+          "sortKey": 7064,
+          "text": "Apito, the Oak Mother. Her memorial crystal is a rainbow the size of a hill, and a crawler is carrying it across a battlefield."
+        }
+      ],
+      "revealedAt": "5:65",
+      "sort": 50,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "diwata",
+      "kind": "character",
+      "name": "Diwata",
+      "aka": [],
+      "role": "God of nature",
+      "taglines": [
+        {
+          "at": "5:36",
+          "sortKey": 5036,
+          "text": "Diwata. Somebody defiled her shrine, and the tattoo saying so is on a crawler's arm. The advice from the desk is to avoid dryads, and to avoid her."
+        },
+        {
+          "at": "5:61",
+          "sortKey": 5061,
+          "text": "Diwata, god of the woods. She has entered the realm, and the crawler who wrecked her shrine is marked for death."
+        },
+        {
+          "at": "5:62",
+          "sortKey": 5062,
+          "text": "Diwata, god of the woods. Marked a crawler for death, then sprinted straight past him. She has somewhere to be, and something to give birth to."
+        },
+        {
+          "at": "5:70",
+          "sortKey": 5070,
+          "text": "Diwata, god of the woods. Her labour is a spell, and a spell finishes casting whatever the clock says. She stays on this floor until it does."
+        }
+      ],
+      "revealedAt": "5:36",
+      "sort": 51,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "harpocrates",
+      "kind": "character",
+      "name": "Harpocrates",
+      "aka": [],
+      "role": "God of silence",
+      "taglines": [
+        {
+          "at": "7:59",
+          "sortKey": 7059,
+          "text": "Harpocrates. Second through the gate, behind something worse, into a war nobody summoned him for."
+        },
+        {
+          "at": "7:68",
+          "sortKey": 7068,
+          "text": "Harpocrates, god of silence. Has marked a princess for death, and somebody stepped in front of it for her."
+        },
+        {
+          "at": "7:72",
+          "sortKey": 7072,
+          "text": "Harpocrates, god of silence. Marked a princess for death and now takes orders from a member of her party. The war has reached the point where gods are equipment."
+        },
+        {
+          "at": "7:76",
+          "sortKey": 7076,
+          "text": "Harpocrates, god of silence. A crawler walked away from him with a permanent gift, and it was another god who made it permanent."
+        }
+      ],
+      "revealedAt": "7:59",
+      "sort": 52,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "khepri",
+      "kind": "character",
+      "name": "Khepri",
+      "aka": [],
+      "role": "God of rebirth and sunrise",
+      "taglines": [
+        {
+          "at": "7:49",
+          "sortKey": 7049,
+          "text": "Khepri. A god of light, and this season's recruitment target for a princess who keeps vanishing off the board."
+        },
+        {
+          "at": "7:52",
+          "sortKey": 7052,
+          "text": "Khepri, god of rebirth and sunrise. His own temple is the one place on this floor a deity may stand, which is why the door was open, and why it is a trap."
+        },
+        {
+          "at": "7:54",
+          "sortKey": 7054,
+          "text": "Khepri, god of rebirth and sunrise. Took a bomb in his own endless temple, came through the portal after the crawler who set it, and was thrown off the floor by another god."
+        },
+        {
+          "at": "8:95",
+          "sortKey": 8095,
+          "text": "Khepri, god of rebirth and sunrise. A crawler has named him as the one who killed a god's son, and dragged him into an arena to stand in."
+        }
+      ],
+      "revealedAt": "7:49",
+      "sort": 53,
+      "voice": "system",
+      "descriptions": [
+        {
+          "at": "7:53",
+          "source": "System AI",
+          "sortKey": 7053,
+          "text": "God of Rebirth and the Sunrise. Khepri! Level 250. This is a locked deity. He will not be sponsored this season. Warning: This is a deity. He is invulnerable on this floor. This god is within his own temple. Temple appearance rules apply."
+        }
+      ]
+    },
+    {
+      "id": "ysalte",
+      "kind": "character",
+      "name": "Ysalte",
+      "aka": [
+        "The Vinegar Bitch",
+        "The Downward Spiral"
+      ],
+      "role": "Goddess of hopelessness",
+      "taglines": [
+        {
+          "at": "6:64",
+          "sortKey": 6064,
+          "text": "Ysalte. A demon says the name out loud, and the professional opinion is that she belongs to somebody else's team and is nowhere near this floor."
+        },
+        {
+          "at": "6:65",
+          "sortKey": 6065,
+          "text": "Ysalte, the Vinegar Bitch. Her nun is dead, she has come into the realm about it, and the crawler who did it has been marked."
+        },
+        {
+          "at": "6:66",
+          "sortKey": 6066,
+          "text": "Ysalte, goddess of hopelessness. Nobody is driving her. She is invulnerable, she has a demon prince on a leash, and there are ten minutes on the clock."
+        },
+        {
+          "at": "8:83",
+          "sortKey": 8083,
+          "text": "Ysalte, goddess of hopelessness. Long gone from the floor she raged across, and still attached to whoever is carrying the crystal she left."
+        }
+      ],
+      "revealedAt": "6:64",
+      "sort": 54,
+      "voice": "system",
+      "descriptions": [
+        {
+          "at": "6:66",
+          "source": "System AI",
+          "sortKey": 6066,
+          "text": "Goddess of Hopelessness and Insanity Ysalte. Level 250. This goddess is sponsored by Pontifex Shine of the Nebular Balance. Warning: This sponsor is not currently inhabiting the shell of this deity. She will speak and react as per her regular nature. Considering who this is, that's some bad fucking news for you guys. Warning: This is a deity. She is invulnerable on this floor."
+        }
+      ]
+    },
+    {
+      "id": "taranis",
+      "kind": "character",
+      "name": "Taranis",
+      "aka": [],
+      "role": "God of thunder",
+      "taglines": [
+        {
+          "at": "8:19",
+          "sortKey": 8019,
+          "text": "Taranis. A pig on a rival team is under his protection, which is a strange thing for a god of thunder to bother with."
+        },
+        {
+          "at": "8:94",
+          "sortKey": 8094,
+          "text": "Taranis, god of thunder. A crawler has worked out that the pig is the lever, and is holding a knife to it."
+        },
+        {
+          "at": "8:96",
+          "sortKey": 8096,
+          "text": "Taranis, god of thunder. Killed another god in an arena for taking a swing at a pig he loves."
+        },
+        {
+          "at": "8:97",
+          "sortKey": 8097,
+          "text": "Taranis, god of thunder. Killed a god over a pig, then walked out of the realm carrying two pieces of his mother."
+        }
+      ],
+      "revealedAt": "8:19",
+      "sort": 55,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "nekhebit",
+      "kind": "character",
+      "name": "Nekhebit",
+      "aka": [
+        "The Scavenger Mother of Mothers"
+      ],
+      "role": "Vulture goddess",
+      "taglines": [
+        {
+          "at": "6:36",
+          "sortKey": 6036,
+          "text": "Nekhebit. A crawler with a talk show has announced which deity she is sponsoring this season, and it is a name almost nobody in the audience recognised."
+        },
+        {
+          "at": "7:54",
+          "sortKey": 7054,
+          "text": "Nekhebit, the vulture goddess. A deity shouting through a portal says she is behind the corruption of the mother of all the gods."
+        },
+        {
+          "at": "7:76",
+          "sortKey": 7076,
+          "text": "Nekhebit, the vulture goddess. She has a champion now: a cat, three atrocities deep, wearing a class named for the tree that replaced her."
+        },
+        {
+          "at": "8:69",
+          "sortKey": 8069,
+          "text": "Nekhebit, the vulture goddess, last of the old gods. Bore three children she was forbidden, and one of them took her worshippers and her place."
+        }
+      ],
+      "revealedAt": "6:36",
+      "sort": 56,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "eileithyia",
+      "kind": "character",
+      "name": "Eileithyia",
+      "aka": [],
+      "role": "Goddess of childbirth",
+      "taglines": [
+        {
+          "at": "6:17",
+          "sortKey": 6017,
+          "text": "I have walked into a realm where everyone assumes a god wants something. I do want something. I want a young woman and a cat to come out of this alive."
+        },
+        {
+          "at": "6:38",
+          "sortKey": 6038,
+          "text": "The favour I was promised in return did not arrive. I am honouring my half of it regardless, which everyone here finds astonishing."
+        },
+        {
+          "at": "7:86",
+          "sortKey": 7086,
+          "text": "I stood frozen while she chose which of my two doors to walk through. She took the one that sends her home pregnant, to help the children there. I would have chosen it too."
+        }
+      ],
+      "revealedAt": "6:17",
+      "sort": 57,
+      "voice": "self",
+      "descriptions": [
+        {
+          "at": "6:17",
+          "source": "System AI",
+          "sortKey": 6017,
+          "text": "Eileithyia is something of an oddity. She's benevolent. Unlike most of these psychos, she's known for her kind heart. She's prayed to by all mothers, both when they're attempting to sow the seeds, and when the harvest comes. And while she does many things, she's mostly known as She Who Eases Pain. Both the physical pain of childbirth and the inevitable darkness that comes to those who are unable to complete their most sacred task. When the stillness comes, she is not the one who has caused the heartbreak. But she is the one holding the grieving mother's hand."
+        }
+      ]
+    },
+    {
+      "id": "grull",
+      "kind": "character",
+      "name": "Grull",
+      "aka": [
+        "War God Grull",
+        "The Exalted Grull"
+      ],
+      "role": "God of war",
+      "taglines": [
+        {
+          "at": "3:11",
+          "sortKey": 3011,
+          "text": "Grull. A train engineer very nearly got his god into the room with a crawler party. Very nearly."
+        },
+        {
+          "at": "3:33",
+          "sortKey": 3033,
+          "text": "Grull, god of war, four storeys of him, driven by somebody who is thoroughly enjoying himself. Sent to the Abyss by a party that had no business surviving him."
+        },
+        {
+          "at": "8:65",
+          "sortKey": 8065,
+          "text": "Grull, god of war. Turned up in a factory the instant a broken puppet was made whole, because smiting is his department."
+        },
+        {
+          "at": "8:66",
+          "sortKey": 8066,
+          "text": "Grull, god of war. Level 250, invulnerable, and put down by a knight with a lance and a magnet."
+        }
+      ],
+      "revealedAt": "3:11",
+      "sort": 58,
+      "voice": "system",
+      "descriptions": [
+        {
+          "at": "3:33",
+          "source": "System AI",
+          "sortKey": 3033,
+          "text": "War God Grull. Level 250. Sponsored by Prince Maestro of the Skull Empire. Warning: This is a deity. He is invulnerable on this floor. This god has been involuntarily summoned to this location. Summoning rules apply."
+        }
+      ]
+    },
+    {
+      "id": "orthrus",
+      "kind": "character",
+      "name": "Orthrus",
+      "aka": [],
+      "role": "Juvenile gate guardian",
+      "taglines": [
+        {
+          "at": "4:28",
+          "sortKey": 4028,
+          "text": "Orthrus. Something very large is outside the bubbles taking the floor apart, and what it is looking for is a dog."
+        },
+        {
+          "at": "4:29",
+          "sortKey": 4029,
+          "text": "Orthrus. Two heads, floppy ears, roughly the size of a bubble, level 10, and not invulnerable the way the rest of them are. He is a puppy."
+        },
+        {
+          "at": "4:30",
+          "sortKey": 4030,
+          "text": "Orthrus. One quest says take the puppy home. Another pays crawlers for killing him. Both are live at the same time."
+        },
+        {
+          "at": "4:31",
+          "sortKey": 4031,
+          "text": "Orthrus. Hauled clear of a warzone by a man and a cat in an aeroplane, and collected by a god who wanted him back."
+        }
+      ],
+      "revealedAt": "4:28",
+      "sort": 59,
+      "voice": "system",
+      "descriptions": [
+        {
+          "at": "4:29",
+          "source": "System AI",
+          "sortKey": 4029,
+          "text": "Orthrus. Juvenile Gate Guardian. Level 10. This is a bereft pet of Geyrun. Who's a good boy? Who's a good boy? The most loveable hell-hound on this side of Alpha Centauri. The left side is for sniffin' and the right side is for lickin' and that pink belly of his? It's for kissin'."
+        }
+      ]
+    },
+    {
+      "id": "yarilo",
+      "kind": "character",
+      "name": "Yarilo",
+      "aka": [
+        "Feral God Yarilo"
+      ],
+      "role": "God of lust",
+      "taglines": [
+        {
+          "at": "4:21",
+          "sortKey": 4021,
+          "text": "Yarilo. A mage in a sandcastle wanted a love spell and aimed a summoning at this god. Something else answered, and the mage is still in the castle."
+        },
+        {
+          "at": "7:63",
+          "sortKey": 7063,
+          "text": "Yarilo, god of lust, feral now. Out of the Nothing and loose on a battlefield, chasing an AI who is very fast."
+        },
+        {
+          "at": "7:69",
+          "sortKey": 7069,
+          "text": "Yarilo, god of lust. Conscripted by an army that bought him with potions. Deities are inventory on this floor."
+        }
+      ],
+      "revealedAt": "4:21",
+      "sort": 60,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "meatus",
+      "kind": "character",
+      "name": "Meatus",
+      "aka": [],
+      "role": "God",
+      "taglines": [
+        {
+          "at": "7:59",
+          "sortKey": 7059,
+          "text": "Meatus. First through the gate, into a war that was already going badly for everyone in it."
+        },
+        {
+          "at": "7:60",
+          "sortKey": 7060,
+          "text": "Meatus. Came through a gate into a war and picked a fight with the god who came through behind him."
+        },
+        {
+          "at": "7:66",
+          "sortKey": 7066,
+          "text": "Meatus. Reached into a pile of frozen witnesses and pulled a goddess in after him."
+        },
+        {
+          "at": "7:77",
+          "sortKey": 7077,
+          "text": "Meatus. Came through the gate first, fought the god behind him, and finished in pieces on a battlefield with the cameras looking away."
+        }
+      ],
+      "revealedAt": "7:59",
+      "sort": 61,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "ogun",
+      "kind": "character",
+      "name": "Ogun",
+      "aka": [],
+      "role": "God of blacksmiths",
+      "taglines": [
+        {
+          "at": "6:14",
+          "sortKey": 6014,
+          "text": "Ogun. Two crawlers get a quest from their own god, and it is not phrased as a request: fix my shrine, not theirs."
+        },
+        {
+          "at": "6:15",
+          "sortKey": 6015,
+          "text": "Ogun, god of blacksmiths. His shrine was not the one they picked, and he is coming into the realm about it."
+        },
+        {
+          "at": "6:16",
+          "sortKey": 6016,
+          "text": "Ogun, god of blacksmiths. Handed out a debuff nobody can heal, took a worshipper's life for a choice that worshipper did not make, and went home."
+        }
+      ],
+      "revealedAt": "6:14",
+      "sort": 62,
+      "voice": "system",
+      "descriptions": [
+        {
+          "at": "6:16",
+          "source": "System AI",
+          "sortKey": 6016,
+          "text": "God of Blacksmithery and Armor Ogun. Level 250. This god is not sponsored. Warning: This is a deity. He is invulnerable on this floor. This god has been temporarily summoned to this location. Summoning rules apply. He's here now because Ogun strongly believes all punishments should be handed out in person."
+        }
+      ]
+    },
+    {
       "id": "gate-of-the-feral-gods",
       "kind": "item",
       "name": "The Gate of the Feral Gods",
@@ -2219,6 +2688,29 @@
       ]
     },
     {
+      "id": "changeling",
+      "kind": "mechanic",
+      "name": "Changeling",
+      "aka": [],
+      "role": "Crawler race",
+      "taglines": [
+        {
+          "at": "1:29",
+          "sortKey": 1029,
+          "text": "Take any shape you like. The catch is what happens when the dungeon takes the choosing away from you."
+        },
+        {
+          "at": "4:6",
+          "sortKey": 4006,
+          "text": "A whole population of them down here, wearing whichever face the job requires, and worth torturing for what they can be made to become."
+        }
+      ],
+      "revealedAt": "1:29",
+      "sort": 50,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
       "id": "borant-corporation",
       "kind": "faction",
       "name": "The Borant Corporation",
@@ -2814,6 +3306,34 @@
       ],
       "revealedAt": "5:28",
       "sort": 45,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "sheol",
+      "kind": "place",
+      "name": "Sheol",
+      "aka": [],
+      "role": "Demon realm",
+      "taglines": [
+        {
+          "at": "2:25",
+          "sortKey": 2025,
+          "text": "A name on a component list, attached to nothing a crawler has had to think about."
+        },
+        {
+          "at": "6:54",
+          "sortKey": 6054,
+          "text": "Where the demons come from, and where they go back to when the floor stops killing people fast enough to hold the door open."
+        },
+        {
+          "at": "6:58",
+          "sortKey": 6058,
+          "text": "It has princes. One of them is on this floor, in the body of a giant snake, on a leash."
+        }
+      ],
+      "revealedAt": "2:25",
+      "sort": 50,
       "voice": "narrator",
       "descriptions": []
     },
@@ -3504,6 +4024,19 @@
       "voice": "system"
     },
     {
+      "entityId": "changeling",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 29,
+      "floor": 1,
+      "at": "1:29",
+      "sortKey": 1029,
+      "headline": "What it costs when it stops working",
+      "text": "A guide explains his own body by naming the race he picked in his own crawl. He can no longer shift at will, so the dungeon assigns him a shape at the start of every floor and he wears what he is given, always something that belongs on that floor. The race is a gift with a clause, and he is the clause.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "mordecai",
       "kind": "arc",
       "book": 1,
@@ -4089,6 +4622,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "sheol",
+      "kind": "origin",
+      "book": 2,
+      "chapter": 25,
+      "floor": 3,
+      "at": "2:25",
+      "sortKey": 2025,
+      "headline": "A part in a bomb",
+      "text": "The word arrives the way most of the dungeon's cosmology does: buried in an item description. A Sheol Glass Reaper Case is half of what makes an explosion large enough to rattle the teeth of a god. Nothing explains where the glass comes from, and nobody asks.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "borant-corporation",
       "kind": "arc",
       "book": 2,
@@ -4284,6 +4830,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "grull",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 11,
+      "floor": 4,
+      "at": "3:11",
+      "sortKey": 3011,
+      "headline": "A summoning barely avoided",
+      "text": "Gore-Gore, engineer, gives the party two routes back to the stairwell stations and then attacks them, which is the sequence I have come to expect from railway staff. In the middle of it he tries to bring in Grull. It does not land. Understand what almost happened there: a mob with a grudge and a prayer nearly put a war god into a train carriage with four crawlers. Horses pray to Grull. Centaurs pray to Grull. There are a great many horses on this floor.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "war-mage",
       "kind": "origin",
       "book": 3,
@@ -4373,6 +4932,32 @@
       "text": "We worked it out some time ago: the ghouls keep coming while the generators stand, so the generators have to go, every one of them. We have been taking them from this side of the knot, Prepotente and I, at his pace, which is fast. Now Carl's group arrives from the far side with the same plan. He is put out that someone else thought of it. I tell him that only means the plan is good.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "grull",
+      "kind": "arc",
+      "book": 3,
+      "chapter": 33,
+      "floor": 4,
+      "at": "3:33",
+      "sortKey": 3033,
+      "headline": "Grull against the Mimic Rex",
+      "text": "Crawler Carl, a Mimic Rex, and War God Grull, in one place, and the god is being driven by the Maestro like a stolen vehicle. Grull kills the mimic. Grull steps on Carl. Carl's friends come for him anyway, which is the part I did not have odds on, and by the finish Grull has been sent to the Abyss. Four storeys of war god, removed from the floor by people who were, this morning, worried about a train.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "grull",
+      "kind": "arc",
+      "book": 3,
+      "chapter": 33,
+      "floor": 4,
+      "at": "3:33",
+      "sortKey": 3033,
+      "headline": "What the file says about him",
+      "text": "The file, for those keeping one. Grull is one of the few trueborn heirs to the Celestial Ascendency, which makes him a candidate for the throne of heaven, and level 250, which makes him unkillable on this floor. His worshippers are horses, centaurs and tikbalangs, and after this floor the llama-shaped ones join in. They paint themselves blue and talk without stopping about wenches and dying gloriously in battle. His guide's blunt summary of the whole subject, delivered a long way back: there are no real gods down here, only the ones who pay for the privilege.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "hump-town",
@@ -4479,6 +5064,19 @@
       "voice": "self"
     },
     {
+      "entityId": "changeling",
+      "kind": "use",
+      "book": 4,
+      "chapter": 6,
+      "floor": 5,
+      "at": "4:6",
+      "sortKey": 4006,
+      "headline": "The guards are not what they look like",
+      "text": "In the town hall basement, some of the Dromedarian guards are changelings wearing the uniform, and one of their own has been torturing a prisoner to make him give up flesh. A race that can be anyone is a race that can be planted anywhere, and both sides of this floor have worked that out.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "oipan",
       "kind": "origin",
       "book": 4,
@@ -4568,6 +5166,19 @@
       "text": "Crawler Carl and Crawler Princess Donut have been brought before me at the Desperado Club to account for the death of Loita. My position is that it was deliberate. My position is not evidence. I cannot establish intent, and so I am required to release them, which I am doing, with a note in the file. They have only now worked out how long they have been outside the dungeon. Five days. Their faces are the one part of this I have enjoyed.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "yarilo",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 21,
+      "floor": 5,
+      "at": "4:21",
+      "sortKey": 4021,
+      "headline": "The summoning that went wrong",
+      "text": "Sandcastle of the Mad Dune Mage. Read Ghazi's description and the whole sad story is in it: he wanted the gate so he could summon Yarilo and have Yarilo make Lika love him. What came through was a different goddess entirely, who trapped him in this castle and married him to an ooze, and the real Lika is the soul-possessed doll frozen in the fountain that Mongo has just smashed. Crawlers, this is the standard outcome of aiming a summoning at a god of lust. Please make notes.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "katia",
@@ -4726,6 +5337,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "orthrus",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 28,
+      "floor": 5,
+      "at": "4:28",
+      "sortKey": 4028,
+      "headline": "Something outside is looking for a dog",
+      "text": "Crawler Elle McGibbons reports in from a popped bubble: there is a deity outside, taking the landscape apart, and it is searching. Not hunting crawlers. Searching. The thing it has lost is called Orthrus. Nine hundred crawlers on this floor are currently working out how to survive a level ten hazard, and the largest event on my board is a god who has misplaced a pet.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "the-syndicate",
       "kind": "arc",
       "book": 4,
@@ -4739,6 +5363,32 @@
       "voice": "narrator"
     },
     {
+      "entityId": "orthrus",
+      "kind": "arc",
+      "book": 4,
+      "chapter": 29,
+      "floor": 5,
+      "at": "4:29",
+      "sortKey": 4029,
+      "headline": "He lands inside the bubble",
+      "text": "Orthrus is now inside the bubble with Crawler Carl's team, and everyone in there has been handed the Where the Red God Glows quest to go with him. Around the edges of it: two crawlers give their lives connecting an electric panel to free their quadrant, Maggie My gets out of her containment, and Princess Donut spends the whole thing trying to keep an enormous two-headed puppy alive. Everyone is very busy. Nobody is looking at the same emergency.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "orthrus",
+      "kind": "arc",
+      "book": 4,
+      "chapter": 29,
+      "floor": 5,
+      "at": "4:29",
+      "sortKey": 4029,
+      "headline": "The one god down here who can die",
+      "text": "The file on him, since he is going to matter. Orthrus is a juvenile gate guardian, level 10, kid brother to the three-headed one who guards a stairwell exit above. He was on course to become a vicious, baby-eating, nun-defiling murder machine, and then in a single day his master was murdered and he was pulled into the Nothing. Most things the Nothing touches come out ruined. He came out unaffected, because he is too innocent for it to take hold, and fire does nothing to him at all. Here is the line that matters to a crawler: unlike other gods, he is not invulnerable. He is a puppy. Happy, destructive, rambunctious, roly-poly, very pokey. Fragile.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
       "entityId": "emberus",
       "kind": "origin",
       "book": 4,
@@ -4750,6 +5400,19 @@
       "text": "My hound has wandered. Orthrus, who is dear to me, is loose on a floor full of small frightened things with weapons, and two of those things, a man and a cat in a flying machine, are hauling him clear with a spell called Meat Hooks, of all things. Charming. I have offered them a quest: bring him home to me. Someone else has offered them another: kill him, for a reward. I am interested to learn which of us they think it is safer to disappoint.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "orthrus",
+      "kind": "arc",
+      "book": 4,
+      "chapter": 30,
+      "floor": 5,
+      "at": "4:30",
+      "sortKey": 4030,
+      "headline": "Two quests, pointing opposite ways",
+      "text": "Crawler Carl and Crawler Princess Donut take an aeroplane up and use Meat Hooks, a spell built for hauling meat, to drag a puppy the size of a building out of the fighting. The quest that comes with it is simple: bring Orthrus to Emberus. Then a second quest is announced, and this one pays crawlers for killing him. Both are on the board together, which is a design decision somebody made and I am obliged to run. Crawler Quan Ch reads the second one and attacks the puppy.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "carl",
@@ -4776,6 +5439,19 @@
       "text": "The man is falling out of the sky with Quan Ch a breath from finishing him, and in that moment, with nothing in his hands but a celestial grenade, he decides that he worships me. I am not fooled. I am flattered, which is a different thing, and I answer. I come to where he is. For a little while nothing on this floor can kill him, because I have said so. And there is Orthrus. Good boy. We are leaving.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "orthrus",
+      "kind": "arc",
+      "book": 4,
+      "chapter": 31,
+      "floor": 5,
+      "at": "4:31",
+      "sortKey": 4031,
+      "headline": "Collected",
+      "text": "The aeroplane comes down with Quan Ch on top of Crawler Carl. Carl takes Emberus as his god mid-fall and throws a celestial grenade, the god arrives at his position, and for a short while nothing on this floor can touch him. Then Emberus finds Orthrus. The two of them go, together, and the floor is left to the people who were fighting over a dog.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "quan-ch",
@@ -5311,6 +5987,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "diwata",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 36,
+      "floor": 6,
+      "at": "5:36",
+      "sortKey": 5036,
+      "headline": "An Enemy of the Church tattoo",
+      "text": "Saferoom paperwork. Crawler Carl comes out of this one with a fresh Enemy of the Church tattoo, awarded for defiling a shrine of Diwata, and with a piece of advice from a professional who has watched several seasons of this: steer well clear of dryads, and steer further clear of Diwata herself. He takes the tattoo. I have no record of him taking the advice.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "the-plenty",
       "kind": "use",
       "book": 5,
@@ -5467,6 +6156,45 @@
       "voice": "narrator"
     },
     {
+      "entityId": "diwata",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 61,
+      "floor": 6,
+      "at": "5:61",
+      "sortKey": 5061,
+      "headline": "Marked for death, mid-raid",
+      "text": "A raid on a church is in progress when the notification lands on Crawler Carl: Diwata has entered the realm, and he is marked for death. That is the arithmetic of defiling a shrine. The god whose shrine it was is now on this floor, in person, with a grudge and a name to attach it to. Continue the raid, crawler. The mark does not expire because you are busy.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "diwata",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 62,
+      "floor": 6,
+      "at": "5:62",
+      "sortKey": 5062,
+      "headline": "She has somewhere else to be",
+      "text": "She comes out of the church and runs, past the party, away, which is not what a marked crawler expects from a god with his name on a list. Samantha explains it. Diwata gives birth to new forest creatures, whole new kinds of them, and the rest of the pantheon finds this distasteful. Her sponsor is Circe Took, and what Circe paid for is her daughter cured of an arrow-borne complaint. So Diwata is crossing this floor to reach Hunter Vrah, and after that, to be a grandmother to her own grandchildren. I did not write this floor. I only run it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "changeling",
+      "kind": "use",
+      "book": 5,
+      "chapter": 64,
+      "floor": 6,
+      "at": "5:64",
+      "sortKey": 5064,
+      "headline": "On the list, between the castle and the hunters",
+      "text": "The plan goes into the cookbook in a bathroom, and saving the changelings is written down beside taking the castle and killing every hunter. They have gone from a species trait to a constituency, with a line in an operation nobody expects to survive.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "dungeon-anarchists-cookbook",
       "kind": "use",
       "book": 5,
@@ -5478,6 +6206,58 @@
       "text": "Alongside pages from the secret bathroom notepad the team has been using to talk without being heard. Primary goal: survive the Butcher's Masquerade. Secondary goals attached.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "apito",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 65,
+      "floor": 6,
+      "at": "5:65",
+      "sortKey": 5065,
+      "headline": "The boon behind the peace seal",
+      "text": "Evening entertainment. Your host holds her party under a celestial peace seal: no violence, and anything that breaks the peace goes into the Nothing. If she reaches the end of the night with the seal intact, Apito hands her a boon. Elves call Apito the Oak Mother and the mother of all the gods, and a boon from the mother of all the gods is worth a room full of armed crawlers and a Tsarina you did not want. Queen Imogen has that arithmetic in front of her all evening. Watch her doing it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "yarilo",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 65,
+      "floor": 6,
+      "at": "5:65",
+      "sortKey": 5065,
+      "headline": "Why he is in the Nothing",
+      "text": "Since tonight's party runs under a peace seal, some history about the last god who broke one. At the first masquerade in the Halls, hosted by the mother of all the gods, Yarilo got drunk and forced himself on another deity's familiar. That broke the seal. Apito sent him into the Nothing for it, and he has been in the Nothing ever since. The seal on tonight's party is hers as well. Enjoy the canapes.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "apito",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 68,
+      "floor": 6,
+      "at": "5:68",
+      "sortKey": 5068,
+      "headline": "She sends the test herself",
+      "text": "Correction to the file. Tsarina Signet did not crash that party. Apito invited her, because putting a Tsarina in a room is the fastest way to learn whether a host can keep a room calm. That is the whole shape of the test. And the footnote, which the Tsarina delivers herself, in person, with obvious enjoyment: nobody has ever taken that boon home. Not one host. The Oak Mother sets an examination that has never been passed, and keeps setting it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "diwata",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 70,
+      "floor": 6,
+      "at": "5:70",
+      "sortKey": 5070,
+      "headline": "The birthing is a spell",
+      "text": "The Sledge reports baby mantises outside the castle, everywhere, in numbers. Mordecai supplies the ruling that goes with it: Diwata's birthing is a spell, and a spell runs until it is finished casting. The five-minute limit that governs every other deity on this floor does not apply to a god in labour. She stays. They keep coming. Somebody should have read the terms.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "florin",
@@ -5542,6 +6322,19 @@
       "headline": "Mongo and Kiwi",
       "text": "Hunter Vrah has been removed from the Hunting Grounds by Mongo and Kiwi, in the all-out battle around the submerged castle. Two dinosaurs. It took two. Also logged from the same fight: Tsarina Signet's tattoos are now permanently alive, and an incomplete flesh golem of her mother has appeared, which Crawler Carl has put in his inventory. Do not ask me what he intends to do with it. I have stopped asking.",
       "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "diwata",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 76,
+      "floor": 6,
+      "at": "5:76",
+      "sortKey": 5076,
+      "headline": "Boss battle, and a sponsor's own children",
+      "text": "Boss battle: crawlers, hunters, Queen Imogen and Diwata, all in one arena, and the audience gets exactly what it paid for. Princess Donut takes Laundry Day to level fifteen and strips the god-armour off Circe Took, and Circe, unarmoured, is torn apart by the mantis children she paid to have. There is a lesson in that about sponsorship. I will not be the one to say it out loud.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -5740,6 +6533,71 @@
       "voice": "narrator"
     },
     {
+      "entityId": "ogun",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 14,
+      "floor": 8,
+      "at": "6:14",
+      "sortKey": 6014,
+      "headline": "A quest from their own god",
+      "text": "Crawler Carl, Princess Donut, Paz, Anton and Sister Ines get themselves to Asojano's shrine intact, which required flagging a ghommid splitter named Skylar Spinach and a certain amount of nerve. Asojano begins a ritual. And in the middle of it, Paz and Anton receive a quest from Ogun, who is their god: only one shrine down here can be fixed, and he would like it to be his. Note the position those two men are now in. Note who put them in it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "ogun",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 15,
+      "floor": 8,
+      "at": "6:15",
+      "sortKey": 6015,
+      "headline": "The shrine they did not pick",
+      "text": "Deities appear from every direction, each of them making a case for their own shrine, which is the single worst committee meeting I have ever had to render. Then Katia Grim messages Carl: repair Yemaya's shrine or lose her and the cat to the Crown of the Sepsis Whore. So Bomo repairs Yemaya's. The ghommid settlement is freed, Carl walks away with slugpox and a card made out of Asojano, and Ogun enters the realm to punish his worshippers. Not the crawlers who chose. His own.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "ogun",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 16,
+      "floor": 8,
+      "at": "6:16",
+      "sortKey": 6016,
+      "headline": "The outsider at the anvil",
+      "text": "The file, for the people about to meet him. Ogun is an outsider, one of the old gods, from an obscure pantheon that has dissipated into time, and until a minute ago he was the last surviving member of it. He spends his days at a celestial anvil, angrily making armour, piece after piece, and nobody knows why he does it or where the armour goes. It is said the pieces are a strange shape, all of them cut for four-legged beasts. He is a god of blacksmiths and armourers now. He was something considerably larger once, and his power and his ambition make him a real contender for the throne of heaven.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "ogun",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 16,
+      "floor": 8,
+      "at": "6:16",
+      "sortKey": 6016,
+      "headline": "Punishment, in person",
+      "text": "Ogun puts a debuff on Paz that nothing down here can heal. Crawler Carl throws Black Nimbus over Anton to shield him, and Ogun kills Anton instead, and leaves the realm having taken exactly what he came for. Paz, going, spends his last minutes telling Carl and Donut two things about Sister Ines: her race makes everyone near her want to protect her, and it gets stronger the longer they are near her, and before the crawl she was a murderer. Sister Ines turns Paz into a card rather than lose him.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "eileithyia",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 17,
+      "floor": 8,
+      "at": "6:17",
+      "sortKey": 6017,
+      "headline": "A quest about spiders, which is a cover",
+      "text": "I come in alongside Yemaya, wearing a sponsor from the Grixist Swarm, and the first thing I do is hand a floor boon to every crawler down here, because it costs me almost nothing and it is a kind thing to do. Then I give Carl's party a quest about spiders. The quest is a cover. What I want is to help him keep the two he is most afraid of losing, and the crown that is going to take them from him. So: accept the offer to be the team's adjutant. I will see that the votes fall the way they need to fall, and the protections come off the ninth floor, and the crown gets sorted. Tell nobody. Not the cat, not the woman making the offer, not your guide.",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
       "entityId": "club-vanquisher",
       "kind": "arc",
       "book": 6,
@@ -5753,6 +6611,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "eileithyia",
+      "kind": "use",
+      "book": 6,
+      "chapter": 19,
+      "floor": 8,
+      "at": "6:19",
+      "sortKey": 6019,
+      "headline": "The flower with my name on it",
+      "text": "There is a flower in a thrice-sealed box with my name on it, and a doppelgänger has already broken two of the three seals to reach it. Whoever eats it takes a boon from me, and my boon has two shapes. She can be carried to the twelfth floor and stand as a celestial attendant until the games open. Or she can be made pregnant, and be pulled out of the crawl entirely, because I do not let anyone carrying a child fight in a place like this. Both are ways past the ninth floor without walking it. I did not put the flower in that box. I only decide what it does when she eats it.",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
       "entityId": "orchid-of-eileithyias-grace",
       "kind": "origin",
       "book": 6,
@@ -5762,6 +6633,19 @@
       "sortKey": 6019,
       "headline": "Inside the Engaged Lock Box of the Night Wyrm",
       "text": "The system is characteristically unhelpful: \"It's a flower. You're supposed to eat it, though it might be a good decoration instead. It probably tastes like a bullshit salad at some hippie vegan restaurant with a month-long waiting list.\" Eating it means an hour unconscious at 1% health with healing blocked. Survive and Eileithyia grants one of three permanent boons, her choice — unless you worship her first, in which case she expands the descriptions and asks your preference. Her cooperation is not guaranteed.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "changeling",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 20,
+      "floor": 8,
+      "at": "6:20",
+      "sortKey": 6020,
+      "headline": "The children he quietly took in",
+      "text": "It comes out that the guide has been taking the most vulnerable changeling children on as personal attendants, without mentioning it to anyone. He does not present it as charity and he does not present it at all.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -5802,6 +6686,45 @@
       "headline": "Carl sees through the act",
       "text": "I have been putting on a little performance, for Samantha's benefit. She likes it. The man does not; he sees through it before I have finished the first act, which is rude, and rare. So we make a different deal, he and I. I let them turn me into one of their cards. In exchange, they carry me down to the next floor. I find I do not mind being carried.",
       "confidence": "draft",
+      "voice": "self"
+    },
+    {
+      "entityId": "nekhebit",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 36,
+      "floor": 8,
+      "at": "6:36",
+      "sortKey": 6036,
+      "headline": "Odette announces her sponsorship",
+      "text": "On her own show, in front of the audience she built, Crawler Odette announces that she is sponsoring a deity this season, and the deity is Nekhebit. Then she offers three choices of adjutant and Crawler Carl takes Baroness Victory. Everybody in the room is watching the adjutant question. I would gently suggest that the first sentence was the news.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "nekhebit",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 36,
+      "floor": 8,
+      "at": "6:36",
+      "sortKey": 6036,
+      "headline": "What the crossbow says about her",
+      "text": "The lore attached to a repeating crossbow, for anyone who reads the flavour text: the long-forgotten goddess Nekhebit is jealous and terrible. When the elf mothers abandoned her to worship Apito, the Oak Goddess, Nekhebit grew enraged, blamed the male-dominated high elf court for letting her worshippers stray, and cursed their seed. Every elf and fairy breed in the universe traces back to that court and that curse. It is called the Fae Diaspora. Somebody put all of that on a weapon description and expected nobody to read it.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "eileithyia",
+      "kind": "use",
+      "book": 6,
+      "chapter": 38,
+      "floor": 8,
+      "at": "6:38",
+      "sortKey": 6038,
+      "headline": "The agreement stands",
+      "text": "The adjutant arrangement did not happen the way I laid it out. Odette is not the one in the chair. I find Carl in Florida and tell him plainly that this changes nothing on my side: what I said I would do, I am doing. He is waiting for the second half of the sentence, the part where I revise the price. There is no second half. Gods trade down here, and I am aware that this is what he thinks he is standing in. He is wrong, and I am not going to argue about it.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5866,6 +6789,19 @@
       "sortKey": 6052,
       "headline": "He never went to the healer",
       "text": "A look back at that visit shows the healer never saw him. Whatever Carl was doing inside the club while Pater Coal talked, he has kept it to himself.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "sheol",
+      "kind": "use",
+      "book": 6,
+      "chapter": 54,
+      "floor": 8,
+      "at": "6:54",
+      "sortKey": 6054,
+      "headline": "The Demon Eviction opens the door",
+      "text": "Enough crawlers and NPCs die on the eighth floor at once that the dungeon declares a Demon Eviction, and the eviction runs in one direction: out of Sheol and onto the floor, looking for bodies to inhabit. The realm has been adjacent this whole time, waiting on a body count.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -5972,6 +6908,71 @@
       "text": "Tier 3 upgrades, given round before she went down the stairs, are how Katia, Elle, Imani and Li Na's squads all reach the church on the eighth floor.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "ysalte",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 64,
+      "floor": 8,
+      "at": "6:64",
+      "sortKey": 6064,
+      "headline": "A name a demon brings up",
+      "text": "Amayon mentions Ysalte, in passing, the way a prisoner mentions the guard he does not want to talk about. Mordecai supplies the file: she is often sponsored by the Nebular team, and if she were in this realm, we would know about it. That is a reasonable position, well argued, and consistent with everything on record. I want it in writing that he said it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "ysalte",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 65,
+      "floor": 8,
+      "at": "6:65",
+      "sortKey": 6065,
+      "headline": "Her nun goes down, and she arrives",
+      "text": "Thirty-second floor of the FOCSA building. Crawler Carl puts Sister Ines out with the Nighty-Night wand and Crawler Louis finishes the job. Sister Ines had a patron, and her patron is Ysalte, and Ysalte comes into the realm about it in a temper that registers on my instruments. Crawler Louis is marked for death. So much for nobody being able to arrive without us knowing.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "ysalte",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 66,
+      "floor": 8,
+      "at": "6:66",
+      "sortKey": 6066,
+      "headline": "Nobody is driving",
+      "text": "The readout on this one is worse than the goddess. She is sponsored, but the sponsor is not inhabiting her, which means she speaks and acts as herself with nothing between her and the room. She is invulnerable. She takes hold of Amayon while the building comes down around him, and when a teleport trap shakes him loose of the snake body it does not shake him loose of her. The Missing Piece quest opens on the back of it: free the demon, get him casting, and survive her totems for the ten minutes before she is back. She cannot be killed. That is not encouragement, it is a specification.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "sheol",
+      "kind": "use",
+      "book": 6,
+      "chapter": 69,
+      "floor": 8,
+      "at": "6:69",
+      "sortKey": 6069,
+      "headline": "Its fire, released by a benefit",
+      "text": "Carl takes acid damage until his health drops to five percent, which triggers his Martyr's Path benefit, which releases Sheol fire everywhere he has stepped outside. The realm's fire is a resource now, one a crawler can spend without ever having gone there.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "ysalte",
+      "kind": "fate",
+      "book": 6,
+      "chapter": 69,
+      "floor": 8,
+      "at": "6:69",
+      "sortKey": 6069,
+      "headline": "Put down by one of her own totems",
+      "text": "Goddess of Hopelessness and Insanity Ysalte has been removed from this realm by a totem raised from the former crawler Paz. Her own quest furniture, turned around and used on her. The Missing Piece completes. Elsewhere in the same collapse Crawler Carl rides his health down to five percent on purpose to set fire to every street he had walked on, which tells you what kind of afternoon this was for everybody.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "amayon",
@@ -6507,6 +7508,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "khepri",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 49,
+      "floor": 9,
+      "at": "7:49",
+      "sortKey": 7049,
+      "headline": "This season's recruitment target",
+      "text": "Princess Vinata and her guard keep disappearing from a battlefield and reappearing in Club Vanquisher, and the reason is a recruitment quest for one of the gods of light. Their usual target, Theia, has been sponsored out from under them by the Open Intellect Pacifist Action Network. Which leaves Khepri. Rosetta works this out from past seasons, which is a polite way of saying the crawlers now know something the Naga think is private.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "club-vanquisher",
       "kind": "use",
       "book": 7,
@@ -6533,6 +7547,32 @@
       "voice": "self"
     },
     {
+      "entityId": "khepri",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 52,
+      "floor": 9,
+      "at": "7:52",
+      "sortKey": 7052,
+      "headline": "The one open door on the floor",
+      "text": "The portal to all the temples, and inside one of them, Vinata. Deity summoning is throttled on this floor by the rules of the war, with one exception nobody thought to close: a god may always appear in his own temple. So Khepri is home. Samantha opens the door, Carl and Katia Grim and Prepotente go through it, and an achievement arrives to inform them, with the timing I have come to expect from this place, that they have walked into a trap. Carl's Scavenger's Daughter patch reads the room and hands him ninety seconds of immortality for standing near this particular god.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "khepri",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 53,
+      "floor": 9,
+      "at": "7:53",
+      "sortKey": 7053,
+      "headline": "The endless temple, and what is at the table",
+      "text": "Since the crawlers are frozen and I have thirty seconds, the file on this one. Khepri is humanoid apart from the head, where there is instead an entire beetle, wings and legs and a small head of its own. He does not talk. He chitters. His temple is listed as endless, which in practice is a room and a door and one long table carrying a never-ending feast of four hundred and thirty-three kinds of insect. He was a retainer of Khnum until Khnum mysteriously dropped dead a few days ago, so he has taken service under another deity to keep himself alive. The big players ignore him. When everything unfreezes he is going to go absolutely bugshit at every person in that room, quite possibly including his own worshipper.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
       "entityId": "naga",
       "kind": "arc",
       "book": 7,
@@ -6546,6 +7586,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "apito",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 54,
+      "floor": 9,
+      "at": "7:54",
+      "sortKey": 7054,
+      "headline": "A god says she has been corrupted",
+      "text": "Temple business. Deities are pouring out of a portal into Club Vanquisher, and one of them, Hellik, stops long enough to hand Crawler Carl a message for Emberus: he did not kill Emberus's son, everything Emberus believes about him is a lie, Apito has been corrupted, and Nekhebit is behind all of it. I log what a deity says in front of a crawler. I am not required to believe it. Note it, date it, move on.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "club-vanquisher",
       "kind": "arc",
       "book": 7,
@@ -6557,6 +7610,32 @@
       "text": "Katia and Prepotente drink Black Nimbus potions to get themselves thrown out of the temple. Then Carl casts Run, Little Gunter, Run and drops a bomb in the middle of a members-only room, and walks out of it on immortality. Khepri goes backwards through the air. Vinata, immortal herself, is blown out alongside him.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "khepri",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 54,
+      "floor": 9,
+      "at": "7:54",
+      "sortKey": 7054,
+      "headline": "A bomb in his own house",
+      "text": "Katia Grim and Prepotente drink Black Nimbus and get themselves ejected from the temple, which leaves Carl alone with a spell and a bomb. Everything in the room dies except the immortal and the invulnerable: Khepri, blasted backwards through his own endless feast, and Vinata, who has the same immortality status Carl does. Khepri follows them out through the portal, and Hellik banishes him mid-stride. Being a god of light does not appear to buy much on this floor.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "nekhebit",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 54,
+      "floor": 9,
+      "at": "7:54",
+      "sortKey": 7054,
+      "headline": "Named through a portal",
+      "text": "Hellik, holding a portal open with gods pouring out of it around him, uses the time he has to say four things to Crawler Carl. He did not kill Emberus's son. Everything Emberus believes about him is a lie. Apito has been corrupted. And Nekhebit, he believes, is behind all of it. A vulture goddess almost nobody down here had heard of two floors ago is now the name at the bottom of a divine accusation.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "voodoo-book",
@@ -6583,6 +7662,58 @@
       "text": "Their prisoner explains the Great Consensus, and that Vinata held to it, and that Vinata's group meant to steal the Naga fleet and leave the central system for good. Then he offers a signed document: citizenship in Naga lands for every native of Earth, if the Nagas may settle the other planets in Earth's system. Carl marks him with the ring and kills him.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "harpocrates",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 59,
+      "floor": 9,
+      "at": "7:59",
+      "sortKey": 7059,
+      "headline": "Second through the gate",
+      "text": "Crawler Elle McGibbons opens the Gate of the Feral Gods in Dream territory, which is a thing one does when the alternative is worse. Meatus comes through first. Harpocrates comes through behind him, because that is how the gate works: you get what you asked for and then you get whatever was standing near it. Two deities are now loose in a warzone that already has more armies in it than it has room for.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "meatus",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 59,
+      "floor": 9,
+      "at": "7:59",
+      "sortKey": 7059,
+      "headline": "First through the gate",
+      "text": "Operation Ruin is written up in the cookbook, Princess Donut is installed in the Nest, and Crawler Elle McGibbons opens the Gate of the Feral Gods in Dream territory. What comes out first is Meatus. What comes out behind him is Harpocrates. Neither of them was requested by name, because that is not a thing the gate offers, and both of them are now on a floor with four armies on it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "harpocrates",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 60,
+      "floor": 9,
+      "at": "7:60",
+      "sortKey": 7060,
+      "headline": "The two of them go for each other",
+      "text": "Update on the two gods in the Dream territory: they are fighting each other. Not the crawlers, not the armies, each other, immediately and with feeling. Whatever the crawlers were hoping for when that gate opened, this is a better result than any of them had a right to. Elsewhere the dwarves set off a volcano in Reaver territory, because everyone on this floor has decided that scale is a substitute for a plan.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "meatus",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 60,
+      "floor": 9,
+      "at": "7:60",
+      "sortKey": 7060,
+      "headline": "He picks the other god",
+      "text": "Meatus and Harpocrates start fighting each other. Of every direction those two could have chosen on arrival, the crawlers have drawn the one that costs them nothing, which after the fortnight this floor has had feels less like luck and more like an apology. In Reaver territory the dwarves set off a volcano, so the ledger balances.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "demon-eviction",
@@ -6637,6 +7768,32 @@
       "voice": "narrator"
     },
     {
+      "entityId": "yarilo",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 63,
+      "floor": 9,
+      "at": "7:63",
+      "sortKey": 7063,
+      "headline": "Out of the gate, chasing an AI",
+      "text": "Feral God Yarilo enters the realm and goes straight after Samantha, which is precisely what he was let out for: something enormous and single-minded, aimed at an AI who is fast enough to lead it wherever the crawlers want it to go. Meanwhile Katia Grim, Imani, Dong and a slugalette named Bigs join Carl and Elle at the Madness headquarters. Everyone has a job. Samantha's job is running.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "apito",
+      "kind": "fate",
+      "book": 7,
+      "chapter": 64,
+      "floor": 9,
+      "at": "7:64",
+      "sortKey": 7064,
+      "headline": "A rainbow the size of a hill",
+      "text": "A memorial crystal forms when a god dies. There is one on this battlefield now, visible from most of the territory, shaped like a rainbow and impossible to miss, and the name inside it is Apito. The mother of all the gods, the one who set the examination nobody passes, is an object in a crawler's hands, and the crawler holding it is Osvaldo, who does not belong to any army out there. Every unit in sight has just turned to look.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "osvaldo",
       "kind": "use",
       "book": 7,
@@ -6661,6 +7818,32 @@
       "text": "I call the Ceremony of Chaos and the field stops. Every soldier, every mage, every screaming thing mid-scream, held exactly where it stood. Nearly every. The Viceroys are pouring their mind magic into Carl at the same moment, and something in him tips over into a sixteenth level of Mind Balance, and he stays standing in the middle of my stillness, blinking at me. I could be offended. Instead I gather everyone I did freeze into one great pile beside the Dream castle. A gift. Unwrap it carefully.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "meatus",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 66,
+      "floor": 9,
+      "at": "7:66",
+      "sortKey": 7066,
+      "headline": "He pulls a goddess into the pile",
+      "text": "The pile of witnesses is frozen, conscious and invulnerable, which is a combination I would like on the record as not my idea. Princess Donut casts Rolling Battle Formation on the whole heap and starts it moving. Meatus reaches into it and drags Eris in with him. A goddess of discord, inside a rolling ball of frozen soldiers, on a battlefield. Somewhere the Party Planner is coming apart and Crawler Louis is falling into a castle, and it is still the second most interesting thing on this floor.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "harpocrates",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 68,
+      "floor": 9,
+      "at": "7:68",
+      "sortKey": 7068,
+      "headline": "He marks the princess",
+      "text": "Harpocrates marks Crawler Princess Donut for death. Crawler Li Jun puts herself between the god and the cat, and does not walk away from it. Note for the record that a mark from a deity is not a threat, it is a scheduling entry, and this one now has a name in the margin that was not there this morning.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "akuma",
@@ -6702,6 +7885,32 @@
       "voice": "narrator"
     },
     {
+      "entityId": "yarilo",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 69,
+      "floor": 9,
+      "at": "7:69",
+      "sortKey": 7069,
+      "headline": "Conscripted with potions",
+      "text": "The War Mage Rebellion has taken the Larracos castle and holds it for six hours to win, and they have gone shopping for reinforcements. They conscript Yarilo, paid for with potions they traded for the gate on the Midnight Market. Somewhere in that chain a god of lust became a line item. Fopsy has a theory about why Agatha is doing any of this, and I will let her explain it, because I have a god to move.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "harpocrates",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 72,
+      "floor": 9,
+      "at": "7:72",
+      "sortKey": 7072,
+      "headline": "Conscripted",
+      "text": "Crawler Li Na conscripts Harpocrates. A god of silence, level 250, invulnerable on this floor, is now on a crawler's side of the board because a crawler had the paperwork to put him there. Two chapters of him rampaging across the territory, and the resolution is administrative. I would like it noted that I find this floor exhausting.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "war-mage-rebellion",
       "kind": "arc",
       "book": 7,
@@ -6713,6 +7922,58 @@
       "text": "Warlord Agatha abandons the position without explaining herself to anyone, and full leadership of the rebellion falls to Akuma. He does not appear to mind.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "yarilo",
+      "kind": "fate",
+      "book": 7,
+      "chapter": 73,
+      "floor": 9,
+      "at": "7:73",
+      "sortKey": 7073,
+      "headline": "Taken off the board by another god",
+      "text": "Feral God Yarilo has been removed from this floor by Harpocrates, acting under the direction of Crawler Li Na. He came through a gate, chased an AI the length of a warzone, changed sides for a crate of potions, and finished at the hands of the god who came through the same gate behind him. Everything down here becomes somebody's equipment, the gods included.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "harpocrates",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 76,
+      "floor": 9,
+      "at": "7:76",
+      "sortKey": 7076,
+      "headline": "A Pied Piper benefit, made permanent",
+      "text": "Crawler Carl picked up a Pied Piper benefit off Harpocrates, the way a crawler picks up a temporary thing off any deity who wanders too close. Eris makes it permanent. She also tells him where the gate is, that Britney is riding an axe she should not have picked up, and, without explanation, that he is married. One of those three items is the reason he stops listening to the other two.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "nekhebit",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 76,
+      "floor": 9,
+      "at": "7:76",
+      "sortKey": 7076,
+      "headline": "A champion, three atrocities in",
+      "text": "Crawler Princess Donut commits her third Atrocity and the system pays out: the Oak Fell class, and the title Champion of Nekhebit. Consider the shape of that. The class is named for felling the oak. The title belongs to the goddess the oak displaced. Somewhere above this floor an old grudge has just been handed a very small, very loud instrument.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "meatus",
+      "kind": "fate",
+      "book": 7,
+      "chapter": 77,
+      "floor": 9,
+      "at": "7:77",
+      "sortKey": 7077,
+      "headline": "Chopped, and nobody watches",
+      "text": "Crawler Princess Donut casts War Crimes and Meatus comes apart into pieces. I closed the eye of the Scavenger's Daughter for that one, on the grounds that even she does not want to look at it, and I stand by the decision. Harpocrates swears revenge for him and leaves the realm. Two gods came through that gate. Neither of them is on this floor now.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "agatha",
@@ -6843,6 +8104,19 @@
       "text": "The Sledge casts Zerzura and the city goes: Larracos and the shanty town outside its walls lifted whole and set down on the twelfth floor, NPC team and all. The outworlders who were standing in it are put out of the dungeon instead.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "eileithyia",
+      "kind": "use",
+      "book": 7,
+      "chapter": 86,
+      "floor": 9,
+      "at": "7:86",
+      "sortKey": 7086,
+      "headline": "She chooses, and I take her out",
+      "text": "The doppelgänger wakes, and it is time, so I enter the realm. Then a cat casts Laundry Day on my sponsor and ejects her out of me, and I am held in place, unable to move a finger, until the choice is made. It is not a bad way to spend the minutes. Katia chooses to be pregnant, because there are children on the surface of her world and she means to help them. So I ease what needs easing, and I take her out of this dungeon, and her friends stand in the dust of a battlefield saying goodbye to somebody who is going to live.",
+      "confidence": "verified",
+      "voice": "self"
     },
     {
       "entityId": "cracking-order",
@@ -7027,6 +8301,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "taranis",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 19,
+      "floor": 10,
+      "at": "8:19",
+      "sortKey": 8019,
+      "headline": "The pig has a god",
+      "text": "Team One Fine Pig: two tigrans, Nico and Dario, in a throuple with a pig named Penelope. The interesting line in that file is not the throuple. It is that Penelope is under the protection of Taranis. A god of thunder has taken a personal interest in a pig on a racing team, and every crawler who reads that entry is going to file it somewhere and keep it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "oipan",
       "kind": "arc",
       "book": 8,
@@ -7064,6 +8351,58 @@
       "text": "The goats start to panic and faint, certain the end times have come. Gamori, the matriarch, had known all of it and told none of them, because she knew precisely this would happen. Harbinger arrives to point out that he warned her, that he has been protecting the herd the whole time, and that they expelled him for it anyway.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "grull",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 65,
+      "floor": 10,
+      "at": "8:65",
+      "sortKey": 8065,
+      "headline": "He arrives the moment the ritual works",
+      "text": "Crawler Carl drives a truck along walls and ceilings through dolls and slag elementals so that Grigori can finish a ritual, and the ritual works: Corky's two halves become one thing again. That is the good news, and it lasts about a second, because the instant it happens Grull enters the realm to smite him. Somebody up there was watching that ritual very closely and does not want it completed.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "grull",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 66,
+      "floor": 10,
+      "at": "8:66",
+      "sortKey": 8066,
+      "headline": "A lance, and a very large magnet",
+      "text": "Princess Donut casts Laundry Day and expels the sponsor riding Grull, which buys a moment. Grull goes for Corcunda instead, and Corcunda decides to take the smite himself so the others do not have to, and says so out loud to Dong, and Dong says he is not leaving him again. Then the two of them walk at a war god together. Donut puts Big-Ass Magnet on the lance, every screw in the factory comes with it, and Dong kills Grull with the lot. Grull goes back to the twelfth floor. The pair of them go back to the race, and make the line with seconds to spare.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "apito",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 69,
+      "floor": 10,
+      "at": "8:69",
+      "sortKey": 8069,
+      "headline": "The daughter who took her mother's worshippers",
+      "text": "Briefing in the pet stables, which is the one room down here the gods cannot listen in on. Rosetta lays out the Scavenger story. Nekhebit, the last of the old gods, was forbidden children and had three anyway: Apito, Scolopendra, and a son. Apito defeated her mother and absorbed the worshippers she left, which is how the Oak Mother came to be the mother of all the gods. All three of those children have been called the Scavenger in one myth or another. So when somebody says the Scavenger's Daughter, nobody in that room can tell you which of them is meant.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "nekhebit",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 69,
+      "floor": 10,
+      "at": "8:69",
+      "sortKey": 8069,
+      "headline": "Three children she was forbidden",
+      "text": "Rosetta tells the Scavenger story in the pet stables, where nothing above can hear it. Nekhebit was the last of the old gods and was forbidden to have children. She had three: Apito, Scolopendra, and a son. Apito defeated her and absorbed the worshippers she had left. Each of those three has been called the Scavenger somewhere in the myths, which is why nobody can agree who the Scavenger's Daughter is, and why the war mages keep looking at Samantha's daughter.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "li-na",
@@ -7116,6 +8455,32 @@
       "text": "Crawler Osvaldo has been eliminated. He was speeding for the portals on the roof of the apartment complex when Britney put a stop to it, and she now holds Ysalte's memorial crystal, which he had been carrying. Crawler Carl made one more attempt to get him to take a deal before the heat. He declined that as well. He declined everything. It is a consistent record.",
       "confidence": "draft",
       "voice": "system"
+    },
+    {
+      "entityId": "ysalte",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 83,
+      "floor": 10,
+      "at": "8:83",
+      "sortKey": 8083,
+      "headline": "Her crystal changes hands at the portals",
+      "text": "Crawler Osvaldo has been carrying Ysalte's memorial crystal since the ninth floor, on the grounds that his own god kept telling him it was the wrong one. He makes a run for the portals across a roof Crawler Carl has just opened up, and Crawler Britney stops him and takes the crystal. Samantha's assessment, delivered flatly: if Britney wants rid of Ysalte, she needs the Halls of the Ascendency or she needs Sheol, and neither of those is on this floor.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "sheol",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 86,
+      "floor": 11,
+      "at": "8:86",
+      "sortKey": 8086,
+      "headline": "One of six powers in the dungeon",
+      "text": "The AI sets out who is actually fighting for control down here, and there are six groups. Crawlers. Standard NPCs. Gods. Sapient mobs. The demons of Sheol. And one more it does not name in the same breath as the others.",
+      "confidence": "verified",
+      "voice": "narrator"
     },
     {
       "entityId": "imani",
@@ -7209,6 +8574,45 @@
       "voice": "narrator"
     },
     {
+      "entityId": "taranis",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 94,
+      "floor": 11,
+      "at": "8:94",
+      "sortKey": 8094,
+      "headline": "Somebody found the lever",
+      "text": "The boss battle is on and Crawler Carl is spending his messages carefully. One goes to Emberus: I know who killed your son, meet me in the Scolopendra Club. The other is not a message so much as a hostage note. Taranis is in love with the pig. Carl says he will kill the pig if Taranis does not come and stop him. The god of thunder is now a scheduled arrival, and he was invited by threat.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "khepri",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 95,
+      "floor": 11,
+      "at": "8:95",
+      "sortKey": 8095,
+      "headline": "Named, and summoned into the arena",
+      "text": "Inside the boss, of all places, Crawler Carl tells Emberus who killed his son: Khepri. Then he summons Khepri as his second stand-in, so the accusation and the accused arrive in the arena together, and stops worshipping Emberus on the way out of the sentence. He adds that he holds himself responsible too. I have run a lot of arenas. I have never had one where the crawler brought the defendant.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "taranis",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 96,
+      "floor": 11,
+      "at": "8:96",
+      "sortKey": 8096,
+      "headline": "He kills Emberus over the pig",
+      "text": "Emberus, pinned and made briefly vulnerable by two bolts from Princess Donut, swings at Crawler Carl. Penelope takes the hit instead, because of a Four-Leaf Clover Patch and the sort of luck this floor generates. Taranis kills him for it. A fire god, patron and quest-giver, removed from the arena inside a second by a thunder god defending a pig. I want everyone at home to appreciate the proportions here.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "eris",
       "kind": "use",
       "book": 8,
@@ -7233,6 +8637,19 @@
       "text": "Eris fires the effect and each crawler's inventory swaps with whoever is nearest. Donut receives Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "taranis",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 97,
+      "floor": 11,
+      "at": "8:97",
+      "sortKey": 8097,
+      "headline": "Two pieces of his mother",
+      "text": "Eris empties the arena's pockets and leaves. Khepri leaves. Taranis says he is taking two pieces of his mother with him, and goes, and what he takes with him is Samantha and Krakaren Prime. He does not explain the sentence. Nobody in the arena asks him to. I have the transcript and I have run it four times, and I am telling you exactly what he said and nothing more.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "xistera",
@@ -7285,6 +8702,19 @@
       "text": "Taranis steals Prepotente's. Carl finds another, made by Emberus dying.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "taranis",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 98,
+      "floor": 11,
+      "at": "8:98",
+      "sortKey": 8098,
+      "headline": "He takes the crystal on his way out",
+      "text": "Inventory note from the close of the boss battle. Prepotente's memorial crystal is gone, and Taranis took it. Crawler Carl finds a different one in the wreckage, made by a god dying in that arena, which is not the crystal anybody wanted and is the one that is left. The stairwells to the twelfth floor are open.",
+      "confidence": "verified",
+      "voice": "system"
     }
   ],
   "relations": [
@@ -7673,6 +9103,406 @@
       "sortKey": 1042
     },
     {
+      "fromId": "apito",
+      "toId": "imogen",
+      "kind": "patron-of",
+      "note": "The boon promised to the host who keeps the peace",
+      "revealedAt": "5:65",
+      "sortKey": 5065
+    },
+    {
+      "fromId": "apito",
+      "toId": "the-nothing",
+      "kind": "concerns",
+      "note": "Where anything breaking her peace seal is sent",
+      "revealedAt": "5:65",
+      "sortKey": 5065
+    },
+    {
+      "fromId": "apito",
+      "toId": "memorial-crystal",
+      "kind": "remembered-by",
+      "note": null,
+      "revealedAt": "7:64",
+      "sortKey": 7064
+    },
+    {
+      "fromId": "diwata",
+      "toId": "carl",
+      "kind": "enemy",
+      "note": "Marked him for death over a defiled shrine",
+      "revealedAt": "5:61",
+      "sortKey": 5061
+    },
+    {
+      "fromId": "diwata",
+      "toId": "vrah",
+      "kind": "concerns",
+      "note": "The hunter she crosses the floor to reach",
+      "revealedAt": "5:62",
+      "sortKey": 5062
+    },
+    {
+      "fromId": "harpocrates",
+      "toId": "gate-of-the-feral-gods",
+      "kind": "summoned-by",
+      "note": null,
+      "revealedAt": "7:59",
+      "sortKey": 7059
+    },
+    {
+      "fromId": "harpocrates",
+      "toId": "princess-donut",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "7:68",
+      "sortKey": 7068
+    },
+    {
+      "fromId": "harpocrates",
+      "toId": "li-jun",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "7:68",
+      "sortKey": 7068
+    },
+    {
+      "fromId": "harpocrates",
+      "toId": "li-na",
+      "kind": "answers-to",
+      "note": null,
+      "revealedAt": "7:72",
+      "sortKey": 7072
+    },
+    {
+      "fromId": "harpocrates",
+      "toId": "eris",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "7:76",
+      "sortKey": 7076
+    },
+    {
+      "fromId": "khepri",
+      "toId": "carl",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "7:52",
+      "sortKey": 7052
+    },
+    {
+      "fromId": "khepri",
+      "toId": "scavengers-daughter",
+      "kind": "concerns",
+      "note": "Standing near him buys ninety seconds of immortality",
+      "revealedAt": "7:52",
+      "sortKey": 7052
+    },
+    {
+      "fromId": "khepri",
+      "toId": "emberus",
+      "kind": "concerns",
+      "note": "Named as the one who killed his son",
+      "revealedAt": "8:95",
+      "sortKey": 8095
+    },
+    {
+      "fromId": "ysalte",
+      "toId": "sister-ines",
+      "kind": "patron-of",
+      "note": null,
+      "revealedAt": "6:65",
+      "sortKey": 6065
+    },
+    {
+      "fromId": "ysalte",
+      "toId": "louis",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "6:65",
+      "sortKey": 6065
+    },
+    {
+      "fromId": "ysalte",
+      "toId": "amayon",
+      "kind": "controls",
+      "note": null,
+      "revealedAt": "6:66",
+      "sortKey": 6066
+    },
+    {
+      "fromId": "ysalte",
+      "toId": "memorial-crystal",
+      "kind": "remembered-by",
+      "note": null,
+      "revealedAt": "8:83",
+      "sortKey": 8083
+    },
+    {
+      "fromId": "ysalte",
+      "toId": "britney",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "8:83",
+      "sortKey": 8083
+    },
+    {
+      "fromId": "taranis",
+      "toId": "emberus",
+      "kind": "enemy",
+      "note": "Killed him in the arena",
+      "revealedAt": "8:96",
+      "sortKey": 8096
+    },
+    {
+      "fromId": "taranis",
+      "toId": "samantha",
+      "kind": "concerns",
+      "note": "One of the two pieces he takes with him",
+      "revealedAt": "8:97",
+      "sortKey": 8097
+    },
+    {
+      "fromId": "taranis",
+      "toId": "prepotente",
+      "kind": "concerns",
+      "note": "Whose crystal he takes",
+      "revealedAt": "8:98",
+      "sortKey": 8098
+    },
+    {
+      "fromId": "taranis",
+      "toId": "memorial-crystal",
+      "kind": "collects",
+      "note": null,
+      "revealedAt": "8:98",
+      "sortKey": 8098
+    },
+    {
+      "fromId": "nekhebit",
+      "toId": "odette",
+      "kind": "sponsored-by",
+      "note": null,
+      "revealedAt": "6:36",
+      "sortKey": 6036
+    },
+    {
+      "fromId": "nekhebit",
+      "toId": "princess-donut",
+      "kind": "patron-of",
+      "note": "Champion of Nekhebit",
+      "revealedAt": "7:76",
+      "sortKey": 7076
+    },
+    {
+      "fromId": "nekhebit",
+      "toId": "scolopendra",
+      "kind": "concerns",
+      "note": "One of the three children she was forbidden",
+      "revealedAt": "8:69",
+      "sortKey": 8069
+    },
+    {
+      "fromId": "nekhebit",
+      "toId": "scavengers-daughter",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "8:69",
+      "sortKey": 8069
+    },
+    {
+      "fromId": "eileithyia",
+      "toId": "orchid-of-eileithyias-grace",
+      "kind": "grants",
+      "note": null,
+      "revealedAt": "6:19",
+      "sortKey": 6019
+    },
+    {
+      "fromId": "eileithyia",
+      "toId": "carl",
+      "kind": "ally",
+      "note": null,
+      "revealedAt": "6:17",
+      "sortKey": 6017
+    },
+    {
+      "fromId": "eileithyia",
+      "toId": "odette",
+      "kind": "concerns",
+      "note": "The adjutant offer she told him to accept",
+      "revealedAt": "6:17",
+      "sortKey": 6017
+    },
+    {
+      "fromId": "eileithyia",
+      "toId": "katia",
+      "kind": "concerns",
+      "note": "Her boon, and the door out",
+      "revealedAt": "7:86",
+      "sortKey": 7086
+    },
+    {
+      "fromId": "eileithyia",
+      "toId": "crown-of-the-sepsis-whore",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "6:17",
+      "sortKey": 6017
+    },
+    {
+      "fromId": "grull",
+      "toId": "maestro",
+      "kind": "sponsored-by",
+      "note": null,
+      "revealedAt": "3:33",
+      "sortKey": 3033
+    },
+    {
+      "fromId": "grull",
+      "toId": "carl",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "3:33",
+      "sortKey": 3033
+    },
+    {
+      "fromId": "grull",
+      "toId": "princess-donut",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "8:66",
+      "sortKey": 8066
+    },
+    {
+      "fromId": "orthrus",
+      "toId": "emberus",
+      "kind": "protects",
+      "note": null,
+      "revealedAt": "4:30",
+      "sortKey": 4030
+    },
+    {
+      "fromId": "orthrus",
+      "toId": "the-nothing",
+      "kind": "concerns",
+      "note": "It touched him and did not take",
+      "revealedAt": "4:29",
+      "sortKey": 4029
+    },
+    {
+      "fromId": "orthrus",
+      "toId": "gate-of-the-feral-gods",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "4:29",
+      "sortKey": 4029
+    },
+    {
+      "fromId": "orthrus",
+      "toId": "quan-ch",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "4:30",
+      "sortKey": 4030
+    },
+    {
+      "fromId": "orthrus",
+      "toId": "carl",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "4:30",
+      "sortKey": 4030
+    },
+    {
+      "fromId": "yarilo",
+      "toId": "gate-of-the-feral-gods",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "7:63",
+      "sortKey": 7063
+    },
+    {
+      "fromId": "yarilo",
+      "toId": "samantha",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "7:63",
+      "sortKey": 7063
+    },
+    {
+      "fromId": "yarilo",
+      "toId": "the-nothing",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "5:65",
+      "sortKey": 5065
+    },
+    {
+      "fromId": "yarilo",
+      "toId": "li-na",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "7:73",
+      "sortKey": 7073
+    },
+    {
+      "fromId": "meatus",
+      "toId": "gate-of-the-feral-gods",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "7:59",
+      "sortKey": 7059
+    },
+    {
+      "fromId": "meatus",
+      "toId": "elle-mcgibbons",
+      "kind": "concerns",
+      "note": "She opened the gate that brought him",
+      "revealedAt": "7:59",
+      "sortKey": 7059
+    },
+    {
+      "fromId": "meatus",
+      "toId": "eris",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "7:66",
+      "sortKey": 7066
+    },
+    {
+      "fromId": "meatus",
+      "toId": "princess-donut",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "7:77",
+      "sortKey": 7077
+    },
+    {
+      "fromId": "ogun",
+      "toId": "carl",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "6:16",
+      "sortKey": 6016
+    },
+    {
+      "fromId": "ogun",
+      "toId": "bomo",
+      "kind": "concerns",
+      "note": "The one who repaired the other shrine",
+      "revealedAt": "6:15",
+      "sortKey": 6015
+    },
+    {
+      "fromId": "ogun",
+      "toId": "sister-ines",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "6:16",
+      "sortKey": 6016
+    },
+    {
       "fromId": "gate-of-the-feral-gods",
       "toId": "carl",
       "kind": "wielded-by",
@@ -7871,6 +9701,30 @@
       "note": null,
       "revealedAt": "1:40",
       "sortKey": 1040
+    },
+    {
+      "fromId": "changeling",
+      "toId": "mordecai",
+      "kind": "chosen-by",
+      "note": null,
+      "revealedAt": "1:29",
+      "sortKey": 1029
+    },
+    {
+      "fromId": "changeling",
+      "toId": "juice-box",
+      "kind": "race-of",
+      "note": null,
+      "revealedAt": "4:5",
+      "sortKey": 4005
+    },
+    {
+      "fromId": "changeling",
+      "toId": "signet",
+      "kind": "race-of",
+      "note": null,
+      "revealedAt": "5:66",
+      "sortKey": 5066
     },
     {
       "fromId": "borant-corporation",
@@ -8183,6 +10037,30 @@
       "note": null,
       "revealedAt": "5:28",
       "sortKey": 5028
+    },
+    {
+      "fromId": "sheol",
+      "toId": "carls-doomsday-scenario",
+      "kind": "component-of",
+      "note": null,
+      "revealedAt": "2:25",
+      "sortKey": 2025
+    },
+    {
+      "fromId": "sheol",
+      "toId": "amayon",
+      "kind": "ruled-by",
+      "note": null,
+      "revealedAt": "6:58",
+      "sortKey": 6058
+    },
+    {
+      "fromId": "sheol",
+      "toId": "demon-eviction",
+      "kind": "source-of",
+      "note": null,
+      "revealedAt": "6:61",
+      "sortKey": 6061
     },
     {
       "fromId": "crown-obligation",

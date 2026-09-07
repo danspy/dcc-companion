@@ -703,6 +703,84 @@
           "at": "1:40"
         }
       ]
+    },
+    {
+      "id": "changeling",
+      "kind": "mechanic",
+      "name": "Changeling",
+      "aka": [],
+      "role": "Crawler race",
+      "revealedAt": "1:29",
+      "sort": 50,
+      "tagline": [
+        {
+          "at": "1:29",
+          "text": "Take any shape you like. The catch is what happens when the dungeon takes the choosing away from you."
+        },
+        {
+          "at": "4:6",
+          "text": "A whole population of them down here, wearing whichever face the job requires, and worth torturing for what they can be made to become."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 29,
+          "floor": 1,
+          "at": "1:29",
+          "confidence": "verified",
+          "headline": "What it costs when it stops working",
+          "text": "A guide explains his own body by naming the race he picked in his own crawl. He can no longer shift at will, so the dungeon assigns him a shape at the start of every floor and he wears what he is given, always something that belongs on that floor. The race is a gift with a clause, and he is the clause."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 6,
+          "floor": 5,
+          "at": "4:6",
+          "confidence": "verified",
+          "headline": "The guards are not what they look like",
+          "text": "In the town hall basement, some of the Dromedarian guards are changelings wearing the uniform, and one of their own has been torturing a prisoner to make him give up flesh. A race that can be anyone is a race that can be planted anywhere, and both sides of this floor have worked that out."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 64,
+          "floor": 6,
+          "at": "5:64",
+          "confidence": "verified",
+          "headline": "On the list, between the castle and the hunters",
+          "text": "The plan goes into the cookbook in a bathroom, and saving the changelings is written down beside taking the castle and killing every hunter. They have gone from a species trait to a constituency, with a line in an operation nobody expects to survive."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 20,
+          "floor": 8,
+          "at": "6:20",
+          "confidence": "verified",
+          "headline": "The children he quietly took in",
+          "text": "It comes out that the guide has been taking the most vulnerable changeling children on as personal attendants, without mentioning it to anyone. He does not present it as charity and he does not present it at all."
+        }
+      ],
+      "relations": [
+        {
+          "to": "mordecai",
+          "kind": "chosen-by",
+          "at": "1:29"
+        },
+        {
+          "to": "juice-box",
+          "kind": "race-of",
+          "at": "4:5"
+        },
+        {
+          "to": "signet",
+          "kind": "race-of",
+          "at": "5:66"
+        }
+      ]
     }
   ]
 }

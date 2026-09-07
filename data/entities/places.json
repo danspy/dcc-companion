@@ -468,6 +468,88 @@
           "at": "5:28"
         }
       ]
+    },
+    {
+      "id": "sheol",
+      "kind": "place",
+      "name": "Sheol",
+      "aka": [],
+      "role": "Demon realm",
+      "revealedAt": "2:25",
+      "sort": 50,
+      "tagline": [
+        {
+          "at": "2:25",
+          "text": "A name on a component list, attached to nothing a crawler has had to think about."
+        },
+        {
+          "at": "6:54",
+          "text": "Where the demons come from, and where they go back to when the floor stops killing people fast enough to hold the door open."
+        },
+        {
+          "at": "6:58",
+          "text": "It has princes. One of them is on this floor, in the body of a giant snake, on a leash."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 25,
+          "floor": 3,
+          "at": "2:25",
+          "confidence": "verified",
+          "headline": "A part in a bomb",
+          "text": "The word arrives the way most of the dungeon's cosmology does: buried in an item description. A Sheol Glass Reaper Case is half of what makes an explosion large enough to rattle the teeth of a god. Nothing explains where the glass comes from, and nobody asks."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 54,
+          "floor": 8,
+          "at": "6:54",
+          "confidence": "verified",
+          "headline": "The Demon Eviction opens the door",
+          "text": "Enough crawlers and NPCs die on the eighth floor at once that the dungeon declares a Demon Eviction, and the eviction runs in one direction: out of Sheol and onto the floor, looking for bodies to inhabit. The realm has been adjacent this whole time, waiting on a body count."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 69,
+          "floor": 8,
+          "at": "6:69",
+          "confidence": "verified",
+          "headline": "Its fire, released by a benefit",
+          "text": "Carl takes acid damage until his health drops to five percent, which triggers his Martyr's Path benefit, which releases Sheol fire everywhere he has stepped outside. The realm's fire is a resource now, one a crawler can spend without ever having gone there."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 86,
+          "floor": 11,
+          "at": "8:86",
+          "confidence": "verified",
+          "headline": "One of six powers in the dungeon",
+          "text": "The AI sets out who is actually fighting for control down here, and there are six groups. Crawlers. Standard NPCs. Gods. Sapient mobs. The demons of Sheol. And one more it does not name in the same breath as the others."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carls-doomsday-scenario",
+          "kind": "component-of",
+          "at": "2:25"
+        },
+        {
+          "to": "amayon",
+          "kind": "ruled-by",
+          "at": "6:58"
+        },
+        {
+          "to": "demon-eviction",
+          "kind": "source-of",
+          "at": "6:61"
+        }
+      ]
     }
   ]
 }
