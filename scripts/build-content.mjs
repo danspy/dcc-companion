@@ -38,7 +38,7 @@ for (const b of books) {
   b.accent = c.accent;
   b.ink = c.ink;
 }
-const entities = ['characters', 'items', 'mechanics', 'factions', 'threads']
+const entities = ['characters', 'items', 'mechanics', 'factions', 'places', 'threads']
   .flatMap(f => read(`data/entities/${f}.json`).entities);
 
 const { errors, warnings } = lint({ books, floors, entities });

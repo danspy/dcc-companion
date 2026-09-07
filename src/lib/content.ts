@@ -63,10 +63,11 @@ export const KIND_LABELS: Record<string, string> = {
   item: 'Items & artifacts',
   mechanic: 'Mechanics',
   faction: 'Factions',
+  place: 'Places',
   thread: 'Open threads',
 };
 
-export const KIND_ORDER = ['character', 'item', 'mechanic', 'faction', 'thread'];
+export const KIND_ORDER = ['character', 'item', 'mechanic', 'faction', 'place', 'thread'];
 
 export const BEAT_LABELS: Record<string, string> = {
   origin: 'First seen',

@@ -17,7 +17,8 @@
     "chapters:refresh": "node scripts/fetch-chapters.mjs",
     "content:coverage": "node scripts/coverage-report.mjs",
     "check": "astro check",
-    "colors:refresh": "node scripts/fetch-book-colors.mjs"
+    "colors:refresh": "node scripts/fetch-book-colors.mjs",
+    "content:anchors": "node scripts/check-anchors.mjs"
   },
   "dependencies": {
     "@astrojs/db": "^0.20.0",

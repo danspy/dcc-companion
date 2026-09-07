@@ -41,10 +41,24 @@ async function categoryMembers(cat) {
   return out;
 }
 
+/* A name matches an existing entry loosely, because the wiki and the curation
+   disagree about articles and disambiguators constantly: the wiki's "Maestro"
+   is our "The Maestro", its "Gate of the Feral Gods" our "The Gate of the
+   Feral Gods", its "Personal Space" our "Personal Spaces". Comparing the raw
+   strings reported four entities that already existed as gaps, which is the
+   one thing a work queue must not do — it sends you off to write a page that
+   is already there. */
+const normalise = n => n.toLowerCase()
+  .replace(/\s*\([^)]*\)\s*$/, '')   // "Carl's Doomsday Scenario (Item)"
+  .replace(/^the\s+/, '')
+  .replace(/[’']/g, "'")
+  .replace(/s$/, '')                 // singular/plural
+  .trim();
+
 const existing = new Set(
-  ['characters', 'items', 'mechanics', 'factions', 'threads'].flatMap(f => {
+  ['characters', 'items', 'mechanics', 'factions', 'places', 'threads'].flatMap(f => {
     const d = JSON.parse(readFileSync(join(root, `data/entities/${f}.json`), 'utf8'));
-    return d.entities.flatMap(e => [e.name, ...(e.aka ?? [])].map(n => n.toLowerCase()));
+    return d.entities.flatMap(e => [e.name, ...(e.aka ?? [])].map(normalise));
   }),
 );
 
@@ -76,7 +90,7 @@ for (const cat of kinds) {
   for (const name of await categoryMembers(cat)) {
     const { count, first, books: spread } = scan(name);
     if (count < min) continue;
-    rows.push({ name, cat, count, spread, first, have: existing.has(name.toLowerCase()) });
+    rows.push({ name, cat, count, spread, first, have: existing.has(normalise(name)) });
   }
 }
 rows.sort((a, b) => b.count - a.count || b.spread - a.spread);

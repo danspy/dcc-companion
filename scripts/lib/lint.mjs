@@ -7,7 +7,7 @@ import { VOICES, ENTITY_VOICES, entityVoice, beatVoice } from './voice.mjs';
    leaks, and every rule here is a leak somebody would otherwise ship.
    --------------------------------------------------------------------------- */
 
-const VALID_KINDS = new Set(['character', 'item', 'mechanic', 'faction', 'thread']);
+const VALID_KINDS = new Set(['character', 'item', 'mechanic', 'faction', 'place', 'thread']);
 const VALID_BEATS = new Set(['origin', 'arc', 'use', 'fate']);
 const VALID_CONFIDENCE = new Set(['verified', 'draft']);
 
