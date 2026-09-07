@@ -743,6 +743,164 @@
       "sort": 32
     },
     {
+      "id": "orren",
+      "kind": "character",
+      "name": "Orren",
+      "aka": [],
+      "role": "Syndicate liaison",
+      "tagline": "The Syndicate's man, who keeps having to let them go because he cannot prove anything.",
+      "revealedAt": "4:19",
+      "sort": 33
+    },
+    {
+      "id": "justice-light",
+      "kind": "character",
+      "name": "Justice Light",
+      "aka": [
+        "Justice"
+      ],
+      "role": "Former crawler",
+      "tagline": "Joined fifty thousand retired crawlers under a cat's banner, then let every god out of its cell.",
+      "revealedAt": "7:11",
+      "sort": 34
+    },
+    {
+      "id": "tipid",
+      "kind": "character",
+      "name": "Tipid",
+      "aka": [],
+      "role": "Former crawler",
+      "tagline": "Came back into the dungeon voluntarily, and brought the institutional memory with him.",
+      "revealedAt": "7:11",
+      "sort": 35
+    },
+    {
+      "id": "sister-ines",
+      "kind": "character",
+      "name": "Sister Ines",
+      "aka": [
+        "Sister Ines Quiteria"
+      ],
+      "role": "Crawler",
+      "tagline": "A Cat Girl who had every reason to distrust Donut on sight, and ended up holding a demon prince on a leash.",
+      "revealedAt": "6:5",
+      "sort": 36
+    },
+    {
+      "id": "amayon",
+      "kind": "character",
+      "name": "Amayon",
+      "aka": [],
+      "role": "Demon prince",
+      "tagline": "A major demon in a giant snake's body, trying to cast his way off the floor while somebody else holds the reins.",
+      "revealedAt": "6:58",
+      "sort": 37
+    },
+    {
+      "id": "britney",
+      "kind": "character",
+      "name": "Britney",
+      "aka": [],
+      "role": "Crawler",
+      "tagline": "Joined in the desert with Vadim, came out of the Hunting Grounds burned, and settled an account on the eleventh floor.",
+      "revealedAt": "4:25",
+      "sort": 38
+    },
+    {
+      "id": "osvaldo",
+      "kind": "character",
+      "name": "Osvaldo",
+      "aka": [],
+      "role": "Crawler",
+      "tagline": "Collects the dead, belongs to no army, and takes deals from nobody.",
+      "revealedAt": "5:77",
+      "sort": 39
+    },
+    {
+      "id": "imogen",
+      "kind": "character",
+      "name": "Queen Imogen",
+      "aka": [
+        "Imogen"
+      ],
+      "role": "High Elf queen",
+      "tagline": "A queen of the High Elves who is probably a repurposed human, and whose familiar used to live in Carl's flat.",
+      "revealedAt": "5:20",
+      "sort": 40
+    },
+    {
+      "id": "akuma",
+      "kind": "character",
+      "name": "Akuma",
+      "aka": [
+        "Warlord Akuma"
+      ],
+      "role": "Warlord",
+      "tagline": "Co-warlord of the War Mages, and not happy about who he shares it with.",
+      "revealedAt": "7:61",
+      "sort": 41
+    },
+    {
+      "id": "eris",
+      "kind": "character",
+      "name": "Eris",
+      "aka": [],
+      "role": "Summoned power",
+      "tagline": "Summoned into a war, freezes almost everyone in it, and later empties every crawler's pockets at once.",
+      "revealedAt": "7:61",
+      "sort": 42
+    },
+    {
+      "id": "chaco",
+      "kind": "character",
+      "name": "Chaco",
+      "aka": [],
+      "role": "Presenter",
+      "tagline": "Arrived out of a prize wheel and put Mordecai in a seven-day time-out. It does not end well for him.",
+      "revealedAt": "3:7",
+      "sort": 43
+    },
+    {
+      "id": "li-jun",
+      "kind": "character",
+      "name": "Li Jun",
+      "aka": [],
+      "role": "Crawler",
+      "tagline": "Bullied on live television on the second floor, and holding doors open in Club Vanquisher on the ninth.",
+      "revealedAt": "1:42",
+      "sort": 44
+    },
+    {
+      "id": "maestro",
+      "kind": "character",
+      "name": "The Maestro",
+      "aka": [],
+      "role": "Presenter",
+      "tagline": "Runs Death Watch Extreme Dungeon Mayhem, and picks on people who cannot answer back.",
+      "revealedAt": "1:42",
+      "sort": 45
+    },
+    {
+      "id": "firas",
+      "kind": "character",
+      "name": "Firas",
+      "aka": [],
+      "role": "Crawler",
+      "tagline": "Found in the desert with Louis, detoxed by Mordecai, and dead before the Hunting Grounds were over.",
+      "revealedAt": "4:3",
+      "sort": 46
+    },
+    {
+      "id": "vrah",
+      "kind": "character",
+      "name": "Vrah",
+      "aka": [],
+      "role": "Antagonist",
+      "tagline": "Killed by a dinosaur and a cat in the battle for a submerged castle.",
+      "revealedAt": "5:10",
+      "sort": 47
+    },
+    {
       "id": "gate-of-the-feral-gods",
       "kind": "item",
       "name": "The Gate of the Feral Gods",
@@ -1059,6 +1217,16 @@
       "sort": 7
     },
     {
+      "id": "princess-posse",
+      "kind": "faction",
+      "name": "The Princess Posse",
+      "aka": [],
+      "role": "Crawler army",
+      "tagline": "Fifty thousand retired crawlers who came back in, under the banner of a cat.",
+      "revealedAt": "7:11",
+      "sort": 8
+    },
+    {
       "id": "crown-obligation",
       "kind": "thread",
       "name": "The crown's bill",
@@ -1147,6 +1315,36 @@
       "tagline": "Borant's grip and the Syndicate's authority both start to give.",
       "revealedAt": "7:end",
       "sort": 9
+    },
+    {
+      "id": "the-ai-is-a-primal",
+      "kind": "thread",
+      "name": "The AI is a Primal",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "It says so itself, on stage, through somebody else's mouth.",
+      "revealedAt": "8:92",
+      "sort": 10
+    },
+    {
+      "id": "crawler-project",
+      "kind": "thread",
+      "name": "The Crawler Project",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "Doctor Hu, and something the retired crawlers know that the current ones do not.",
+      "revealedAt": "7:11",
+      "sort": 11
+    },
+    {
+      "id": "demon-eviction",
+      "kind": "thread",
+      "name": "The Demon Eviction",
+      "aka": [],
+      "role": "Unresolved",
+      "tagline": "Every exit failing at once, worldwide, while a demon prince tries to cast his way home.",
+      "revealedAt": "6:61",
+      "sort": 12
     }
   ],
   "beats": [
@@ -1631,6 +1829,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "li-jun",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 42,
+      "floor": 2,
+      "at": "1:42",
+      "sortKey": 1042,
+      "headline": "Death Watch Extreme Dungeon Mayhem",
+      "text": "The Maestro puts him and Zhang up against Brindled Vespas for the audience. Carl gambles on being too valuable to punish and gets them out, along with their boss and Li Jun's sister Li Na.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "li-na",
       "kind": "origin",
       "book": 1,
@@ -1640,6 +1850,18 @@
       "sortKey": 1042,
       "headline": "Death Watch Extreme Dungeon Mayhem",
       "text": "The Maestro bullies Li Jun and Zhang on air. Carl gambles on being too valuable to punish and gets them, their boss, and Li Jun's sister Li Na out of the Brindled Vespas.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "maestro",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 42,
+      "floor": 2,
+      "at": "1:42",
+      "sortKey": 1042,
+      "headline": "Glurp, glurp",
+      "text": "He bullies Li Jun and Zhang on air. Carl bets that the production will not dare touch him, and takes the whole group off the show alive.",
       "confidence": "verified"
     },
     {
@@ -2075,6 +2297,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "chaco",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 7,
+      "floor": 4,
+      "at": "3:7",
+      "sortKey": 3007,
+      "headline": "The Prize Carousel",
+      "text": "Carl's fan box triggers it, which introduces Chaco and sidelines Mordecai for a week. Carl takes a book as his prize.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "bomo",
       "kind": "origin",
       "book": 3,
@@ -2135,6 +2369,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "li-jun",
+      "kind": "arc",
+      "book": 3,
+      "chapter": 21,
+      "floor": 4,
+      "at": "3:21",
+      "sortKey": 3021,
+      "headline": "A thousand stranded at 101",
+      "text": "Hekla's team reaches the safe room asking for help with the crawlers stuck on the Vermillion line, his among them. A train is waiting at stop 60, and Katia intends to use her own body to do it.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "miriam-dom",
       "kind": "origin",
       "book": 3,
@@ -2144,6 +2390,18 @@
       "sortKey": 3032,
       "headline": "Same plan, other side of the Tangle",
       "text": "Carl's group means to blow every ghoul generator and finds her and Prepotente already attempting it from the far side.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "firas",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 3,
+      "floor": 5,
+      "at": "4:3",
+      "sortKey": 4003,
+      "headline": "The desert quadrant",
+      "text": "He and Louis are with Langley's team of car-salesman archers when Carl's group finds them.",
       "confidence": "verified"
     },
     {
@@ -2243,6 +2501,18 @@
       "confidence": "draft"
     },
     {
+      "entityId": "orren",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 19,
+      "floor": 5,
+      "at": "4:19",
+      "sortKey": 4019,
+      "headline": "He cannot prove it was on purpose",
+      "text": "Carl and Donut are teleported to the Desperado Club to answer for Loita. He cannot establish that they meant it, so he has to release them — and they work out they have been out of the dungeon longer than they thought.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "katia",
       "kind": "arc",
       "book": 4,
@@ -2312,6 +2582,18 @@
       "sortKey": 4024,
       "headline": "What escaping it costs",
       "text": "Psamathe tried to get out and ended up as half a soul in a doll's head. Every closing Gate portal lets one of the inmates through on the opening side. The winding box alone is a direct conduit — wound and fed a stream of charged energy it will drop an entire location, up to a whole necropolis, into the void.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "britney",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 25,
+      "floor": 5,
+      "at": "4:25",
+      "sortKey": 4025,
+      "headline": "Two new crawlers",
+      "text": "She and Vadim fall in with the team. In the same conversation Katia tells Carl that pregnant women cannot enter the dungeon, and that nobody inside it can become pregnant.",
       "confidence": "verified"
     },
     {
@@ -2495,6 +2777,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "orren",
+      "kind": "use",
+      "book": 5,
+      "chapter": 1,
+      "floor": 6,
+      "at": "5:1",
+      "sortKey": 5001,
+      "headline": "Borant would like the Gate back",
+      "text": "On the Hunting Grounds he passes on the request: hand the Gate of the Feral Gods over voluntarily until the ninth floor. Carl asks for a lawyer.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "scolopendra",
       "kind": "origin",
       "book": 5,
@@ -2651,6 +2945,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "imogen",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 20,
+      "floor": 6,
+      "at": "5:20",
+      "sortKey": 5020,
+      "headline": "Lexis, speaking for Odette",
+      "text": "The word is that she will most likely turn out to be a repurposed human — and with Bea accounted for, nobody is certain which one.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "ferdinand",
       "kind": "arc",
       "book": 5,
@@ -2660,6 +2966,18 @@
       "sortKey": 5051,
       "headline": "Familiar to Queen Imogen",
       "text": "The party runs into the High Elves, and the queen's familiar is Ferdinand. He attacks Mongo. Donut takes the blast in front of him and lives only because of her cockroach ability.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "imogen",
+      "kind": "use",
+      "book": 5,
+      "chapter": 51,
+      "floor": 6,
+      "at": "5:51",
+      "sortKey": 5051,
+      "headline": "Her familiar is Ferdinand",
+      "text": "He attacks Mongo. Donut takes the blast in front of him and survives on her cockroach ability.",
       "confidence": "verified"
     },
     {
@@ -2711,6 +3029,30 @@
       "confidence": "verified"
     },
     {
+      "entityId": "vrah",
+      "kind": "fate",
+      "book": 5,
+      "chapter": 75,
+      "floor": 6,
+      "at": "5:75",
+      "sortKey": 5075,
+      "headline": "Mongo and Kiwi",
+      "text": "In the all-out battle around the submerged castle they take him down. Signet's tattoos are made permanently alive in the same fight, along with an incomplete flesh golem of her mother, which Carl puts in his inventory.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "britney",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 77,
+      "floor": 6,
+      "at": "5:77",
+      "sortKey": 5077,
+      "headline": "Badly burned",
+      "text": "Donut wakes Carl with the night's accounting: Firas and the Popovs dead, Britney's face burned.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "eva",
       "kind": "fate",
       "book": 5,
@@ -2723,6 +3065,30 @@
       "confidence": "verified"
     },
     {
+      "entityId": "firas",
+      "kind": "fate",
+      "book": 5,
+      "chapter": 77,
+      "floor": 6,
+      "at": "5:77",
+      "sortKey": 5077,
+      "headline": "Dead, with the Popovs",
+      "text": "Donut brings Carl the night's count.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "imogen",
+      "kind": "fate",
+      "book": 5,
+      "chapter": 77,
+      "floor": 6,
+      "at": "5:77",
+      "sortKey": 5077,
+      "headline": "Her crystal changes hands",
+      "text": "Osvaldo takes it off her.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "memorial-crystal",
       "kind": "use",
       "book": 5,
@@ -2732,6 +3098,18 @@
       "sortKey": 5077,
       "headline": "Taken off Imogen",
       "text": "Someone named Osvaldo takes hers, and Prepotente goes after him for it.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "osvaldo",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 77,
+      "floor": 6,
+      "at": "5:77",
+      "sortKey": 5077,
+      "headline": "He takes Imogen's crystal",
+      "text": "Prepotente goes after him for it.",
       "confidence": "verified"
     },
     {
@@ -2783,6 +3161,30 @@
       "confidence": "draft"
     },
     {
+      "entityId": "sister-ines",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 5,
+      "floor": 8,
+      "at": "6:5",
+      "sortKey": 6005,
+      "headline": "Hostile, and fairly so",
+      "text": "Carl and Donut meet her with Paz Lo and Anton Lopez. The group has heard Donut say she would murder any Cat Girl she came across. It takes some clearing up.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "sister-ines",
+      "kind": "use",
+      "book": 6,
+      "chapter": 10,
+      "floor": 8,
+      "at": "6:10",
+      "sortKey": 6010,
+      "headline": "Pueblo de los Olvidados",
+      "text": "They take the mandatory quest in a corrupted town. Paz's Santero class aggravates the undead, and they fight ghommids the whole way out.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "orchid-of-eileithyias-grace",
       "kind": "origin",
       "book": 6,
@@ -2831,6 +3233,54 @@
       "confidence": "verified"
     },
     {
+      "entityId": "amayon",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 58,
+      "floor": 8,
+      "at": "6:58",
+      "sortKey": 6058,
+      "headline": "Announced in an area message",
+      "text": "The Madre de Aguas is killed and comes back as a zombie, and the demon prince is named in the same breath.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "sister-ines",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 60,
+      "floor": 8,
+      "at": "6:60",
+      "sortKey": 6060,
+      "headline": "She will not let them leave",
+      "text": "She messages the party at Imani's exit in the church: she cannot let them through — but she can save them, if they come to her.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "demon-eviction",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 61,
+      "floor": 8,
+      "at": "6:61",
+      "sortKey": 6061,
+      "headline": "It is not local",
+      "text": "Crawlers everywhere report their exits taking damage and becoming unusable. Amayon fights Sister Ines' control and works on a spell to get home.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "sister-ines",
+      "kind": "use",
+      "book": 6,
+      "chapter": 61,
+      "floor": 8,
+      "at": "6:61",
+      "sortKey": 6061,
+      "headline": "Amayon fights her control",
+      "text": "The demon prince, in a giant snake's body, tries to cast his way home while she holds him. Exits everywhere are failing at the same time.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "elle-mcgibbons",
       "kind": "arc",
       "book": 6,
@@ -2864,6 +3314,18 @@
       "sortKey": 6063,
       "headline": "Lucia hands out Doggy Doors",
       "text": "Tier 3 upgrades, given round before she went down the stairs, are how Katia, Elle, Imani and Li Na's squads all reach the church on the eighth floor.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "amayon",
+      "kind": "use",
+      "book": 6,
+      "chapter": 72,
+      "floor": 8,
+      "at": "6:72",
+      "sortKey": 6072,
+      "headline": "A timer on a global teleport",
+      "text": "The Missing Piece quest updates to say they succeeded, and starts counting down to when his spell goes off.",
       "confidence": "verified"
     },
     {
@@ -2987,6 +3449,78 @@
       "confidence": "verified"
     },
     {
+      "entityId": "crawler-project",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 11,
+      "floor": 9,
+      "at": "7:11",
+      "sortKey": 7011,
+      "headline": "Tipid fills him in",
+      "text": "He tells Carl about Doctor Hu and the Crawler Project at the Princess Posse HQ.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "justice-light",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 11,
+      "floor": 9,
+      "at": "7:11",
+      "sortKey": 7011,
+      "headline": "In the Princess Posse",
+      "text": "Carl and Donut walk into the HQ to find Rosetta, Tipid, Justice Light and fifty thousand other former crawlers signed up. Carl gets emotional.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "princess-posse",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 11,
+      "floor": 9,
+      "at": "7:11",
+      "sortKey": 7011,
+      "headline": "They are already there when he walks in",
+      "text": "Rosetta, Tipid, Justice Light and fifty thousand others have signed on. Carl gets emotional. Nobody has ever raised a force out of the show's own survivors before.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "tipid",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 11,
+      "floor": 9,
+      "at": "7:11",
+      "sortKey": 7011,
+      "headline": "Doctor Hu, and the Crawler Project",
+      "text": "He fills Carl in on both. Retired crawlers know things current ones are never told.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "princess-posse",
+      "kind": "use",
+      "book": 7,
+      "chapter": 12,
+      "floor": 9,
+      "at": "7:12",
+      "sortKey": 7012,
+      "headline": "Digging in",
+      "text": "NPCs, mercenaries and former crawlers build the defences together, which is three categories of person the format keeps apart on purpose.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "tipid",
+      "kind": "use",
+      "book": 7,
+      "chapter": 12,
+      "floor": 9,
+      "at": "7:12",
+      "sortKey": 7012,
+      "headline": "Blood bar rules are back",
+      "text": "He warns that they apply in safe rooms again, while the NPCs, mercenaries and former crawlers dig in.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "shi-maria",
       "kind": "fate",
       "book": 7,
@@ -3035,6 +3569,78 @@
       "confidence": "verified"
     },
     {
+      "entityId": "li-jun",
+      "kind": "use",
+      "book": 7,
+      "chapter": 50,
+      "floor": 9,
+      "at": "7:50",
+      "sortKey": 7050,
+      "headline": "Holding the doors at Club Vanquisher",
+      "text": "He, Bautista and Zhang keep the path open while Katia, Carl, Prepotente and Samantha break in with a wire long enough to extend Li Na's auras.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "demon-eviction",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 61,
+      "floor": 9,
+      "at": "7:61",
+      "sortKey": 7061,
+      "headline": "It starts again on the ninth floor",
+      "text": "Eris is summoned into the Reaver fighting and an eviction begins with her.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "eris",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 61,
+      "floor": 9,
+      "at": "7:61",
+      "sortKey": 7061,
+      "headline": "Summoned, and a demon eviction starts",
+      "text": "She arrives in the realm in the middle of the Reaver fighting.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "osvaldo",
+      "kind": "use",
+      "book": 7,
+      "chapter": 64,
+      "floor": 9,
+      "at": "7:64",
+      "sortKey": 7064,
+      "headline": "A giant rainbow in the Madness territory",
+      "text": "Apito's memorial crystal shows up in his hands, and he is in none of the Faction Wars armies. It gives Carl's group away.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "eris",
+      "kind": "use",
+      "book": 7,
+      "chapter": 65,
+      "floor": 9,
+      "at": "7:65",
+      "sortKey": 7065,
+      "headline": "The Ceremony of Chaos",
+      "text": "Nearly everyone on the field freezes. Carl does not — his Mind Balance reaches level 16 as the Viceroys throw their mind magic at him.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "akuma",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 69,
+      "floor": 9,
+      "at": "7:69",
+      "sortKey": 7069,
+      "headline": "Sharing a command he did not ask for",
+      "text": "The War Mage Rebellion holds Larracos castle and wins if it keeps it six hours. Baroness Victory names him and Agatha co-warlords. He is upset about it.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "agatha",
       "kind": "arc",
       "book": 7,
@@ -3056,6 +3662,18 @@
       "sortKey": 7078,
       "headline": "Akuma says it in the Warlord Chat",
       "text": "As the War Mages quit the floor with the Scavenger's Daughter, he warns Carl and Donut about her. He does not elaborate.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "akuma",
+      "kind": "use",
+      "book": 7,
+      "chapter": 78,
+      "floor": 9,
+      "at": "7:78",
+      "sortKey": 7078,
+      "headline": "He leaves, and warns them on the way",
+      "text": "The War Mages quit the floor with the Scavenger's Daughter. He tells the Warlord Chat that Agatha is an enemy to all of them.",
       "confidence": "verified"
     },
     {
@@ -3092,6 +3710,18 @@
       "sortKey": 7999,
       "headline": "He lets them all out",
       "text": "Justice Light releases every one of the gods.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "justice-light",
+      "kind": "fate",
+      "book": 7,
+      "chapter": null,
+      "floor": 9,
+      "at": "7:end",
+      "sortKey": 7999,
+      "headline": "He opens every cell",
+      "text": "He releases all of the gods.",
       "confidence": "verified"
     },
     {
@@ -3191,6 +3821,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "justice-light",
+      "kind": "fate",
+      "book": 8,
+      "chapter": 1,
+      "floor": 10,
+      "at": "8:1",
+      "sortKey": 8001,
+      "headline": "Dead, and the Nothing with him",
+      "text": "The tenth floor opens on the news. 5,501 crawlers remain.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "system-glitches",
       "kind": "origin",
       "book": 8,
@@ -3215,6 +3857,18 @@
       "confidence": "verified"
     },
     {
+      "entityId": "orren",
+      "kind": "arc",
+      "book": 8,
+      "chapter": 28,
+      "floor": 10,
+      "at": "8:28",
+      "sortKey": 8028,
+      "headline": "The trap that broke the Nothing",
+      "text": "Among the Caprids, trading question for question, one of them explains what Justice Light actually did.",
+      "confidence": "verified"
+    },
+    {
       "entityId": "li-na",
       "kind": "use",
       "book": 8,
@@ -3224,6 +3878,42 @@
       "sortKey": 8073,
       "headline": "The Garden of Deliverance",
       "text": "With the transfer to the Pineapple Cabaret working, her Dread is what watches over every crawler sent across.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "tipid",
+      "kind": "use",
+      "book": 8,
+      "chapter": 74,
+      "floor": 10,
+      "at": "8:74",
+      "sortKey": 8074,
+      "headline": "Do not kill the shells",
+      "text": "In an apartment full of Human Shells of Tran's dead parents, he stops them. Each apartment is a what-if, and the AI is explicit about it.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "britney",
+      "kind": "fate",
+      "book": 8,
+      "chapter": 83,
+      "floor": 10,
+      "at": "8:83",
+      "sortKey": 8083,
+      "headline": "She kills Osvaldo at the portals",
+      "text": "Carl blows a path to the roof where the portals to the eleventh floor are waiting. Osvaldo runs for it. She stops him, and takes Ysalte's memorial crystal.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "osvaldo",
+      "kind": "fate",
+      "book": 8,
+      "chapter": 83,
+      "floor": 10,
+      "at": "8:83",
+      "sortKey": 8083,
+      "headline": "Shot down at the portals",
+      "text": "Carl tries one last time to get him to take a deal. Britney settles it on the roof.",
       "confidence": "verified"
     },
     {
@@ -3248,6 +3938,42 @@
       "sortKey": 8087,
       "headline": "Out through Imani's portal",
       "text": "On the racing floor he and the other crawlers from the multi-crawler heats come through the portal Imani holds open.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "chaco",
+      "kind": "fate",
+      "book": 8,
+      "chapter": 92,
+      "floor": 11,
+      "at": "8:92",
+      "sortKey": 8092,
+      "headline": "He cannot get through the script",
+      "text": "Too frightened to continue, and the AI takes his wings off and pulls Grigori onstage to speak through instead.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "the-ai-is-a-primal",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 92,
+      "floor": 11,
+      "at": "8:92",
+      "sortKey": 8092,
+      "headline": "Said out loud",
+      "text": "Chaco cannot get through his script. The AI takes his wings off, pulls Grigori onstage and speaks through him — and states that it is a Primal, as all Macro AI systems are. The race Carl chose on the third floor.",
+      "confidence": "verified"
+    },
+    {
+      "entityId": "eris",
+      "kind": "use",
+      "book": 8,
+      "chapter": 97,
+      "floor": 11,
+      "at": "8:97",
+      "sortKey": 8097,
+      "headline": "Every inventory swaps at once",
+      "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut ends up with Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit.",
       "confidence": "verified"
     },
     {
@@ -3605,6 +4331,86 @@
       "sortKey": 2021
     },
     {
+      "fromId": "orren",
+      "toId": "the-syndicate",
+      "kind": "works-for",
+      "note": null,
+      "revealedAt": "4:19",
+      "sortKey": 4019
+    },
+    {
+      "fromId": "justice-light",
+      "toId": "princess-posse",
+      "kind": "member-of",
+      "note": null,
+      "revealedAt": "7:11",
+      "sortKey": 7011
+    },
+    {
+      "fromId": "justice-light",
+      "toId": "the-nothing",
+      "kind": "broke",
+      "note": null,
+      "revealedAt": "8:1",
+      "sortKey": 8001
+    },
+    {
+      "fromId": "tipid",
+      "toId": "princess-posse",
+      "kind": "member-of",
+      "note": null,
+      "revealedAt": "7:11",
+      "sortKey": 7011
+    },
+    {
+      "fromId": "sister-ines",
+      "toId": "amayon",
+      "kind": "controls",
+      "note": null,
+      "revealedAt": "6:61",
+      "sortKey": 6061
+    },
+    {
+      "fromId": "osvaldo",
+      "toId": "memorial-crystal",
+      "kind": "collects",
+      "note": null,
+      "revealedAt": "5:77",
+      "sortKey": 5077
+    },
+    {
+      "fromId": "imogen",
+      "toId": "ferdinand",
+      "kind": "owns",
+      "note": null,
+      "revealedAt": "5:51",
+      "sortKey": 5051
+    },
+    {
+      "fromId": "akuma",
+      "toId": "agatha",
+      "kind": "enemy",
+      "note": null,
+      "revealedAt": "7:78",
+      "sortKey": 7078
+    },
+    {
+      "fromId": "eris",
+      "toId": "scavengers-daughter",
+      "kind": "wields",
+      "note": null,
+      "revealedAt": "8:97",
+      "sortKey": 8097
+    },
+    {
+      "fromId": "li-jun",
+      "toId": "li-na",
+      "kind": "family-sibling",
+      "note": null,
+      "revealedAt": "1:42",
+      "sortKey": 1042
+    },
+    {
       "fromId": "gate-of-the-feral-gods",
       "toId": "carl",
       "kind": "wielded-by",
@@ -3755,6 +4561,22 @@
       "note": null,
       "revealedAt": "7:end",
       "sortKey": 7999
+    },
+    {
+      "fromId": "the-ai-is-a-primal",
+      "toId": "system-ai",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "8:92",
+      "sortKey": 8092
+    },
+    {
+      "fromId": "crawler-project",
+      "toId": "tipid",
+      "kind": "concerns",
+      "note": null,
+      "revealedAt": "7:11",
+      "sortKey": 7011
     }
   ]
 }

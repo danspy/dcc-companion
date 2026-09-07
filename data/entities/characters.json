@@ -1643,6 +1643,647 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "orren",
+      "kind": "character",
+      "name": "Orren",
+      "aka": [],
+      "role": "Syndicate liaison",
+      "revealedAt": "4:19",
+      "sort": 33,
+      "tagline": "The Syndicate's man, who keeps having to let them go because he cannot prove anything.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 19,
+          "floor": 5,
+          "at": "4:19",
+          "confidence": "verified",
+          "headline": "He cannot prove it was on purpose",
+          "text": "Carl and Donut are teleported to the Desperado Club to answer for Loita. He cannot establish that they meant it, so he has to release them — and they work out they have been out of the dungeon longer than they thought."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 1,
+          "floor": 6,
+          "at": "5:1",
+          "confidence": "verified",
+          "headline": "Borant would like the Gate back",
+          "text": "On the Hunting Grounds he passes on the request: hand the Gate of the Feral Gods over voluntarily until the ninth floor. Carl asks for a lawyer."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 28,
+          "floor": 10,
+          "at": "8:28",
+          "confidence": "verified",
+          "headline": "The trap that broke the Nothing",
+          "text": "Among the Caprids, trading question for question, one of them explains what Justice Light actually did."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "works-for",
+          "at": "4:19"
+        }
+      ]
+    },
+    {
+      "id": "justice-light",
+      "kind": "character",
+      "name": "Justice Light",
+      "aka": [
+        "Justice"
+      ],
+      "role": "Former crawler",
+      "revealedAt": "7:11",
+      "sort": 34,
+      "tagline": "Joined fifty thousand retired crawlers under a cat's banner, then let every god out of its cell.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 11,
+          "floor": 9,
+          "at": "7:11",
+          "confidence": "verified",
+          "headline": "In the Princess Posse",
+          "text": "Carl and Donut walk into the HQ to find Rosetta, Tipid, Justice Light and fifty thousand other former crawlers signed up. Carl gets emotional."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
+          "headline": "He opens every cell",
+          "text": "He releases all of the gods."
+        },
+        {
+          "kind": "fate",
+          "book": 8,
+          "chapter": 1,
+          "floor": 10,
+          "at": "8:1",
+          "confidence": "verified",
+          "headline": "Dead, and the Nothing with him",
+          "text": "The tenth floor opens on the news. 5,501 crawlers remain."
+        }
+      ],
+      "relations": [
+        {
+          "to": "princess-posse",
+          "kind": "member-of",
+          "at": "7:11"
+        },
+        {
+          "to": "the-nothing",
+          "kind": "broke",
+          "at": "8:1"
+        }
+      ]
+    },
+    {
+      "id": "tipid",
+      "kind": "character",
+      "name": "Tipid",
+      "aka": [],
+      "role": "Former crawler",
+      "revealedAt": "7:11",
+      "sort": 35,
+      "tagline": "Came back into the dungeon voluntarily, and brought the institutional memory with him.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 11,
+          "floor": 9,
+          "at": "7:11",
+          "confidence": "verified",
+          "headline": "Doctor Hu, and the Crawler Project",
+          "text": "He fills Carl in on both. Retired crawlers know things current ones are never told."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 12,
+          "floor": 9,
+          "at": "7:12",
+          "confidence": "verified",
+          "headline": "Blood bar rules are back",
+          "text": "He warns that they apply in safe rooms again, while the NPCs, mercenaries and former crawlers dig in."
+        },
+        {
+          "kind": "use",
+          "book": 8,
+          "chapter": 74,
+          "floor": 10,
+          "at": "8:74",
+          "confidence": "verified",
+          "headline": "Do not kill the shells",
+          "text": "In an apartment full of Human Shells of Tran's dead parents, he stops them. Each apartment is a what-if, and the AI is explicit about it."
+        }
+      ],
+      "relations": [
+        {
+          "to": "princess-posse",
+          "kind": "member-of",
+          "at": "7:11"
+        }
+      ]
+    },
+    {
+      "id": "sister-ines",
+      "kind": "character",
+      "name": "Sister Ines",
+      "aka": [
+        "Sister Ines Quiteria"
+      ],
+      "role": "Crawler",
+      "revealedAt": "6:5",
+      "sort": 36,
+      "tagline": "A Cat Girl who had every reason to distrust Donut on sight, and ended up holding a demon prince on a leash.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 5,
+          "floor": 8,
+          "at": "6:5",
+          "confidence": "verified",
+          "headline": "Hostile, and fairly so",
+          "text": "Carl and Donut meet her with Paz Lo and Anton Lopez. The group has heard Donut say she would murder any Cat Girl she came across. It takes some clearing up."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 10,
+          "floor": 8,
+          "at": "6:10",
+          "confidence": "verified",
+          "headline": "Pueblo de los Olvidados",
+          "text": "They take the mandatory quest in a corrupted town. Paz's Santero class aggravates the undead, and they fight ghommids the whole way out."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 61,
+          "floor": 8,
+          "at": "6:61",
+          "confidence": "verified",
+          "headline": "Amayon fights her control",
+          "text": "The demon prince, in a giant snake's body, tries to cast his way home while she holds him. Exits everywhere are failing at the same time."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 60,
+          "floor": 8,
+          "at": "6:60",
+          "confidence": "verified",
+          "headline": "She will not let them leave",
+          "text": "She messages the party at Imani's exit in the church: she cannot let them through — but she can save them, if they come to her."
+        }
+      ],
+      "relations": [
+        {
+          "to": "amayon",
+          "kind": "controls",
+          "at": "6:61"
+        }
+      ]
+    },
+    {
+      "id": "amayon",
+      "kind": "character",
+      "name": "Amayon",
+      "aka": [],
+      "role": "Demon prince",
+      "revealedAt": "6:58",
+      "sort": 37,
+      "tagline": "A major demon in a giant snake's body, trying to cast his way off the floor while somebody else holds the reins.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 58,
+          "floor": 8,
+          "at": "6:58",
+          "confidence": "verified",
+          "headline": "Announced in an area message",
+          "text": "The Madre de Aguas is killed and comes back as a zombie, and the demon prince is named in the same breath."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "A timer on a global teleport",
+          "text": "The Missing Piece quest updates to say they succeeded, and starts counting down to when his spell goes off."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "britney",
+      "kind": "character",
+      "name": "Britney",
+      "aka": [],
+      "role": "Crawler",
+      "revealedAt": "4:25",
+      "sort": 38,
+      "tagline": "Joined in the desert with Vadim, came out of the Hunting Grounds burned, and settled an account on the eleventh floor.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 25,
+          "floor": 5,
+          "at": "4:25",
+          "confidence": "verified",
+          "headline": "Two new crawlers",
+          "text": "She and Vadim fall in with the team. In the same conversation Katia tells Carl that pregnant women cannot enter the dungeon, and that nobody inside it can become pregnant."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 77,
+          "floor": 6,
+          "at": "5:77",
+          "confidence": "verified",
+          "headline": "Badly burned",
+          "text": "Donut wakes Carl with the night's accounting: Firas and the Popovs dead, Britney's face burned."
+        },
+        {
+          "kind": "fate",
+          "book": 8,
+          "chapter": 83,
+          "floor": 10,
+          "at": "8:83",
+          "confidence": "verified",
+          "headline": "She kills Osvaldo at the portals",
+          "text": "Carl blows a path to the roof where the portals to the eleventh floor are waiting. Osvaldo runs for it. She stops him, and takes Ysalte's memorial crystal."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "osvaldo",
+      "kind": "character",
+      "name": "Osvaldo",
+      "aka": [],
+      "role": "Crawler",
+      "revealedAt": "5:77",
+      "sort": 39,
+      "tagline": "Collects the dead, belongs to no army, and takes deals from nobody.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 77,
+          "floor": 6,
+          "at": "5:77",
+          "confidence": "verified",
+          "headline": "He takes Imogen's crystal",
+          "text": "Prepotente goes after him for it."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 64,
+          "floor": 9,
+          "at": "7:64",
+          "confidence": "verified",
+          "headline": "A giant rainbow in the Madness territory",
+          "text": "Apito's memorial crystal shows up in his hands, and he is in none of the Faction Wars armies. It gives Carl's group away."
+        },
+        {
+          "kind": "fate",
+          "book": 8,
+          "chapter": 83,
+          "floor": 10,
+          "at": "8:83",
+          "confidence": "verified",
+          "headline": "Shot down at the portals",
+          "text": "Carl tries one last time to get him to take a deal. Britney settles it on the roof."
+        }
+      ],
+      "relations": [
+        {
+          "to": "memorial-crystal",
+          "kind": "collects",
+          "at": "5:77"
+        }
+      ]
+    },
+    {
+      "id": "imogen",
+      "kind": "character",
+      "name": "Queen Imogen",
+      "aka": [
+        "Imogen"
+      ],
+      "role": "High Elf queen",
+      "revealedAt": "5:20",
+      "sort": 40,
+      "tagline": "A queen of the High Elves who is probably a repurposed human, and whose familiar used to live in Carl's flat.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 20,
+          "floor": 6,
+          "at": "5:20",
+          "confidence": "verified",
+          "headline": "Lexis, speaking for Odette",
+          "text": "The word is that she will most likely turn out to be a repurposed human — and with Bea accounted for, nobody is certain which one."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 51,
+          "floor": 6,
+          "at": "5:51",
+          "confidence": "verified",
+          "headline": "Her familiar is Ferdinand",
+          "text": "He attacks Mongo. Donut takes the blast in front of him and survives on her cockroach ability."
+        },
+        {
+          "kind": "fate",
+          "book": 5,
+          "chapter": 77,
+          "floor": 6,
+          "at": "5:77",
+          "confidence": "verified",
+          "headline": "Her crystal changes hands",
+          "text": "Osvaldo takes it off her."
+        }
+      ],
+      "relations": [
+        {
+          "to": "ferdinand",
+          "kind": "owns",
+          "at": "5:51"
+        }
+      ]
+    },
+    {
+      "id": "akuma",
+      "kind": "character",
+      "name": "Akuma",
+      "aka": [
+        "Warlord Akuma"
+      ],
+      "role": "Warlord",
+      "revealedAt": "7:61",
+      "sort": 41,
+      "tagline": "Co-warlord of the War Mages, and not happy about who he shares it with.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 69,
+          "floor": 9,
+          "at": "7:69",
+          "confidence": "verified",
+          "headline": "Sharing a command he did not ask for",
+          "text": "The War Mage Rebellion holds Larracos castle and wins if it keeps it six hours. Baroness Victory names him and Agatha co-warlords. He is upset about it."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 78,
+          "floor": 9,
+          "at": "7:78",
+          "confidence": "verified",
+          "headline": "He leaves, and warns them on the way",
+          "text": "The War Mages quit the floor with the Scavenger's Daughter. He tells the Warlord Chat that Agatha is an enemy to all of them."
+        }
+      ],
+      "relations": [
+        {
+          "to": "agatha",
+          "kind": "enemy",
+          "at": "7:78"
+        }
+      ]
+    },
+    {
+      "id": "eris",
+      "kind": "character",
+      "name": "Eris",
+      "aka": [],
+      "role": "Summoned power",
+      "revealedAt": "7:61",
+      "sort": 42,
+      "tagline": "Summoned into a war, freezes almost everyone in it, and later empties every crawler's pockets at once.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 61,
+          "floor": 9,
+          "at": "7:61",
+          "confidence": "verified",
+          "headline": "Summoned, and a demon eviction starts",
+          "text": "She arrives in the realm in the middle of the Reaver fighting."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 65,
+          "floor": 9,
+          "at": "7:65",
+          "confidence": "verified",
+          "headline": "The Ceremony of Chaos",
+          "text": "Nearly everyone on the field freezes. Carl does not — his Mind Balance reaches level 16 as the Viceroys throw their mind magic at him."
+        },
+        {
+          "kind": "use",
+          "book": 8,
+          "chapter": 97,
+          "floor": 11,
+          "at": "8:97",
+          "confidence": "verified",
+          "headline": "Every inventory swaps at once",
+          "text": "Her Scavenger's Daughter effect gives each crawler the belongings of whoever is nearest. Donut ends up with Carl's, and he immediately asks her to combine a bomb and an enhanced pet biscuit."
+        }
+      ],
+      "relations": [
+        {
+          "to": "scavengers-daughter",
+          "kind": "wields",
+          "at": "8:97"
+        }
+      ]
+    },
+    {
+      "id": "chaco",
+      "kind": "character",
+      "name": "Chaco",
+      "aka": [],
+      "role": "Presenter",
+      "revealedAt": "3:7",
+      "sort": 43,
+      "tagline": "Arrived out of a prize wheel and put Mordecai in a seven-day time-out. It does not end well for him.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 7,
+          "floor": 4,
+          "at": "3:7",
+          "confidence": "verified",
+          "headline": "The Prize Carousel",
+          "text": "Carl's fan box triggers it, which introduces Chaco and sidelines Mordecai for a week. Carl takes a book as his prize."
+        },
+        {
+          "kind": "fate",
+          "book": 8,
+          "chapter": 92,
+          "floor": 11,
+          "at": "8:92",
+          "confidence": "verified",
+          "headline": "He cannot get through the script",
+          "text": "Too frightened to continue, and the AI takes his wings off and pulls Grigori onstage to speak through instead."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "li-jun",
+      "kind": "character",
+      "name": "Li Jun",
+      "aka": [],
+      "role": "Crawler",
+      "revealedAt": "1:42",
+      "sort": 44,
+      "tagline": "Bullied on live television on the second floor, and holding doors open in Club Vanquisher on the ninth.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 42,
+          "floor": 2,
+          "at": "1:42",
+          "confidence": "verified",
+          "headline": "Death Watch Extreme Dungeon Mayhem",
+          "text": "The Maestro puts him and Zhang up against Brindled Vespas for the audience. Carl gambles on being too valuable to punish and gets them out, along with their boss and Li Jun's sister Li Na."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 21,
+          "floor": 4,
+          "at": "3:21",
+          "confidence": "verified",
+          "headline": "A thousand stranded at 101",
+          "text": "Hekla's team reaches the safe room asking for help with the crawlers stuck on the Vermillion line, his among them. A train is waiting at stop 60, and Katia intends to use her own body to do it."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 50,
+          "floor": 9,
+          "at": "7:50",
+          "confidence": "verified",
+          "headline": "Holding the doors at Club Vanquisher",
+          "text": "He, Bautista and Zhang keep the path open while Katia, Carl, Prepotente and Samantha break in with a wire long enough to extend Li Na's auras."
+        }
+      ],
+      "relations": [
+        {
+          "to": "li-na",
+          "kind": "family-sibling",
+          "at": "1:42"
+        }
+      ]
+    },
+    {
+      "id": "maestro",
+      "kind": "character",
+      "name": "The Maestro",
+      "aka": [],
+      "role": "Presenter",
+      "revealedAt": "1:42",
+      "sort": 45,
+      "tagline": "Runs Death Watch Extreme Dungeon Mayhem, and picks on people who cannot answer back.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 42,
+          "floor": 2,
+          "at": "1:42",
+          "confidence": "verified",
+          "headline": "Glurp, glurp",
+          "text": "He bullies Li Jun and Zhang on air. Carl bets that the production will not dare touch him, and takes the whole group off the show alive."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "firas",
+      "kind": "character",
+      "name": "Firas",
+      "aka": [],
+      "role": "Crawler",
+      "revealedAt": "4:3",
+      "sort": 46,
+      "tagline": "Found in the desert with Louis, detoxed by Mordecai, and dead before the Hunting Grounds were over.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 3,
+          "floor": 5,
+          "at": "4:3",
+          "confidence": "verified",
+          "headline": "The desert quadrant",
+          "text": "He and Louis are with Langley's team of car-salesman archers when Carl's group finds them."
+        },
+        {
+          "kind": "fate",
+          "book": 5,
+          "chapter": 77,
+          "floor": 6,
+          "at": "5:77",
+          "confidence": "verified",
+          "headline": "Dead, with the Popovs",
+          "text": "Donut brings Carl the night's count."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "vrah",
+      "kind": "character",
+      "name": "Vrah",
+      "aka": [],
+      "role": "Antagonist",
+      "revealedAt": "5:10",
+      "sort": 47,
+      "tagline": "Killed by a dinosaur and a cat in the battle for a submerged castle.",
+      "beats": [
+        {
+          "kind": "fate",
+          "book": 5,
+          "chapter": 75,
+          "floor": 6,
+          "at": "5:75",
+          "confidence": "verified",
+          "headline": "Mongo and Kiwi",
+          "text": "In the all-out battle around the submerged castle they take him down. Signet's tattoos are made permanently alive in the same fight, along with an incomplete flesh golem of her mother, which Carl puts in his inventory."
+        }
+      ],
+      "relations": []
     }
   ]
 }

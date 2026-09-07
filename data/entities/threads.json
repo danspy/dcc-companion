@@ -271,6 +271,97 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "the-ai-is-a-primal",
+      "kind": "thread",
+      "name": "The AI is a Primal",
+      "aka": [],
+      "role": "Unresolved",
+      "revealedAt": "8:92",
+      "sort": 10,
+      "tagline": "It says so itself, on stage, through somebody else's mouth.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 92,
+          "floor": 11,
+          "at": "8:92",
+          "confidence": "verified",
+          "headline": "Said out loud",
+          "text": "Chaco cannot get through his script. The AI takes his wings off, pulls Grigori onstage and speaks through him — and states that it is a Primal, as all Macro AI systems are. The race Carl chose on the third floor."
+        }
+      ],
+      "relations": [
+        {
+          "to": "system-ai",
+          "kind": "concerns",
+          "at": "8:92"
+        }
+      ]
+    },
+    {
+      "id": "crawler-project",
+      "kind": "thread",
+      "name": "The Crawler Project",
+      "aka": [],
+      "role": "Unresolved",
+      "revealedAt": "7:11",
+      "sort": 11,
+      "tagline": "Doctor Hu, and something the retired crawlers know that the current ones do not.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 11,
+          "floor": 9,
+          "at": "7:11",
+          "confidence": "verified",
+          "headline": "Tipid fills him in",
+          "text": "He tells Carl about Doctor Hu and the Crawler Project at the Princess Posse HQ."
+        }
+      ],
+      "relations": [
+        {
+          "to": "tipid",
+          "kind": "concerns",
+          "at": "7:11"
+        }
+      ]
+    },
+    {
+      "id": "demon-eviction",
+      "kind": "thread",
+      "name": "The Demon Eviction",
+      "aka": [],
+      "role": "Unresolved",
+      "revealedAt": "6:61",
+      "sort": 12,
+      "tagline": "Every exit failing at once, worldwide, while a demon prince tries to cast his way home.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 61,
+          "floor": 8,
+          "at": "6:61",
+          "confidence": "verified",
+          "headline": "It is not local",
+          "text": "Crawlers everywhere report their exits taking damage and becoming unusable. Amayon fights Sister Ines' control and works on a spell to get home."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 61,
+          "floor": 9,
+          "at": "7:61",
+          "confidence": "verified",
+          "headline": "It starts again on the ninth floor",
+          "text": "Eris is summoned into the Reaver fighting and an eviction begins with her."
+        }
+      ],
+      "relations": []
     }
   ]
 }
