@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T13:49:40.421Z",
+  "generatedAt": "2026-09-07T13:51:57.414Z",
   "books": [
     {
       "id": 1,
@@ -136,7 +136,7 @@
       "bookSpan": "5–6",
       "accent": "--f7",
       "revealedAt": "5:end",
-      "summary": "The one floor that refuses to line up with a book boundary: it opens at the close of The Butcher's Masquerade and resolves at the start of The Eye of the Bedlam Bride. It is the single clearest argument for gating this companion on books rather than on floors.",
+      "summary": "A sealed circuit of glass tunnels — several hundred kilometres of branching tubes with pitstop safe rooms at the nodes, no dead ends and no backtracking, pulling crawlers toward a stack of exit portals. It was a last-minute replacement for whatever had been planned for the slot, funded by the Valtay and structurally compromised from the start. Minutes after it opened, Prepotente shattered the whole thing into fine dust. No crawler ever entered the maze, and no mob, NPC or boss was ever encountered on it. The seventh floor is the only one in the crawl that was destroyed before it could be played.",
       "sortKey": 5999
     },
     {
@@ -267,7 +267,7 @@
       "name": "Prepotente",
       "aka": [],
       "role": "Crawler",
-      "tagline": "A profane, opera-singing Boer goat. Exactly as good as that sounds.",
+      "tagline": "A profane, opera-singing Boer goat who destroyed an entire floor of the world dungeon within minutes of it opening.",
       "revealedAt": "5",
       "sort": 8
     },
@@ -1494,7 +1494,7 @@
       "at": "5",
       "sortKey": 5000,
       "headline": "The goat sings",
-      "text": "One of the crawl's more improbable success stories, and a reminder that the Enhanced Pet Biscuit was never going to be a one-off.",
+      "text": "One of the crawl's more improbable success stories, and proof the Enhanced Pet Biscuit was never going to be a one-off.",
       "confidence": "draft"
     },
     {
@@ -1556,6 +1556,18 @@
       "headline": "Left carrying on with Bianca",
       "text": "Miriam Dom's vampirism finally kills her, and the two goats continue without her.",
       "confidence": "draft"
+    },
+    {
+      "entityId": "prepotente",
+      "kind": "arc",
+      "book": 5,
+      "chapter": null,
+      "floor": 7,
+      "at": "5:end",
+      "sortKey": 5999,
+      "headline": "He shatters the seventh floor",
+      "text": "The Great Race was a rushed, Valtay-funded replacement and it was structurally compromised. Minutes after it opened, Prepotente broke the entire circuit of glass tunnels into fine dust. Not one crawler ever entered the maze; not one mob, NPC or boss was ever met on it. An opera-singing goat deleted a floor of the world dungeon before the show could broadcast a single lap of it.",
+      "confidence": "verified"
     },
     {
       "entityId": "the-syndicate",

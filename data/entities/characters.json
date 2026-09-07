@@ -2,298 +2,794 @@
   "$comment": "confidence: 'verified' = corroborated against the Dungeon Crawler Carl Fandom wiki during curation. 'draft' = written from reading knowledge, awaiting a pass against the book. `npm run content:check` prints every draft beat as a work queue.",
   "entities": [
     {
-      "id": "carl", "kind": "character", "name": "Carl",
-      "aka": ["Carl the Compensated Anarchist", "Crawler Carl"],
-      "role": "Protagonist", "revealedAt": "1", "sort": 1,
+      "id": "carl",
+      "kind": "character",
+      "name": "Carl",
+      "aka": [
+        "Carl the Compensated Anarchist",
+        "Crawler Carl"
+      ],
+      "role": "Protagonist",
+      "revealedAt": "1",
+      "sort": 1,
       "tagline": "A 27-year-old Coast Guard veteran and marine technician who went outside for a cigarette at the worst possible moment.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "January 3rd, 2:23 in the morning",
-          "text": "Carl steps onto his Seattle balcony for a smoke. Donut — his ex-girlfriend Beatrice's show cat — bolts out the cracked window and into the tree. He goes after her in a brown leather jacket, heart-print boxers and Bea's ill-fitting pink Crocs, carrying a Zippo and half a pack of Marlboro Reds. While he is out there the Transformation levels every structure on Earth and kills everyone inside. That cigarette is the entire reason the series exists." },
-        { "kind": "arc", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "text": "Carl steps onto his Seattle balcony for a smoke. Donut — his ex-girlfriend Beatrice's show cat — bolts out the cracked window and into the tree. He goes after her in a brown leather jacket, heart-print boxers and Bea's ill-fitting pink Crocs, carrying a Zippo and half a pack of Marlboro Reds. While he is out there the Transformation levels every structure on Earth and kills everyone inside. That cigarette is the entire reason the series exists."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "He goes down dressed for nothing",
-          "text": "Within an hour of entering he has a Goblin Pass Tattoo on his forearm, a Trollskin Shirt of Pummeling, a Nightgaunt Cloak of Stoutness clipped to the leather coat, and a Toe Ring of the Splatter Skunk. The footwear situation never really improves; from the second floor the Enchanted Pedicure Kit of the Sylph leaves his bare feet shiny and glittering, and the audience adores it." },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+          "text": "Within an hour of entering he has a Goblin Pass Tattoo on his forearm, a Trollskin Shirt of Pummeling, a Nightgaunt Cloak of Stoutness clipped to the leather coat, and a Toe Ring of the Splatter Skunk. The footwear situation never really improves; from the second floor the Enchanted Pedicure Kit of the Sylph leaves his bare feet shiny and glittering, and the audience adores it."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "Primal, and a Compensated Anarchist",
-          "text": "Class selection on the third floor. He takes the Primal race and a unique monk/rogue hybrid the System AI describes as \"a trapmaking, bomb-making, social-media dynamo\" that \"will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" It is the most accurate character summary in the series, and the dungeon wrote it." },
-        { "kind": "arc", "book": 3, "floor": 4, "at": "3", "confidence": "verified",
+          "text": "Class selection on the third floor. He takes the Primal race and a unique monk/rogue hybrid the System AI describes as \"a trapmaking, bomb-making, social-media dynamo\" that \"will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" It is the most accurate character summary in the series, and the dungeon wrote it."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "floor": 4,
+          "at": "3",
+          "confidence": "verified",
           "headline": "The twenty-fifth holder of the Cookbook",
-          "text": "He is not the first person to try this. The Dungeon Anarchist's Cookbook has had twenty-four owners before him, across seasons and species, and inheriting it turns his improvisation into the continuation of somebody else's work." },
-        { "kind": "arc", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "text": "He is not the first person to try this. The Dungeon Anarchist's Cookbook has had twenty-four owners before him, across seasons and species, and inheriting it turns his improvisation into the continuation of somebody else's work."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "floor": 4,
+          "at": "3",
+          "confidence": "draft",
           "headline": "Organising people is the exploit",
-          "text": "The Iron Tangle cannot be beaten by any one crawler. Solving it takes hundreds coordinating at once — precisely what production exists to prevent. From here his real weapon stops being explosives." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+          "text": "The Iron Tangle cannot be beaten by any one crawler. Solving it takes hundreds coordinating at once — precisely what production exists to prevent. From here his real weapon stops being explosives."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "verified",
           "headline": "Agent Provocateur",
-          "text": "On the sixth floor he takes the bomb-focused specialisation. The Hunting Grounds are built to have crawlers hunted for sport by paying outsiders, and he answers by making himself the most expensive thing on the field to point a gun at." },
-        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "text": "On the sixth floor he takes the bomb-focused specialisation. The Hunting Grounds are built to have crawlers hunted for sport by paying outsiders, and he answers by making himself the most expensive thing on the field to point a gun at."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Commands one of nine armies",
-          "text": "Thirty days, no respawns, and a castle at Larracos in the middle of it. The book is logistics, diplomacy and atrocity at scale — and it works." }
+          "text": "Thirty days, no respawns, and a castle at Larracos in the middle of it. The book is logistics, diplomacy and atrocity at scale — and it works."
+        }
       ],
       "relations": [
-        { "to": "princess-donut", "kind": "partner", "at": "1", "note": "The Royal Court, such as it is." },
-        { "to": "beatrice", "kind": "former-partner", "at": "1" },
-        { "to": "mordecai", "kind": "student-of", "at": "1" },
-        { "to": "katia", "kind": "ally", "at": "2" },
-        { "to": "carls-doomsday-scenario", "kind": "wields", "at": "2" },
-        { "to": "dungeon-anarchists-cookbook", "kind": "wields", "at": "3" },
-        { "to": "gate-of-the-feral-gods", "kind": "wields", "at": "4" },
-        { "to": "compensated-anarchist", "kind": "has-class", "at": "2" }
+        {
+          "to": "princess-donut",
+          "kind": "partner",
+          "at": "1",
+          "note": "The Royal Court, such as it is."
+        },
+        {
+          "to": "beatrice",
+          "kind": "former-partner",
+          "at": "1"
+        },
+        {
+          "to": "mordecai",
+          "kind": "student-of",
+          "at": "1"
+        },
+        {
+          "to": "katia",
+          "kind": "ally",
+          "at": "2"
+        },
+        {
+          "to": "carls-doomsday-scenario",
+          "kind": "wields",
+          "at": "2"
+        },
+        {
+          "to": "dungeon-anarchists-cookbook",
+          "kind": "wields",
+          "at": "3"
+        },
+        {
+          "to": "gate-of-the-feral-gods",
+          "kind": "wields",
+          "at": "4"
+        },
+        {
+          "to": "compensated-anarchist",
+          "kind": "has-class",
+          "at": "2"
+        }
       ]
     },
     {
-      "id": "princess-donut", "kind": "character", "name": "Princess Donut",
-      "aka": ["Donut", "Princess Donut the Queen Anne Chonk"],
-      "role": "Co-protagonist", "revealedAt": "1", "sort": 2,
+      "id": "princess-donut",
+      "kind": "character",
+      "name": "Princess Donut",
+      "aka": [
+        "Donut",
+        "Princess Donut the Queen Anne Chonk"
+      ],
+      "role": "Co-protagonist",
+      "revealedAt": "1",
+      "sort": 2,
       "tagline": "A pedigreed tortoiseshell Persian show cat, made sapient by a biscuit, with a voice described as sultry yet pompous.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "The first cat into the dungeon",
-          "text": "An award-winning show cat with a whole bedroom of the apartment given over to her ribbons. Carl carries her down the stairs, which earns her a Legendary Quadruped Box for being the first cat to enter — and earns him a Legendary Pet Box for being the first crawler to bring one. Inside his is an Enhanced Pet Biscuit. She snatches it out of his hand." },
-        { "kind": "arc", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "text": "An award-winning show cat with a whole bedroom of the apartment given over to her ribbons. Carl carries her down the stairs, which earns her a Legendary Quadruped Box for being the first cat to enter — and earns him a Legendary Pet Box for being the first crawler to bring one. Inside his is an Enhanced Pet Biscuit. She snatches it out of his hand."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "She names the party after herself",
-          "text": "She wakes up talking, with the Enhanced Growth Buff and four automatically-assigned stat points per level. Highest total stats makes her party leader, and she immediately renames the party \"the Royal Court of Princess Donut.\" It is a joke that turns into a brand that turns into actual political power." },
-        { "kind": "arc", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "text": "She wakes up talking, with the Enhanced Growth Buff and four automatically-assigned stat points per level. Highest total stats makes her party leader, and she immediately renames the party \"the Royal Court of Princess Donut.\" It is a joke that turns into a brand that turns into actual political power."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "She puts on the crown without reading it",
-          "text": "Her Quadruped Box contains the Enchanted Crown of the Sepsis Whore. Mordecai warns her. She equips it anyway — permanently entering the royal line of succession of the Blood Sultanate on the ninth floor. Eight floors early, the series quietly loads a gun." },
-        { "kind": "arc", "book": 1, "floor": 2, "at": "1", "confidence": "verified",
+          "text": "Her Quadruped Box contains the Enchanted Crown of the Sepsis Whore. Mordecai warns her. She equips it anyway — permanently entering the royal line of succession of the Blood Sultanate on the ninth floor. Eight floors early, the series quietly loads a gun."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "floor": 2,
+          "at": "1",
+          "confidence": "verified",
           "headline": "She adopts a dinosaur",
-          "text": "Near the end of the second floor she insists on keeping Mongo, and treats him as her child from that moment on." },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+          "text": "Near the end of the second floor she insists on keeping Mongo, and treats him as her child from that moment on."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "Cat, and a Former Child Actor",
-          "text": "Her class lets her pick a new class every level. With a constitution far too low for melee she fights on charisma and spells instead, and becomes a jack-of-all-trades and a genuine galactic social-media force." },
-        { "kind": "arc", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "text": "Her class lets her pick a new class every level. With a constitution far too low for melee she fights on charisma and spells instead, and becomes a jack-of-all-trades and a genuine galactic social-media force."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6",
+          "confidence": "draft",
           "headline": "People as playable pieces",
-          "text": "On the card floor she comes into real power, commanding Alpha Male Carl and Shi Maria. The book keeps pressing on the question underneath it: what does it mean to own someone you can put in a deck?" },
-        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+          "text": "On the card floor she comes into real power, commanding Alpha Male Carl and Shi Maria. The book keeps pressing on the question underneath it: what does it mean to own someone you can put in a deck?"
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "The crown comes due",
-          "text": "The ninth floor is where the Blood Sultanate lives. What she picked up on floor one as a bit of shiny loot is now an obligation that has to be discharged before anyone can descend — and she has become a political instrument the factions must negotiate with rather than a mascot with a spell list." }
+          "text": "The ninth floor is where the Blood Sultanate lives. What she picked up on floor one as a bit of shiny loot is now an obligation that has to be discharged before anyone can descend — and she has become a political instrument the factions must negotiate with rather than a mascot with a spell list."
+        }
       ],
       "relations": [
-        { "to": "mongo", "kind": "owns", "at": "1", "note": "She considers him her son. He agrees." },
-        { "to": "mordecai", "kind": "managed-by", "at": "2" },
-        { "to": "crown-of-the-sepsis-whore", "kind": "wields", "at": "1" },
-        { "to": "beatrice", "kind": "owned-by", "at": "1" },
-        { "to": "former-child-actor", "kind": "has-class", "at": "2" }
+        {
+          "to": "mongo",
+          "kind": "owns",
+          "at": "1",
+          "note": "She considers him her son. He agrees."
+        },
+        {
+          "to": "mordecai",
+          "kind": "managed-by",
+          "at": "2"
+        },
+        {
+          "to": "crown-of-the-sepsis-whore",
+          "kind": "wields",
+          "at": "1"
+        },
+        {
+          "to": "beatrice",
+          "kind": "owned-by",
+          "at": "1"
+        },
+        {
+          "to": "former-child-actor",
+          "kind": "has-class",
+          "at": "2"
+        }
       ]
     },
     {
-      "id": "mongo", "kind": "character", "name": "Mongo", "aka": ["Mongoliensis"],
-      "role": "Dinosaur", "revealedAt": "1", "sort": 3,
+      "id": "mongo",
+      "kind": "character",
+      "name": "Mongo",
+      "aka": [
+        "Mongoliensis"
+      ],
+      "role": "Dinosaur",
+      "revealedAt": "1",
+      "sort": 3,
       "tagline": "A food-motivated velociraptor who considers Princess Donut his mommy and will die for her without hesitating.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 2, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 2,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Found in a cage on the second floor",
-          "text": "A level-1 pet-class mob locked in a secret pet reward room. Newly hatched he is seven inches of pink downy feathers — \"a chicken dinosaur thing\" — and he attacks both of them the moment the cage opens. Donut wins him over by releasing him onto Brindle Grubs and teaching him to slash their bellies open for the juicy parts." },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+          "text": "A level-1 pet-class mob locked in a secret pet reward room. Newly hatched he is seven inches of pink downy feathers — \"a chicken dinosaur thing\" — and he attacks both of them the moment the cage opens. Donut wins him over by releasing him onto Brindle Grubs and teaching him to slash their bellies open for the juicy parts."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "He stands over her",
-          "text": "When Donut is paralysed by a trap on the third floor, Mongo plants himself over her body and nearly dies holding off a swarm of spiky Street Urchins. Whatever he is to Carl, his loyalty to Donut is absolute." },
-        { "kind": "arc", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "text": "When Donut is paralysed by a trap on the third floor, Mongo plants himself over her body and nearly dies holding off a swarm of spiky Street Urchins. Whatever he is to Carl, his loyalty to Donut is absolute."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "floor": 4,
+          "at": "3",
+          "confidence": "draft",
           "headline": "He finishes Maggie My",
-          "text": "When the Scree parasite lunges for Carl, Mongo kills it." },
-        { "kind": "fate", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "text": "When the Scree parasite lunges for Carl, Mongo kills it."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
           "headline": "Nearly lost, and a father",
-          "text": "He very nearly dies on the ninth floor and is pulled out by Ser Rendelgor. He ends the book a parent." }
+          "text": "He very nearly dies on the ninth floor and is pulled out by Ser Rendelgor. He ends the book a parent."
+        }
       ],
-      "relations": [{ "to": "princess-donut", "kind": "protects", "at": "1" }]
+      "relations": [
+        {
+          "to": "princess-donut",
+          "kind": "protects",
+          "at": "1"
+        }
+      ]
     },
     {
-      "id": "mordecai", "kind": "character", "name": "Mordecai", "aka": [],
-      "role": "Guide & manager", "revealedAt": "1", "sort": 4,
+      "id": "mordecai",
+      "kind": "character",
+      "name": "Mordecai",
+      "aka": [],
+      "role": "Guide & manager",
+      "revealedAt": "1",
+      "sort": 4,
       "tagline": "An indentured Borant employee, a former crawler, and the Royal Court's memory.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Game Guide for the first three floors",
-          "text": "He is an indentured employee of the Borant Corporation, contracted to help run crawls: guide on the early floors, magic guild master on the later ones, where he mostly wants to be left alone to brew potions and see old friends." },
-        { "kind": "arc", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "text": "He is an indentured employee of the Borant Corporation, contracted to help run crawls: guide on the early floors, magic guild master on the later ones, where he mostly wants to be left alone to brew potions and see old friends."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "He has done this before, and lost",
-          "text": "Mordecai is a former crawler. He took the Changeling race during his own crawl and can no longer shift at will, so the dungeon assigns him a new body at the start of every floor — rat-kin, then a seven-foot obsidian bugaboo, then an incubus in a tuxedo, then a warty grulke toad. His natural form is a golden, eagle-like thing with wings. When he drinks he gets emotional about the family that crawl cost him." },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+          "text": "Mordecai is a former crawler. He took the Changeling race during his own crawl and can no longer shift at will, so the dungeon assigns him a new body at the start of every floor — rat-kin, then a seven-foot obsidian bugaboo, then an incubus in a tuxedo, then a warty grulke toad. His natural form is a golden, eagle-like thing with wings. When he drinks he gets emotional about the family that crawl cost him."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "Manoeuvred into being Donut's manager",
-          "text": "On Odette's advice — she rates his memory as the single most valuable resource a crawler could have — Carl and Donut engineer his appointment during class selection, and it has to look like an accident. He would forgive Donut for it. He would never forgive Carl." },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+          "text": "On Odette's advice — she rates his memory as the single most valuable resource a crawler could have — Carl and Donut engineer his appointment during class selection, and it has to look like an accident. He would forgive Donut for it. He would never forgive Carl."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "What he is allowed to say",
-          "text": "Most of what he knows he is forbidden to volunteer; on some subjects he may only answer a direct question, and viewers cannot see or hear him without press credentials. As manager he may not fight mobs directly. His advice is relentlessly conservative — stay ahead of the curve, never trust an elite, stay away from gods — which puts him permanently at odds with what Carl intends to do." },
-        { "kind": "arc", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "text": "Most of what he knows he is forbidden to volunteer; on some subjects he may only answer a direct question, and viewers cannot see or hear him without press credentials. As manager he may not fight mobs directly. His advice is relentlessly conservative — stay ahead of the curve, never trust an elite, stay away from gods — which puts him permanently at odds with what Carl intends to do."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6",
+          "confidence": "draft",
           "headline": "The past stops being backstory",
-          "text": "Odette's price for her help is the truth about an old catastrophe involving Huanxin, Mordecai and Uzzi." }
+          "text": "Odette's price for her help is the truth about an old catastrophe involving Huanxin, Mordecai and Uzzi."
+        }
       ],
       "relations": [
-        { "to": "borant-corporation", "kind": "indentured-to", "at": "1" },
-        { "to": "odette", "kind": "ally", "at": "2" }
+        {
+          "to": "borant-corporation",
+          "kind": "indentured-to",
+          "at": "1"
+        },
+        {
+          "to": "odette",
+          "kind": "ally",
+          "at": "2"
+        }
       ]
     },
     {
-      "id": "katia", "kind": "character", "name": "Katia Grim", "aka": ["Katia"],
-      "role": "Party", "revealedAt": "2", "sort": 5,
+      "id": "katia",
+      "kind": "character",
+      "name": "Katia Grim",
+      "aka": [
+        "Katia"
+      ],
+      "role": "Party",
+      "revealedAt": "2",
+      "sort": 5,
       "tagline": "A university art professor from Reykjavík who can mould her own mass like clay, once she works out how.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "Abandoned on the third floor",
-          "text": "She enters the dungeon with her friend and fellow professor Eva and joins Hekla's Brynhild's Daughters. Class selection separates them, Eva leaves her behind, and by the time Hekla asks the Royal Court to take her in she is ten levels behind and the System AI has only just upgraded her displayed race from \"What the f-word?\" to \"Human.\"" },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+          "text": "She enters the dungeon with her friend and fellow professor Eva and joins Hekla's Brynhild's Daughters. Class selection separates them, Eva leaves her behind, and by the time Hekla asks the Royal Court to take her in she is ten levels behind and the System AI has only just upgraded her displayed race from \"What the f-word?\" to \"Human.\""
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "Doppelgänger, Monster Truck Driver",
-          "text": "Her guide Bannon talks her into a momentum-based constitution tank who can reshape her mass — body and equipped gear alike — into any form of equal mass. She spends the third floor sculpting her own face using the reflection off a health potion bottle, and it shows: Carl charitably compares the result to a Juan Gris painting." },
-        { "kind": "arc", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+          "text": "Her guide Bannon talks her into a momentum-based constitution tank who can reshape her mass — body and equipped gear alike — into any form of equal mass. She spends the third floor sculpting her own face using the reflection off a health potion bottle, and it shows: Carl charitably compares the result to a Juan Gris painting."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "She is fundamentally good, which nearly kills her",
-          "text": "When the Fools Who Broke the Glass Quest triggers shortly after she joins — all but guaranteeing her death — she spends it trying to save NPCs and telling Carl and Donut to save themselves instead." },
-        { "kind": "arc", "book": 4, "floor": 5, "at": "4", "confidence": "verified",
+          "text": "When the Fools Who Broke the Glass Quest triggers shortly after she joins — all but guaranteeing her death — she spends it trying to save NPCs and telling Carl and Donut to save themselves instead."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "floor": 5,
+          "at": "4",
+          "confidence": "verified",
           "headline": "She maps the ninth floor four books early",
-          "text": "Given the Gate of the Feral Gods' linked watches, she works out the time-and-coordinate combinations that let the pair act as a reverse compass — and begins mapping the ninth floor before anyone has set foot on it." },
-        { "kind": "arc", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "text": "Given the Gate of the Feral Gods' linked watches, she works out the time-and-coordinate combinations that let the pair act as a reverse compass — and begins mapping the ninth floor before anyone has set foot on it."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6",
+          "confidence": "draft",
           "headline": "The crown threatens to turn her",
-          "text": "The eighth floor turns people into pieces, and the Crown of the Sepsis Whore puts her on course for a forced fight against Donut." },
-        { "kind": "fate", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+          "text": "The eighth floor turns people into pieces, and the Crown of the Sepsis Whore puts her on course for a forced fight against Donut."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
           "headline": "She takes the Orchid and leaves",
-          "text": "At the end of Faction Wars she uses the Orchid boon to exit the dungeon entirely — restored to human form, and missing parts of herself. It is the first exit the series shows that is neither death nor the eighteenth floor." }
+          "text": "At the end of Faction Wars she uses the Orchid boon to exit the dungeon entirely — restored to human form, and missing parts of herself. It is the first exit the series shows that is neither death nor the eighteenth floor."
+        }
       ],
       "relations": [
-        { "to": "eva", "kind": "former-ally", "at": "2" },
-        { "to": "hekla", "kind": "former-ally", "at": "2" },
-        { "to": "orchid-of-eileithyias-grace", "kind": "wields", "at": "7:end" }
+        {
+          "to": "eva",
+          "kind": "former-ally",
+          "at": "2"
+        },
+        {
+          "to": "hekla",
+          "kind": "former-ally",
+          "at": "2"
+        },
+        {
+          "to": "orchid-of-eileithyias-grace",
+          "kind": "wields",
+          "at": "7:end"
+        }
       ]
     },
     {
-      "id": "signet", "kind": "character", "name": "Tsarina Signet", "aka": ["Signet"],
-      "role": "NPC · Hunting Grounds", "revealedAt": "5", "sort": 6,
+      "id": "signet",
+      "kind": "character",
+      "name": "Tsarina Signet",
+      "aka": [
+        "Signet"
+      ],
+      "role": "NPC · Hunting Grounds",
+      "revealedAt": "5",
+      "sort": 6,
       "tagline": "The star of a scripted Syndicate revenge drama, who turns out to be a person having it done to her.",
       "beats": [
-        { "kind": "origin", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "verified",
           "headline": "Vengeance of the Daughter",
-          "text": "Signet is the protagonist of an in-universe Syndicate melodrama built around her quest for revenge — daughter of the High Elf King Finian and a Naiad princess, rejected by both sides, exiled after her mother's murder. The producers lean on every trope available, so her motives lurch between vengeance, romance and whatever the showrunners need next. That is the horror of her: she is a person with a writers' room." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+          "text": "Signet is the protagonist of an in-universe Syndicate melodrama built around her quest for revenge — daughter of the High Elf King Finian and a Naiad princess, rejected by both sides, exiled after her mother's murder. The producers lean on every trope available, so her motives lurch between vengeance, romance and whatever the showrunners need next. That is the horror of her: she is a person with a writers' room."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "verified",
           "headline": "Blood magic, and the Ink Marauders",
-          "text": "She raises Blood and Ink Elementals from the tattoos covering her body, casting the Ink Marauder Spell on a creature she judges will lose a fight — before it takes its first injury. She may not bleed the sacrifice herself; only a killing blow releases the blood. Her charisma is over 100, which projects a passive allure Carl can only break by breaking his own finger." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+          "text": "She raises Blood and Ink Elementals from the tattoos covering her body, casting the Ink Marauder Spell on a creature she judges will lose a fight — before it takes its first injury. She may not bleed the sacrifice herself; only a killing blow releases the blood. Her charisma is over 100, which projects a passive allure Carl can only break by breaking his own finger."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "verified",
           "headline": "Ruthless toward outsiders",
-          "text": "She tries to use Carl as an involuntary blood sacrifice, puts Donut under the Water Lily Spell, and forces Carl to help her reach the cursed circus. Her loyalty runs entirely to Grimaldi's Traveling Circus, the family that took her in — and not at all to the crawlers the script has assigned her." }
+          "text": "She tries to use Carl as an involuntary blood sacrifice, puts Donut under the Water Lily Spell, and forces Carl to help her reach the cursed circus. Her loyalty runs entirely to Grimaldi's Traveling Circus, the family that took her in — and not at all to the crawlers the script has assigned her."
+        }
       ],
       "relations": [
-        { "to": "grimaldi", "kind": "loyal-to", "at": "5" },
-        { "to": "npcs-are-people", "kind": "embodies", "at": "5" }
+        {
+          "to": "grimaldi",
+          "kind": "loyal-to",
+          "at": "5"
+        },
+        {
+          "to": "npcs-are-people",
+          "kind": "embodies",
+          "at": "5"
+        }
       ]
     },
     {
-      "id": "grimaldi", "kind": "character", "name": "Redstone Grimaldi", "aka": ["Grimaldi"],
-      "role": "NPC · Hunting Grounds", "revealedAt": "5", "sort": 7,
+      "id": "grimaldi",
+      "kind": "character",
+      "name": "Redstone Grimaldi",
+      "aka": [
+        "Grimaldi"
+      ],
+      "role": "NPC · Hunting Grounds",
+      "revealedAt": "5",
+      "sort": 7,
       "tagline": "Ringmaster of Grimaldi's Traveling Circus, and the man who took Signet in.",
       "beats": [
-        { "kind": "origin", "book": 5, "floor": 6, "at": "5", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "verified",
           "headline": "He rescued her from the High Elves",
-          "text": "Signet was a child when the circus took her in. As she grew up she fell in love with him, and when she told him she would have been a tsarina had she been full-blooded Naiad, he renamed her Tsarina Signet." }
+          "text": "Signet was a child when the circus took her in. As she grew up she fell in love with him, and when she told him she would have been a tsarina had she been full-blooded Naiad, he renamed her Tsarina Signet."
+        }
       ],
       "relations": []
     },
     {
-      "id": "prepotente", "kind": "character", "name": "Prepotente", "aka": [],
-      "role": "Crawler", "revealedAt": "5", "sort": 8,
-      "tagline": "A profane, opera-singing Boer goat. Exactly as good as that sounds.",
+      "id": "prepotente",
+      "kind": "character",
+      "name": "Prepotente",
+      "aka": [],
+      "role": "Crawler",
+      "revealedAt": "5",
+      "sort": 8,
+      "tagline": "A profane, opera-singing Boer goat who destroyed an entire floor of the world dungeon within minutes of it opening.",
       "beats": [
-        { "kind": "origin", "book": 5, "floor": 6, "at": "5", "confidence": "draft",
+        {
+          "kind": "origin",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "draft",
           "headline": "The goat sings",
-          "text": "One of the crawl's more improbable success stories, and a reminder that the Enhanced Pet Biscuit was never going to be a one-off." },
-        { "kind": "fate", "book": 5, "floor": 6, "at": "5:end", "confidence": "draft",
+          "text": "One of the crawl's more improbable success stories, and proof the Enhanced Pet Biscuit was never going to be a one-off."
+        },
+        {
+          "kind": "fate",
+          "book": 5,
+          "floor": 6,
+          "at": "5:end",
+          "confidence": "draft",
           "headline": "Left carrying on with Bianca",
-          "text": "Miriam Dom's vampirism finally kills her, and the two goats continue without her." }
+          "text": "Miriam Dom's vampirism finally kills her, and the two goats continue without her."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 7,
+          "at": "5:end",
+          "confidence": "verified",
+          "headline": "He shatters the seventh floor",
+          "text": "The Great Race was a rushed, Valtay-funded replacement and it was structurally compromised. Minutes after it opened, Prepotente broke the entire circuit of glass tunnels into fine dust. Not one crawler ever entered the maze; not one mob, NPC or boss was ever met on it. An opera-singing goat deleted a floor of the world dungeon before the show could broadcast a single lap of it."
+        }
       ],
       "relations": []
     },
     {
-      "id": "frank-and-maggie", "kind": "character", "name": "Frank Q & Maggie My",
-      "aka": ["Frank Q", "Maggie My"], "role": "Antagonists", "revealedAt": "1", "sort": 9,
+      "id": "frank-and-maggie",
+      "kind": "character",
+      "name": "Frank Q & Maggie My",
+      "aka": [
+        "Frank Q",
+        "Maggie My"
+      ],
+      "role": "Antagonists",
+      "revealedAt": "1",
+      "sort": 9,
       "tagline": "Two crawlers who worked out early that murdering humans in safe rooms beats fighting monsters.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "draft",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "draft",
           "headline": "Safe rooms are not morally neutral",
-          "text": "They are the first proof that the dungeon's worst hazard is the other survivors — and that production is delighted to broadcast it." },
-        { "kind": "fate", "book": 3, "floor": 4, "at": "3", "confidence": "draft",
+          "text": "They are the first proof that the dungeon's worst hazard is the other survivors — and that production is delighted to broadcast it."
+        },
+        {
+          "kind": "fate",
+          "book": 3,
+          "floor": 4,
+          "at": "3",
+          "confidence": "draft",
           "headline": "The Scree parasite",
-          "text": "Maggie returns riding another crawler, Chris Andrews; Frank dies of it. Carl extracts her, she lunges for him, and Mongo finishes it." }
+          "text": "Maggie returns riding another crawler, Chris Andrews; Frank dies of it. Carl extracts her, she lunges for him, and Mongo finishes it."
+        }
       ],
       "relations": []
     },
     {
-      "id": "beatrice", "kind": "character", "name": "Beatrice", "aka": ["Bea"],
-      "role": "Earth · Carl's ex", "revealedAt": "1", "sort": 10,
+      "id": "beatrice",
+      "kind": "character",
+      "name": "Beatrice",
+      "aka": [
+        "Bea"
+      ],
+      "role": "Earth · Carl's ex",
+      "revealedAt": "1",
+      "sort": 10,
       "tagline": "Carl's ex-girlfriend, Donut's owner, and the reason he owned a pair of pink Crocs.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "The Bahamas, and Brad",
-          "text": "She went away for Christmas with her ex, Brad, and posted the photo. Carl broke up with her by phone days before the Transformation. Her cat, her family's breeding line, her shoes — and Carl is the one who ends up carrying all three into the dungeon." }
+          "text": "She went away for Christmas with her ex, Brad, and posted the photo. Carl broke up with her by phone days before the Transformation. Her cat, her family's breeding line, her shoes — and Carl is the one who ends up carrying all three into the dungeon."
+        }
       ],
       "relations": []
     },
     {
-      "id": "hekla", "kind": "character", "name": "Hekla", "aka": [],
-      "role": "Crawler · Brynhild's Daughters", "revealedAt": "2", "sort": 11,
+      "id": "hekla",
+      "kind": "character",
+      "name": "Hekla",
+      "aka": [],
+      "role": "Crawler · Brynhild's Daughters",
+      "revealedAt": "2",
+      "sort": 11,
       "tagline": "Leader of Brynhild's Daughters, and the one who asks the Royal Court to take Katia in.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "She hands Katia over",
-          "text": "Her group carries Katia and Eva through the early floors, and it is Hekla who asks Carl and Donut to take Katia on when the gap becomes unsurvivable." },
-        { "kind": "arc", "book": 5, "floor": 6, "at": "5", "confidence": "draft",
+          "text": "Her group carries Katia and Eva through the early floors, and it is Hekla who asks Carl and Donut to take Katia on when the gap becomes unsurvivable."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5",
+          "confidence": "draft",
           "headline": "The fracture",
-          "text": "Her earlier choices come apart across Katia, Eva and the Daughters during the Masquerade." }
+          "text": "Her earlier choices come apart across Katia, Eva and the Daughters during the Masquerade."
+        }
       ],
-      "relations": [{ "to": "brynhilds-daughters", "kind": "leads", "at": "2" }]
+      "relations": [
+        {
+          "to": "brynhilds-daughters",
+          "kind": "leads",
+          "at": "2"
+        }
+      ]
     },
     {
-      "id": "eva", "kind": "character", "name": "Eva", "aka": [],
-      "role": "Crawler", "revealedAt": "2", "sort": 12,
+      "id": "eva",
+      "kind": "character",
+      "name": "Eva",
+      "aka": [],
+      "role": "Crawler",
+      "revealedAt": "2",
+      "sort": 12,
       "tagline": "Katia's friend and fellow professor, who left her behind on the third floor.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "She goes on without her",
-          "text": "The two entered the dungeon together. Class selection split them up, and Eva did not wait." }
+          "text": "The two entered the dungeon together. Class selection split them up, and Eva did not wait."
+        }
       ],
       "relations": []
     },
     {
-      "id": "odette", "kind": "character", "name": "Odette", "aka": [],
-      "role": "Advisor", "revealedAt": "2", "sort": 13,
+      "id": "odette",
+      "kind": "character",
+      "name": "Odette",
+      "aka": [],
+      "role": "Advisor",
+      "revealedAt": "2",
+      "sort": 13,
       "tagline": "The one who told them Mordecai's memory was worth more than any item in the dungeon.",
       "beats": [
-        { "kind": "origin", "book": 2, "floor": 3, "at": "2", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 2,
+          "floor": 3,
+          "at": "2",
+          "confidence": "verified",
           "headline": "Her advice makes the party",
-          "text": "It is Odette who identifies Mordecai's memory as the single most valuable resource a crawler could have, and Odette's plan that installs him as Donut's manager without him realising he was steered." },
-        { "kind": "arc", "book": 6, "floor": 8, "at": "6", "confidence": "draft",
+          "text": "It is Odette who identifies Mordecai's memory as the single most valuable resource a crawler could have, and Odette's plan that installs him as Donut's manager without him realising he was steered."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6",
+          "confidence": "draft",
           "headline": "Her price is the truth",
-          "text": "Huanxin Jinx trades help for placing Odette as adjutant, and Odette's own price is the old catastrophe involving Huanxin, Mordecai and Uzzi." }
+          "text": "Huanxin Jinx trades help for placing Odette as adjutant, and Odette's own price is the old catastrophe involving Huanxin, Mordecai and Uzzi."
+        }
       ],
       "relations": []
     },
     {
-      "id": "lucia-mar", "kind": "character", "name": "Lucia Mar", "aka": [],
-      "role": "Crawler", "revealedAt": "7", "sort": 14,
+      "id": "lucia-mar",
+      "kind": "character",
+      "name": "Lucia Mar",
+      "aka": [],
+      "role": "Crawler",
+      "revealedAt": "7",
+      "sort": 14,
       "tagline": "A crawler whose presence gets steadily harder to explain away.",
       "beats": [
-        { "kind": "fate", "book": 7, "floor": 9, "at": "7:end", "confidence": "verified",
+        {
+          "kind": "fate",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
           "headline": "She is carrying 120,000 children",
-          "text": "The end of Faction Wars reveals that her body contains more than 120,000 human children. Nobody has yet said what for." }
+          "text": "The end of Faction Wars reveals that her body contains more than 120,000 human children. Nobody has yet said what for."
+        }
       ],
-      "relations": [{ "to": "lucia-mars-children", "kind": "subject-of", "at": "7:end" }]
+      "relations": [
+        {
+          "to": "lucia-mars-children",
+          "kind": "subject-of",
+          "at": "7:end"
+        }
+      ]
     },
     {
-      "id": "juice-box", "kind": "character", "name": "Juice Box", "aka": [],
-      "role": "Ally", "revealedAt": "7", "sort": 15,
+      "id": "juice-box",
+      "kind": "character",
+      "name": "Juice Box",
+      "aka": [],
+      "role": "Ally",
+      "revealedAt": "7",
+      "sort": 15,
       "tagline": "Slipped through a portal into the enemy's own market to tell the NPCs what they are.",
       "beats": [
-        { "kind": "arc", "book": 7, "floor": 9, "at": "7", "confidence": "verified",
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7",
+          "confidence": "verified",
           "headline": "Through the Gate, into Larracos",
-          "text": "When Carl floods the ninth-floor faction market, Juice Box goes through the portal with the water and hides among the survivors — spreading word of what the NPCs truly are. The flood was the distraction. This was the operation." }
+          "text": "When Carl floods the ninth-floor faction market, Juice Box goes through the portal with the water and hides among the survivors — spreading word of what the NPCs truly are. The flood was the distraction. This was the operation."
+        }
       ],
-      "relations": [{ "to": "gate-of-the-feral-gods", "kind": "travelled-through", "at": "7" }]
+      "relations": [
+        {
+          "to": "gate-of-the-feral-gods",
+          "kind": "travelled-through",
+          "at": "7"
+        }
+      ]
     },
     {
-      "id": "system-ai", "kind": "character", "name": "The System AI", "aka": ["the AI"],
-      "role": "Narrator & antagonist", "revealedAt": "1", "sort": 16,
+      "id": "system-ai",
+      "kind": "character",
+      "name": "The System AI",
+      "aka": [
+        "the AI"
+      ],
+      "role": "Narrator & antagonist",
+      "revealedAt": "1",
+      "sort": 16,
       "tagline": "Announcer, referee, loot dispenser and comedian. It is not neutral and it is not pretending to be.",
       "beats": [
-        { "kind": "origin", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+        {
+          "kind": "origin",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "The first voice after the world ends",
-          "text": "A minute after the Transformation it makes a planet-wide announcement opening Dungeon Crawler World: Earth, and the staircases appear. Every rule, notification and insult from here comes in its voice." },
-        { "kind": "arc", "book": 1, "floor": 1, "at": "1", "confidence": "verified",
+          "text": "A minute after the Transformation it makes a planet-wide announcement opening Dungeon Crawler World: Earth, and the staircases appear. Every rule, notification and insult from here comes in its voice."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "floor": 1,
+          "at": "1",
+          "confidence": "verified",
           "headline": "Loot is only semi-random",
-          "text": "Box contents may be genuinely randomised, or the AI may have picked them by hand to help or hurt a crawler for the sake of ratings. It also hands out pointedly insulting boxes for unusual or taboo feats — Carl's Bronze and Gold Asshole's Boxes on the first floor being the model." }
+          "text": "Box contents may be genuinely randomised, or the AI may have picked them by hand to help or hurt a crawler for the sake of ratings. It also hands out pointedly insulting boxes for unusual or taboo feats — Carl's Bronze and Gold Asshole's Boxes on the first floor being the model."
+        }
       ],
       "relations": []
     }
