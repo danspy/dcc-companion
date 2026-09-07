@@ -245,6 +245,42 @@ ASTRO_DATABASE_FILE=./.astro/build.db npm run build
 > A schema change needs a full restart, and only one dev server may run against
 > `data/dcc.db` — `astro:db` resolves its virtual module once at boot.
 
+## Deploy
+
+Live at **https://dcc.dev.innovativstud.io** on port 4336, the next slot after mcu-timeline.
+
+Push to `main` deploys. `.github/workflows/deploy.yml` runs two jobs:
+
+1. **check** — `test:gate`, `content:check`, and a **staleness guard**: it re-runs
+   `content:build` and fails if `data/content.snapshot.json` comes back different, because a
+   committed snapshot that no longer matches the curation would deploy content nobody wrote.
+2. **deploy** — SSH to the box, `git reset --hard origin/main`, `npm ci`, stop the service,
+   build, start, then poll `127.0.0.1:4336` for 30s before calling it green.
+
+`git clean` is deliberately **not** run: `data/index/` holds the gitignored curation aids
+(chapter summaries, the coverage ranking) which are expensive to re-fetch.
+
+### Why this deploy is simpler than the other apps here
+
+**Nothing on the server is worth preserving.** There is no user database — reading position lives
+in the reader's own `dcc_pos` cookie, and `data/dcc.db` holds only content, re-seeded from the
+committed snapshot on every build. So there is no backup/verify/restore dance around the build,
+which is most of what `mcu-timeline`'s workflow does. If that changes — if accounts land — this
+workflow has to grow that dance too, and `src/lib/prefs.ts` is where it would start.
+
+### Server pieces
+
+| Piece | Where |
+|---|---|
+| systemd unit | `deploy/dcc-companion.service`, installed at `/etc/systemd/system/` |
+| working copy | `/srv/previews/dcc-companion` (a clone of `origin/main`) |
+| reverse proxy | `dcc.dev.innovativstud.io` → `127.0.0.1:4336` in `/etc/caddy/Caddyfile` |
+| deploy key | `~/.ssh/dcc-companion-deploy`, public half in `authorized_keys` |
+| repo secrets | `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_KEY` |
+
+`preview.innovativstud.io` is a **different thing**: it proxies port 4321, i.e. whichever project
+currently has a dev server running. It is not this deployment, and only one project can hold it.
+
 ## Key files
 
 | File | Purpose |

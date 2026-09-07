@@ -1,0 +1,90 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-dcc-companion
+  cancel-in-progress: false
+
+jobs:
+  # The gate is the product, so nothing reaches the server until the gate's own
+  # rules pass. Cheap to run, and it catches the two failure modes that actually
+  # ship bugs: a broken reveal tag, and a snapshot that no longer matches the
+  # curation it was built from.
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Gate arithmetic and lint rules
+        run: npm run test:gate
+      - name: Curation lint
+        run: npm run content:check
+      - name: The committed snapshot matches the curation
+        run: |
+          npm run content:build
+          if ! git diff --quiet -- data/content.snapshot.json; then
+            echo "::error::data/content.snapshot.json is stale."
+            echo "Run 'npm run content:build' and commit the result."
+            git diff --stat -- data/content.snapshot.json
+            exit 1
+          fi
+          echo "Snapshot is in sync."
+
+  deploy:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            set -euo pipefail
+            export PATH="/root/.nvm/versions/node/v24.14.0/bin:$PATH"
+
+            DEPLOY_DIR="/srv/previews/dcc-companion"
+            cd "$DEPLOY_DIR"
+
+            # `git reset --hard` only touches tracked files. `git clean` is
+            # deliberately not used — data/index/ holds the local curation aids,
+            # which are gitignored and expensive to re-fetch.
+            git fetch --prune origin
+            git reset --hard origin/main
+            npm ci
+
+            systemctl stop dcc-companion
+
+            # Nothing here is worth preserving: the content DB is rebuilt from
+            # the committed snapshot, and reader position lives in a cookie.
+            set +e
+            ASTRO_DATABASE_FILE=./data/dcc.db npm run build
+            BUILD_EXIT=$?
+            set -e
+
+            systemctl start dcc-companion
+
+            [ "$BUILD_EXIT" -eq 0 ] || {
+              echo "Build failed (exit $BUILD_EXIT). Service restarted on the previous build."
+              exit 1
+            }
+
+            for i in $(seq 1 15); do
+              if curl -fsS -o /dev/null http://127.0.0.1:4336/; then
+                echo "dcc-companion is serving on 4336."
+                exit 0
+              fi
+              sleep 2
+            done
+            echo "::error::Service did not respond on 127.0.0.1:4336 after 30s."
+            systemctl status dcc-companion --no-pager --lines 30 || true
+            exit 1

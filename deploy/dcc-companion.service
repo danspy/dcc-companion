@@ -1,0 +1,32 @@
+# Reference systemd unit — install on the server as:
+#   /etc/systemd/system/dcc-companion.service
+# Then:  systemctl daemon-reload && systemctl enable --now dcc-companion
+#
+# Mirrors the other Astro SSR apps on this box. Port 4336 is the next free slot
+# after mcu-timeline (4335). Served at dcc.dev.innovativstud.io.
+#
+# This app is STATELESS on the server. There is no user database: reading
+# position lives in the reader's own `dcc_pos` cookie, and data/dcc.db holds
+# nothing but the content, re-seeded from the committed snapshot on every build.
+# A deploy can therefore throw the database away without losing anything, which
+# is why this unit needs no backup/restore dance around it.
+
+[Unit]
+Description=Crawler's Companion (Astro SSR)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/srv/previews/dcc-companion
+ExecStart=/usr/local/bin/node ./dist/server/entry.mjs
+Restart=always
+RestartSec=5
+Environment=HOST=127.0.0.1
+Environment=PORT=4336
+Environment=NODE_ENV=production
+# Content only, rebuilt from data/content.snapshot.json on every deploy:
+Environment=ASTRO_DATABASE_FILE=/srv/previews/dcc-companion/data/dcc.db
+
+[Install]
+WantedBy=multi-user.target
