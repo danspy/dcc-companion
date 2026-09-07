@@ -71,8 +71,13 @@ for (const e of entities) {
 
 resolvedBeats.sort((a, b) => a.sortKey - b.sortKey || a.entityId.localeCompare(b.entityId));
 
+/* No timestamp in here on purpose. This file is a derived artifact, and the
+   deploy's staleness guard works by rebuilding it and diffing — which only
+   means anything if the build is byte-for-byte reproducible. When it was
+   written it defeated the guard on the guard's first run. Git records when.
+   (data/chapters.json keeps its timestamp: that one is a record of a network
+   fetch, not a derivation, and nothing diffs it.) */
 const snapshot = {
-  generatedAt: new Date().toISOString(),
   books,
   floors: floors.map(f => ({
     ...f,
