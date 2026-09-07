@@ -56,6 +56,14 @@ const Entity = defineTable({
     taglines: column.json(),
     revealedAt: column.text(),  // when the entity may be *named* at all
     sort: column.number({ default: 0 }),
+    /* Who speaks on this page: self | system | narrator. Resolved in the build
+       (scripts/lib/voice.mjs); characters default to self, everything else to
+       narrator. */
+    voice: column.text({ default: 'narrator' }),
+    /* The System's own words about this thing, quoted verbatim and gated like
+       taglines: [{ at, source, sortKey, text }], ascending. Items carry these
+       ahead of their usage log. */
+    descriptions: column.json({ default: [] }),
   },
 });
 
@@ -75,6 +83,7 @@ const Beat = defineTable({
     headline: column.text(),
     text: column.text(),
     confidence: column.text({ default: 'draft' }),    // verified | draft
+    voice: column.text({ default: 'narrator' }),      // self | system | narrator, resolved in the build
   },
 });
 
