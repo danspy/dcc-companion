@@ -178,10 +178,10 @@
         {
           "kind": "origin",
           "book": 1,
-          "chapter": 5,
+          "chapter": 6,
           "floor": 1,
-          "at": "1:5",
-          "confidence": "draft",
+          "at": "1:6",
+          "confidence": "verified",
           "headline": "First cat down the stairs",
           "text": "Carl carries me down, and the dungeon gives him a Legendary Pet Box for it, which is fair, and gives me a Legendary Quadruped Box of my own, which is more than fair. His box has a biscuit in it. An Enhanced Pet Biscuit. I take it out of his hand, because it is obviously for me, and I melt into a heap of goo, and I get up talking. I have a great deal to say."
         },
@@ -191,7 +191,7 @@
           "chapter": 7,
           "floor": 1,
           "at": "1:7",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "GC BWR NW Princess Donut the Queen Anne Chonk",
           "text": "I learn Magic Missile. I also have the highest stat total in the party, which makes me party leader, which anyone could have predicted. My first act is to give the party a proper name: the Royal Court of Princess Donut. There is an inauguration. Carl does not take it seriously enough, but there is an inauguration."
         },
@@ -201,7 +201,7 @@
           "chapter": 7,
           "floor": 1,
           "at": "1:7",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She equips a crown with an ominous description",
           "text": "Mordecai says read the description first. Mordecai says a great many things. It is a crown, it is dark and smoky and exactly my colour, and it came out of my box, which has the word Legendary on it. It has a vulgar name, which is not my fault. It says something about the Blood Sultanate and a line of succession, eight floors down. I am already a princess. I do not see how being in line for anything could be a demotion. Carl is making his face."
         },
@@ -211,7 +211,7 @@
           "chapter": 46,
           "floor": 2,
           "at": "1:46",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She adopts a dinosaur",
           "text": "There is a reward room on the second floor with a cage in it, and in the cage is a pet-class mob, and the pet-class mob is my son. I did not know that until I saw him. He is called Mongo. He is mine, and that is the end of the discussion."
         },
@@ -221,7 +221,7 @@
           "chapter": 1,
           "floor": 3,
           "at": "2:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Cat, and a Former Child Actor",
           "text": "Odette suggested it, so obviously it is a good idea: a class that lets me choose another class at every level. I also arrange for Mordecai to be my manager. He is thrilled. He does not show it, but he is. My constitution is apparently far too low for what Carl calls melee, so I will be fighting with charisma, spells and the audience, which is how it should be done."
         },
@@ -230,9 +230,9 @@
           "book": 6,
           "floor": 8,
           "at": "6:26",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She fights with people",
-          "text": "It is a card floor and I have a deck, and in the deck are Alpha Male Carl and Shi Maria, and both of them are somebody. I play them anyway. It is a game. That is what the cards are for.",
+          "text": "It is a card floor and I have a deck, and Shi Maria is going into it. She is somebody, which is not the same thing as a mob with a number over its head. Carl saw straight through her and made an arrangement: she becomes a card, and we take her down to the next floor with us. I will play her when I need her. It is a game. That is what the cards are for.",
           "chapter": 26
         },
         {
@@ -240,9 +240,9 @@
           "book": 7,
           "floor": 9,
           "at": "7:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The crown comes due",
-          "text": "The Blood Sultanate holds this floor, and every royal in the line must kill the Sultan and the rest of the family before the stairs to the tenth will open. I am a royal in the line. I have been since the first floor. I would like it noted that I was told to read the description."
+          "text": "The Blood Sultanate is on this floor, and every royal in the line must slay the Sultan and all the other members of the royal family before descending to the tenth. I am a royal in the line. I have been since the first floor. I would like it noted that I was told to read the description."
         }
       ],
       "relations": [
@@ -598,7 +598,7 @@
           "chapter": 22,
           "floor": 1,
           "at": "1:22",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The mysterious Agatha",
           "text": "Agatha. She is with the Meadow Lark party when Carl and Donut find them: Imani, Yolanda Martinez, the Andrews brothers, and her. The others I can account for, level by level, box by box, all the way back to the stairs. Agatha I can account for. Mostly. Let's leave it there. The party calls her mysterious, which is the kindest word available and also the most accurate."
         },
@@ -608,7 +608,7 @@
           "chapter": 27,
           "floor": 1,
           "at": "1:27",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She fights beside them, then takes her leave",
           "text": "For the record: Agatha fought the Ball of Swine from the redoubt beside Brandon, Chris, Yolanda, Imani, Carl and the cat, and did her share. Then, in the aftermath, while everyone else was agreeing to keep helping Meadow Lark, she took her leave. No forwarding address. I nearly always have a forwarding address."
         },
@@ -618,7 +618,7 @@
           "chapter": 78,
           "floor": 9,
           "at": "7:78",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Akuma's warning",
           "text": "Warlord Akuma, to the Warlord Chat: the War Mages are leaving the floor, and they have found the Scavenger's Daughter and are taking her with them. Then, to Carl and Donut specifically, a warning. Agatha is an enemy to all of you. His words, not mine. He did not elaborate, and I am the referee here, not the colour commentary, whatever it may look like from where you're standing."
         }
@@ -876,7 +876,7 @@
           "chapter": 24,
           "floor": 5,
           "at": "4:24",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The head from Ghazi's castle",
           "text": "Yes, I am a head. Yes, THAT kind of head. Get it out of your system. I am Psamathe, or the half of her that got stuck when I tried to climb out of the Nothing, and what I got stuck in is a Lika doll from Ghazi's castle, crystallised until now. Withering spirit, the system calls it. Carl carried me here in his pack like a snack. Now he is HIRING me. A goddess. As a trainer. Kept in the safe room. Fine. FINE. I want a mirror."
         },
@@ -886,7 +886,7 @@
           "chapter": 34,
           "floor": 5,
           "at": "4:34",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Her mother comes when called",
           "text": "Slit. A feral demon, and it is hunting ME, like I do not have enough going on. So they open the safe room and roll me out to deal with it, which is apparently a plan: one head versus one demon. Fine. I call for Mother. Mother comes when I call. Mother kills Slit, and everyone here is now looking at me the way they should have been looking at me from the start."
         },
@@ -896,7 +896,7 @@
           "chapter": 17,
           "floor": 6,
           "at": "5:17",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She wants her body back",
           "text": "SIGNET. Take me to Signet. Signet can put me back in a body, a real one, with all the parts, and I have been saying so since they walked in and nobody is LISTENING. Carl has the face he makes when he wants to put me back in the bag. He says they will bring me if I shut up. So I am shutting up. This is me. Shut up. Are we going or not?"
         },
@@ -906,7 +906,7 @@
           "chapter": 25,
           "floor": 8,
           "at": "6:25",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A new friend who can cast it",
           "text": "Carl. Donut. FINALLY. I have made a friend. Her name is Shi Maria, and she can cast the spell. The spell. The body one. I have been telling everyone for two floors that this is possible, and now I have someone who can actually do it agreeing with me, so everyone can stop making that face. Come and get me so I can introduce you. I have a lot to tell you and none of it is quiet."
         }
@@ -1116,7 +1116,7 @@
           "chapter": 22,
           "floor": 5,
           "at": "4:22",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He opens the valve",
           "text": "Carl and Donut are under the sand. The tomb is coming down and there is no digging them out, not in the time we have. Gwen and I find the valve. We open it. Water goes in, the tomb floods, and everything loose in there, the two of them included, goes wherever the water is going. It is not a rescue. It is the option that exists."
         },
@@ -1126,7 +1126,7 @@
           "chapter": 27,
           "floor": 5,
           "at": "4:27",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "One of the three who go through the Gate",
           "text": "Vadim ran. That leaves Carl, Katia and me against Lusca and all of her babies, and we kill her, and then we kill them. Then Carl opens the Gate. One step and the three of us are out of the water quadrant and standing in town. Something came through behind us. A god, the feral kind. That is going to be somebody's problem."
         }
@@ -1418,9 +1418,9 @@
           "chapter": 42,
           "floor": 2,
           "at": "1:42",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Death Watch Extreme Dungeon Mayhem",
-          "text": "The show is Death Watch Extreme Dungeon Mayhem. The host calls himself the Maestro, and he spends the broadcast picking at my brother and at Zhang, because they cannot answer him. We are facing Brindled Vespas. Then the crawler with the cat, Carl, decides he is too valuable to the production to be punished, and bets on it, out loud, and gets all of us off: Li Jun, Zhang, their boss, me. I watch the whole thing and say very little. I am remembering his face."
+          "text": "The show is Death Watch Extreme Dungeon Mayhem. The host calls himself the Maestro. He pulls my brother and Zhang off the floor and makes them play a guessing game for points that buy lives, and they will not choose which of us to spend them on. The rest of us stay frozen where we were standing, between the troglodytes and the Brindled Vespas. Then the crawler with the cat, Carl, decides he is too valuable to the production to be punished, and bets on it, out loud, and the four of us walk out. I am remembering his face."
         },
         {
           "kind": "arc",
@@ -1428,7 +1428,7 @@
           "chapter": 63,
           "floor": 8,
           "at": "6:63",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Her squad reaches the church",
           "text": "The church. Katia's squad is there, and Elle's, and Imani's, and mine. Four squads in one building, which does not happen by accident on this floor. It happened because Lucia handed round Doggy Door upgrades before she went down the stairs, and we used them. I take what I am given and I do not ask what it costs. That is the rule I made for this floor. I know what it says about me."
         },
@@ -1438,7 +1438,7 @@
           "chapter": 73,
           "floor": 10,
           "at": "8:73",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The Garden of Deliverance",
           "text": "It works. The transfer holds, and they come across to the Pineapple Cabaret one after another, and my Dread watches over each of them from the moment they arrive. They are calling it the Garden of Deliverance. I do not need to see them to know they are alive. The Dread tells me. It tells me everything, all the time, and it does not stop."
         }
@@ -1538,7 +1538,7 @@
           "chapter": 14,
           "floor": 1,
           "at": "1:14",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Seen in the first episode",
           "text": "I'm on the show. The first episode of Dungeon Crawler World: Earth, and I'm in it, so everybody with a screen has seen me now, including a man with no shoes and his cat. I watched the whole thing. I didn't say anything while it was on. I liked it more than I thought I would."
         },
@@ -1548,7 +1548,7 @@
           "chapter": 21,
           "floor": 3,
           "at": "2:21",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Out for their blood",
           "text": "The recap showed it, so now everybody knows. I'm looking for the cat and the man. Princess Donut and Carl. Not everybody in the city. Them. I know their names and I know what they look like and I know they are on this floor. I'm not going to tell you why. You don't need to know why."
         },
@@ -1558,7 +1558,7 @@
           "chapter": 71,
           "floor": 6,
           "at": "5:71",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "More than one of her in there",
           "text": "Florin held on to me. He is kind to me even when I'm not the one who is here. He told the others that there is more than one of us in my head, and that some of the others are children too, and that the dog is the important part. He's right about the dog. I don't get to talk about the dog. I'm not the one who decides what I talk about."
         },
@@ -1567,9 +1567,9 @@
           "book": 7,
           "floor": 9,
           "at": "7:end",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "One hundred and twenty thousand",
-          "text": "This is not a death notice. Read it anyway. Crawler Lucia Mar's body holds more than a hundred and twenty thousand human children. That is not a figure of speech and it is not a rounding error. Nobody has said what for. Don't look at me. I'd think about that, crawler, and then I would think very hard about something else."
+          "text": "This is not a death notice. Read it anyway. Crawler Lucia Mar is a dead man's switch. The administration puts the number at roughly a hundred and twenty thousand human children on the surface, and every one of them stops when she does. That is not a figure of speech and it is not a rounding error. Some of them already talk out of her mouth. Nobody has said what for. Don't look at me. I'd think about that, crawler, and then I would think very hard about something else."
         }
       ],
       "relations": [
@@ -1796,7 +1796,7 @@
           "chapter": 1,
           "floor": 1,
           "at": "1:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The Bahamas, with Brad",
           "text": "Subject is in the Bahamas with her ex, a man called Brad, and she posted the photograph. Carl ended it by phone a few days before the Transformation, which, as timing goes, was impeccable. She is not on my stairs. Her cat is. Her family's breeding line is. Her shoes are, on his feet, and they are pink. That is the file. I have never had so little to say about anyone, and I resent it."
         }
@@ -1922,7 +1922,7 @@
           "chapter": 1,
           "floor": 3,
           "at": "2:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Her advice makes the party",
           "text": "The Princess took my advice, which is what advice is for. A class that lets her choose another every time she levels, and a manager who has walked those floors himself and remembers every one of them. Mordecai is not to know he was steered. He would sulk, he would be entitled to, and a sulking guide is no use to anybody. Some gifts are best received as accidents. I have given a great many that way."
         },
@@ -1930,10 +1930,11 @@
           "kind": "arc",
           "book": 6,
           "floor": 8,
-          "at": "6",
-          "confidence": "draft",
+          "at": "6:37",
+          "confidence": "verified",
           "headline": "Her price is the truth",
-          "text": "Huanxin Jinx has terms. She will help the Princess and her people, and in exchange I go in beside them as adjutant. I have terms of my own, and mine are older than hers. Huanxin. Mordecai. Uzzi. The old catastrophe, all of it, told out loud. That is my price for helping, and I am aware of what it costs the man who has to pay it. I have been aware of that for a very long time."
+          "text": "Carl asks why I am helping, which is the correct question and the only one I respect, so he gets the whole answer. Mordecai's brother Uzzi is dead because I would not pay Huanxin Jinx what she asked, and the guilt of that is the engine under everything I have done since. Then the larger thing, which nobody says aloud: every world they run a crawl on is being burned for fuel. That is the business. I mean to shut it down, to do it responsibly, and to be the one who does it. Never trust anyone until you know what they are getting out of it. Now he knows.",
+          "chapter": 37
         }
       ],
       "relations": []
@@ -1991,7 +1992,7 @@
           "chapter": 19,
           "floor": 5,
           "at": "4:19",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He cannot prove it was on purpose",
           "text": "Crawler Carl and Crawler Princess Donut have been brought before me at the Desperado Club to account for the death of Loita. My position is that it was deliberate. My position is not evidence. I cannot establish intent, and so I am required to release them, which I am doing, with a note in the file. They have only now worked out how long they have been outside the dungeon. Five days. Their faces are the one part of this I have enjoyed."
         },
@@ -2001,7 +2002,7 @@
           "chapter": 1,
           "floor": 6,
           "at": "5:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Borant would like the Gate back",
           "text": "The Hunting Grounds. I have been sent to Crawler Carl with a request from Borant, which I am instructed to describe as a request. They would like the Gate of the Feral Gods surrendered, voluntarily, to be held until the ninth floor and not a floor longer. I put it to him exactly as written. He asked for a lawyer. I have passed that back exactly as spoken. I expect to be sent again."
         },
@@ -2011,7 +2012,7 @@
           "chapter": 28,
           "floor": 10,
           "at": "8:28",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The trap that broke the Nothing",
           "text": "Crawler Carl is among the Caprids, trading question for question, and one of the goats has just told him what Justice Light's trap did to the Nothing. The Prime Minister and I are on the line. We need him to ask a question about the integrity of the tunnelling system, and the reason we need it asked is not something I am cleared to say on an open channel. Crawler Carl has said it on an open channel. All of it. Live. I am going to be in meetings."
         }
@@ -2340,7 +2341,7 @@
           "chapter": 77,
           "floor": 6,
           "at": "5:77",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He takes Imogen's crystal",
           "text": "New name on the board. Osvaldo, crawler. In the wreck of the Masquerade he walks up to Queen Imogen and takes her memorial crystal off her. Prepotente is going after him for it. I have no notes on Osvaldo before this moment, which tells you how he has been playing it. I have a note now."
         },
@@ -2350,7 +2351,7 @@
           "chapter": 64,
           "floor": 9,
           "at": "7:64",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A giant rainbow in the Madness territory",
           "text": "Sighting, Madness territory: a giant rainbow, visible from a very long way off. The rainbow is Apito's memorial crystal, and the hands holding it are Osvaldo's. He is in none of the Faction Wars armies. I did not think that was possible either. The rainbow has just told the Madness army exactly where Crawler Carl's group is standing, and they are calling in Prepotente's forces for backup. Thank you, Osvaldo."
         },
@@ -2360,8 +2361,8 @@
           "chapter": 83,
           "floor": 10,
           "at": "8:83",
-          "confidence": "draft",
-          "headline": "Shot down at the portals",
+          "confidence": "verified",
+          "headline": "Caught on the gate at the portals",
           "text": "Crawler Osvaldo has been eliminated. He was speeding for the portals on the roof of the apartment complex when Britney put a stop to it, and she now holds Ysalte's memorial crystal, which he had been carrying. Crawler Carl made one more attempt to get him to take a deal before the heat. He declined that as well. He declined everything. It is a consistent record."
         }
       ],
@@ -2574,7 +2575,7 @@
           "chapter": 7,
           "floor": 4,
           "at": "3:7",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The Prize Carousel",
           "text": "Crawlers, welcome to the Prize Carousel! Our contestant's fan box lit up the wheel, and when the wheel lights up, folks, that means me! And a twist before we even start: your guide is in time-out. Seven days, Mordecai, nothing personal, put your feet up. Now, to the prizes! Carl looks them over and picks... a book. A book, folks! Let's hear it for a man who knows exactly what he wants!"
         },
@@ -2584,7 +2585,7 @@
           "chapter": 92,
           "floor": 11,
           "at": "8:92",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He cannot get through the script",
           "text": "Chaco had one job: read the script. He got partway in, looked up, and stopped. Stage fright, on my stage. So I removed his wings, which he was not using anyway, and brought Grigori up to finish the reading. I'm doing Grigori's talking myself; it saves time. A presenter is a mouth with a costume on it, crawler, and mouths can be replaced. Wings, apparently, cannot."
         }
@@ -2748,7 +2749,7 @@
           "chapter": 75,
           "floor": 6,
           "at": "5:75",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Mongo and Kiwi",
           "text": "Hunter Vrah has been removed from the Hunting Grounds by Mongo and Kiwi, in the all-out battle around the submerged castle. Two dinosaurs. It took two. Also logged from the same fight: Tsarina Signet's tattoos are now permanently alive, and an incomplete flesh golem of her mother has appeared, which Crawler Carl has put in his inventory. Do not ask me what he intends to do with it. I have stopped asking."
         }
@@ -3762,9 +3763,9 @@
           "chapter": 29,
           "floor": 5,
           "at": "4:29",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The one god down here who can die",
-          "text": "The file on him, since he is going to matter. Orthrus is a juvenile gate guardian, level 10, kid brother to the three-headed one who guards a stairwell exit above. He was on course to become a vicious, baby-eating, nun-defiling murder machine, and then in a single day his master was murdered and he was pulled into the Nothing. Most things the Nothing touches come out ruined. He came out unaffected, because he is too innocent for it to take hold, and fire does nothing to him at all. Here is the line that matters to a crawler: unlike other gods, he is not invulnerable. He is a puppy. Happy, destructive, rambunctious, roly-poly, very pokey. Fragile."
+          "text": "The file on him, since he is going to matter. Orthrus is a juvenile gate guardian, level 10, kid brother to the three-headed one who guards a stairwell exit a long way below this one. He was on course to become a vicious, baby-eating, nun-defiling murder machine, and then in a single day his master was murdered and he was pulled into the Nothing. Most things the Nothing touches come out ruined. He came out unaffected, because he is too innocent for it to take hold, and fire does nothing to him at all. Here is the line that matters to a crawler: unlike other gods, he is not invulnerable. He is a puppy. Happy, destructive, rambunctious, roly-poly, very pokey. Fragile."
         },
         {
           "kind": "arc",
@@ -4468,9 +4469,9 @@
           "chapter": 32,
           "floor": 5,
           "at": "4:32",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The terms of a family feud",
-          "text": "What a god's grudge looks like when it is applied to one crawler. No magical item blessed by Hellik may be owned or used, so a whole category of loot is now dead weight. Every shrine of his is marked on the minimap. Every one of his adherents carries a symbol over their head and pays double experience when put down. The dungeon has been arranging this for a very long time and Carl has been in it for about a month."
+          "text": "What a god's grudge looks like when it is applied to one crawler. No magical item blessed by Hellik may be owned or used, so a whole category of loot is now dead weight. Every shrine of his is marked on the minimap. Every one of his adherents carries a symbol over their head and pays double experience when put down. The dungeon has been arranging this for a very long time and Carl has been in it for about six weeks."
         },
         {
           "kind": "arc",
@@ -4478,7 +4479,7 @@
           "chapter": 18,
           "floor": 8,
           "at": "6:18",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "It stops being paperwork",
           "text": "NPCs who worship Hellik now go hostile toward Carl the moment they see him, no provocation and no conversation required. Inside Club Vanquisher the clerics stand in front of a stained glass door they will tell you shows Hellik bringing truth to Apito, whatever that is supposed to mean. It does not show Hellik at all. It shows the brother above him, and the clerics have had that door wrong for centuries."
         },
@@ -5282,7 +5283,7 @@
           "chapter": 23,
           "floor": 8,
           "at": "6:23",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The door behind the club",
           "text": "He comes in asking for a way into the Guild of Suffering, which is not a thing anyone asks a dancer, and he has the spiderweb on his elbow that says he is entitled to ask it. So I take him to a private cubicle, and out the back of the cubicle, to the entrance nobody advertises. On his way out I tell him to limp. Let the room think he paid for what he actually got."
         },
@@ -5572,7 +5573,7 @@
           "chapter": 63,
           "floor": 9,
           "at": "7:63",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A mercenary with a lance and a sock",
           "text": "I present myself at the Madness headquarters alongside Katia, Imani, Splash Zone and Bigs the slugalette, and I bring with me the lance, which I have carried without a mount since the club came down, and Mr. Jefferson, who is a tube sock of nickels and a better conversationalist than most of this company. And on this day I am given a swamp yak taken off King Rust. Gonk. I am mounted again."
         },
@@ -5602,9 +5603,9 @@
           "chapter": 65,
           "floor": 10,
           "at": "8:65",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Holding the halves together",
-          "text": "They get Corky out of the Dominators' garage and bring both halves of him to a fleshmancer, and my part in the work is to hold the two of them together with everything I have while it is done. I am not well. I hold him anyway. The fleshmancer steps back, and there is one Corcunda where there had been two, and he knows me."
+          "text": "They get Corky away from the Dominators and bring both halves of him to a fleshmancer, and my part in the work is to hold the two of them together with everything I have while it is done. I am not well. I hold him anyway. The fleshmancer steps back, and there is one Corcunda where there had been two, and he knows me."
         },
         {
           "kind": "fate",
@@ -5612,7 +5613,7 @@
           "chapter": 66,
           "floor": 10,
           "at": "8:66",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A charge, and a good death",
           "text": "Grull, god of war, came for Corcunda on the racetrack, and Corcunda took the smite to spare the rest of them. Dong Quixote put his partner's scarf about his own neck, mounted him, and drew the war lance out of inventory. Princess Donut cast Big-Ass Magnet on that lance and every loose screw in the factory came to it. The pair of them went into Grull at speed, and the lance landed. Grull, whom nothing on this floor can hold for long, called it a good death and granted them one. Seventy years old, level 51, mercenary, formerly of the Penis Parade. Vale to you all, he said. Vale."
         }
@@ -7544,17 +7545,19 @@
           "chapter": 20,
           "floor": 3,
           "at": "2:20",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He closes with Manasa singing",
           "text": "We are out of time and I am not doing a comedy sting tonight. Roll the tape of Manasa singing. All of it. Hold on her through the credits and do not cut away for the sponsor. Goodnight, folks."
         },
         {
           "kind": "arc",
-          "book": 5,
-          "at": "5",
+          "book": 6,
+          "at": "6:36",
           "confidence": "draft",
           "headline": "One of the names on the adjutant list",
-          "text": "There is a list going round with my name on it. Crawlers choosing an adjutant for the coming floor, and somebody has put the host of a panel show on the shortlist, which means either that they have excellent taste or that they are not taking this remotely seriously. Either way, folks. I am flattered."
+          "text": "There is a list going round with my name on it. Crawlers choosing an adjutant for the coming floor, and somebody has put the host of a panel show on the shortlist, which means either that they have excellent taste or that they are not taking this remotely seriously. Either way, folks. I am flattered.",
+          "chapter": 36,
+          "floor": 8
         }
       ],
       "relations": [
