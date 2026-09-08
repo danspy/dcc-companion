@@ -12,13 +12,14 @@
     "preview": "astro preview",
     "astro": "astro",
     "content:build": "node scripts/build-content.mjs",
-    "content:check": "node scripts/build-content.mjs --check && node scripts/check-pages.mjs",
-    "test:gate": "node --test scripts/test-gate.mjs",
+    "content:check": "node scripts/build-content.mjs --check && node scripts/check-pages.mjs && node scripts/check-stage.mjs",
+    "test:gate": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test scripts/test-gate.mjs",
     "chapters:refresh": "node scripts/fetch-chapters.mjs",
     "content:coverage": "node scripts/coverage-report.mjs",
     "check": "astro check",
     "colors:refresh": "node scripts/fetch-book-colors.mjs",
-    "content:anchors": "node scripts/check-anchors.mjs"
+    "content:anchors": "node scripts/check-anchors.mjs",
+    "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "@astrojs/db": "^0.20.0",

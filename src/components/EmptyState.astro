@@ -1,0 +1,10 @@
+---
+/* "There is nothing here yet, and here is what to do about it." Shown in the
+   detail panel and in downstream's chain, so it reads the same in both. */
+interface Props { title: string; id?: string; hidden?: boolean }
+const { title, id, hidden } = Astro.props;
+---
+<div class="emptystate" id={id} hidden={hidden}>
+  <p class="eyebrow">{title}</p>
+  <slot />
+</div>

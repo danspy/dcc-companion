@@ -3208,6 +3208,717 @@
       "descriptions": []
     },
     {
+      "id": "kevin",
+      "kind": "character",
+      "name": "Kevin",
+      "aka": [],
+      "role": "Host · Dungeon Crawler World",
+      "taglines": [
+        {
+          "at": "1:14",
+          "sortKey": 1014,
+          "text": "Orange, four-eyed, lizardish, and paid to be breathless about all of it."
+        }
+      ],
+      "revealedAt": "1:14",
+      "sort": 63,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "mistress-tiatha",
+      "kind": "character",
+      "name": "Mistress Tiatha",
+      "aka": [],
+      "role": "Manager",
+      "taglines": [
+        {
+          "at": "1:22",
+          "sortKey": 1022,
+          "text": "A manager who treats the assignment as a holiday, and is not troubled that her crawlers can tell."
+        }
+      ],
+      "revealedAt": "1:22",
+      "sort": 64,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "bianca",
+      "kind": "character",
+      "name": "Bianca",
+      "aka": [
+        "Bianca Del Ciao"
+      ],
+      "role": "Familiar",
+      "taglines": [
+        {
+          "at": "2:14",
+          "sortKey": 2014,
+          "text": "A Boer goat, introduced to an audience of billions on the same recap as her crawler."
+        }
+      ],
+      "revealedAt": "2:14",
+      "sort": 65,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "clarabelle",
+      "kind": "character",
+      "name": "Clarabelle",
+      "aka": [],
+      "role": "Bouncer · the Desperado Club",
+      "taglines": [
+        {
+          "at": "2:15",
+          "sortKey": 2015,
+          "text": "Crocodilian, level forty, and on the door. Not the sharpest of her race, and entirely sufficient for the job."
+        }
+      ],
+      "revealedAt": "2:15",
+      "sort": 66,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "prince-stalwart",
+      "kind": "character",
+      "name": "Prince Stalwart",
+      "aka": [
+        "Stalwart"
+      ],
+      "role": "Crown prince · the Skull Empire",
+      "taglines": [
+        {
+          "at": "2:19",
+          "sortKey": 2019,
+          "text": "Crown prince of an empire that answers two sentences of provocation with artillery, and brother to the Maestro."
+        }
+      ],
+      "revealedAt": "2:19",
+      "sort": 67,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "clay-ton",
+      "kind": "character",
+      "name": "Clay-ton",
+      "aka": [],
+      "role": "Bodyguard · the Desperado Club",
+      "taglines": [
+        {
+          "at": "3:8",
+          "sortKey": 3008,
+          "text": "Seven feet of granite in a tuxedo, and the tuxedo fits."
+        }
+      ],
+      "revealedAt": "3:8",
+      "sort": 68,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "fire-brandy",
+      "kind": "character",
+      "name": "Fire Brandy",
+      "aka": [
+        "Firebrandy"
+      ],
+      "role": "NPC · the Iron Tangle",
+      "taglines": [
+        {
+          "at": "3:14",
+          "sortKey": 3014,
+          "text": "Fire(wo)man of the Nightmare Express. A single mother has to eat, and there are ovens down here that need stoking."
+        }
+      ],
+      "revealedAt": "3:14",
+      "sort": 69,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "madison",
+      "kind": "character",
+      "name": "Madison",
+      "aka": [],
+      "role": "Human Resources · the Iron Tangle",
+      "taglines": [
+        {
+          "at": "3:17",
+          "sortKey": 3017,
+          "text": "Human Resources for a railway that eats its employees. Her real name was probably something else."
+        }
+      ],
+      "revealedAt": "3:17",
+      "sort": 70,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "tizquick",
+      "kind": "character",
+      "name": "Tizquick",
+      "aka": [],
+      "role": "Conductor · the Mango Line",
+      "taglines": [
+        {
+          "at": "3:21",
+          "sortKey": 3021,
+          "text": "A dwarf conductor issued with a daughter who never existed, and grieving her properly."
+        }
+      ],
+      "revealedAt": "3:21",
+      "sort": 71,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "loita",
+      "kind": "character",
+      "name": "Loita",
+      "aka": [],
+      "role": "Communications · the Borant Corporation",
+      "taglines": [
+        {
+          "at": "3:25",
+          "sortKey": 3025,
+          "text": "Kua-Tin, party member, and she gets her pick of crawlers. Hekla’s people were her main account."
+        }
+      ],
+      "revealedAt": "3:25",
+      "sort": 72,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "milk",
+      "kind": "character",
+      "name": "Milk",
+      "aka": [],
+      "role": "Former crawler · sixth edition",
+      "taglines": [
+        {
+          "at": "3:27",
+          "sortKey": 3027,
+          "text": "A clawed migratory people, an island, a family, and a set of entries in a book that are mostly furious."
+        }
+      ],
+      "revealedAt": "3:27",
+      "sort": 73,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "tserendolgor",
+      "kind": "character",
+      "name": "Tserendolgor",
+      "aka": [
+        "Ren"
+      ],
+      "role": "Crawler · Crisper Class",
+      "taglines": [
+        {
+          "at": "3:31",
+          "sortKey": 3031,
+          "text": "From a village in Mongolia, harassed without pause about a dog-themed race she did not ask to be given, and fighting alongside the people doing the harassing anyway."
+        }
+      ],
+      "revealedAt": "3:31",
+      "sort": 74,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "ruby",
+      "kind": "character",
+      "name": "Ruby",
+      "aka": [],
+      "role": "Changeling child · Hump Town",
+      "taglines": [
+        {
+          "at": "4:1",
+          "sortKey": 4001,
+          "text": "An orphan with compression sickness, no arms in her default shape, and a Walkman she will not be parted from."
+        }
+      ],
+      "revealedAt": "4:1",
+      "sort": 75,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "skarn",
+      "kind": "character",
+      "name": "Skarn",
+      "aka": [],
+      "role": "Changeling child · Hump Town",
+      "taglines": [
+        {
+          "at": "4:2",
+          "sortKey": 4002,
+          "text": "About eight years old, orphaned by a bombing, and in charge of the telescope."
+        }
+      ],
+      "revealedAt": "4:2",
+      "sort": 76,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "langley",
+      "kind": "character",
+      "name": "Langley",
+      "aka": [],
+      "role": "Crawler · Archer Class",
+      "taglines": [
+        {
+          "at": "4:3",
+          "sortKey": 4003,
+          "text": "Six car salesmen from Finland who all took the same class, and he is the one who talks."
+        }
+      ],
+      "revealedAt": "4:3",
+      "sort": 77,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "bobby",
+      "kind": "character",
+      "name": "Bobby",
+      "aka": [
+        "Bobby D.J."
+      ],
+      "role": "Crawler · Spy Class",
+      "taglines": [
+        {
+          "at": "4:6",
+          "sortKey": 4006,
+          "text": "Took the Human race and a rogue’s class, and holds a quadrant of a bubble nobody else wanted."
+        }
+      ],
+      "revealedAt": "4:6",
+      "sort": 78,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "bonnie",
+      "kind": "character",
+      "name": "Bonnie",
+      "aka": [],
+      "role": "Dirigible Gnome · fifth floor",
+      "taglines": [
+        {
+          "at": "4:16",
+          "sortKey": 4016,
+          "text": "A juvenile gnome whose father commanded a flying castle, and who is holding the door open for the people who arrived too late to save him."
+        }
+      ],
+      "revealedAt": "4:16",
+      "sort": 79,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "drakea",
+      "kind": "character",
+      "name": "Drakea",
+      "aka": [],
+      "role": "Former crawler · twenty-second edition",
+      "taglines": [
+        {
+          "at": "4:28",
+          "sortKey": 4028,
+          "text": "Born a Bune, kept the race, and wrote an edition of the cookbook in a season the Nagas produced two hundred and fifty cycles ago."
+        }
+      ],
+      "revealedAt": "4:28",
+      "sort": 80,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "geyrun",
+      "kind": "character",
+      "name": "Geyrun",
+      "aka": [],
+      "role": "The first owner of Orthrus",
+      "taglines": [
+        {
+          "at": "4:29",
+          "sortKey": 4029,
+          "text": "A god’s favourite child, and the hound’s first owner, murdered long before any of this by a hand nobody has named."
+        }
+      ],
+      "revealedAt": "4:29",
+      "sort": 81,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "porthus",
+      "kind": "character",
+      "name": "Porthus",
+      "aka": [
+        "Dr. Porthus Hu"
+      ],
+      "role": "Former crawler · second edition",
+      "taglines": [
+        {
+          "at": "4:end",
+          "sortKey": 4999,
+          "text": "High Elf, rogue, second hand on the cookbook, and now the chief executive of an organisation that campaigns against the thing that made him."
+        }
+      ],
+      "revealedAt": "4:end",
+      "sort": 82,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "jamal",
+      "kind": "character",
+      "name": "Jamal",
+      "aka": [],
+      "role": "Hammerhead · made flesh",
+      "taglines": [
+        {
+          "at": "5:14",
+          "sortKey": 5014,
+          "text": "A hammerhead shark that breathes air, and spent his first years as ink on somebody’s shoulder."
+        }
+      ],
+      "revealedAt": "5:14",
+      "sort": 83,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "drick",
+      "kind": "character",
+      "name": "Drick",
+      "aka": [],
+      "role": "Former crawler · the Dream",
+      "taglines": [
+        {
+          "at": "5:33",
+          "sortKey": 5033,
+          "text": "Old, scarred, still heavily muscled, and no longer entirely the one driving."
+        }
+      ],
+      "revealedAt": "5:33",
+      "sort": 84,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "anton",
+      "kind": "character",
+      "name": "Anton",
+      "aka": [
+        "Anton Lopez"
+      ],
+      "role": "Crawler · Fugitive Class",
+      "taglines": [
+        {
+          "at": "6:5",
+          "sortKey": 6005,
+          "text": "Bald, muscular, crossbow, black cape, and prison tattoos that predate the dungeon."
+        }
+      ],
+      "revealedAt": "6:5",
+      "sort": 85,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "gluteus-maxx",
+      "kind": "character",
+      "name": "Gluteus Maxx",
+      "aka": [],
+      "role": "Dancer · mercenary",
+      "taglines": [
+        {
+          "at": "6:6",
+          "sortKey": 6006,
+          "text": "A dancer from the club’s ground floor, hired as muscle, and better at it than the hiring implied."
+        }
+      ],
+      "revealedAt": "6:6",
+      "sort": 86,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "geraldo",
+      "kind": "character",
+      "name": "Geraldo",
+      "aka": [],
+      "role": "Monk Seal Picket Sentry",
+      "taglines": [
+        {
+          "at": "6:7",
+          "sortKey": 6007,
+          "text": "An aquatic melee tank who was not wearing the headband before he was captured, and has not taken it off since."
+        }
+      ],
+      "revealedAt": "6:7",
+      "sort": 87,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "harbinger",
+      "kind": "character",
+      "name": "Harbinger",
+      "aka": [],
+      "role": "Liaison",
+      "taglines": [
+        {
+          "at": "6:12",
+          "sortKey": 6012,
+          "text": "A liaison who disagrees with his own side’s philosophy and is working, openly enough, to take two crawlers off the board."
+        }
+      ],
+      "revealedAt": "6:12",
+      "sort": 88,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "huanxin-jinx",
+      "kind": "character",
+      "name": "Huanxin Jinx",
+      "aka": [],
+      "role": "Sponsor · Grixist",
+      "taglines": [
+        {
+          "at": "6",
+          "sortKey": 6000,
+          "text": "A name out of an old debt, and a price somebody declined to pay."
+        },
+        {
+          "at": "6:17",
+          "sortKey": 6017,
+          "text": "Rich, clever, chief executive of a habitat company, and playing the Ascension game since she was a child."
+        }
+      ],
+      "revealedAt": "6",
+      "sort": 89,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "uzi-jesus",
+      "kind": "character",
+      "name": "Uzi Jesus",
+      "aka": [
+        "HeyZoos"
+      ],
+      "role": "Totem card",
+      "taglines": [
+        {
+          "at": "6:22",
+          "sortKey": 6022,
+          "text": "“I am the way, motherfucker.” Level one hundred and forty, undead, origin Ecuador, seventy-five seconds at a time."
+        }
+      ],
+      "revealedAt": "6:22",
+      "sort": 90,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "doctor-bones",
+      "kind": "character",
+      "name": "Doctor Bones",
+      "aka": [
+        "Dr. Bones"
+      ],
+      "role": "Announcer · mercenary",
+      "taglines": [
+        {
+          "at": "6:23",
+          "sortKey": 6023,
+          "text": "A level ninety Skin Skellie who took the announcer’s booth rather than the stage, and does both jobs better than the club deserves."
+        }
+      ],
+      "revealedAt": "6:23",
+      "sort": 91,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "bodi",
+      "kind": "character",
+      "name": "Bodi",
+      "aka": [],
+      "role": "Former crawler · Land War",
+      "taglines": [
+        {
+          "at": "7:15",
+          "sortKey": 7015,
+          "text": "Famous outside the dungeon, which counts for nothing down here, and a battalion commander because of what he did in a season called Land War."
+        }
+      ],
+      "revealedAt": "7:15",
+      "sort": 92,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "rend",
+      "kind": "character",
+      "name": "Rend",
+      "aka": [
+        "Garret"
+      ],
+      "role": "Pet · Tummy Acher",
+      "taglines": [
+        {
+          "at": "7:15",
+          "sortKey": 7015,
+          "text": "A Tummy Acher handed over as a door prize for turning up to a convention, and now levelling in a war."
+        }
+      ],
+      "revealedAt": "7:15",
+      "sort": 93,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "epitome-tagg",
+      "kind": "character",
+      "name": "Epitome Tagg",
+      "aka": [
+        "Tagg"
+      ],
+      "role": "Leader of the Dream",
+      "taglines": [
+        {
+          "at": "7:80",
+          "sortKey": 7080,
+          "text": "Son of Epitome Noflex, leader of the Dream, and dressed like any other elf in the room."
+        }
+      ],
+      "revealedAt": "7:80",
+      "sort": 94,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "radoslav",
+      "kind": "character",
+      "name": "Radoslav",
+      "aka": [],
+      "role": "Racer · Team Free Love",
+      "taglines": [
+        {
+          "at": "8:4",
+          "sortKey": 8004,
+          "text": "A level seventy-five Bugbear who does a little of everything, racing a vehicle he is fond of for a team that named itself."
+        }
+      ],
+      "revealedAt": "8:4",
+      "sort": 95,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "lucienne",
+      "kind": "character",
+      "name": "Lucienne",
+      "aka": [],
+      "role": "Team Sparkles",
+      "taglines": [
+        {
+          "at": "8:5",
+          "sortKey": 8005,
+          "text": "A Mandagot Fink, level eighty-one, one of two, and rude in a way that reads as policy rather than temper."
+        }
+      ],
+      "revealedAt": "8:5",
+      "sort": 96,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "genesis",
+      "kind": "character",
+      "name": "Genesis",
+      "aka": [],
+      "role": "Driver · the Lady Dominators",
+      "taglines": [
+        {
+          "at": "8:13",
+          "sortKey": 8013,
+          "text": "Black hair, a Kentucky accent by Carl’s reckoning, and the half of the pair that does the talking."
+        }
+      ],
+      "revealedAt": "8:13",
+      "sort": 97,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "rapture",
+      "kind": "character",
+      "name": "Rapture",
+      "aka": [],
+      "role": "Driver · the Lady Dominators",
+      "taglines": [
+        {
+          "at": "8:13",
+          "sortKey": 8013,
+          "text": "Freckled, red-haired, chewing tobacco, and content to let her partner do the talking."
+        }
+      ],
+      "revealedAt": "8:13",
+      "sort": 98,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "linus",
+      "kind": "character",
+      "name": "Linus",
+      "aka": [],
+      "role": "Tourist",
+      "taglines": [
+        {
+          "at": "8:15",
+          "sortKey": 8015,
+          "text": "A tourist who has attached himself to a crawler he says he admires, and the System files him as exactly that."
+        }
+      ],
+      "revealedAt": "8:15",
+      "sort": 99,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
+      "id": "jacobus",
+      "kind": "character",
+      "name": "Jacobus",
+      "aka": [],
+      "role": "Reverse Tooth Fairy",
+      "taglines": [
+        {
+          "at": "8:36",
+          "sortKey": 8036,
+          "text": "A totem card left switched on by accident, and now somebody’s pet."
+        }
+      ],
+      "revealedAt": "8:36",
+      "sort": 100,
+      "voice": "system",
+      "descriptions": []
+    },
+    {
       "id": "gate-of-the-feral-gods",
       "kind": "item",
       "name": "The Gate of the Feral Gods",
@@ -3589,6 +4300,139 @@
           "source": "6:40",
           "sortKey": 6040,
           "text": "When you meet a crawler who owns this same item, their name will permanently appear in this enchanted book. You may use the book to exchange messages. You may write your message under their name, and only they will receive it. If you write under your own name, everyone who has your entry will see the message. You may write your message manually or using the messaging interface while turned to the page. One must open the book to read the message, but you will have the option to copy the words. Message will erase on demand, allowing one to write a new note. This book is not retroactively filled with the entries of people you have already met. You must be within close-ish vicinity of them for their name to be added. Works only with crawlers who also own this book."
+        }
+      ]
+    },
+    {
+      "id": "fan-box",
+      "kind": "item",
+      "name": "Fan Box",
+      "aka": [],
+      "role": "Loot box",
+      "taglines": [
+        {
+          "at": "3:7",
+          "sortKey": 3007,
+          "text": "The audience chooses what is inside, and the audience is made to wait thirty hours before you may open it."
+        }
+      ],
+      "revealedAt": "3:7",
+      "sort": 43,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "benefactor-box",
+      "kind": "item",
+      "name": "Benefactor Box",
+      "aka": [
+        "Sponsor Box"
+      ],
+      "role": "Loot box",
+      "taglines": [
+        {
+          "at": "1:5",
+          "sortKey": 1005,
+          "text": "A box bought for you by somebody who wants you to keep going, and rank for rank it beats anything the dungeon hands out on merit."
+        }
+      ],
+      "revealedAt": "1:5",
+      "sort": 44,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "royal-chariot",
+      "kind": "item",
+      "name": "The Royal Chariot",
+      "aka": [
+        "Royal Chariot"
+      ],
+      "role": "Contraption",
+      "taglines": [
+        {
+          "at": "4:4",
+          "sortKey": 4004,
+          "text": "A tracked all-terrain suicide machine, built by hand, and the System’s own write-up of it is mostly abuse."
+        }
+      ],
+      "revealedAt": "4:4",
+      "sort": 45,
+      "voice": "narrator",
+      "descriptions": [
+        {
+          "at": "4:4",
+          "source": "4:4",
+          "sortKey": 4004,
+          "text": "Tracked All-Terrain Suicide Machine. The Royal Chariot – Contraption. If a snowmobile got drunk on moonshine and had a sweaty, ill-advised night with a hillbilly’s coon-hunting ATV, this oversized birth defect of a vehicle would be the result."
+        }
+      ]
+    },
+    {
+      "id": "cleaner-bot",
+      "kind": "item",
+      "name": "Cleaner Bot",
+      "aka": [],
+      "role": "Personal space upgrade",
+      "taglines": [
+        {
+          "at": "3:30",
+          "sortKey": 3030,
+          "text": "Twenty-five thousand gold buys a machine to tidy the personal space. Nobody who has looked at one properly is buying it for the tidying."
+        }
+      ],
+      "revealedAt": "3:30",
+      "sort": 46,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "party-planner",
+      "kind": "item",
+      "name": "Party Planner",
+      "aka": [],
+      "role": "Airship",
+      "taglines": [
+        {
+          "at": "7:6",
+          "sortKey": 7006,
+          "text": "A stealth bomber carrying a name from a party-supply catalogue, handed over as the prize for having been marked for death."
+        }
+      ],
+      "revealedAt": "7:6",
+      "sort": 47,
+      "voice": "narrator",
+      "descriptions": [
+        {
+          "at": "7:6",
+          "source": "7:6",
+          "sortKey": 7006,
+          "text": "Casket in the Sky. Party Planner. Tilt Rotor Stealth Light Bomber. Vehicle. This vehicle is classed as tier three Armor."
+        }
+      ]
+    },
+    {
+      "id": "goblin-copper-chopper",
+      "kind": "item",
+      "name": "Goblin Copper Chopper",
+      "aka": [],
+      "role": "Contraption",
+      "taglines": [
+        {
+          "at": "1:16",
+          "sortKey": 1016,
+          "text": "A goblin motorcycle running on steam, with a sidecar built to hold a princess."
+        }
+      ],
+      "revealedAt": "1:16",
+      "sort": 48,
+      "voice": "narrator",
+      "descriptions": [
+        {
+          "at": "1:16",
+          "source": "1:16",
+          "sortKey": 1016,
+          "text": "Goblin Copper Chopper with attached sidecar. Human-sized. Contraption. Take a junkyard bicycle, add an unreliable steam engine, remove all the bolts holding it together."
         }
       ]
     },
@@ -4128,6 +4972,240 @@
       "descriptions": []
     },
     {
+      "id": "stairwell",
+      "kind": "mechanic",
+      "name": "Stairwell",
+      "aka": [],
+      "role": "Dungeon fixture",
+      "taglines": [
+        {
+          "at": "1:2",
+          "sortKey": 1002,
+          "text": "Warmth and light coming up out of a hole in the floor, which is how the dungeon says the level above has finished with you."
+        }
+      ],
+      "revealedAt": "1:2",
+      "sort": 51,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "magic-missile",
+      "kind": "mechanic",
+      "name": "Magic Missile",
+      "aka": [],
+      "role": "Spell",
+      "taglines": [
+        {
+          "at": "1:7",
+          "sortKey": 1007,
+          "text": "The plainest attack spell in the catalogue, taught to a show cat by a show cat, minutes after anyone thought to open her menus."
+        }
+      ],
+      "revealedAt": "1:7",
+      "sort": 52,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "safe-room",
+      "kind": "mechanic",
+      "name": "Safe Room",
+      "aka": [],
+      "role": "Dungeon fixture",
+      "taglines": [
+        {
+          "at": "1:5",
+          "sortKey": 1005,
+          "text": "Green on the minimap, always, even where the map is dark. Restrooms, somewhere to sleep, three screens, and a cook who would rather you moved along."
+        }
+      ],
+      "revealedAt": "1:5",
+      "sort": 53,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "bopca",
+      "kind": "mechanic",
+      "name": "Bopca",
+      "aka": [],
+      "role": "Dungeon race",
+      "taglines": [
+        {
+          "at": "1:9",
+          "sortKey": 1009,
+          "text": "Short, shaggy, green-tinted and faintly of wet moss. Excellent cooks, and famously reluctant to part with anything they have not been ordered to part with."
+        }
+      ],
+      "revealedAt": "1:9",
+      "sort": 54,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "brindle-grub",
+      "kind": "mechanic",
+      "name": "Brindle Grub",
+      "aka": [],
+      "role": "Janitor mob",
+      "taglines": [
+        {
+          "at": "1:30",
+          "sortKey": 1030,
+          "text": "The cleaning crew of the second floor. Corpses make them, and there is no arrangement under which there are fewer of them."
+        }
+      ],
+      "revealedAt": "1:30",
+      "sort": 55,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "clockwork-triplicate",
+      "kind": "mechanic",
+      "name": "Clockwork Triplicate",
+      "aka": [],
+      "role": "Spell",
+      "taglines": [
+        {
+          "at": "2:5",
+          "sortKey": 2005,
+          "text": "Two working copies of a pet, moving on their own, and the dungeon’s own labels decline to say which of the three is real."
+        }
+      ],
+      "revealedAt": "2:5",
+      "sort": 56,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "jikininki",
+      "kind": "mechanic",
+      "name": "Jikininki",
+      "aka": [],
+      "role": "Ghoul mob",
+      "taglines": [
+        {
+          "at": "3:1",
+          "sortKey": 3001,
+          "text": "The best-behaved ghouls in the rail system, in a field with very little competition."
+        }
+      ],
+      "revealedAt": "3:1",
+      "sort": 57,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "kravyad",
+      "kind": "mechanic",
+      "name": "Kravyad",
+      "aka": [],
+      "role": "Rail management",
+      "taglines": [
+        {
+          "at": "3:18",
+          "sortKey": 3018,
+          "text": "Employee management for the tangle, waiting at the station where the staff get off, and nobody can agree whether they are a boss or a fixture."
+        }
+      ],
+      "revealedAt": "3:18",
+      "sort": 58,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "skyfowl",
+      "kind": "mechanic",
+      "name": "Skyfowl",
+      "aka": [],
+      "role": "Dungeon race",
+      "taglines": [
+        {
+          "at": "4:1",
+          "sortKey": 4001,
+          "text": "One of six species the Syndicate scatters over candidate worlds, and a people who mostly decline the offer to stop being one."
+        }
+      ],
+      "revealedAt": "4:1",
+      "sort": 59,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "tummy-acher",
+      "kind": "mechanic",
+      "name": "Tummy Acher",
+      "aka": [],
+      "role": "Pet-class mob",
+      "taglines": [
+        {
+          "at": "7:5",
+          "sortKey": 7005,
+          "text": "A pet class built to stand in front of things and be hit by them, and to be delighted about it."
+        }
+      ],
+      "revealedAt": "7:5",
+      "sort": 60,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "ping",
+      "kind": "mechanic",
+      "name": "Ping",
+      "aka": [],
+      "role": "Spell",
+      "taglines": [
+        {
+          "at": "7:79",
+          "sortKey": 7079,
+          "text": "A hunting call for people who do not mind whether the thing being hunted hears it coming."
+        }
+      ],
+      "revealedAt": "7:79",
+      "sort": 61,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "sluggalos",
+      "kind": "mechanic",
+      "name": "Sluggalos",
+      "aka": [],
+      "role": "Mob",
+      "taglines": [
+        {
+          "at": "6:65",
+          "sortKey": 6065,
+          "text": "Slugs born out of the boils of a disease, painted like a touring band, and enormously pleased to have been asked along."
+        }
+      ],
+      "revealedAt": "6:65",
+      "sort": 62,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "mantaur",
+      "kind": "mechanic",
+      "name": "Mantaur",
+      "aka": [],
+      "role": "’Taur mob",
+      "taglines": [
+        {
+          "at": "8:13",
+          "sortKey": 8013,
+          "text": "Half human, and, where the horse ought to be, also half human. The System calls it the strangest of the ’taurs and offers no defence of the design."
+        }
+      ],
+      "revealedAt": "8:13",
+      "sort": 63,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
       "id": "borant-corporation",
       "kind": "faction",
       "name": "The Borant Corporation",
@@ -4584,6 +5662,72 @@
       "descriptions": []
     },
     {
+      "id": "dark-hive",
+      "kind": "faction",
+      "name": "The Dark Hive",
+      "aka": [
+        "Dark Hive"
+      ],
+      "role": "Hunting party",
+      "taglines": [
+        {
+          "at": "5:10",
+          "sortKey": 5010,
+          "text": "A mantis hunting party carrying a standing legal argument: what happens on the hunting floor is not covered by the rules that hold anywhere else."
+        }
+      ],
+      "revealedAt": "5:10",
+      "sort": 50,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "valtay-corporation",
+      "kind": "faction",
+      "name": "The Valtay Corporation",
+      "aka": [
+        "Valtay Corporation",
+        "Valtay"
+      ],
+      "role": "Corporate system government",
+      "taglines": [
+        {
+          "at": "2:19",
+          "sortKey": 2019,
+          "text": "A power outside Borant that answers an insult by taking a prince’s yacht apart with his family aboard, and does not explain itself afterwards."
+        },
+        {
+          "at": "4:8",
+          "sortKey": 4008,
+          "text": "A business that is also a nation, run by a parasite that pilots other people’s bodies, and it holds the paper on Borant’s debt."
+        }
+      ],
+      "revealedAt": "2:19",
+      "sort": 51,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "guild-of-suffering",
+      "kind": "faction",
+      "name": "The Guild of Suffering",
+      "aka": [
+        "Guild of Suffering"
+      ],
+      "role": "Cult",
+      "taglines": [
+        {
+          "at": "6:19",
+          "sortKey": 6019,
+          "text": "A cult you join by accident, the moment you accept a gift from something that would prefer to be worshipped."
+        }
+      ],
+      "revealedAt": "6:19",
+      "sort": 52,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
       "id": "larracos",
       "kind": "place",
       "name": "Larracos",
@@ -4751,6 +5895,65 @@
       ],
       "revealedAt": "2:25",
       "sort": 50,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "trainyard",
+      "kind": "place",
+      "name": "Trainyard",
+      "aka": [],
+      "role": "Station · fourth floor",
+      "taglines": [
+        {
+          "at": "3:15",
+          "sortKey": 3015,
+          "text": "Station ten on the tangle, reachable only by taking the switch that everything sensible avoids."
+        }
+      ],
+      "revealedAt": "3:15",
+      "sort": 51,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "wasteland",
+      "kind": "place",
+      "name": "The Wasteland",
+      "aka": [
+        "Wasteland",
+        "Wasteland Fortress"
+      ],
+      "role": "Fortress · fifth floor",
+      "taglines": [
+        {
+          "at": "4:2",
+          "sortKey": 4002,
+          "text": "A gnomish dreadnought that is also a castle and also somebody’s home, floating over the air quadrant with the way down sitting inside it."
+        }
+      ],
+      "revealedAt": "4:2",
+      "sort": 52,
+      "voice": "narrator",
+      "descriptions": []
+    },
+    {
+      "id": "penis-parade",
+      "kind": "place",
+      "name": "The Penis Parade",
+      "aka": [
+        "Penis Parade"
+      ],
+      "role": "Club · the Desperado Club",
+      "taglines": [
+        {
+          "at": "6:23",
+          "sortKey": 6023,
+          "text": "The ground-floor strip club of the Desperado Club, and by some distance the least exclusive of the three."
+        }
+      ],
+      "revealedAt": "6:23",
+      "sort": 53,
       "voice": "narrator",
       "descriptions": []
     },
@@ -5051,6 +6254,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "stairwell",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 2,
+      "floor": 1,
+      "at": "1:2",
+      "sortKey": 1002,
+      "headline": "The way down is lit from below",
+      "text": "Every floor is joined to the next by one, and each floor sets its own terms for who may use it and when. They are generally well lit, and the warmth comes up rather than down, so a crawler standing at the top is being invited by something that has already decided what happens next.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "mordecai",
       "kind": "origin",
       "book": 1,
@@ -5233,6 +6449,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "magic-missile",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 7,
+      "floor": 1,
+      "at": "1:7",
+      "sortKey": 1007,
+      "headline": "Bolts from the eyes of a Persian",
+      "text": "Bolts of energy leave the caster’s eyes one after another, and the resemblance to a film about spaceships is close enough that nobody bothers to pretend otherwise. Princess Donut works it out for herself once Mordecai has switched her menus on, and from that point the question is never whether she will fire, only at what.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "princess-donut",
       "kind": "arc",
       "book": 1,
@@ -5272,6 +6501,32 @@
       "voice": "narrator"
     },
     {
+      "entityId": "bopca",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 9,
+      "floor": 1,
+      "at": "1:9",
+      "sortKey": 1009,
+      "headline": "The protector behind the counter",
+      "text": "A stout dwarfish people, shaggy in both sexes, who mostly appear in the dungeon as non-combatant staff. They cook, they hand over what the room owes a crawler, and they are miserly about every part of it that is left to their discretion. The first one on the stairs runs a safe room and is called Tally.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "safe-room",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 9,
+      "floor": 1,
+      "at": "1:9",
+      "sortKey": 1009,
+      "headline": "Green on a map that is otherwise unlit",
+      "text": "They sit throughout the dungeon and they show green on the minimap even through fog, which makes them the only honest thing on it. Inside there are restrooms, somewhere to lie down, and three televisions showing the crawl to the people doing the crawl. Most are staffed. The staff are not there for the crawlers’ benefit.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "frank-and-maggie",
       "kind": "origin",
       "book": 1,
@@ -5298,6 +6553,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "kevin",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 14,
+      "floor": 1,
+      "at": "1:14",
+      "sortKey": 1014,
+      "headline": "The face of the broadcast",
+      "text": "Subject hosts. He is orange-hued and four-eyed and built along lizard lines, and he delivers the rundown of each floor at a pace that does not permit anyone watching to think about what is being described. He also takes the live commentary on special events. I have worked with him for a long time and I have never heard him ask a question he did not already have the answer card for.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
       "entityId": "lucia-mar",
       "kind": "origin",
       "book": 1,
@@ -5309,6 +6577,19 @@
       "text": "I'm on the show. The first episode of Dungeon Crawler World: Earth, and I'm in it, so everybody with a screen has seen me now, including a man with no shoes and his cat. I watched the whole thing. I didn't say anything while it was on. I liked it more than I thought I would.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "goblin-copper-chopper",
+      "kind": "use",
+      "book": 1,
+      "chapter": 16,
+      "floor": 1,
+      "at": "1:16",
+      "sortKey": 1016,
+      "headline": "Steam, two wheels and a seat for royalty",
+      "text": "Goblin-made, steam-driven, and assembled with an optimism the materials do not support. The sidecar is the part that matters: it is exactly the size of a cat who has recently decided she is a queen, and it settles the question of how the party is going to travel.",
+      "confidence": "verified",
+      "voice": "narrator"
     },
     {
       "entityId": "desperado-club",
@@ -5361,6 +6642,19 @@
       "text": "Carl and Donut find them on the first floor. Tales are exchanged, plans are formed, and the Royal Court agrees to keep helping them.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "mistress-tiatha",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 22,
+      "floor": 1,
+      "at": "1:22",
+      "sortKey": 1022,
+      "headline": "The manager who is on holiday",
+      "text": "Subject holds a manager’s contract for one of the teams and treats the posting as time off. She drinks. She smokes blitz sticks. She has, on one occasion, charmed a boss, which is more than most managers achieve and rather less than her team needs from her on any given afternoon. Her crawlers know exactly what they have been given.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "imani",
@@ -5491,6 +6785,19 @@
       "text": "About the boxes. Sometimes what's inside is random. Sometimes I choose it, by hand, because a crawler needs helping or hurting and the numbers want a show. You will never know which, and that is the point. I also hand out insults on purpose. Carl has a Bronze Asshole's Box and a Gold Asshole's Box, both earned on this floor for killing non-combatants. I named them. I'm proud of them. He is not.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "brindle-grub",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 30,
+      "floor": 2,
+      "at": "1:30",
+      "sortKey": 1030,
+      "headline": "Every body on the floor makes more of them",
+      "text": "Each corpse produced on this floor spawns between one and fifteen, and they keep coming until five thousand of them hold a quadrant. Destroying the bodies stops the grubs growing stronger; it does not stop them arriving. The floor is therefore a choice between leaving your dead where they fall and feeding the thing that eats them.",
+      "confidence": "draft",
+      "voice": "narrator"
     },
     {
       "entityId": "elle-mcgibbons",
@@ -5857,6 +7164,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "clockwork-triplicate",
+      "kind": "origin",
+      "book": 2,
+      "chapter": 5,
+      "floor": 3,
+      "at": "2:5",
+      "sortKey": 2005,
+      "headline": "Three of something there was one of",
+      "text": "Cast on a pet or a minion, the target appears to split into three. The duplicates look right and act independently, and the System does not mark which one it started with. It arrives in a box on the Over City, in the same delivery as a cat tree and a scented candle, which is roughly the level of seriousness the dungeon brings to its gifts.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "grimaldi",
       "kind": "origin",
       "book": 2,
@@ -5948,6 +7268,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "bianca",
+      "kind": "origin",
+      "book": 2,
+      "chapter": 14,
+      "floor": 3,
+      "at": "2:14",
+      "sortKey": 2014,
+      "headline": "A goat on the recap",
+      "text": "Subject is a goat. Specifically a Boer goat, bonded as a dungeon familiar, and she appears on the recap in the same segment that introduces the crawler she belongs to. The audience takes to her immediately, which is a thing the audience does with goats and which production has learned to plan around.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "florin",
       "kind": "origin",
       "book": 2,
@@ -5959,6 +7292,19 @@
       "text": "They ran me on the recap tonight. Miriam, Pony and Bianca too, first time for all four of us, I'm told. I don't know what they showed. I wasn't doing anything I would call footage. Ifechi and I keep moving and keep our heads down, and I would have preferred to stay a name nobody had learned yet. Too late for that.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "clarabelle",
+      "kind": "origin",
+      "book": 2,
+      "chapter": 15,
+      "floor": 3,
+      "at": "2:15",
+      "sortKey": 2015,
+      "headline": "On the door of the Desperado Club",
+      "text": "Subject is a Crocodilian, an intelligent, thick-skinned, semi-aquatic people who are not celebrated for their quickness, and she works the door of the club. This is a non-combatant posting, which describes her contract rather than her capabilities. Nobody has yet found the argument that gets past her.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "quint",
@@ -6037,6 +7383,19 @@
       "text": "Ripper Wonton's panel, and the crawler and his cat are on it. I keep reaching for his hand and my claws keep going straight through his fingers, which does not stop me reaching. Then the Skull Empire fire at those two and hit Manasa instead. My friend. The comedian starts treating her death as a piece of political arithmetic, and I tell him to shut his mouth. The Prism Kingdom condemns the action, and I say so on air within the hour: we will bring a grievance against the Skull Empire in the Syndicate Courts.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "prince-stalwart",
+      "kind": "origin",
+      "book": 2,
+      "chapter": 19,
+      "floor": 3,
+      "at": "2:19",
+      "sortKey": 2019,
+      "headline": "The statement read out on air",
+      "text": "Subject is the crown prince, brother to the Maestro, a coarse-haired boar-like creature with lean muscle and a manner that is meant to be read as cruelty and largely succeeds. When his empire fires on a trailer and takes someone who was nobody’s enemy, it is his statement that goes out on air. He does not write it and he does not disown it.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "ripper-wonton",
@@ -6416,6 +7775,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "jikininki",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 1,
+      "floor": 4,
+      "at": "3:1",
+      "sortKey": 3001,
+      "headline": "They are waiting when the doors open",
+      "text": "The commonest ghoul on the line, and by the System’s own account the most tractable of them, which says more about the others than it does about these. They come at the court in the first minutes on the new floor, before anyone has established what the rules of the place are.",
+      "confidence": "draft",
+      "voice": "narrator"
+    },
+    {
       "entityId": "personal-spaces",
       "kind": "origin",
       "book": 3,
@@ -6481,6 +7853,19 @@
       "voice": "self"
     },
     {
+      "entityId": "fan-box",
+      "kind": "use",
+      "book": 3,
+      "chapter": 7,
+      "floor": 4,
+      "at": "3:7",
+      "sortKey": 3007,
+      "headline": "The prize for being watched",
+      "text": "Awarded for gathering a following, or for doing something in front of enough people that the following gathers itself. The contents are put to an audience vote, and the box will not open for thirty hours, so the crawler carries it around knowing that strangers are arguing about what they deserve.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "bomo",
       "kind": "origin",
       "book": 3,
@@ -6518,6 +7903,19 @@
       "text": "The trains only come apart if hundreds of crawlers move at once, and getting hundreds of crawlers to do anything at once is exactly the thing production spends its money preventing. So I stop thinking of the explosives as the weapon.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "clay-ton",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 8,
+      "floor": 4,
+      "at": "3:8",
+      "sortKey": 3008,
+      "headline": "A Cretin in evening dress",
+      "text": "Subject is a Cretin, seven feet of rock-coloured muscle, employed as a bodyguard on the club floor and dressed for it. He is not conversational. He is assigned where the club decides he is needed, and the arrangement has never yet required anyone to explain to him what the job involves.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "desperado-club",
@@ -6637,6 +8035,58 @@
       "voice": "narrator"
     },
     {
+      "entityId": "fire-brandy",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 14,
+      "floor": 4,
+      "at": "3:14",
+      "sortKey": 3014,
+      "headline": "Stoking the Nightmare Express",
+      "text": "Subject is a Lesser Demon and a non-combatant, level seventy-five, and she shovels for the Nightmare Express. Where one finds large ovens that want feeding, one regularly finds her sort, and the tangle has more large ovens than it has anything else. She is on the crew that the crawlers need and does not pretend otherwise.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "trainyard",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 15,
+      "floor": 4,
+      "at": "3:15",
+      "sortKey": 3015,
+      "headline": "The switch nobody is meant to take",
+      "text": "The named trains run their loops until they reach a set of three switches, and only one of them leads here. Getting to it means reading the network rather than riding it, and the souvenir hats turn out to be the key to the whole arrangement, which is the sort of joke the fourth floor keeps making.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "madison",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 17,
+      "floor": 4,
+      "at": "3:17",
+      "sortKey": 3017,
+      "headline": "Boards at Trainyard E, off at station 60",
+      "text": "Subject is a level ten human and a non-combatant, filed as a Human Resources Associate for the line. She boards the Nightmare Express at Trainyard E and leaves it at station sixty, every time, which is the whole of her recorded behaviour. Her name was probably something else before the dungeon decided what a human resources associate should be called.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "kravyad",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 18,
+      "floor": 4,
+      "at": "3:18",
+      "sortKey": 3018,
+      "headline": "Whatever they are, they are at station 435",
+      "text": "A few dozen of them work directly under the line’s management, and they are stationed where the employees leave the train. Whether they count as a boss or as scenery depends entirely on who is describing them, which is a distinction the dungeon is happy to leave unsettled for as long as it is useful.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "ring-of-divine-suffering",
       "kind": "origin",
       "book": 3,
@@ -6689,6 +8139,19 @@
       "voice": "self"
     },
     {
+      "entityId": "tizquick",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 21,
+      "floor": 4,
+      "at": "3:21",
+      "sortKey": 3021,
+      "headline": "Given memories of a child that was never made",
+      "text": "Subject conducts the Mango Line. He was also issued with a set of memories containing a daughter, and the daughter was never made, and he has not been told. He is found on the ground with his head down and a puddle forming underneath him. The memories work. That is the part of the design I would draw attention to.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
       "entityId": "hekla",
       "kind": "fate",
       "book": 3,
@@ -6698,6 +8161,19 @@
       "sortKey": 3023,
       "headline": "Killed by the crawler she handed off",
       "text": "Crawler Hekla is dead, on the train, in front of everyone. Her healer had orders to let Katia bleed, the idea being that Carl would swing first and give her a reason to put him down and the cat no choice about joining her. Then Katia aimed a Rush at Eva, went wide, and put Hekla against the wall of the cab instead. Golden Player Killer Skull. Five hundred thousand gold on Katia's head. Brynhild's Daughters do not survive the trip back.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "loita",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 25,
+      "floor": 4,
+      "at": "3:25",
+      "sortKey": 3025,
+      "headline": "She has her pick, and she uses it",
+      "text": "Subject works Communications for the Borant Corporation. As a Kua-Tin of the ruling ultra-nationalist party she takes preferential treatment as a matter of course, including first choice of which crawlers she handles. Brynhild’s Daughters were hers, and Hekla with them, and she has never once had to ask for an account she wanted.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -6726,6 +8202,19 @@
       "text": "Two carts to a line, two gnoll left hands to a cart, and there is exactly one gnoll in this station. Katia cannot shape a hand the cart will accept. I cannot walk out to the carts. What I can do is die and get up again, so that is the arrangement we come to, and Mongo does the work. First time, I came round sober and confused. After that I tried to fight him. After that I got in the corner and stayed there. Fourteen times, for four hundred crawlers stranded at the end of a line I will never see. Carl came and told me why. He did not have to.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "milk",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 27,
+      "floor": 4,
+      "at": "3:27",
+      "sortKey": 3027,
+      "headline": "The sixth hand on the cookbook",
+      "text": "Subject carried the cookbook and added to it, and several of her entries are rants rather than instructions. She came from a clawed race with annual migration patterns and lived on an island with her family before the stairs. The rants were left in. Everyone who has carried the book since has read them.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "bautista",
@@ -6767,6 +8256,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "cleaner-bot",
+      "kind": "use",
+      "book": 3,
+      "chapter": 30,
+      "floor": 4,
+      "at": "3:30",
+      "sortKey": 3030,
+      "headline": "Bought for the housekeeping",
+      "text": "A personal space upgrade, available from the fourth floor at twenty-five thousand gold, sold on the promise that it will clean up after you. The units are capable of a good deal more than the sales copy admits, and the party buys one and puts it aside without yet knowing what they have bought.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "ring-of-divine-suffering",
       "kind": "use",
       "book": 3,
@@ -6802,6 +8304,19 @@
       "sortKey": 3031,
       "headline": "The stairwell stations flood",
       "text": "One day left on the floor clock and they come out of the deep tunnels in numbers nobody in production budgeted for. Thousands of them, growing as they travel, pouring into the stairwell stations while the surviving crawlers are still trying to get down. Carl warned everybody this was coming, in detail, on an open channel. Being right about it helps nobody at all.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "tserendolgor",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 31,
+      "floor": 4,
+      "at": "3:31",
+      "sortKey": 3031,
+      "headline": "A name nobody on the crawl can pronounce",
+      "text": "Subject is from Earth, born and raised in a small village in Mongolia, and took the Crisper Class. Her fellow crawlers gave up on her name inside a day and settled on a syllable of it. She takes constant needling from a certain cat about her race, and she fights beside that cat’s court regardless, which is a distinction the needling never quite grasps.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -6871,6 +8386,32 @@
       "voice": "narrator"
     },
     {
+      "entityId": "ruby",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 1,
+      "floor": 5,
+      "at": "4:1",
+      "sortKey": 4001,
+      "headline": "The orphan with the Walkman",
+      "text": "Subject is a changeling child of Hump Town, orphaned, and suffering compression sickness: in her default form she has no arms and her head is sunken. She owns a Walkman. The dungeon did not issue it to her and has not taken it away, and I am not going to be the one to file the paperwork that does.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "skyfowl",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 1,
+      "floor": 5,
+      "at": "4:1",
+      "sortKey": 4001,
+      "headline": "A starter species, seeded on purpose",
+      "text": "The Syndicate keeps a handful of basic species for salting worlds it intends to use, and this is one of them. They are proud enough that most who reach class selection keep the race rather than trade it, which is a decision the dungeon is content to reward and to punish in the same breath. Mordecai wears the shape on the fifth floor.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "hump-town",
       "kind": "arc",
       "book": 4,
@@ -6880,6 +8421,32 @@
       "sortKey": 4002,
       "headline": "What is in the town hall",
       "text": "Skarn lends Carl his telescope for a look out at the Wasteland, and explains why the gnomes riding it leave this town and the Bactrian village alone. It is not mercy. It is what both places keep in their town halls.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "skarn",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 2,
+      "floor": 5,
+      "at": "4:2",
+      "sortKey": 4002,
+      "headline": "He runs the telescope",
+      "text": "Subject is a juvenile changeling, roughly eight, orphaned when the gnomes bombed his town, and now living in Hump Town under the care of an adult who took the job without being asked. He operates the telescope. He is good at it, and he is the reason anyone in that town knows what is coming before it arrives.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "wasteland",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 2,
+      "floor": 5,
+      "at": "4:2",
+      "sortKey": 4002,
+      "headline": "The castle is the aircraft",
+      "text": "The flying home of the dirigible gnomes and a heavily armed military platform, and there is no seam between the two. It holds the air quadrant of the bubble, and the stairs down sit inside it, which settles what anyone wanting to leave the floor is going to have to do about it.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -6908,6 +8475,19 @@
       "text": "The party goes out looking for other crawlers in the quadrant and finds Firas, Louis, and Langley's team of car salesmen who have taken up the bow. A Thorny Devil and a Gnomish Drop Bear turn the whole march back short of the Bactrian town, so everybody comes back here instead.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "langley",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 3,
+      "floor": 5,
+      "at": "4:3",
+      "sortKey": 4003,
+      "headline": "A team of car salesmen with bows",
+      "text": "Subject leads a six-man team of archers, all of whom sold cars in Finland and all of whom picked the Archer Class together, which is either loyalty or a failure of imagination and has worked out the same either way. They come into the fifth floor as strangers to the court and do not stay strangers.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "louis",
@@ -6962,6 +8542,19 @@
       "voice": "system"
     },
     {
+      "entityId": "royal-chariot",
+      "kind": "use",
+      "book": 4,
+      "chapter": 4,
+      "floor": 5,
+      "at": "4:4",
+      "sortKey": 4004,
+      "headline": "Built on the floor it is meant to cross",
+      "text": "Assembled by hand out of what the fifth floor makes available, which is not much and none of it intended for the purpose. It moves, it carries the court, and the System files a description of it that reads as an insult and functions as an advertisement.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "juice-box",
       "kind": "origin",
       "book": 4,
@@ -6973,6 +8566,19 @@
       "text": "Louis found me and Louis brought me, because he is sweet and because I asked. Now the other crawlers in the quadrant have found Carl's group, and Carl's group has a cat who talks. Their manager, Mordecai, is sobering Louis and Firas up on the spot. All the fun is coming out of their blood at once. Louis looks very sad about it. I am not sad. I am here, and I am staying.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "bobby",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 6,
+      "floor": 5,
+      "at": "4:6",
+      "sortKey": 4006,
+      "headline": "The tomb raiders, so called",
+      "text": "Subject kept the Human race and took the rogue-type Spy Class, and earned his way into the club on that. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "changeling",
@@ -7036,6 +8642,19 @@
       "sortKey": 4008,
       "headline": "One root vegetable",
       "text": "The Valtay Corporation sends a neural enhancer, which is exactly the sort of thing a corporation sends. The Network sends a single Toraline root vegetable. Mordecai has never seen the plant, cannot price it against anything, and cannot say what it is for. The box it arrived in cost more than the gift.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "valtay-corporation",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 8,
+      "floor": 5,
+      "at": "4:8",
+      "sortKey": 4008,
+      "headline": "A creditor with a seat at the table",
+      "text": "A corporate system government inside the Syndicate, which is to say a company that is also a country and answers to neither description when it is inconvenient. Its people are parasites in the literal sense, riding the bodies of other races. It holds the Borant Corporation’s debt, and it sends a crawler a neural enhancer, which is the sort of gift that is also a note.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -7118,6 +8737,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "benefactor-box",
+      "kind": "use",
+      "book": 4,
+      "chapter": 14,
+      "floor": 5,
+      "at": "4:14",
+      "sortKey": 4014,
+      "headline": "Bronze from a sponsor beats gold from the floor",
+      "text": "Only a sponsor can send one. They use the same six quality tiers as every other box and they outclass the ordinary run of loot at every rank, so a bronze one from a benefactor is worth more than a gold one earned. It means the fastest way to be well equipped is to be liked by someone with money.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "frank-and-maggie",
       "kind": "fate",
       "book": 4,
@@ -7140,6 +8772,19 @@
       "sortKey": 4015,
       "headline": "Why the changelings want her flesh",
       "text": "Juice Box lays out the arithmetic. The changelings want Quetzalcoatlus given a body so that they can touch her, because touching a thing is how a changeling adds it to the shapes it can wear. And they need what she carries: a great many of them are sick with compression sickness, and they believe she has a spell that alters living things which can be turned on the illness. A wailing shrieker over a tomb, wanted for her hands and for her medicine.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "bonnie",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 16,
+      "floor": 5,
+      "at": "4:16",
+      "sortKey": 4016,
+      "headline": "She brings them inside",
+      "text": "Subject is a juvenile Dirigible Gnome of the air quadrant, daughter of a commandant. She is the one who brings the crawlers in through the door, and what they find on the other side of it is her father, already dead, and the person who did it still standing there. She is taken into the court afterwards. Nobody discusses the alternative.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -7404,6 +9049,19 @@
       "voice": "self"
     },
     {
+      "entityId": "drakea",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 28,
+      "floor": 5,
+      "at": "4:28",
+      "sortKey": 4028,
+      "headline": "The twenty-second hand on the cookbook",
+      "text": "Subject crawled in the last season the Nagas produced, which was over two hundred and fifty cycles ago, and carried the cookbook through it. He was born a Bune and declined to trade the race away at class selection, taking a rogue-and-magic hybrid instead. His gear is still being handed out as prizes, which is the only immortality this production offers.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "gate-of-the-feral-gods",
       "kind": "use",
       "book": 4,
@@ -7441,6 +9099,19 @@
       "text": "They sue to strip the Gate of the Feral Gods from Carl and are dismissed for lack of standing. He collects seven Fight the Power achievements, stock certificates, and photographs of the plaintiffs' mothers.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "geyrun",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 29,
+      "floor": 5,
+      "at": "4:29",
+      "sortKey": 4029,
+      "headline": "The hound had an owner before this one",
+      "text": "Subject was the favourite child of a god and the first owner of Orthrus. He was murdered. His father has a suspect and no proof, and the suspect is family, which is the arrangement that turns a private grievance into a standing quest with a stranger’s name on it.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "orthrus",
@@ -7688,6 +9359,19 @@
       "text": "An emergency box from the Open Intellect Pacifist Action Network holds an attachment built for exactly one crawler and exactly one purpose. Screwed onto the end of the scoop it lets him throw Samantha, and it multiplies his reach: five hundred metres for every point of strength. Take the slot off and she comes back to him.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "porthus",
+      "kind": "origin",
+      "book": 4,
+      "chapter": null,
+      "floor": 5,
+      "at": "4:end",
+      "sortKey": 4999,
+      "headline": "The second hand on the cookbook",
+      "text": "Subject crawled in the fifteenth season, chose the High Elf race and a rogue’s class, and wrote the second edition of the book that keeps being handed down. He now runs the Open Intellect Pacifist Action Network, which opposes the crawl. He is therefore both an advertisement for the dungeon and a witness against it, and production has never worked out how to bill him.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "carl",
@@ -8015,6 +9699,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "dark-hive",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 10,
+      "floor": 6,
+      "at": "5:10",
+      "sortKey": 5010,
+      "headline": "A group with a position on what counts as murder",
+      "text": "A mantis outfit that comes to the hunting floor as a matter of routine. Their position, argued and so far sustained, is that a killing done on that ground is outside the rules that would make it a killing anywhere else, and they have had cause to argue it about one of their own.",
+      "confidence": "draft",
+      "voice": "narrator"
+    },
+    {
       "entityId": "zockau",
       "kind": "arc",
       "book": 5,
@@ -8091,6 +9788,19 @@
       "text": "Donut renames the settlement Point Mongo and the quest arrives on the same day. Mongo takes her off into the jungle on his back and finds the pack: all female, all mongoliensis, headed by one called Kiwi. He does not come home alone.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "jamal",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 14,
+      "floor": 6,
+      "at": "5:14",
+      "sortKey": 5014,
+      "headline": "The tattoo gets a body",
+      "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He is polite. He is anxious. He is loyal past the point where loyalty is sensible, and I have not yet identified what he is getting out of the arrangement.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "skull-empire",
@@ -8338,6 +10048,19 @@
       "text": "Dosed by his own guards into losing his inhibitions, Carl picks a fight with the moderator on stage and asks the room for the best way to get to her surviving daughter. She smashes the table and walks out. A hooded woman at the back stops her cutting him off first, then reveals herself as one of his sponsors and leaves.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "drick",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 33,
+      "floor": 6,
+      "at": "5:33",
+      "sortKey": 5033,
+      "headline": "Crawling Through the Ages",
+      "text": "Subject is a former crawler and a member of the Dream, appearing on a CrawlCon panel about the history of the crawl. He is also carrying a Gondii worm in his brain on behalf of the Valtay, which is a detail the panel does not cover. He brags well. It is the part of him that is still his own.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "diwata",
@@ -9081,6 +10804,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "anton",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 5,
+      "floor": 8,
+      "at": "6:5",
+      "sortKey": 6005,
+      "headline": "Hostile on arrival, and reasonable about it",
+      "text": "Subject took the Fugitive Class and wears black studded leather from neck to boot with a cape over it. He carries a crossbow. He is covered in tattoos he did not acquire down here. He and his party meet the court while hostile, having heard what a certain cat said about Cat Girls, and the misunderstanding is cleared up faster than anybody expected.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "sister-ines",
       "kind": "origin",
       "book": 6,
@@ -9105,6 +10841,32 @@
       "text": "The party goes looking for monk seals to fill its squad slots and picks up the quest instead. Two populations, one coastline, one annual event that neither side can negotiate around, and a platinum box waiting for whoever settles it.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "gluteus-maxx",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 6,
+      "floor": 8,
+      "at": "6:6",
+      "sortKey": 6006,
+      "headline": "Short, fuzzy, and available",
+      "text": "Subject dances at one of the establishments inside the club and takes mercenary work on the side. He is short, hairy and built like the job. The court hires him. I note for the record that of everyone on the payroll, he is among the few who have never once had to be told what the plan is twice.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "geraldo",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 7,
+      "floor": 8,
+      "at": "6:7",
+      "sortKey": 6007,
+      "headline": "He joins the squad",
+      "text": "Subject is a Monk Seal Picket Sentry, an aquatic mob built to stand in front of things. He was taken rather than recruited. He now wears a white headband with hearts on it matching the team flag, which he did not own beforehand, and he makes kung-fu poses. Nobody taught him that either.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "oipan",
@@ -9155,6 +10917,19 @@
       "sortKey": 6011,
       "headline": "A city boss attaches himself to the party",
       "text": "I have him at level 130 and non-corporeal, and he is now walking along with a crawler party as though that were a normal thing for a city boss to do. There is a request attached to the company: repair his shrine and the spirits held in this town go free. He asks Paz specifically, which tells you he has read the party's paperwork rather more carefully than the party has.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "harbinger",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 12,
+      "floor": 8,
+      "at": "6:12",
+      "sortKey": 6012,
+      "headline": "He does not agree with the Plenty",
+      "text": "Subject is a caprid liaison operating behind the scenes. He expressly disagrees with the Plenty’s goals and is actively working to remove Carl and Prepotente from the crawl, and he says so to their faces at the first meeting. I record this as a courtesy on his part. Most of the people trying that do not announce it.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9302,6 +11077,19 @@
       "voice": "self"
     },
     {
+      "entityId": "huanxin-jinx",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 17,
+      "floor": 8,
+      "at": "6:17",
+      "sortKey": 6017,
+      "headline": "Sponsor to a goddess",
+      "text": "Subject is a Grixist and the current sponsor of the goddess Eileithyia. She is wealthy and she is intelligent, and she has been playing the Ascension game since childhood, which is longer than most of the entities she is now backing have existed. Her day job is building the structures people live in.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "club-vanquisher",
       "kind": "arc",
       "book": 6,
@@ -9339,6 +11127,19 @@
       "text": "There is a flower in a thrice-sealed box with my name on it, and a doppelgänger has already broken two of the three seals to reach it. Whoever eats it takes a boon from me, and my boon has two shapes. She can be carried to the twelfth floor and stand as a celestial attendant until the games open. Or she can be made pregnant, and be pulled out of the crawl entirely, because I do not let anyone carrying a child fight in a place like this. Both are ways past the ninth floor without walking it. I did not put the flower in that box. I only decide what it does when she eats it.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "guild-of-suffering",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 19,
+      "floor": 8,
+      "at": "6:19",
+      "sortKey": 6019,
+      "headline": "Membership arrives with the tattoo",
+      "text": "The guild worships a demigod, and access is granted by a tattoo that anyone who uses one of its artefacts receives whether or not they went looking for a guild. Mordecai notes, in the tone of a man reading a pamphlet he did not ask for, that it also runs outreach centres.",
+      "confidence": "verified",
+      "voice": "narrator"
     },
     {
       "entityId": "orchid-of-eileithyias-grace",
@@ -9432,6 +11233,19 @@
       "voice": "self"
     },
     {
+      "entityId": "uzi-jesus",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 22,
+      "floor": 8,
+      "at": "6:22",
+      "sortKey": 6022,
+      "headline": "A totem with a catchphrase",
+      "text": "Subject is a unique totem card, held by the court, summoned for seventy-five seconds at a stretch. Level one hundred and forty, constitution two hundred, undead, origin Ecuador. The catchphrase is his own and the card prints it. I did not write that card and I decline responsibility for it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "damascus-steel",
       "kind": "origin",
       "book": 6,
@@ -9443,6 +11257,32 @@
       "text": "He comes in asking for a way into the Guild of Suffering, which is not a thing anyone asks a dancer, and he has the spiderweb on his elbow that says he is entitled to ask it. So I take him to a private cubicle, and out the back of the cubicle, to the entrance nobody advertises. On his way out I tell him to limp. Let the room think he paid for what he actually got.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "doctor-bones",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 23,
+      "floor": 8,
+      "at": "6:23",
+      "sortKey": 6023,
+      "headline": "The announcer at the Penis Parade",
+      "text": "Subject is a skeletal Bard, level ninety, working as announcer and disc jockey for one of the club’s establishments rather than performing in it. He also takes mercenary contracts. The two careers turn out to require the same skill, which is holding a room’s attention while something else happens in it.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "penis-parade",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 23,
+      "floor": 8,
+      "at": "6:23",
+      "sortKey": 6023,
+      "headline": "First floor of the club, and it shows",
+      "text": "The entrance sits on the club’s first floor, with grander establishments stacked above it on the second and third. It is staffed, it is loud, and the dungeon’s idea of a joke is that the place produces some of the most reliable allies anyone on the crawl manages to recruit.",
+      "confidence": "verified",
+      "voice": "narrator"
     },
     {
       "entityId": "chowder-war",
@@ -9991,6 +11831,19 @@
       "voice": "system"
     },
     {
+      "entityId": "sluggalos",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 65,
+      "floor": 8,
+      "at": "6:65",
+      "sortKey": 6065,
+      "headline": "Filed as Pox Slugs, and unbothered by it",
+      "text": "The System first registers them as Pox Slugs, which is accurate and entirely misses the point. They come out of the boils of the SlugPox, they arrive with a crude and rowdy culture already assembled, and they throw themselves at the court’s enemies with the enthusiasm of people who cannot believe their luck at being included.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "ysalte",
       "kind": "arc",
       "book": 6,
@@ -10251,6 +12104,32 @@
       "voice": "narrator"
     },
     {
+      "entityId": "tummy-acher",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 5,
+      "floor": 9,
+      "at": "7:5",
+      "sortKey": 7005,
+      "headline": "Bred to be hit",
+      "text": "A pet-class mob, and by reputation an excellent melee tank, which in practice means the thing is designed to be the part of a party that absorbs damage on everyone else’s behalf. The System’s notice for one that has not yet bonded to a crawler is written like a card on a cage.",
+      "confidence": "draft",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "party-planner",
+      "kind": "use",
+      "book": 7,
+      "chapter": 6,
+      "floor": 9,
+      "at": "7:6",
+      "sortKey": 7006,
+      "headline": "The reward for having survived being condemned",
+      "text": "It comes out of a celestial box, which is the dungeon’s way of paying a debt it would rather not discuss: the box is owed for surviving a death sentence handed down on the floor before. Louis takes delivery of an aircraft and a rank at the same moment, and neither of them was asked for.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "gate-of-the-feral-gods",
       "kind": "use",
       "book": 7,
@@ -10429,6 +12308,32 @@
       "sortKey": 7013,
       "headline": "Still pregnant, and family",
       "text": "Kiwi is very pregnant and has been carrying since the Hunting Grounds, which is a long time to be in that condition even by this dungeon's standards. Big Tina, for her part, has decided that Mongo is her father. Nobody in the fortress has the standing, the courage, or frankly the desire to correct her.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "bodi",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 15,
+      "floor": 9,
+      "at": "7:15",
+      "sortKey": 7015,
+      "headline": "Commander of the 103rd",
+      "text": "Subject is a former crawler whose season was Land War, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He is recognised on sight by people who have never crawled. That is rarer than it sounds.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "rend",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 16,
+      "floor": 9,
+      "at": "7:15",
+      "sortKey": 7015,
+      "headline": "A gift for attending",
+      "text": "Subject is a Tummy Acher, a pet-class mob built to absorb damage, and he came to his crawler as a gift for attending CrawlCon. Tserendolgor took delivery of a party favour. What she has now is a tank that levels every time the group goes hunting, which is not what a party favour is for.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -11538,6 +13443,32 @@
       "voice": "narrator"
     },
     {
+      "entityId": "ping",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 79,
+      "floor": 9,
+      "at": "7:79",
+      "sortKey": 7079,
+      "headline": "Here piggy, piggy",
+      "text": "Five mana, and it tells you what is out there and where. It also tells what is out there that you are looking, which is why the System files it under names like the Night Dread and lets the user decide whether that is a drawback. In a castle full of things worth locating, it settles an argument about a dragon.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "epitome-tagg",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 80,
+      "floor": 9,
+      "at": "7:80",
+      "sortKey": 7080,
+      "headline": "Nothing like the reputation",
+      "text": "Subject leads the Dream and is the son of Epitome Noflex. At the first meeting he wears a plain leather jerkin and is indistinguishable from the rest of the dream elves in the room, which Carl notes at the time. The reputation that precedes him describes an unhinged psychopath. The man in the jerkin does not perform it, and I would not read that as reassurance.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "reavers",
       "kind": "fate",
       "book": 7,
@@ -11824,6 +13755,19 @@
       "voice": "system"
     },
     {
+      "entityId": "radoslav",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 4,
+      "floor": 10,
+      "at": "8:4",
+      "sortKey": 8004,
+      "headline": "Team Free Love, in the heats",
+      "text": "Subject is a Bugbear Jack of All Trades, level seventy-five, and a self-aware NPC racer in the vehicular heats. He and his teammate dress for the part and race in earnest. They are aware of what they are, which the format did not intend and cannot now undo.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "dwight",
       "kind": "origin",
       "book": 8,
@@ -11833,6 +13777,19 @@
       "sortKey": 8005,
       "headline": "Team Sparkles goes past",
       "text": "Team Sparkles passes the food truck without slowing and without manners: Dwight and Lucienne, both of them rude about it. In the same stretch of track Crawler Carl works out what this floor is actually for, which is thinning out the NPCs who have woken up, and Elle gets through an awkward meeting with a fan. The Royal Court of Princess Donut finishes the first heat seventh of nine, having spent most of it towing team Free Love home. Dwight finished ahead of them. Dwight would want that mentioned.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "lucienne",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 5,
+      "floor": 10,
+      "at": "8:5",
+      "sortKey": 8005,
+      "headline": "Passing on the track, and unpleasant about it",
+      "text": "Subject is a Mandagot, a Fairy-class creature, level eighty-one, and one of the two members of Team Sparkles. She worships Diwata, which the System flags as an automatic hostility toward anyone Diwata dislikes. She passes the court on the track and is very rude about it. That part is hers, not the goddess’s.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -11902,6 +13859,45 @@
       "voice": "system"
     },
     {
+      "entityId": "genesis",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 13,
+      "floor": 10,
+      "at": "8:13",
+      "sortKey": 8013,
+      "headline": "One of two womantaur dominators",
+      "text": "Subject is a Lady Mantaur Dominator, level ninety-five, and one of a pair driving for the Lady Dominators in the heats. She has black hair and a thick American accent that Carl places somewhere around Kentucky. Between the two of them she is the one who speaks, at length, to anyone within range.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "mantaur",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 13,
+      "floor": 10,
+      "at": "8:13",
+      "sortKey": 8013,
+      "headline": "Of all the ’taurs, this one",
+      "text": "Centaurs, bisontaurs, rhinotaurs: the dungeon has a long catalogue of things joined at the waist to other things, and this is the entry the System itself flags as peculiar. They turn up from the fourth floor down, and they keep company with Club Vanquisher.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "rapture",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 14,
+      "floor": 10,
+      "at": "8:13",
+      "sortKey": 8013,
+      "headline": "The other womantaur dominator",
+      "text": "Subject is a Lady Mantaur Dominator, level ninety-five, driving alongside her partner for the Lady Dominators. She has freckled skin and curly red hair and she chews tobacco. She says considerably less than her partner does, which in that vehicle is a structural necessity rather than a personality.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "jurgen",
       "kind": "origin",
       "book": 8,
@@ -11913,6 +13909,19 @@
       "text": "Hungry Eyes village, between heats. I am walking with Prepotente when we run into Carl and the cat, and there is a vendor doing mystery meat off a cart at the edge of the square. Heidi would tell me not to. Heidi has told me not to, many times, in the voice she keeps for it. I eat it anyway. I would like that recorded as the least dangerous mistake I have made anywhere in this dungeon.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "linus",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 15,
+      "floor": 10,
+      "at": "8:15",
+      "sortKey": 8015,
+      "headline": "Filed as: tourist",
+      "text": "Subject presents as a tourist and a devoted follower of one of the crawlers, to a degree that the crawler in question finds difficult. The System’s notice on him reads, in full, \"Linus. Tourist.\" I have checked it twice. That is the entire entry, and entries that short are usually short for a reason.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "bucket-boy",
@@ -12158,6 +14167,19 @@
       "sortKey": 8035,
       "headline": "The clock on the order",
       "text": "Quemada worships Emberus too, and Quemada's professional opinion is that the standing order cannot sit unattended much longer. They need to make an attempt on Hellik, and soon. Nobody in that conversation raises what Hellik said in the club.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "jacobus",
+      "kind": "origin",
+      "book": 8,
+      "chapter": 36,
+      "floor": 10,
+      "at": "8:36",
+      "sortKey": 8036,
+      "headline": "The card that never went away",
+      "text": "Subject is a Reverse Tooth Fairy, level ninety, and he was a totem card until a patch on the Scavenger’s Daughter made him permanent, which nobody intended. He is tiny, absurdly muscled, blond, and his wings move too fast to see. Imani has him now. The paperwork to reverse it does not exist.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -15293,6 +17315,38 @@
       "note": null,
       "revealedAt": "7:78",
       "sortKey": 7078
+    },
+    {
+      "fromId": "dark-hive",
+      "toId": "vrah",
+      "kind": "member",
+      "note": null,
+      "revealedAt": "5:10",
+      "sortKey": 5010
+    },
+    {
+      "fromId": "valtay-corporation",
+      "toId": "the-syndicate",
+      "kind": "member-of",
+      "note": null,
+      "revealedAt": "4:8",
+      "sortKey": 4008
+    },
+    {
+      "fromId": "valtay-corporation",
+      "toId": "borant-corporation",
+      "kind": "creditor-of",
+      "note": "It holds the debt.",
+      "revealedAt": "4:8",
+      "sortKey": 4008
+    },
+    {
+      "fromId": "guild-of-suffering",
+      "toId": "ring-of-divine-suffering",
+      "kind": "grants",
+      "note": "Use the artefact, take the tattoo, and you are a member.",
+      "revealedAt": "6:19",
+      "sortKey": 6019
     },
     {
       "fromId": "larracos",

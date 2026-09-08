@@ -550,6 +550,80 @@
           "at": "6:61"
         }
       ]
+    },
+    {
+      "id": "trainyard",
+      "kind": "place",
+      "name": "Trainyard",
+      "aka": [],
+      "role": "Station · fourth floor",
+      "revealedAt": "3:15",
+      "sort": 51,
+      "tagline": "Station ten on the tangle, reachable only by taking the switch that everything sensible avoids.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 15,
+          "floor": 4,
+          "at": "3:15",
+          "confidence": "verified",
+          "headline": "The switch nobody is meant to take",
+          "text": "The named trains run their loops until they reach a set of three switches, and only one of them leads here. Getting to it means reading the network rather than riding it, and the souvenir hats turn out to be the key to the whole arrangement, which is the sort of joke the fourth floor keeps making."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "wasteland",
+      "kind": "place",
+      "name": "The Wasteland",
+      "aka": [
+        "Wasteland",
+        "Wasteland Fortress"
+      ],
+      "role": "Fortress · fifth floor",
+      "revealedAt": "4:2",
+      "sort": 52,
+      "tagline": "A gnomish dreadnought that is also a castle and also somebody’s home, floating over the air quadrant with the way down sitting inside it.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 2,
+          "floor": 5,
+          "at": "4:2",
+          "confidence": "verified",
+          "headline": "The castle is the aircraft",
+          "text": "The flying home of the dirigible gnomes and a heavily armed military platform, and there is no seam between the two. It holds the air quadrant of the bubble, and the stairs down sit inside it, which settles what anyone wanting to leave the floor is going to have to do about it."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "penis-parade",
+      "kind": "place",
+      "name": "The Penis Parade",
+      "aka": [
+        "Penis Parade"
+      ],
+      "role": "Club · the Desperado Club",
+      "revealedAt": "6:23",
+      "sort": 53,
+      "tagline": "The ground-floor strip club of the Desperado Club, and by some distance the least exclusive of the three.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 23,
+          "floor": 8,
+          "at": "6:23",
+          "confidence": "verified",
+          "headline": "First floor of the club, and it shows",
+          "text": "The entrance sits on the club’s first floor, with grander establishments stacked above it on the second and third. It is staffed, it is loud, and the dungeon’s idea of a joke is that the place produces some of the most reliable allies anyone on the crawl manages to recruit."
+        }
+      ],
+      "relations": []
     }
   ]
 }

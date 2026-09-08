@@ -45,7 +45,34 @@
   /* Floor accents are not here — each floor takes the colour of the book it is
      told in, published on mattdinniman.com and carried through the content
      snapshot. See data/book-colors.json. */
+  /* ---- type scale --------------------------------------------------------
+     Eight steps, and they are the site's own dominant values rather than new
+     ones: /when alone had grown twenty-one sizes and six letter-spacings, most
+     of them a half-pixel apart and none of them meaning anything. If a new size
+     seems necessary, it is usually the wrong element. */
+  --type-label: 11px;    /* mono labels, tags, stamps                  */
+  --type-ui: 12.5px;     /* mono chrome: the switch, counts, notes     */
+  --type-meta: 13px;     /* row names, secondary prose                 */
+  --type-body: 16px;     /* reading text, long-form and in panels      */
+  --type-lede: 17px;     /* standfirst, taglines                       */
+  --type-entry: 19px;    /* a beat's headline                          */
+  --type-sect: 22px;     /* a section heading                          */
+  --type-title: 28px;    /* the subject of a panel                     */
+
+  /* Two, not six. A page eyebrow is tracked wide; everything else is a label. */
+  --ls-wide: .2em;
+  --ls-label: .1em;
+
   --measure: 66ch;
+  --measure-wide: 1500px;
+  /* The entry column, once. All three /when views put the same list in it, so
+     they read it from here rather than each claiming a width of their own. */
+  --entry-col: 224px;
+  /* The stage head's height; the braid's axis is drawn to it. */
+  /* Room for the stamp plus two lines of the shared name at --type-meta: the
+     two shortest book titles need the second line. Keep in step with AXIS_H in
+     src/lib/timeline.ts, which draws the braid's axis to it. */
+  --head-h: 96px;
 }
 
 @layer base {
@@ -72,71 +99,353 @@
 @layer components {
   .wrap { max-width: 1080px; margin-inline: auto; padding-inline: 24px; }
 
+  /* The page's own eyebrow: tracked wide, used once at the top of a page. */
   .eyebrow {
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: .2em;
-    text-transform: uppercase; color: var(--color-grey-500);
+    font-family: var(--font-mono); font-size: var(--type-label);
+    letter-spacing: var(--ls-wide); text-transform: uppercase;
+    color: var(--color-grey-500);
   }
 
-  .prose p { max-width: var(--measure); margin: 0 0 15px; font-size: 16px; }
+  /* Every label inside a component — a stamp, a count, a column head. One rule,
+     because there were twenty-eight near-copies of it. */
+  .label {
+    font-family: var(--font-mono); font-size: var(--type-label);
+    letter-spacing: var(--ls-label); text-transform: uppercase;
+    color: var(--color-grey-500); margin: 0;
+  }
+
+  /* A heading inside a panel. h2/h3 already carry the display face and caps
+     from the base layer, so this is only size, weight and colour — and it lives
+     here because /entity, the /when panel and downstream all use it. */
+  .sect {
+    font-size: var(--type-sect); font-weight: 700; color: var(--color-gold);
+  }
+
+  .prose p { max-width: var(--measure); margin: 0 0 15px; font-size: var(--type-body); }
   .prose p:last-child { margin-bottom: 0; }
   .prose strong { color: #fff; font-weight: 600; }
 
   /* The System's own voice: monospace, boxed, gold rule. */
   .sys {
-    font-family: var(--font-mono); font-size: 13.5px; line-height: 1.55;
+    font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.6;
     background: var(--color-panel); border: 1px solid var(--color-line);
     border-left: 3px solid var(--color-gold); padding: 14px 16px;
     color: var(--color-grey-200);
   }
   .sys b { display: block; color: var(--color-gold); font-weight: 700;
-           letter-spacing: .06em; margin-bottom: 4px; }
+           letter-spacing: var(--ls-label); margin-bottom: 4px; }
 
   /* A character speaking to camera. Body face, not mono: the mono register is
      the System's. The opening mark is the only ornament. */
   .spoken { position: relative; padding-left: 22px; color: var(--color-grey-100); }
   .spoken::before {
     content: '\201C'; position: absolute; left: 0; top: -6px;
-    font-family: var(--font-display); font-size: 34px; line-height: 1; color: var(--color-gold);
+    font-family: var(--font-display); font-size: 32px; line-height: 1; color: var(--color-gold);
   }
-  .src { display: block; margin-top: 8px; font-family: var(--font-mono); font-size: 11px;
-         letter-spacing: .1em; text-transform: uppercase; color: var(--color-grey-500); }
+  .src { display: block; margin-top: 8px; font-family: var(--font-mono);
+         font-size: var(--type-label); letter-spacing: var(--ls-label);
+         text-transform: uppercase; color: var(--color-grey-500); }
 
   /* Sealed content is redacted, not blurred — a blur invites squinting. */
   .sealed {
-    font-family: var(--font-mono); font-size: 13px; line-height: 1.5;
+    font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.55;
     color: var(--color-grey-500);
     background: repeating-linear-gradient(135deg, #141414 0 8px, #111 8px 16px);
     border: 1px dashed var(--color-line);
     border-left: 3px solid var(--color-blood-deep);
     padding: 13px 15px;
   }
-  .sealed b { display: block; color: var(--color-blood); letter-spacing: .1em;
+  .sealed b { display: block; color: var(--color-blood); letter-spacing: var(--ls-label);
               font-weight: 700; margin-bottom: 3px; }
 
-  .redact { color: var(--color-grey-700); font-family: var(--font-mono); letter-spacing: .1em; }
+  .redact { color: var(--color-grey-700); font-family: var(--font-mono);
+            letter-spacing: var(--ls-label); }
 
   .slab { border: 1px solid var(--color-line); background: var(--color-panel); }
 
   .cell { background: var(--color-panel); padding: 18px; }
   .grid-cells {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 1px; background: var(--color-line); border: 1px solid var(--color-line);
   }
 
   .chip {
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
+    font-family: var(--font-mono); font-size: var(--type-label);
+    letter-spacing: var(--ls-label);
     text-transform: uppercase; border: 1px solid var(--color-line);
     padding: 3px 7px; color: var(--color-grey-300);
   }
 
   .btn {
-    font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em;
+    font-family: var(--font-mono); font-size: var(--type-ui);
+    letter-spacing: var(--ls-label);
     text-transform: uppercase; color: var(--color-grey-300);
     border: 1px solid var(--color-line); background: transparent;
     padding: 7px 11px; cursor: pointer; transition: border-color .12s, color .12s;
   }
   .btn:hover { border-color: var(--color-grey-700); color: var(--color-grey-100); }
   .btn[aria-pressed="true"] { border-color: var(--color-gold); color: var(--color-gold); }
+  /* An anchor wearing the control: the two lines an anchor brings with it, plus
+     the gold that marks it as the one action on the screen. The entity page's
+     way into the chart and the chart's way back out are the same object. */
+  .btn-go { display: inline-block; text-decoration: none; color: var(--color-gold); }
+  .btn-go:hover { border-color: var(--color-gold); text-decoration: none; }
+
+  /* ---- one breakpoint for "this needs room" ---------------------------
+     The chart is a frozen 224px name column plus a drawing as wide as the
+     story is long, so under about 900px it is a porthole rather than a view.
+     /when says so instead of rendering it, and the entity pages stop offering
+     to send anyone there. Written once, because the two pages have to agree
+     about where the line is or one of them sends readers to a dead end.
+
+     `!important` on purpose: this has to beat a component's own display, and
+     an unlayered scoped rule would otherwise outrank the whole layer. */
+  .narrow-only { display: none; }
+  @media (max-width: 900px) {
+    .wide-only { display: none !important; }
+    .narrow-only { display: block; }
+  }
+
+  /* ---- the finder ------------------------------------------------------
+     /who and /when ask the same question of the same set, so they use the
+     same bar. It lived twice, in two sets of slightly different numbers,
+     which is how a page stops looking like the rest of the site. */
+  /* Not sticky: the gate bar already owns top: 0, and stacking a second sticky
+     element under one whose height wraps is a measurement problem nobody needs. */
+  .finder-wrap { padding-top: 26px; }
+  .finder { border: 1px solid var(--color-line); background: var(--color-panel);
+            padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+  .finder-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  /* A row that heads the panel: what it does sits under a hairline, above the
+     controls it explains. */
+  .push-end { margin-left: auto; }
+  .finder-row.heads { border-bottom: 1px solid var(--color-line-soft);
+                      padding-bottom: 12px; margin-bottom: 2px; }
+  .finder-note { margin: 0; max-width: var(--measure); font-size: var(--type-body);
+                 color: var(--color-grey-300); }
+  /* No flex shorthand here: .finder is a column on /who, where a flex-basis
+     would be read as a height. Only a .finder-row sets its width. */
+  .finder-search {
+    display: flex; align-items: center; gap: 10px;
+    /* Inset: the field sits *inside* a --color-panel box, so it has to be
+       darker than the box or it disappears into it. */
+    border: 1px solid var(--color-line); background: var(--color-ink); padding: 0 10px;
+  }
+  .finder-search:focus-within { border-color: var(--color-gold); }
+  .finder-search input {
+    flex: 1 1 auto; min-width: 0; height: 38px; border: 0; outline: 0; background: transparent;
+    color: var(--color-grey-100); font-family: var(--font-body); font-size: var(--type-body);
+  }
+  .finder-search input::placeholder { color: var(--color-grey-700); }
+  .finder-search input:disabled { cursor: not-allowed; }
+  /* Safari draws its own clear button; the Escape key is the one affordance. */
+  .finder-search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+  .finder-search kbd {
+    font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-700);
+    border: 1px solid var(--color-line); padding: 1px 5px; flex: none;
+  }
+  .finder-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .finder-row .finder-search { flex: 1 1 300px; }
+  /* A chip is a .btn that carries a count. */
+  .chip-btn {
+    font-family: var(--font-mono); font-size: var(--type-label);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase; color: var(--color-grey-300);
+    border: 1px solid var(--color-line); background: transparent;
+    padding: 5px 9px; cursor: pointer; display: inline-flex; gap: 7px; align-items: center;
+    transition: border-color .12s, color .12s;
+  }
+  .chip-btn:hover:not(:disabled) { border-color: var(--color-grey-700); color: var(--color-grey-100); }
+  .chip-btn[aria-pressed="true"] { border-color: var(--color-gold); color: var(--color-gold); }
+  .chip-btn:disabled { color: var(--color-grey-700); cursor: not-allowed; }
+  .chip-btn .n { color: var(--color-grey-700); font-variant-numeric: tabular-nums; }
+  .chip-btn[aria-pressed="true"] .n { color: var(--color-gold); }
+  .tally {
+    font-family: var(--font-mono); font-size: var(--type-label);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase; color: var(--color-grey-500); margin: 0; min-height: 1em;
+  }
+  /* Pushed to the end only when it shares a row with something else. */
+  .finder-row .tally { margin-left: auto; }
+
+  /* ---- a beat, wherever it is shown ------------------------------------
+     The entity page and the /when panel render the same rows, voice and all,
+     so the markup and these rules are shared rather than reimplemented. */
+  .log { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column;
+         gap: 1px; background: var(--color-line); border: 1px solid var(--color-line); }
+  .entry { background: var(--color-panel); padding: 16px 18px; }
+  .entry.more { padding: 12px 14px; }
+  .stamp { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center;
+           margin-bottom: 9px; font-family: var(--font-mono);
+           font-size: var(--type-label); letter-spacing: var(--ls-label);
+           text-transform: uppercase; }
+  .bk { color: #0e0e0e; background: var(--color-grey-300); padding: 2px 6px; font-weight: 700; }
+  .fl { color: var(--color-grey-300); display: inline-flex; align-items: center; gap: 6px; }
+  .fl::before { content: ''; width: 8px; height: 8px; background: var(--dot); flex: none; }
+  .entry-body h3 { font-size: var(--type-entry); font-weight: 700; color: #fff; }
+  .entry-body p { margin: 6px 0 0; font-size: var(--type-body); color: var(--color-grey-200);
+                  max-width: var(--measure); }
+  .draft { display: inline-block; margin-top: 9px; font-family: var(--font-mono);
+           font-size: var(--type-label); letter-spacing: var(--ls-label);
+           text-transform: uppercase; color: var(--color-grey-700);
+           border: 1px solid var(--color-line); padding: 2px 6px; }
+
+  /* ---- connections ------------------------------------------------------ */
+  .rels { list-style: none; margin: 0 0 14px; padding: 0; display: flex;
+          flex-direction: column; gap: 12px; }
+  .rel-kind { display: block; font-family: var(--font-mono); font-size: var(--type-label);
+              letter-spacing: var(--ls-label); text-transform: uppercase;
+              color: var(--color-grey-500); }
+  .rel-note { font-size: var(--type-meta); color: var(--color-grey-500); margin: 3px 0 0; }
+
+  /* ---- a floor's number, in the colour of the book it is told in --------
+     The Descent stamps floors this way; the /when grid heads its columns the
+     same way, because it is the same object. */
+  .floormark {
+    font-family: var(--font-display); font-weight: 800; line-height: 1;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+
+  /* ---- picking one of several -------------------------------------------
+     The masthead already says how this site offers a choice: mono, uppercase,
+     a border that appears when the thing is current. A view switch is the same
+     gesture one level down, so it is the same control rather than a new one. */
+  .switch { display: flex; gap: 4px; flex-wrap: wrap; }
+  .switch a {
+    font-family: var(--font-mono); font-size: var(--type-ui);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase; color: var(--color-grey-300);
+    border: 1px solid transparent; padding: 6px 10px; text-decoration: none;
+  }
+  .switch a:hover { color: var(--color-grey-100); border-color: var(--color-line);
+                    text-decoration: none; }
+  .switch a[aria-current="true"] { color: var(--color-gold); border-color: var(--color-line);
+                                   background: var(--color-panel); }
+
+  /* ---- a row in a list of entries ---------------------------------------
+     The lane labels, the grid's first column and the downstream picker are all
+     "one entry, pick it". One row treatment, so three views do not read as
+     three products. */
+  /* 28px is LANE_H in src/lib/timeline.ts. The braid draws its lines against
+     these rows, so if you change one, change both. */
+  .pickrow {
+    display: flex; align-items: center; gap: 9px; width: 100%; height: 28px;
+    flex: none; padding: 0 12px; text-align: left;
+    background: transparent; border: 0; border-top: 1px solid var(--color-line-soft);
+    cursor: pointer; font-family: var(--font-body); font-size: var(--type-meta);
+    color: var(--color-grey-200); text-decoration: none; overflow: hidden;
+  }
+  .pickrow:first-child { border-top: 0; }
+  .pickrow:hover { background: var(--color-raised); color: #fff; text-decoration: none; }
+  .pickrow[aria-pressed="true"], .pickrow[aria-current="true"] {
+    background: #1b1608; color: var(--color-gold);
+  }
+  .pickrow .kindtag {
+    font-family: var(--font-mono); font-size: var(--type-label);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase; color: var(--color-grey-700); width: 19px; flex: none;
+  }
+  .pickrow[aria-pressed="true"] .kindtag, .pickrow[aria-current="true"] .kindtag {
+    color: var(--color-gold);
+  }
+  .pickrow .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* An empty surface is an invitation, not a blank. */
+  .emptystate { padding: 30px 24px; max-width: 46ch; }
+  .emptystate p { font-size: var(--type-body); color: var(--color-grey-300); margin: 14px 0 0; }
+  .emptystate p.quiet { color: var(--color-grey-500); font-size: var(--type-meta); }
+  .emptystate[hidden] { display: none; }
+
+  /* What a stage head puts over a column: the thing's number on its own
+     colour, and its name under it. The braid names books and the grid names
+     floors, but they are the same object and had drifted to different sizes and
+     different faces. Only the alignment differs — the braid's bands are as wide
+     as their book is long, so they align left; a grid column centres. */
+  .headstamp { display: flex; flex-direction: column; gap: 6px; overflow: hidden; }
+  .headstamp b {
+    font-family: var(--font-display); font-weight: 800; font-size: var(--type-entry);
+    line-height: 1; padding: 3px 6px 2px; min-width: 30px; text-align: center;
+    align-self: flex-start;
+  }
+  .headstamp span {
+    font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.35;
+    color: var(--color-grey-300); overflow: hidden;
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  }
+  .headstamp.is-centred { align-items: center; }
+  .headstamp.is-centred b { align-self: center; }
+
+  /* ---- the head of a stage ----------------------------------------------
+     Pinned to the top of its scroller, with the entry column's label frozen to
+     the left. One ground, one height, one rule, in all three views. */
+  /* max-content, so the head is as wide as the body it heads. At 100% it stops
+     at the viewport and its ticks stop lining up with the chart under them. */
+  .stagehead { display: flex; position: sticky; top: 0; z-index: 4; flex: none;
+               width: max-content; min-width: 100%;
+               height: var(--head-h); background: var(--color-raised);
+               border-bottom: 1px solid var(--color-line); }
+  .stagehead-entry {
+    position: sticky; left: 0; z-index: 5; width: var(--entry-col); flex: none;
+    display: flex; align-items: flex-end; padding: 0 12px 9px;
+    background: var(--color-raised); border-right: 1px solid var(--color-line);
+    font-family: var(--font-mono); font-size: var(--type-label);
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase; color: var(--color-grey-500);
+  }
+  /* Slotted content sits on the same baseline as the entry label. The braid's
+     axis opts out by positioning itself absolutely inside this box. */
+  .stagehead-body { position: relative; flex: 1 1 auto; min-width: 0;
+                    display: flex; align-items: flex-end; }
+  /* A head whose content sets its own width must not be shrunk to fit. */
+  .stagehead-body > * { flex: none; }
+
+  /* The row under it: the same frozen left column, every view. */
+  .stagerow { display: flex; }
+  .stagerow > .entrycell {
+    position: sticky; left: 0; z-index: 3; width: var(--entry-col); flex: none;
+    background: var(--color-panel); border-right: 1px solid var(--color-line);
+  }
+
+  /* A panel beside a chart, divided the way .grid-cells divides: a 1px rule of
+     the line colour rather than a border that belongs to one side.
+
+     The stage is a fixed height — the screen, less the bar that stays pinned to
+     the top of it — and every part of it scrolls inside itself. A chart that
+     grows the page instead pushes its own axis off the top and leaves the reader
+     scrolling the document to read a column heading. `--rail-h` is measured on
+     the client because the position bar wraps on narrow screens; the fallback
+     is what it measures at full width. */
+  /* Compact by default — it is one section of a page, not the page. Full screen
+     is where it gets room. */
+  .stage {
+    display: grid; gap: 1px; background: var(--color-line);
+    height: 60dvh; min-height: 380px; margin-top: 22px;
+  }
+  /* Full screen: the same component, given the whole window for a deep dive. */
+  .stage.is-full {
+    position: fixed; inset: 0; z-index: 60;
+    width: 100dvw; height: 100dvh; max-width: none; margin: 0; border: 0;
+  }
+  .stage-exit { position: absolute; top: 10px; right: 12px; z-index: 61; }
+  /* The finder, moved inside the overlay: it is a row of the stage now, not a
+     panel floating above the page, so it drops its outer spacing and border. */
+  .stage.is-full .finder-wrap { padding: 0; grid-column: 1 / -1; }
+  .stage.is-full .finder { border: 0; border-bottom: 1px solid var(--color-line); }
+  /* Close already sits in that corner and does the same job. */
+  .stage.is-full #fullscreen { display: none; }
+  .stage > * { background: var(--color-panel); min-width: 0; overflow: auto; }
+  /* A column that lays out its own scroller (a status strip above a chart)
+     handles overflow itself; a second scrollbar on the wrapper is a bug. */
+  .stage > .stagemain { overflow: hidden; }
+
+  /* The timeline needs more width than a column of prose. It is a named part
+     of the system rather than a number invented on one page. */
+  .wrap-wide { max-width: var(--measure-wide); margin-inline: auto; padding-inline: 24px; }
 }
+
+/* While the stage owns the window, the page behind it holds still. */
+body.is-locked { overflow: hidden; }
+
+@media (max-width: 640px) { :root { --entry-col: 150px; } }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

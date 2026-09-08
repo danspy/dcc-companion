@@ -1,0 +1,120 @@
+---
+import EntryList from './EntryList.astro';
+import StageHead from './StageHead.astro';
+import EmptyState from './EmptyState.astro';
+import { taglineFor, type EntityRow, type RelationRow } from '../lib/content';
+import type { Gate } from '../lib/spoiler';
+import { stampOf, type Lane } from '../lib/timeline';
+
+interface Props {
+  lanes: Lane[]; entities: EntityRow[]; relations: RelationRow[];
+  gate: Gate; subject: Lane | null; full: boolean; shown?: Set<string>;
+}
+const { lanes, entities, relations, gate, subject, full, shown } = Astro.props;
+
+const byId = new Map(entities.map(e => [e.id, e]));
+const reached = (e: EntityRow | undefined) => e && gate.frontier >= 0 && byId.has(e.id) ? e : undefined;
+
+/* The relations of one entity, and what happened at the other end of each after
+   it formed. This is a walk of the curated graph — the data nowhere claims that
+   any of it was *caused* by the subject, and the note under the list says so. */
+const links = subject
+  ? relations
+      .filter(r => gate.frontier >= r.sortKey &&
+                   (r.fromId === subject.entity.id || r.toId === subject.entity.id))
+      .flatMap(rel => {
+        const otherId = rel.fromId === subject.entity.id ? rel.toId : rel.fromId;
+        const other = reached(byId.get(otherId));
+        if (!other) return [];
+        const lane = lanes.find(l => l.entity.id === otherId);
+        const beats = (lane?.beats ?? []).filter(b => b.sortKey >= rel.sortKey);
+        return beats.map(beat => ({ rel, other, beat }));
+      })
+      .sort((a, b) => a.beat.sortKey - b.beat.sortKey)
+  : [];
+---
+<div class="scroll">
+  <StageHead>
+    <p class="headnote">{subject
+      ? `Following ${subject.entity.name}`
+      : 'Pick an entry to follow it outward'}</p>
+  </StageHead>
+
+  <div class="stagerow downbody">
+    <div class="entrycell">
+      <EntryList lanes={lanes} gate={gate} active={subject?.entity.id ?? null}
+                 shown={shown}
+                 hrefFor={(id) =>
+                   `/when?view=downstream&id=${id}${full ? '&full=1' : ''}`} />
+    </div>
+
+    <div class="chain">
+      {subject ? (
+        <>
+          <p class="eyebrow">{subject.entity.role}</p>
+          <h2>{subject.entity.name}</h2>
+          <p class={`lede${subject.entity.voice === 'self' ? ' spoken' : ''}`}>{taglineFor(subject.entity, gate)}</p>
+          <h3 class="sect">{links.length} downstream {links.length === 1 ? 'entry' : 'entries'} so far</h3>
+          {links.length ? links.map(link => (
+            <div class="link">
+              <span class="at">{stampOf(link.beat.sortKey)}</span>
+              <span class="bd">
+                <span class="via">{subject.entity.name} · {link.rel.kind} · {link.other.name}</span>
+                <span class="hd">{link.beat.headline}</span>
+                <span class="tx">{link.beat.text}</span>
+              </span>
+            </div>
+          )) : <p class="hint">Nothing downstream reached yet.</p>}
+          <div class="caveat">
+            <p>These are the recorded ties of {subject.entity.name}, and what happened at the far
+              end of each one after it became true. Nothing in the record claims that any of it
+              followed <em>because</em> of {subject.entity.name}.</p>
+          </div>
+        </>
+      ) : (
+        <EmptyState title="Nothing followed">
+          <p>Pick a name on the left and the record follows it outward: every tie
+            in the order it forms, and what happened at the far end of each.</p>
+        </EmptyState>
+      )}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* .stage supplies the 1px divider and the panel grounds. */
+  /* One scroller, like the other two views. Splitting it in two left the chain
+     — which is most of the width — with nothing to scroll whenever no entry was
+     open, so the wheel did nothing across almost the whole view. This view
+     simply never scrolls itself on arrival instead. */
+  .scroll { flex: 1 1 auto; min-height: 0; overflow: auto; }
+  .downbody { align-items: flex-start; }
+  .headnote { margin: 0; align-self: flex-end; padding: 0 0 9px 14px;
+              font-family: var(--font-mono); font-size: var(--type-label);
+              letter-spacing: var(--ls-label);
+              text-transform: uppercase; color: var(--color-gold); }
+  .chain { flex: 1 1 auto; min-width: 0; padding: 22px 26px 50px; }
+  /* The empty state brings its own padding. */
+  .chain > :global(.emptystate) { padding: 8px 0 0; }
+  .chain h2 { font-size: var(--type-title); font-weight: 700; color: #fff; margin: 9px 0 0; }
+  /* .sect carries size, weight and colour; only the rhythm is local. */
+  .chain h3 { margin: 30px 0 14px; }
+  .lede { color: var(--color-grey-200); max-width: var(--measure); margin: 13px 0 0;
+          font-size: var(--type-lede); }
+  .link { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 14px;
+          padding: 12px 0; border-top: 1px solid var(--color-line-soft); }
+  .at { font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-500);
+        font-variant-numeric: tabular-nums; }
+  .bd { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+  .via { font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-gold);
+         letter-spacing: var(--ls-label); }
+  /* The same object as a beat's headline on the entity page, so the same size. */
+  .hd { font-family: var(--font-display); text-transform: uppercase; font-weight: 700;
+        font-size: var(--type-entry); color: var(--color-grey-100); }
+  .tx { font-size: var(--type-body); color: var(--color-grey-300); max-width: var(--measure); }
+  .hint { font-family: var(--font-mono); font-size: var(--type-ui); color: var(--color-grey-500); }
+  .caveat { border: 1px solid var(--color-line); background: var(--color-ink);
+            padding: 14px 16px; margin-top: 26px; max-width: var(--measure); }
+  .caveat p { margin: 0; font-size: var(--type-meta); color: var(--color-grey-300); }
+  @media (max-width: 900px) { .chain { padding: 18px 16px 40px; } }
+</style>

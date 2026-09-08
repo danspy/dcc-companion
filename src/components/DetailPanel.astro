@@ -1,0 +1,124 @@
+---
+import BeatEntry from './BeatEntry.astro';
+import EmptyState from './EmptyState.astro';
+import { taglineFor, KIND_LABELS, type EntityRow, type FloorRow, type RelationRow } from '../lib/content';
+import type { Gate } from '../lib/spoiler';
+import type { Lane } from '../lib/timeline';
+
+interface Props {
+  lanes: Lane[]; entities: EntityRow[]; floors: FloorRow[];
+  relations: RelationRow[]; gate: Gate; current: string | null;
+}
+const { lanes, entities, floors, relations, gate, current } = Astro.props;
+
+const byId = new Map(entities.map(e => [e.id, e]));
+const floorById = new Map(floors.map(f => [f.id, f]));
+
+/* One card per lane actually drawn, so this panel's weight is bounded by the
+   lane control the reader already sets. Every card is server-rendered from the
+   same gated query the lanes came from: one copy of the content, not an index
+   of it, which is the property /who is built on. */
+const cards = lanes.map(lane => ({
+  lane,
+  tagline: taglineFor(lane.entity, gate),
+  rels: relations
+    .filter(r => gate.frontier >= r.sortKey &&
+                 (r.fromId === lane.entity.id || r.toId === lane.entity.id))
+    .map(r => ({
+      kind: r.kind.replace(/-/g, ' '), note: r.note,
+      other: byId.get(r.fromId === lane.entity.id ? r.toId : r.fromId),
+    }))
+    .filter(r => r.other && r.other.id !== lane.entity.id),
+}));
+
+/* Nothing is open until the reader opens something. Defaulting to the first
+   entry puts a page of somebody's life in front of a question nobody asked. */
+const active = current && cards.some(c => c.lane.entity.id === current) ? current : null;
+---
+<aside class="panel" id="detail-panel">
+  <EmptyState title="Nothing open" id="detail-empty" hidden={active !== null}>
+    <p>Pick a name on the left and its file opens here: what it is, every moment
+      of it you have reached, and who it is tied to.</p>
+    <p class="quiet">In the braid, picking a name also closes the chart to that
+      entry and its ties.</p>
+  </EmptyState>
+  {cards.map(({ lane, tagline, rels }) => (
+    <article data-card={lane.entity.id}
+             class:list={['dcard', { on: lane.entity.id === active }]}>
+      <p class="eyebrow">{KIND_LABELS[lane.entity.kind]} · {lane.entity.role}</p>
+      <h2><a href={`/entity/${lane.entity.id}`}>{lane.entity.name}</a></h2>
+      {tagline && (
+        <p class={`dlede${lane.entity.voice === 'self' ? ' spoken' : ''}`}>{tagline}</p>
+      )}
+
+      <h3 class="sect">{lane.beats.length} {lane.beats.length === 1 ? 'entry' : 'entries'} reached</h3>
+      <ol class="log">
+        {lane.beats.map(beat => (
+          <BeatEntry beat={beat} floor={beat.floor ? floorById.get(beat.floor) : null}
+                     id={`b-${lane.entity.id}-${beat.sortKey}`} />
+        ))}
+      </ol>
+
+      {rels.length > 0 && (
+        <>
+          <h3 class="sect">Connections</h3>
+          {/* A connection is a move within the chart, not a way out of it: on
+              /when the script switches to that entry in the view the reader is
+              already in. It stays a real link, so a cmd-click, a middle-click,
+              no JavaScript, and a connection to something with no line in this
+              view all open the full page as before. The entity page renders its
+              own list and keeps plain links. */}
+          <ul class="rels">
+            {rels.map(rel => (
+              <li>
+                <span class="rel-kind">{rel.kind}</span>
+                <a class="rel-to" data-lane={rel.other!.id}
+                   href={`/entity/${rel.other!.id}`}>{rel.other!.name}</a>
+                {rel.note && <p class="rel-note">{rel.note}</p>}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      <p class="dmore"><a href={`/entity/${lane.entity.id}`}>Open the full page →</a></p>
+    </article>
+  ))}
+</aside>
+
+{/* One card at a time is the CSS default here, with the no-JavaScript fallback
+    kept in when.astro *outside* the stage. Neither may live in this file:
+
+    - A script that adds a class works exactly once. A view switch replaces this
+      panel with markup parsed by DOMParser, which never runs a script inside it,
+      so after a switch the class was gone and all 243 cards showed at once with
+      the invitation on top.
+    - A <noscript> is worse. DOMParser parses with scripting *disabled*, so its
+      contents become real elements, and the swap then adopts them into the live
+      document — the fallback's own `display: block !important` was pulled in and
+      opened every card, in a browser that had JavaScript all along.
+
+    `scripts/check-stage.mjs` fails the build on either, in any component the
+    stage renders. */}
+
+<style>
+  /* Grounds, divider and scrolling all come from .stage. */
+  .panel { min-width: 0; }
+  .dcard { padding: 22px 22px 30px; border-bottom: 1px solid var(--color-line);
+           display: none; }
+  .dcard.on { display: block; }
+  .dcard h2 { font-size: var(--type-title); font-weight: 700; margin: 9px 0 0; }
+  .dcard h2 a { color: #fff; text-decoration: none; }
+  .dcard h2 a:hover { color: var(--color-gold); }
+  .dlede { font-size: var(--type-lede); color: var(--color-grey-200); margin: 13px 0 0;
+           max-width: var(--measure); }
+  /* Section headings match the entity page's, because they head the same lists. */
+  /* .sect carries size, weight and colour; only the rhythm is local. */
+  .dcard h3 { margin: 28px 0 14px; }
+  .dcard .rels a { font-size: var(--type-meta); color: var(--color-gold); }
+  .dmore { margin-top: 22px; font-family: var(--font-mono); font-size: var(--type-ui); }
+  /* The beat a reader clicked, so the click lands somewhere visible. */
+  .dcard :global(.entry.picked) { background: #1b1608; }
+  .dcard :global(.entry) { scroll-margin-top: 96px; }
+
+</style>

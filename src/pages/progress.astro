@@ -14,10 +14,11 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
 ---
 <Layout title="Position">
   <section class="wrap head">
-    <p class="eyebrow">03</p>
+    <p class="eyebrow">04</p>
     <h1>Your Position</h1>
-    <p class="standfirst">Where you are in the crawl, and how much of the companion that opens.
-      Change it in the bar at the top of any page.</p>
+    <p class="standfirst">How far down you have told us you are, and how much that unlocks.
+      Adjust it in the bar at the top of any page, and name a chapter if you are only partway
+      through a book.</p>
   </section>
 
   <section class="wrap">
@@ -36,32 +37,32 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
       <div class="stat">
         <span class="k">Entries unsealed</span>
         <span class="v">{entityShown}<i>/{entities.length}</i></span>
-        <span class="n">characters, items, mechanics, factions, threads</span>
+        <span class="n">people, gear, mechanics, factions, places, loose ends</span>
       </div>
       <div class="stat">
         <span class="k">Timeline entries</span>
         <span class="v">{beatShown}<i>/{beats.length}</i></span>
-        <span class="n">moments on those pages, floor by floor</span>
+        <span class="n">moments filed under them, floor by floor</span>
       </div>
     </div>
 
     <div class="prose explain">
-      <p><strong>Entries unsealed</strong> is how many characters, items, mechanics, factions and
-        loose ends you can open right now. <strong>Timeline entries</strong> counts the individual
-        moments on those pages — a page fills in as you read rather than arriving whole, so someone
-        two floors behind you sees the same character with less of their story attached.</p>
+      <p><strong>Entries unsealed</strong> is what the record will open for you right now: people,
+        gear, mechanics, factions, places, loose ends. <strong>Timeline entries</strong> counts the
+        individual moments filed under them. No file is handed over whole — it fills in as you
+        descend, so a crawler two floors above you opens the same name and finds less inside it.</p>
       {!prefs.book && prefs.spoilers ? (
         <p class="sys"><b>*** No position set ***</b>{UNSET_COPY}</p>
       ) : current?.chapters ? (
-        <p>{current.title} has <strong>{current.chapters} chapters</strong>.{' '}
+        <p>{current.title} runs to <strong>{current.chapters} chapters</strong>.{' '}
           {prefs.chapter
-            ? <>You are at chapter {prefs.chapter}, about <strong>{pct}%</strong> in — the figure to
-              use if you are listening rather than reading.</>
-            : <>You have not named a chapter, so all of it is unsealed. Type a chapter number in the
-              bar above if you are only partway.</>}</p>
+            ? <>You are logged at chapter {prefs.chapter}, about <strong>{pct}%</strong> down it —
+              the number to use if you are listening rather than reading.</>
+            : <>No chapter logged, so the whole book counts as walked. Name one in the bar above if
+              you are only partway.</>}</p>
       ) : (
-        <p class="sys"><b>*** No chapter count ***</b>Nothing recorded for this one yet, so the
-          chapter dial is off and the whole book counts as read.</p>
+        <p class="sys"><b>*** No chapter count ***</b>Nothing filed for this one, so the dial is
+          off and the whole book counts as walked.</p>
       )}
     </div>
 
@@ -95,7 +96,7 @@ const pct = percentFromChapter(prefs.chapter, current?.chapters ?? null);
   .head { padding-block: 48px 30px; }
   h1 { font-size: clamp(40px, 7vw, 72px); font-weight: 800; margin-top: 10px; }
   .standfirst { font-size: 16.5px; color: var(--color-grey-200); max-width: var(--measure); margin-top: 18px; }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
            gap: 1px; background: var(--color-line); border: 1px solid var(--color-line); }
   .stat { background: var(--color-panel); padding: 18px; display: flex; flex-direction: column; gap: 4px; }
   .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em;

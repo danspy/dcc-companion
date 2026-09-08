@@ -1,0 +1,951 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BraidView from '../components/BraidView.astro';
+import GridView from '../components/GridView.astro';
+import DownstreamView from '../components/DownstreamView.astro';
+import DetailPanel from '../components/DetailPanel.astro';
+import { UNSET_COPY, reveals } from '../lib/spoiler';
+import {
+  getBooks, getFloors, getEntities, getAllBeats, getAllRelations, readGate, KIND_LABELS,
+  taglineFor,
+} from '../lib/content';
+import { floorsReached, lanesFor, findRe, keeps, findableOf } from '../lib/timeline';
+
+const { gate } = await readGate(Astro.cookies);
+const [books, floors, entities, beats, relations] = await Promise.all([
+  getBooks(), getFloors(), getEntities(), getAllBeats(), getAllRelations(),
+]);
+
+/* The view lives in the URL so the switch is three links and the whole page
+   still works with no JavaScript, which is the property /who already has. */
+const params = Astro.url.searchParams;
+const VIEWS = ['braid', 'grid', 'downstream'] as const;
+type View = (typeof VIEWS)[number];
+const view: View = (VIEWS as readonly string[]).includes(params.get('view') ?? '')
+  ? (params.get('view') as View) : 'braid';
+
+const { lanes, met } = lanesFor(entities, beats, gate);
+const reachedFloors = floorsReached(floors, gate);
+
+/* The filter is applied here, not only in the script. It used to live purely on
+   the client, so every real navigation — a reload, a shared link, a fallback
+   when a swap could not complete — painted all 243 rows and stayed that way if
+   anything stopped the script from re-applying. The rows the reader filtered
+   away now arrive already stamped `hidden`, so the sidebar is correct in the
+   first paint and the script only has to keep it correct. */
+const query = params.get('q') ?? '';
+const kindFilter = new Set((params.get('kinds') ?? '').split(',').filter(Boolean));
+const re = findRe(query);
+const filtering = query.trim() !== '' || kindFilter.size > 0;
+const shown = new Set(
+  lanes
+    .filter(l => keeps(findableOf(l.entity, taglineFor(l.entity, gate)), l.entity.kind, re, kindFilter))
+    .map(l => l.entity.id),
+);
+
+const wanted = params.get('id');
+/* Full screen lives in the address, so a link that reloads the page — a
+   downstream pick, a view switch — does not drop you back out of it. */
+const full = params.get('full') === '1';
+/* Nothing is followed until the reader picks something, here too. */
+const subject = lanes.find(l => l.entity.id === wanted) ?? null;
+
+/* Counts are of entries the reader has met. A total would say how many are
+   still coming, which is the structural leak this project keeps closing. */
+const chips = Object.entries(KIND_LABELS)
+  .map(([kind, label]) => ({
+    kind, label,
+    met: entities.filter(e => e.kind === kind && reveals(gate, e.revealedAt)).length,
+  }))
+  .filter(c => c.met > 0);
+
+/* The open entry travels in the URL, so switching view keeps it and a link to
+   what you are reading is a link someone else can open. */
+const href = (next: Partial<{ view: string; id: string }>) => {
+  const q = new URLSearchParams();
+  q.set('view', next.view ?? view);
+  const id = next.id ?? wanted;
+  if (id) q.set('id', id);
+  if (full) q.set('full', '1');
+  return `/when?${q}`;
+};
+
+const empty = lanes.length === 0;
+const BLURBS: Record<View, string> = {
+  braid: 'One line per entry, run across the crawl. A dot is something that happened, in the colour of the book it happened in. Pick a name and the chart closes to that entry and the ones tied to it, each tie drawn at the chapter it became true.',
+  grid: 'What each entry did on each floor. The number is how many of its moments you have reached there.',
+  downstream: 'One entry, every tie it makes in the order it makes them, and what happened at the far end afterwards. The record notes ties. It does not assign blame.',
+};
+---
+<Layout title="When">
+  <section class="wrap head">
+    <p class="eyebrow">03</p>
+    <h1>When</h1>
+    <p class="standfirst">The same record, laid along the descent instead of down a list. Every
+      line stops where you stopped — there is nothing past that to draw, crawler.</p>
+    {gate.spoilers && gate.fresh && (
+      <p class="sys" style="max-width:var(--measure);margin-top:20px">
+        <b>*** No position set ***</b>{UNSET_COPY}
+      </p>
+    )}
+  </section>
+
+  <section class="wrap wide-only">
+    <div class="finder-wrap"><div class="finder">
+      <div class="finder-row heads">
+        <nav class="switch" aria-label="How to lay the entries out">
+          {VIEWS.map(v => (
+            <a href={href({ view: v })} aria-current={v === view ? 'true' : 'false'}>
+              {v === 'downstream' ? 'Downstream' : v[0].toUpperCase() + v.slice(1)}
+            </a>
+          ))}
+        </nav>
+        {/* Pushed away from the view names: this is not a fourth view, it is what
+            size the current one is. */}
+        <button type="button" class="btn push-end" id="fullscreen"
+                aria-pressed={full ? 'true' : 'false'}>Full screen</button>
+      </div>
+      <p class="finder-note">{BLURBS[view]}</p>
+        <div class="finder-row">
+          <label class="finder-search" for="find">
+            <span class="vh">Search entries you have met</span>
+            <input id="find" type="search" autocomplete="off" spellcheck="false"
+                   value={query}
+                   placeholder="Search names, roles and descriptions" />
+            <kbd>/</kbd>
+          </label>
+        </div>
+        <div class="finder-row">
+          <div class="finder-chips">
+            {chips.map(c => (
+              <button type="button" class="chip-btn" data-chip={c.kind}
+                    aria-pressed={kindFilter.has(c.kind) ? 'true' : 'false'}
+                    disabled={empty}>
+                {c.label}<span class="n">{c.met}</span>
+              </button>
+            ))}
+          </div>
+          <p class="tally" id="tally" data-met={String(met)}>{empty ? ''
+            : filtering ? `${shown.size} of ${met} shown` : `${met} with entries`}</p>
+        </div>
+    </div></div>
+  </section>
+
+  {/* With no JavaScript nothing can pick an entry, so the panel opens every card
+      and reads as a list of what is drawn. This has to sit outside #stage: a view
+      swap parses the page with DOMParser, which materialises <noscript> content
+      into real elements and would adopt this rule into a scripted page. */}
+  <noscript><style is:inline>.dcard { display: block !important; }</style></noscript>
+
+  {!empty && (
+    <section class="wrap narrow-only">
+      <p class="sys" style="max-width:var(--measure)">
+        <b>*** Display too narrow ***</b>Eleven floors will not fit through a porthole, crawler.
+        Come back on a wider screen and the chart will be waiting. The record itself reads
+        perfectly well in a straight line.
+      </p>
+      <p class="tolist"><a class="btn btn-go" href="/who">Read it as a list →</a></p>
+    </section>
+  )}
+
+  {empty ? (
+    <section class="wrap">
+      <p class="sealed empty"><b>*** Sealed ***</b>{gate.fresh
+        ? 'Nothing to lay out until you say where you are.'
+        : 'Nothing reached on this position yet. Come back lower down.'}</p>
+    </section>
+  ) : (
+    <section class="wrap wide-only">
+      {/* One wrapper for all three views. Downstream used to render outside it
+          and so had no top gap, no height and no way to clear a selection —
+          one missing wrapper, four symptoms. */}
+      <div class:list={['stage', 'slab', { 'is-full': full }]} id="stage"
+           data-panel={view === 'downstream' ? 'none' : 'yes'}>
+        <button type="button" class="btn stage-exit" id="exitfull" hidden={!full}>Close</button>
+        <div class="stagemain">
+          <p class="following" id="following" hidden>
+            <span id="following-text"></span>
+            <button type="button" class="btn" id="showall">Clear</button>
+          </p>
+          {view === 'braid' ? (
+            <BraidView lanes={lanes} books={books} floors={reachedFloors}
+                       relations={relations} gate={gate} shown={shown}
+                       focus={subject?.entity.id ?? null} />
+          ) : view === 'grid' ? (
+            <GridView lanes={lanes} floors={reachedFloors} gate={gate} shown={shown}
+                      active={subject?.entity.id ?? null} />
+          ) : (
+            <DownstreamView lanes={lanes} entities={entities} relations={relations}
+                            gate={gate} subject={subject} full={full} shown={shown} />
+          )}
+        </div>
+        {view !== 'downstream' && (
+          <DetailPanel lanes={lanes} entities={entities} floors={reachedFloors}
+                       relations={relations} gate={gate} current={wanted} />
+        )}
+      </div>
+    </section>
+  )}
+
+    {full && (
+    <script is:inline>document.body.classList.add('is-locked');</script>
+  )}
+</Layout>
+
+<style>
+  .head { padding-block: 48px 22px; }
+  h1 { font-size: clamp(40px, 7vw, 72px); font-weight: 800; margin-top: 10px; }
+  .standfirst { font-size: var(--type-lede); color: var(--color-grey-200);
+                max-width: var(--measure); margin-top: 18px; }
+
+  /* Chart on the left, the entry you picked on the right. Below 1180 the panel
+     drops under the chart rather than squeezing either. */
+  /* The chart column holds a status strip above a scroller that takes the rest. */
+  .stagemain { display: flex; flex-direction: column; }
+  .following { display: flex; align-items: center; gap: 12px; flex: none; margin: 0;
+               padding: 8px 14px; border-bottom: 1px solid var(--color-line);
+               background: var(--color-raised); font-family: var(--font-mono);
+               font-size: var(--type-label); letter-spacing: var(--ls-label);
+               text-transform: uppercase; color: var(--color-gold); }
+  .following .btn { margin-left: auto; padding: 4px 9px; }
+  .following[hidden] { display: none; }
+
+  /* .stage and its 1px divider are in the component layer; this page only
+     says how wide the panel is. */
+  /* Only the column split is this page's business. Height, spacing and the
+     full-screen override live in the component layer, together — a scoped rule
+     here is unlayered and would silently beat them. */
+  .stage { grid-template-columns: minmax(0, 1fr) 400px; }
+  /* Downstream's middle is its own detail, so it takes the whole stage. */
+  .stage[data-panel="none"] { grid-template-columns: minmax(0, 1fr); }
+  /* The panel narrows; it does not move. Dropping it under the chart made the
+     stage two stacked scrollers inside a 60dvh box, so the chart got half a
+     view and the card you had just opened was somewhere below the fold. There
+     is no width where that is better than a narrower column — and under 900px
+     the whole component steps aside anyway, so this is the only other case.
+     `[data-panel="none"]` outranks this, so downstream stays one column. */
+  @media (max-width: 1180px) { .stage { grid-template-columns: minmax(0, 1fr) 340px; } }
+
+  .empty { max-width: var(--measure); margin-top: 26px; }
+  .tolist { margin: 20px 0 0; }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden;
+        clip-path: inset(50%); white-space: nowrap; }
+</style>
+
+<script>
+  import { LANE_H, arcPath, findRe, keeps, laneY, svgHeight } from '../lib/timeline';
+
+  /* Progressive enhancement, and the same security argument /who makes: this
+     filters and reveals what the server already rendered. There is no second
+     copy of the content in the document, so there is no second place to get the
+     gate wrong. What the script adds is re-stacking — hide a lane and the ones
+     below move up, with each arc redrawn from the new positions rather than
+     from any data of its own — and showing one detail card at a time. */
+  /* The finder and the strip live outside the stage and survive a view swap;
+     everything else is inside it and is re-queried by refresh(), because
+     switching view replaces the stage's contents. Nothing below may hold a node
+     from inside the stage across a swap. */
+  const box = document.getElementById('find') as HTMLInputElement | null;
+  const tally = document.getElementById('tally');
+
+  let svg: SVGSVGElement | null = null;
+  let panel: HTMLElement | null = null;
+  let emptyState: HTMLElement | null = null;
+  let entryRows: HTMLElement[] = [];
+  let laneGroups: SVGGElement[] = [];
+  let arcs: SVGPathElement[] = [];
+  let cards: HTMLElement[] = [];
+  let filterable: HTMLElement[] = [];
+  let chainBox: HTMLElement | null = null;
+  let headNote: HTMLElement | null = null;
+
+  let following: HTMLElement | null = null;
+  let followingText: HTMLElement | null = null;
+  let exitBtn: HTMLElement | null = null;
+
+  /* One row class across all three views, so this is one list and one active
+     state rather than three that drifted. In the braid a row is a lane label;
+     in the grid it is the first cell of a row; in downstream it is a link. */
+  function refresh() {
+    svg = document.getElementById('braid-svg') as SVGSVGElement | null;
+    panel = document.getElementById('detail-panel');
+    emptyState = document.getElementById('detail-empty');
+    entryRows = Array.from(document.querySelectorAll<HTMLElement>('.entryrow'));
+    laneGroups = Array.from(document.querySelectorAll<SVGGElement>('.lane'));
+    arcs = Array.from(document.querySelectorAll<SVGPathElement>('.arc'));
+    cards = Array.from(document.querySelectorAll<HTMLElement>('.dcard'));
+    chainBox = document.querySelector<HTMLElement>('.chain');
+    headNote = document.querySelector<HTMLElement>('.headnote');
+    filterable = entryRows;
+    /* These live inside the stage too, so a swap replaces them. */
+    following = document.getElementById('following');
+    followingText = document.getElementById('following-text');
+    exitBtn = document.getElementById('exitfull');
+  }
+  refresh();
+
+  const kinds = new Set<string>();
+  /* One piece of state. The strip used to read the open card while the chart
+     narrowed on a separate `focus`, so a filter could close the card and leave
+     the braid narrowed with nothing saying so. */
+  let focus: string | null = null;
+  let settling = false;
+  /* What the reader picked, as opposed to what can be shown right now. A search
+     that hides the open entry closes its card, but it must not un-choose it, or
+     clearing the search would not bring it back and the address would quietly
+     forget where you were. */
+  let chosen: string | null = null;
+
+  /* Every link that could leave this page — the view switch and downstream's
+     picker — carries the current state, so following one keeps what the reader
+     set up even when JavaScript is off and it really does navigate. */
+  const stateLinks = () =>
+    Array.from(document.querySelectorAll<HTMLAnchorElement>('.switch a, a.entryrow'));
+
+  /* Write the open entry into the address and into the view links, so changing
+     view keeps it and the URL is worth copying. */
+  /* Everything the reader has set up travels in the address: what is open, how
+     big, what they searched for. A view switch and a downstream pick are page
+     loads, and without this they threw all of it away. */
+  function stateParams(): Record<string, string | null> {
+    const query = box?.value.trim() ?? '';
+    return {
+      id: chosen,
+      full: stage?.classList.contains('is-full') ? '1' : null,
+      q: query || null,
+      kinds: kinds.size ? [...kinds].join(',') : null,
+    };
+  }
+
+  /* The address bar is best-effort and must never break a navigation. Safari
+     throws SecurityError after 100 history writes in 30 seconds and Chrome
+     silently drops them, and `remember()` used to run on every keystroke — so a
+     long session tripped the limit, the throw aborted the rest of remember(),
+     and the switch links were left pointing at a bare ?view=. The next click
+     then loaded that URL and the reader's filter, chips and open entry were
+     gone. Nothing here may throw, and nothing here may be load-bearing. */
+  function setUrl(href: string) {
+    try { history.replaceState(null, '', href); } catch { /* the view is right regardless */ }
+  }
+
+  let urlPending = 0;
+  function setUrlSoon(href: string) {
+    clearTimeout(urlPending);
+    urlPending = setTimeout(() => setUrl(href), 200) as unknown as number;
+  }
+
+  function remember(_id?: string | null) {
+    const state = stateParams();
+    const url = new URL(location.href);
+    for (const [key, value] of Object.entries(state)) {
+      if (value) url.searchParams.set(key, value); else url.searchParams.delete(key);
+    }
+    /* Links first: they are what a click, a middle-click and a no-JavaScript
+       reader actually follow. The address bar comes after, and coalesced. */
+    for (const link of stateLinks()) {
+      const to = new URL(link.href, location.origin);
+      for (const [key, value] of Object.entries(state)) {
+        /* A picker link names its own entry; only the rest of the state travels. */
+        if (key === 'id' && link.dataset.lane) continue;
+        if (value) to.searchParams.set(key, value); else to.searchParams.delete(key);
+      }
+      link.href = `${to.pathname}?${to.searchParams}`;
+    }
+    setUrlSoon(url.href);
+  }
+
+  /* Hide whatever card is open without forgetting what was chosen. */
+  function closeCard() {
+    for (const card of cards) card.classList.remove('on');
+    if (emptyState) emptyState.hidden = false;
+    updateStrip();
+  }
+
+  function show(id: string | null, beatKey?: string) {
+    if (!panel) return;
+    if (!id) {
+      closeCard();
+      chosen = null;
+      remember();
+      return;
+    }
+    let found = false;
+    for (const card of cards) {
+      const on = card.dataset.card === id;
+      card.classList.toggle('on', on);
+      if (on) found = true;
+    }
+    if (!found) return;
+    if (emptyState) emptyState.hidden = true;
+    chosen = id;
+    remember();
+    updateStrip();
+    for (const entry of Array.from(panel.querySelectorAll('.entry.picked')))
+      entry.classList.remove('picked');
+    for (const row of entryRows)
+      if (row.tagName === 'BUTTON') row.setAttribute('aria-pressed', String(row.dataset.lane === id));
+    if (!beatKey) return;
+    const entry = panel.querySelector<HTMLElement>(
+      `.dcard[data-card="${CSS.escape(id)}"] .entry[data-key="${CSS.escape(beatKey)}"]`);
+    if (!entry) return;
+    entry.classList.add('picked');
+    entry.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  /* ---- the braid ------------------------------------------------------ */
+  function restack() {
+    if (!svg) return;
+    let order: string[] = [];
+    for (const row of entryRows) if (!row.hidden) order.push(row.dataset.lane!);
+
+    /* Following one entry puts it first and sorts the rest by *when* each
+       connection forms. Otherwise twenty-six arcs leave the same row at once
+       and overlap into a bundle; in time order they fan out down the page and
+       the shape of the entry's crawl is the thing you are looking at. */
+    if (focus && order.includes(focus)) {
+      const when = partnersOf(focus);
+      order = [focus, ...order.filter(id => id !== focus)
+        .sort((a, b) => (when.get(a) ?? Infinity) - (when.get(b) ?? Infinity))];
+    }
+    for (const row of entryRows) {
+      const place = order.indexOf(row.dataset.lane!);
+      row.style.order = place < 0 ? '' : String(place);
+    }
+    const at = new Map(order.map((id, i) => [id, i]));
+
+    for (const group of laneGroups) {
+      const i = at.get(group.dataset.lane!);
+      if (i === undefined) { group.setAttribute('display', 'none'); continue; }
+      group.removeAttribute('display');
+      group.setAttribute('transform', `translate(0,${i * LANE_H})`);
+    }
+    for (const arc of arcs) {
+      const a = at.get(arc.dataset.a!);
+      const b = at.get(arc.dataset.b!);
+      if (a === undefined || b === undefined || a === b) {
+        arc.setAttribute('display', 'none');
+        continue;
+      }
+      arc.removeAttribute('display');
+      arc.setAttribute('d', arcPath(Number(arc.dataset.x), laneY(a), laneY(b)));
+    }
+    const height = svgHeight(order.length);
+    const width = Number(svg.dataset.width);
+    svg.setAttribute('height', String(height));
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    /* The bands, ticks and frontier veil were drawn to the old height. */
+    for (const rect of Array.from(svg.querySelectorAll<SVGRectElement>('.bands rect, .frontier rect')))
+      rect.setAttribute('height', String(Math.max(height, 0)));
+    for (const line of Array.from(svg.querySelectorAll<SVGLineElement>('.bands line, .frontier line')))
+      line.setAttribute('y2', String(height));
+  }
+
+  /* Who a focused entry is connected to, read off the arcs the server drew.
+     No second copy of the graph: the connections are already in the document. */
+  function partnersOf(id: string): Map<string, number> {
+    const out = new Map<string, number>();
+    for (const arc of arcs) {
+      const other = arc.dataset.a === id ? arc.dataset.b
+                  : arc.dataset.b === id ? arc.dataset.a : null;
+      if (!other) continue;
+      const x = Number(arc.dataset.x);
+      if (!out.has(other) || x < out.get(other)!) out.set(other, x);
+    }
+    return out;
+  }
+
+  /* Following exists only where there is a chart to narrow. */
+  function setFocus(id: string | null) {
+    focus = svg ? id : null;
+    if (settling) return;
+    svg?.querySelector('.lanes')?.classList.toggle('focusing', focus !== null);
+    svg?.querySelector('.arcs')?.classList.toggle('focusing', focus !== null);
+    for (const group of laneGroups) group.classList.toggle('on', group.dataset.lane === focus);
+    for (const arc of arcs)
+      arc.classList.toggle('on', focus !== null && (arc.dataset.a === focus || arc.dataset.b === focus));
+    for (const row of entryRows)
+      if (row.tagName === 'BUTTON') row.setAttribute('aria-pressed', String(row.dataset.lane === focus));
+    apply();
+    updateStrip();
+  }
+
+  /* What is open, however this view records it: a card in the braid and grid,
+     the current link in downstream. */
+  function selectedId(): string | null {
+    return cards.find(c => c.classList.contains('on'))?.dataset.card
+      ?? document.querySelector<HTMLElement>('.entryrow[aria-current="true"]')?.dataset.lane
+      ?? null;
+  }
+
+  function updateStrip() {
+    if (!following || !followingText) return;
+    const id = selectedId();
+    following.hidden = id === null;
+    if (!id) return;
+    const name = entryRows.find(r => r.dataset.lane === id)
+      ?.querySelector('.name')?.textContent?.trim() ?? '';
+    if (svg) {
+      const n = partnersOf(id).size;
+      followingText.textContent =
+        `Following ${name} and ${n} ${n === 1 ? 'connection' : 'connections'}`;
+    } else {
+      followingText.textContent = `Showing ${name}`;
+    }
+  }
+
+  /* ---- filtering ------------------------------------------------------ */
+  /* One list of rows across all three views, but not one node to hide: in the
+     grid the name is the first cell of a wider row, so hiding the cell alone
+     would leave a nameless strip of floor marks behind. The data lives on the
+     cell; the row is what comes off the screen. */
+  const hideTarget = (el: HTMLElement) => el.closest<HTMLElement>('.gridrow') ?? el;
+
+  function apply() {
+    const q = box?.value.trim() ?? '';
+    /* findRe and keeps come from timeline.ts, which is also what rendered this
+       page — one predicate, so the server's first paint and this cannot differ. */
+    const re = findRe(q);
+    let shown = 0;
+    let firstVisible: string | null = null;
+    /* Following an entry narrows the chart to it and what it touches, because
+       arcs across a hundred and fifty rows are a curtain rather than an answer.
+       That is a braid problem and a braid fix: the grid draws no arcs, so
+       narrowing it would just hide the table for no reason. */
+    const kept = svg && focus ? partnersOf(focus) : null;
+    for (const el of filterable) {
+      const id = el.dataset.lane ?? '';
+      const okFocus = !kept || id === focus || kept.has(id);
+      const off = !(keeps(el.dataset.find ?? '', el.dataset.kind ?? '', re, kinds) && okFocus);
+      el.hidden = off;
+      const wrap = hideTarget(el);
+      if (wrap !== el) wrap.hidden = off;
+    }
+    for (const el of filterable) {
+      if (el.hidden) continue;
+      shown++;
+      firstVisible ??= el.dataset.lane ?? null;
+    }
+    restack();
+    /* A card for a lane that is no longer on screen is a card for something the
+       reader just filtered away. */
+    /* A filter that hides the chosen entry closes its card and stops the chart
+       following it — otherwise the braid stays narrowed by something the strip
+       no longer names. Clearing the filter brings both back. */
+    const visible = (id: string | null) =>
+      !!id && filterable.some(el => !el.hidden && el.dataset.lane === id);
+
+    if (chosen && !visible(chosen)) {
+      if (selectedId()) closeCard();
+      if (focus !== null) {
+        settling = true;
+        setFocus(null);
+        settling = false;
+        svg?.querySelector('.lanes')?.classList.remove('focusing');
+        svg?.querySelector('.arcs')?.classList.remove('focusing');
+        for (const g of laneGroups) g.classList.remove('on');
+        for (const a of arcs) a.classList.remove('on');
+        for (const r of entryRows)
+          if (r.tagName === 'BUTTON') r.setAttribute('aria-pressed', 'false');
+        updateStrip();
+      }
+    } else if (chosen && visible(chosen) && !selectedId()) {
+      show(chosen);
+    }
+    const filtering = (box?.value.trim() ?? '') !== '' || kinds.size > 0;
+    if (tally)
+      tally.textContent = filtering
+        ? `${shown} of ${tally.dataset.met} shown`
+        : `${tally.dataset.met} with entries`;
+  }
+
+  box?.addEventListener('input', () => { apply(); remember(); });
+
+  /* Put the search and the chips back to nothing. Used when the reader asks for
+     an entry the current filter hides — a click that does nothing visible is
+     worse than one that widens the view to answer it. */
+  function clearFilter() {
+    if (box) box.value = '';
+    for (const kind of [...kinds]) kinds.delete(kind);
+    for (const chip of Array.from(document.querySelectorAll('.chip-btn')))
+      chip.setAttribute('aria-pressed', 'false');
+    apply();
+    remember();
+  }
+
+  /* Picking an entry from somewhere other than its own row. Clicking the row is
+     what every view already defines as "open this", so this does exactly that
+     rather than a second implementation that could drift — then puts the row
+     where the reader can see it, the way arriving with `?id=` does. */
+  function pickEntry(id: string, row: HTMLElement) {
+    if (row.hidden) clearFilter();
+    row.click();
+    revealRow(id);
+  }
+
+  function pick(dot: SVGCircleElement) {
+    for (const other of Array.from(svg?.querySelectorAll('.dot.picked') ?? []))
+      other.classList.remove('picked');
+    dot.classList.add('picked');
+    setFocus(dot.dataset.lane!);
+    show(dot.dataset.lane!, dot.dataset.key);
+  }
+
+  /* ---- the controls ---------------------------------------------------
+     All delegated from the document. Switching view replaces the stage, so a
+     listener bound to a row or a dot would be attached to a node that no longer
+     exists — silently, which is the worst way for a control to break. */
+  document.addEventListener('click', event => {
+    const target = event.target as Element;
+
+    const chip = target.closest<HTMLElement>('.chip-btn');
+    if (chip) {
+      const kind = chip.dataset.chip!;
+      const on = chip.getAttribute('aria-pressed') === 'true';
+      chip.setAttribute('aria-pressed', String(!on));
+      if (on) kinds.delete(kind); else kinds.add(kind);
+      apply();
+      remember();
+      return;
+    }
+
+    const dot = target.closest<SVGCircleElement>('.dot');
+    if (dot) { pick(dot); return; }
+
+    /* A grid cell picks the entry *and* the first thing that happened to it on
+       that floor. */
+    const cell = target.closest<HTMLElement>('.mark');
+    if (cell) { show(cell.dataset.lane!, cell.dataset.key); return; }
+
+    /* A row is a row: the same click in every view. In the braid it also
+       follows, and clicking the followed one stops. */
+    const row = target.closest<HTMLElement>('.entryrow');
+    if (row && row.tagName === 'BUTTON') {
+      const id = row.dataset.lane!;
+      if (svg) setFocus(focus === id ? null : id);
+      show(id);
+      return;
+    }
+
+    /* Downstream's rows are links; take the plain left-click and swap the chain
+       instead of letting the browser reload the page. */
+    if (row && row.tagName === 'A' && chainBox && isPlainClick(event)) {
+      event.preventDefault();
+      void openChain(row as HTMLAnchorElement);
+      return;
+    }
+
+    /* A connection in the panel names another entry, and on this page that
+       entry is already on screen — so following it should move the chart, not
+       leave the page. Only when it has a line here: a connection to something
+       with no entries the reader has reached has nowhere to go but its own
+       page, and the link is left alone to do that. */
+    const relTo = target.closest<HTMLElement>('.rel-to');
+    if (relTo && isPlainClick(event)) {
+      const id = relTo.dataset.lane!;
+      const row = entryRows.find(r => r.dataset.lane === id);
+      if (row) {
+        event.preventDefault();
+        pickEntry(id, row);
+        return;
+      }
+    }
+
+    /* The view switch: same idea, one level up — swap the whole stage. */
+    const viewLink = target.closest<HTMLAnchorElement>('.switch a');
+    if (viewLink && isPlainClick(event)) {
+      event.preventDefault();
+      void swapView(viewLink);
+    }
+  });
+
+  const isPlainClick = (event: MouseEvent) =>
+    !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0;
+
+  /* A dot is a control, so it takes focus and answers the keyboard. Tabbing
+     through several hundred of them would be its own punishment, so the arrows
+     do the walking: left and right along one entry's line, up and down between
+     lines, and Home and End to the ends of a line. */
+  const dotsIn = (lane: SVGGElement) =>
+    Array.from(lane.querySelectorAll<SVGCircleElement>('.dot'));
+  const visibleLaneGroups = () =>
+    laneGroups.filter(g => g.getAttribute('display') !== 'none');
+
+  document.addEventListener('keydown', event => {
+    const dot = (event.target as Element).closest<SVGCircleElement>('.dot');
+    if (!dot) return;
+    const key = event.key;
+
+    if (key === 'Enter' || key === ' ') {
+      event.preventDefault();
+      pick(dot);
+      return;
+    }
+
+    const lane = dot.closest<SVGGElement>('.lane');
+    if (!lane) return;
+    const siblings = dotsIn(lane);
+    const here = siblings.indexOf(dot);
+    let next: SVGCircleElement | undefined;
+
+    if (key === 'ArrowRight') next = siblings[here + 1];
+    else if (key === 'ArrowLeft') next = siblings[here - 1];
+    else if (key === 'Home') next = siblings[0];
+    else if (key === 'End') next = siblings[siblings.length - 1];
+    else if (key === 'ArrowDown' || key === 'ArrowUp') {
+      const order = visibleLaneGroups();
+      const step = key === 'ArrowDown' ? 1 : -1;
+      const target = order[order.indexOf(lane) + step];
+      if (target) {
+        /* Land on whatever is nearest in time, so moving between lines keeps
+           your place in the crawl rather than jumping to a different chapter. */
+        const x = Number(dot.getAttribute('cx'));
+        next = dotsIn(target).reduce<SVGCircleElement | undefined>((best, candidate) =>
+          !best || Math.abs(Number(candidate.getAttribute('cx')) - x) <
+                   Math.abs(Number(best.getAttribute('cx')) - x) ? candidate : best, undefined);
+      }
+    }
+    if (!next) return;
+    event.preventDefault();
+    next.focus();
+    pick(next);
+  });
+
+  /* A grid row picks the entry; a cell picks the entry and jumps to the first
+     thing that happened to it on that floor. */
+  /* Downstream picks fetch the chain instead of reloading the page. The chain
+     stays server-rendered — that is what keeps the gate on the server and keeps
+     a copy of the graph out of the document — but swapping a fragment costs a
+     request, not the whole page, so the picker's scroll position, the search and
+     full screen all stay put. The rows are real links, so with no JavaScript
+     this is exactly the navigation it was before. */
+  let inFlight: AbortController | null = null;
+
+  /* Switching view swaps the stage's contents for the same view rendered by the
+     server. The stage element itself stays, so full screen and the scroll lock
+     survive; the finder is lifted out first because in full screen it lives
+     inside the stage and would be destroyed with it. */
+  async function swapView(link: HTMLAnchorElement) {
+    const stageEl = document.getElementById('stage');
+    if (!stageEl) { location.href = link.href; return; }
+    inFlight?.abort();
+    inFlight = new AbortController();
+    stageEl.setAttribute('aria-busy', 'true');
+    const wasFull = stageEl.classList.contains('is-full');
+
+    /* Only a failed *fetch* may fall back to a page load. Wrapping the DOM work
+       in the same catch turned any small error — a throttled history write —
+       into a reload that threw away the filter, the chips and the open entry,
+       which is far worse than the error it was insuring against. */
+    let doc: Document;
+    try {
+      const res = await fetch(link.href, { signal: inFlight.signal });
+      doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+    } catch (err) {
+      stageEl.removeAttribute('aria-busy');
+      /* An abort is the reader picking again before this one landed. */
+      if ((err as Error).name !== 'AbortError') location.href = link.href;
+      return;
+    }
+
+    {
+      const nextStage = doc.getElementById('stage');
+      if (!nextStage) { location.href = link.href; return; }
+
+      if (wasFull && finder && finderHome) finderHome.insertBefore(finder, finderNext);
+      stageEl.replaceChildren(...Array.from(nextStage.childNodes));
+      stageEl.dataset.panel = nextStage.dataset.panel ?? 'yes';
+
+      /* The blurb and the current view belong to the finder, which did not move. */
+      const note = document.querySelector('.finder-note');
+      const nextNote = doc.querySelector('.finder-note')?.textContent;
+      if (note && nextNote) note.textContent = nextNote;
+      for (const a of document.querySelectorAll<HTMLAnchorElement>('.switch a')) {
+        const isCurrent = new URL(a.href, location.origin).searchParams.get('view')
+          === new URL(link.href, location.origin).searchParams.get('view');
+        a.setAttribute('aria-current', String(isCurrent));
+      }
+
+      setUrl(link.href);
+      refresh();
+      if (wasFull) setFull(true);
+
+      /* Re-apply what the reader had set up to the freshly rendered view. */
+      focus = null;
+      apply();
+      if (chosen && entryRows.some(r => r.dataset.lane === chosen)) {
+        if (svg) setFocus(chosen);
+        show(chosen);
+        revealRow(chosen);
+      }
+      updateStrip();
+      remember();
+    }
+    stageEl.removeAttribute('aria-busy');
+  }
+
+  async function openChain(link: HTMLAnchorElement) {
+    if (!chainBox) return;
+    const id = link.dataset.lane!;
+    inFlight?.abort();
+    inFlight = new AbortController();
+    chainBox.setAttribute('aria-busy', 'true');
+    /* Same rule as the view swap: only a failed fetch may become a page load. */
+    let doc: Document;
+    try {
+      const res = await fetch(link.href, { signal: inFlight.signal });
+      doc = new DOMParser().parseFromString(await res.text(), 'text/html');
+    } catch (err) {
+      chainBox.removeAttribute('aria-busy');
+      /* An aborted request is the reader picking again before this one landed. */
+      if ((err as Error).name !== 'AbortError') location.href = link.href;
+      return;
+    }
+    {
+      const nextChain = doc.querySelector('.chain');
+      if (!nextChain) { chainBox.removeAttribute('aria-busy'); return; }
+      chainBox.replaceChildren(...Array.from(nextChain.childNodes));
+      const nextNote = doc.querySelector('.headnote')?.textContent;
+      if (headNote && nextNote) headNote.textContent = nextNote;
+      chainBox.scrollTop = 0;
+      const scroller = chainBox.closest<HTMLElement>('.scroll');
+      if (scroller) scroller.scrollTop = 0;
+      for (const row of entryRows) {
+        if (row.dataset.lane === id) row.setAttribute('aria-current', 'true');
+        else row.removeAttribute('aria-current');
+      }
+      chosen = id;
+      remember();
+      updateStrip();
+    }
+    chainBox.removeAttribute('aria-busy');
+  }
+
+  /* A grid cell is the one extra gesture: it picks the entry *and* the first
+     thing that happened to it on that floor. */
+  const chain = document.querySelector('.chain');
+  /* Full screen: the same component with the whole window to work in. The page
+     behind must not scroll, or closing it lands you somewhere else. */
+  const stage = document.getElementById('stage');
+  const fullBtn = document.getElementById('fullscreen');
+
+  /* Full screen moves the real controls inside the overlay rather than drawing a
+     second set: same element, same listeners, same state. */
+  const finder = document.querySelector<HTMLElement>('.finder-wrap');
+  const finderHome = finder?.parentElement ?? null;
+  const finderNext = finder?.nextElementSibling ?? null;
+
+  function setFull(on: boolean) {
+    if (!stage) return;
+    stage.classList.toggle('is-full', on);
+    document.body.classList.toggle('is-locked', on);
+    fullBtn?.setAttribute('aria-pressed', String(on));
+    if (exitBtn) exitBtn.hidden = !on;
+    /* Queried here rather than held: a view swap replaces .stagemain. */
+    const main = document.querySelector<HTMLElement>('.stagemain');
+    if (finder && main && finderHome) {
+      if (on) main.prepend(finder);
+      else finderHome.insertBefore(finder, finderNext);
+    }
+    remember();
+  }
+
+  fullBtn?.addEventListener('click', () => {
+    setFull(!stage?.classList.contains('is-full'));
+    exitBtn?.focus();
+  });
+  document.addEventListener('click', event => {
+    if ((event.target as Element).closest('#exitfull')) {
+      setFull(false);
+      fullBtn?.focus();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!(event.target as Element).closest('#showall')) return;
+    if (chainBox) { location.href = '/when?view=downstream'; return; }
+    setFocus(null);
+    show(null);
+  });
+
+  /* Arriving with an entry already open — switching view keeps it — should put
+     that entry where you can see it. Setting scrollTop rather than calling
+     scrollIntoView, because that scrolls every ancestor scrollport and would
+     drag the whole page with it; and offsetting by the pinned head, or the row
+     lands underneath it. */
+  /* Whichever box actually scrolls this row: one shared scroller in the braid
+     and grid, the picker's own in downstream. */
+  function scrollerOf(el: HTMLElement): HTMLElement | null {
+    for (let n = el.parentElement; n && n !== document.body; n = n.parentElement) {
+      const overflow = getComputedStyle(n).overflowY;
+      if ((overflow === 'auto' || overflow === 'scroll') && n.scrollHeight > n.clientHeight)
+        return n;
+    }
+    return null;
+  }
+
+  function revealRow(id: string) {
+    /* Downstream stays at the top. Its list and its reading share one scroller,
+       so scrolling to a name 200 rows down would scroll the reading past its own
+       opening — and the reading is the whole point of the view. */
+    if (document.querySelector('.chain')) return;
+    const row = entryRows.find(r => r.dataset.lane === id);
+    if (!row || row.hidden) return;
+    const scroller = scrollerOf(row);
+    if (scroller) {
+      /* Only offset by the head where the head is inside the same scroller and
+         would otherwise sit on top of the row. */
+      const head = document.querySelector('.stagehead');
+      const headH = head && scroller.contains(head)
+        ? head.getBoundingClientRect().height : 0;
+      const top = scroller.scrollTop
+        + (row.getBoundingClientRect().top - scroller.getBoundingClientRect().top)
+        - headH - 8;
+      scroller.scrollTop = Math.max(0, top);
+    }
+    /* The card starts at its own heading, not halfway down the last one. */
+    if (panel) panel.scrollTop = 0;
+  }
+
+  /* The server rendered whatever the address asked for; pick it up so the chart
+     narrows and the strip appears without a second click. */
+  const fromUrl = new URLSearchParams(location.search);
+  if (box && fromUrl.get('q')) box.value = fromUrl.get('q')!;
+  for (const kind of (fromUrl.get('kinds') ?? '').split(',').filter(Boolean)) {
+    kinds.add(kind);
+    document.querySelector(`.chip-btn[data-chip="${CSS.escape(kind)}"]`)
+      ?.setAttribute('aria-pressed', 'true');
+  }
+  /* The stage may already be full from the address; move the controls in. */
+  if (stage?.classList.contains('is-full')) setFull(true);
+
+  const opened = fromUrl.get('id');
+  if (opened && entryRows.some(r => r.dataset.lane === opened)) {
+    chosen = opened;
+    setFocus(opened);
+    show(opened);
+    revealRow(opened);
+  } else {
+    apply();
+  }
+  updateStrip();
+
+  document.addEventListener('keydown', event => {
+    const target = event.target as HTMLElement | null;
+    const typing = target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName);
+    if (event.key === '/' && !typing && !event.metaKey && !event.ctrlKey && !event.altKey) {
+      event.preventDefault();
+      box?.focus();
+      return;
+    }
+    if (event.key === 'Escape') {
+      if (stage?.classList.contains('is-full')) { setFull(false); return; }
+      if (box && target === box && box.value) { box.value = ''; apply(); return; }
+      setFocus(null);
+      show(null);
+    }
+  });
+
+  /* Seed every link with the state this page loaded with, so the first click
+     after a reload carries it too. */
+  remember();
+</script>

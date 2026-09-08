@@ -40,6 +40,14 @@ export async function getRelations(entityId: string) {
 /** Every beat in the book, newest last — the spine of the reading-position view. */
 export const getAllBeats = () => db.select().from(Beat).orderBy(asc(Beat.sortKey), asc(Beat.id));
 
+/* Every edge, for the views that draw the graph rather than one node of it.
+   Not mirrored: an arc between two lanes is one arc whichever side declared it,
+   and drawing it twice would double every line on the braid. */
+export const getAllRelations = () =>
+  db.select().from(Relation).orderBy(asc(Relation.sortKey), asc(Relation.id));
+
+export type RelationRow = typeof Relation.$inferSelect;
+
 /** The latest tagline the reader has reached — see the note on Entity.taglines. */
 export function taglineFor(entity: EntityRow, gate: Gate): string {
   const rows = (entity.taglines ?? []) as { sortKey: number; text: string }[];
@@ -58,16 +66,9 @@ export function descriptionFor(entity: EntityRow, gate: Gate): { text: string; s
   return out;
 }
 
-export const KIND_LABELS: Record<string, string> = {
-  character: 'Characters',
-  item: 'Items & artifacts',
-  mechanic: 'Mechanics',
-  faction: 'Factions',
-  place: 'Places',
-  thread: 'Open threads',
-};
-
-export const KIND_ORDER = ['character', 'item', 'mechanic', 'faction', 'place', 'thread'];
+/* Re-exported so every existing importer keeps working; they live in kinds.ts
+   because the timeline arithmetic needs the order without needing the database. */
+export { KIND_LABELS, KIND_ORDER } from './kinds';
 
 export const BEAT_LABELS: Record<string, string> = {
   origin: 'First seen',

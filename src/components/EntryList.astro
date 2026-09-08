@@ -1,0 +1,26 @@
+---
+import EntryRow from './EntryRow.astro';
+import type { Gate } from '../lib/spoiler';
+import type { Lane } from '../lib/timeline';
+
+/* A column of EntryRow. The grid places its rows one per table row instead, so
+   the row itself is the shared piece and this is just the stack of them. */
+interface Props {
+  lanes: Lane[]; gate: Gate; active: string | null;
+  hrefFor?: (id: string) => string;
+  /** Ids that survive the current filter; omitted means everything shows. */
+  shown?: Set<string>;
+}
+const { lanes, gate, active, hrefFor, shown } = Astro.props;
+---
+<div class="entrylist">
+  {lanes.map(lane => (
+    <EntryRow lane={lane} gate={gate} active={lane.entity.id === active}
+              href={hrefFor?.(lane.entity.id)}
+              hidden={shown ? !shown.has(lane.entity.id) : false} />
+  ))}
+</div>
+
+<style>
+  .entrylist { display: flex; flex-direction: column; }
+</style>

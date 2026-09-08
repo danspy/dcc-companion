@@ -1,0 +1,36 @@
+---
+import { taglineFor } from '../lib/content';
+import type { Gate } from '../lib/spoiler';
+import { findableOf, type Lane } from '../lib/timeline';
+
+/* One row of "these are the entries you have reached, pick one". Every view
+   uses it — as a column in the braid and downstream, and inside each row's
+   frozen first cell in the grid — so a name looks and behaves the same in all
+   three. A link is used only where the click has to reload (downstream renders
+   its chain on the server); `.pickrow` styles both states identically. */
+/* `hidden` is the server's half of the filter: the page is rendered with the
+   rows that do not match already stamped out, so a reader arriving on a link,
+   a reload or a view switch sees the filtered list in the first paint and
+   without waiting for — or depending on — any script. */
+interface Props { lane: Lane; gate: Gate; active: boolean; href?: string; hidden?: boolean }
+const { lane, gate, active, href, hidden = false } = Astro.props;
+
+const attrs = {
+  class: 'pickrow entryrow',
+  hidden: hidden || undefined,
+  'data-lane': lane.entity.id,
+  'data-kind': lane.entity.kind,
+  'data-met': '1',
+  'data-find': findableOf(lane.entity, taglineFor(lane.entity, gate)),
+  title: `${lane.entity.name} — ${lane.entity.role}`,
+};
+---
+{href
+  ? <a {...attrs} href={href} aria-current={active ? 'true' : undefined}>
+      <span class="kindtag">{lane.entity.kind.slice(0, 2)}</span>
+      <span class="name">{lane.entity.name}</span>
+    </a>
+  : <button type="button" {...attrs} aria-pressed={active ? 'true' : 'false'}>
+      <span class="kindtag">{lane.entity.kind.slice(0, 2)}</span>
+      <span class="name">{lane.entity.name}</span>
+    </button>}

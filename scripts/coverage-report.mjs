@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-/* Which characters and items earn a page, and where does each first appear?
+/* Which names earn a page, and where does each first appear?
    
-   Counts every name in the Fandom wiki's Characters and Items categories against
+   Counts every name in the Fandom wiki categories you name (--cat=, default
+   Characters) against
    the 474 chapter summaries in data/index/summaries.json, then reports the ones
    that come up often and have no entity yet. Frequency is a proxy for weight, so
    this is the queue: work down it, don't guess.
@@ -35,6 +36,9 @@ async function categoryMembers(cat) {
       cmtitle: `Category:${cat}`, cmlimit: '500', ...(cont ? { cmcontinue: cont } : {}),
     })}`;
     const j = await (await fetch(url, { headers: { 'User-Agent': UA } })).json();
+    /* A misspelt category answers 200 with an empty list, which reads as "nothing
+       to add" rather than "you asked for a category that isn't there". */
+    if (!j.query?.categorymembers) throw new Error(`No such category: ${cat}`);
     out.push(...j.query.categorymembers.map(m => m.title).filter(t => !t.startsWith('Category:')));
     cont = j.continue?.cmcontinue;
   } while (cont);
@@ -81,8 +85,26 @@ function scan(name) {
   return { count, first, books: Object.keys(perBook).length };
 }
 
-const kinds = process.argv.includes('--items') ? ['Items'] :
-              process.argv.includes('--all') ? ['Characters', 'Items'] : ['Characters'];
+/* Which of the wiki's categories to sweep. Characters and Items were the only
+   two for a long time, and the entities that fell outside them — NPCs, deities,
+   spells, quests, locations — were swept by hand instead, which is not
+   reproducible and quietly went stale. `--cat=Skills,Spells` names any category
+   on the wiki, so the sweep that doubled the graph can be re-run rather than
+   remembered. `--cat=all` is the whole list below. */
+const SWEEPABLE = [
+  'Characters', 'Items', 'NPCs', 'Bosses', 'Deities', 'Skills', 'Spells',
+  'Classes', 'Races', 'Mob Types', 'Groups', 'Factions', 'Corporations',
+  'Dungeon Locations', 'Dungeon Mechanics', 'Crawler Mechanics', 'Dungeon Lore',
+  'Quests', 'Shows', 'Achievements', 'Status Effects', 'Personal Spaces',
+  'Pets', 'Traps', 'Vehicles', 'Loot Boxes', 'Syndicate Organizations',
+];
+
+const catArg = process.argv.find(a => a.startsWith('--cat='))?.slice(6);
+const kinds =
+  catArg === 'all' ? SWEEPABLE :
+  catArg ? catArg.split(',').map(s => s.trim()).filter(Boolean) :
+  process.argv.includes('--items') ? ['Items'] :
+  process.argv.includes('--all') ? ['Characters', 'Items'] : ['Characters'];
 const min = Number(process.argv.find(a => a.startsWith('--min='))?.slice(6) ?? 4);
 
 const rows = [];
@@ -97,11 +119,11 @@ rows.sort((a, b) => b.count - a.count || b.spread - a.spread);
 
 const missing = rows.filter(r => !r.have);
 console.log(`\n${rows.length} names mentioned in ${min}+ chapters · ${missing.length} with no entity yet\n`);
-console.log('  mentions  books  first   name');
-console.log('  --------  -----  -----   ----');
-for (const r of missing.slice(0, 60)) {
+console.log('  mentions  books  first   category            name');
+console.log('  --------  -----  -----   --------            ----');
+for (const r of missing.slice(0, 80)) {
   console.log(
-    `  ${String(r.count).padStart(8)}  ${String(r.spread).padStart(5)}  ${String(r.first).padStart(5)}   ${r.name}`,
+    `  ${String(r.count).padStart(8)}  ${String(r.spread).padStart(5)}  ${String(r.first).padStart(5)}   ${r.cat.padEnd(18)}  ${r.name}`,
   );
 }
 writeFileSync(join(root, 'data/index/coverage.json'), JSON.stringify(rows, null, 2) + '\n');

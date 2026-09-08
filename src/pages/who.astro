@@ -49,8 +49,9 @@ const findable = (e: (typeof entities)[number]) =>
   <section class="wrap head">
     <p class="eyebrow">02</p>
     <h1>Who &amp; What</h1>
-    <p class="standfirst">Names and one-line descriptions appear from the book each thing walks
-      into. Arcs, uses and fates are sealed separately, so a cast list never hands you an ending.</p>
+    <p class="standfirst">Everything you have walked into, logged and filed. A name enters the
+      record the moment you meet it. What becomes of it is a separate entry, and that one stays
+      shut.</p>
     {gate.spoilers && gate.fresh && (
       <p class="sys" style="max-width:var(--measure);margin-top:20px">
         <b>*** No position set ***</b>{UNSET_COPY}
@@ -60,21 +61,21 @@ const findable = (e: (typeof entities)[number]) =>
 
   <section class="wrap finder-wrap">
     <div class="finder">
-      <label class="search" for="find">
+      <label class="finder-search" for="find">
         <span class="vh">Search entries you have met</span>
         <input id="find" type="search" autocomplete="off" spellcheck="false"
                disabled={metTotal === 0}
                placeholder={metTotal === 0 ? 'Set your position to search' : 'Search names, roles and descriptions'} />
         <kbd>/</kbd>
       </label>
-      <div class="chips">
+      <div class="finder-chips">
         {groups.map(g => (
-          <button type="button" class="chip" data-chip={g.kind}
+          <button type="button" class="chip-btn" data-chip={g.kind}
                   aria-pressed="false" disabled={g.met === 0}>
             {g.chip}<span class="n">{g.met}</span>
           </button>
         ))}
-        <button type="button" class="chip solo" id="metonly"
+        <button type="button" class="chip-btn solo" id="metonly"
                 aria-pressed="false" disabled={metTotal === 0}>Met only</button>
       </div>
       <p class="tally" id="tally" aria-live="polite" role="status"></p>
@@ -140,38 +141,11 @@ const findable = (e: (typeof entities)[number]) =>
      Not sticky: the gate bar already owns `top: 0`, and stacking a second
      sticky element under one whose height wraps is a measurement problem
      nobody needs. `/` focuses this and scrolls it into view instead. */
-  .finder-wrap { padding-top: 26px; }
-  .finder { border: 1px solid var(--color-line); background: var(--color-panel);
-            padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
 
-  .search { display: flex; align-items: center; gap: 10px;
-            border: 1px solid var(--color-line); background: var(--color-ink);
-            padding: 0 10px; }
-  .search:focus-within { border-color: var(--color-gold); }
-  .search input { flex: 1 1 auto; min-width: 0; height: 38px; border: 0; outline: 0;
-                  background: transparent; color: var(--color-grey-100);
-                  font-family: var(--font-body); font-size: 15px; }
-  .search input::placeholder { color: var(--color-grey-700); }
-  .search input:disabled { cursor: not-allowed; }
-  /* Safari draws its own clear button; the reset below keeps one affordance. */
-  .search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
-  kbd { font-family: var(--font-mono); font-size: 11px; color: var(--color-grey-700);
-        border: 1px solid var(--color-line); padding: 1px 5px; flex: none; }
-
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em;
-          text-transform: uppercase; color: var(--color-grey-300);
-          background: transparent; border: 1px solid var(--color-line);
-          padding: 5px 9px; cursor: pointer; display: inline-flex; gap: 7px; align-items: center; }
-  .chip:hover:not(:disabled) { border-color: var(--color-grey-700); color: var(--color-grey-100); }
-  .chip[aria-pressed="true"] { border-color: var(--color-gold); color: var(--color-gold); }
-  .chip:disabled { color: var(--color-grey-700); cursor: not-allowed; }
-  .chip .n { color: var(--color-grey-700); font-variant-numeric: tabular-nums; }
-  .chip[aria-pressed="true"] .n { color: var(--color-gold); }
-  .chip.solo { margin-left: auto; }
-
-  .tally { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em;
-           text-transform: uppercase; color: var(--color-grey-500); margin: 0; min-height: 1em; }
+  /* The bar itself is in the shared component layer (src/styles/global.css),
+     because /when asks the same question of the same set and had grown a
+     near-identical copy with slightly different numbers. */
+  .chip-btn.solo { margin-left: auto; }
 
   /* Visually hidden but read aloud. */
   .vh { position: absolute; width: 1px; height: 1px; overflow: hidden;
@@ -181,7 +155,7 @@ const findable = (e: (typeof entities)[number]) =>
   .cell[hidden], .group[hidden] { display: none !important; }
 
   @media (max-width: 560px) {
-    .chip.solo { margin-left: 0; }
+    .chip-btn.solo { margin-left: 0; }
   }
 </style>
 
@@ -198,7 +172,7 @@ const findable = (e: (typeof entities)[number]) =>
   if (box && tally) {
     const cells = Array.from(document.querySelectorAll<HTMLElement>('.cell'));
     const groups = Array.from(document.querySelectorAll<HTMLElement>('.group'));
-    const chips = Array.from(document.querySelectorAll<HTMLElement>('.chip[data-chip]'));
+    const chips = Array.from(document.querySelectorAll<HTMLElement>('.chip-btn[data-chip]'));
     const metTotal = cells.filter(c => c.dataset.met === '1').length;
 
     const kinds = new Set<string>();

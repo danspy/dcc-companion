@@ -1,7 +1,7 @@
 import {
   frontierOf, parseAt, describeAt, FRONTIER_ALL, FRONTIER_NONE,
   type Position,
-} from './progress';
+} from './progress.ts';
 
 /* ---------------------------------------------------------------------------
    Three states, and the middle one is the one that matters.
@@ -49,7 +49,7 @@ export function sealCopy(at: string | number): string {
 
 /** Shown once, at the top of a list, when no reading position is recorded. */
 export const UNSET_COPY =
-  "You haven't told the dungeon how far you've read, so it is telling you nothing. " +
-  'Pick your book in the bar above.';
+  'You have not told the dungeon where you are, so the dungeon is telling you nothing. ' +
+  'Name your book in the bar above.';
 
 export { FRONTIER_ALL, FRONTIER_NONE, describeAt, parseAt };

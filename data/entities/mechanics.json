@@ -1514,6 +1514,305 @@
           "at": "5:1"
         }
       ]
+    },
+    {
+      "id": "stairwell",
+      "kind": "mechanic",
+      "name": "Stairwell",
+      "aka": [],
+      "role": "Dungeon fixture",
+      "revealedAt": "1:2",
+      "sort": 51,
+      "tagline": "Warmth and light coming up out of a hole in the floor, which is how the dungeon says the level above has finished with you.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 2,
+          "floor": 1,
+          "at": "1:2",
+          "confidence": "verified",
+          "headline": "The way down is lit from below",
+          "text": "Every floor is joined to the next by one, and each floor sets its own terms for who may use it and when. They are generally well lit, and the warmth comes up rather than down, so a crawler standing at the top is being invited by something that has already decided what happens next."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "magic-missile",
+      "kind": "mechanic",
+      "name": "Magic Missile",
+      "aka": [],
+      "role": "Spell",
+      "revealedAt": "1:7",
+      "sort": 52,
+      "tagline": "The plainest attack spell in the catalogue, taught to a show cat by a show cat, minutes after anyone thought to open her menus.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 7,
+          "floor": 1,
+          "at": "1:7",
+          "confidence": "verified",
+          "headline": "Bolts from the eyes of a Persian",
+          "text": "Bolts of energy leave the caster’s eyes one after another, and the resemblance to a film about spaceships is close enough that nobody bothers to pretend otherwise. Princess Donut works it out for herself once Mordecai has switched her menus on, and from that point the question is never whether she will fire, only at what."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "safe-room",
+      "kind": "mechanic",
+      "name": "Safe Room",
+      "aka": [],
+      "role": "Dungeon fixture",
+      "revealedAt": "1:5",
+      "sort": 53,
+      "tagline": "Green on the minimap, always, even where the map is dark. Restrooms, somewhere to sleep, three screens, and a cook who would rather you moved along.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 9,
+          "floor": 1,
+          "at": "1:9",
+          "confidence": "verified",
+          "headline": "Green on a map that is otherwise unlit",
+          "text": "They sit throughout the dungeon and they show green on the minimap even through fog, which makes them the only honest thing on it. Inside there are restrooms, somewhere to lie down, and three televisions showing the crawl to the people doing the crawl. Most are staffed. The staff are not there for the crawlers’ benefit."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "bopca",
+      "kind": "mechanic",
+      "name": "Bopca",
+      "aka": [],
+      "role": "Dungeon race",
+      "revealedAt": "1:9",
+      "sort": 54,
+      "tagline": "Short, shaggy, green-tinted and faintly of wet moss. Excellent cooks, and famously reluctant to part with anything they have not been ordered to part with.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 9,
+          "floor": 1,
+          "at": "1:9",
+          "confidence": "verified",
+          "headline": "The protector behind the counter",
+          "text": "A stout dwarfish people, shaggy in both sexes, who mostly appear in the dungeon as non-combatant staff. They cook, they hand over what the room owes a crawler, and they are miserly about every part of it that is left to their discretion. The first one on the stairs runs a safe room and is called Tally."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "brindle-grub",
+      "kind": "mechanic",
+      "name": "Brindle Grub",
+      "aka": [],
+      "role": "Janitor mob",
+      "revealedAt": "1:30",
+      "sort": 55,
+      "tagline": "The cleaning crew of the second floor. Corpses make them, and there is no arrangement under which there are fewer of them.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 30,
+          "floor": 2,
+          "at": "1:30",
+          "confidence": "draft",
+          "headline": "Every body on the floor makes more of them",
+          "text": "Each corpse produced on this floor spawns between one and fifteen, and they keep coming until five thousand of them hold a quadrant. Destroying the bodies stops the grubs growing stronger; it does not stop them arriving. The floor is therefore a choice between leaving your dead where they fall and feeding the thing that eats them."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "clockwork-triplicate",
+      "kind": "mechanic",
+      "name": "Clockwork Triplicate",
+      "aka": [],
+      "role": "Spell",
+      "revealedAt": "2:5",
+      "sort": 56,
+      "tagline": "Two working copies of a pet, moving on their own, and the dungeon’s own labels decline to say which of the three is real.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 5,
+          "floor": 3,
+          "at": "2:5",
+          "confidence": "verified",
+          "headline": "Three of something there was one of",
+          "text": "Cast on a pet or a minion, the target appears to split into three. The duplicates look right and act independently, and the System does not mark which one it started with. It arrives in a box on the Over City, in the same delivery as a cat tree and a scented candle, which is roughly the level of seriousness the dungeon brings to its gifts."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "jikininki",
+      "kind": "mechanic",
+      "name": "Jikininki",
+      "aka": [],
+      "role": "Ghoul mob",
+      "revealedAt": "3:1",
+      "sort": 57,
+      "tagline": "The best-behaved ghouls in the rail system, in a field with very little competition.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 1,
+          "floor": 4,
+          "at": "3:1",
+          "confidence": "draft",
+          "headline": "They are waiting when the doors open",
+          "text": "The commonest ghoul on the line, and by the System’s own account the most tractable of them, which says more about the others than it does about these. They come at the court in the first minutes on the new floor, before anyone has established what the rules of the place are."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "kravyad",
+      "kind": "mechanic",
+      "name": "Kravyad",
+      "aka": [],
+      "role": "Rail management",
+      "revealedAt": "3:18",
+      "sort": 58,
+      "tagline": "Employee management for the tangle, waiting at the station where the staff get off, and nobody can agree whether they are a boss or a fixture.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 18,
+          "floor": 4,
+          "at": "3:18",
+          "confidence": "verified",
+          "headline": "Whatever they are, they are at station 435",
+          "text": "A few dozen of them work directly under the line’s management, and they are stationed where the employees leave the train. Whether they count as a boss or as scenery depends entirely on who is describing them, which is a distinction the dungeon is happy to leave unsettled for as long as it is useful."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "skyfowl",
+      "kind": "mechanic",
+      "name": "Skyfowl",
+      "aka": [],
+      "role": "Dungeon race",
+      "revealedAt": "4:1",
+      "sort": 59,
+      "tagline": "One of six species the Syndicate scatters over candidate worlds, and a people who mostly decline the offer to stop being one.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 1,
+          "floor": 5,
+          "at": "4:1",
+          "confidence": "verified",
+          "headline": "A starter species, seeded on purpose",
+          "text": "The Syndicate keeps a handful of basic species for salting worlds it intends to use, and this is one of them. They are proud enough that most who reach class selection keep the race rather than trade it, which is a decision the dungeon is content to reward and to punish in the same breath. Mordecai wears the shape on the fifth floor."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "tummy-acher",
+      "kind": "mechanic",
+      "name": "Tummy Acher",
+      "aka": [],
+      "role": "Pet-class mob",
+      "revealedAt": "7:5",
+      "sort": 60,
+      "tagline": "A pet class built to stand in front of things and be hit by them, and to be delighted about it.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 5,
+          "floor": 9,
+          "at": "7:5",
+          "confidence": "draft",
+          "headline": "Bred to be hit",
+          "text": "A pet-class mob, and by reputation an excellent melee tank, which in practice means the thing is designed to be the part of a party that absorbs damage on everyone else’s behalf. The System’s notice for one that has not yet bonded to a crawler is written like a card on a cage."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "ping",
+      "kind": "mechanic",
+      "name": "Ping",
+      "aka": [],
+      "role": "Spell",
+      "revealedAt": "7:79",
+      "sort": 61,
+      "tagline": "A hunting call for people who do not mind whether the thing being hunted hears it coming.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 79,
+          "floor": 9,
+          "at": "7:79",
+          "confidence": "verified",
+          "headline": "Here piggy, piggy",
+          "text": "Five mana, and it tells you what is out there and where. It also tells what is out there that you are looking, which is why the System files it under names like the Night Dread and lets the user decide whether that is a drawback. In a castle full of things worth locating, it settles an argument about a dragon."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "sluggalos",
+      "kind": "mechanic",
+      "name": "Sluggalos",
+      "aka": [],
+      "role": "Mob",
+      "revealedAt": "6:65",
+      "sort": 62,
+      "tagline": "Slugs born out of the boils of a disease, painted like a touring band, and enormously pleased to have been asked along.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 65,
+          "floor": 8,
+          "at": "6:65",
+          "confidence": "verified",
+          "headline": "Filed as Pox Slugs, and unbothered by it",
+          "text": "The System first registers them as Pox Slugs, which is accurate and entirely misses the point. They come out of the boils of the SlugPox, they arrive with a crude and rowdy culture already assembled, and they throw themselves at the court’s enemies with the enthusiasm of people who cannot believe their luck at being included."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "mantaur",
+      "kind": "mechanic",
+      "name": "Mantaur",
+      "aka": [],
+      "role": "’Taur mob",
+      "revealedAt": "8:13",
+      "sort": 63,
+      "tagline": "Half human, and, where the horse ought to be, also half human. The System calls it the strangest of the ’taurs and offers no defence of the design.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 13,
+          "floor": 10,
+          "at": "8:13",
+          "confidence": "verified",
+          "headline": "Of all the ’taurs, this one",
+          "text": "Centaurs, bisontaurs, rhinotaurs: the dungeon has a long catalogue of things joined at the waist to other things, and this is the entry the System itself flags as peculiar. They turn up from the fourth floor down, and they keep company with Club Vanquisher."
+        }
+      ],
+      "relations": []
     }
   ]
 }

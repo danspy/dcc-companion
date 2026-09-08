@@ -13,6 +13,7 @@ const books = await getBooks();
 const nav = [
   { href: '/', label: 'The Descent' },
   { href: '/who', label: 'Who & What' },
+  { href: '/when', label: 'When' },
   { href: '/progress', label: 'Position' },
 ];
 const here = Astro.url.pathname;
@@ -66,8 +67,19 @@ const here = Astro.url.pathname;
                 padding: 2px 8px 0; }
   .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 22px;
                 text-transform: uppercase; color: var(--color-grey-100); }
-  nav { display: flex; gap: 4px; flex-wrap: wrap; }
-  .navlink { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em;
+  /* One row, always. Wrapping left "Position" orphaned on a second line on a
+     phone, which reads as a mistake rather than a menu. The strip scrolls
+     itself: `min-width: 0` is what lets a flex item shrink below its content
+     so `overflow-x` has something to do, and `overscroll-behavior-x: contain`
+     stops a sideways swipe turning into the browser's back gesture.
+
+     The scroll lives here and nowhere else. `overflow-x: hidden` on the page
+     would hide this symptom while silently clipping anything else that
+     overflows — and it would break the gate bar's `position: sticky`. */
+  nav { display: flex; gap: 4px; flex-wrap: nowrap; min-width: 0;
+        overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
+  .navlink { font-family: var(--font-mono); font-size: var(--type-ui);
+             letter-spacing: var(--ls-label); flex: none; white-space: nowrap;
              text-transform: uppercase; color: var(--color-grey-300);
              border: 1px solid transparent; padding: 6px 10px; }
   .navlink:hover { color: var(--color-grey-100); border-color: var(--color-line); text-decoration: none; }

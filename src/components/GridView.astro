@@ -1,0 +1,98 @@
+---
+import EntryRow from './EntryRow.astro';
+import StageHead from './StageHead.astro';
+import type { FloorRow } from '../lib/content';
+import type { Gate } from '../lib/spoiler';
+import { FLOOR_COL, LANE_H, type Lane } from '../lib/timeline';
+
+interface Props {
+  lanes: Lane[]; floors: FloorRow[]; gate: Gate; active: string | null;
+  shown?: Set<string>;
+}
+const { lanes, floors, gate, active, shown } = Astro.props;
+
+/* Not a <table>: a table brings its own head, and this view shares the stage
+   head with the braid and downstream. Rows are the same flex rows those use, so
+   the frozen entry column and the pinned head are one implementation. */
+const rows = lanes.map(lane => {
+  const per = new Map<number, { n: number; first: number }>();
+  for (const beat of lane.beats) {
+    if (beat.floor == null) continue;
+    const seen = per.get(beat.floor);
+    if (seen) seen.n += 1;
+    else per.set(beat.floor, { n: 1, first: beat.sortKey });
+  }
+  return { lane, per };
+});
+const width = floors.length * FLOOR_COL;
+---
+<div class="scroll">
+  <StageHead>
+    <div class="floors" style={`width:${width}px`}>
+      {floors.map(floor => (
+        <div class="floorhead headstamp is-centred" style={`width:${FLOOR_COL}px`}>
+          <b style={`background:${floor.accent};color:${floor.ink}`}>
+            {String(floor.id).padStart(2, '0')}
+          </b>
+          <span>{floor.name}</span>
+        </div>
+      ))}
+    </div>
+  </StageHead>
+
+  <div class="gridbody">
+    {rows.map(({ lane, per }) => (
+      /* The row is the hide target here — the name is only its first cell, and
+         hiding the cell alone would leave a nameless bar of floor marks. Both
+         carry `hidden` so the script's bookkeeping and the server agree. */
+      <div class="stagerow gridrow" hidden={shown && !shown.has(lane.entity.id)}>
+        <div class="entrycell">
+          <EntryRow lane={lane} gate={gate} active={lane.entity.id === active}
+                    hidden={shown ? !shown.has(lane.entity.id) : false} />
+        </div>
+        {floors.map(floor => {
+          const cell = per.get(floor.id);
+          return (
+            <div class="cell" style={`width:${FLOOR_COL}px`}>
+              {cell && (
+                <button type="button" class="mark" data-lane={lane.entity.id}
+                        data-key={cell.first}
+                        title={`${lane.entity.name} on floor ${floor.id}`}
+                        style={`background:${floor.accent};color:${floor.ink};
+                                opacity:${Math.min(0.34 + cell.n * 0.22, 1)}`}>{cell.n}</button>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    ))}
+  </div>
+
+</div>
+
+<style>
+  .scroll { flex: 1 1 auto; min-height: 0; overflow: auto; }
+  /* max-content, because a row is the entry column *plus* the floor columns.
+     Setting it to the floor width alone made every row overflow its own body by
+     224px, so the head and the cells under it disagreed about where a column is
+     and the last one was cut off. */
+  .gridbody { width: max-content; min-width: 100%; }
+  .gridrow { height: 28px; align-items: stretch; }
+  .cell { flex: none; display: flex; align-items: center; justify-content: center;
+          border-top: 1px solid var(--color-line-soft); }
+  .gridrow:first-child .cell { border-top: 0; }
+  .mark { min-width: 26px; padding: 3px 7px; border: 0; cursor: pointer;
+          font-family: var(--font-mono); font-size: var(--type-label); font-weight: 600;
+          font-variant-numeric: tabular-nums; }
+  .mark:hover { outline: 1px solid #fff; outline-offset: 1px; }
+
+  /* relative, not absolute: an absolutely positioned child contributes nothing
+     to its parent's intrinsic width, so the head stopped at the viewport while
+     the rows below ran to their full width — and every column past the fold lost
+     its heading. Same trap the braid's axis fell into. */
+  .floors { position: relative; display: flex; height: 100%; }
+  /* .headstamp supplies the type; a column only says how wide it is. */
+  .floorhead { flex: none; justify-content: flex-end; padding-bottom: 9px; }
+  .floorhead span { white-space: nowrap; }
+  .gridrow[hidden] { display: none !important; }
+</style>

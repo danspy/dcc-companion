@@ -1130,6 +1130,116 @@
           "at": "7:78"
         }
       ]
+    },
+    {
+      "id": "dark-hive",
+      "kind": "faction",
+      "name": "The Dark Hive",
+      "aka": [
+        "Dark Hive"
+      ],
+      "role": "Hunting party",
+      "revealedAt": "5:10",
+      "sort": 50,
+      "tagline": "A mantis hunting party carrying a standing legal argument: what happens on the hunting floor is not covered by the rules that hold anywhere else.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 10,
+          "floor": 6,
+          "at": "5:10",
+          "confidence": "draft",
+          "headline": "A group with a position on what counts as murder",
+          "text": "A mantis outfit that comes to the hunting floor as a matter of routine. Their position, argued and so far sustained, is that a killing done on that ground is outside the rules that would make it a killing anywhere else, and they have had cause to argue it about one of their own."
+        }
+      ],
+      "relations": [
+        {
+          "to": "vrah",
+          "kind": "member",
+          "at": "5:10"
+        }
+      ]
+    },
+    {
+      "id": "valtay-corporation",
+      "kind": "faction",
+      "name": "The Valtay Corporation",
+      "aka": [
+        "Valtay Corporation",
+        "Valtay"
+      ],
+      "role": "Corporate system government",
+      "revealedAt": "2:19",
+      "sort": 51,
+      "tagline": [
+        {
+          "at": "2:19",
+          "text": "A power outside Borant that answers an insult by taking a prince’s yacht apart with his family aboard, and does not explain itself afterwards."
+        },
+        {
+          "at": "4:8",
+          "text": "A business that is also a nation, run by a parasite that pilots other people’s bodies, and it holds the paper on Borant’s debt."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 8,
+          "floor": 5,
+          "at": "4:8",
+          "confidence": "verified",
+          "headline": "A creditor with a seat at the table",
+          "text": "A corporate system government inside the Syndicate, which is to say a company that is also a country and answers to neither description when it is inconvenient. Its people are parasites in the literal sense, riding the bodies of other races. It holds the Borant Corporation’s debt, and it sends a crawler a neural enhancer, which is the sort of gift that is also a note."
+        }
+      ],
+      "relations": [
+        {
+          "to": "the-syndicate",
+          "kind": "member-of",
+          "at": "4:8"
+        },
+        {
+          "to": "borant-corporation",
+          "kind": "creditor-of",
+          "at": "4:8",
+          "note": "It holds the debt."
+        }
+      ]
+    },
+    {
+      "id": "guild-of-suffering",
+      "kind": "faction",
+      "name": "The Guild of Suffering",
+      "aka": [
+        "Guild of Suffering"
+      ],
+      "role": "Cult",
+      "revealedAt": "6:19",
+      "sort": 52,
+      "tagline": "A cult you join by accident, the moment you accept a gift from something that would prefer to be worshipped.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 19,
+          "floor": 8,
+          "at": "6:19",
+          "confidence": "verified",
+          "headline": "Membership arrives with the tattoo",
+          "text": "The guild worships a demigod, and access is granted by a tattoo that anyone who uses one of its artefacts receives whether or not they went looking for a guild. Mordecai notes, in the tone of a man reading a pamphlet he did not ask for, that it also runs outreach centres."
+        }
+      ],
+      "relations": [
+        {
+          "to": "ring-of-divine-suffering",
+          "kind": "grants",
+          "at": "6:19",
+          "note": "Use the artefact, take the tattoo, and you are a member."
+        }
+      ]
     }
   ]
 }

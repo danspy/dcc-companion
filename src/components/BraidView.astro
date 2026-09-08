@@ -1,0 +1,179 @@
+---
+import EntryList from './EntryList.astro';
+import StageHead from './StageHead.astro';
+import type { BookRow, FloorRow, RelationRow } from '../lib/content';
+import type { Gate } from '../lib/spoiler';
+import {
+  AXIS_H, LANE_H, arcPath, laneY, makeScale, stampOf, svgHeight, type Lane,
+} from '../lib/timeline';
+import { FRONTIER_ALL, parseAt } from '../lib/progress';
+
+interface Props {
+  lanes: Lane[]; books: BookRow[]; floors: FloorRow[]; relations: RelationRow[];
+  gate: Gate; focus: string | null; shown?: Set<string>;
+}
+const { lanes, books, floors, relations, gate, focus, shown } = Astro.props;
+
+const scale = makeScale(books);
+const accentOf = new Map(books.map(b => [b.id, b.accent]));
+
+/* Every lane is rendered, but only the ones that survive the filter take a
+   position — exactly what the script's restack() computes when the reader
+   types. Server and client both stack with `laneY`, so the first paint and the
+   first keystroke agree instead of the chart jumping once the script lands. */
+const at = new Map(
+  lanes.filter(l => !shown || shown.has(l.entity.id)).map((l, i) => [l.entity.id, i]),
+);
+const height = svgHeight(at.size);
+
+/* Where a lane sits when nothing is filtered. An arc whose ends are filtered
+   out is still written into the page, just hidden — the script reads the
+   connections off the arcs themselves, so dropping them would make clearing the
+   filter lose them for good and under-count what an entry is connected to. */
+const home = new Map(lanes.map((l, i) => [l.entity.id, i]));
+
+/* An arc is a relation becoming true, drawn at the chapter it unseals. It is the
+   only honest answer to "with whom" in this story: everybody is on the same floor
+   at the same time, so co-location says nothing and the graph says everything. */
+const arcs = relations
+  .filter(r => gate.frontier >= r.sortKey)
+  .filter(r => home.has(r.fromId) && home.has(r.toId) && r.fromId !== r.toId)
+  .map(r => {
+    const a = at.get(r.fromId);
+    const b = at.get(r.toId);
+    const drawn = a !== undefined && b !== undefined;
+    const x = scale.xOf(r.sortKey);
+    return {
+      from: r.fromId, to: r.toId, x, drawn,
+      d: arcPath(x, laneY(a ?? home.get(r.fromId)!), laneY(b ?? home.get(r.toId)!)),
+    };
+  });
+
+/* Only floors already arrived on: a tick for one still ahead would say how many
+   are left, which is the leak the sealed beat stamps used to be. */
+const ticks = floors.map(f => ({ id: f.id, accent: f.accent, x: scale.xOf(parseAt(f.revealedAt)) }));
+
+const open = gate.frontier >= FRONTIER_ALL;
+const edge = open ? scale.width - 20 : scale.xOf(gate.frontier);
+---
+<div class="scroll">
+  <StageHead>
+    {/* HTML, not SVG text: a book's title has to wrap when its band is narrow,
+        and the two shortest books cannot say their names on one line. */}
+    <div class="axis" style={`width:${scale.width}px;height:${AXIS_H}px`}>
+      {scale.bands.map(band => (
+        <div class="band headstamp" style={`left:${band.x}px;width:${band.w}px`}>
+          <b style={`background:${band.book.accent};color:${band.book.ink}`}>
+            {String(band.book.id).padStart(2, '0')}
+          </b>
+          <span>{band.book.title}</span>
+        </div>
+      ))}
+      {ticks.map(tick => (
+        <span class="tick" style={`left:${tick.x}px;--tick:${tick.accent}`}>F{tick.id}</span>
+      ))}
+      {!open && <span class="edge" style={`left:${edge}px`}></span>}
+    </div>
+  </StageHead>
+
+  <div class="stagerow">
+    <div class="entrycell">
+      <EntryList lanes={lanes} gate={gate} active={focus} shown={shown} />
+    </div>
+
+    <svg id="braid-svg" width={scale.width} height={height}
+         viewBox={`0 0 ${scale.width} ${height}`} data-width={scale.width}
+         role="group"
+         aria-label="Each entry you have reached on its own line across the crawl, with an arc wherever a connection between two of them becomes true">
+      <g class="bands">
+        {scale.bands.map(band => (
+          <>
+            <rect x={band.x} y="0" width={band.w} height={height}
+                  fill={band.book.accent} opacity="0.035" />
+            <line x1={band.x} y1="0" x2={band.x} y2={height} class="bandrule" />
+          </>
+        ))}
+        {ticks.map(tick => (
+          <line x1={tick.x} y1="0" x2={tick.x} y2={height}
+                stroke={tick.accent} stroke-width="1" opacity="0.22" />
+        ))}
+      </g>
+
+      <g class:list={['arcs', { focusing: focus !== null }]}>
+        {arcs.map(arc => (
+          <path class:list={['arc', { on: arc.from === focus || arc.to === focus }]}
+                d={arc.d} data-a={arc.from} data-b={arc.to} data-x={arc.x} fill="none"
+                display={arc.drawn ? undefined : 'none'} />
+        ))}
+      </g>
+
+      <g class:list={['lanes', { focusing: focus !== null }]}>
+        {lanes.map(lane => (
+          <g class:list={['lane', { on: lane.entity.id === focus }]}
+             data-lane={lane.entity.id} data-kind={lane.entity.kind}
+             display={at.has(lane.entity.id) ? undefined : 'none'}
+             transform={`translate(0,${(at.get(lane.entity.id) ?? 0) * LANE_H})`}>
+            <line class="lanerail" x1="0" y1={LANE_H / 2} x2={edge} y2={LANE_H / 2} />
+            <line class="span" x1={scale.xOf(lane.beats[0].sortKey)} y1={LANE_H / 2}
+                  x2={scale.xOf(lane.beats[lane.beats.length - 1].sortKey)} y2={LANE_H / 2} />
+            {lane.beats.map(beat => (
+              <circle class="dot" r="3.4" cx={scale.xOf(beat.sortKey)} cy={LANE_H / 2}
+                      fill={accentOf.get(beat.book) ?? '#ffc10a'}
+                      tabindex="0" role="button"
+                      aria-label={`${lane.entity.name}, ${stampOf(beat.sortKey)}: ${beat.headline}`}
+                      data-lane={lane.entity.id} data-key={beat.sortKey}>
+                <title>{lane.entity.name} · {stampOf(beat.sortKey)} · {beat.headline}</title>
+              </circle>
+            ))}
+          </g>
+        ))}
+      </g>
+
+      {!open && (
+        <g class="frontier">
+          <rect x={edge} y="0" width={Math.max(scale.width - edge, 0)} height={height}
+                fill="#0e0e0e" opacity="0.84" />
+          <line x1={edge} y1="0" x2={edge} y2={height} stroke="#ffc10a" stroke-width="1.5" />
+        </g>
+      )}
+    </svg>
+  </div>
+</div>
+
+<style>
+  /* One scroller for both axes, so the pinned head and the frozen name column
+     are sticky against the same box. */
+  .scroll { flex: 1 1 auto; min-height: 0; overflow: auto; }
+  .stagerow { width: max-content; min-width: 100%; align-items: flex-start; }
+  /* flex: none is load-bearing. As a shrinkable flex item the chart is squeezed
+     below its own width, and an SVG with a viewBox answers that by scaling
+     itself down and centring the result — which reads as the chart floating in
+     the middle of an empty column. */
+  svg { display: block; flex: none; }
+
+  /* The axis sets the head's width from the same scale the chart is drawn with,
+     so a tick sits over the column it names. `absolute` here let the head
+     collapse to the viewport and the two drifted apart. */
+  .axis { position: relative; }
+  /* .headstamp supplies the type; a band only says where it sits and how wide
+     its book is. */
+  .band { position: absolute; top: 9px; bottom: 21px; padding-right: 6px; }
+  .tick { position: absolute; bottom: 2px; padding-left: 4px; font-family: var(--font-mono);
+          font-size: var(--type-label); color: var(--color-grey-500);
+          border-left: 1px solid var(--tick); }
+  .edge { position: absolute; top: 0; bottom: 0; width: 1.5px; background: var(--color-gold); }
+
+  .bandrule { stroke: var(--color-line); stroke-width: 1; }
+  .lanerail { stroke: var(--color-line-soft); stroke-width: 1; }
+  .span { stroke: #4a4a4a; stroke-width: 1.6; }
+  .arc { stroke: var(--color-gold); stroke-width: 1.5; opacity: .95; display: none; }
+  .arcs.focusing .arc.on { display: block; }
+  .dot { stroke: var(--color-ink); stroke-width: 1; cursor: pointer; }
+  .dot:focus, .dot:focus-visible { outline: none; stroke: #fff; stroke-width: 2; r: 5.4; }
+  .dot.picked { stroke: #fff; stroke-width: 1.6; r: 5.4; }
+
+  /* Following one entry: its thread lit, the rest still there and quiet. */
+  .lanes.focusing .lane:not(.on) .span { opacity: .3; }
+  .lanes.focusing .lane:not(.on) .dot { opacity: .25; }
+  .lane[hidden] { display: none !important; }
+</style>

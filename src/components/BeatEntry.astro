@@ -1,0 +1,29 @@
+---
+import type { BeatRow, FloorRow } from '../lib/content';
+
+/* One beat, rendered the one way this site renders a beat. The entity page and
+   the /when panel both use it, so a System beat is a `*** ... ***` block and a
+   character's own line carries the quote mark on both — the alternative was two
+   renderings of the same row that quietly drifted apart. */
+interface Props { beat: BeatRow; floor?: FloorRow | null; id?: string }
+const { beat, floor = null, id } = Astro.props;
+---
+<li class="entry" id={id} data-key={beat.sortKey}>
+  <div class="stamp">
+    <span class="bk">Bk {beat.book}{beat.chapter ? `·${beat.chapter}` : ''}</span>
+    {floor && (
+      <span class="fl" style={`--dot:${floor.accent}`}>
+        Floor {floor.id} — {floor.name}
+      </span>
+    )}
+  </div>
+  <div class="entry-body">
+    {beat.voice === 'system'
+      ? <div class="sys"><b>*** {beat.headline} ***</b>{beat.text}</div>
+      : <>
+          <h3>{beat.headline}</h3>
+          <p class={beat.voice === 'self' ? 'spoken' : undefined}>{beat.text}</p>
+        </>}
+    {beat.confidence === 'draft' && <span class="draft">unverified</span>}
+  </div>
+</li>

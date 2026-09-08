@@ -1,0 +1,12 @@
+---
+/* The head of a stage, once. Every view puts the same thing on the left (the
+   entry column's label) and its own thing on the right, so the height, the
+   ground, the rule under it and the frozen left cell are defined here and
+   nowhere else. */
+interface Props { label?: string }
+const { label = 'Entry' } = Astro.props;
+---
+<div class="stagehead">
+  <div class="stagehead-entry">{label}</div>
+  <div class="stagehead-body"><slot /></div>
+</div>

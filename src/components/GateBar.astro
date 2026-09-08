@@ -49,7 +49,13 @@ const current = books.find(b => b.id === prefs.book);
   .eyebrow b { color: var(--color-gold); font-weight: 700; }
   /* Nothing chosen yet is a prompt, not a value — colour it differently. */
   .eyebrow b.unset { color: var(--color-blood); }
-  .books { display: flex; gap: 4px; flex-wrap: wrap; }
+  /* Eight buttons are 284px, so they fit a phone and wrap on anything
+     narrower — badly, because a book number on its own second row reads as a
+     different control. One row that scrolls itself instead, contained the same
+     way the masthead's is. */
+  .books { display: flex; gap: 4px; flex-wrap: nowrap; min-width: 0;
+           overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
+  .bk { flex: none; }
   .bk { font-family: var(--font-mono); font-size: 13px; font-weight: 600;
         width: 32px; height: 30px; background: transparent; color: var(--color-grey-300);
         border: 1px solid var(--color-line); cursor: pointer;

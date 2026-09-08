@@ -773,6 +773,151 @@
           "at": "6:40"
         }
       ]
+    },
+    {
+      "id": "fan-box",
+      "kind": "item",
+      "name": "Fan Box",
+      "aka": [],
+      "role": "Loot box",
+      "revealedAt": "3:7",
+      "sort": 43,
+      "tagline": "The audience chooses what is inside, and the audience is made to wait thirty hours before you may open it.",
+      "beats": [
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 7,
+          "floor": 4,
+          "at": "3:7",
+          "confidence": "verified",
+          "headline": "The prize for being watched",
+          "text": "Awarded for gathering a following, or for doing something in front of enough people that the following gathers itself. The contents are put to an audience vote, and the box will not open for thirty hours, so the crawler carries it around knowing that strangers are arguing about what they deserve."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "benefactor-box",
+      "kind": "item",
+      "name": "Benefactor Box",
+      "aka": [
+        "Sponsor Box"
+      ],
+      "role": "Loot box",
+      "revealedAt": "1:5",
+      "sort": 44,
+      "tagline": "A box bought for you by somebody who wants you to keep going, and rank for rank it beats anything the dungeon hands out on merit.",
+      "beats": [
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 14,
+          "floor": 5,
+          "at": "4:14",
+          "confidence": "verified",
+          "headline": "Bronze from a sponsor beats gold from the floor",
+          "text": "Only a sponsor can send one. They use the same six quality tiers as every other box and they outclass the ordinary run of loot at every rank, so a bronze one from a benefactor is worth more than a gold one earned. It means the fastest way to be well equipped is to be liked by someone with money."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "royal-chariot",
+      "kind": "item",
+      "name": "The Royal Chariot",
+      "aka": [
+        "Royal Chariot"
+      ],
+      "role": "Contraption",
+      "revealedAt": "4:4",
+      "sort": 45,
+      "tagline": "A tracked all-terrain suicide machine, built by hand, and the System’s own write-up of it is mostly abuse.",
+      "description": "Tracked All-Terrain Suicide Machine. The Royal Chariot – Contraption. If a snowmobile got drunk on moonshine and had a sweaty, ill-advised night with a hillbilly’s coon-hunting ATV, this oversized birth defect of a vehicle would be the result.",
+      "beats": [
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 4,
+          "floor": 5,
+          "at": "4:4",
+          "confidence": "verified",
+          "headline": "Built on the floor it is meant to cross",
+          "text": "Assembled by hand out of what the fifth floor makes available, which is not much and none of it intended for the purpose. It moves, it carries the court, and the System files a description of it that reads as an insult and functions as an advertisement."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "cleaner-bot",
+      "kind": "item",
+      "name": "Cleaner Bot",
+      "aka": [],
+      "role": "Personal space upgrade",
+      "revealedAt": "3:30",
+      "sort": 46,
+      "tagline": "Twenty-five thousand gold buys a machine to tidy the personal space. Nobody who has looked at one properly is buying it for the tidying.",
+      "beats": [
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 30,
+          "floor": 4,
+          "at": "3:30",
+          "confidence": "verified",
+          "headline": "Bought for the housekeeping",
+          "text": "A personal space upgrade, available from the fourth floor at twenty-five thousand gold, sold on the promise that it will clean up after you. The units are capable of a good deal more than the sales copy admits, and the party buys one and puts it aside without yet knowing what they have bought."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "party-planner",
+      "kind": "item",
+      "name": "Party Planner",
+      "aka": [],
+      "role": "Airship",
+      "revealedAt": "7:6",
+      "sort": 47,
+      "tagline": "A stealth bomber carrying a name from a party-supply catalogue, handed over as the prize for having been marked for death.",
+      "description": "Casket in the Sky. Party Planner. Tilt Rotor Stealth Light Bomber. Vehicle. This vehicle is classed as tier three Armor.",
+      "beats": [
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 6,
+          "floor": 9,
+          "at": "7:6",
+          "confidence": "verified",
+          "headline": "The reward for having survived being condemned",
+          "text": "It comes out of a celestial box, which is the dungeon’s way of paying a debt it would rather not discuss: the box is owed for surviving a death sentence handed down on the floor before. Louis takes delivery of an aircraft and a rank at the same moment, and neither of them was asked for."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "goblin-copper-chopper",
+      "kind": "item",
+      "name": "Goblin Copper Chopper",
+      "aka": [],
+      "role": "Contraption",
+      "revealedAt": "1:16",
+      "sort": 48,
+      "tagline": "A goblin motorcycle running on steam, with a sidecar built to hold a princess.",
+      "description": "Goblin Copper Chopper with attached sidecar. Human-sized. Contraption. Take a junkyard bicycle, add an unreliable steam engine, remove all the bolts holding it together.",
+      "beats": [
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 16,
+          "floor": 1,
+          "at": "1:16",
+          "confidence": "verified",
+          "headline": "Steam, two wheels and a seat for royalty",
+          "text": "Goblin-made, steam-driven, and assembled with an optimism the materials do not support. The sidecar is the part that matters: it is exactly the size of a cat who has recently decided she is a queen, and it settles the question of how the party is going to travel."
+        }
+      ],
+      "relations": []
     }
   ]
 }

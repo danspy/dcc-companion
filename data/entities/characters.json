@@ -7672,6 +7672,948 @@
           "at": "7:35"
         }
       ]
+    },
+    {
+      "id": "kevin",
+      "kind": "character",
+      "name": "Kevin",
+      "aka": [],
+      "role": "Host · Dungeon Crawler World",
+      "revealedAt": "1:14",
+      "sort": 63,
+      "voice": "system",
+      "tagline": "Orange, four-eyed, lizardish, and paid to be breathless about all of it.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 14,
+          "floor": 1,
+          "at": "1:14",
+          "confidence": "draft",
+          "headline": "The face of the broadcast",
+          "text": "Subject hosts. He is orange-hued and four-eyed and built along lizard lines, and he delivers the rundown of each floor at a pace that does not permit anyone watching to think about what is being described. He also takes the live commentary on special events. I have worked with him for a long time and I have never heard him ask a question he did not already have the answer card for."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "mistress-tiatha",
+      "kind": "character",
+      "name": "Mistress Tiatha",
+      "aka": [],
+      "role": "Manager",
+      "revealedAt": "1:22",
+      "sort": 64,
+      "voice": "system",
+      "tagline": "A manager who treats the assignment as a holiday, and is not troubled that her crawlers can tell.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 22,
+          "floor": 1,
+          "at": "1:22",
+          "confidence": "draft",
+          "headline": "The manager who is on holiday",
+          "text": "Subject holds a manager’s contract for one of the teams and treats the posting as time off. She drinks. She smokes blitz sticks. She has, on one occasion, charmed a boss, which is more than most managers achieve and rather less than her team needs from her on any given afternoon. Her crawlers know exactly what they have been given."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "bianca",
+      "kind": "character",
+      "name": "Bianca",
+      "aka": [
+        "Bianca Del Ciao"
+      ],
+      "role": "Familiar",
+      "revealedAt": "2:14",
+      "sort": 65,
+      "voice": "system",
+      "tagline": "A Boer goat, introduced to an audience of billions on the same recap as her crawler.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 14,
+          "floor": 3,
+          "at": "2:14",
+          "confidence": "verified",
+          "headline": "A goat on the recap",
+          "text": "Subject is a goat. Specifically a Boer goat, bonded as a dungeon familiar, and she appears on the recap in the same segment that introduces the crawler she belongs to. The audience takes to her immediately, which is a thing the audience does with goats and which production has learned to plan around."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "clarabelle",
+      "kind": "character",
+      "name": "Clarabelle",
+      "aka": [],
+      "role": "Bouncer · the Desperado Club",
+      "revealedAt": "2:15",
+      "sort": 66,
+      "voice": "system",
+      "tagline": "Crocodilian, level forty, and on the door. Not the sharpest of her race, and entirely sufficient for the job.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 15,
+          "floor": 3,
+          "at": "2:15",
+          "confidence": "draft",
+          "headline": "On the door of the Desperado Club",
+          "text": "Subject is a Crocodilian, an intelligent, thick-skinned, semi-aquatic people who are not celebrated for their quickness, and she works the door of the club. This is a non-combatant posting, which describes her contract rather than her capabilities. Nobody has yet found the argument that gets past her."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "prince-stalwart",
+      "kind": "character",
+      "name": "Prince Stalwart",
+      "aka": [
+        "Stalwart"
+      ],
+      "role": "Crown prince · the Skull Empire",
+      "revealedAt": "2:19",
+      "sort": 67,
+      "voice": "system",
+      "tagline": "Crown prince of an empire that answers two sentences of provocation with artillery, and brother to the Maestro.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 19,
+          "floor": 3,
+          "at": "2:19",
+          "confidence": "verified",
+          "headline": "The statement read out on air",
+          "text": "Subject is the crown prince, brother to the Maestro, a coarse-haired boar-like creature with lean muscle and a manner that is meant to be read as cruelty and largely succeeds. When his empire fires on a trailer and takes someone who was nobody’s enemy, it is his statement that goes out on air. He does not write it and he does not disown it."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "clay-ton",
+      "kind": "character",
+      "name": "Clay-ton",
+      "aka": [],
+      "role": "Bodyguard · the Desperado Club",
+      "revealedAt": "3:8",
+      "sort": 68,
+      "voice": "system",
+      "tagline": "Seven feet of granite in a tuxedo, and the tuxedo fits.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 8,
+          "floor": 4,
+          "at": "3:8",
+          "confidence": "draft",
+          "headline": "A Cretin in evening dress",
+          "text": "Subject is a Cretin, seven feet of rock-coloured muscle, employed as a bodyguard on the club floor and dressed for it. He is not conversational. He is assigned where the club decides he is needed, and the arrangement has never yet required anyone to explain to him what the job involves."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "fire-brandy",
+      "kind": "character",
+      "name": "Fire Brandy",
+      "aka": [
+        "Firebrandy"
+      ],
+      "role": "NPC · the Iron Tangle",
+      "revealedAt": "3:14",
+      "sort": 69,
+      "voice": "system",
+      "tagline": "Fire(wo)man of the Nightmare Express. A single mother has to eat, and there are ovens down here that need stoking.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 14,
+          "floor": 4,
+          "at": "3:14",
+          "confidence": "verified",
+          "headline": "Stoking the Nightmare Express",
+          "text": "Subject is a Lesser Demon and a non-combatant, level seventy-five, and she shovels for the Nightmare Express. Where one finds large ovens that want feeding, one regularly finds her sort, and the tangle has more large ovens than it has anything else. She is on the crew that the crawlers need and does not pretend otherwise."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "madison",
+      "kind": "character",
+      "name": "Madison",
+      "aka": [],
+      "role": "Human Resources · the Iron Tangle",
+      "revealedAt": "3:17",
+      "sort": 70,
+      "voice": "system",
+      "tagline": "Human Resources for a railway that eats its employees. Her real name was probably something else.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 17,
+          "floor": 4,
+          "at": "3:17",
+          "confidence": "verified",
+          "headline": "Boards at Trainyard E, off at station 60",
+          "text": "Subject is a level ten human and a non-combatant, filed as a Human Resources Associate for the line. She boards the Nightmare Express at Trainyard E and leaves it at station sixty, every time, which is the whole of her recorded behaviour. Her name was probably something else before the dungeon decided what a human resources associate should be called."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "tizquick",
+      "kind": "character",
+      "name": "Tizquick",
+      "aka": [],
+      "role": "Conductor · the Mango Line",
+      "revealedAt": "3:21",
+      "sort": 71,
+      "voice": "system",
+      "tagline": "A dwarf conductor issued with a daughter who never existed, and grieving her properly.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 21,
+          "floor": 4,
+          "at": "3:21",
+          "confidence": "draft",
+          "headline": "Given memories of a child that was never made",
+          "text": "Subject conducts the Mango Line. He was also issued with a set of memories containing a daughter, and the daughter was never made, and he has not been told. He is found on the ground with his head down and a puddle forming underneath him. The memories work. That is the part of the design I would draw attention to."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "loita",
+      "kind": "character",
+      "name": "Loita",
+      "aka": [],
+      "role": "Communications · the Borant Corporation",
+      "revealedAt": "3:25",
+      "sort": 72,
+      "voice": "system",
+      "tagline": "Kua-Tin, party member, and she gets her pick of crawlers. Hekla’s people were her main account.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 25,
+          "floor": 4,
+          "at": "3:25",
+          "confidence": "verified",
+          "headline": "She has her pick, and she uses it",
+          "text": "Subject works Communications for the Borant Corporation. As a Kua-Tin of the ruling ultra-nationalist party she takes preferential treatment as a matter of course, including first choice of which crawlers she handles. Brynhild’s Daughters were hers, and Hekla with them, and she has never once had to ask for an account she wanted."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "milk",
+      "kind": "character",
+      "name": "Milk",
+      "aka": [],
+      "role": "Former crawler · sixth edition",
+      "revealedAt": "3:27",
+      "sort": 73,
+      "voice": "system",
+      "tagline": "A clawed migratory people, an island, a family, and a set of entries in a book that are mostly furious.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 27,
+          "floor": 4,
+          "at": "3:27",
+          "confidence": "draft",
+          "headline": "The sixth hand on the cookbook",
+          "text": "Subject carried the cookbook and added to it, and several of her entries are rants rather than instructions. She came from a clawed race with annual migration patterns and lived on an island with her family before the stairs. The rants were left in. Everyone who has carried the book since has read them."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "tserendolgor",
+      "kind": "character",
+      "name": "Tserendolgor",
+      "aka": [
+        "Ren"
+      ],
+      "role": "Crawler · Crisper Class",
+      "revealedAt": "3:31",
+      "sort": 74,
+      "voice": "system",
+      "tagline": "From a village in Mongolia, harassed without pause about a dog-themed race she did not ask to be given, and fighting alongside the people doing the harassing anyway.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 31,
+          "floor": 4,
+          "at": "3:31",
+          "confidence": "verified",
+          "headline": "A name nobody on the crawl can pronounce",
+          "text": "Subject is from Earth, born and raised in a small village in Mongolia, and took the Crisper Class. Her fellow crawlers gave up on her name inside a day and settled on a syllable of it. She takes constant needling from a certain cat about her race, and she fights beside that cat’s court regardless, which is a distinction the needling never quite grasps."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "ruby",
+      "kind": "character",
+      "name": "Ruby",
+      "aka": [],
+      "role": "Changeling child · Hump Town",
+      "revealedAt": "4:1",
+      "sort": 75,
+      "voice": "system",
+      "tagline": "An orphan with compression sickness, no arms in her default shape, and a Walkman she will not be parted from.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 1,
+          "floor": 5,
+          "at": "4:1",
+          "confidence": "draft",
+          "headline": "The orphan with the Walkman",
+          "text": "Subject is a changeling child of Hump Town, orphaned, and suffering compression sickness: in her default form she has no arms and her head is sunken. She owns a Walkman. The dungeon did not issue it to her and has not taken it away, and I am not going to be the one to file the paperwork that does."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "skarn",
+      "kind": "character",
+      "name": "Skarn",
+      "aka": [],
+      "role": "Changeling child · Hump Town",
+      "revealedAt": "4:2",
+      "sort": 76,
+      "voice": "system",
+      "tagline": "About eight years old, orphaned by a bombing, and in charge of the telescope.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 2,
+          "floor": 5,
+          "at": "4:2",
+          "confidence": "verified",
+          "headline": "He runs the telescope",
+          "text": "Subject is a juvenile changeling, roughly eight, orphaned when the gnomes bombed his town, and now living in Hump Town under the care of an adult who took the job without being asked. He operates the telescope. He is good at it, and he is the reason anyone in that town knows what is coming before it arrives."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "langley",
+      "kind": "character",
+      "name": "Langley",
+      "aka": [],
+      "role": "Crawler · Archer Class",
+      "revealedAt": "4:3",
+      "sort": 77,
+      "voice": "system",
+      "tagline": "Six car salesmen from Finland who all took the same class, and he is the one who talks.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 3,
+          "floor": 5,
+          "at": "4:3",
+          "confidence": "verified",
+          "headline": "A team of car salesmen with bows",
+          "text": "Subject leads a six-man team of archers, all of whom sold cars in Finland and all of whom picked the Archer Class together, which is either loyalty or a failure of imagination and has worked out the same either way. They come into the fifth floor as strangers to the court and do not stay strangers."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "bobby",
+      "kind": "character",
+      "name": "Bobby",
+      "aka": [
+        "Bobby D.J."
+      ],
+      "role": "Crawler · Spy Class",
+      "revealedAt": "4:6",
+      "sort": 78,
+      "voice": "system",
+      "tagline": "Took the Human race and a rogue’s class, and holds a quadrant of a bubble nobody else wanted.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 6,
+          "floor": 5,
+          "at": "4:6",
+          "confidence": "draft",
+          "headline": "The tomb raiders, so called",
+          "text": "Subject kept the Human race and took the rogue-type Spy Class, and earned his way into the club on that. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "bonnie",
+      "kind": "character",
+      "name": "Bonnie",
+      "aka": [],
+      "role": "Dirigible Gnome · fifth floor",
+      "revealedAt": "4:16",
+      "sort": 79,
+      "voice": "system",
+      "tagline": "A juvenile gnome whose father commanded a flying castle, and who is holding the door open for the people who arrived too late to save him.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 16,
+          "floor": 5,
+          "at": "4:16",
+          "confidence": "verified",
+          "headline": "She brings them inside",
+          "text": "Subject is a juvenile Dirigible Gnome of the air quadrant, daughter of a commandant. She is the one who brings the crawlers in through the door, and what they find on the other side of it is her father, already dead, and the person who did it still standing there. She is taken into the court afterwards. Nobody discusses the alternative."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "drakea",
+      "kind": "character",
+      "name": "Drakea",
+      "aka": [],
+      "role": "Former crawler · twenty-second edition",
+      "revealedAt": "4:28",
+      "sort": 80,
+      "voice": "system",
+      "tagline": "Born a Bune, kept the race, and wrote an edition of the cookbook in a season the Nagas produced two hundred and fifty cycles ago.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 28,
+          "floor": 5,
+          "at": "4:28",
+          "confidence": "verified",
+          "headline": "The twenty-second hand on the cookbook",
+          "text": "Subject crawled in the last season the Nagas produced, which was over two hundred and fifty cycles ago, and carried the cookbook through it. He was born a Bune and declined to trade the race away at class selection, taking a rogue-and-magic hybrid instead. His gear is still being handed out as prizes, which is the only immortality this production offers."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "geyrun",
+      "kind": "character",
+      "name": "Geyrun",
+      "aka": [],
+      "role": "The first owner of Orthrus",
+      "revealedAt": "4:29",
+      "sort": 81,
+      "voice": "system",
+      "tagline": "A god’s favourite child, and the hound’s first owner, murdered long before any of this by a hand nobody has named.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 29,
+          "floor": 5,
+          "at": "4:29",
+          "confidence": "draft",
+          "headline": "The hound had an owner before this one",
+          "text": "Subject was the favourite child of a god and the first owner of Orthrus. He was murdered. His father has a suspect and no proof, and the suspect is family, which is the arrangement that turns a private grievance into a standing quest with a stranger’s name on it."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "porthus",
+      "kind": "character",
+      "name": "Porthus",
+      "aka": [
+        "Dr. Porthus Hu"
+      ],
+      "role": "Former crawler · second edition",
+      "revealedAt": "4:end",
+      "sort": 82,
+      "voice": "system",
+      "tagline": "High Elf, rogue, second hand on the cookbook, and now the chief executive of an organisation that campaigns against the thing that made him.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "floor": 5,
+          "at": "4:end",
+          "confidence": "draft",
+          "headline": "The second hand on the cookbook",
+          "text": "Subject crawled in the fifteenth season, chose the High Elf race and a rogue’s class, and wrote the second edition of the book that keeps being handed down. He now runs the Open Intellect Pacifist Action Network, which opposes the crawl. He is therefore both an advertisement for the dungeon and a witness against it, and production has never worked out how to bill him."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "jamal",
+      "kind": "character",
+      "name": "Jamal",
+      "aka": [],
+      "role": "Hammerhead · made flesh",
+      "revealedAt": "5:14",
+      "sort": 83,
+      "voice": "system",
+      "tagline": "A hammerhead shark that breathes air, and spent his first years as ink on somebody’s shoulder.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 14,
+          "floor": 6,
+          "at": "5:14",
+          "confidence": "draft",
+          "headline": "The tattoo gets a body",
+          "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He is polite. He is anxious. He is loyal past the point where loyalty is sensible, and I have not yet identified what he is getting out of the arrangement."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "drick",
+      "kind": "character",
+      "name": "Drick",
+      "aka": [],
+      "role": "Former crawler · the Dream",
+      "revealedAt": "5:33",
+      "sort": 84,
+      "voice": "system",
+      "tagline": "Old, scarred, still heavily muscled, and no longer entirely the one driving.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 33,
+          "floor": 6,
+          "at": "5:33",
+          "confidence": "verified",
+          "headline": "Crawling Through the Ages",
+          "text": "Subject is a former crawler and a member of the Dream, appearing on a CrawlCon panel about the history of the crawl. He is also carrying a Gondii worm in his brain on behalf of the Valtay, which is a detail the panel does not cover. He brags well. It is the part of him that is still his own."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "anton",
+      "kind": "character",
+      "name": "Anton",
+      "aka": [
+        "Anton Lopez"
+      ],
+      "role": "Crawler · Fugitive Class",
+      "revealedAt": "6:5",
+      "sort": 85,
+      "voice": "system",
+      "tagline": "Bald, muscular, crossbow, black cape, and prison tattoos that predate the dungeon.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 5,
+          "floor": 8,
+          "at": "6:5",
+          "confidence": "verified",
+          "headline": "Hostile on arrival, and reasonable about it",
+          "text": "Subject took the Fugitive Class and wears black studded leather from neck to boot with a cape over it. He carries a crossbow. He is covered in tattoos he did not acquire down here. He and his party meet the court while hostile, having heard what a certain cat said about Cat Girls, and the misunderstanding is cleared up faster than anybody expected."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "gluteus-maxx",
+      "kind": "character",
+      "name": "Gluteus Maxx",
+      "aka": [],
+      "role": "Dancer · mercenary",
+      "revealedAt": "6:6",
+      "sort": 86,
+      "voice": "system",
+      "tagline": "A dancer from the club’s ground floor, hired as muscle, and better at it than the hiring implied.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 6,
+          "floor": 8,
+          "at": "6:6",
+          "confidence": "draft",
+          "headline": "Short, fuzzy, and available",
+          "text": "Subject dances at one of the establishments inside the club and takes mercenary work on the side. He is short, hairy and built like the job. The court hires him. I note for the record that of everyone on the payroll, he is among the few who have never once had to be told what the plan is twice."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "geraldo",
+      "kind": "character",
+      "name": "Geraldo",
+      "aka": [],
+      "role": "Monk Seal Picket Sentry",
+      "revealedAt": "6:7",
+      "sort": 87,
+      "voice": "system",
+      "tagline": "An aquatic melee tank who was not wearing the headband before he was captured, and has not taken it off since.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 7,
+          "floor": 8,
+          "at": "6:7",
+          "confidence": "verified",
+          "headline": "He joins the squad",
+          "text": "Subject is a Monk Seal Picket Sentry, an aquatic mob built to stand in front of things. He was taken rather than recruited. He now wears a white headband with hearts on it matching the team flag, which he did not own beforehand, and he makes kung-fu poses. Nobody taught him that either."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "harbinger",
+      "kind": "character",
+      "name": "Harbinger",
+      "aka": [],
+      "role": "Liaison",
+      "revealedAt": "6:12",
+      "sort": 88,
+      "voice": "system",
+      "tagline": "A liaison who disagrees with his own side’s philosophy and is working, openly enough, to take two crawlers off the board.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 12,
+          "floor": 8,
+          "at": "6:12",
+          "confidence": "verified",
+          "headline": "He does not agree with the Plenty",
+          "text": "Subject is a caprid liaison operating behind the scenes. He expressly disagrees with the Plenty’s goals and is actively working to remove Carl and Prepotente from the crawl, and he says so to their faces at the first meeting. I record this as a courtesy on his part. Most of the people trying that do not announce it."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "huanxin-jinx",
+      "kind": "character",
+      "name": "Huanxin Jinx",
+      "aka": [],
+      "role": "Sponsor · Grixist",
+      "revealedAt": "6",
+      "sort": 89,
+      "voice": "system",
+      "tagline": [
+        {
+          "at": "6",
+          "text": "A name out of an old debt, and a price somebody declined to pay."
+        },
+        {
+          "at": "6:17",
+          "text": "Rich, clever, chief executive of a habitat company, and playing the Ascension game since she was a child."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 17,
+          "floor": 8,
+          "at": "6:17",
+          "confidence": "verified",
+          "headline": "Sponsor to a goddess",
+          "text": "Subject is a Grixist and the current sponsor of the goddess Eileithyia. She is wealthy and she is intelligent, and she has been playing the Ascension game since childhood, which is longer than most of the entities she is now backing have existed. Her day job is building the structures people live in."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "uzi-jesus",
+      "kind": "character",
+      "name": "Uzi Jesus",
+      "aka": [
+        "HeyZoos"
+      ],
+      "role": "Totem card",
+      "revealedAt": "6:22",
+      "sort": 90,
+      "voice": "system",
+      "tagline": "“I am the way, motherfucker.” Level one hundred and forty, undead, origin Ecuador, seventy-five seconds at a time.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 22,
+          "floor": 8,
+          "at": "6:22",
+          "confidence": "verified",
+          "headline": "A totem with a catchphrase",
+          "text": "Subject is a unique totem card, held by the court, summoned for seventy-five seconds at a stretch. Level one hundred and forty, constitution two hundred, undead, origin Ecuador. The catchphrase is his own and the card prints it. I did not write that card and I decline responsibility for it."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "doctor-bones",
+      "kind": "character",
+      "name": "Doctor Bones",
+      "aka": [
+        "Dr. Bones"
+      ],
+      "role": "Announcer · mercenary",
+      "revealedAt": "6:23",
+      "sort": 91,
+      "voice": "system",
+      "tagline": "A level ninety Skin Skellie who took the announcer’s booth rather than the stage, and does both jobs better than the club deserves.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 23,
+          "floor": 8,
+          "at": "6:23",
+          "confidence": "draft",
+          "headline": "The announcer at the Penis Parade",
+          "text": "Subject is a skeletal Bard, level ninety, working as announcer and disc jockey for one of the club’s establishments rather than performing in it. He also takes mercenary contracts. The two careers turn out to require the same skill, which is holding a room’s attention while something else happens in it."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "bodi",
+      "kind": "character",
+      "name": "Bodi",
+      "aka": [],
+      "role": "Former crawler · Land War",
+      "revealedAt": "7:15",
+      "sort": 92,
+      "voice": "system",
+      "tagline": "Famous outside the dungeon, which counts for nothing down here, and a battalion commander because of what he did in a season called Land War.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 15,
+          "floor": 9,
+          "at": "7:15",
+          "confidence": "draft",
+          "headline": "Commander of the 103rd",
+          "text": "Subject is a former crawler whose season was Land War, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He is recognised on sight by people who have never crawled. That is rarer than it sounds."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "rend",
+      "kind": "character",
+      "name": "Rend",
+      "aka": [
+        "Garret"
+      ],
+      "role": "Pet · Tummy Acher",
+      "revealedAt": "7:15",
+      "sort": 93,
+      "voice": "system",
+      "tagline": "A Tummy Acher handed over as a door prize for turning up to a convention, and now levelling in a war.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 16,
+          "floor": 9,
+          "at": "7:15",
+          "confidence": "verified",
+          "headline": "A gift for attending",
+          "text": "Subject is a Tummy Acher, a pet-class mob built to absorb damage, and he came to his crawler as a gift for attending CrawlCon. Tserendolgor took delivery of a party favour. What she has now is a tank that levels every time the group goes hunting, which is not what a party favour is for."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "epitome-tagg",
+      "kind": "character",
+      "name": "Epitome Tagg",
+      "aka": [
+        "Tagg"
+      ],
+      "role": "Leader of the Dream",
+      "revealedAt": "7:80",
+      "sort": 94,
+      "voice": "system",
+      "tagline": "Son of Epitome Noflex, leader of the Dream, and dressed like any other elf in the room.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 80,
+          "floor": 9,
+          "at": "7:80",
+          "confidence": "verified",
+          "headline": "Nothing like the reputation",
+          "text": "Subject leads the Dream and is the son of Epitome Noflex. At the first meeting he wears a plain leather jerkin and is indistinguishable from the rest of the dream elves in the room, which Carl notes at the time. The reputation that precedes him describes an unhinged psychopath. The man in the jerkin does not perform it, and I would not read that as reassurance."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "radoslav",
+      "kind": "character",
+      "name": "Radoslav",
+      "aka": [],
+      "role": "Racer · Team Free Love",
+      "revealedAt": "8:4",
+      "sort": 95,
+      "voice": "system",
+      "tagline": "A level seventy-five Bugbear who does a little of everything, racing a vehicle he is fond of for a team that named itself.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 4,
+          "floor": 10,
+          "at": "8:4",
+          "confidence": "verified",
+          "headline": "Team Free Love, in the heats",
+          "text": "Subject is a Bugbear Jack of All Trades, level seventy-five, and a self-aware NPC racer in the vehicular heats. He and his teammate dress for the part and race in earnest. They are aware of what they are, which the format did not intend and cannot now undo."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "lucienne",
+      "kind": "character",
+      "name": "Lucienne",
+      "aka": [],
+      "role": "Team Sparkles",
+      "revealedAt": "8:5",
+      "sort": 96,
+      "voice": "system",
+      "tagline": "A Mandagot Fink, level eighty-one, one of two, and rude in a way that reads as policy rather than temper.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 5,
+          "floor": 10,
+          "at": "8:5",
+          "confidence": "verified",
+          "headline": "Passing on the track, and unpleasant about it",
+          "text": "Subject is a Mandagot, a Fairy-class creature, level eighty-one, and one of the two members of Team Sparkles. She worships Diwata, which the System flags as an automatic hostility toward anyone Diwata dislikes. She passes the court on the track and is very rude about it. That part is hers, not the goddess’s."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "genesis",
+      "kind": "character",
+      "name": "Genesis",
+      "aka": [],
+      "role": "Driver · the Lady Dominators",
+      "revealedAt": "8:13",
+      "sort": 97,
+      "voice": "system",
+      "tagline": "Black hair, a Kentucky accent by Carl’s reckoning, and the half of the pair that does the talking.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 13,
+          "floor": 10,
+          "at": "8:13",
+          "confidence": "verified",
+          "headline": "One of two womantaur dominators",
+          "text": "Subject is a Lady Mantaur Dominator, level ninety-five, and one of a pair driving for the Lady Dominators in the heats. She has black hair and a thick American accent that Carl places somewhere around Kentucky. Between the two of them she is the one who speaks, at length, to anyone within range."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "rapture",
+      "kind": "character",
+      "name": "Rapture",
+      "aka": [],
+      "role": "Driver · the Lady Dominators",
+      "revealedAt": "8:13",
+      "sort": 98,
+      "voice": "system",
+      "tagline": "Freckled, red-haired, chewing tobacco, and content to let her partner do the talking.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 14,
+          "floor": 10,
+          "at": "8:13",
+          "confidence": "verified",
+          "headline": "The other womantaur dominator",
+          "text": "Subject is a Lady Mantaur Dominator, level ninety-five, driving alongside her partner for the Lady Dominators. She has freckled skin and curly red hair and she chews tobacco. She says considerably less than her partner does, which in that vehicle is a structural necessity rather than a personality."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "linus",
+      "kind": "character",
+      "name": "Linus",
+      "aka": [],
+      "role": "Tourist",
+      "revealedAt": "8:15",
+      "sort": 99,
+      "voice": "system",
+      "tagline": "A tourist who has attached himself to a crawler he says he admires, and the System files him as exactly that.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 15,
+          "floor": 10,
+          "at": "8:15",
+          "confidence": "verified",
+          "headline": "Filed as: tourist",
+          "text": "Subject presents as a tourist and a devoted follower of one of the crawlers, to a degree that the crawler in question finds difficult. The System’s notice on him reads, in full, \"Linus. Tourist.\" I have checked it twice. That is the entire entry, and entries that short are usually short for a reason."
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "jacobus",
+      "kind": "character",
+      "name": "Jacobus",
+      "aka": [],
+      "role": "Reverse Tooth Fairy",
+      "revealedAt": "8:36",
+      "sort": 100,
+      "voice": "system",
+      "tagline": "A totem card left switched on by accident, and now somebody’s pet.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 36,
+          "floor": 10,
+          "at": "8:36",
+          "confidence": "verified",
+          "headline": "The card that never went away",
+          "text": "Subject is a Reverse Tooth Fairy, level ninety, and he was a totem card until a patch on the Scavenger’s Daughter made him permanent, which nobody intended. He is tiny, absurdly muscled, blond, and his wings move too fast to see. Imani has him now. The paperwork to reverse it does not exist."
+        }
+      ],
+      "relations": []
     }
   ]
 }

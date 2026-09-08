@@ -13,8 +13,8 @@ const bookById = new Map(books.map(b => [b.id, b]));
     <p class="eyebrow" style="color:var(--color-blood)">Dungeon Crawler World · Season: Earth</p>
     <h1>The Crawl<em>So Far</em></h1>
     <p class="standfirst">
-      Eleven floors across eight books, sealed to where you are. Nothing below the premise
-      shows until your position reaches it.
+      Eleven floors, eight books, one rule: you are shown the ground you have already walked
+      and never what waits under it. The record below opens as your position catches up.
     </p>
 
     <div class="prose premise">
@@ -32,9 +32,9 @@ const bookById = new Map(books.map(b => [b.id, b]));
         and loot buys another floor of life. <strong>Being entertaining is a survival stat.</strong></p>
       {gate.spoilers && gate.fresh
         ? <p class="sys"><b>*** No position set ***</b>{UNSET_COPY}</p>
-        : <p class="sys"><b>*** Notice ***</b>Everything below this point is sealed by reading
-            position. The dungeon shows you your floor and nothing beyond it. That's not cruelty,
-            crawler. That's format.</p>}
+        : <p class="sys"><b>*** Notice ***</b>Everything below this line is sealed to your
+            position. You get your floor. You do not get the one under it. That is not cruelty,
+            crawler. That is format.</p>}
     </div>
   </section>
 

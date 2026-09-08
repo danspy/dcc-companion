@@ -312,3 +312,70 @@ test('an alias is a gated name, unless it is a common noun phrase', () => {
   const fine = lint({ ...base, entities: [other, show, namer('They are on the show every week.')] });
   assert.equal(fine.errors.length, 0);
 });
+
+/* ---------------------------------------------------------------------------
+   Lane selection. Three views draw from `lanesFor`, so the gate has to hold in
+   it and not only in the components that call it. `src/lib/timeline.ts` imports
+   only pure modules, which is why this can import it directly.
+   --------------------------------------------------------------------------- */
+
+const { lanesFor, makeScale, laneY, arcPath } = await import('../src/lib/timeline.ts');
+
+const gateAt = frontier => ({ frontier, spoilers: true, fresh: false });
+
+const cast = [
+  { id: 'a', kind: 'character', name: 'A', aka: [], role: 'r', revealedAt: '1:1', taglines: [] },
+  { id: 'b', kind: 'character', name: 'B', aka: [], role: 'r', revealedAt: '4:2', taglines: [] },
+  { id: 'c', kind: 'item', name: 'C', aka: [], role: 'r', revealedAt: '1:5', taglines: [] },
+];
+const log = [
+  { entityId: 'a', sortKey: 1001, book: 1, floor: 1, headline: 'a1', text: '' },
+  { entityId: 'a', sortKey: 6001, book: 6, floor: 8, headline: 'a2', text: '' },
+  { entityId: 'b', sortKey: 4002, book: 4, floor: 5, headline: 'b1', text: '' },
+  { entityId: 'c', sortKey: 1005, book: 1, floor: 1, headline: 'c1', text: '' },
+];
+
+test('a lane never carries an entry past the frontier', () => {
+  const { lanes } = lanesFor(cast, log, gateAt(2000), 24);
+  const keys = lanes.flatMap(l => l.beats.map(b => b.sortKey));
+  assert.ok(keys.every(k => k <= 2000), 'every beat on a lane is one the reader has reached');
+  assert.ok(!lanes.some(l => l.entity.id === 'b'), 'an unmet entity gets no lane');
+});
+
+test('an entity met but not yet acted on gets no lane, and no count', () => {
+  // B is revealed at 4:2 and its only beat is at 4:2, so at 4:1 it is met by
+  // neither test — the count must not hint that it is coming.
+  const { lanes, met } = lanesFor(cast, log, gateAt(4001), 24);
+  assert.equal(met, 2);
+  assert.equal(lanes.length, 2);
+});
+
+test('lanes settle into kind order, so an item sits below the people', () => {
+  const { lanes } = lanesFor(cast, log, gateAt(9000), 24);
+  assert.deepEqual(lanes.map(l => l.entity.id), ['a', 'b', 'c']);
+});
+
+test('the lane limit caps what is drawn without changing what was met', () => {
+  const { lanes, met } = lanesFor(cast, log, gateAt(9000), 1);
+  assert.equal(lanes.length, 1);
+  assert.equal(met, 3, 'met counts what the reader has, not what fits on screen');
+  assert.equal(lanes[0].entity.id, 'a', 'the cap keeps the entity with the most reached');
+});
+
+test('the x scale gives a book the width of its own chapter count', () => {
+  const scale = makeScale([
+    { id: 1, chapters: 47, accent: '#fff', ink: '#000', title: 'One' },
+    { id: 2, chapters: 25, accent: '#fff', ink: '#000', title: 'Two' },
+  ]);
+  assert.equal(scale.chapters, 72);
+  assert.equal(scale.offsetOf(1000 + 999), 47, 'end of book 1 is its last chapter');
+  assert.equal(scale.offsetOf(2010), 57, 'book 2 chapter 10 sits after all of book 1');
+  assert.equal(scale.offsetOf(9000), 72, 'spoilers off is the whole width, not an overflow');
+  assert.equal(scale.offsetOf(0), 0, 'no position recorded draws nothing');
+});
+
+test('an arc is drawn between the two lane positions it names', () => {
+  const d = arcPath(100, laneY(0), laneY(2));
+  assert.ok(d.startsWith(`M 100 ${laneY(0)}`), 'it starts on the first lane');
+  assert.ok(d.endsWith(`100 ${laneY(2)}`), 'and ends on the second');
+});
