@@ -198,6 +198,27 @@ of text; the deliberate absence of an exemption list for summaries stands. The F
 pages carry these under an `AI Description` heading with chapter citations; quote the description
 itself, short, never the narration around it.
 
+### Finding things: the filter is safe because the page is
+
+`/who` carries 180 entries, so it has a filter bar: a search box, six kind chips, and a
+"met only" toggle. `/` focuses the box and Escape clears it. It is progressive enhancement —
+with no JavaScript the page renders exactly as before.
+
+**It filters the rendered rows rather than an index, and that is the whole security argument.**
+A sealed row has no name, role or tagline in the document at all; it renders as blocks and
+"Not yet met", so its `data-find` attribute is empty and no query can surface it. There is no
+second copy of the data to gate and therefore no second place to get the gate wrong. A fresh
+visitor has nothing to search, so the bar renders disabled.
+
+Two details are deliberate rather than incidental:
+
+- **Every count is of entries the reader has met.** "Characters 105" would tell someone on book 1
+  how many people are still coming, which is the structural leak the sealed beat stamps were.
+  The placeholder carries no total for the same reason.
+- **Matching is at word starts.** `check-pages.mjs` learned this already: without a boundary
+  "Tran" matches inside "transparent". So "ran" does not find Tran, which is correct — three
+  letters means the start of a word.
+
 ### Structure leaks, not just prose
 
 A sealed entry used to render its own stamp: `Bk 7 · Fate · Floor 9`. That tells you the

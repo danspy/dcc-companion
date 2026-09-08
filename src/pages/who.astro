@@ -14,11 +14,36 @@ for (const b of beats) {
   beatsByEntity.set(b.entityId, list);
 }
 
-const groups = KIND_ORDER.map(kind => ({
-  kind,
-  label: KIND_LABELS[kind],
-  rows: entities.filter(e => e.kind === kind),
-})).filter(g => g.rows.length);
+/* Short chip labels. KIND_LABELS is written for section headings ("Items &
+   artifacts"), which is too long to sit in a row of buttons. */
+const CHIP_LABELS: Record<string, string> = {
+  character: 'Characters', item: 'Items', mechanic: 'Mechanics',
+  faction: 'Factions', place: 'Places', thread: 'Threads',
+};
+
+const groups = KIND_ORDER.map(kind => {
+  const rows = entities.filter(e => e.kind === kind);
+  return {
+    kind,
+    label: KIND_LABELS[kind],
+    chip: CHIP_LABELS[kind] ?? KIND_LABELS[kind],
+    rows,
+    /* Counts are of entries this reader has *met*. The full count would tell
+       someone on book 1 how many people are still coming, which is the same
+       structural leak the sealed beat stamps were. */
+    met: rows.filter(e => reveals(gate, e.revealedAt)).length,
+  };
+}).filter(g => g.rows.length);
+const metTotal = groups.reduce((n, g) => n + g.met, 0);
+
+/* The searchable string for one row, assembled from what this reader may
+   actually see. A sealed row gets none, and that is what makes filtering safe
+   by construction rather than by rule: there is no name in the document to
+   match, so no query can surface one. */
+const findable = (e: (typeof entities)[number]) =>
+  [e.name, ...((e.aka ?? []) as string[]), e.role, taglineFor(e, gate)]
+    .join(' ')
+    .toLowerCase();
 ---
 <Layout title="Who & What">
   <section class="wrap head">
@@ -33,8 +58,38 @@ const groups = KIND_ORDER.map(kind => ({
     )}
   </section>
 
+  <section class="wrap finder-wrap">
+    <div class="finder">
+      <label class="search" for="find">
+        <span class="vh">Search entries you have met</span>
+        <input id="find" type="search" autocomplete="off" spellcheck="false"
+               disabled={metTotal === 0}
+               placeholder={metTotal === 0 ? 'Set your position to search' : 'Search names, roles and descriptions'} />
+        <kbd>/</kbd>
+      </label>
+      <div class="chips">
+        {groups.map(g => (
+          <button type="button" class="chip" data-chip={g.kind}
+                  aria-pressed="false" disabled={g.met === 0}>
+            {g.chip}<span class="n">{g.met}</span>
+          </button>
+        ))}
+        <button type="button" class="chip solo" id="metonly"
+                aria-pressed="false" disabled={metTotal === 0}>Met only</button>
+      </div>
+      <p class="tally" id="tally" aria-live="polite" role="status"></p>
+    </div>
+  </section>
+
+  <section class="wrap" id="nomatch" hidden>
+    <p class="sys" style="max-width:var(--measure)">
+      <b>*** Nothing matches ***</b>Nothing you have met answers to that, crawler. Try fewer letters,
+      or read further.
+    </p>
+  </section>
+
   {groups.map(group => (
-    <section class="wrap group">
+    <section class="wrap group" data-group={group.kind}>
       <h2>{group.label}</h2>
       <div class="grid-cells">
         {group.rows.map(e => {
@@ -42,7 +97,8 @@ const groups = KIND_ORDER.map(kind => ({
           const own = beatsByEntity.get(e.id) ?? [];
           const cov = coverage(own, gate);
           return (
-            <div class="cell">
+            <div class="cell" data-kind={e.kind} data-met={known ? '1' : '0'}
+                 data-find={known ? findable(e) : ''}>
               <div class="cell-head">
                 {known
                   ? <h3><a href={`/entity/${e.id}`}>{e.name}</a></h3>
@@ -79,4 +135,144 @@ const groups = KIND_ORDER.map(kind => ({
   .role { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em;
           text-transform: uppercase; color: var(--color-gold); margin: 2px 0 10px; }
   .tagline { font-size: 14.5px; color: var(--color-grey-200); margin: 0; }
+
+  /* ---- the finder ------------------------------------------------------
+     Not sticky: the gate bar already owns `top: 0`, and stacking a second
+     sticky element under one whose height wraps is a measurement problem
+     nobody needs. `/` focuses this and scrolls it into view instead. */
+  .finder-wrap { padding-top: 26px; }
+  .finder { border: 1px solid var(--color-line); background: var(--color-panel);
+            padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+
+  .search { display: flex; align-items: center; gap: 10px;
+            border: 1px solid var(--color-line); background: var(--color-ink);
+            padding: 0 10px; }
+  .search:focus-within { border-color: var(--color-gold); }
+  .search input { flex: 1 1 auto; min-width: 0; height: 38px; border: 0; outline: 0;
+                  background: transparent; color: var(--color-grey-100);
+                  font-family: var(--font-body); font-size: 15px; }
+  .search input::placeholder { color: var(--color-grey-700); }
+  .search input:disabled { cursor: not-allowed; }
+  /* Safari draws its own clear button; the reset below keeps one affordance. */
+  .search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+  kbd { font-family: var(--font-mono); font-size: 11px; color: var(--color-grey-700);
+        border: 1px solid var(--color-line); padding: 1px 5px; flex: none; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em;
+          text-transform: uppercase; color: var(--color-grey-300);
+          background: transparent; border: 1px solid var(--color-line);
+          padding: 5px 9px; cursor: pointer; display: inline-flex; gap: 7px; align-items: center; }
+  .chip:hover:not(:disabled) { border-color: var(--color-grey-700); color: var(--color-grey-100); }
+  .chip[aria-pressed="true"] { border-color: var(--color-gold); color: var(--color-gold); }
+  .chip:disabled { color: var(--color-grey-700); cursor: not-allowed; }
+  .chip .n { color: var(--color-grey-700); font-variant-numeric: tabular-nums; }
+  .chip[aria-pressed="true"] .n { color: var(--color-gold); }
+  .chip.solo { margin-left: auto; }
+
+  .tally { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em;
+           text-transform: uppercase; color: var(--color-grey-500); margin: 0; min-height: 1em; }
+
+  /* Visually hidden but read aloud. */
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden;
+        clip-path: inset(50%); white-space: nowrap; }
+
+  /* A grid item keeps its box under the UA's [hidden] rule in some engines. */
+  .cell[hidden], .group[hidden] { display: none !important; }
+
+  @media (max-width: 560px) {
+    .chip.solo { margin-left: 0; }
+  }
 </style>
+
+<script>
+  /* Filtering happens over the rendered rows, which is what keeps it honest: a
+     sealed row carries no name, no role and no tagline in the document, so
+     `data-find` is empty for it and no query can ever surface one. The only
+     way to widen this is to read further. */
+  const box = document.getElementById('find') as HTMLInputElement | null;
+  const tally = document.getElementById('tally');
+  const nomatch = document.getElementById('nomatch');
+  const metOnlyBtn = document.getElementById('metonly');
+
+  if (box && tally) {
+    const cells = Array.from(document.querySelectorAll<HTMLElement>('.cell'));
+    const groups = Array.from(document.querySelectorAll<HTMLElement>('.group'));
+    const chips = Array.from(document.querySelectorAll<HTMLElement>('.chip[data-chip]'));
+    const metTotal = cells.filter(c => c.dataset.met === '1').length;
+
+    const kinds = new Set<string>();
+    let metOnly = false;
+
+    /* Match at word starts, not anywhere. `check-pages.mjs` learned this the
+       hard way: without a boundary, "Tran" matches inside "transparent" and the
+       results drown in accidents. "ran" no longer finds Tran, which is correct;
+       a reader typing three letters means the start of a word. */
+    const matcher = (q: string) => {
+      const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      try { return new RegExp(`\\b${escaped}`, 'i'); }
+      catch { return null; }
+    };
+
+    const apply = () => {
+      const q = box.value.trim().toLowerCase();
+      const re = q.length > 0 ? matcher(q) : null;
+      /* A redacted row can never match a query or a kind filter usefully, so
+         narrowing implies hiding them. The toggle then only matters when the
+         reader wants a clean list with no filter applied. */
+      const hideSealed = metOnly || q.length > 0 || kinds.size > 0;
+      let shown = 0;
+
+      for (const cell of cells) {
+        const met = cell.dataset.met === '1';
+        const okMet = !hideSealed || met;
+        const okKind = kinds.size === 0 || kinds.has(cell.dataset.kind ?? '');
+        const okQuery = !re || re.test(cell.dataset.find ?? '');
+        const visible = okMet && okKind && okQuery;
+        cell.hidden = !visible;
+        if (visible) shown++;
+      }
+
+      for (const group of groups) {
+        const any = Array.from(group.querySelectorAll<HTMLElement>('.cell')).some(c => !c.hidden);
+        group.hidden = !any;
+      }
+
+      const filtering = q.length > 0 || kinds.size > 0 || metOnly;
+      tally.textContent = filtering ? `${shown} of ${metTotal} shown` : '';
+      if (nomatch) nomatch.hidden = shown > 0 || !filtering;
+    };
+
+    box.addEventListener('input', apply);
+
+    for (const chip of chips) {
+      chip.addEventListener('click', () => {
+        const kind = chip.dataset.chip!;
+        const on = chip.getAttribute('aria-pressed') === 'true';
+        chip.setAttribute('aria-pressed', String(!on));
+        if (on) kinds.delete(kind); else kinds.add(kind);
+        apply();
+      });
+    }
+
+    metOnlyBtn?.addEventListener('click', () => {
+      metOnly = !metOnly;
+      metOnlyBtn.setAttribute('aria-pressed', String(metOnly));
+      apply();
+    });
+
+    document.addEventListener('keydown', e => {
+      const target = e.target as HTMLElement | null;
+      const typing = target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName);
+      if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        e.preventDefault();
+        box.scrollIntoView({ block: 'center' });
+        box.focus();
+        return;
+      }
+      if (e.key === 'Escape' && target === box) {
+        if (box.value) { box.value = ''; apply(); } else { box.blur(); }
+      }
+    });
+  }
+</script>
