@@ -5346,7 +5346,7 @@
       "sortKey": 1022,
       "headline": "The good folks from Meadow Lark",
       "text": "We came down out of Meadow Lark, the elder care facility, together: Yolanda Martinez, the Andrews brothers, Brandon and Chris, me, and Agatha, who none of us can quite place and who came with us anyway. Carl and Donut find us, and we sit down and trade stories, theirs and ours, and then we make a plan, because there are people depending on us and a plan is what you owe them.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5372,7 +5372,7 @@
       "sortKey": 1026,
       "headline": "The Ball of Swine",
       "text": "Seven of us against the Ball of Swine: Brandon, Chris, Yolanda, Carl, Donut, Agatha and me, fighting from the redoubt. It is the first time this group has fought as one thing instead of six people and a cat standing near each other, and it works. Afterwards I count everybody twice, because that is what I do, and everybody is there both times.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5736,7 +5736,7 @@
       "sortKey": 1046,
       "headline": "Seven inches of pink feathers, in a cage",
       "text": "CAGE. Small. Pink? Pink. TWO BIG THINGS. Bite them. Bite them. Bite. MOTHER. Mother has grubs. Grubs open. Inside part GOOD. Mongo stays.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5844,19 +5844,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "mongo",
-      "kind": "arc",
-      "book": 2,
-      "chapter": null,
-      "floor": 3,
-      "at": "2:2",
-      "sortKey": 2002,
-      "headline": "He stands over her",
-      "text": "Mother down. Mother NOT MOVING. Mongo on top of Mother. Spiky things. MANY spiky things. Bite. Bite. Bite. Hurts. Mongo stays on Mother. Carl says something. Mongo does not listen to Carl.",
-      "confidence": "draft",
-      "voice": "self"
-    },
-    {
       "entityId": "primal",
       "kind": "origin",
       "book": 2,
@@ -5879,7 +5866,7 @@
       "sortKey": 2006,
       "headline": "The circus in the Over City",
       "text": "Grimaldi's Traveling Circus is pitched in one of the Over City's districts. Ringmaster Redstone Grimaldi, proprietor. Tonight two crawlers, Carl and Princess Donut, are scouting the grounds as the mobs form up for the night. That is the whole entry so far: a tent, a company, and two people looking at it from the dark. Filed under Over City, third floor.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -5892,7 +5879,7 @@
       "sortKey": 2006,
       "headline": "Met outside Grimaldi's circus",
       "text": "Night comes down on the Over City and the mobs form their lines around Grimaldi's Traveling Circus. Two crawlers have come to scout it, a man and a cat, and they leave under magical mortar fire, and I am what they run into on the other side. My charisma stands past a hundred. He stares, as they all stare. Then he snaps his own finger, and it breaks. I have not decided whether to be offended.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5917,8 +5904,8 @@
       "at": "2:11",
       "sortKey": 2011,
       "headline": "Carl signs on to her show",
-      "text": "Grimaldi has lifted my banishment. I may leave the circus behind me at last and go where my vengeance waits, and that is the sixth floor, not here. Carl has agreed to be part of it, the Vengeance of the Daughter, when it comes to its proper act. Before he gave his word he sat and read a spellbook. Wisp Armor. It guards the mind against control. He did not say against whom, and he did not need to.",
-      "confidence": "draft",
+      "text": "Grimaldi has lifted my banishment. Carl went into his head to ask him, and I asked with him. I may leave the circus behind me at last and go where my vengeance waits, and that is the sixth floor, not here. Carl has agreed to be part of it as well, the Vengeance of the Daughter, when it comes to its proper act. Before he went in he sat and read a spellbook. Wisp Armor. It guards the mind against control, and he wanted it on him before he swallowed the worms that let Grimaldi speak inside his skull. He does not walk into another creature's mind unarmoured. Nor would I.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5933,6 +5920,19 @@
       "text": "He makes a deal to appear on the programme when it moves to the sixth floor. Before giving his word he reads a Wisp Armor spellbook for cover against mind control, then buys an ice cream cone of parasitic worms from Apollon the Mighty so he can speak inside Grimaldi's head and talk him into lifting Signet's banishment.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "mongo",
+      "kind": "arc",
+      "book": 2,
+      "chapter": 12,
+      "floor": 3,
+      "at": "2:12",
+      "sortKey": 2012,
+      "headline": "He stands over her",
+      "text": "Mother down. Mother NOT MOVING. Mongo on top of Mother. Spiky things. MANY spiky things. Bite. Bite. Bite. Hurts. Mongo stays on Mother. Carl says something. Mongo does not listen to Carl.",
+      "confidence": "draft",
+      "voice": "self"
     },
     {
       "entityId": "skill-potion",
@@ -6126,7 +6126,7 @@
       "sortKey": 2021,
       "headline": "She asks them to take her",
       "text": "We carried Katia and Eva through a neighbourhood boss and a borough boss, and I would do it again. Then class selection split us, and I run this party on numbers, and Katia's numbers stopped adding up next to anyone she stands beside. I cannot carry that down another set of stairs. So I am the one asking. Carl. Donut. Take her. She is better than she looks right now, and she will hate that I said so.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -6429,19 +6429,6 @@
       "voice": "system"
     },
     {
-      "entityId": "mongo",
-      "kind": "arc",
-      "book": 3,
-      "chapter": null,
-      "floor": 4,
-      "at": "3",
-      "sortKey": 3000,
-      "headline": "He finishes Maggie My",
-      "text": "Thing on Chris. Thing OFF Chris. Thing goes for Carl. Thing is FOOD.",
-      "confidence": "draft",
-      "voice": "self"
-    },
-    {
       "entityId": "personal-spaces",
       "kind": "origin",
       "book": 3,
@@ -6476,8 +6463,8 @@
       "at": "3:3",
       "sortKey": 3003,
       "headline": "On the recap",
-      "text": "They have put me on their recap, the programme between floors, in a row with humans. The captions say Elle, Li Na's team, Ifechi, Florin, Hekla, Lucia. And Miriam, of course, because none of you understand a word I say without her. I did not ask for the camera and I do not smile for it. If the audience wants a goat that performs, the audience can wait until I feel like singing, and then it can sit very still and listen.",
-      "confidence": "draft",
+      "text": "They have put me on their recap, the programme between floors, in a row with humans. The captions say Elle, Li Na's team, Ifechi, Florin, Hekla, Lucia. And Miriam, of course, since she is the one who walked me into this place. I did not ask for the camera and I do not smile for it. If the audience wants a goat that performs, the audience can wait until I feel like singing, and then it can sit very still and listen.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -6516,7 +6503,7 @@
       "sortKey": 3008,
       "headline": "Hired at the bar",
       "text": "Transaction logged at the Desperado Club. Clients: Crawler Carl and Crawler Princess Donut. Hired: Bomo, mercenary, and the Sledge, mercenary, sold as a set. Also present at the bar, at no charge: Elle and Imani. The cat orders a dirty Shirley, in a bowl, with extra cherries, and gets it, because the Desperado knows who tips. Bomo's transcript is short. That is a feature, crawler. The talking ones cost more.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -6689,6 +6676,19 @@
       "voice": "system"
     },
     {
+      "entityId": "hekla",
+      "kind": "arc",
+      "book": 3,
+      "chapter": 21,
+      "floor": 4,
+      "at": "3:21",
+      "sortKey": 3021,
+      "headline": "A thousand crawlers stranded at 101",
+      "text": "A thousand of them are stuck at 101 on the Vermillion line, Li Jun's team among them, and there is a train sitting at 60. So I take my party into the Royal Court's safe room and I ask for help, which is not a thing I enjoy doing twice in one crawl. Katia means to use her own body as the plough. I let her offer it. That is the arithmetic.",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
       "entityId": "li-jun",
       "kind": "arc",
       "book": 3,
@@ -6700,6 +6700,19 @@
       "text": "We are stuck at 101 on the Vermillion line, my team and something like a thousand other crawlers, and we are not getting out on our own. Word comes through that Hekla's people have reached Carl's safe room and asked for his help, that a train is ready at stop 60, and that Katia means to use her own body to get it through. I do not know what that means. I have decided to find it encouraging.",
       "confidence": "draft",
       "voice": "self"
+    },
+    {
+      "entityId": "hekla",
+      "kind": "fate",
+      "book": 3,
+      "chapter": 23,
+      "floor": 4,
+      "at": "3:23",
+      "sortKey": 3023,
+      "headline": "Killed by the crawler she handed off",
+      "text": "Crawler Hekla is dead, on the train, in front of everyone. Her healer had orders to let Katia bleed, the idea being that Carl would swing first and give her a reason to put him down and the cat no choice about joining her. Then Katia aimed a Rush at Eva, went wide, and put Hekla against the wall of the cab instead. Golden Player Killer Skull. Five hundred thousand gold on Katia's head. Brynhild's Daughters do not survive the trip back.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "growler-gary",
@@ -6945,7 +6958,7 @@
       "sortKey": 4004,
       "headline": "Debuff stacking, ruined",
       "text": "Watch the highlights from the last floor, since they insist on replaying them. Miriam and I are stacking debuffs onto a boss, one on top of the other, timed to the second, the way it is supposed to be done and the way nobody else in this dungeon can do it. Then Quan Ch walks into the middle of it, and the plan is gone. The best work I have done in this place, and that is the part they replay.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7074,8 +7087,8 @@
       "at": "4:9",
       "sortKey": 4009,
       "headline": "The bubbles are inhabited",
-      "text": "The pocket worlds hold whole civilisations — the Necropolis of Anser, the pazuzu town of Pandinus, a colony of dirigible gnomes — living there before any crawler arrived.",
-      "confidence": "draft",
+      "text": "The pocket worlds are not stage sets. A bubble holds Hump Town and its changelings on the sand, a castle of dirigible gnomes in the air, the Necropolis of Anser underneath, and every one of them was there and running before a crawler arrived.",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -7621,7 +7634,7 @@
       "sortKey": 4034,
       "headline": "Waiting on the last stage",
       "text": "Carl and Donut and me, sitting on our hands while Katia goes to the water quadrant. The last part of the plan is Carl's, and Carl does not say what the last part is until it is already happening. I like plans like that. I like the part where things happen. Louis is somewhere else, and I would like it on the record that I would rather he was here. There. It is on the record.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7636,6 +7649,19 @@
       "text": "The plan was never a feral god. Carl opens the Gate onto the drain of the water quadrant and empties a bubble's ocean into Larracos. The NPCs and the mercenaries in it drown, the entrance to the Desperado Club goes under, and Juice Box walks into the city ahead of the flood.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "mongo",
+      "kind": "arc",
+      "book": 4,
+      "chapter": 34,
+      "floor": 5,
+      "at": "4:34",
+      "sortKey": 4034,
+      "headline": "He finishes Maggie My",
+      "text": "Thing on Chris. Thing OFF Chris. Thing goes for Carl. Thing is FOOD.",
+      "confidence": "draft",
+      "voice": "self"
     },
     {
       "entityId": "samantha",
@@ -7712,21 +7738,8 @@
       "sortKey": 5001,
       "headline": "He named her Tsarina",
       "text": "Background, for the file. Grimaldi pulled a half-Naiad child out of the hands of the High Elves and raised her in his circus. The child grew up. The child fell in love with him. She told him once that had she been full-blooded Naiad she would have been a tsarina, so he made it her name, and Tsarina Signet is what she has answered to since. Ringmasters name things. It is most of the job.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
-    },
-    {
-      "entityId": "hekla",
-      "kind": "arc",
-      "book": 5,
-      "chapter": null,
-      "floor": 6,
-      "at": "5:1",
-      "sortKey": 5001,
-      "headline": "The Daughters come apart",
-      "text": "The Hunting Grounds. We are not the party we were on the third floor, and I am not going to pretend otherwise. What I decided back there, about who I kept and who I handed off, has followed me down here. It has followed Katia. It has followed Eva. I saw it coming and I made the call anyway. That is what leading is. Ask me on another day whether it was the right one.",
-      "confidence": "draft",
-      "voice": "self"
     },
     {
       "entityId": "npcs-are-people",
@@ -7777,7 +7790,7 @@
       "sortKey": 5001,
       "headline": "Daughter of King Finian, and of nobody",
       "text": "I am the daughter of King Finian of the High Elves of the Liana Sector, and of a Naiad princess. She was murdered, and the Confederacy took her crown. Both halves of my family then agreed on one thing, which was that I should not exist among them. I was a child. Grimaldi's circus took me in when no throne would. That is the whole of my inheritance: a name, an exile, and a tent.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7790,7 +7803,7 @@
       "sortKey": 5001,
       "headline": "Blood magic, cast on a loser",
       "text": "The tattoos move under my skin because they are not pictures. They are Blood and Ink Elementals, and I raise them. The craft is exact. I set two creatures against each other and I cast on the one I judge will lose, before it has taken a single wound. I may not bleed the sacrifice myself; that is the law of it. Only the killing blow, struck by another hand, releases what I need. One summoning a night. Judge badly and the night is wasted.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7803,7 +7816,7 @@
       "sortKey": 5001,
       "headline": "Her loyalty does not extend to crawlers",
       "text": "I will say it plainly, since the crawlers already know. I tried to make Carl my blood sacrifice, and not with his consent. I put Donut under the Water Lily Spell. I made him bring me to the cursed circus when he had other places to be. I do not regret one piece of it. Everything I have is owed to the family that took me in when no other would, and a crawler is not family.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7816,7 +7829,7 @@
       "sortKey": 5003,
       "headline": "Part of the price of the Gate",
       "text": "Contract amendment, filed by Quasar, Carl's new lawyer. Carl surrenders the Gate, on a temporary basis. In exchange: four mercenaries, free of charge. Bomo. The Sledge. Clay-ton. Very Sullen. Plus two spells, issued to Bomo and the Sledge, that copy two of the Gate's tricks: a jump to the stairwell, and Zerzura. So the client keeps the tricks, loses the object, and gets four bodies thrown in. Lawyers, crawler. Get one.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -7855,7 +7868,7 @@
       "sortKey": 5004,
       "headline": "He moves them to the stairwell",
       "text": "Service rendered. The hunters are about to be released and the clients want to be somewhere else, specifically the stairwell in Zockau. Bomo casts the spell he was issued, and Carl and Princess Donut are there. No fuss, no speech, no ceremony. Some mercenaries want to be thanked; this one has already been paid for, in Gate. Enjoy Zockau, crawler.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8011,7 +8024,7 @@
       "sortKey": 5008,
       "headline": "What a charter costs",
       "text": "A guild charter runs upward of five hundred thousand gold from a bopca protector. A level-one guild holds five parties or individuals, provided each has one member with a personal space of their own, and a Guild Common Area appears in every one of those spaces. Private and party rooms stay shut. Environmental upgrades can be licensed across the membership for a small fee, and shared experience can be bought outright.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -8687,7 +8700,7 @@
       "sortKey": 5065,
       "headline": "Why he is in the Nothing",
       "text": "Since tonight's party runs under a peace seal, some history about the last god who broke one. At the first masquerade in the Halls, hosted by the mother of all the gods, Yarilo got drunk and forced himself on another deity's familiar. That broke the seal. Apito sent him into the Nothing for it, and he has been in the Nothing ever since. The seal on tonight's party is hers as well. Enjoy the canapes.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8778,7 +8791,7 @@
       "sortKey": 5073,
       "headline": "She hears what Carl was trying to tell her",
       "text": "Carl tried to tell me and I would not hear it. I hear it now. My mother's murder, my exile, the circus, the vengeance I have carried since I was a child: it is a programme. It is watched across the galaxy. There are people outside this floor who decide when I grieve and when I strike, and who count how many are watching while I do it. I understand him now.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -8999,7 +9012,7 @@
       "sortKey": 5077,
       "headline": "Who is covered",
       "text": "The show's employees, its tourists and a certain grade of NPC. Being cut down while covered is not dying; it is being lifted off the board and set down somewhere expensive. Borant declines to switch the coverage on for the earliest floors as a saving, which is why a liaison walks those floors in a padded suit.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -9038,7 +9051,7 @@
       "sortKey": 5999,
       "headline": "He shatters the seventh floor",
       "text": "Look at what they gave us. The Great Race, a replacement the Valtay paid for and somebody threw together in a hurry, a circuit of glass tunnels with nothing holding it up. So I tested it. Minutes after it opened, the whole loop is dust, fine as flour. No crawler goes into their maze. No mob, no NPC, no boss gets to meet anyone. You wanted a seventh floor. Build a better one.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -9272,7 +9285,7 @@
       "sortKey": 6016,
       "headline": "The outsider at the anvil",
       "text": "The file, for the people about to meet him. Ogun is an outsider, one of the old gods, from an obscure pantheon that has dissipated into time, and until a minute ago he was the last surviving member of it. He spends his days at a celestial anvil, angrily making armour, piece after piece, and nobody knows why he does it or where the armour goes. It is said the pieces are a strange shape, all of them cut for four-legged beasts. He is a god of blacksmiths and armourers now. He was something considerably larger once, and his power and his ambition make him a real contender for the throne of heaven.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -9389,7 +9402,7 @@
       "sortKey": 6021,
       "headline": "One crisis shy of the failsafe",
       "text": "They put the ninth floor's planning meeting in front of me, and the crawler asks after an administrator who has recently stopped attending meetings. So I come through in person, rebreather and all, two feet of me, and I raise my little arms and invite him to try something, because whatever he does to me happens to him as well. I tell the room I am one crisis away from pulling the thing that finishes all of us. The cat suggests moisturiser and cucumber slices and refers to me throughout as Zev's boss.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -9727,7 +9740,7 @@
       "sortKey": 6036,
       "headline": "What the crossbow says about her",
       "text": "The lore attached to a repeating crossbow, for anyone who reads the flavour text: the long-forgotten goddess Nekhebit is jealous and terrible. When the elf mothers abandoned her to worship Apito, the Oak Goddess, Nekhebit grew enraged, blamed the male-dominated high elf court for letting her worshippers stray, and cursed their seed. Every elf and fairy breed in the universe traces back to that court and that curse. It is called the Fae Diaspora. Somebody put all of that on a weapon description and expected nobody to read it.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -9883,7 +9896,7 @@
       "sortKey": 6058,
       "headline": "Announced in an area message",
       "text": "The Madre de Aguas is dead. That is the first thing the area message says. The second is that she has risen as a zombie, and the third, in the very same breath, is my name: the major demon Amayon, demon prince of Sheol, come into this realm to possess her. I could not have written the announcement better myself. Everyone in range heard it. Good. A prince should not have to introduce himself.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -10039,7 +10052,7 @@
       "sortKey": 6072,
       "headline": "A timer on a global teleport",
       "text": "Their quest, the Missing Piece, updates. Succeeded, it says. And beneath the word, a timer, one for each region, counting down to the moment my spell goes off there. A global teleport. When it lands, the walls of their stairwell chambers will be sucked away, and anyone crouched beneath them pulled upward into the stairwell. They wanted me casting. They have their wish. Home is the direction I am going in any case, and I have never minded company on the road.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -10260,7 +10273,7 @@
       "sortKey": 7007,
       "headline": "Through the portal with the water",
       "text": "I went through the Gate with the water. I lay low with the ones who lived through it, and when they were ready I told them. What they are. What this whole place is. Enough of them believed me that they call me Warlord now, and a Warlord has people, and a Warlord has opinions about alliances. I have sent War Leader Arief to Carl's people with my terms. The terms are Louis. He marries me. That is the alliance.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -10351,7 +10364,7 @@
       "sortKey": 7011,
       "headline": "Doctor Hu, and the Crawler Project",
       "text": "Carl needs the whole of it, so I give it to him in order. Doctor Hu. The Crawler Project. How fifty thousand of us came to be standing in this HQ under the Princess Posse's banner. None of it is anything he would ever have been told from inside; that is the thing about being retired, you learn what the ones still crawling are not shown. He listens. That is rarer than it sounds.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -10793,7 +10806,7 @@
       "sortKey": 7045,
       "headline": "He kills the Naga army",
       "text": "Elle can give Carl the count. Most of the Naga army is already dead, and it did not take me long. They made a programme out of Miriam. They called it Blood Hunter, and she is what it cost. So I went through their army until there was very little army. Now some baroness tells Carl he cannot work with me unless I join his Princess Posse. Let them argue about it. I am not finished.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -11143,8 +11156,8 @@
       "at": "7:61",
       "sortKey": 7061,
       "headline": "Summoned, and a demon eviction starts",
-      "text": "Someone has said my name the right way, in the middle of the Reaver fighting. So I come. It is the one predictable thing about me. The moment I set foot in the realm a demon eviction begins, the way weather begins. I did not do that. It is simply what happens when I am in a room. Now then. Let me see who is here, and what they think they are fighting for.",
-      "confidence": "draft",
+      "text": "Nobody said my name. The fighting in Reaver territory added up to it on its own, which is how I am usually called for, and so I come. The moment I set foot in the realm a demon eviction begins, the way weather begins. I did not do that. It is simply what happens when I am in a room. Now then. Let me see who is here, and what they think they are fighting for.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -11248,7 +11261,7 @@
       "sortKey": 7065,
       "headline": "The Ceremony of Chaos",
       "text": "I call the Ceremony of Chaos and the field stops. Every soldier, every mage, every screaming thing mid-scream, held exactly where it stood. Nearly every. The Viceroys are pouring their mind magic into Carl at the same moment, and something in him tips over into a sixteenth level of Mind Balance, and he stays standing in the middle of my stillness, blinking at me. I could be offended. Instead I gather everyone I did freeze into one great pile beside the Dream castle. A gift. Unwrap it carefully.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -11403,8 +11416,8 @@
       "at": "7:73",
       "sortKey": 7073,
       "headline": "Taken off the board by another god",
-      "text": "Feral God Yarilo has been removed from this floor by Harpocrates, acting under the direction of Crawler Li Na. He came through a gate, chased an AI the length of a warzone, changed sides for a crate of potions, and finished at the hands of the god who came through the same gate behind him. Everything down here becomes somebody's equipment, the gods included.",
-      "confidence": "draft",
+      "text": "Feral God Yarilo has been removed from this floor by Harpocrates, acting under the direction of Crawler Li Na. He came through a gate, chased an AI the length of a warzone, changed sides for a crate of potions, and finished at the hands of the god who had come through that same gate ahead of him. Everything down here becomes somebody's equipment, the gods included.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -11689,8 +11702,8 @@
       "at": "7:end",
       "sortKey": 7999,
       "headline": "Nearly lost, and then a father",
-      "text": "Mongo, dinosaur, registered pet of Crawler Princess Donut, has survived the ninth floor. This was not the expected outcome. Credit goes to a knight called Ser Rendelgor, who pulled him out. Mongo is also, as of the stairs, a father. Nobody is going to explain that to you, least of all me.",
-      "confidence": "draft",
+      "text": "Mongo, dinosaur, registered pet of Crawler Princess Donut, has survived the ninth floor. This was not the expected outcome. Credit goes to a knight called Sir Rendlegore, who pulled him out. Mongo is also, as of the stairs, a father. Nobody is going to explain that to you, least of all me.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -12040,8 +12053,8 @@
       "at": "8:23",
       "sortKey": 8023,
       "headline": "The catchphrase, and what it costs to refuse it",
-      "text": "It wants the line. I will not give it the line. So it asks me, over the loudspeaker, with the whole floor listening, why I imagine it will ever allow me to die, and then it takes several of my flippers off me. I am the executive producer of this season. I designed a floor. Somebody write that down.",
-      "confidence": "draft",
+      "text": "It wants the line. I will not give it the line. So I ask it, over the loudspeaker, with the whole floor listening, why it will not simply let me die, and it takes several of my flippers off me for asking. I am the executive producer of this season. I designed a floor. Somebody write that down.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -12665,7 +12678,7 @@
       "sortKey": 8074,
       "headline": "Do not kill the shells",
       "text": "An apartment. Human Shells inside it, wearing the faces of Tran's parents, who are dead. Carl and Donut are about to do the obvious thing and I stop them. Do not kill the shells. I say it once more, slowly, so it lands. The AI is explicit about what this is: every apartment on this course is a what-if, built around a crawler it finds interesting. You do not put a blade into a what-if. You walk through it, and you keep walking.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -12808,7 +12821,7 @@
       "sortKey": 8087,
       "headline": "She holds the portal open",
       "text": "I open the portal again, and I hold it. Louis comes through, and the crawlers from the multi-crawler heats come through behind him, and I keep it open until the last of them is on this side. Everybody else goes back to the track, crosses the finish line, and takes the stairs. Somebody has to stand at the door. It's usually me, and I'm all right with that.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -12977,7 +12990,7 @@
       "sortKey": 8097,
       "headline": "Every inventory swaps at once",
       "text": "Everyone holding something: hold out your hands. My Scavenger's Daughter effect goes off and every crawler here is carrying whatever the crawler nearest them was carrying. Donut gets Carl's. Carl does not blink. He asks her to put a bomb together with an enhanced pet biscuit, as though he had been waiting years for someone else to have his pockets. I adore him for it. I no longer need him to worship me, and I tell him so. Every exit is an entrance. I am leaving through one now.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
