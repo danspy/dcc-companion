@@ -487,11 +487,12 @@ currently has a dev server running. It is not this deployment, and only one proj
   Mechanics, Quests, Shows and Bosses were swept by hand for the pass that doubled the graph, and
   a `--cat=` flag would make that reproducible.
 - Chapter-accurate reveal points for the entities still tagged at book level
-- **A verification pass over the `draft` beats — now 150 of 232**, because the whole cast was
-  rewritten in voice from the existing record. The facts were carried over, not re-checked
-  against the books; `npm run content:check` lists every one.
-- The Crown of the Sepsis Whore and the Nothing are the two items with no `description`: the
-  wiki has no System text for either, so they need the book
+- **13 `draft` beats remain of 624**, each left draft for a stated reason rather than an unread
+  one; `npm run content:check` lists them. The pass that cleared the other 174 found real errors,
+  and the pattern is worth knowing: the dangerous ones were never wrong facts but **right facts
+  under the wrong tag** — a book-4 twist in a book-3 beat, a book-8 reveal at the end of book 7,
+  a dead woman narrating two floors after she was killed. Prose gets read for truth; tags do not.
+- The Nothing is the one item with no `description`: no System text for it exists on the wiki
 - Books 3, 6 and 8 have the thinnest entity coverage relative to their chapter counts
 - Deeper coverage: more items, per-floor mechanics, quotes with chapter anchors
 - Accounts (`data/users.db` + sessions), so progress follows the reader across devices
