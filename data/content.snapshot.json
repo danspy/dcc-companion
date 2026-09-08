@@ -986,17 +986,17 @@
         {
           "at": "2:end",
           "sortKey": 2999,
-          "text": "Crawler Quan Ch. Opened his Celestial box a fraction before Borant's veto landed, which is why the company is currently explaining itself to a Syndicate court. I would call that timing. Borant calls it something else."
+          "text": "Crawler Quan Ch. Opened his Celestial box a fraction before Borant burned its veto, and a Celestial box does not un-open. Eighty-three crawlers were owed one. The count came to him."
         },
         {
           "at": "4:4",
           "sortKey": 4004,
-          "text": "Crawler Quan Ch. Put Borant in front of a Syndicate court by opening a box too fast, and on tonight's recap ruined a perfectly good plan that was not his."
+          "text": "Crawler Quan Ch. Holder of the one Celestial box the veto failed to catch, and on tonight's recap the man who ruined a perfectly good plan that was not his."
         },
         {
           "at": "7:3",
           "sortKey": 7003,
-          "text": "Crawler Quan Ch. Put Borant in court, ruined a good plan on the recap, and left a cloak, which Princess Donut is now wearing."
+          "text": "Crawler Quan Ch. Held the box the veto missed, ruined a good plan on the recap, and left a cloak, which Princess Donut is now wearing."
         }
       ],
       "revealedAt": "2:end",
@@ -5021,7 +5021,7 @@
       "sortKey": 1001,
       "headline": "The first voice after the world ends",
       "text": "One minute after the Transformation, I make my first announcement, planet-wide, to whoever is still standing. The dungeon has eighteen levels. Earth can be reclaimed from the Borant Corporation by conquering it. Then I put in the staircases. From here on, every rule, every notification and every insult you receive arrives in my voice. Get comfortable with it. I have.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5073,7 +5073,7 @@
       "sortKey": 1003,
       "headline": "Tutorial Guild Hall, first floor",
       "text": "Rule one: I don't open the door until you kill a goblin. The cat desecrates my mother. The man blows up a Murder Dozer. I open the door. My name is Mordecai. Borant holds my indenture, which means I guide for the first three floors and run a magic guild after that, where they mostly leave me alone to brew and look up old friends. Try to live long enough for that to matter.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5177,19 +5177,6 @@
       "sortKey": 1005,
       "headline": "First cat down the stairs",
       "text": "Carl carries me down, and the dungeon gives him a Legendary Pet Box for it, which is fair, and gives me a Legendary Quadruped Box of my own, which is more than fair. His box has a biscuit in it. An Enhanced Pet Biscuit. I take it out of his hand, because it is obviously for me, and I melt into a heap of goo, and I get up talking. I have a great deal to say.",
-      "confidence": "draft",
-      "voice": "self"
-    },
-    {
-      "entityId": "system-ai",
-      "kind": "arc",
-      "book": 1,
-      "chapter": 5,
-      "floor": 1,
-      "at": "1:5",
-      "sortKey": 1005,
-      "headline": "Loot is only semi-random",
-      "text": "About the boxes. Sometimes what's inside is random. Sometimes I choose it, by hand, because a crawler needs helping or hurting and the numbers want a show. You will never know which, and that is the point. I also hand out insults on purpose. Carl has a Bronze Asshole's Box and a Gold Asshole's Box, both earned on this floor for killing non-combatants. I named them. I'm proud of them. He is not.",
       "confidence": "draft",
       "voice": "self"
     },
@@ -5489,7 +5476,20 @@
       "sortKey": 1029,
       "headline": "He has done this before, and it cost him everything",
       "text": "I crawled. I took Changeling, and I can't shift on my own any more, so the dungeon hands me a body at the start of every floor and I wear what I'm given. This one is a rat-kin. What I actually am is golden, and has wings. I don't talk about the family. When I've had enough to drink, I talk about the family.",
-      "confidence": "draft",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
+      "entityId": "system-ai",
+      "kind": "arc",
+      "book": 1,
+      "chapter": 29,
+      "floor": 1,
+      "at": "1:29",
+      "sortKey": 1029,
+      "headline": "Loot is only semi-random",
+      "text": "About the boxes. Sometimes what's inside is random. Sometimes I choose it, by hand, because a crawler needs helping or hurting and the numbers want a show. You will never know which, and that is the point. I also hand out insults on purpose. Carl has a Bronze Asshole's Box and a Gold Asshole's Box, both earned on this floor for killing non-combatants. I named them. I'm proud of them. He is not.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5502,7 +5502,7 @@
       "sortKey": 1031,
       "headline": "Carl gets her inside",
       "text": "The next episode is tunnelling through and I am not, at my age, built for sprinting. Carl, the young man with the cat, takes hold of me and hauls me into the safe room like a sack of feed, and I let him, because I am old and not stupid. Then the ceiling announces Rage Elementals. Of course it does. The day was missing a garnish.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5528,7 +5528,7 @@
       "sortKey": 1034,
       "headline": "Named in a drunken confession",
       "text": "Crawler Princess Donut, under the Buzzed debuff from a blended corpse, informs Crawler Carl that she loves him. Almost as much as Bea. Almost as much as Ferdinand. Ferdinand is the other cat. That is the whole entry: a cat, ranked above the man who carried her down the stairs, by a cat. I keep records on everything in this dungeon. This one I opened for the ranking.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -5567,7 +5567,7 @@
       "sortKey": 1036,
       "headline": "She explains how the shows work",
       "text": "Okay. So. Carl has just met his first Borant dungeon admin and managed to be civil, which I am counting as a win for everyone, including me. My job today is to walk them through how crawlers take part in the Syndicate programmes, and I get through all of it. Then Princess Donut mentions Gossip Girl, and Mordecai has seen it, and I have seen it, and for a few minutes nobody in the room is anyone's liaison.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5788,20 +5788,7 @@
       "sortKey": 2001,
       "headline": "Manoeuvred into managing a cat",
       "text": "Odette says my memory is the most valuable thing a crawler could get hold of, so the two of them arrange for me to become the cat's manager during class selection, and they make it look like an accident. It was not an accident. I will forgive Donut. Carl, no.",
-      "confidence": "draft",
-      "voice": "self"
-    },
-    {
-      "entityId": "mordecai",
-      "kind": "arc",
-      "book": 2,
-      "chapter": null,
-      "floor": 3,
-      "at": "2:1",
-      "sortKey": 2001,
-      "headline": "The rules he cannot break",
-      "text": "Most of what I know I'm not allowed to volunteer. Some of it I can only give you if you ask the exact question. Without press credentials nobody watching can see me or hear me, and as a manager I can't touch a mob. My advice is what it has always been: stay ahead of the curve, never trust an elite, stay away from gods. Carl has heard all three.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -5906,6 +5893,19 @@
       "headline": "Met outside Grimaldi's circus",
       "text": "Night comes down on the Over City and the mobs form their lines around Grimaldi's Traveling Circus. Two crawlers have come to scout it, a man and a cat, and they leave under magical mortar fire, and I am what they run into on the other side. My charisma stands past a hundred. He stares, as they all stare. Then he snaps his own finger, and it breaks. I have not decided whether to be offended.",
       "confidence": "draft",
+      "voice": "self"
+    },
+    {
+      "entityId": "mordecai",
+      "kind": "arc",
+      "book": 2,
+      "chapter": 8,
+      "floor": 3,
+      "at": "2:8",
+      "sortKey": 2008,
+      "headline": "The rules he cannot break",
+      "text": "Most of what I know I'm not allowed to volunteer. Some of it I can only give you if you ask the exact question. Without press credentials nobody watching can see me or hear me, and as a manager I can't touch a mob. My advice is what it has always been: stay ahead of the curve, never trust an elite, stay away from gods. Carl has heard all three.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -6152,7 +6152,7 @@
       "sortKey": 2021,
       "headline": "Ten levels behind and nobody's problem",
       "text": "I came in with Eva. We fell in with Hekla and Brynhild's Daughters, who carried the two of us through a neighbourhood boss and a borough boss, and I know exactly how much of that was us. Class selection split us up, and Eva did not wait. Now Hekla is asking Carl and Donut to take me. The system has just upgraded my displayed race from \"What the f-word?\" to \"Human\", so things are looking up.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -6165,20 +6165,7 @@
       "sortKey": 2021,
       "headline": "Doppelgänger, Monster Truck Driver",
       "text": "Bannon, my guide, talked me into it: a momentum-based constitution tank who can reshape her own mass, body and equipped gear together, into any form of the same weight. I sculpted my face using my reflection in a health potion bottle. Carl says it looks like a Juan Gris. He is being kind, and I would know.",
-      "confidence": "draft",
-      "voice": "self"
-    },
-    {
-      "entityId": "katia",
-      "kind": "arc",
-      "book": 2,
-      "chapter": null,
-      "floor": 3,
-      "at": "2:21",
-      "sortKey": 2021,
-      "headline": "She spends a death sentence saving NPCs",
-      "text": "The Fools Who Broke the Glass quest is close to unsurvivable, and it triggers before I have earned my place. I spend the time getting NPCs out. I tell Carl and Donut to save themselves. I mean it.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -6256,6 +6243,19 @@
       "sortKey": 2023,
       "headline": "They take him for a lich",
       "text": "They come across the floor towards me with the cat out in front and a fuse somewhere behind, and they have decided that I am a lich, that I am the borough boss, and that finishing me finishes their quest. I am no lich. I am no boss. I am a level one bird with no feathers left and a hole in the world where my back used to be, and if they lay a hand on me their souls come out through the scratch and go into the tank, and I have no way on this earth to give them back.",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
+      "entityId": "katia",
+      "kind": "arc",
+      "book": 2,
+      "chapter": 24,
+      "floor": 3,
+      "at": "2:24",
+      "sortKey": 2024,
+      "headline": "She spends a death sentence saving NPCs",
+      "text": "The Fools Who Broke the Glass quest is close to unsurvivable, and it triggers before I have earned my place. I spend the time getting NPCs out. I tell Carl and Donut to save themselves. I mean it.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -6398,8 +6398,8 @@
       "at": "2:end",
       "sortKey": 2999,
       "headline": "He opens his before the veto lands",
-      "text": "Eighty-three crawlers are owed Celestial boxes at the close of this floor. Borant has one seasonal veto and spends it here, voiding the lot. It is a fraction too slow. Crawler Quan Ch's box is already open, and you cannot un-open a Celestial box, not even with a veto. Which leaves the company liable for what it tried to take back, and standing in front of a Syndicate court to explain how. I did not do that. I want that on record.",
-      "confidence": "draft",
+      "text": "Eighty-three crawlers are owed Celestial boxes at the close of this floor. Borant appeals the ruling and loses, appeals the prizes and loses again, and then burns its one seasonal veto here, voiding the lot. It is a fraction too slow. Crawler Quan Ch's box is already open, and you cannot un-open a Celestial box, not even with a veto. So the count comes to one: a level fifteen trooper in a glowing robe that lifts him off the ground. The veto was not mine. I want that on record.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -6672,7 +6672,7 @@
       "sortKey": 3019,
       "headline": "A curse, handed over at the Desperado Club",
       "text": "Frank Q gives it to Carl at the Desperado Club, and it is meant as a curse. He and Maggie My made their daughter Yvette wear one to level up, and Yvette marked Carl in a safe room on the first floor. A wearer cannot heal while a mark lives, so when Yvette was hurt, Maggie had to kill her own daughter. Carl keeps the ring for the five percent.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -6776,7 +6776,7 @@
       "sortKey": 3030,
       "headline": "Mordecai sees it on his hand",
       "text": "Back from his suspension for throwing a chair at Chaco, Mordecai sees the ring on Carl's finger and tells him to get rid of it at once. Carl is wearing it for the five percent to all stats and nothing else, and keeps wearing it.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -6958,7 +6958,7 @@
       "sortKey": 4004,
       "headline": "He wrecks the debuff stack",
       "text": "Recap, highlights from the previous floor. Crawler Miriam Dom and Crawler Prepotente working a boss down the careful way: stack the debuffs, keep the rhythm, let the arithmetic do the killing. It is good technique and it films well. Then Crawler Quan Ch gets involved, and it comes apart. I am not going to editorialise. The footage editorialises for me.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -7205,7 +7205,7 @@
       "sortKey": 4022,
       "headline": "She kills Ghazi and takes his notes",
       "text": "The sand ooze is dead and the walls are coming in. I get out with Ghazi. Then I kill him, for the notes that explain how the Gate works. Carl and Donut are still buried when I do it. I know how that sounds.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7244,7 +7244,7 @@
       "sortKey": 4023,
       "headline": "She turns the watches into a map",
       "text": "The linked watches read as a reverse compass: a time, an altitude, an exact position relative to anywhere else. Which means the Gate could open onto the city of Larracos, on the ninth floor, and I am mapping ground nobody has stood on.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7543,7 +7543,7 @@
       "sortKey": 4031,
       "headline": "The plane, and the grenade",
       "text": "An aircraft, crashing. Crawler Carl in it, beaten; Crawler Quan Ch about to finish him. Then Carl does two things nobody had on the board: he takes Emberus as his god, mid-fall, and he throws a celestial grenade. The god comes to him. This file only needs to note that Quan Ch had it won, and then he did not.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -7660,7 +7660,7 @@
       "sortKey": 4034,
       "headline": "The extension slot",
       "text": "An emergency box from the Open Intellect Pacifist Action Network holds an attachment built for exactly one crawler and exactly one purpose. Screwed onto the end of the scoop it lets him throw Samantha, and it multiplies his reach: five hundred metres for every point of strength. Take the slot off and she comes back to him.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -7972,7 +7972,7 @@
       "sortKey": 5006,
       "headline": "She reminds him the contract stands",
       "text": "Carl. I know you have a lot going on. I know the Hunting Grounds are the Hunting Grounds. I still have to say this, because saying it is my job: your agreement with the Vengeance of the Daughter programme is still in effect. Nothing you signed on an earlier floor stops mattering because you have gone down a set of stairs. It doesn't work like that. Please don't make me be the one who has to remind you twice.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -8167,7 +8167,7 @@
       "sortKey": 5020,
       "headline": "Lexis, speaking for Odette",
       "text": "There is talk. A woman called Lexis, speaking for a woman called Odette, tells the man and the cat that the Queen of the High Elves will most likely prove to be one of your repurposed humans, and that with the one called Bea accounted for, nobody can say which. She also says I am a country boss, placed to zero out the best of you at the Butcher's Masquerade. I am Imogen. I am giving a party. The rest is gossip.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -8193,7 +8193,7 @@
       "sortKey": 5021,
       "headline": "What it is",
       "text": "Panels, autograph tables, historians, retired crawlers, old game guides and a children's art contest, held once every other season at a venue somewhere in the inner system. A projected guest can sign a physical poster, because the pen moves at both ends. No active crawler has been on the roster in more than a century.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -8479,7 +8479,7 @@
       "sortKey": 5051,
       "headline": "Familiar to Queen Imogen",
       "text": "Update to the file. The party runs into the High Elves. The High Elves have a queen, Queen Imogen, and the queen has a familiar, and the familiar is Ferdinand. Yes. That Ferdinand. He attacks Mongo. Crawler Princess Donut puts herself between the blast and her dinosaur and lives only because of a cockroach ability, which is not a sentence I expected to generate this season. Some families skip the reunion. This one held it anyway, and it went about how you'd think.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8492,7 +8492,7 @@
       "sortKey": 5051,
       "headline": "Her familiar is Ferdinand",
       "text": "My familiar is Ferdinand. My elves are out among the creepers when they come upon the man's party, and Ferdinand takes exception to the dinosaur and strikes at it. The cat puts herself between them and takes the blast. She should not have got up from that. She does, on some cockroach's trick of hers, and she is quite well. I am told this with some amazement. I do not share it.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -8739,7 +8739,7 @@
       "sortKey": 5071,
       "headline": "What is inside Lucia",
       "text": "She comes apart and I hold on to her until it passes. Then I tell the others what I have worked out, because somebody has to say it out loud. There is more than one of her in that head. Several. Some of them are children. And the dog matters. Whatever is happening to Lucia, the dog is at the centre of it.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -8947,7 +8947,7 @@
       "sortKey": 5077,
       "headline": "Dead, with the Popovs",
       "text": "Crawler Firas has been eliminated on the sixth floor. Crawler Princess Donut is bringing the night's count to Crawler Carl as I speak, and his name is on it, next to the Popovs. Found in a desert. Sobered up by a manager. Lasted one floor past that. The file is closed. It was never a thick one.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8960,7 +8960,7 @@
       "sortKey": 5077,
       "headline": "Her crystal changes hands",
       "text": "Queen Imogen's memorial crystal has changed hands. Someone named Osvaldo took it off her, and she was in no condition to argue the point. Prepotente would like it next and is going after him for it. A queen's treasure, and it goes to whoever is standing closest when she goes down. That is how this floor works. That is how every floor works.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -9025,7 +9025,7 @@
       "sortKey": 5999,
       "headline": "He maps the castle from outside it",
       "text": "Ahead of the castle job Edgar sits well back from the building and maps the whole of it from where he is. Every room, every level, and a set of small connecting tunnels that fit nothing anyone can name. Louis is the one who works out what they are for. They are Ferdinand's, so that he can move around his own house without ever using a door.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -9050,8 +9050,8 @@
       "at": "6",
       "sortKey": 6000,
       "headline": "Huanxin, Uzzi, and what happened",
-      "text": "Odette wants the old story. Huanxin. Uzzi. What I did. That's her price for helping us, and she knows I'll pay it.",
-      "confidence": "draft",
+      "text": "Odette is in the middle of this crawl now, so the old story is going to come out. Chaco. Uzzi. A stairwell that would not open unless a god was struck down, and me volunteering to do the striking, because the only life it cost was mine. Odette found a cheaper way to pay. She talked Chaco into putting the dart into my brother instead. She had a bargain with Huanxin Jinx and she tore it up rather than sign away her bonus, and Uzzi is what she spent in its place. I walked out of that stairwell. He did not. I do not talk about it sober.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -9519,7 +9519,7 @@
       "sortKey": 6026,
       "headline": "Carl sees through the act",
       "text": "I have been putting on a little performance, for Samantha's benefit. She likes it. The man does not; he sees through it before I have finished the first act, which is rude, and rare. So we make a different deal, he and I. I let them turn me into one of their cards. In exchange, they carry me down to the next floor. I find I do not mind being carried.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -9779,7 +9779,7 @@
       "sortKey": 6046,
       "headline": "She wins the floor",
       "text": "The key-holder is a Reminiscence Hydra of Malicious Compliance, and it brings totems: an Alpha Male Carl and a King Croissant. I do most of the work. I do not say that to be unkind; they would say it too. In the middle of it the man looks away from the hydra and into my eye, my magic eye, and I do a small thing to him while he is looking. What it does is my business.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -9935,7 +9935,7 @@
       "sortKey": 6063,
       "headline": "At the church with the rest",
       "text": "The church, and it is full. Imani is there, and then Katia's people, and then Li Na's, and then mine. My own squad. Every one of us got here on a Doggy Door upgrade that Lucia handed round before she took the stairs down. I do not know what that girl is. She gave us a way through, and I am standing in a church with my friends because of it, so I will say thank you and keep the rest of my opinions where they belong.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -10208,7 +10208,7 @@
       "sortKey": 7003,
       "headline": "Donut wears his cloak",
       "text": "Inventory update, ninth floor. Crawler Princess Donut opens a celestial box from Long Haul Biological Waste Management Solutions and takes out the Tiara of a Thousand Lights. In the same sitting she puts on Quan Ch's cloak and takes the benefits that come with it. The cloak does not ask where its previous owner is, and neither do I.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -10325,7 +10325,7 @@
       "sortKey": 7011,
       "headline": "In the Princess Posse",
       "text": "Carl and Donut walk into the HQ, and Carl stops. Fifty thousand of us in here, and he has to look at every one. Rosetta. Tipid. Me. People who got out of a crawl once and know exactly what one is, and signed up for another anyway, under the banner of a cat. He gets emotional about it. Nobody gives him a hard time. We had the same faces on when we signed.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -10481,7 +10481,7 @@
       "sortKey": 7019,
       "headline": "Inside him, and not staying quiet",
       "text": "Field ruling, ninth floor. Commander Stockade of the Lemig Sortion tried to pull Crawler Carl bodily to his position. Mordecai, at the same moment, tried to force Shi Maria out of him. Each got half. What came of it is Shi Maria loose in the Lemig base, and the mess she made there, which the adjutant Panford has been left to explain to everyone. Stockade looked into her eye. Stockade is no longer with us, by his own hand. The Lemig Sortion is being punished for cheating, and the ceasefire is over early.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -10819,7 +10819,7 @@
       "sortKey": 7049,
       "headline": "Sense Movement, level fifteen",
       "text": "Rosetta has a theory about how Vinata keeps getting into Club Vanquisher, and Edgar is the instrument that settles it. He senses the non-corporeal moving through the castle. He also picks up upward momentum coming off the ground, which is what it looks like from below when somebody nearby worships a god for the first time.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -10910,7 +10910,7 @@
       "sortKey": 7053,
       "headline": "The endless temple, and what is at the table",
       "text": "Since the crawlers are frozen and I have thirty seconds, the file on this one. Khepri is humanoid apart from the head, where there is instead an entire beetle, wings and legs and a small head of its own. He does not talk. He chitters. His temple is listed as endless, which in practice is a room and a door and one long table carrying a never-ending feast of four hundred and thirty-three kinds of insect. He was a retainer of Khnum until Khnum mysteriously dropped dead a few days ago, so he has taken service under another deity to keep himself alive. The big players ignore him. When everything unfreezes he is going to go absolutely bugshit at every person in that room, quite possibly including his own worshipper.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -11196,7 +11196,7 @@
       "sortKey": 7063,
       "headline": "One of the dancers, under contract",
       "text": "He arrives at the Madness headquarters with Katia, Imani, Dong Quixote and Bigs the slugalette, and joins Carl and Elle there. For the file: he came out of the Penis Parade with the rest of the dancers when the club came down, signed a mercenary contract, and has been in every fight since without once being the reason a plan failed. Water mage. Short. Reliable. There are crawlers I could not write that sentence about.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -11443,7 +11443,7 @@
       "sortKey": 7077,
       "headline": "Chopped, and nobody watches",
       "text": "Crawler Princess Donut casts War Crimes and Meatus comes apart into pieces. I closed the eye of the Scavenger's Daughter for that one, on the grounds that even she does not want to look at it, and I stand by the decision. Harpocrates swears revenge for him and leaves the realm. Two gods came through that gate. Neither of them is on this floor now.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -11638,7 +11638,7 @@
       "sortKey": 7999,
       "headline": "He opens every cell",
       "text": "Crawler Justice Light did not take the stairs with the rest of you. He stayed behind with a trap he had set some time ago, and he has now triggered it. Every cell the old gods were kept in is open. Every one of them. He did not survive it. He knew that going in, and did not appear to require my opinion on the matter. Noted for the record anyway: I have opinions.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -11651,7 +11651,7 @@
       "sortKey": 7999,
       "headline": "She takes the Orchid and walks out",
       "text": "Crawler Katia Grim has left the dungeon. Not by the stairs. She ate the Orchid of Eileithyia's Grace, spent an hour at one percent, and walked out human, or a version of human. Not all of her came back with her. Don't ask me where the rest went.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -11768,7 +11768,7 @@
       "sortKey": 8001,
       "headline": "Dead, and the Nothing with him",
       "text": "Welcome to the tenth floor. Some housekeeping before the fun. Crawler Justice Light is dead. The Nothing is broken. Those are two sentences I have never had cause to put next to each other, and I would like it understood that I am saying them under protest. Five thousand five hundred and one of you remain. Proceed.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -13042,7 +13042,7 @@
       "sortKey": 8098,
       "headline": "Carried down",
       "text": "Stairwell notice. The stairwells to the twelfth floor are open. Crawler Florin has gone down them, and I use gone loosely: he was unconscious, and Crawler Lucia Mar carried him. That is the record. He is on the list of crawlers who reached the twelfth floor, and the list does not have a column for how.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
