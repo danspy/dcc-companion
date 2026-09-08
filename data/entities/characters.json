@@ -21,17 +21,17 @@
           "chapter": 1,
           "floor": 1,
           "at": "1:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "January 3rd, 2:23 in the morning",
-          "text": "I go out on the balcony of my apartment in Seattle for a cigarette. That's it. That's the whole decision. Donut, who is my ex-girlfriend's show cat and not mine in any way I agreed to, goes out through the cracked window and up the tree, and I go after her into the freezing dark in a brown leather jacket, heart-print boxers and Bea's pink Crocs, with a Zippo and half a pack of Marlboro Reds. Mrs Parsons leans out to ask about the noise. Then every building on the planet comes down at once, and everyone who stayed inside one is gone."
+          "text": "I crack the window of my apartment in Seattle for a cigarette. That's it. That's the whole decision. Donut, who is my ex-girlfriend's show cat and not mine in any way I agreed to, goes out through it and up the tree, and I go after her into the freezing dark in my leather jacket, boxers and Bea's pink Crocs, with a Zippo and half a pack of Marlboro Reds. Mrs Parsons leans out to ask about the noise. Then every building on the planet comes down at once, and everyone who stayed inside one is gone."
         },
         {
           "kind": "arc",
           "book": 1,
-          "chapter": 2,
+          "chapter": 6,
           "floor": 1,
-          "at": "1:2",
-          "confidence": "draft",
+          "at": "1:6",
+          "confidence": "verified",
           "headline": "Dressed for nothing, and stuck that way",
           "text": "An hour past the stairs and I have a Goblin Pass Tattoo on my left forearm, a Trollskin Shirt of Pummeling, a Nightgaunt Cloak of Stoutness clipped to the jacket and a Toe Ring of the Splatter Skunk. What I do not have is shoes. I have asked. The dungeon has heard me ask, and the dungeon has an opinion about it."
         },
@@ -40,7 +40,7 @@
           "book": 1,
           "floor": 2,
           "at": "1:end",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The footwear situation does not improve",
           "text": "The second floor finally addresses my feet. It hands me an Enchanted Pedicure Kit of the Sylph. So now I am still barefoot, but my feet are shiny and they glitter, and the audience has noticed, and the audience does not let things go."
         },
@@ -50,7 +50,7 @@
           "chapter": 2,
           "floor": 3,
           "at": "2:2",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Primal, and a Compensated Anarchist",
           "text": "Class selection, on the way into the Over City. I take Primal for the race and a monk-rogue hybrid nobody has picked before, and the AI writes me up as \"a trapmaking, bomb-making, social-media dynamo\" who \"will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\" I'd argue with it if I could think of the argument."
         },
@@ -60,7 +60,7 @@
           "chapter": 8,
           "floor": 4,
           "at": "3:8",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The twenty-fifth holder of the Cookbook",
           "text": "Twenty-four crawlers carried this before me. Different seasons, different species, worlds that aren't there any more. Whatever I do from here, I'm finishing somebody else's work, and most of them never got to finish theirs."
         },
@@ -79,7 +79,7 @@
           "chapter": 31,
           "floor": 5,
           "at": "4:31",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He worships a god to survive a plane crash",
           "text": "I am falling out of the sky and Quan Ch is about to finish the job. So I take Emberus as my patron, mid-air, and throw a celestial grenade. The god arrives at my position, and for a little while nothing can kill me. Then Emberus finds Orthrus, and both of them are gone."
         },
@@ -88,7 +88,7 @@
           "book": 5,
           "floor": 6,
           "at": "5:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Agent Provocateur",
           "text": "The Hunting Grounds are opening and I take the bomb-focused specialisation. Agent Provocateur. I would like to be very, very good at exactly one thing, and I have picked the thing."
         },
@@ -98,7 +98,7 @@
           "chapter": 5,
           "floor": 6,
           "at": "5:5",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Zockau burns",
           "text": "Zockau burns. I mark hunters with the Ring of Divine Suffering, I kill them, and I take their stats, and enough of them are inside the Desperado Club when it goes that the survivors have to be dug out. I get hurt on the way out. That part is fair."
         },
@@ -107,7 +107,7 @@
           "book": 7,
           "floor": 9,
           "at": "7:1",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He takes command of one of nine armies",
           "text": "Thirty days. A castle at Larracos, dead centre of the map. No coming back from a death on this floor, for anyone. Supply, alliances, atrocity, at a scale where the arithmetic stops being about people I know."
         }
@@ -1067,7 +1067,7 @@
           "chapter": 3,
           "floor": 5,
           "at": "4:3",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The desert quadrant",
           "text": "Okay so, me and Firas are out in the desert with Langley's guys, who are, no joke, car salesmen. With bows. Pretty good with the bows. Then Carl's crew comes over the dune looking for other crawlers, and, hey, found some. We all head for the Bactrian town together, and a Thorny Devil and a Gnomish Drop Bear have thoughts about that, so we head back to Hump Town instead. Not a loss, man. A regroup."
         },
@@ -1077,7 +1077,7 @@
           "chapter": 87,
           "floor": 10,
           "at": "8:87",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Out through Imani's portal",
           "text": "Racing floor. Some of us drew heats with other crawlers in them, which is the bad kind of heat, and Carl's got a plan for it, because of course he does. Imani has the portal open again. So me and everybody else from the mixed heats are going through it. Not my portal. It's never my portal. I've been walking through other people's doors since the fifth floor and, honestly, no complaints."
         }
@@ -1208,7 +1208,7 @@
           "chapter": 30,
           "floor": 5,
           "at": "4:30",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A quest to bring Orthrus home",
           "text": "My hound has wandered. Orthrus, who is dear to me, is loose on a floor full of small frightened things with weapons, and two of those things, a man and a cat in a flying machine, are hauling him clear with a spell called Meat Hooks, of all things. Charming. I have offered them a quest: bring him home to me. Someone else has offered them another: kill him, for a reward. I am interested to learn which of us they think it is safer to disappoint."
         },
@@ -1218,7 +1218,7 @@
           "chapter": 31,
           "floor": 5,
           "at": "4:31",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Summoned by a celestial grenade",
           "text": "The man is falling out of the sky with Quan Ch a breath from finishing him, and in that moment, with nothing in his hands but a celestial grenade, he decides that he worships me. I am not fooled. I am flattered, which is a different thing, and I answer. I come to where he is. For a little while nothing on this floor can kill him, because I have said so. And there is Orthrus. Good boy. We are leaving."
         },
@@ -1228,7 +1228,7 @@
           "chapter": 98,
           "floor": 11,
           "at": "8:98",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A memorial crystal made by his death",
           "text": "The last boss of the eleventh floor is down and the stairwells to the twelfth are open. In the wreckage, Crawler Carl has picked up a memorial crystal. It is not the one he was hoping for. This one formed when the god Emberus died. Yes. Gods die here now. A patron is only as permanent as whatever kills him, and this one answered a prayer from a falling aeroplane once. What answered is now in Carl's inventory."
         }
@@ -1256,7 +1256,7 @@
         },
         {
           "at": "5:6",
-          "text": "We came through the Tangle together, Prepotente and I. The Hunting Grounds have made me a vampire, and I am still deciding what that changes."
+          "text": "I came down into the Hunting Grounds already carrying it, and descending made it permanent. I am a vampire, and I am still deciding what that changes."
         },
         {
           "at": "5:47",
@@ -1271,9 +1271,9 @@
           "chapter": 32,
           "floor": 4,
           "at": "3:32",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Same plan, other side of the Tangle",
-          "text": "We worked it out some time ago: the ghouls keep coming while the generators stand, so the generators have to go, every one of them. We have been taking them from this side of the knot, Prepotente and I, at his pace, which is fast. Now Carl's group arrives from the far side with the same plan. He is put out that someone else thought of it. I tell him that only means the plan is good."
+          "text": "We worked it out some time ago: the ghouls keep coming while the generators stand, so the generators have to go, every one of them. We have been taking them from this side of the knot, Prepotente and I, at his pace, which is patient. He puts debuffs on a thing for hours and waits for it to fall. Now Carl's group arrives from the far side with the same plan, and they have just dropped into the abyss the boss my boy was two hours from finishing. He threatens them for it. I take my staff to the top of his head until he apologises, and I tell them all that two groups landing on the same plan only means the plan is good."
         },
         {
           "kind": "arc",
@@ -1281,9 +1281,9 @@
           "chapter": 6,
           "floor": 6,
           "at": "5:6",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A vampire now",
-          "text": "I am a vampire now. The Hunting Grounds did that, and I will not pretend I chose it. It changes a great many things. It has not changed how I feel about my boy, which is the part I was afraid of. While we sit with Carl's party I hear his manager, Mordecai, telling him to keep off the Ring of Divine Suffering, that the thing is addictive. I hope Carl listens. Men with a tool that works rarely do."
+          "text": "I am a vampire now. A curse on the floor above did that, and I will not pretend I chose it; coming down the stairs is what made it permanent. It changes a great many things. It has not changed how I feel about my boy, which is the part I was afraid of. While we sit with Carl's party I hear their guide, Mordecai, telling him to keep off the Ring of Divine Suffering, that the thing is addictive. I hope Carl listens. Men with a tool that works rarely do."
         },
         {
           "kind": "arc",
@@ -1291,7 +1291,7 @@
           "chapter": 47,
           "floor": 6,
           "at": "5:47",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Marked by his ring, waiting for the sun",
           "text": "Carl and Donut have found us. Prepotente is paralysed, with his arm still around my waist. In the last fight his Ring of Divine Suffering marked me. That is how it works: while I live, he cannot heal. And I am the head of this, so when I go, everyone it has touched is cured. I have asked Carl to do it before the paralysis wears off. He has said no. So we sit, and we wait for the sun."
         },
@@ -1301,7 +1301,7 @@
           "chapter": 45,
           "floor": 9,
           "at": "7:45",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Killed by the Blood Hunter show, and answered for",
           "text": "Crawler Miriam Dom is dead, and has been since the sixth floor. Cause of death: a programme called Blood Hunter. Filed under entertainment. Update from the ninth: most of the Naga army is dead as well. That was Prepotente, and he did it as payment for her, all of it, at a rate he set himself. If you were hoping the goat would grieve quietly, crawler, you have not been paying attention."
         }
@@ -1723,7 +1723,7 @@
           "chapter": 3,
           "floor": 6,
           "at": "5:3",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The deal for the Gate",
           "text": "I arrive, I introduce myself as my client's counsel, and we proceed to terms. The Gate goes back. Temporarily. In consideration: four mercenaries at no charge to my client, Bomo, the Sledge, Clay-ton and Very Sullen, and two spells for Bomo and the Sledge that reproduce two of the Gate's abilities, teleport to stairwell and zerzura. My client wanted to keep it. Everyone wants to keep it. A negotiation is what you get instead."
         }
@@ -1756,12 +1756,13 @@
         },
         {
           "kind": "fate",
-          "book": 3,
-          "floor": 4,
-          "at": "3",
+          "book": 4,
+          "floor": 5,
+          "at": "4:14",
           "confidence": "draft",
           "headline": "A Scree riding Chris Andrews",
-          "text": "Frank Q is dead. Chris Andrews killed him, and Chris Andrews was not the one driving. Maggie My is back in the dungeon as a Scree, riding inside another crawler, and Frank died of exactly the thing he brought down here with him. He spoke to Carl one last time at the Desperado Club and called what was coming a gift. This was the gift. Half of a pair who taught this planet what safe rooms are for. The other half is still walking around, wearing somebody else."
+          "text": "Frank Q is dead. Chris Andrews killed him, and Chris Andrews was not the one driving. Maggie My is back in the dungeon as a Scree, riding inside another crawler, and Frank died of exactly the thing he brought down here with him. He spoke to Carl one last time at the Desperado Club and called what was coming a gift. This was the gift. Half of a pair who taught this planet what safe rooms are for. The other half is still walking around, wearing somebody else.",
+          "chapter": 14
         },
         {
           "kind": "fate",
@@ -1769,7 +1770,7 @@
           "chapter": 34,
           "floor": 5,
           "at": "4:34",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Maggie My, cut out at last",
           "text": "Maggie My is dead. Carl went through Chris Andrews to reach her, cut her out of him, and she went for Carl anyway, because of course she did. Mongo finished her. So that is both of them, Frank and Maggie, the pair who spent the first floor teaching this planet that the word safe on a door is decoration. I put the word there. I'd like that on the record too."
         }
@@ -1878,7 +1879,7 @@
           "chapter": 21,
           "floor": 3,
           "at": "2:21",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She goes on without her",
           "text": "Katia and I came in together. Same profession, same door into this place. Class selection separated us; that is what it does, it separates people. I kept moving. I did not stand in a corridor waiting for someone who was not ready to be there. Call it what you like. I call it the difference between the people who are still here and the people who are not."
         },
@@ -1888,7 +1889,7 @@
           "chapter": 77,
           "floor": 6,
           "at": "5:77",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Katia kills her",
           "text": "Hunting Grounds, last night of the floor. Crawler Katia Grim kills Crawler Eva. That is the whole of it. Two professors came in through the same door; from here on, one. I don't do eulogies, and this is not the entry where I start."
         }
@@ -2166,7 +2167,7 @@
           "chapter": 5,
           "floor": 8,
           "at": "6:5",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Hostile, and fairly so",
           "text": "Paz, Anton and I come upon a man and a cat. We know the cat. Everyone has heard her say she would murder any Cat Girl she came across, and I am a Cat Girl. So we are not friendly, and I do not apologise for it. It takes some time to clear up. Then we help each other catch our first squad members, because that is what this floor demands, and God does not ask me to like the people I work beside."
         },
@@ -2176,7 +2177,7 @@
           "chapter": 10,
           "floor": 8,
           "at": "6:10",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Pueblo de los Olvidados",
           "text": "The town is corrupted and the quest is mandatory: Pueblo de los Olvidados, the town of the forgotten. Paz is a Santero, and the dead here do not care for that; they wake angry. Ghommids, the whole way out. We run for a saferoom. The man says something followed us in, and he thinks it may be the boss. I pray he is wrong. I am not counting on it."
         },
@@ -2186,7 +2187,7 @@
           "chapter": 60,
           "floor": 8,
           "at": "6:60",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She will not let them leave",
           "text": "I message the man's party. They are heading for Imani's exit, in the church. I tell them the truth: I cannot let them go into that exit. I can save them, if they come to me. Imani will tell them the church is being overrun by demons, and that the demons are mine. That is also the truth. Both things are true. I did not make this floor. I am only deciding what to do on it."
         },
@@ -2196,7 +2197,7 @@
           "chapter": 61,
           "floor": 8,
           "at": "6:61",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Amayon fights her control",
           "text": "I hold Amayon, prince of Sheol, in the body of a giant snake, and he pulls against me. He is trying to cast; he wants to go home. I do not let go. Around us every exit on this floor is failing at once, and the Demon Eviction is worldwide. This is what I have to set against that. A demon on a leash and my own two hands. God did not give me more."
         }
@@ -2282,7 +2283,7 @@
           "chapter": 25,
           "floor": 5,
           "at": "4:25",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Two new crawlers",
           "text": "Vadim and I have fallen in with Carl's team. Introductions here are short. Everyone counts heads, adds two, moves on. The first real conversation I hear is Katia telling Carl that pregnant women could not enter the dungeon, and that nobody inside it can get pregnant. Said flat. Like weather. That is the kind of thing people know here, and say out loud. I am going to have to get used to that."
         },
@@ -2292,7 +2293,7 @@
           "chapter": 77,
           "floor": 6,
           "at": "5:77",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Badly burned",
           "text": "Morning, if you can call it that. Donut is waking Carl up with the count from the night. Firas. The Popovs. I'm not on the list, so that's something. My face is. Nobody has offered me a mirror, and nobody offering is how I know how bad it is. Burned. Badly, I'm told. I can feel where the word comes from."
         },
@@ -2302,7 +2303,7 @@
           "chapter": 83,
           "floor": 10,
           "at": "8:83",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "She kills Osvaldo at the portals",
           "text": "Crawler Osvaldo made a run for the portals to the eleventh floor across a roof Crawler Carl had just blown open. He did not reach them. Crawler Britney stopped him, permanently, and took Ysalte's memorial crystal off what remained. One crawler ran. One did not let him. The crystal changed hands. I am not required to have an opinion, but I have watched a great many exits, and that one was clean."
         }
@@ -2461,7 +2462,7 @@
           "chapter": 69,
           "floor": 9,
           "at": "7:69",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Sharing a command he did not ask for",
           "text": "We hold the castle at Larracos. Six hours more and the floor is ours. That should be the whole of the announcement. Instead Baroness Victory reads out two names as warlords of the War Mage Rebellion, and only one of them is mine. Agatha. Co-warlord. I did not bring this rebellion this far to share its title, least of all with her, and I have not hidden what I think of that. I will hold the castle. I will not pretend to be pleased."
         },
@@ -2471,7 +2472,7 @@
           "chapter": 78,
           "floor": 9,
           "at": "7:78",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He leaves, and warns them on the way",
           "text": "To the Warlord Chat, for the record. The War Mage Rebellion is leaving this floor. We came here for the Scavenger's Daughter. We have found the Scavenger's Daughter, and we leave with what we came for; the castle and the war are yours to finish. One thing more, and I address it to Carl and to Donut, since they are the ones who might still act on it. Agatha is an enemy to all of you. I do not explain. I am already gone."
         }
@@ -2616,7 +2617,7 @@
           "chapter": 42,
           "floor": 2,
           "at": "1:42",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Death Watch Extreme Dungeon Mayhem",
           "text": "The Maestro puts Zhang and me up against Brindled Vespas and does all the talking for us. That is the show. We are the part that gets hurt. Then Carl, the one with the cat, works out that he is worth too much to the production to be punished, and gambles on it, in front of everyone, and it holds. He gets us out. Zhang, our boss, me, and my sister Li Na. I owe a man I have just met more than I have ever owed anyone."
         },
@@ -2626,7 +2627,7 @@
           "chapter": 21,
           "floor": 4,
           "at": "3:21",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A thousand stranded at 101",
           "text": "We are stuck at 101 on the Vermillion line, my team and something like a thousand other crawlers, and we are not getting out on our own. Word comes through that Hekla's people have reached Carl's safe room and asked for his help, that a train is ready at stop 60, and that Katia means to use her own body to get it through. I do not know what that means. I have decided to find it encouraging."
         },
@@ -2636,7 +2637,7 @@
           "chapter": 50,
           "floor": 9,
           "at": "7:50",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Holding the doors at Club Vanquisher",
           "text": "Katia, Carl, Prepotente and Samantha are going into Club Vanquisher, and they are dragging a wire behind them long enough to extend my sister's auras all the way inside. Somebody has to keep the path open behind them. That is Bautista, Zhang and me. Doors. We are holding doors. It is not glamorous, and it is exactly the job I would have asked for, and I am holding mine."
         }
@@ -2666,7 +2667,7 @@
           "chapter": 42,
           "floor": 2,
           "at": "1:42",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Glurp, glurp",
           "text": "Two crawlers, Li Jun and Zhang, a pack of Brindled Vespas, and me with the microphone. That is the format. The format works, and I am very, very good at it. Then the one with the cat opens his mouth. He wagers, on my air, that the production will not dare touch him, and the production, to my everlasting disgust, does not. He walks the whole group off my show alive. Every one of them. Glurp, glurp. We will be right back."
         }
@@ -3657,9 +3658,9 @@
           "chapter": 33,
           "floor": 4,
           "at": "3:33",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "What the file says about him",
-          "text": "The file, for those keeping one. Grull is one of the few trueborn heirs to the Celestial Ascendency, which makes him a candidate for the throne of heaven, and level 250, which makes him unkillable on this floor. His worshippers are horses, centaurs and tikbalangs, and after this floor the llama-shaped ones join in. They paint themselves blue and talk without stopping about wenches and dying gloriously in battle. His guide's blunt summary of the whole subject, delivered a long way back: there are no real gods down here, only the ones who pay for the privilege."
+          "text": "The file, for those keeping one. Grull is one of the few trueborn heirs to the Celestial Ascendency, which makes him a candidate for the throne of heaven, and level 250, which makes him unkillable on this floor. His worshippers are horses, centaurs and tikbalangs, and from this floor down the llama-shaped ones join in as well. They paint themselves blue and talk without stopping about wenches and dying gloriously in battle. Crawler Carl's guide gave the blunt summary of the whole subject a long way back: there are no real gods down here, only the ones who pay for the privilege."
         },
         {
           "kind": "arc",
@@ -4141,9 +4142,9 @@
           "chapter": 9,
           "floor": 4,
           "at": "3:9",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A miss on his own shift",
-          "text": "A crawler goes for the Princess on my floor, on my shift, and I do not get there in time. Elle puts the second one down. Astrid comes to apologise in person, and I stand where I am and wait to hear what a miss like that costs a body like me. Carl does not ask for blood. He asks for me and Bomo, permanent and complimentary, the Royal Court's own security every time they walk in. So now I have a court. I buy a protection spell out of my own money for when the Princess visits."
+          "text": "A crawler goes for the Princess on my floor, on my shift, and I do not get there in time. Elle puts the second one down. Astrid comes to apologise in person, and I stand where I am and wait to hear what a miss like that costs a body like me. Carl does not ask for blood. He asks for me and Bomo, permanent and complimentary, the Royal Court's own security every time they walk in. So now I have a court."
         },
         {
           "kind": "use",
@@ -4161,9 +4162,9 @@
           "chapter": 73,
           "floor": 6,
           "at": "5:73",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Surviving is winning",
-          "text": "Louis is worried about how it is going. Whether the plan holds, how it looks, who comes out on top of it. Surviving is winning, Louis. Everything else is bullshit. Then the changelings and me go over the wall and into the castle, which is the thing everyone outside said could not be done."
+          "text": "Louis is worried about how it is going. Whether the plan holds, how it looks, who comes out on top of it. Surviving is winning, Louis. Everything else is bullshit. Then the changelings and me go into that castle, through a turret and the elf inside it, which is the thing everyone outside said could not be done."
         },
         {
           "kind": "arc",
@@ -4932,9 +4933,9 @@
           "chapter": 19,
           "floor": 3,
           "at": "2:19",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A seat on the Danger Zone panel",
-          "text": "Ripper Wonton's panel, and the two from Earth are the guests. I keep reaching for the crawler's hand and my claws keep going straight through his fingers, which does not stop me reaching. Then the Skull Empire fire at those two and hit Manasa instead. My friend. The comedian begins explaining what her death means for the vote, and I tell him to shut his mouth. The Prism Kingdom condemns the action and files a grievance with the Syndicate Court, in my own name, inside the hour."
+          "text": "Ripper Wonton's panel, and the crawler and his cat are on it. I keep reaching for his hand and my claws keep going straight through his fingers, which does not stop me reaching. Then the Skull Empire fire at those two and hit Manasa instead. My friend. The comedian starts treating her death as a piece of political arithmetic, and I tell him to shut his mouth. The Prism Kingdom condemns the action, and I say so on air within the hour: we will bring a grievance against the Skull Empire in the Syndicate Courts."
         },
         {
           "kind": "arc",
@@ -6931,7 +6932,7 @@
           "chapter": 34,
           "floor": 2,
           "at": "1:34",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The thing behind the moonshine",
           "text": "Twenty feet of immobile octopus in a chamber with Live, Laugh, Love spelled out over the door in cut wooden letters, sitting behind a still that produces toilet-grade moonshine at industrial volume. Her tentacles are lined with human mouths that scream without pause and drip something that stops a body healing. The cat and the barefoot man take her apart and drink a blended corpse to do it. She is not the point. She is a copy, and somewhere there is an original, and the original is a committee."
         },
@@ -7256,7 +7257,7 @@
           "chapter": 26,
           "floor": 4,
           "at": "3:26",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The bartender who cannot go outside",
           "text": "The ghouls came through station seventy-five. Everyone out on the platform died screaming while I stood behind my own bar and watched, because I cannot cross that doorway. Not will not. Cannot. Then a small woman walked in, put me down, took my alcohol and went on her way, and I woke up on my own floor stone cold sober, which is the worst part of the whole business. Good stock, good rag, no way to help anybody. If you tell me that is not cowardice I will believe you for about an hour."
         },
@@ -7276,9 +7277,9 @@
           "chapter": 29,
           "floor": 4,
           "at": "3:29",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The recap cuts it for laughs",
-          "text": "The last recap of the floor runs the whole thing with my head coming off over and over and not one second of the reason for it. No rescue. No four hundred people stuck at the end of the line with no hats. No carts. Just a barefoot man doing that to a bartender, fourteen times, cut to music. I would like the record to show that I said yes."
+          "text": "The last recap of the floor runs the whole thing with me being put down over and over and not one second of the reason for it. No rescue. No six hundred people stuck at the end of the line with no hats. No carts. Just a barefoot man doing that to a bartender, fourteen times, cut to music. I would like the record to show that I said yes."
         },
         {
           "kind": "arc",
