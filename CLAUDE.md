@@ -267,7 +267,7 @@ its numbers but to move the shared pieces into `@layer components` in
 | `.pickrow` / `.kindtag` | one row of "pick this entry" | braid labels, grid rows, downstream picker |
 | `.switch` | choose one of several views | `/when` |
 | `.stage` | a chart beside a panel, split by a 1px rule | `/when` |
-| `.floormark` | a floor's number on its book's colour | `/`, `/when` |
+| `.floormark` | a floor's number on its book's colour | `/achievement` |
 
 `src/components/BeatEntry.astro` is the same idea in markup: the entity page and
 the `/when` panel render the *same object*, so a System beat is a `*** ... ***`
@@ -1226,6 +1226,32 @@ more; that is what "When" is.
 
 A band whose rows are all filtered out is hidden, on the server and again in
 `refresh`, or a heading stands over an empty stretch.
+
+#### Two inconsistencies this page introduced, and where they came from
+
+Both were reported by eye, and both are the same shape: a component-layer class
+used in a context it had not met before.
+
+- **A chip may be an anchor.** `/achievement`'s tier chips are links so they
+  work with no JavaScript, and `.chip-btn` had only ever dressed a `<button>` —
+  so they picked up the base layer's hover underline while the identical chips
+  on `/who` and `/when` did not. `.chip-btn` now opts out of underlining
+  whatever element it is on, exactly as `.switch a` already did. Fixing it on
+  the page would have left the next anchor chip to rediscover it.
+
+- **`.floormark` was never finished.** It carried the display face, weight and
+  line-height and nothing else — no size, no padding, no box — so it rendered at
+  whatever size it happened to inherit, and this page was its first real user
+  (the table above claimed `/` and `/when`, which was never true: `/` uses its
+  own `.floorno` and `/when` uses `.headstamp`). It now takes its size, padding
+  and minimum from `.headstamp b`, which is the same object drawn at the top of
+  `/when`'s grid — verified identical at 19px in a 30×24 box.
+
+**A related thing worth knowing rather than fixing:** the type-scale rule above
+says only `.spoken::before` keeps a hard-coded size. That is no longer true —
+`/progress`, `/who`, `/` and `GateBar` between them carry about twenty. They
+predate this work and are left alone; the claim is the stale part, not the
+pages.
 
 #### A floor is a section you can shut
 

@@ -356,7 +356,7 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                   <details class="floorsec" data-band={band.floor} open hidden={!band.shown || undefined}>
                     <summary class="floorband">
                       <span class="floormark"
-                            style={`background:${floorAccent.get(band.floor) ?? '#717171'};color:${floorInk.get(band.floor) ?? '#0e0e0e'}`}>
+                            style={`background:${floorAccent.get(band.floor) ?? 'var(--color-grey-500)'};color:${floorInk.get(band.floor) ?? 'var(--color-ink)'}`}>
                         {String(band.floor).padStart(2, '0')}
                       </span>
                       <span class="floorband-name">{floorName.get(band.floor) ?? 'Floor'}</span>
@@ -372,7 +372,7 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                     <span class="bk">Bk {whenOf(a.at).book}{whenOf(a.at).chapter
                       ? ` · Ch ${whenOf(a.at).chapter}` : whenOf(a.at).end ? ' · end' : ''}</span>
                     {a.floor && (
-                      <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? '#717171'}`}>
+                      <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? 'var(--color-grey-500)'}`}>
                         Floor {a.floor}
                       </span>
                     )}
@@ -416,7 +416,7 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                     <span class="bk">Bk {whenOf(a.at).book}{whenOf(a.at).chapter
                       ? ` · Ch ${whenOf(a.at).chapter}` : whenOf(a.at).end ? ' · end' : ''}</span>
                     {a.floor && (
-                      <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? '#717171'}`}>
+                      <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? 'var(--color-grey-500)'}`}>
                         Floor {a.floor}
                       </span>
                     )}

@@ -255,6 +255,11 @@
     padding: 5px 9px; cursor: pointer; display: inline-flex; gap: 7px; align-items: center;
     transition: border-color .12s, color .12s;
   }
+  /* A chip is a control, not a link, whichever element it happens to be. The
+     tier chips on /achievement are anchors so they work with no JavaScript, and
+     without this they pick up the base layer's hover underline while the button
+     chips on /who and /when do not. `.switch a` opts out the same way. */
+  .chip-btn, .chip-btn:hover { text-decoration: none; }
   .chip-btn:hover:not(:disabled) { border-color: var(--color-grey-700); color: var(--color-grey-100); }
   .chip-btn[aria-pressed="true"] { border-color: var(--color-gold); color: var(--color-gold); }
   .chip-btn:disabled { color: var(--color-grey-700); cursor: not-allowed; }
@@ -308,9 +313,15 @@
   /* ---- a floor's number, in the colour of the book it is told in --------
      The Descent stamps floors this way; the /when grid heads its columns the
      same way, because it is the same object. */
+  /* A floor's number on its book's colour. The size, padding and minimum come
+     from `.headstamp b`, which is the same object drawn at the top of /when's
+     grid — this rule carried only the face and weight before, so anything using
+     it rendered at whatever size it happened to inherit. */
   .floormark {
     font-family: var(--font-display); font-weight: 800; line-height: 1;
     display: inline-flex; align-items: center; justify-content: center;
+    font-size: var(--type-entry); padding: 3px 6px 2px; min-width: 30px;
+    flex: none;
   }
 
   /* ---- picking one of several -------------------------------------------
