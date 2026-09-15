@@ -1103,6 +1103,42 @@ floor stamp that outruns its own award**, and on a floor that does not exist.
 That derivation is also why every award now has a floor at all: the ones showing
 only a book had an infobox with no floor field, and the citation supplies it.
 
+#### An unbreakable token drags the whole document sideways
+
+Reported from a phone, and it was real: `/achievement` overflowed by **381px at
+320 wide**, 311 at 390, and nothing at 768 — every other route was clean. The
+probe that found it is worth repeating, because two obvious ones lied:
+
+- **No element was wider than the viewport.** A text node overflowing its block
+  does not widen the block's border box, so hunting for `rect.right > innerWidth`
+  found only the masthead's navlinks, which live in their own scroll strip and
+  were a red herring.
+- **What actually showed it** was `scrollWidth > clientWidth` on every element:
+  `.log` was 342 wide and scrolled to 676 while every child measured 340. That
+  gap *is* the signature of text overflowing rather than layout being too wide.
+
+The cause was a **460-character Etsy tracking URL** sitting in one award's
+quoted text. MediaWiki writes external links as **single** brackets —
+`[url label]` — and `clean()` only stripped double-bracket internal links, so
+the URL rode straight through the pull into committed data.
+
+Two fixes, and the second is the general one:
+
+- **`clean()` strips external links**, and a lint rule now **fails the build on
+  a URL in any award field**. A URL is never the System talking.
+- **Every block rendering text this site did not author wraps defensively**
+  (`overflow-wrap: anywhere`): the quoted award, the generated citation, the
+  reward, and the reader's own filed report. **`anywhere`, not `break-word`** —
+  only `anywhere` reduces the element's min-content contribution, so a single
+  long token cannot force the column wide. `break-word` would still have left
+  the parent stretched.
+
+That second fix matters beyond the data, because `.grant-deed` renders **the
+reader's own words**: 170 unbroken characters typed into the box was a layout
+bug anyone could trigger. Verified at 320/360/390/430/768/1024/1280/1440 with a
+book-8 position, so all 146 awards render — zero everywhere, including after
+filing that 170-character word.
+
 #### The blank box is the hard part, so there is a button
 
 Most people cannot produce a thing they did today on demand, and the placeholder

@@ -251,6 +251,17 @@ export function lint({ books, floors, entities, achievements = [] }) {
     }
     if (!a.text) errors.push(`${where}: no text — a sealed row with nothing behind it`);
 
+    /* A URL is never the System talking. MediaWiki writes external links as
+       SINGLE brackets, `[url label]`, which the internal-link stripper does not
+       touch — and a 460-character Etsy tracking URL rode into an award's quoted
+       text and pushed the whole document sideways on a phone. The CSS wraps
+       defensively now, but a URL in the prose is still wrong text. */
+    for (const [field, value] of [['text', a.text], ['reward', a.reward], ['for', a.for], ['box', a.box]]) {
+      if (value && /(?:https?:)?\/\/\S{8,}/.test(value)) {
+        errors.push(`${where}: ${field} contains a URL — the wikitext stripper missed an external link`);
+      }
+    }
+
     /* Structure leaks, not just prose. "Bk 1 · Floor 9" on an award a book-1
        reader can see says the ninth floor exists and something happens on it,
        without opening anything — the same bug as the sealed beat stamps that

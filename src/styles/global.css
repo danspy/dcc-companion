@@ -282,8 +282,15 @@
   .bk { color: #0e0e0e; background: var(--color-grey-300); padding: 2px 6px; font-weight: 700; }
   .fl { color: var(--color-grey-300); display: inline-flex; align-items: center; gap: 6px; }
   .fl::before { content: ''; width: 8px; height: 8px; background: var(--dot); flex: none; }
-  .entry-body h3 { font-size: var(--type-entry); font-weight: 700; color: #fff; }
+  /* `anywhere` rather than `break-word`: only `anywhere` reduces the element's
+     min-content contribution, so a single long token cannot force the whole
+     column wide. These blocks render text this site did not author — a quoted
+     award, a reader's own report — and one 460-character URL in the data
+     pushed the entire document sideways on a phone. */
+  .entry-body h3 { font-size: var(--type-entry); font-weight: 700; color: #fff;
+                   overflow-wrap: anywhere; }
   .entry-body p { margin: 6px 0 0; font-size: var(--type-body); color: var(--color-grey-200);
+                  overflow-wrap: anywhere;
                   max-width: var(--measure); }
   .draft { display: inline-block; margin-top: 9px; font-family: var(--font-mono);
            font-size: var(--type-label); letter-spacing: var(--ls-label);

@@ -267,11 +267,11 @@ const canUseLore = !gate.fresh || !gate.spoilers;
               font-size: var(--type-meta); color: var(--color-grey-500); }
   /* The System's own words, in the System's own face — the same treatment a
      quoted item description gets on an entity page. */
-  .rec-text { font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.65;
+  .rec-text { overflow-wrap: anywhere; font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.65;
               color: var(--color-grey-200); margin: 10px 0 0; max-width: var(--measure); }
-  .rec-for { margin: 5px 0 0; font-size: var(--type-meta); color: var(--color-grey-500);
+  .rec-for { overflow-wrap: anywhere; margin: 5px 0 0; font-size: var(--type-meta); color: var(--color-grey-500);
              font-style: italic; }
-  .rec-reward { font-family: var(--font-mono); font-size: var(--type-meta);
+  .rec-reward { overflow-wrap: anywhere; font-family: var(--font-mono); font-size: var(--type-meta);
                 color: var(--color-grey-100); margin: 10px 0 0; max-width: var(--measure); }
   .rec-reward .label { display: block; margin-bottom: 2px; }
   .rec-box { color: var(--color-grey-300); }
@@ -308,16 +308,16 @@ const canUseLore = !gate.fresh || !gate.spoilers;
     letter-spacing: var(--ls-label); text-transform: uppercase;
     padding: 2px 7px; flex: none;
   }
-  :global(.casename) { color: #fff; font-weight: 600; flex: none; }
-  :global(.casedeed) { color: var(--color-grey-500); font-style: italic; margin-left: auto;
+  :global(.casename) { overflow-wrap: anywhere; color: #fff; font-weight: 600; flex: none; }
+  :global(.casedeed) { overflow-wrap: anywhere; color: var(--color-grey-500); font-style: italic; margin-left: auto;
               white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
   /* Opened: the citation in the System's own face, as the card shows it. */
   :global(.casebody) { padding: 2px 12px 14px 12px; border-top: 1px solid var(--color-line-soft); }
-  :global(.casecite) {
+  :global(.casecite) { overflow-wrap: anywhere;
     font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.65;
     color: var(--color-grey-200); margin: 12px 0 0; max-width: var(--measure);
   }
-  :global(.casereward) {
+  :global(.casereward) { overflow-wrap: anywhere;
     font-family: var(--font-mono); font-size: var(--type-meta);
     color: var(--color-grey-100); margin: 12px 0 0;
   }

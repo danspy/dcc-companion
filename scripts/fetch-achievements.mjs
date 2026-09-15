@@ -91,6 +91,13 @@ function clean(t) {
     .replace(/\[\[(?:File|Image|Category):[^\]]*\]\]/gi, '')
     .replace(/\[\[[^\]|]*\|([^\]]*)\]\]/g, '$1')
     .replace(/\[\[([^\]]*)\]\]/g, '$1')
+    /* External links are SINGLE brackets — `[url label]` — and the internal-link
+       rules above do not touch them. Missing these left a 460-character Etsy
+       tracking URL in one award's quoted text, which no amount of wrapping can
+       break and which pushed the whole document sideways on a phone. */
+    .replace(/\[(?:https?:)?\/\/\S+?\s+([^\]]*)\]/g, '$1')
+    .replace(/\[(?:https?:)?\/\/\S+?\]/g, '')
+    .replace(/(?:https?:)?\/\/\S{30,}/g, '')
     .replace(/'''?/g, '')
     .replace(/\s+/g, ' ')
     .trim();

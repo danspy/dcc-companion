@@ -663,3 +663,22 @@ test('a floor number on an award the reader can see is a spoiler too', () => {
   assert.ok(award(4).errors.some(e => /does not exist/.test(e)),
     'and a floor that does not exist is a data error');
 });
+
+test('a URL never reaches an award, and the stripper is why', () => {
+  // MediaWiki external links are single brackets, `[url label]`, which the
+  // internal-link stripper does not touch. A 460-character Etsy tracking URL
+  // rode into one award's quoted text and pushed the document sideways on a
+  // phone — an unbreakable token cannot be wrapped out of trouble.
+  const base = {
+    books: [{ id: 1, title: 'One', chapters: 47 }],
+    floors: [{ id: 1, revealedAt: '1:2', recapAt: '1:29', premise: 'p' }],
+    entities: [],
+  };
+  const withUrl = lint({ ...base, achievements: [{ id: 'x', name: 'X', at: '1:2', floor: 1,
+    text: 'Buy it at https://www.etsy.com/?utm_source=google&utm_campaign=whatever right now.' }] });
+  assert.ok(withUrl.errors.some(e => /contains a URL/.test(e)));
+
+  const clean = lint({ ...base, achievements: [{ id: 'y', name: 'Y', at: '1:2', floor: 1,
+    text: 'You did a thing. Well done, I suppose.' }] });
+  assert.equal(clean.errors.length, 0);
+});

@@ -40,11 +40,11 @@ const filed = JSON.stringify({
     letter-spacing: var(--ls-label); text-transform: uppercase;
     color: var(--tier); margin: 0;
   }
-  .grant-title {
+  .grant-title { overflow-wrap: anywhere;
     font-size: var(--type-title); font-weight: 800; color: #fff;
     margin: 8px 0 0; letter-spacing: -.005em;
   }
-  .grant-citation {
+  .grant-citation { overflow-wrap: anywhere;
     font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.65;
     color: var(--color-grey-200); margin: 12px 0 0; max-width: var(--measure);
   }
@@ -57,12 +57,12 @@ const filed = JSON.stringify({
     font-size: 19px; letter-spacing: .04em; padding: 3px 11px 1px;
     background: var(--tier); color: var(--tier-ink); flex: none;
   }
-  .grant-reward {
+  .grant-reward { overflow-wrap: anywhere;
     font-family: var(--font-mono); font-size: var(--type-meta);
     color: var(--color-grey-100); min-width: 0;
   }
   .grant-reward .label, .grant-deed .label { display: block; margin-bottom: 2px; }
-  .grant-deed {
+  .grant-deed { overflow-wrap: anywhere;
     margin: 16px 0 0; font-size: var(--type-meta); color: var(--color-grey-500);
     font-style: italic; max-width: var(--measure);
   }
