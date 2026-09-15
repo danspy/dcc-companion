@@ -117,6 +117,9 @@ const Achievement = defineTable({
     box: column.text({ optional: true }),             // the loot box it pays out
     text: column.text(),                              // the System's own words
     reward: column.text({ optional: true }),          // its reward line, often a joke
+    /* Entity ids of whoever earned it. An award cannot surface before everyone
+       it names has been met — the lint tightens its sortKey for that. */
+    recipients: column.json({ default: [] }),
     trimmed: column.boolean({ default: false }),      // quoted in part, not whole
     confidence: column.text({ default: 'draft' }),    // verified | draft
   },

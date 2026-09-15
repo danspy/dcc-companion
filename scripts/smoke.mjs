@@ -42,7 +42,10 @@ const ROUTES = [
   /* The form and the empty state render with no model call; a POST is not
      smoked, because it would spend a real request on a real key. */
   ['/achievement', ['form class="finder deed"', 'id="grant"', 'id="case"', 'name="deed"',
-                    'id="surprise"', 'class="onrecord"', 'class="log"', 'class="stamp"']],
+                    'id="surprise"', 'class="log"', 'class="stamp"', 'rec-who']],
+  /* The order is rendered by the server, not chosen by a script: a shared link
+     and a reader with no JavaScript both have to land on the right one. */
+  ['/achievement?sort=name', ['class="switch recsort"', 'aria-current="true"', 'rec-who']],
 ];
 
 let failed = 0;

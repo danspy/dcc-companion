@@ -682,3 +682,28 @@ test('a URL never reaches an award, and the stripper is why', () => {
     text: 'You did a thing. Well done, I suppose.' }] });
   assert.equal(clean.errors.length, 0);
 });
+
+test('an award waits for whoever earned it', () => {
+  // Who earned it is printed on the row, so the award cannot surface before the
+  // reader has met them. Matched by id rather than by regex, so it is exact —
+  // and a recipient who is not an entity is a data error, the same as a
+  // relation pointing at nobody.
+  const base = {
+    books: [{ id: 1, title: 'One', chapters: 47 }, { id: 5, title: 'Five', chapters: 60 }],
+    floors: [{ id: 1, revealedAt: '1:2', recapAt: '1:29', premise: 'p' }],
+    entities: [
+      { id: 'carl', kind: 'character', name: 'Carl', aka: [], role: 'r', tagline: 't',
+        revealedAt: '1:1', beats: [], relations: [] },
+      { id: 'signet', kind: 'character', name: 'Signet', aka: [], role: 'r', tagline: 't',
+        revealedAt: '5:3', beats: [], relations: [] },
+    ],
+  };
+  const award = recipients => lint({ ...base,
+    achievements: [{ id: 'a', name: 'A', at: '1:6', floor: 1, text: 'You did a thing.', recipients }] });
+
+  assert.equal(award(['carl']).tightened.has('a'), false,
+    'someone already met does not hold it back');
+  assert.equal(award(['carl', 'signet']).tightened.get('a'), parseAt('5:3'),
+    'someone not yet met does — it waits for the last of them');
+  assert.ok(award(['nobody']).errors.some(e => /not an entity/.test(e)));
+});

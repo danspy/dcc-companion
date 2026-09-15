@@ -155,6 +155,36 @@ function splitReward(body) {
   return { body: body.slice(0, m.index).trim(), reward: m[1].trim() };
 }
 
+/* Who earned it. There is no `recipient` field — one page of 151 has one — but
+   the lede sentence almost always says, and the Story section says when the
+   lede does not: "Carl and Donut both receive this achievement after…",
+   "awarded to Carl for killing the very last hunter".
+
+   Matched against the curated cast rather than parsed as prose, so a recipient
+   is an entity id this site already knows how to gate and link. Only sentences
+   carrying a receive-verb are searched: the lede also says things like "It is
+   distinct from the Trailblazing Crazy Cat Lady Achievement", and matching
+   names across the whole page would attribute an award to whoever happens to
+   be mentioned in it. */
+const cast = ['characters']
+  /* Each curation file is `{ $comment, entities: [...] }`, not a bare array. */
+  .flatMap(f => JSON.parse(readFileSync(join(root, `data/entities/${f}.json`), 'utf8')).entities)
+  .filter(e => e.kind === 'character')
+  .flatMap(e => [e.name, ...(e.aka ?? []).filter(a => /^[A-Z]/.test(a))]
+    .filter(n => n.length >= 4)
+    .map(name => ({ id: e.id, name, re: new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`) })));
+
+const RECEIVES = /\b(?:receives?|received|receiving|earns?|earned|awarded to|is awarded|are awarded|both receive)\b/i;
+
+function recipientsIn(text) {
+  const found = new Map();
+  for (const sentence of text.split(/(?<=[.!?])\s+/)) {
+    if (!RECEIVES.test(sentence)) continue;
+    for (const c of cast) if (c.re.test(sentence)) found.set(c.id, c.name);
+  }
+  return [...found.keys()];
+}
+
 const titles = (await categoryMembers('Achievements'))
   .filter(t => !/^Floor \d+ Achievements$/.test(t) && t !== 'Achievement');
 const pages = await wikitexts(titles);
@@ -166,6 +196,10 @@ for (const [title, text] of Object.entries(pages)) {
   const name = title.replace(/\s*Achievement$/, '');
   const box = text.match(/\{\{Achievement([\s\S]*?)\n\}\}/i)?.[1] ?? '';
   const ai = text.match(/==\s*AI Description\s*==([\s\S]*?)(?=\n==[^=]|$)/i)?.[1];
+  /* Everything before the first heading, plus the Story section — the two
+     places the page says who this happened to. */
+  const lede = clean(text.replace(/\{\{Achievement[\s\S]*?\n\}\}/i, '').split(/\n==/)[0] ?? '');
+  const story = clean(text.match(/==\s*Story\s*==([\s\S]*?)(?=\n==[^=]|$)/i)?.[1] ?? '');
 
   const at = cites(ai ?? '')[0] ?? cites(text)[0] ?? null;
   const whole = ai ? clean(ai.replace(/===[\s\S]*$/, '')) : '';
@@ -182,6 +216,7 @@ for (const [title, text] of Object.entries(pages)) {
     book: at?.book ?? null,
     chapter: at?.chapter ?? null,
     boxFloor: floorOf(field(box, 'floor')),   // what the page claims; cross-check only
+    recipients: recipientsIn(`${lede} ${story}`),
     for: field(box, 'for'),
     boxReward: field(box, 'reward'),
     quote,
@@ -250,6 +285,7 @@ const curated = rows
     id: r.id, name: r.name, at: r.at, floor: r.floor ?? null,
     for: r.for || null, box: r.boxReward || null,
     text: r.quote, reward: r.reward || null,
+    recipients: r.recipients.length ? r.recipients : undefined,
     trimmed: r.trimmed || undefined,
     confidence: r.confidence,
     derived: r.derived || undefined,
@@ -263,6 +299,7 @@ const byBook = {};
 for (const r of usable) byBook[r.book] = (byBook[r.book] ?? 0) + 1;
 console.log('by book: ' + Object.entries(byBook).sort().map(([b, n]) => `bk${b} ${n}`).join('  '));
 console.log(`trimmed to a quotation: ${usable.filter(r => r.trimmed).length}`);
+console.log(`with a named recipient: ${usable.filter(r => r.recipients.length).length}`);
 if (overridden.length) {
   console.log(`\n${overridden.length} page(s) claim a floor the reader has not reached; overridden:`);
   for (const d of overridden) console.log('  ' + d);

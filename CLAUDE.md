@@ -1139,6 +1139,43 @@ bug anyone could trigger. Verified at 320/360/390/430/768/1024/1280/1440 with a
 book-8 position, so all 146 awards render — zero everywhere, including after
 filing that 170-character word.
 
+#### Who earned it, when, and in what order
+
+A list of 146 awards in one fixed order is a wall. Three things fix it, and all
+three come out of the same pull:
+
+- **When** is the award's own tag, rendered `Bk 1 · Ch 2` — **not** its
+  `sortKey`, which may have been pushed later so the award waits for somebody it
+  names. When it happened and when you may see it are different numbers.
+- **Who** comes from the page's lede and Story sections, which say it in prose —
+  *"Carl and Donut both receive this achievement after…"* — because there is no
+  `recipient` field: one page of 151 has one. The prose is matched against the
+  curated cast, so a recipient is an **entity id** this site already knows how
+  to gate and link, not a scraped string. Only sentences carrying a receive-verb
+  are searched; matching names across the whole page would attribute an award to
+  whoever happens to be mentioned in it, and the lede also says things like *"it
+  is distinct from the Trailblazing Crazy Cat Lady Achievement"*. 131 of 146 get
+  a name that way — Carl 130, Donut 22, then a long tail.
+- **Sort** — When, Latest, Name, Floor, Box — using the `.switch` component the
+  `/when` view picker already uses, because it is the same gesture.
+
+Two rules this inherits rather than reinvents:
+
+- **An award waits for whoever earned it.** The name is printed on the row, so
+  the award cannot surface before the reader has met them — the same inheritance
+  a beat gets from its own entity, matched by id rather than regex so it is
+  exact. A recipient who is not an entity is a build error, like a relation
+  pointing at nobody.
+- **The order is rendered, never only scripted.** `?sort=` is a real link
+  resolved on the server, so a reload, a shared link and a reader with no
+  JavaScript all land on the right order — the lesson `/when`'s filter already
+  paid for. `npm run smoke` asserts it.
+
+**The sealed tail is always computed from the gate's order, never the displayed
+one.** Sorting by name and then taking the last row as "the next one you will
+reach" would be nonsense; the count and the *"next when you reach…"* line come
+from `sortKey` whatever the reader is sorting by.
+
 #### The blank box is the hard part, so there is a button
 
 Most people cannot produce a thing they did today on demand, and the placeholder

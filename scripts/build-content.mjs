@@ -136,6 +136,7 @@ const snapshot = {
       sortKey: Math.max(parseAt(a.at), tightened.get(a.id) ?? 0),
       floor: a.floor ?? null, forWhat: a.for ?? null, box: a.box ?? null,
       text: a.text, reward: a.reward ?? null,
+      recipients: a.recipients ?? [],
       trimmed: !!a.trimmed, confidence: a.confidence ?? 'draft',
     }))
     .sort((x, y) => x.sortKey - y.sortKey || x.id.localeCompare(y.id)),

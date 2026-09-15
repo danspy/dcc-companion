@@ -123,10 +123,54 @@ if (Astro.request.method === 'POST') {
    row here, and the sealed ones collapse to a single line rather than a stack
    of stamped placeholders: an award's *name* is the spoiler, and four redacted
    rows with "Floor 9" on them tell you the shape of the rest of the book. */
-const [awards, floorRows] = await Promise.all([getAchievements(), getFloors()]);
+const [awards, floorRows, allEntities] = await Promise.all([
+  getAchievements(), getFloors(), getEntities(),
+]);
 const floorAccent = new Map(floorRows.map(f => [f.id, f.accent]));
-const reached = awards.filter(a => gate.frontier >= a.sortKey);
+const nameOf = new Map(allEntities.map(e => [e.id, e.name]));
+
+/* The tail must stay the sealed ones whatever the reader sorts by, so the
+   sealed count and the "next when you reach…" line are always computed from
+   the gate's own order, never from the displayed one. */
+const reachedAll = awards.filter(a => gate.frontier >= a.sortKey);
 const nextSealed = awards.find(a => gate.frontier < a.sortKey);
+
+/* Sorting is a real link and the order is rendered on the server, the same rule
+   /when's filter follows: a reload, a shared link or a reader with no
+   JavaScript are all real navigations, and an order held only in a variable is
+   thrown away by them. */
+const SORTS = [
+  { key: 'when', label: 'When' },
+  { key: 'recent', label: 'Latest' },
+  { key: 'name', label: 'Name' },
+  { key: 'floor', label: 'Floor' },
+  { key: 'box', label: 'Box' },
+] as const;
+const BOX_RANK = ['bronze', 'silver', 'gold', 'platinum', 'legendary', 'celestial'];
+const boxRank = (box: string | null) => {
+  const i = BOX_RANK.findIndex(t => box && new RegExp(`\\b${t}\\b`, 'i').test(box));
+  return i === -1 ? BOX_RANK.length : i;
+};
+
+const askedSort = Astro.url.searchParams.get('sort') ?? 'when';
+const sort = SORTS.some(s => s.key === askedSort) ? askedSort : 'when';
+
+const reached = [...reachedAll].sort((a, b) => {
+  switch (sort) {
+    case 'recent': return b.sortKey - a.sortKey || a.name.localeCompare(b.name);
+    case 'name': return a.name.localeCompare(b.name);
+    case 'floor': return (a.floor ?? 99) - (b.floor ?? 99) || a.sortKey - b.sortKey;
+    case 'box': return boxRank(a.box) - boxRank(b.box) || a.sortKey - b.sortKey;
+    default: return a.sortKey - b.sortKey || a.name.localeCompare(b.name);
+  }
+});
+
+/** "1:2" -> { book: 1, chapter: 2 }. `:end` and a bare book have no chapter. */
+function whenOf(at: string) {
+  const [b, c] = String(at).split(':');
+  const chapter = c === 'end' || c === undefined || c === '0' ? null : Number(c);
+  return { book: Number(b), chapter: Number.isFinite(chapter as number) ? chapter : null, end: c === 'end' };
+}
 
 const canUseLore = !gate.fresh || !gate.spoilers;
 ---
@@ -180,13 +224,23 @@ const canUseLore = !gate.fresh || !gate.spoilers;
       <p class="case-note label">Kept in this browser only. Nothing you file is stored on the server.</p>
     </section>
 
-    <section class="onrecord">
+    <section class="onrecord" id="onrecord">
       <div class="case-head">
         <h2 class="sect">On record</h2>
         {reached.length > 0 && <span class="tally label">{reached.length} reached</span>}
       </div>
       <p class="rec-note">Awards the System has handed out, in its own words. These open as
         your position catches up — the name of an award is a spoiler on its own.</p>
+
+      {reached.length > 1 && (
+        <nav class="switch recsort" aria-label="Sort the awards">
+          <span class="label">Sort</span>
+          {SORTS.map(o => (
+            <a href={`/achievement?sort=${o.key}#onrecord`}
+               aria-current={o.key === sort ? 'true' : undefined}>{o.label}</a>
+          ))}
+        </nav>
+      )}
 
       {reached.length === 0
         ? <p class="sys"><b>*** Nothing on record ***</b>You have not reached a single award yet,
@@ -195,7 +249,13 @@ const canUseLore = !gate.fresh || !gate.spoilers;
             {reached.map(a => (
               <li class="entry">
                 <p class="stamp">
-                  <span class="bk">Bk {Math.floor(a.sortKey / 1000)}</span>
+                  {(() => {
+                    /* When it happened, from its own tag — not from sortKey,
+                       which may have been pushed later so the award waits for
+                       somebody it names. */
+                    const w = whenOf(a.at);
+                    return <span class="bk">Bk {w.book}{w.chapter ? ` · Ch ${w.chapter}` : w.end ? ' · end' : ''}</span>;
+                  })()}
                   {a.floor && (
                     <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? '#717171'}`}>
                       Floor {a.floor}
@@ -211,6 +271,18 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                 <div class="entry-body">
                   <h3>{a.name}</h3>
                   {a.forWhat && <p class="rec-for">For {a.forWhat.replace(/^For\s+/i, '')}</p>}
+                  {/* Who earned it. The award cannot surface before its
+                      recipients have been met — the lint holds it back — so
+                      every name here is one the reader already knows. */}
+                  {(a.recipients as string[])?.length > 0 && (
+                    <p class="rec-who">
+                      <span class="label">Earned by</span>
+                      {(a.recipients as string[]).map((id, i) => (
+                        <>{i > 0 && <span class="sep">·</span>}
+                        <a href={`/entity/${id}`}>{nameOf.get(id) ?? id}</a></>
+                      ))}
+                    </p>
+                  )}
                   <p class="rec-text">{a.text}</p>
                   {a.reward && <p class="rec-reward"><span class="label">Reward</span>{a.reward}</p>}
                   {a.confidence === 'draft' && <span class="draft">unverified chapter</span>}
@@ -275,6 +347,12 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                 color: var(--color-grey-100); margin: 10px 0 0; max-width: var(--measure); }
   .rec-reward .label { display: block; margin-bottom: 2px; }
   .rec-box { color: var(--color-grey-300); }
+  .rec-who { margin: 8px 0 0; font-size: var(--type-meta); color: var(--color-grey-300);
+             display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+  .rec-who .label { flex: none; }
+  .rec-who .sep { color: var(--color-grey-700); }
+  .recsort { margin: 0 0 18px; align-items: baseline; gap: 6px; }
+  .recsort .label { margin-right: 4px; }
   /* One filed award: the tier, what it was called, and what you claimed to
      have done. The citation and reward hang off the title attribute — the case
      is an index, and the card above is where a grant is read.

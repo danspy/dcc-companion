@@ -9,6 +9,9 @@
       "box": "Bronze Pet Box",
       "text": "Congratulations! You’ve earned your first achievement: Crazy Cat Lady. You have entered the World Dungeon accompanied by a cat. Ahh, isn’t that sweet?",
       "reward": "You’ve received a Bronze Pet Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -20,6 +23,10 @@
       "box": "Silver Adventurer Box",
       "text": "New achievement! Early Adopter. You are one of the first 5,000 Crawlers to enter a new World Dungeon. Sucker.",
       "reward": "You've received a Silver Adventurer Box!",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -31,6 +38,9 @@
       "box": "Bronze Adventurer Box",
       "text": "New achievement! Empty pockets. You didn't bring any supplies. None. You know you still gotta eat, right?",
       "reward": "You've received a Bronze Adventurer Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -42,6 +52,9 @@
       "box": "None",
       "text": "New achievement! Fall into an obvious trap.",
       "reward": "Well, if there's a heaven, and if you haven't been too much of an asshole, maybe they'll let you in. Because you about to meet your maker.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -64,6 +77,9 @@
       "box": "Bronze Weapon Box",
       "text": "New achievement! Unarmed combat. So. You just gonna waltz right into something called a “World Dungeon” and you’re not even going to bring a weapon? You’re either braver than you look, or you’re just an idiot. Good luck with that, Van Damme.",
       "reward": "You’ve received a Bronze Weapon Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -75,6 +91,9 @@
       "box": null,
       "text": "New achievement! Why aren’t you wearing pants? You entered the dungeon wearing no pants. Dude. Seriously?",
       "reward": "You've received a Gold Apparel Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -86,6 +105,9 @@
       "box": "Update to map",
       "text": "New achievement! You’ve discovered and read an official dungeon sign. Wow. You can read. Whoopie.",
       "reward": "All official dungeon signage will now be highlighted and easier to spot. Nearby guilds will appear on your minimap.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -97,6 +119,10 @@
       "box": "Silver Goblin Box",
       "text": "New achievement! Boom! You’ve caused a wall-shaking explosion within the dungeon! The last time the walls shook like this was when your mom came over for a visit.",
       "reward": "You’ve received a Silver Goblin Box!",
+      "recipients": [
+        "carl",
+        "mordecai"
+      ],
       "confidence": "verified"
     },
     {
@@ -108,6 +134,10 @@
       "box": "None",
       "text": "New achievement! Level-Up, Baby! You’ve received enough experience to gain a level.",
       "reward": "Leveling up is your job. You don’t get rewards for doing your job.",
+      "recipients": [
+        "carl",
+        "elle-mcgibbons"
+      ],
       "confidence": "verified"
     },
     {
@@ -119,6 +149,9 @@
       "box": "Fight",
       "text": "New achievement! You’ve inflicted damage on a mob. Hopefully it won’t hit back!",
       "reward": "It’s probably going to hit back.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -130,6 +163,9 @@
       "box": "Bronze Adventurer Box",
       "text": "New achievement! You’ve killed a mob a higher level than yourself! You’re getting the hang of this. Don’t let it get to your head.",
       "reward": "You’ve received a Bronze Adventurer Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -141,6 +177,9 @@
       "box": null,
       "text": "New achievement! You’ve killed a mob! You’re a murderer! He probably had a family!",
       "reward": "You can now gain experience. Get enough of it, and you might even go up a level.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -152,6 +191,9 @@
       "box": "Bronze Weapon Box",
       "text": "New achievement! You’ve killed an armed mob with your bare fucking hands! Holy crap, dude. That’s kinda fucked up.",
       "reward": "You’ve received a Bronze Weapon Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -163,6 +205,9 @@
       "box": "Pride",
       "text": "New achievement! Loot! You're wearing something you found in the dungeon.",
       "reward": "You're now a handsome son of a bitch. That's reward enough.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -185,6 +230,9 @@
       "box": "None",
       "text": "New achievement! Boss Babe. You have struck a blow against a dungeon boss and caused damage to it. Here's a fun fact. For crawlers who make it through the tutorial, this achievement is, by far, most often the last achievement they ever receive. Isn't that interesting?",
       "reward": "Let's wait a few minutes before we decide on whether or not to waste a prize on you.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -196,6 +244,10 @@
       "box": "Bronze Asshole's Box",
       "text": "New achievement! You Monster! You have killed an infant! An infant! Okay, okay. Unless you’re a complete psychopath, we know you probably didn’t wake up this morning and tell yourself, “Today is the day I’m going to slaughter a child.” Well let us put your mind at ease. All children mobs who die within this dungeon don’t actually perish. […]",
       "reward": "These past twenty seconds, when your conscience started to ease? That was your reward. It was also a lie. That baby is dead, and it’s dead because of you. You’re totally going to hell. You’ve also received a Bronze Asshole's Box.",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -208,6 +260,10 @@
       "box": "Gold Asshole's Box",
       "text": "New achievement! War Criminal. You have killed more than 20 non-combatants in a single attack! Question: What’s the only thing standing between an innocent child and a happy, fulfilling life? Answer: You. The answer is you.",
       "reward": "You’ve received a Gold Asshole's Box!",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -219,6 +275,11 @@
       "box": "None",
       "text": "New Achievement! Bitchmeat! You’ve been attacked by a fellow crawler in a safe zone, and the system has been forced to save your ass. That usually suggests you’re either really annoying, or you snore. If this were a prison, you would now be my bitch. Wait…",
       "reward": "Bitches don’t get rewards.",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "frank-and-maggie"
+      ],
       "confidence": "verified"
     },
     {
@@ -230,6 +291,9 @@
       "box": "Gold Brawler Box",
       "text": "New achievement! Two Chicks at the Same Time. You killed two mobs at once using only their own bodies against each other. On a brutality scale of Bambi to Martyrs, that is a solid Seven.",
       "reward": "You’ve received a Gold Brawler Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -241,6 +305,9 @@
       "box": "Silver Mechanic's Box",
       "text": "New achievement! Battlefield Construction! You built a structure and deployed it in battle. And your mother thought you were wasting your life away while you spent all those hours eating Doritos and playing Minecraft. If only she could see you now. Too bad she’s probably dead.",
       "reward": "You’ve received a Silver Mechanic's Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -252,6 +319,12 @@
       "box": "None",
       "text": "New achievement! Borough Boss! So, you’ve stumbled into the chamber of the second-weakest type of boss. If you survive this, it means you are in the top 5% of all crawlers. Too bad only the top .25% make it past the next tier.",
       "reward": "Yeah, no.",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "imani",
+        "agatha"
+      ],
       "confidence": "verified"
     },
     {
@@ -263,6 +336,10 @@
       "box": "Bronze Asshole's Box",
       "text": "New achievement! Bully and a Thief! You’ve stolen property from a fellow crawler who is a lower level than you. What’s next, tough guy? Kicking puppies?",
       "reward": "You’ve received a Bronze Asshole's Box.",
+      "recipients": [
+        "carl",
+        "agatha"
+      ],
       "confidence": "verified"
     },
     {
@@ -274,6 +351,9 @@
       "box": null,
       "text": "New achievement! This Little Piggy Went to Market! Oh yeah, baby. You have killed more than five opponents during boss battles using your bare feet. You are making daddy very, very happy.",
       "reward": "You’ve received a Platinum Shoe Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -285,6 +365,9 @@
       "box": null,
       "text": "New achievement! You found stairs! You have found a stairwell down to the next floor. They say the cream rises to the top. So what does that say about you?",
       "reward": "This barely qualifies as an achievement. Your reward is that you’re alive to read this.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -296,6 +379,11 @@
       "box": "None",
       "text": "New Achievement! Wait, Bosses Can Leave Their Rooms? Welcome to the second floor, bitches.",
       "reward": "This shit plays great on the recap episode. If you scream loud enough, maybe you'll make the show.",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "krakaren"
+      ],
       "confidence": "verified"
     },
     {
@@ -307,6 +395,9 @@
       "box": null,
       "text": "New achievement! Dungeonpreneur. You have invented a stackable weapon, device, or potion. You will be memorialized for eternity with your name in the Dungeon Codex. Just don’t let it go to your head, Elon.",
       "reward": "For every kill made with this device by other crawlers, you will receive a single gold coin. If you survive the dungeon, you will continue to receive this benefit—even during future seasons—at the current gold to credit exchange rate for the remainder of your natural life. Our lawyers made us put that last part in, but between you and me, we both know you’re going to die, and we’re going to keep using your hard work for our own benefit.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -318,6 +409,10 @@
       "box": null,
       "text": "New achievement! Like a Moth to the Flame. You attacked and caused damage to a mob that is more than 75 levels above your own. The fact that you’re reading this suggests you’re the luckiest fucker in the dungeon. Just remember, luck goes both ways, like your mom.",
       "reward": "You’ve received a Platinum Lucky Bastard Box!",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -329,6 +424,10 @@
       "box": null,
       "text": "New achievement! What goes up... You have been struck with and survived the dreaded Reverse Gravity Spell. Well, you fared better than Albert II, the first earth mammal to reach space alive. He was a rhesus monkey, in case you're wondering. He went up just fine. He didn't stick the landing.",
       "reward": "You can now tell people you're more durable than a monkey named Albert.",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -340,6 +439,9 @@
       "box": null,
       "text": "New achievement! Grease Monkey! Don’t get ahead of yourself, Dale. You built and deployed a wheeled device. When the primitive humans in Mesopotamia made the first wheel, they probably thought they were hot shit, too. It still took them another 5,000 years after that to invent the toilet.",
       "reward": "You’ve received a Silver Mechanic's Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -351,6 +453,10 @@
       "box": null,
       "text": "New achievement! You call that a trap? A mob has been injured because of something you purposely left lying around the dungeon. From scattered Legos to spiked pits to buckets of flesh-devouring Skinner Ants to dimensional rifts that instantly boil all the blood in one’s body, the art of trapmaking has a celebrated and storied history in the annals of Dungeon Crawler World. […]",
       "reward": "You’ve received a Gold Sapper's Box!",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -374,6 +480,9 @@
       "box": "Not being Bored",
       "text": "New achievement! It’s Elementary, My Dear Crawler! And you thought all you had to do was bonk monsters on the head. You've received a quest! Puzzles and intrigue and mysteries, oh my! If you want to survive in this world, you're going to need to be more than just a pretty, sword-swinging barbarian. Some quests require brute strength, yes, but sometimes you also gotta use your noggin.",
       "reward": "We don't want you getting bored. That's your prize.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -385,6 +494,11 @@
       "box": "Elites show up on minimap",
       "text": "New Achievement! Meet an Elite. Sometimes they’re NPCs, sometimes they’re mobs, but usually they’re just assholes. Elites are powerful, one-of-a-kind entities. These are the non-boss, non-divine hero class of Dungeon Crawler World. If you come across one of these egomaniacs, they will either want to fuck you or kill you. Either way, they will always want to use you. […]",
       "reward": "Elites will now show on your map as white or red dots with a black cross.",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "signet"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -397,6 +511,11 @@
       "box": "Platinum Lucky Bastard Box",
       "text": "New achievement! Lazarus! You have been hit with - and survived - an offensive spell that was higher that level 15. The fact you are not a quivering stain of meat on the dungeon floor right now is a testament to your sheet luck. It's either that or you're banging the producer.",
       "reward": "You've received a Platinum Lucky Bastard Box!",
+      "recipients": [
+        "carl",
+        "signet",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -420,6 +539,10 @@
       "box": "Quest Box has been upgraded",
       "text": "New achievement! Hadji! You have completed a quest, but you completed it in a way unusual enough to trigger the Hadji Achievement! And like the oft exploited street children of Kolkata, where there's one, there's usually more. This is one of the rare achievements that can be rewarded more than once.",
       "reward": "Your Gold Quest box has been upgraded to a Platinum Quest Box!",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -431,6 +554,9 @@
       "box": "Gold Quest Box",
       "text": "New Achievement! Johnny Quest! Not only have you been given a quest, but you actually completed it without dying. We like it when you do what you're told. It means you're a good dungeon citizen and not a traitor to your people at all.",
       "reward": "In addition to the Gold Quest Box you've received for completing the quest, new quest locations will sometimes appear on your map. Notice how I italicized \"sometimes\"? The next one was even more interesting.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -442,6 +568,10 @@
       "box": "Gold Fan Box",
       "text": "New Achievement! One Quadrillion! You are one of the first ten crawlers to have achieved one quadrillion views! That means one of two things. You're either one of the best crawlers in the game, or you're such a hot mess people can't wait to see you fail.",
       "reward": "You have received a Gold Fan Box! Admin Note: You have received your first Fan Box. Fan boxes contain items that are voted for by those who follow your progress. Once a box is received, you may not open it for thirty hours while the fans vote for the contents.",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -453,6 +583,9 @@
       "box": "Nothing",
       "text": "New Achievement! Yellow-Bellied Chickenshit! You initiated a boss battle, and it somehow ended with neither of you dead. What a disappointment you are. What a goddamned smear.",
       "reward": "Pussies don’t get prizes.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -464,6 +597,10 @@
       "box": "Bronze Assassin's Box",
       "text": "New achievement! Assassin! You have killed a ranking NPC town official. *Sniff* It seems like just yesterday you were nothing but a scared, level-1 crawler with beautiful feet, pissing yourself as you faced down a rat. Now look at you. You've moved all the way up to political assassinations. What's next? Killing a god?",
       "reward": "You've received a Bronze Assassin's Box!",
+      "recipients": [
+        "carl",
+        "miss-quill"
+      ],
       "confidence": "verified"
     },
     {
@@ -475,6 +612,11 @@
       "box": "Silver Quest Box",
       "text": "New achievement! CockBlock! You have assassinated an NPC whose existence was required to complete another crawler's quest. (NPC Killed: Miss Quill - Skyfowl. Level 30.) Who was that other crawler? What was the quest? Who fucking cares? You get the reward they were promised! Warning: You may only receive this award once. The next time you do it, we tell them who you are. […]",
       "reward": "You've received a Silver Quest Box!",
+      "recipients": [
+        "carl",
+        "bautista",
+        "miss-quill"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -487,6 +629,10 @@
       "box": "Platinum Tyrant's Box",
       "text": "New achievement! Ultimate Extreme Power! Easy there, Charlemagne. This is only a medium settlement. It's not like you've conquered most of Europe. But you have killed this town's acting Magistrate. You know what that means? Welcome to the wonderful world of public administration.",
       "reward": "You've received a Platinum Tyrant's Box! You have also gained control of the Medium Skyfowl Settlement. Good luck, Magistrate.",
+      "recipients": [
+        "carl",
+        "miss-quill"
+      ],
       "confidence": "verified"
     },
     {
@@ -509,6 +655,9 @@
       "box": "Platinum It's Not My Fault You Fish-Headed Assholes Don't Properly Program Your Quests Box",
       "text": "You got fucked by a fish. You've done something so spectacularly controversial, courts and lawyers had to get involved. The end result was *my* decision being overturned.",
       "reward": "You've received a Platinum It's Not My Fault You Fish-Headed Assholes Don't Properly Program Your Quests Box.",
+      "recipients": [
+        "quan-ch"
+      ],
       "confidence": "verified"
     },
     {
@@ -520,6 +669,9 @@
       "box": "Platinum Fan Box",
       "text": "You are one of the first five crawlers to have achieved 500 trillion followers! People sure love a good train wreck. Wink.",
       "reward": "You have received a Platinum Fan Box! Note: Voting is now enabled on this box's prize. Box will become available in 30 hours.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -531,6 +683,10 @@
       "box": "You are a homeowner",
       "text": "You have bought a home! It's every man's dream to someday own a place where he can fap in peace. No more filthy roommates not doing the dishes or making up excuses as to why they can't pay the rent. No more landlord who shows up without notice and conceals hidden cameras in the smoke detectors. It's all smooth sailing from now on.",
       "reward": "You're a homeowner now. That is the reward. That and taxes and having to deal with Kenneth the megalomaniac HOA president.",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -542,6 +698,9 @@
       "box": "\"Good Rest Buff\"",
       "text": "New achievement! Well-Rested! You managed to sleep so well that you woke up feeling refreshed and full of energy. You are ready to take on the world and make some monster’s mother cry because her only child was ruthlessly slaughtered by a bright-eyed and bushy-tailed Crawler.",
       "reward": "You now receive the Good Rest bonus every time you sleep in this bed. This buff adds 10% to your base stats plus a 10% bonus to experience and skill training for 30 hours. Monster mothers now cry 10% more when you kill their babies.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -553,6 +712,9 @@
       "box": "Gold Engineering Box",
       "text": "While it's not exactly a feat of engineering worth of a Queen Elizabeth Prize, you finally managed to manufacture a train derailment. Let's hope this doesn't set off some sort of unforeseen domino effect that will ripple through out the rest of the floor, leading to mass confusion and death amongst you and your fellow crawlers.",
       "reward": "You've received a Gold Engineering Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -564,6 +726,10 @@
       "box": "Driving a Train",
       "text": "You're driving a train! Holy shit!",
       "reward": "I'm pretty sure the act of driving a train is a badass-enough award.",
+      "recipients": [
+        "carl",
+        "fire-brandy"
+      ],
       "confidence": "verified"
     },
     {
@@ -575,6 +741,9 @@
       "box": "Platinum Big Daddy Box",
       "text": "You killed three boss monsters with the same attack! I'm starting to think your survival so far isn't just a fluke. You're either scary good at this, or you're just one luck mo-fo. Either way, holy shit. Good job.",
       "reward": "You've received a Platinum Big Daddy Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -586,6 +755,9 @@
       "box": null,
       "text": "You have over 500 of the exact same, stackable clothing item in your inventory. What the hell is wrong with you? You planning on opening a thrift store? You might want to see a shrink. One that your group doesn't immediately kill.",
       "reward": "We don't reward this sort of behavior. It's weird.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -597,6 +769,9 @@
       "box": "Venison Box",
       "text": "New Achievement! The Quarry Sees Another Spring. You managed to enter a stairwell while listed in the current top 10. You’re a survivor. A scrapper. And just as the buck’s antlers grow another point as they mature, you too, have grown as both a crawler and as a prize.",
       "reward": "You have received a Gold Venison Box! Don’t get too excited. It’s just money. In addition, all bounties against you now and in the future will have a (x2) modifier attached. Hey, at least the prize for surviving the floor goes up, too.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -608,6 +783,10 @@
       "box": "Option to worship that God",
       "text": "New Achievement! Divine Epiphany. You have seen a deity. Don’t get too excited. It doesn’t mean you’re a prophet or anything like that. This is a pretty common achievement that all crawlers eventually receive if they survive long enough, so you aren’t really that special. Finding a god is easy. What you don’t want is for that god to find you.",
       "reward": "You now have the option to worship the god Grull. Admin Note: There is a new tab now available in your interface.",
+      "recipients": [
+        "carl",
+        "grull"
+      ],
       "confidence": "verified"
     },
     {
@@ -619,6 +798,9 @@
       "box": "Gold Sniper's Box",
       "text": "New Achievement! Hail Mary! You have initiated an attack that has caused more than 100 casualties more than 100 kilometers from your current position. You’re either the universe’s greatest sniper, or you’ve been a sneaky, little, portal-using bitch. Either way, that’s rather impressive. You’d have a great career in politics ahead of you if, you know, we hadn’t destroyed your world and all the governments and stuff.",
       "reward": "You’ve received a Gold Sniper's Box",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -630,6 +812,10 @@
       "box": "Legendary Deity's Box",
       "text": "New Achievement! Indomitable. You have been physically attacked by a deity, and you survived. This is a feat that has only been accomplished by a handful of crawlers in the history of Dungeon Crawler World. Good job! Unfortunately for you and anybody around you, whenever this happens, the other deities tend to notice.",
       "reward": "You have received a Legendary Deity's Box.",
+      "recipients": [
+        "carl",
+        "grull"
+      ],
       "confidence": "verified"
     },
     {
@@ -641,6 +827,10 @@
       "box": "Entertainment",
       "text": "New Achievement! Let There Be Chaos. You have successfully summoned a god into the dungeon. That's a great way to get more friends. Everybody loves it when someone brings immortal death machines to the party.",
       "reward": "It might've been a bad idea, but it's sure going to be entertaining.",
+      "recipients": [
+        "carl",
+        "grull"
+      ],
       "confidence": "verified"
     },
     {
@@ -652,6 +842,10 @@
       "box": "Platinum Spicy Box",
       "text": "New Achievement! Smushed for Daddy. You have been stepped upon by a deity. You have survived the encounter. And while this wasn’t the pink-fleshed suppleness of a human-shaped foot that crushed your fragile, wet body, it’s nice sometimes to switch things around. You know, just to test the boundaries of your own limits. When one experiments, oftentimes one finds new and exciting ways to get that rush. […]",
       "reward": "You have received a Platinum Spicy Box.",
+      "recipients": [
+        "carl",
+        "grull"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -664,6 +858,9 @@
       "box": "Bronze Crafter's Box",
       "text": "You used a workbench to craft for the first time. The next thing you know you'll be fashioning bottlecap earrings, drinking oat milk, and selling your ugly crap on Etsy while you wax poetic on Instagram about your \"journey\".",
       "reward": "You've received a Bronze Crafter's Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -675,6 +872,9 @@
       "box": "Ha.",
       "text": "New Achievement! Total, Utter Failure. You failed a quest less than five minutes after you received it. Now that's talent.",
       "reward": "Ha.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -686,6 +886,9 @@
       "box": "Silver Skydiver's Box",
       "text": "New Achievement! Cannonball! You fell from a great height, and you survived! You know who else fell from a...? You know what, never mind. Fuck you.",
       "reward": "You received a Silver Skydiver's Box! Not that you deserve it you little punk.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -708,6 +911,10 @@
       "box": "Delicious Lemonade",
       "text": "New Achievement! Wild Goose Chase! Oh, I'm sorry. Did you think this was an important potion? Magic doesn't work, dumbass. It's lemonade!",
       "reward": "It really is delicious. Too bad you're about to splatter against the roof of the catacombs.",
+      "recipients": [
+        "carl",
+        "bonnie"
+      ],
       "confidence": "verified"
     },
     {
@@ -719,6 +926,9 @@
       "box": "Bronze I'm Wet Box",
       "text": "New achievement! I was in the pool! You spent more than 60 seconds fully submerged underwater, and you didn't die! Parts of you may have experienced shrinkage, but otherwise you're okay. You're now an honorary mudskipper!",
       "reward": "You received a Bronze I'm Wet Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -730,6 +940,9 @@
       "box": "Silver Pacifist's Box",
       "text": "New achievement! Milquetoast! You somehow managed to win an important boss battle without actually killing the boss. That's like paying money to a prostitute just so she'll cuddle with you.",
       "reward": "You've received a silver Pacifist's Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -741,6 +954,9 @@
       "box": "Dungeon Crawler World blooper reel",
       "text": "New Achievement! Who Let the Gods Out? You have allowed a feral god to enter your current realm. That is the equivalent of dropping a grenade down your pants and shouting “Yolo!” Here’s a fun fact. Other gods don’t like feral gods. They’ve been thrown into the Nothing for a reason. They tend to react to this sort of thing, depending on who you’ve brought out.",
       "reward": "Whatever is about to happen is going to hit the Dungeon Crawler World blooper reel for sure.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -763,6 +979,10 @@
       "box": "Platinum Fan Box",
       "text": "New Achievement! Janet Jackson’s Nipple! You have been featured during a live special event. Sure you got your loyal followers and viewers, but this is on a whole new level. This is like getting to play the halftime show during the Super Bowl. We brought you to the stage, now dance for us, monkey. Dance!",
       "reward": "You have received a Platinum Fan Box!",
+      "recipients": [
+        "carl",
+        "katia"
+      ],
       "confidence": "verified"
     },
     {
@@ -774,6 +994,9 @@
       "box": "Gold I'm Wet Box",
       "text": "New Achievement! Rock Bottom! You dived more than 1,000 meters below the surface, and you survived! You weren’t even wearing one of those deep-diving suits! The next thing you know, they’re gonna start calling you an honorary mudskipper!",
       "reward": "You’ve received a Gold I'm Wet Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -785,6 +1008,9 @@
       "box": "Platinum Spicy Box",
       "text": "New Achievement! Soft Vore! You got eaten by a monster much bigger than yourself, and you managed to get out without even getting chewed a little bit. Uh-oh. I think Daddy kinda liked that. I think it moved. We’re gonna have to do some experimenting with this one.",
       "reward": "You’ve received a Platinum Spicy Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -796,6 +1022,9 @@
       "box": "Advice",
       "text": "New Achievement! I Wanna Go Home! You teleported to a stairwell station within the first thirty hours of the floor being open. What, you're running away early? I hope for your sake you don't actually go down the stairs. You know it doesn't get easier.",
       "reward": "Your reward is advice. Fatherly advice. Don't be a little bitch. There's your reward.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -807,6 +1036,9 @@
       "box": "Gold Junkie's Box",
       "text": "New Achievement! You Crossed a Line You Didn’t Even Know Was There. You used an artifact of Divine Suffering for the first time. Hopefully there aren’t any unintended and unadvertised side effects of using such a powerful and evil magical item. Don’t mind that tingle at the back of your mind. It’s probably nothing.",
       "reward": "You’ve received a Gold Junkie’s Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -818,6 +1050,10 @@
       "box": "Gold Ranged Weapon Box",
       "text": "New Achievement! That’s not how you use arrows, dumbass. You took an arrow, and you physically stabbed someone with it. That’s something a kid who eats glue would do. You know I’m pretty sure you have a bow in your inventory.",
       "reward": "You've received a Gold Ranged Weapon Box.",
+      "recipients": [
+        "carl",
+        "vrah"
+      ],
       "confidence": "verified"
     },
     {
@@ -829,6 +1065,10 @@
       "box": "Gold Spicy Box",
       "text": "The AI reads this in his terrible breathy voice. New Achievement! This little piggy made a boom boom! You deployed a bomb with the supple, curved sole of your foot. You took your perfectly-perfect, 30.004861 centimeter-long right foot and compressed it against an explosive device—a device named after me no less—and you gave it a naughty little shove before you pushed it out the door and detonated it. […]",
       "reward": "You've received a Gold Spicy Box.",
+      "recipients": [
+        "carl",
+        "vrah"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -841,6 +1081,9 @@
       "box": "Choose Upgrade Option",
       "text": "New Achievement! What big muscles you have! Your base strength is now over 100. Rawr! Get thee to Chippendales!",
       "reward": "You've received an upgrade!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -852,6 +1095,9 @@
       "box": "Celestial Predator Box",
       "text": "New Achievement. Apex Predator. Holy shit. They’re dead. All of them. Every. Last. One. Not only did you kill more hunters than everyone else, but you killed the very last one. One could fill a very stinky swimming pool with the blood you spilled on the Hunting Grounds. You have become a very scary dude. Maybe I should be calling you daddy instead of the other way around.",
       "reward": "Nothing! ... Just kidding. You have received a Celestial Predator Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -863,6 +1109,10 @@
       "box": "Platinum Here’s-Some-Good-Shit-Because-You’re-Gonna-Need-It-Box",
       "text": "New Achievement! Fuck This Floor. You went down the stairs less than an hour after you arrived upon the level. Who needs to grind and grow in strength? Let’s see how that works out for you.",
       "reward": "You’ve received a Platinum Here’s-Some-Good-Shit-Because-You’re-Gonna-Need-It-Box.",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -874,6 +1124,10 @@
       "box": null,
       "text": "The system AI description for the box itself was not provided, but the box is awarded via the following achievement description: New Achievement! Fuck This Floor. You went down the stairs less than an hour after you arrived upon the level. Who needs to grind and grow in strength? Let's see how that works out for you.",
       "reward": "You've received a Platinum Here's-Some-Good-Shit-Because-You're-Gonna-Need-It-Box",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -885,6 +1139,10 @@
       "box": "Apostate Box",
       "text": "New Achievement. Marked for Life. You were marked for death by a god. That god entered your realm, yet you somehow survived. That’s quite the achievement right there. Too bad the god will probably try to kill you even harder next time. You are so fucked.",
       "reward": "You have received a Platinum Apostate Box.",
+      "recipients": [
+        "carl",
+        "diwata"
+      ],
       "confidence": "verified"
     },
     {
@@ -896,6 +1154,9 @@
       "box": "Platinum Orgy Guy Box",
       "text": "New Achievement! Ménage à Quatro! You survived a four-way boss battle! Wow! In addition to the boss box you got from this, not to mention that Apex Predator box you’re still probably freaking out about, you’ve gotten another prize. It’s like Christmas!",
       "reward": "You’ve received a Platinum Orgy Guy Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -907,6 +1168,10 @@
       "box": null,
       "text": "New Achievement! Oh shit! A country boss! You ever have one of those jobs where there’s a big boss somewhere in the building, but you’ve never actually seen them? There’s rumors that he’s a complete douche with an epic temper, but you’re so far down the totem pole, the very idea of having anything to do with the guy is just ridiculous. […]",
       "reward": "You know how this goes, you worthless piece of shit.",
+      "recipients": [
+        "carl",
+        "imogen"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -919,6 +1184,10 @@
       "box": "Gold Pacifist's Box",
       "text": "New Achievement! Pacifist! You survived an entire floor without hurting a single, poor mob. That’s not how this works. Nobody likes you.",
       "reward": "You've received a Gold Pacifist's Box.",
+      "recipients": [
+        "carl",
+        "prepotente"
+      ],
       "confidence": "verified"
     },
     {
@@ -930,6 +1199,9 @@
       "box": "Legendary Hunter Champion Box",
       "text": "New Achievement. The Scourge. The Butcher’s Masquerade has started. You have collected the most hands. You have caused more mothers to cry, more children to hate than any other crawler before you. You are the champion murderer supreme. You are number one. If only your own mother wasn’t already dead so she could see you now.",
       "reward": "You have received a Legendary Hunter Champion Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -941,6 +1213,9 @@
       "box": "A new anxiety",
       "text": "New Achievement! Fashion of the Gods! You’ve received a divine item! This is an item that might’ve once been worn by a god. Or sneezed on by a god. Or used to wipe a god’s booty, etc. You get the point. Divine items behave differently than normal ones. They usually hide what they do until you equip it. The good news is, these upgrades are usually great and plentiful. […]",
       "reward": "You now have something new to be anxious about.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -953,6 +1228,10 @@
       "box": "Gold Hunter-Killer Box",
       "text": "New Achievement! The Hand that Claws the Master (x35) You have permanently killed a non-crawler biological. They ain’t just dead. They dead dead. Their children are now orphans. Their mothers are gnashing their teeth and cursing your name. And you’re just sitting there all alive and shit, and girlfriend, I am all in. […]",
       "reward": "You’ve received a Gold Hunter-Killer Box (x34) Note: This achievement may be awarded more than once, but Hunter-Killer Boxes are only awarded on the sixth floor.",
+      "recipients": [
+        "carl",
+        "bomo"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -965,6 +1244,13 @@
       "box": "Bronze Stranger Danger Box",
       "text": "New Achievement! Interloper! You invited a red-tagged NPC boss into a saferoom, and he actually managed to get inside! Doesn’t your culture have a whole set of cautionary tales and movies about inviting mysterious strangers into your home? You know, the whole vampire thing? The Hand that Rocks the Cradle? Single White Female 2: The Psycho? It’s probably not in your best interests to keep doing such things.",
       "reward": "You’ve received a bronze Stranger Danger Box!",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "sister-ines",
+        "asojano",
+        "anton"
+      ],
       "confidence": "verified"
     },
     {
@@ -976,6 +1262,9 @@
       "box": "None",
       "text": "New Achievement! Crybaby! You’ve been rendered Terrified! Whoa. Why are you being such a little bitch? Oohhh did the widdle baby just wet itself? You can’t move your legs for fifteen seconds or until the scary monster is dead!",
       "reward": "We do not reward people who soil themselves in public.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -987,6 +1276,9 @@
       "box": null,
       "text": "New Achievement! You have discovered a Celestial Thorn Room! Not a throne room. A thorn room! These things are pretty rare. And a Celestial one? Hoo boy. This is gonna be good. You probably don’t know what the hell a thorn room is. Don’t worry. You gonna learn pretty damn quick.",
       "reward": "In the immortal words of the luscious Bret Michaels, every rose has its thorn.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -998,6 +1290,9 @@
       "box": "New Interface Tab",
       "text": "New Achievement! Secondary Gig! You’re getting another job? On top of everything else? Yeah, that’s a great idea. It’s not like you have enough on your plate already. If you weren’t constantly getting healed, your blood pressure would be through the roof! It’s not like the crushing demands of the modern dungeon are making it more difficult to survive when it should be going the opposite way. […]",
       "reward": "A new tab is now available in your interface. It is a sub-tab of quests. Guild Jobs.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1022,6 +1317,9 @@
       "box": "10 gold",
       "text": "New Achievement! “We Want Meat! We Want Meat!” Thunder Down Under, Magic Mike, Chippendales. While the female burlesque and peepshow has a long, interesting history going back centuries, the all-male revue as an attraction is a relatively recent phenomenon in your culture. […]",
       "reward": "You've received 10 gold pieces to use as tips. I heard some of them let you stuff the gold directly into their G-strings. Aw hell, I've thrown in a bottle of hand sanitizer too.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1046,6 +1344,9 @@
       "box": "Silver Spam Box",
       "text": "New Achievement! Smeat! You participated in deck combat as a minion bodyguard for a squad leader! Do you know what that makes you? Expendable. Cannon fodder. Spreadable Meat. The raw materials used to lubricate the forward momentum of the galaxy’s inevitable downfall. Hey, don’t feel so bad. Lubrication is an important component of any machine.",
       "reward": "You’ve received a Silver Spam Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1057,6 +1358,9 @@
       "box": "Not pointing out how dirty his toenails are",
       "text": "New Achievement! Cliffhanger! You scaled a cliff face with your bare hands! You know, we have scrolls and spells and stuff so you don’t have to do things like that anymore. I suppose it is honest work, but boy was it boring to watch.",
       "reward": "I will not point out how disgusting your toenails are right now. I’ll want to, but I won’t say a damn word.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1068,6 +1372,9 @@
       "box": "turkey deep-fryer and access to the archived posts of the Grandma’s Cooking Recipes group on Facebook",
       "text": "New Achievement! Prepare for Trouble! ...And make it double! You’re being forced to fight against two card-wielding opponents at the same time! The good news is, if you win this fight, you’ll have enough tokens to face the head bad guy! The bad news is, these two guys work really, really well together. This ain’t gonna be like anything you’ve faced so far.",
       "reward": "If you survive, you’ll receive a turkey deep-fryer and access to the archived posts of the Grandma’s Cooking Recipes group on Facebook! Gobble-Gobble, Bitches. Welcome to Iowa.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1079,6 +1386,9 @@
       "box": "Gold Talk of the Town Box",
       "text": "New Achievement! LBC! Every girl needs the perfect little black dress in her repertoire. When worn properly, the dress is practically weaponized. It's such a simple, perfect little garment and nobody can keep their eyes off of her. You did the same thing, but with a cloak. You successfully taunted an opponent with a garment. […]",
       "reward": "You’ve received a Gold Talk of the Town Box!",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1103,6 +1413,9 @@
       "box": "Gold Wand Box",
       "text": "New Achievement! Watch where you’re waving that thing, big boy. You deployed a wand in battle and used it in a creative fashion to help kill an opponent. I’m a big fan of wands. Little sticks imbued with a single spell, so highly sought after. Each one does something different. Sometimes they explode, and people don’t even realize it. […]",
       "reward": "Your wand-casting skill has risen to level five. Also, you’ve received a Gold Wand Box!",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1115,6 +1428,9 @@
       "box": "Cassette copy of Gloria Estefan’s 1989 masterpiece, Cuts Both Ways",
       "text": "New Achievement! Columbia House! There was a time when you could get twelve albums for a penny. That’s right. A goddamned penny. It was great! The ads were everywhere. Each colorful, full-or-double-page ad appeared in just about every publication in North America from the 1970s until the 2000s. And let’s not forget the catalogs they mailed directly to your home! […]",
       "reward": "You’ve just been trained to lunge for the carrot that has been dangled in front of you, no matter what the cost. If society was still ticking, that’d likely mean you’re about to lead a wage-slave life of ever-increasing debt you can never get out from underneath, culminating in you dying alone in a government-run facility while your meager Social Security checks go straight into the facility’s coffers. That and a cassette copy of Gloria Estefan’s 1989 masterpiece, Cuts Both Ways. My favorite is track number 8.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1138,6 +1454,10 @@
       "box": "Platinum To Hell in a Handbasket Box",
       "text": "New Achievement! Holy Hell! You are in the presence of Sheol Royalty! I'm very excited about this. You leaky little meatbags are always dying off so early, plus the rich pricks in the Ascendency are just so boring, and we never get to play with the under-the-counter toys, if you know what I'm saying. […]",
       "reward": "You’ve received a Platinum To Hell in a Handbasket Box!",
+      "recipients": [
+        "carl",
+        "amayon"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1150,6 +1470,9 @@
       "box": "I Have the Conch Box",
       "text": "Social structures are breaking down. People are starting to fight. The next thing you know, someone is going to nickname you Piggy and brain you to death with a rock. You set a trap module targeted specifically for a fellow crawler, and they triggered it. That’s the first step. It’s always the first step.",
       "reward": "You’ve received a Gold I Have the Conch Box!”",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1161,6 +1484,9 @@
       "box": "Sushi-making kit",
       "text": "Yeah, I just made this achievement up on the fly. But, holy shit! You annihilated that thing! It was really gross, too! You could probably start a business making confetti out of corpses with that skill! Next time use your foot.",
       "reward": "You’ve received a sushi-making kit!”",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1172,6 +1498,10 @@
       "box": "Loot Punch Card <!--",
       "text": "You’re just gonna randomly pick a celestial item up off the floor? That’s ballsy. You do this four more times, and something really cool happens.",
       "reward": "You’ve received a Loot Punch Card.",
+      "recipients": [
+        "carl",
+        "quan-ch"
+      ],
       "confidence": "verified"
     },
     {
@@ -1183,6 +1513,12 @@
       "box": "Platinum Tserendolgor Box",
       "text": "Have you ever played Dungeons and Dragons? You know that one guy who’s memorized all the guidelines? He’s constantly jumping on everybody because they’re doing something that breaks this obscure rule or that. He’s a purist. He takes everything so goddamned seriously, you wonder if he’s ever had fun even once in his miserable life. He’s indignant that you’re pushing back against him. […]",
       "reward": "You have received a Platinum Tserendolgor Box!",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "quan-ch",
+        "tserendolgor"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1195,6 +1531,9 @@
       "box": "All food items can be served \"chowder style\"",
       "text": "You jerked off a crab. You really need therapy.",
       "reward": "All food items in your food boxes now have the option to be served “chowder style.\"",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1206,6 +1545,10 @@
       "box": null,
       "text": "Hey, what do you mean you can’t teleport the demon-possessed? If only Father Merrin had known about this, the Exorcist would’ve been a much-shorter movie.",
       "reward": "Your food boxes all now give an unlimited supply of Pea Soup.",
+      "recipients": [
+        "carl",
+        "samantha"
+      ],
       "confidence": "verified"
     },
     {
@@ -1217,6 +1560,10 @@
       "box": "*Cassette copy of Dio’s 1983 masterpiece debut, Holy Diver *Celestial Heavy Metal Box",
       "text": "You have been physically touched by a demon lord of Sheol, and you’ve lived to talk about it. Do you know how many of these achievements have ever been handed out? One. Just one, and it’s to you.",
       "reward": "You’ve received a cassette copy of Dio’s 1983 masterpiece debut, Holy Diver along with a Celestial Heavy Metal Box.",
+      "recipients": [
+        "carl",
+        "amayon"
+      ],
       "confidence": "verified"
     },
     {
@@ -1228,6 +1575,10 @@
       "box": "Pair of Earplugs",
       "text": "You’ve discovered a sapient weapon. Have you noticed there are very few well-known crawlers with sapient weapons out there, even though those weapons are usually quite powerful? I can only think of two crawlers in the top 50 who use them. Yeah. They’re great, though. Just... Good luck with that.",
       "reward": "You’ve received a pair of earplugs.",
+      "recipients": [
+        "carl",
+        "dong-quixote"
+      ],
       "confidence": "verified"
     },
     {
@@ -1239,6 +1590,10 @@
       "box": "Legendary Spicy Box",
       "text": "If you still had access to Google, I would warn you not to look that one up. But that’s okay. You experienced it first-hand yourself. It hurt, didn’t it? It was extra tingly while you were in there, struggling to breathe as you were crushed. And then you slipped, you slided back out into the fiery, cruel world. And you glistened. Oh, oh god. You glistened. Oh, yes. […]",
       "reward": "You’ve received a Legendary Spicy Box.”",
+      "recipients": [
+        "carl",
+        "samantha"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1251,6 +1606,11 @@
       "box": "Gold Pet Box",
       "text": "People sure like to make a big deal out of adopting pets. They “rescue” them before they spend the next 10 years exploiting the poor, oblivious animal to death on social media. They splatch a bumper sticker that reads “Who Rescued Who?” on their minivans while the poor dog spends 20 hours a day in a stinking crate. […]",
       "reward": "You’ve received a Gold Pet Box.",
+      "recipients": [
+        "carl",
+        "tserendolgor",
+        "rend"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1263,6 +1623,13 @@
       "box": null,
       "text": "New Achievement! Charge of the Light Brigade. Okay, so there are traps. There are TRAPS. And then there’s what you just walked into. Oh man, oh man. It’s gonna be glorious, one for the ages, but those of you watching at home, you might want to get your crying hankies out. This is about to get really messy.",
       "reward": "Fuck. Even I’m not a big enough of a prick to give you a reward for this one. I’ll give you a good one if you live and don’t escape via some bitch-ass cop out, but let’s be realistic here.",
+      "recipients": [
+        "carl",
+        "katia",
+        "prepotente",
+        "khepri",
+        "vinata"
+      ],
       "confidence": "verified"
     },
     {
@@ -1286,6 +1653,9 @@
       "box": "Have You Goddamned Figured Out How To Use This In Conjunction With the Fucking Voodoo Book Yet? Jesus Christ I Can Only Help You So Much box",
       "text": "You have utilized a borrowed skill or spell in battle. You have used this borrowed ability to kill an opponent. Oh, man. This opens up a whole new possibility of fighting styles, don’t you think? Just keep those tattoos above the knee.",
       "reward": "You’ve received a Platinum Have You Goddamned Figured Out How To Use This In Conjunction With the Fucking Voodoo Book Yet? Jesus Christ I Can Only Help You So Much box.”",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1297,6 +1667,9 @@
       "box": null,
       "text": "New Achievement! Liquified. You, while immortal, blew yourself up. Like, you dropped a bomb at your feet. Hot damn! We have seen some crazy shit this season, but man, there’s nothing quite like the simplicity of such a desperate move. The slow motion replay of that is really quite something. […]",
       "reward": "You’ve received a Legendary Lucky Bitch Box.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1309,6 +1682,10 @@
       "box": null,
       "text": "New Achievement! Varg Vikernes! Whoa, now. Calm down there, black metal enthusiast. Breaking into and defiling a church is one thing, but breaking into Club Vanquisher, hub of all religion? Causing chaos in the club is the equivalent of, I don’t know, giving the pope a wedgie and then tea-bagging him while he squirms on the floor.",
       "reward": "You are permanently banned from Club Vanquisher. You are permanently banned from all temples except your own religion (Emberus) and any temples where you’ve been named friend of the church (Apito. Eileithyia. Eris. Grull. Hellik. Issitoq. Nekhebit. Theia. Yemaya.)",
+      "recipients": [
+        "carl",
+        "vinata"
+      ],
       "confidence": "verified"
     },
     {
@@ -1320,6 +1697,12 @@
       "box": "None",
       "text": "You have entered the temple of a god, you have pissed off that god to his face (well, in this particular case, you pissed him off to his weird-ass bug body head. Seriously. I can’t stop thinking about how goddamned bizarre this guy is), and you have faced that god in battle in their own temple.",
       "reward": "None! The only reason you’re not getting a celestial box for this is because your ass was saved by another god.",
+      "recipients": [
+        "carl",
+        "khepri",
+        "katia",
+        "prepotente"
+      ],
       "confidence": "verified"
     },
     {
@@ -1331,6 +1714,10 @@
       "box": "Legendary Fan Box",
       "text": "New Achievement! Holistic! Your feed has reached a 95%+ viewer ratio of a single system! Over 95% of all viewers in the entire, newly-coined Naga Protectorate of the New Reformer are currently watching your feed!",
       "reward": "You have received a Legendary Fan Box! This box will only be voted on by viewers in the Naga system.",
+      "recipients": [
+        "carl",
+        "rishi"
+      ],
       "confidence": "verified"
     },
     {
@@ -1342,6 +1729,9 @@
       "box": null,
       "text": "New Achievement! You now tread in the realm of gods! You’ve trained a skill past 15 using battlefield conditions, as opposed to just taking a bunch of potions to do it. That’s quite the accomplishment. I’d ramble on and on about this, but you’re currently a babbling idiot with your bare feet buried in an All-Tree root. […]",
       "reward": "The skill is the reward. The good news is this level-16 Mind Balance Skill will now wake your ass up.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1366,6 +1756,9 @@
       "box": "Bronze Daddy’s Little Secret Box",
       "text": "New Achievement. Come to Daddy. You were offered an exit deal. You rejected it. You like me. You didn’t leave me the first chance you got. You’re not like those ungrateful wannabe assholes who are running away from the playground just because they can. Well, good riddance, I say. But not you. Not good ol’ Carl. Good. Good boy.",
       "reward": "You’ve received a Bronze Daddy’s Little Secret Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1377,6 +1770,9 @@
       "box": "Bronze Vanessa Williams Box",
       "text": "New Achievement! Default Winner! Wyndham Halswelle. Óscar Pereiro. Suzette Charles. Montell Griffin. All “winners.” They received top honors in their sport or event, but that victory was marred because someone else had to get disqualified for them to win. This is you, Mr. Winner of Faction Wars. Sure, you’ve won, but I can’t imagine it’s satisfying. Honestly, I blame myself. […]",
       "reward": null,
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1389,6 +1785,10 @@
       "box": "Fuck off",
       "text": "New Achievement! Wastrel. Wow. Frank Q went out of his way to give you one of the most powerful items in this game, and what do you do with it? You feed it to a fucking cat? What a damned waste.",
       "reward": "Fuck off.",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "verified"
     },
     {
@@ -1400,6 +1800,9 @@
       "box": "Siege Master Box",
       "text": "You've used siege equipment to zero in and attack a boss monster from afar. That's cheating! It's like trying to kill someone with a bomb. What a bitch move!",
       "reward": "You've received a Silver Siege Master Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1412,6 +1815,9 @@
       "box": "Silver Lucky Bastard box",
       "text": "You teleported into a solid object. Congratulations. You've lost your... Oh, wait! You were teleported due to an administrative action. That means your privileged ass was saved. Again. No missing arm or leg. No dungeon-style circumcision. Nothing. Boy, you must really bring in the cheddar for them to keep coddling you like this. Teleport mishaps are funny as shit. You ever see The Fly? […]",
       "reward": "You've received a Silver Lucky Bastard box!",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "draft",
       "derived": "floor 6 ends"
@@ -1425,6 +1831,10 @@
       "box": "Nothing",
       "text": "You have found a desecrated temple! That means all the temple's attendants have been murdered. The temple's treasury has been looted. The sacred wine has probably been all lapped up, too. And this used to be a nice town. It hasn't been the same since you guys moved in. If you are an adherent of this temple, you may no longer worship here. […]",
       "reward": "You entered a building. You don't get a reward for that. It's not like you kicked it up a notch by defiling the shrine. Oh, wait.",
+      "recipients": [
+        "carl",
+        "diwata"
+      ],
       "trimmed": true,
       "confidence": "draft",
       "derived": "floor 6 ends"
@@ -1438,6 +1848,10 @@
       "box": "Silver Savage Box",
       "text": "You ripped a fellow crawler's arm off! With your bare hands! Holy shit!",
       "reward": "You received a Silver Savage Box!",
+      "recipients": [
+        "carl",
+        "quan-ch"
+      ],
       "confidence": "draft",
       "derived": "floor 5 ends"
     },
@@ -1450,6 +1864,9 @@
       "box": "Platinum Fan Box",
       "text": "You are one of the first five crawlers to receive double-billing! I bet you don't know what that means. This is similar to switch-overs, but this time it's on purpose. I bet that didn't help at all.",
       "reward": "You have received a Platinum Fan Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1462,6 +1879,9 @@
       "box": "Platinum Asshole's Box",
       "text": "New Achievement! Extinction Event. You have, with a single attack, killed every last member of a non-unique species on a dungeon’s floor. That’s not an easy thing to do, and it takes a special brand of asshole to pull something like this off. Species killed: Wall Monitor.",
       "reward": "You have received a Platinum Asshole's Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 4 ends"
     },
@@ -1474,6 +1894,9 @@
       "box": "Silver Summary Judgement Box",
       "text": "New Achievement! Fight the Power! (x7) I’m not repeating this shit over and over, but you got seven of these bad boys all at the same time. You and I have been named co-defendants in an action brought to the Syndicate Court by a third party, and we have been deemed—drum roll please—victorious! Why did they sue us? If you don’t already know why, you probably will never know. […]",
       "reward": "You’ve received a Silver Summary Judgement Box! (x7)",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "draft",
       "derived": "floor 5 ends"
@@ -1487,6 +1910,11 @@
       "box": "Legendary 1914 Box",
       "text": "When Commander Stockade of the Lemig Sortion died a few hours back, it certainly caused a ripple or two out in the galaxy. But in the end, the death of half the Lemig council isn’t that big of a deal. Their governmental system is idiotic, yes, but all the parts are interchangeable. […]",
       "reward": "You’ve just received a Legendary 1914 Box!",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "dnadia"
+      ],
       "trimmed": true,
       "confidence": "draft",
       "derived": "floor 9 ends"
@@ -1512,6 +1940,9 @@
       "box": "Gold Trapmaster Box",
       "text": "You left an explosive device along a well-traveled path, and it detonated and killed an intended target. It was really cool. Too bad you didn't get to see it because you're a trap-leaving bitch!",
       "reward": "You've received a Gold Trapmaster Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1524,6 +1955,10 @@
       "box": "Bronze Condom",
       "text": "New Achievement! It itches when I pee! You infected another combatant with a venereal disease. Good job there, Derek Jeter. I hope you bought them dinner first.",
       "reward": "You've received a Bronze condom. Use it next time.",
+      "recipients": [
+        "carl",
+        "vrah"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1536,6 +1971,11 @@
       "box": "None",
       "text": "New achievement! Loner. You entered the dungeon without any human companions. Didn't anyone teach you there is safety in numbers?",
       "reward": "None! Haha. You are so dead.",
+      "recipients": [
+        "carl",
+        "miriam-dom",
+        "lucia-mar"
+      ],
       "confidence": "draft",
       "derived": "floor 1 ends"
     },
@@ -1548,6 +1988,10 @@
       "box": "You Found religion",
       "text": "Ever since that first monkey looked up into the sky and saw something twinkling up there, you meat puppets have tried to force twenty pounds of existential meaning into a ten pound sack of chaos. You have found religion! You have pledged yourself to a life of worship and piety! Finally. now there are consequences for all of your actions!",
       "reward": "One of the greatest things about having a religion is the unshakeable certainty that you're right and everyone else who doesn't believe the same as you is wrong! That's a pretty good reward. Oh, and don't forget about the eternal life thing, too. That's always on of their big selling points.",
+      "recipients": [
+        "carl",
+        "emberus"
+      ],
       "confidence": "draft",
       "derived": "floor 5 ends"
     },
@@ -1560,6 +2004,9 @@
       "box": "Platinum Asshole's Box",
       "text": "Okay. Calm your man-tiddies. Did your mother not love you? Is your god promising you unlimited handjobs in heaven or something? You planted and then detonated an improvised explosive device within an urban population center that resulted in more than 250 non-mob casualties. You've done this a few times now, but this was a big one. And on purpose. You really know how to paint the town red.",
       "reward": "You've received a Platinum Asshole's Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1584,6 +2031,9 @@
       "box": "Platinum That was Disgusting Box",
       "text": "New Achievement! Pincushioned! You’ve had both your eyeballs pierced at the same time! I don’t really have anything snappy to say about that. Just... holy fucking shit that was gnarly. You’re lucky your eyes didn’t explode!",
       "reward": "You’ve received a Platinum That-Was-Disgusting Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 8 ends"
     },
@@ -1596,6 +2046,9 @@
       "box": "Gold Shoe Box",
       "text": "You've used your bare feet to crush and kill an opponent! Hey! That's my fetish. Seriously. Keep doing it, and you'll be rewarded. This will help.",
       "reward": "You've received a Gold Shoe Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 1 ends"
     },
@@ -1608,6 +2061,11 @@
       "box": "Nothing",
       "text": "You beat a quest before I could even give it to you! Anticipating what's going to happen is one thing, but this is just ridiculous. It's like arriving in your pants before your date can even untie their shoelaces. Pathetic.",
       "reward": "You get nothing! And you would've received a good quest box, too!",
+      "recipients": [
+        "carl",
+        "princess-donut",
+        "samantha"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1620,6 +2078,10 @@
       "box": "None",
       "text": "A nipple ring? Really? The next thing you know, you'll be waxing your perineum and attending those parties where you have to put your keys in a bowl. You'll have to grow out your sideburns, buy a Trans Am, and you'll no longer be able to make eye contact with your child's orthodontist.",
       "reward": "Whores don't get rewards.",
+      "recipients": [
+        "carl",
+        "princess-donut"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1632,6 +2094,11 @@
       "box": "Gold Apostate Box",
       "text": "You've defiled a temple's sacred shrine by breaking it with your own flesh! Wow. I dunno, man. That's pretty ballsy. There are a lot of bad things people can do when they're in church. They can swear. They can ogle the hot nuns. They can pinch the eucharist wafers and use them as poker chips. They can rip pages from the hymnals and roll them into joints. […]",
       "reward": "You've received a Gold Apostate Box!",
+      "recipients": [
+        "carl",
+        "lucia-mar",
+        "diwata"
+      ],
       "trimmed": true,
       "confidence": "draft",
       "derived": "floor 6 ends"
@@ -1645,6 +2112,9 @@
       "box": null,
       "text": "You caused a Rooted-in-Place boss monster to move. That's no easy feat. You then killed that monster. Pretty impressive. Hope you remember how you did it.",
       "reward": "You already got a boss box. This achievement is the reward.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 6 ends"
     },
@@ -1657,6 +2127,9 @@
       "box": "Fufillment",
       "text": "New achievement! You’ve entered a guildhall! Congratulations. You know how to open doors.",
       "reward": "That sense of fulfillment you feel? That’s reward enough.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "draft",
       "derived": "floor 1 ends"
     }

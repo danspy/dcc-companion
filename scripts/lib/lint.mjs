@@ -289,6 +289,17 @@ export function lint({ books, floors, entities, achievements = [] }) {
        The name is checked alongside the body. An award's name is a spoiler by
        itself — "Apex Predator" says how a floor ends before you get there. */
     let floorAt = aAt;
+
+    /* Whoever earned it is named on the row, so the award cannot surface before
+       the reader has met them — the same inheritance a beat gets from its own
+       entity. Matched by id rather than by regex, so it is exact. */
+    for (const id of a.recipients ?? []) {
+      const who = byId.get(id);
+      if (!who) { errors.push(`${where}: recipient "${id}" is not an entity`); continue; }
+      const whoAt = at(who.revealedAt, `${where} recipient ${id}`);
+      if (whoAt !== null && whoAt > floorAt) floorAt = whoAt;
+    }
+
     for (const n of gatedNames) {
       if (n.at <= aAt) continue;
       if (!n.re.test(`${a.name} ${a.text ?? ''} ${a.reward ?? ''} ${a.box ?? ''}`)) continue;
