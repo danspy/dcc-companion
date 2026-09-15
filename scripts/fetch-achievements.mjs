@@ -29,12 +29,6 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://dungeon-crawler-carl.fandom.com/api.php';
 const UA = 'dcc-companion/0.1 (personal reading companion; contact via repo)';
 
-/* A quotation, not a reproduction. Anything past this is trimmed at a sentence
-   boundary and flagged — several awards wander off into a four-hundred-word
-   digression about 1970s record clubs, which is very funny and is not ours to
-   republish. */
-const QUOTE_WORDS = 70;
-
 const ORDINALS = {
   first: 1, second: 2, third: 3, fourth: 4, fifth: 5, sixth: 6,
   seventh: 7, eighth: 8, ninth: 9, tenth: 10, eleventh: 11,
@@ -135,17 +129,6 @@ function floorAt(value, floors) {
   return found;
 }
 
-/* The award proper, trimmed at a sentence boundary. The System's text opens
-   with the award and only then wanders, so the opening is the part that both
-   quotes honestly and shows the register. */
-function excerpt(full) {
-  const words = full.split(/\s+/);
-  if (words.length <= QUOTE_WORDS) return { text: full, trimmed: false };
-  const cut = words.slice(0, QUOTE_WORDS).join(' ');
-  const end = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('! '), cut.lastIndexOf('? '));
-  return { text: (end > 40 ? cut.slice(0, end + 1) : cut) + ' […]', trimmed: true };
-}
-
 /* "Reward: You've received a Gold Apparel Box!" is the System still talking, so
    it is split off rather than dropped — the reward line is where a good half of
    the jokes land. */
@@ -237,7 +220,13 @@ for (const [title, text] of Object.entries(pages)) {
   const at = cites(ai ?? '')[0] ?? cites(text)[0] ?? null;
   const whole = ai ? clean(ai.replace(/===[\s\S]*$/, '')) : '';
   const { body, reward } = splitReward(whole);
-  const { text: quote, trimmed } = excerpt(body);
+  /* The award in full. This was a 70-word excerpt once, on the reasoning that a
+     quotation is not a reproduction — but half the comedy of these is the
+     System wandering off for four hundred words about 1970s record clubs and
+     arriving back at the achievement almost by accident, and an excerpt cuts
+     exactly that. Every award carries a link to the page it came from instead,
+     which is the attribution that makes quoting it whole defensible. */
+  const quote = body;
 
   if (!ai) problems.push(`${name}: no AI Description`);
   if (!at) problems.push(`${name}: no chapter citation`);
@@ -257,7 +246,6 @@ for (const [title, text] of Object.entries(pages)) {
     boxReward: field(box, 'reward'),
     quote,
     reward,
-    trimmed,
     words: body ? body.split(/\s+/).length : 0,
     source: `https://dungeon-crawler-carl.fandom.com/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`,
   });
@@ -320,10 +308,9 @@ const curated = rows
   .map(r => ({
     id: r.id, name: r.name, at: r.at, floor: r.floor ?? null,
     for: r.for || null, box: r.boxReward || null,
-    text: r.quote, reward: r.reward || null,
+    text: r.quote, reward: r.reward || null, source: r.source,
     recipients: r.recipients.length ? r.recipients : undefined,
     everyone: r.everyone || undefined,
-    trimmed: r.trimmed || undefined,
     confidence: r.confidence,
     derived: r.derived || undefined,
   }));
@@ -335,7 +322,8 @@ console.log(`Pulled ${rows.length} achievement pages; ${usable.length} have both
 const byBook = {};
 for (const r of usable) byBook[r.book] = (byBook[r.book] ?? 0) + 1;
 console.log('by book: ' + Object.entries(byBook).sort().map(([b, n]) => `bk${b} ${n}`).join('  '));
-console.log(`trimmed to a quotation: ${usable.filter(r => r.trimmed).length}`);
+const words = usable.map(r => r.quote.split(/\s+/).length).sort((a, b) => a - b);
+console.log(`quoted in full — words: median ${words[words.length >> 1]}, longest ${words.at(-1)}`);
 console.log(`with a named recipient: ${usable.filter(r => r.recipients.length).length}` +
   `, awarded to every crawler: ${usable.filter(r => r.everyone).length}` +
   `, still unattributed: ${usable.filter(r => !r.recipients.length && !r.everyone).length}`);

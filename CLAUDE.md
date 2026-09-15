@@ -1054,13 +1054,17 @@ with a citation about goblins.
 #### The books' own awards are data, and they gate like everything else
 
 `data/achievements.json` is committed — 146 awards with a reveal tag, a floor,
-what earns them, the payout and the System's own words. The corpus behind it
-lands in `data/index/achievements.json`, gitignored beside the chapter
-summaries: the long ones run to 667 words and wander off into a four-hundred-word
-digression about 1970s record clubs, which is very funny and is not ours to
-republish. What is committed is an **excerpt** — trimmed at a sentence boundary
-past 70 words and flagged `trimmed` — in the item-description tradition: the
-award itself, never the wiki's narration around it.
+what earns them, the payout, who earned it and the System's own words **in
+full**. 9,227 words, median 46 per award, longest 666.
+
+It was a 70-word excerpt first, on the item-description rule that a quotation
+should be short. That was wrong for these: **half the comedy is the System
+wandering off** for four hundred words about 1970s record clubs and arriving
+back at the achievement almost by accident, and an excerpt cuts exactly the
+part worth reading. Every award carries a **link to the page it came from**
+instead — attribution is what makes quoting whole defensible where trimming
+was doing the work before. The gitignored corpus in `data/index/` still holds
+everything the pull saw, including the five pages with no usable text.
 
 Three gate decisions:
 
@@ -1222,6 +1226,22 @@ more; that is what "When" is.
 
 A band whose rows are all filtered out is hidden, on the server and again in
 `refresh`, or a heading stands over an empty stretch.
+
+#### A floor is a section you can shut
+
+Ten floors of awards in one column is a scroll, so each floor is a `<details>`
+— open by default, collapsible, with the floor's number on its book's colour
+and a count. `<details>` for the third time in this page, and for the third
+time because the browser already knows how to do it: click, keyboard, screen
+readers and Find in Page all come free.
+
+Two things the filter has to do that are easy to miss:
+
+- **A section with nothing left under it is hidden**, on the server's first
+  paint and again in the script, or a heading stands over an empty stretch.
+- **A search opens a section the reader had collapsed.** Otherwise the hit is
+  invisible and the tally says two when the page shows none. Collapsing is only
+  respected while nothing is being filtered.
 
 #### The award filter is `/who`'s, and safe for the same reason
 

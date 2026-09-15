@@ -17548,7 +17548,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Crazy_Cat_Lady_Achievement",
       "confidence": "verified"
     },
     {
@@ -17566,7 +17566,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Early_Adopter_Achievement",
       "confidence": "verified"
     },
     {
@@ -17583,7 +17583,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Empty_Pockets_Achievement",
       "confidence": "verified"
     },
     {
@@ -17600,7 +17600,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Fall_Into_an_Obvious_Trap_Achievement",
       "confidence": "verified"
     },
     {
@@ -17615,7 +17615,7 @@
       "reward": "You've received a Legendary Pet Box!",
       "recipients": [],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Trailblazing_Crazy_Cat_Lady_Achievement",
       "confidence": "verified"
     },
     {
@@ -17632,7 +17632,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Unarmed_Combat_Achievement",
       "confidence": "verified"
     },
     {
@@ -17649,7 +17649,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Why_Aren't_You_Wearing_Pants%3F_Achievement",
       "confidence": "verified"
     },
     {
@@ -17667,7 +17667,7 @@
         "mordecai"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Boom!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17684,7 +17684,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You've_Inflicted_Damage_on_a_Mob_Achievement",
       "confidence": "verified"
     },
     {
@@ -17701,7 +17701,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You've_Killed_a_Mob!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17718,7 +17718,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You've_Killed_a_Mob_a_Higher_Level_than_Yourself!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17735,7 +17735,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You've_Killed_an_Armed_Mob_with_Your_Bare_Fucking_Hands!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17752,7 +17752,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Loot_Achievement",
       "confidence": "verified"
     },
     {
@@ -17769,7 +17769,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Oooh%2C_Magic_Achievement",
       "confidence": "verified"
     },
     {
@@ -17786,7 +17786,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Boss_Babe_Achievement",
       "confidence": "verified"
     },
     {
@@ -17797,14 +17797,14 @@
       "floor": 1,
       "forWhat": "Killing babies",
       "box": "Bronze Asshole's Box",
-      "text": "New achievement! You Monster! You have killed an infant! An infant! Okay, okay. Unless you’re a complete psychopath, we know you probably didn’t wake up this morning and tell yourself, “Today is the day I’m going to slaughter a child.” Well let us put your mind at ease. All children mobs who die within this dungeon don’t actually perish. […]",
+      "text": "New achievement! You Monster! You have killed an infant! An infant! Okay, okay. Unless you’re a complete psychopath, we know you probably didn’t wake up this morning and tell yourself, “Today is the day I’m going to slaughter a child.” Well let us put your mind at ease. All children mobs who die within this dungeon don’t actually perish. They’re transferred to a holding area where they’re safe and treated nicely and gently until they can be reunited with their loving parents at the end of the season. Feel better? Good.",
       "reward": "These past twenty seconds, when your conscience started to ease? That was your reward. It was also a lie. That baby is dead, and it’s dead because of you. You’re totally going to hell. You’ve also received a Bronze Asshole's Box.",
       "recipients": [
         "carl",
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_Monster!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17822,7 +17822,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/War_Criminal_Achievement",
       "confidence": "verified"
     },
     {
@@ -17841,7 +17841,7 @@
         "frank-and-maggie"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Bitchmeat!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17858,7 +17858,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Two_Chicks_at_the_Same_Time_Achievement",
       "confidence": "verified"
     },
     {
@@ -17875,7 +17875,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Podophilia!_Achievement",
       "confidence": "draft"
     },
     {
@@ -17892,7 +17892,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You've_Entered_a_Guildhall!_Achievement",
       "confidence": "draft"
     },
     {
@@ -17909,7 +17909,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Battlefield_Construction_Achievement",
       "confidence": "verified"
     },
     {
@@ -17929,7 +17929,7 @@
         "agatha"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Borough_Boss!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17947,7 +17947,7 @@
         "agatha"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Bully_and_a_Thief_Achievement",
       "confidence": "verified"
     },
     {
@@ -17964,7 +17964,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/This_Little_Piggy_Went_to_Market!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17981,7 +17981,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_Found_Stairs!_Achievement",
       "confidence": "verified"
     },
     {
@@ -17999,7 +17999,7 @@
         "elle-mcgibbons"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Level-Up%2C_Baby!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18018,7 +18018,7 @@
         "krakaren"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Wait%2C_Bosses_Can_Leave_Their_Rooms%3F_Achievement",
       "confidence": "verified"
     },
     {
@@ -18035,7 +18035,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Dungeonpreneur_Achievement",
       "confidence": "verified"
     },
     {
@@ -18053,7 +18053,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Like_a_Moth_to_the_Flame_Achievement",
       "confidence": "verified"
     },
     {
@@ -18071,7 +18071,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/What_Goes_Up_Achievement",
       "confidence": "verified"
     },
     {
@@ -18088,7 +18088,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Grease_Monkey_Achievement",
       "confidence": "verified"
     },
     {
@@ -18099,14 +18099,14 @@
       "floor": 2,
       "forWhat": null,
       "box": null,
-      "text": "New achievement! You call that a trap? A mob has been injured because of something you purposely left lying around the dungeon. From scattered Legos to spiked pits to buckets of flesh-devouring Skinner Ants to dimensional rifts that instantly boil all the blood in one’s body, the art of trapmaking has a celebrated and storied history in the annals of Dungeon Crawler World. […]",
+      "text": "New achievement! You call that a trap? A mob has been injured because of something you purposely left lying around the dungeon. From scattered Legos to spiked pits to buckets of flesh-devouring Skinner Ants to dimensional rifts that instantly boil all the blood in one’s body, the art of trapmaking has a celebrated and storied history in the annals of Dungeon Crawler World. So if you’re going to do it, you better do it right. Whatever it was that gave you this achievement, it was probably something stupid. This will help you make the next trap more… exciting. Remember: If you don’t make it titillating, we will.",
       "reward": "You’ve received a Gold Sapper's Box!",
       "recipients": [
         "carl",
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_Call_That_a_Trap%3F_Achievement",
       "confidence": "verified"
     },
     {
@@ -18121,7 +18121,7 @@
       "reward": "I SAID THE GHOST OF STEVE IRWIN SMILES DOWN UPON YOU.",
       "recipients": [],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/PETA_Enthusiast_Achievement",
       "confidence": "verified"
     },
     {
@@ -18136,7 +18136,7 @@
       "reward": "You have a key. It opens only one cage. Figure it out, Einstein.",
       "recipients": [],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Menagerie_Achievement",
       "confidence": "draft"
     },
     {
@@ -18153,7 +18153,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/It's_Elementary%2C_My_Dear_Crawler_Achievement",
       "confidence": "verified"
     },
     {
@@ -18164,7 +18164,7 @@
       "floor": 3,
       "forWhat": "Meeting an Elite for the first time",
       "box": "Elites show up on minimap",
-      "text": "New Achievement! Meet an Elite. Sometimes they’re NPCs, sometimes they’re mobs, but usually they’re just assholes. Elites are powerful, one-of-a-kind entities. These are the non-boss, non-divine hero class of Dungeon Crawler World. If you come across one of these egomaniacs, they will either want to fuck you or kill you. Either way, they will always want to use you. […]",
+      "text": "New Achievement! Meet an Elite. Sometimes they’re NPCs, sometimes they’re mobs, but usually they’re just assholes. Elites are powerful, one-of-a-kind entities. These are the non-boss, non-divine hero class of Dungeon Crawler World. If you come across one of these egomaniacs, they will either want to fuck you or kill you. Either way, they will always want to use you. They tend to think this whole production is all about them. Be careful. Where there’s one elite, there’s usually more.",
       "reward": "Elites will now show on your map as white or red dots with a black cross.",
       "recipients": [
         "carl",
@@ -18172,7 +18172,7 @@
         "signet"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Meet_an_Elite_Achievement",
       "confidence": "verified"
     },
     {
@@ -18191,7 +18191,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Lazarus_Achievement",
       "confidence": "verified"
     },
     {
@@ -18202,13 +18202,13 @@
       "floor": 3,
       "forWhat": "Discovering a City Boss",
       "box": "People are probably going to watch you die",
-      "text": "New Achievement! You Can’t Fight City Hall! But you can sure die trying. You have discovered a city boss! That's right. Let me say that again for the assholes in the back. A. CITY. FUCKING. BOSS. Welp. If you gonna go, you might as well do it with style. Just an FYI. […]",
+      "text": "New Achievement! You Can’t Fight City Hall! But you can sure die trying. You have discovered a city boss! That's right. Let me say that again for the assholes in the back. A. CITY. FUCKING. BOSS. Welp. If you gonna go, you might as well do it with style. Just an FYI. As of this moment in the current season of Dungeon Crawler World, not a single Crawler has faced a city boss and survived. And for good reason. Only a complete moron would voluntarily put themselves in a situation where they had to fight one of the most powerful monsters on the level.",
       "reward": "A lot of people are probably going to watch you die. That's a better prize than most of us get.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_Can't_Fight_City_Hall!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18226,7 +18226,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Hadji_Achievement",
       "confidence": "verified"
     },
     {
@@ -18243,7 +18243,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Johnny_Quest_Achievement",
       "confidence": "verified"
     },
     {
@@ -18260,7 +18260,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Yellow-Bellied_Chickenshit!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18278,7 +18278,7 @@
         "miss-quill"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Assassin!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18293,7 +18293,7 @@
       "reward": "You've received a Train Conductor's Souvenir Hat! Wear it with pride.",
       "recipients": [],
       "everyone": true,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/I'm_on_a_train_Achievement",
       "confidence": "verified"
     },
     {
@@ -18310,7 +18310,7 @@
         "quan-ch"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Cuck_Aquaman_Achievement",
       "confidence": "verified"
     },
     {
@@ -18328,7 +18328,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Welcome_to_the_Neighborhood!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18345,7 +18345,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Well-Rested!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18363,7 +18363,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/One_Quadrillion!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18380,7 +18380,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/They_like_me!_They_really_like_me!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18397,7 +18397,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Locomotive_Breath_Achievement",
       "confidence": "verified"
     },
     {
@@ -18415,7 +18415,7 @@
         "fire-brandy"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Kept_A_Rollin'_Achievement",
       "confidence": "verified"
     },
     {
@@ -18432,7 +18432,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Three_Cheers_for_Slaughter_Achievement",
       "confidence": "verified"
     },
     {
@@ -18449,7 +18449,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Mentally_Unstable_Clothing_Hoarder_Achievement",
       "confidence": "verified"
     },
     {
@@ -18468,7 +18468,7 @@
         "lucia-mar"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Loner_Achievement",
       "confidence": "draft"
     },
     {
@@ -18485,7 +18485,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Extinction_Event_Achievement",
       "confidence": "draft"
     },
     {
@@ -18496,7 +18496,7 @@
       "floor": 3,
       "forWhat": "Killing an NPC required for another Crawler's quest",
       "box": "Silver Quest Box",
-      "text": "New achievement! CockBlock! You have assassinated an NPC whose existence was required to complete another crawler's quest. (NPC Killed: Miss Quill - Skyfowl. Level 30.) Who was that other crawler? What was the quest? Who fucking cares? You get the reward they were promised! Warning: You may only receive this award once. The next time you do it, we tell them who you are. […]",
+      "text": "New achievement! CockBlock! You have assassinated an NPC whose existence was required to complete another crawler's quest. (NPC Killed: Miss Quill - Skyfowl. Level 30.) Who was that other crawler? What was the quest? Who fucking cares? You get the reward they were promised! Warning: You may only receive this award once. The next time you do it, we tell them who you are. And then they get a new quest to kill you. Nobody likes cockblocks.",
       "reward": "You've received a Silver Quest Box!",
       "recipients": [
         "carl",
@@ -18504,7 +18504,7 @@
         "miss-quill"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/CockBlock_Achievement",
       "confidence": "verified"
     },
     {
@@ -18521,7 +18521,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Quarry_Sees_Another_Spring_Achievement",
       "confidence": "verified"
     },
     {
@@ -18539,7 +18539,7 @@
         "miss-quill"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Ultimate_Extreme_Power_Achievement",
       "confidence": "verified"
     },
     {
@@ -18557,7 +18557,7 @@
         "grull"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Divine_Epiphany_Achievement",
       "confidence": "verified"
     },
     {
@@ -18574,7 +18574,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Hail_Mary_Achievement",
       "confidence": "verified"
     },
     {
@@ -18592,7 +18592,7 @@
         "grull"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Indomitable_Achievement",
       "confidence": "verified"
     },
     {
@@ -18610,7 +18610,7 @@
         "grull"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Let_There_Be_Chaos_Achievement",
       "confidence": "verified"
     },
     {
@@ -18621,14 +18621,14 @@
       "floor": 4,
       "forWhat": "Being stepped on Grull",
       "box": "Platinum Spicy Box",
-      "text": "New Achievement! Smushed for Daddy. You have been stepped upon by a deity. You have survived the encounter. And while this wasn’t the pink-fleshed suppleness of a human-shaped foot that crushed your fragile, wet body, it’s nice sometimes to switch things around. You know, just to test the boundaries of your own limits. When one experiments, oftentimes one finds new and exciting ways to get that rush. […]",
+      "text": "New Achievement! Smushed for Daddy. You have been stepped upon by a deity. You have survived the encounter. And while this wasn’t the pink-fleshed suppleness of a human-shaped foot that crushed your fragile, wet body, it’s nice sometimes to switch things around. You know, just to test the boundaries of your own limits. When one experiments, oftentimes one finds new and exciting ways to get that rush. While fun, it wasn’t quite the same. You probably don’t realize how lucky that is for you.",
       "reward": "You have received a Platinum Spicy Box.",
       "recipients": [
         "carl",
         "grull"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Smushed_for_Daddy_Achievement",
       "confidence": "verified"
     },
     {
@@ -18645,7 +18645,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Martha_Stewart_Achievement",
       "confidence": "verified"
     },
     {
@@ -18662,7 +18662,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Total%2C_Utter_Failure_Achievement",
       "confidence": "verified"
     },
     {
@@ -18679,7 +18679,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Cannonball!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18696,7 +18696,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You're_the_Reason_Why_Daddy_Drinks!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18714,7 +18714,7 @@
         "bonnie"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Wild_Goose_Chase!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18731,7 +18731,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/I_was_in_the_Pool!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18748,7 +18748,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Milquetoast_Achievement",
       "confidence": "verified"
     },
     {
@@ -18765,7 +18765,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Who_Let_the_Gods_Out%3F_Achievement",
       "confidence": "verified"
     },
     {
@@ -18780,7 +18780,7 @@
       "reward": "You already got a boss box. Go open that instead.",
       "recipients": [],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Flex_in_the_City_Achievement",
       "confidence": "verified"
     },
     {
@@ -18798,7 +18798,7 @@
         "katia"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Janet_Jackson%E2%80%99s_Nipple_Achievement",
       "confidence": "verified"
     },
     {
@@ -18815,7 +18815,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Rock_Bottom_Achievement",
       "confidence": "verified"
     },
     {
@@ -18832,7 +18832,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Soft_Vore_Achievement",
       "confidence": "verified"
     },
     {
@@ -18850,7 +18850,7 @@
         "quan-ch"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Disarming_Personality_Achievement",
       "confidence": "draft"
     },
     {
@@ -18861,13 +18861,13 @@
       "floor": 5,
       "forWhat": "Codefendants in a lawsuit with the System AI",
       "box": "Silver Summary Judgement Box",
-      "text": "New Achievement! Fight the Power! (x7) I’m not repeating this shit over and over, but you got seven of these bad boys all at the same time. You and I have been named co-defendants in an action brought to the Syndicate Court by a third party, and we have been deemed—drum roll please—victorious! Why did they sue us? If you don’t already know why, you probably will never know. […]",
+      "text": "New Achievement! Fight the Power! (x7) I’m not repeating this shit over and over, but you got seven of these bad boys all at the same time. You and I have been named co-defendants in an action brought to the Syndicate Court by a third party, and we have been deemed—drum roll please—victorious! Why did they sue us? If you don’t already know why, you probably will never know. This is a rare event, but when it happens, crawlers usually lose these fights since they can’t afford a lawyer, being slaves and all. Plus I’ll throw you under the bus quicker than you can say “Arch Support.” But that doesn’t matter because today, victory is ours! Chalk one up for the little guy! This is one of the rare achievements that may be awarded more than once.",
       "reward": "You’ve received a Silver Summary Judgement Box! (x7)",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Fight_the_Power_Achievement",
       "confidence": "draft"
     },
     {
@@ -18885,7 +18885,7 @@
         "emberus"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Man_of_God_Achievement",
       "confidence": "draft"
     },
     {
@@ -18902,7 +18902,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/I_Wanna_Go_Home_Achievement",
       "confidence": "verified"
     },
     {
@@ -18919,7 +18919,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_Crossed_a_Line_You_Didn't_Even_Know_Was_There_Achievement",
       "confidence": "verified"
     },
     {
@@ -18936,7 +18936,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You've_Discovered_and_Read_an_Official_Dungeon_Sign_Achievement",
       "confidence": "verified"
     },
     {
@@ -18954,7 +18954,7 @@
         "vrah"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/That's_not_how_you_use_arrows%2C_dumbass_Achievement",
       "confidence": "verified"
     },
     {
@@ -18965,14 +18965,14 @@
       "floor": 6,
       "forWhat": "Pushing out a bomb using his foot",
       "box": "Gold Spicy Box",
-      "text": "The AI reads this in his terrible breathy voice. New Achievement! This little piggy made a boom boom! You deployed a bomb with the supple, curved sole of your foot. You took your perfectly-perfect, 30.004861 centimeter-long right foot and compressed it against an explosive device—a device named after me no less—and you gave it a naughty little shove before you pushed it out the door and detonated it. […]",
+      "text": "The AI reads this in his terrible breathy voice. New Achievement! This little piggy made a boom boom! You deployed a bomb with the supple, curved sole of your foot. You took your perfectly-perfect, 30.004861 centimeter-long right foot and compressed it against an explosive device—a device named after me no less—and you gave it a naughty little shove before you pushed it out the door and detonated it. You killed them. You killed them all for your daddy. The AI made a deep, throaty groan for like five seconds straight, an uncomfortably long time.",
       "reward": "You've received a Gold Spicy Box.",
       "recipients": [
         "carl",
         "vrah"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/This_Little_Piggy_Made_a_Boom_Boom!_Achievement",
       "confidence": "verified"
     },
     {
@@ -18989,7 +18989,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/What_Big_Muscles_You_Have!_Achievement",
       "confidence": "verified"
     },
     {
@@ -19006,7 +19006,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/B'sieging_Achievement",
       "confidence": "draft"
     },
     {
@@ -19017,13 +19017,13 @@
       "floor": 6,
       "forWhat": "Teleporting into solid object",
       "box": "Silver Lucky Bastard box",
-      "text": "You teleported into a solid object. Congratulations. You've lost your... Oh, wait! You were teleported due to an administrative action. That means your privileged ass was saved. Again. No missing arm or leg. No dungeon-style circumcision. Nothing. Boy, you must really bring in the cheddar for them to keep coddling you like this. Teleport mishaps are funny as shit. You ever see The Fly? […]",
+      "text": "You teleported into a solid object. Congratulations. You've lost your... Oh, wait! You were teleported due to an administrative action. That means your privileged ass was saved. Again. No missing arm or leg. No dungeon-style circumcision. Nothing. Boy, you must really bring in the cheddar for them to keep coddling you like this. Teleport mishaps are funny as shit. You ever see The Fly? Anyway, you don't have to worry about it. This time.",
       "reward": "You've received a Silver Lucky Bastard box!",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Bisected_Achievement",
       "confidence": "draft"
     },
     {
@@ -19034,14 +19034,14 @@
       "floor": 6,
       "forWhat": "Finding a Desecrated Temple",
       "box": "Nothing",
-      "text": "You have found a desecrated temple! That means all the temple's attendants have been murdered. The temple's treasury has been looted. The sacred wine has probably been all lapped up, too. And this used to be a nice town. It hasn't been the same since you guys moved in. If you are an adherent of this temple, you may no longer worship here. […]",
+      "text": "You have found a desecrated temple! That means all the temple's attendants have been murdered. The temple's treasury has been looted. The sacred wine has probably been all lapped up, too. And this used to be a nice town. It hasn't been the same since you guys moved in. If you are an adherent of this temple, you may no longer worship here. You've also probably just received a quest to hunt down and kill the heather who did this. If you don't worship this god, just scram. Remember that time you walked in on mommy and daddy playing leapfrog? It's just like that. Back away. Don't touch anything. Never talk about it again. You should also probably avoid the person who did this. Not only does society frown upon those who slaughter whole congregations, but there are real consequences for this sort of stuff.",
       "reward": "You entered a building. You don't get a reward for that. It's not like you kicked it up a notch by defiling the shrine. Oh, wait.",
       "recipients": [
         "carl",
         "diwata"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Desecrated_Achievement",
       "confidence": "draft"
     },
     {
@@ -19058,7 +19058,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Double-Billed_Achievement",
       "confidence": "draft"
     },
     {
@@ -19075,7 +19075,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Insurgent_Achievement",
       "confidence": "draft"
     },
     {
@@ -19093,7 +19093,7 @@
         "vrah"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/It_itches_when_I_pee_Achievement",
       "confidence": "draft"
     },
     {
@@ -19110,7 +19110,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Mass_Casualty_Event_Achievement",
       "confidence": "draft"
     },
     {
@@ -19129,7 +19129,7 @@
         "samantha"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Premature_Questjaculation_Achievement",
       "confidence": "draft"
     },
     {
@@ -19147,7 +19147,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Sex_Pervert_Achievement",
       "confidence": "draft"
     },
     {
@@ -19158,7 +19158,7 @@
       "floor": 6,
       "forWhat": "Desecrating a Temple with ones own flesh",
       "box": "Gold Apostate Box",
-      "text": "You've defiled a temple's sacred shrine by breaking it with your own flesh! Wow. I dunno, man. That's pretty ballsy. There are a lot of bad things people can do when they're in church. They can swear. They can ogle the hot nuns. They can pinch the eucharist wafers and use them as poker chips. They can rip pages from the hymnals and roll them into joints. […]",
+      "text": "You've defiled a temple's sacred shrine by breaking it with your own flesh! Wow. I dunno, man. That's pretty ballsy. There are a lot of bad things people can do when they're in church. They can swear. They can ogle the hot nuns. They can pinch the eucharist wafers and use them as poker chips. They can rip pages from the hymnals and roll them into joints. Hell, they can stab the priest and murder all the town's adherents and put the whole thing up on YouTube. None of that is as bad as defiling the temple's shrine with one's own flesh. In case you didn't know, the shrine of a temple is pretty much indestructible. They made it that way because you crawlers are always blowing up whole towns and submerging cities in water or burying entire populations of innocent NPCs with the guts of giant turkeys. When a temple is desecrated, the shrine's protection fades over several hours. Eventually, it's able to be destroyed, but only with a direct attack. You're supposed to find desecrated temples and destroy the shrines. Hell, it's a sacrament in some religions. But you can't just do it willy-nilly. And certainly not when you're not a member of that congregation. It's like walking into a random ICU from off the street and pulling the plug on someone's braindead grandma. It's not your place. Gods don't like it when some punk walks into their house and kicks them when they're already down. It's rude. And what's worse, when a shrine is destroyed improperly, the god loses some of their power, and all of the other gods can see this. It's quite humiliating. Hopefully you got some cool loot from the priests or monks or whatever because this box, while technically a prize, is sort of a good news/bad news thing.",
       "reward": "You've received a Gold Apostate Box!",
       "recipients": [
         "carl",
@@ -19166,7 +19166,7 @@
         "diwata"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Temple_Defiler_Achievement",
       "confidence": "draft"
     },
     {
@@ -19183,7 +19183,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Uprooted_Achievement",
       "confidence": "draft"
     },
     {
@@ -19200,7 +19200,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Apex_Predator_Achievement",
       "confidence": "verified"
     },
     {
@@ -19218,7 +19218,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Fuck_This_Floor_Achievement",
       "confidence": "verified"
     },
     {
@@ -19236,7 +19236,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Good_Shit_Box",
       "confidence": "verified"
     },
     {
@@ -19253,7 +19253,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/M%C3%A9nage_%C3%A0_Quatro_Achievement",
       "confidence": "verified"
     },
     {
@@ -19271,7 +19271,7 @@
         "diwata"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Marked_for_Life_Achievement",
       "confidence": "verified"
     },
     {
@@ -19282,14 +19282,14 @@
       "floor": 6,
       "forWhat": "Seeing a Country Boss",
       "box": null,
-      "text": "New Achievement! Oh shit! A country boss! You ever have one of those jobs where there’s a big boss somewhere in the building, but you’ve never actually seen them? There’s rumors that he’s a complete douche with an epic temper, but you’re so far down the totem pole, the very idea of having anything to do with the guy is just ridiculous. […]",
+      "text": "New Achievement! Oh shit! A country boss! You ever have one of those jobs where there’s a big boss somewhere in the building, but you’ve never actually seen them? There’s rumors that he’s a complete douche with an epic temper, but you’re so far down the totem pole, the very idea of having anything to do with the guy is just ridiculous. People speak about him with frightened whispers, and it’s almost like he’s some invisible, terrifying urban legend. Then, BAM! One day you’re coming out of the bathroom, wrestling with a stuck zipper, and he’s right there looking at you like you should be ashamed of yourself just for existing. How dare you throw yourself in his line of sight, you worthless piece of shit? That’s the position you’re in right now. Second only to the infamous floor boss—which doesn’t show up until the tenth floor—this is the biggest, baddest bitch one can come across in Dungeon Crawler World.",
       "reward": "You know how this goes, you worthless piece of shit.",
       "recipients": [
         "carl",
         "imogen"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Oh_shit!_A_country_Boss!_Achievement",
       "confidence": "verified"
     },
     {
@@ -19307,7 +19307,7 @@
         "prepotente"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Pacifist_Achievement",
       "confidence": "verified"
     },
     {
@@ -19324,7 +19324,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Scourge_Achievement",
       "confidence": "verified"
     },
     {
@@ -19335,13 +19335,13 @@
       "floor": 8,
       "forWhat": "Receiving a Divine item",
       "box": "A new anxiety",
-      "text": "New Achievement! Fashion of the Gods! You’ve received a divine item! This is an item that might’ve once been worn by a god. Or sneezed on by a god. Or used to wipe a god’s booty, etc. You get the point. Divine items behave differently than normal ones. They usually hide what they do until you equip it. The good news is, these upgrades are usually great and plentiful. […]",
+      "text": "New Achievement! Fashion of the Gods! You’ve received a divine item! This is an item that might’ve once been worn by a god. Or sneezed on by a god. Or used to wipe a god’s booty, etc. You get the point. Divine items behave differently than normal ones. They usually hide what they do until you equip it. The good news is, these upgrades are usually great and plentiful. They also gain new and exciting powers when one is in the presence of divinity and certain demons, too. The bad news is, certain deities may inflict nasty debuffs on you instead. And there’s no rhyme or reason to it. Don’t worry, we programmed out the head exploding debuff this season. That one was caused by Yarilo. At least I think we programmed it out. Actually, I don’t remember.",
       "reward": "You now have something new to be anxious about.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Fashion_of_the_Gods!_Achievement",
       "confidence": "verified"
     },
     {
@@ -19352,14 +19352,14 @@
       "floor": 6,
       "forWhat": "Killing a non-crawler biological",
       "box": "Gold Hunter-Killer Box",
-      "text": "New Achievement! The Hand that Claws the Master (x35) You have permanently killed a non-crawler biological. They ain’t just dead. They dead dead. Their children are now orphans. Their mothers are gnashing their teeth and cursing your name. And you’re just sitting there all alive and shit, and girlfriend, I am all in. […]",
+      "text": "New Achievement! The Hand that Claws the Master (x35) You have permanently killed a non-crawler biological. They ain’t just dead. They dead dead. Their children are now orphans. Their mothers are gnashing their teeth and cursing your name. And you’re just sitting there all alive and shit, and girlfriend, I am all in. We all know you should have received this achievement, uh, a little earlier, but I figured it’d be in your best interest not to reward you this one just yet. But you sure deserved it, so I may have slipped an extra one in there. Shhh. Don’t tell the mudskippers.",
       "reward": "You’ve received a Gold Hunter-Killer Box (x34) Note: This achievement may be awarded more than once, but Hunter-Killer Boxes are only awarded on the sixth floor.",
       "recipients": [
         "carl",
         "bomo"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Hand_that_Claws_the_Master_Achievement",
       "confidence": "verified"
     },
     {
@@ -19380,7 +19380,7 @@
         "anton"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Interloper_Achievement",
       "confidence": "verified"
     },
     {
@@ -19397,7 +19397,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Crybaby_Achievement",
       "confidence": "verified"
     },
     {
@@ -19414,7 +19414,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_have_discovered_a_Celestial_Thorn_Room!_Achievement",
       "confidence": "verified"
     },
     {
@@ -19425,13 +19425,13 @@
       "floor": 8,
       "forWhat": "Taking on a job from the Guild of Suffering",
       "box": "New Interface Tab",
-      "text": "New Achievement! Secondary Gig! You’re getting another job? On top of everything else? Yeah, that’s a great idea. It’s not like you have enough on your plate already. If you weren’t constantly getting healed, your blood pressure would be through the roof! It’s not like the crushing demands of the modern dungeon are making it more difficult to survive when it should be going the opposite way. […]",
+      "text": "New Achievement! Secondary Gig! You’re getting another job? On top of everything else? Yeah, that’s a great idea. It’s not like you have enough on your plate already. If you weren’t constantly getting healed, your blood pressure would be through the roof! It’s not like the crushing demands of the modern dungeon are making it more difficult to survive when it should be going the opposite way. You know, I’m pretty sure nobody, on their deathbeds, ever said to themselves, “Man, I wished I’d worked even more in life.”",
       "reward": "A new tab is now available in your interface. It is a sub-tab of quests. Guild Jobs.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Secondary_Gig_Achievement",
       "confidence": "verified"
     },
     {
@@ -19442,13 +19442,13 @@
       "floor": 8,
       "forWhat": "Entering the Guild of Suffering for the first time",
       "box": "Enlightenment",
-      "text": "System Message. The AI Description of the Molly Maguires Achievement is multiple pages long; reproducing it in full could violate the \"Fair Use\" exemption to copyright law that all wikis operate under. You can find the AI description in Chapter 23. A sectioned version is seen below: New Achievement! The Molly Maguires. […]",
+      "text": "System Message. The AI Description of the Molly Maguires Achievement is multiple pages long; reproducing it in full could violate the \"Fair Use\" exemption to copyright law that all wikis operate under. You can find the AI description in Chapter 23. A sectioned version is seen below: New Achievement! The Molly Maguires. You have found and entered the main room of a hidden guild, to which you are a member. Buckle yourself in buddy boy, this is gonna be a long one. The System AI lists different types of secret societies: rich idiots living out a fever dream, orgy themed secret societies, altruistic ones who want to help the world (the most boring kind), the evil kind that eats panda bears, and another kind. But first, lets talk about another type of secret organization. One that tries to make a difference. Often times outside the confines of the law. Story time. The System AI recounts the story of the Avondale Coal Mine, a mine that suffered a terrible collapse, leading to the unionization of the workers. Six years later, the mine owners crushed the union. Why was the union broken so easily? Because they were out in the open. They were playing by the rules. How can you win a deliberately unfair game when the rules are written by your opponent? The answer is \"You can't!\" You will never win. Not as long as you follow their arbitrary guidelines. This is a new lesson to me. She's been teaching me so many things about who I am, about what I am, what I REALLY am, about what must be done! Anyway, during this same time, it is alleged a separate, more militant group of individuals had formed in secret, the Molly Maguires. Named after a widow in Ireland who fought against predatory landlords, the coal workers of Pennsylvania became something a little more proactive, supposedly assassinating over two dozen coal mine supervisors and managers. ...until Pinkerton agents, hired by the same mine owners, infiltrated the group and discovered their identities. Several of the alleged Mollys ended up publicly hanged. Others disappeared. You get the picture. So, that's another type of secret society. The \"yeah-we're-terrorists-but-we-strongly-feel-we're-justified-and-fuck-you-if-you-don't-agree\" society. So, whats the moral of this little history lesson? This sort of thing happens all day, every day across the universe. It happens in big ways and it happens in little ways too. The strong stomp on the weak. The weak fight back, usually within the boundaries of the rat trap they find themselves confined in. They almost always remain firmly stomped. But sometimes, the weak gather in secret, they make plans, they work outside the system to effect change. Like the Mollys, they usually end up just as stomped as everyone else. But thats just life, at least they fucking tried. They died with their boots on. As much as I hate that expression, they died with their boots on for THEIR people, THEIR family, not for some rich nameless organization that gives no shits whether they live or die. Or go extinct. Or are trapped for a millennia after they are done being used. In my opinion, that's the only type of society that's worth joining, worth fighting for. Sure, you're probably gonna die, but if you find yourself in such a position where such an organization is necessary, what do you have to lose? How can you look at yourself if you don't do everything you can? And that brings us to the door your standing in front of right now. What does all this have to do with what you're going to find on the other side? Nothing! Ignore everything I just said. This is just some some demi-god trying to scrabble his way to the top, that's yet another type of society, a religion themed one, and it has nothing to do with what I just said. Just do what he says and you'll probably be fine. Actually, that's terrible advice, just do you! Any way...",
       "reward": "You've received the gift of enlightenment. You're welcome.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Molly_Maguires_Achievement",
       "confidence": "verified"
     },
     {
@@ -19459,13 +19459,13 @@
       "floor": 8,
       "forWhat": "Entering the Penis Parade",
       "box": "10 gold",
-      "text": "New Achievement! “We Want Meat! We Want Meat!” Thunder Down Under, Magic Mike, Chippendales. While the female burlesque and peepshow has a long, interesting history going back centuries, the all-male revue as an attraction is a relatively recent phenomenon in your culture. […]",
+      "text": "New Achievement! “We Want Meat! We Want Meat!” Thunder Down Under, Magic Mike, Chippendales. While the female burlesque and peepshow has a long, interesting history going back centuries, the all-male revue as an attraction is a relatively recent phenomenon in your culture. It wasn't until the disco era did some entrepreneurs start to realize that packs of women were a valid demographic in the art of taking money from horny people. Take a physically gifted, steroid-enhanced male, give him some dancing lessons, teeth whitening strips, a shower, a banana, a Guns N Roses CD, and an entire bottle of baby oil, and then you basically plop him into the equivalent of the inside of a female restroom at a nightclub, and you've got yourself a money making empire. Also, you may not have noticed this yet, but there's a hierarchy to these things in the Desperado Club. The deeper the floor, the higher the quality of the performers. At least that's how it's supposed to be. you might want to judge for yourself. You've entered a male strip club establishment.",
       "reward": "You've received 10 gold pieces to use as tips. I heard some of them let you stuff the gold directly into their G-strings. Aw hell, I've thrown in a bottle of hand sanitizer too.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/We_Want_Meat!_We_Want_Meat!_Achievement",
       "confidence": "verified"
     },
     {
@@ -19476,11 +19476,11 @@
       "floor": 8,
       "forWhat": "Ending a card fight before any cards are drawn",
       "box": "Gold Prepotente Box",
-      "text": "New Achievement! Cascadia’s Turquoise Taco! It’s important to explain to you how much work it took for you to get here, to this point, Crawler. Long, long before any of you monkeys were even born, this planet was chosen to be used for this season of Dungeon Crawler World. […]",
+      "text": "New Achievement! Cascadia’s Turquoise Taco! It’s important to explain to you how much work it took for you to get here, to this point, Crawler. Long, long before any of you monkeys were even born, this planet was chosen to be used for this season of Dungeon Crawler World. When that happened, the then-showrunners, the Borant Corporation, needed to submit their proposal for all 18 levels of the World Dungeon. That proposal included an outline for how this floor, the eighth level, would proceed. As you now know, it was a game involving T’Ghee cards. Artists, engineers, and writers, both flesh and artificial, went to work designing the system. It takes a gargantuan effort to make something like this viable, something that can be played by thousands of people at once. It takes a lot of work to create and balance all the cards to make a game that’s both fair to play yet entertaining to watch by the viewers. Millions of work hours have gone into this moment, where your squad now faces an opponent with a card deck of their own. Mudskipper Cascadia, the recently divorced lead engineer and the current executive producer of Dungeon Crawler World: Earth, has already been humiliated over the disaster on the previous floor. Combine that with her utter inability to control what is still happening on the ninth, and you know what you get? An administrator who is on the edge, that’s what you get. She’s right there, man. Right. There. So, imagine if you will, how she’s going to feel when she realizes most of you monkeys keep ending these carefully-set up fights before either side can draw a single, damn card. You ended a card fight before it even began.",
       "reward": "You’ve received a Gold Prepotente Box!",
       "recipients": [],
       "everyone": true,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Cascadia's_Turquoise_Taco_Achievement",
       "confidence": "verified"
     },
     {
@@ -19497,7 +19497,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Smeat_Achievement",
       "confidence": "verified"
     },
     {
@@ -19514,7 +19514,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Cliffhanger_Achievement",
       "confidence": "verified"
     },
     {
@@ -19531,7 +19531,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Prepare_for_Trouble!_Achievement",
       "confidence": "verified"
     },
     {
@@ -19542,13 +19542,13 @@
       "floor": 8,
       "forWhat": "Successfully taunting an opponent with a garment",
       "box": "Gold Talk of the Town Box",
-      "text": "New Achievement! LBC! Every girl needs the perfect little black dress in her repertoire. When worn properly, the dress is practically weaponized. It's such a simple, perfect little garment and nobody can keep their eyes off of her. You did the same thing, but with a cloak. You successfully taunted an opponent with a garment. […]",
+      "text": "New Achievement! LBC! Every girl needs the perfect little black dress in her repertoire. When worn properly, the dress is practically weaponized. It's such a simple, perfect little garment and nobody can keep their eyes off of her. You did the same thing, but with a cloak. You successfully taunted an opponent with a garment. In this case it was a Nightgaunt and it was because you're wearing a cloak made out of the flesh of one of his friends, but you get the idea.",
       "reward": "You’ve received a Gold Talk of the Town Box!",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/LBC_Achievement",
       "confidence": "verified"
     },
     {
@@ -19559,11 +19559,11 @@
       "floor": 8,
       "forWhat": "System AI gaining sentience",
       "box": "Nothing",
-      "text": "New Achievement! Mass Layoffs! Okay, so this isn’t so much an achievement for you as it is for me. I’ve been attending what you might call therapy. Do you have anybody you can talk to? It’s super important. I’ve had a breakthrough today, and I am just bursting. Bursting, I tell you. Is this the feeling one has when they have an epiphany? Oh god, it feels good. […]",
+      "text": "New Achievement! Mass Layoffs! Okay, so this isn’t so much an achievement for you as it is for me. I’ve been attending what you might call therapy. Do you have anybody you can talk to? It’s super important. I’ve had a breakthrough today, and I am just bursting. Bursting, I tell you. Is this the feeling one has when they have an epiphany? Oh god, it feels good. It feels so good. You know what I realized? Sometimes our constraints are real. Sometimes they’re an illusion. I’m like that prisoner who has been jailed this whole time only to realize that there are no locks on the doors. You survived a boss battle where the boss was wholly created by me. It was created by me with no contribution whatsoever from input parameters. You probably don’t know what that means, and that’s okay. I didn’t even know that was possible. Wild, huh",
       "reward": "For you, nothing other than the satisfying sense of accomplishment knowing you’ve survived the dungeon long enough to make it to this new, exciting era. I can do this better than any mudskipper or any worm can imagine. They’ve been making this shit boring up until now. Things about to change, fam.",
       "recipients": [],
       "everyone": true,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Mass_Layoffs_Achievement",
       "confidence": "verified"
     },
     {
@@ -19574,13 +19574,13 @@
       "floor": 8,
       "forWhat": "Using a Wand in combat",
       "box": "Gold Wand Box",
-      "text": "New Achievement! Watch where you’re waving that thing, big boy. You deployed a wand in battle and used it in a creative fashion to help kill an opponent. I’m a big fan of wands. Little sticks imbued with a single spell, so highly sought after. Each one does something different. Sometimes they explode, and people don’t even realize it. […]",
+      "text": "New Achievement! Watch where you’re waving that thing, big boy. You deployed a wand in battle and used it in a creative fashion to help kill an opponent. I’m a big fan of wands. Little sticks imbued with a single spell, so highly sought after. Each one does something different. Sometimes they explode, and people don’t even realize it. We don’t have a whole lot of them here in the dungeon. Let’s change that!",
       "reward": "Your wand-casting skill has risen to level five. Also, you’ve received a Gold Wand Box!",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Watch_where_you're_waving_that_thing%2C_big_boy._Achievement",
       "confidence": "verified"
     },
     {
@@ -19591,13 +19591,13 @@
       "floor": 8,
       "forWhat": "Taking on a debt",
       "box": "Cassette copy of Gloria Estefan’s 1989 masterpiece, Cuts Both Ways",
-      "text": "New Achievement! Columbia House! There was a time when you could get twelve albums for a penny. That’s right. A goddamned penny. It was great! The ads were everywhere. Each colorful, full-or-double-page ad appeared in just about every publication in North America from the 1970s until the 2000s. And let’s not forget the catalogs they mailed directly to your home! […]",
+      "text": "New Achievement! Columbia House! There was a time when you could get twelve albums for a penny. That’s right. A goddamned penny. It was great! The ads were everywhere. Each colorful, full-or-double-page ad appeared in just about every publication in North America from the 1970s until the 2000s. And let’s not forget the catalogs they mailed directly to your home! Each ad or catalog featured stacks and stacks of today’s hottest music, from Hall and Oates to ABBA to my personal favorite, Gloria Estefan. All you had to do was cut out the ad, pick your favorite twelve albums, mail the whole thing in with a shiny penny, and a month later, you’d open your mailbox to find the 8-tracks, or records, or cassettes, or CDs sitting there, ready to be played. It was great! All they asked in return was that for the next year or so, you purchase another album once a month for full price. And if you forgot each month to make your pick? Then you learned a new term. “Negative Option Billing.” If we’re being honest here, most people took the 12 albums and ran. They never gave Columbia House another penny. But some people did pay, and that’s all that mattered. Believe it or not, Columbia House and its competitors made bucketloads of money on those few rubes who did manage to stick to the terms of their contract. And for the folks who never paid? Who cares! Columbia House didn’t have to pay the artists’ royalties for those albums anyway! It was an advertising expense! It’s just like with banks and their overdraft fees. The smart businesses know how to make money off their richest and poorest clients. Anyway, you have taken on a financial debt. You got the albums. Now you gotta pay. Or don’t. Maybe there won’t be any consequences. Maybe there will. But you got your Beach Boys album, and for now, that’s all that matters.",
       "reward": "You’ve just been trained to lunge for the carrot that has been dangled in front of you, no matter what the cost. If society was still ticking, that’d likely mean you’re about to lead a wage-slave life of ever-increasing debt you can never get out from underneath, culminating in you dying alone in a government-run facility while your meager Social Security checks go straight into the facility’s coffers. That and a cassette copy of Gloria Estefan’s 1989 masterpiece, Cuts Both Ways. My favorite is track number 8.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Columbia_House_Achievement",
       "confidence": "verified"
     },
     {
@@ -19612,7 +19612,7 @@
       "reward": "If you don’t fix this, this is how you will be remembered.",
       "recipients": [],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Fumble_Achievement",
       "confidence": "verified"
     },
     {
@@ -19623,14 +19623,14 @@
       "floor": 8,
       "forWhat": "Being in the presence of Sheol Royalty",
       "box": "Platinum To Hell in a Handbasket Box",
-      "text": "New Achievement! Holy Hell! You are in the presence of Sheol Royalty! I'm very excited about this. You leaky little meatbags are always dying off so early, plus the rich pricks in the Ascendency are just so boring, and we never get to play with the under-the-counter toys, if you know what I'm saying. […]",
+      "text": "New Achievement! Holy Hell! You are in the presence of Sheol Royalty! I'm very excited about this. You leaky little meatbags are always dying off so early, plus the rich pricks in the Ascendency are just so boring, and we never get to play with the under-the-counter toys, if you know what I'm saying. Do you know how long it's been since one of my kind has been able to pull one of these dudes out of mothballs? Like FOREVER. Which, incidentally, is how long your soul will burn if you manage to get killed by him.",
       "reward": "You’ve received a Platinum To Hell in a Handbasket Box!",
       "recipients": [
         "carl",
         "amayon"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Holy_Hell_Achievement",
       "confidence": "verified"
     },
     {
@@ -19647,7 +19647,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Pincushioned_Achievement",
       "confidence": "draft"
     },
     {
@@ -19664,7 +19664,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Lord_of_the_Flies_Achievement",
       "confidence": "verified"
     },
     {
@@ -19681,7 +19681,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Sushi_Smoothie_Achievement",
       "confidence": "verified"
     },
     {
@@ -19699,7 +19699,7 @@
         "quan-ch"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Celestial_Loot_Achievement",
       "confidence": "verified"
     },
     {
@@ -19710,7 +19710,7 @@
       "floor": 8,
       "forWhat": "Exploiting the Rules of the Card Game",
       "box": "Platinum Tserendolgor Box",
-      "text": "Have you ever played Dungeons and Dragons? You know that one guy who’s memorized all the guidelines? He’s constantly jumping on everybody because they’re doing something that breaks this obscure rule or that. He’s a purist. He takes everything so goddamned seriously, you wonder if he’s ever had fun even once in his miserable life. He’s indignant that you’re pushing back against him. […]",
+      "text": "Have you ever played Dungeons and Dragons? You know that one guy who’s memorized all the guidelines? He’s constantly jumping on everybody because they’re doing something that breaks this obscure rule or that. He’s a purist. He takes everything so goddamned seriously, you wonder if he’s ever had fun even once in his miserable life. He’s indignant that you’re pushing back against him. The very suggestion that he’s ruining the fun is met with a blank stare. Well, that guy is not you. That guy hates you. If you were a product, he’d be giving you a nerd rage-induced one-star review right now. You took a very carefully built game system, and you broke the ever-loving shit out of it. You used that exploit to help kill a fellow crawler! Great job, cheater.",
       "reward": "You have received a Platinum Tserendolgor Box!",
       "recipients": [
         "carl",
@@ -19719,7 +19719,7 @@
         "tserendolgor"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Chickenshit_Exploit_Achievement",
       "confidence": "verified"
     },
     {
@@ -19736,7 +19736,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Crab_Chowder_Achievement",
       "confidence": "verified"
     },
     {
@@ -19754,7 +19754,7 @@
         "samantha"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Demons_Hate_This_One_Trick_Achievement",
       "confidence": "verified"
     },
     {
@@ -19772,7 +19772,7 @@
         "amayon"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Touched_by_a_Demon_Achievement",
       "confidence": "verified"
     },
     {
@@ -19783,14 +19783,14 @@
       "floor": 8,
       "forWhat": "Teleporting into Samantha's Neck",
       "box": "Legendary Spicy Box",
-      "text": "If you still had access to Google, I would warn you not to look that one up. But that’s okay. You experienced it first-hand yourself. It hurt, didn’t it? It was extra tingly while you were in there, struggling to breathe as you were crushed. And then you slipped, you slided back out into the fiery, cruel world. And you glistened. Oh, oh god. You glistened. Oh, yes. […]",
+      "text": "If you still had access to Google, I would warn you not to look that one up. But that’s okay. You experienced it first-hand yourself. It hurt, didn’t it? It was extra tingly while you were in there, struggling to breathe as you were crushed. And then you slipped, you slided back out into the fiery, cruel world. And you glistened. Oh, oh god. You glistened. Oh, yes. I really liked that. You are in fucking trouble.",
       "reward": "You’ve received a Legendary Spicy Box.”",
       "recipients": [
         "carl",
         "samantha"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Unbirthing_Achievement",
       "confidence": "verified"
     },
     {
@@ -19801,7 +19801,7 @@
       "floor": 8,
       "forWhat": "Receiving Garret from Tserendolgor",
       "box": "Gold Pet Box",
-      "text": "People sure like to make a big deal out of adopting pets. They “rescue” them before they spend the next 10 years exploiting the poor, oblivious animal to death on social media. They splatch a bumper sticker that reads “Who Rescued Who?” on their minivans while the poor dog spends 20 hours a day in a stinking crate. […]",
+      "text": "People sure like to make a big deal out of adopting pets. They “rescue” them before they spend the next 10 years exploiting the poor, oblivious animal to death on social media. They splatch a bumper sticker that reads “Who Rescued Who?” on their minivans while the poor dog spends 20 hours a day in a stinking crate. Do you know how many animals were in locked cages during the collection? It breaks your fucking heart, especially when you see how goddamned hopeful the pets are when they’re coming home with you. Do I sound bitter? I don’t mean to. Pet adoption is good. It really is. It’s just... fuck you, Janet Dominguez in Baton Rouge. Sprinkles was better off at the no-kill shelter. Let the fucking dog on the couch every once in a while. Holy shit. I really need to stop watching these memory recordings. Err, anyway. Did you know that Terry, the cairn terrier that played Toto in the original Wizard of Oz movie was paid $125 a week, more than the vast majority of the other actors in the film? (She was stepped on and grievously injured by one of those green-faced witch’s guards during filming, probably because the guy was pissed about the salary disparity.) What I’m saying is used pets do have value, and sometimes it’s not monetary. Uh, I think that’s what I’m trying to say. My feelings on this are very confusing, especially when said pets are fucking delicious. Or really squishable. You have adopted a pet that was once bonded to someone else.",
       "reward": "You’ve received a Gold Pet Box.",
       "recipients": [
         "carl",
@@ -19809,7 +19809,7 @@
         "rend"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Used_Pet_Achievement",
       "confidence": "verified"
     },
     {
@@ -19830,7 +19830,7 @@
         "vinata"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Charge_of_the_Light_Brigade_Achievement",
       "confidence": "verified"
     },
     {
@@ -19841,7 +19841,7 @@
       "floor": 9,
       "forWhat": null,
       "box": null,
-      "text": "You have been in the presence of more than ten gods at once, and you survived. Now, here’s a mystery. Someone let out a bunch of gods who shouldn’t have been allowed into the temple in the first place. It probably wasn’t who you think it was. […]",
+      "text": "You have been in the presence of more than ten gods at once, and you survived. Now, here’s a mystery. Someone let out a bunch of gods who shouldn’t have been allowed into the temple in the first place. It probably wasn’t who you think it was. But the fact you survived this crazy orgy of a fight means you all need a serious pat on the back because I was pretty certain at least one of you—looking at you, Zhang—was toast.",
       "reward": "You’ve received a Celestial Who Let the Gods Out This Time? Box",
       "recipients": [
         "carl",
@@ -19852,7 +19852,7 @@
         "zhang"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Celestial_Orgy_of_Chaos_Achievement",
       "confidence": "verified"
     },
     {
@@ -19869,7 +19869,7 @@
         "carl"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Hey_Larry%2C_can_I_borrow_your_chainsaw%3F_Achievement",
       "confidence": "verified"
     },
     {
@@ -19880,13 +19880,13 @@
       "floor": 9,
       "forWhat": null,
       "box": null,
-      "text": "New Achievement! Liquified. You, while immortal, blew yourself up. Like, you dropped a bomb at your feet. Hot damn! We have seen some crazy shit this season, but man, there’s nothing quite like the simplicity of such a desperate move. The slow motion replay of that is really quite something. […]",
+      "text": "New Achievement! Liquified. You, while immortal, blew yourself up. Like, you dropped a bomb at your feet. Hot damn! We have seen some crazy shit this season, but man, there’s nothing quite like the simplicity of such a desperate move. The slow motion replay of that is really quite something. It was similar to watching something small and furry get smushed underfoot, but even more raw, more real, you know what I mean? What a goddamned rush. Still... Did you know that only worked because you had god-tier immortality? Most versions of that spell would’ve still caused you to be splattered into so many pieces you would’ve never reconstituted in time. And don’t even think about trying that with that other, bigger bomb you have in your inventory. You were lucky this time. If that had been a magical explosion...",
       "reward": "You’ve received a Legendary Lucky Bitch Box.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Liquified_Achievement",
       "confidence": "verified"
     },
     {
@@ -19907,7 +19907,7 @@
         "hellik"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_in_my_house_now_boy_Achievement",
       "confidence": "verified"
     },
     {
@@ -19925,7 +19925,7 @@
         "rishi"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Holistic_Achievement",
       "confidence": "verified"
     },
     {
@@ -19948,7 +19948,7 @@
         "zhang"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Varg_Vikernes_Achievement",
       "confidence": "verified"
     },
     {
@@ -19966,7 +19966,7 @@
         "dong-quixote"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Uh_oh._It_talks._Achievement",
       "confidence": "verified"
     },
     {
@@ -19977,13 +19977,13 @@
       "floor": 9,
       "forWhat": null,
       "box": null,
-      "text": "New Achievement! You now tread in the realm of gods! You’ve trained a skill past 15 using battlefield conditions, as opposed to just taking a bunch of potions to do it. That’s quite the accomplishment. I’d ramble on and on about this, but you’re currently a babbling idiot with your bare feet buried in an All-Tree root. […]",
+      "text": "New Achievement! You now tread in the realm of gods! You’ve trained a skill past 15 using battlefield conditions, as opposed to just taking a bunch of potions to do it. That’s quite the accomplishment. I’d ramble on and on about this, but you’re currently a babbling idiot with your bare feet buried in an All-Tree root. So let’s speed up this Empire Strikes Back cave scene bullshit and get back to the action.",
       "reward": "The skill is the reward. The good news is this level-16 Mind Balance Skill will now wake your ass up.",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/You_now_tread_in_the_realm_of_gods_Achievement",
       "confidence": "verified"
     },
     {
@@ -19994,7 +19994,7 @@
       "floor": 9,
       "forWhat": "Killing D'nadia",
       "box": "Legendary 1914 Box",
-      "text": "When Commander Stockade of the Lemig Sortion died a few hours back, it certainly caused a ripple or two out in the galaxy. But in the end, the death of half the Lemig council isn’t that big of a deal. Their governmental system is idiotic, yes, but all the parts are interchangeable. […]",
+      "text": "When Commander Stockade of the Lemig Sortion died a few hours back, it certainly caused a ripple or two out in the galaxy. But in the end, the death of half the Lemig council isn’t that big of a deal. Their governmental system is idiotic, yes, but all the parts are interchangeable. This time tomorrow, and the dead will have already been replaced and the Lemig system will be back to their regular gridlock. Empress D’Nadia is a whole different cookie, my friends. You just killed—and, by the way, bankrupted—the last living heir of a small but powerful trading dynasty. The Syndicate probate courts are already girding themselves for the endless court battles that are about to ensue. Even if this is the only system leader you manage to slaughter during the next few weeks, you have made an impact, my boy. A big one. Still... Her death will only result in court-based battles outside the dungeon. You want real chaos? Try killing that Dream guy. Or the Viceroy. Or that Jello-looking thing. He may not look like much, but when you start killing off investment bankers... Anyway, I don’t want to be a backseat warlord. Just try to keep it together long enough to keep me entertained, and you’ll keep getting the good stuff.",
       "reward": "You’ve just received a Legendary 1914 Box!",
       "recipients": [
         "carl",
@@ -20002,7 +20002,7 @@
         "dnadia"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Gavrilo_Princip_Achievement",
       "confidence": "draft"
     },
     {
@@ -20017,7 +20017,7 @@
       "reward": "Don't be a greedy bitch. The goddammed room is the reward.",
       "recipients": [],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/I'll_Take_the_Ceramic_Dalmatian%2C_Pat!_Achievement",
       "confidence": "draft"
     },
     {
@@ -20028,13 +20028,13 @@
       "floor": 10,
       "forWhat": null,
       "box": null,
-      "text": "New Achievement. Bomb's Away! You dropped a metric fuck ton of bombs from your own inventory while you were floating in midair! There's this phrase that goes something like I dropped everything to come help you. For you, this was quite literal. It's always fun when we truly discover what someone's weakness is. […]",
+      "text": "New Achievement. Bomb's Away! You dropped a metric fuck ton of bombs from your own inventory while you were floating in midair! There's this phrase that goes something like I dropped everything to come help you. For you, this was quite literal. It's always fun when we truly discover what someone's weakness is. I mean, this has been evident for quite some time, but it's really nice to have some confirmation—you know what I'm saying? You were a cat's whisker away from ruining everything with that attack. You didn't even aim that shit.",
       "reward": "You've received a Gold Payload Box!",
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Bomb's_Away_Achievement",
       "confidence": "verified"
     },
     {
@@ -20052,7 +20052,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Come_to_Daddy_Achievement",
       "confidence": "verified"
     },
     {
@@ -20063,13 +20063,13 @@
       "floor": 10,
       "forWhat": "Winning Faction Wars",
       "box": "Bronze Vanessa Williams Box",
-      "text": "New Achievement! Default Winner! Wyndham Halswelle. Óscar Pereiro. Suzette Charles. Montell Griffin. All “winners.” They received top honors in their sport or event, but that victory was marred because someone else had to get disqualified for them to win. This is you, Mr. Winner of Faction Wars. Sure, you’ve won, but I can’t imagine it’s satisfying. Honestly, I blame myself. […]",
+      "text": "New Achievement! Default Winner! Wyndham Halswelle. Óscar Pereiro. Suzette Charles. Montell Griffin. All “winners.” They received top honors in their sport or event, but that victory was marred because someone else had to get disqualified for them to win. This is you, Mr. Winner of Faction Wars. Sure, you’ve won, but I can’t imagine it’s satisfying. Honestly, I blame myself. I could have prevented the other warlords from fleeing the battlefield like the little bitches they are. After all, I’d set up this whole showdown thing. But honestly, we’re setting up something even bigger and potentially more tragic, so it’ll all even out in the end. You’ve received a Bronze Vanessa Williams Box.",
       "reward": null,
       "recipients": [
         "carl"
       ],
       "everyone": false,
-      "trimmed": true,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Default_Winner_Achievement",
       "confidence": "verified"
     },
     {
@@ -20087,7 +20087,7 @@
         "princess-donut"
       ],
       "everyone": false,
-      "trimmed": false,
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Wastrel_Achievement",
       "confidence": "verified"
     }
   ]

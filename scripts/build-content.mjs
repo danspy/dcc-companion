@@ -137,7 +137,7 @@ const snapshot = {
       floor: a.floor ?? null, forWhat: a.for ?? null, box: a.box ?? null,
       text: a.text, reward: a.reward ?? null,
       recipients: a.recipients ?? [], everyone: !!a.everyone,
-      trimmed: !!a.trimmed, confidence: a.confidence ?? 'draft',
+      source: a.source ?? null, confidence: a.confidence ?? 'draft',
     }))
     .sort((x, y) => x.sortKey - y.sortKey || x.id.localeCompare(y.id)),
 };

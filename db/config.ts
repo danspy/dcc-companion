@@ -123,7 +123,9 @@ const Achievement = defineTable({
     /* Some awards belong to nobody in particular — "awarded to all crawlers
        upon entering the Fourth Floor". That is an answer, not a gap. */
     everyone: column.boolean({ default: false }),
-    trimmed: column.boolean({ default: false }),      // quoted in part, not whole
+    /* The page this was quoted from. Attribution, and the thing that makes
+       quoting the award whole rather than in excerpt defensible. */
+    source: column.text({ optional: true }),
     confidence: column.text({ default: 'draft' }),    // verified | draft
   },
 });

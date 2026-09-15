@@ -211,19 +211,24 @@ const shownIds = new Set(shown.map(a => a.id));
 /* The floor each award opens a new band on, when the list is banded. A band
    with nothing visible under it is hidden, or a filter leaves a heading
    standing over an empty stretch. */
+/* "When" is grouped into one collapsible section per floor; every other sort is
+   a flat list. `<details>` again rather than a button and an aria-expanded pair
+   — the browser already knows how to do this, and so does Find in Page. */
 const banded = sort === 'when';
-const bandAt = new Map<string, number>();
-const bandHasRows = new Map<number, boolean>();
-if (banded) {
-  let last: number | null = null;
-  for (const a of reached) {
-    const f = a.floor ?? 0;
-    if (f !== last) { bandAt.set(a.id, f); last = f; }
-    if (shownIds.has(a.id)) bandHasRows.set(f, true);
-  }
-}
 const floorName = new Map(floorRows.map(f => [f.id, f.name]));
 const floorInk = new Map(floorRows.map(f => [f.id, f.ink]));
+
+interface Band { floor: number; awards: typeof reached; shown: number }
+const bands: Band[] = [];
+if (banded) {
+  for (const a of reached) {
+    const f = a.floor ?? 0;
+    let band = bands.at(-1);
+    if (!band || band.floor !== f) { band = { floor: f, awards: [], shown: 0 }; bands.push(band); }
+    band.awards.push(a);
+    if (shownIds.has(a.id)) band.shown++;
+  }
+}
 
 /* Every count is of awards the reader has reached. A chip reading "Celestial 9"
    on a book-1 page would say how many are still coming, which is the structural
@@ -345,76 +350,113 @@ const canUseLore = !gate.fresh || !gate.spoilers;
       {reached.length === 0
         ? <p class="sys"><b>*** Nothing on record ***</b>You have not reached a single award yet,
             crawler. Tell the dungeon where you are and the file opens.</p>
-        : <ul class="log">
-            {reached.map(a => (<>
-              {bandAt.has(a.id) && (
-                <li class="floorband" data-band={bandAt.get(a.id)}
-                    hidden={!bandHasRows.get(bandAt.get(a.id)!) || undefined}>
-                  <span class="floormark"
-                        style={`background:${floorAccent.get(bandAt.get(a.id)!) ?? '#717171'};color:${floorInk.get(bandAt.get(a.id)!) ?? '#0e0e0e'}`}>
-                    {String(bandAt.get(a.id)).padStart(2, '0')}
-                  </span>
-                  <span class="floorband-name">{floorName.get(bandAt.get(a.id)!) ?? 'Floor'}</span>
-                </li>
-              )}
-              <li class="entry recrow" data-floor={a.floor ?? ''}
-                  hidden={!keeps(rowsFor.get(a.id)!, re, askedTiers) || undefined}
-                  data-find={rowsFor.get(a.id)!.find}
-                  data-tier={rowsFor.get(a.id)!.tier ?? ''}>
-                <p class="stamp">
-                  {(() => {
-                    /* When it happened, from its own tag — not from sortKey,
-                       which may have been pushed later so the award waits for
-                       somebody it names. */
-                    const w = whenOf(a.at);
-                    return <span class="bk">Bk {w.book}{w.chapter ? ` · Ch ${w.chapter}` : w.end ? ' · end' : ''}</span>;
-                  })()}
-                  {a.floor && (
-                    <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? '#717171'}`}>
-                      Floor {a.floor}
-                    </span>
-                  )}
-                  {/* The infobox's reward field is only sometimes a loot box —
-                      it is just as often the joke ("Ha.", "Pride", "Nothing").
-                      Stamped here only when it names a box; everything else is
-                      already in the reward line below, where it reads as a line
-                      rather than as a shouted label. */}
-                  {a.box && /\bBox\b/i.test(a.box) && <span class="rec-box">{a.box}</span>}
-                </p>
-                <div class="entry-body">
-                  <h3>{a.name}</h3>
-                  {a.forWhat && <p class="rec-for">For {a.forWhat.replace(/^For\s+/i, '')}</p>}
-                  {/* Who earned it. The award cannot surface before its
-                      recipients have been met — the lint holds it back — so
-                      every name here is one the reader already knows. */}
-                  {(a.recipients as string[])?.length > 0 ? (
-                    <p class="rec-who">
-                      <span class="label">Earned by</span>
-                      {(a.recipients as string[]).map((id, i) => (
-                        <>{i > 0 && <span class="sep">·</span>}
-                        <a href={`/entity/${id}`}>{nameOf.get(id) ?? id}</a></>
-                      ))}
+        : <div class="recbody">
+            {banded
+              ? bands.map(band => (
+                  <details class="floorsec" data-band={band.floor} open hidden={!band.shown || undefined}>
+                    <summary class="floorband">
+                      <span class="floormark"
+                            style={`background:${floorAccent.get(band.floor) ?? '#717171'};color:${floorInk.get(band.floor) ?? '#0e0e0e'}`}>
+                        {String(band.floor).padStart(2, '0')}
+                      </span>
+                      <span class="floorband-name">{floorName.get(band.floor) ?? 'Floor'}</span>
+                      <span class="floorband-n label">{band.awards.length}</span>
+                    </summary>
+                    <ul class="log">
+                      {band.awards.map(a => (
+                <li class="entry recrow" data-floor={a.floor ?? ''}
+                    hidden={!keeps(rowsFor.get(a.id)!, re, askedTiers) || undefined}
+                    data-find={rowsFor.get(a.id)!.find}
+                    data-tier={rowsFor.get(a.id)!.tier ?? ''}>
+                  <p class="stamp">
+                    <span class="bk">Bk {whenOf(a.at).book}{whenOf(a.at).chapter
+                      ? ` · Ch ${whenOf(a.at).chapter}` : whenOf(a.at).end ? ' · end' : ''}</span>
+                    {a.floor && (
+                      <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? '#717171'}`}>
+                        Floor {a.floor}
+                      </span>
+                    )}
+                    {a.box && /\bBox\b/i.test(a.box) && <span class="rec-box">{a.box}</span>}
+                  </p>
+                  <div class="entry-body">
+                    <h3>{a.name}</h3>
+                    {a.forWhat && <p class="rec-for">For {a.forWhat.replace(/^For\s+/i, '')}</p>}
+                    {(a.recipients as string[])?.length > 0 ? (
+                      <p class="rec-who">
+                        <span class="label">Earned by</span>
+                        {(a.recipients as string[]).map((id, i) => (
+                          <>{i > 0 && <span class="sep">·</span>}
+                          <a href={`/entity/${id}`}>{nameOf.get(id) ?? id}</a></>
+                        ))}
+                      </p>
+                    ) : a.everyone ? (
+                      <p class="rec-who"><span class="label">Earned by</span>
+                        <span class="rec-anyone">Every crawler</span></p>
+                    ) : null}
+                    <p class="rec-text">{a.text}</p>
+                    {a.reward && <p class="rec-reward"><span class="label">Reward</span>{a.reward}</p>}
+                    <p class="rec-src">
+                      {a.confidence === 'draft' && <span class="draft">unverified chapter</span>}
+                      {a.source && <a class="rec-srclink" href={a.source} rel="noopener nofollow"
+                                      target="_blank">Source</a>}
                     </p>
-                  ) : a.everyone ? (
-                    <p class="rec-who"><span class="label">Earned by</span>
-                      <span class="rec-anyone">Every crawler</span></p>
-                  ) : null}
-                  <p class="rec-text">{a.text}</p>
-                  {a.reward && <p class="rec-reward"><span class="label">Reward</span>{a.reward}</p>}
-                  {a.confidence === 'draft' && <span class="draft">unverified chapter</span>}
-                </div>
-              </li>
-            </>))}
-            <li class="entry more recempty" id="recnone" hidden={shown.length > 0 || undefined}>
-              <p class="label">Nothing matches that. Clear the search, or pick another box.</p>
-            </li>
+                  </div>
+                </li>
+                      ))}
+                    </ul>
+                  </details>
+                ))
+              : <ul class="log">
+                  {reached.map(a => (
+                <li class="entry recrow" data-floor={a.floor ?? ''}
+                    hidden={!keeps(rowsFor.get(a.id)!, re, askedTiers) || undefined}
+                    data-find={rowsFor.get(a.id)!.find}
+                    data-tier={rowsFor.get(a.id)!.tier ?? ''}>
+                  <p class="stamp">
+                    <span class="bk">Bk {whenOf(a.at).book}{whenOf(a.at).chapter
+                      ? ` · Ch ${whenOf(a.at).chapter}` : whenOf(a.at).end ? ' · end' : ''}</span>
+                    {a.floor && (
+                      <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? '#717171'}`}>
+                        Floor {a.floor}
+                      </span>
+                    )}
+                    {a.box && /\bBox\b/i.test(a.box) && <span class="rec-box">{a.box}</span>}
+                  </p>
+                  <div class="entry-body">
+                    <h3>{a.name}</h3>
+                    {a.forWhat && <p class="rec-for">For {a.forWhat.replace(/^For\s+/i, '')}</p>}
+                    {(a.recipients as string[])?.length > 0 ? (
+                      <p class="rec-who">
+                        <span class="label">Earned by</span>
+                        {(a.recipients as string[]).map((id, i) => (
+                          <>{i > 0 && <span class="sep">·</span>}
+                          <a href={`/entity/${id}`}>{nameOf.get(id) ?? id}</a></>
+                        ))}
+                      </p>
+                    ) : a.everyone ? (
+                      <p class="rec-who"><span class="label">Earned by</span>
+                        <span class="rec-anyone">Every crawler</span></p>
+                    ) : null}
+                    <p class="rec-text">{a.text}</p>
+                    {a.reward && <p class="rec-reward"><span class="label">Reward</span>{a.reward}</p>}
+                    <p class="rec-src">
+                      {a.confidence === 'draft' && <span class="draft">unverified chapter</span>}
+                      {a.source && <a class="rec-srclink" href={a.source} rel="noopener nofollow"
+                                      target="_blank">Source</a>}
+                    </p>
+                  </div>
+                </li>
+                  ))}
+                </ul>}
+
+            <p class="label recnone" id="recnone" hidden={shown.length > 0 || undefined}>
+              Nothing matches that. Clear the search, or pick another box.
+            </p>
             {nextSealed && (
-              <li class="entry more">
-                <p class="label">{awards.length - reached.length} more on record, the next
-                  when {describeAt(nextSealed.sortKey)}.</p>
-              </li>
+              <p class="label recsealed">{awards.length - reachedAll.length} more on record, the next
+                when {describeAt(nextSealed.sortKey)}.</p>
             )}
-          </ul>}
+          </div>}
     </section>
   </section>
 </Layout>
@@ -477,12 +519,31 @@ const canUseLore = !gate.fresh || !gate.spoilers;
   .recfinder .finder-search { flex: 1 1 260px; }
   .rec-anyone { color: var(--color-grey-500); font-style: italic; }
   .recempty { margin: 0; }
-  /* A floor's number on its book's colour — the same mark / and /when use. */
-  .floorband { display: flex; align-items: center; gap: 10px;
-               background: var(--color-ink); padding: 14px 14px 10px; }
-  .floorband[hidden] { display: none; }
+  .recbody { display: flex; flex-direction: column; gap: 10px; }
+  .floorsec { border: 1px solid var(--color-line); background: var(--color-panel); }
+  .floorsec[hidden] { display: none; }
+  /* A floor's number on its book's colour — the same mark / and /when use. The
+     default triangle goes the same way the trophy case's does. */
+  .floorband { display: flex; align-items: center; gap: 12px; cursor: pointer;
+               list-style: none; padding: 12px 14px; }
+  .floorband::-webkit-details-marker { display: none; }
+  .floorband:hover { background: var(--color-raised); }
   .floorband-name { font-family: var(--font-display); text-transform: uppercase;
-                    font-weight: 700; font-size: var(--type-sect); color: var(--color-grey-100); }
+                    font-weight: 700; font-size: var(--type-sect); color: var(--color-grey-100);
+                    min-width: 0; overflow-wrap: anywhere; }
+  .floorband-n { margin-left: auto; color: var(--color-grey-500); flex: none; }
+  .floorband::after { content: '+'; font-family: var(--font-mono); color: var(--color-grey-700);
+                      flex: none; line-height: 1; }
+  .floorsec[open] > .floorband::after { content: '\2212'; }
+  .floorsec[open] > .floorband { border-bottom: 1px solid var(--color-line); }
+  .floorsec .log { background: transparent; gap: 1px; }
+  .recnone, .recsealed { margin: 0; padding: 12px 14px; background: var(--color-panel);
+                         border: 1px solid var(--color-line); }
+  .rec-src { display: flex; align-items: center; gap: 12px; margin: 12px 0 0; }
+  .rec-srclink { font-family: var(--font-mono); font-size: var(--type-label);
+                 letter-spacing: var(--ls-label); text-transform: uppercase;
+                 color: var(--color-grey-500); }
+  .rec-srclink:hover { color: var(--color-gold); }
   /* One filed award: the tier, what it was called, and what you claimed to
      have done. The citation and reward hang off the title attribute — the case
      is an index, and the card above is where a grant is read.
@@ -712,7 +773,7 @@ const canUseLore = !gate.fresh || !gate.spoilers;
   const none = document.querySelector<HTMLElement>('#recnone');
   const chips = [...document.querySelectorAll<HTMLAnchorElement>('.recfinder .chip-btn')];
   const rows = [...document.querySelectorAll<HTMLElement>('.recrow')];
-  const bands = [...document.querySelectorAll<HTMLElement>('.floorband')];
+  const sections = [...document.querySelectorAll<HTMLDetailsElement>('.floorsec')];
 
   function applyAwards() {
     if (!recq) return;
@@ -726,10 +787,17 @@ const canUseLore = !gate.fresh || !gate.spoilers;
       row.hidden = !ok;
       if (ok) { shown++; live.add(row.dataset.floor ?? ''); }
     }
-    /* A floor heading with nothing left under it is a heading over an empty
+    /* A floor section with nothing left under it is a heading over an empty
        stretch — the server hides those on the first paint and this keeps them
-       in step afterwards. */
-    for (const band of bands) band.hidden = !live.has(band.dataset.band ?? '');
+       in step afterwards. A section the reader collapsed stays collapsed; a
+       search that finds something inside a collapsed one opens it, or the hit
+       is invisible and the tally looks wrong. */
+    const filtering = !!re || tiers.size > 0;
+    for (const sec of sections) {
+      const has = live.has(sec.dataset.band ?? '');
+      sec.hidden = !has;
+      if (filtering && has) sec.open = true;
+    }
     if (none) none.hidden = shown > 0;
     if (tally) tally.textContent = `${shown} of ${tally.dataset.reached} shown`;
   }
