@@ -536,7 +536,11 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                       flex: none; line-height: 1; }
   .floorsec[open] > .floorband::after { content: '\2212'; }
   .floorsec[open] > .floorband { border-bottom: 1px solid var(--color-line); }
-  .floorsec .log { background: transparent; gap: 1px; }
+  /* Only the outer border is dropped — the section already draws one. The
+     background must stay: `.log` paints `--color-line` behind a 1px gap, and
+     those gaps ARE the divider lines between awards. Setting it transparent
+     here silently deleted every rule in the list. */
+  .floorsec .log { border: 0; }
   .recnone, .recsealed { margin: 0; padding: 12px 14px; background: var(--color-panel);
                          border: 1px solid var(--color-line); }
   .rec-src { display: flex; align-items: center; gap: 12px; margin: 12px 0 0; }

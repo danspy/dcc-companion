@@ -1235,6 +1235,14 @@ and a count. `<details>` for the third time in this page, and for the third
 time because the browser already knows how to do it: click, keyboard, screen
 readers and Find in Page all come free.
 
+**The row treatment did not change, and nearly did.** Nesting the list inside a
+section, I overrode `.log` with `background: transparent` — and that background
+is not decoration: `.log` paints `--color-line` behind a `gap: 1px`, so **the
+gaps are the divider lines between awards**. Setting it transparent silently
+deleted every rule in the list. Only the doubled outer border needed removing,
+because the section already draws one. When you nest a component-layer list,
+override the one thing that is actually duplicated and nothing else.
+
 Two things the filter has to do that are easy to miss:
 
 - **A section with nothing left under it is hidden**, on the server's first
