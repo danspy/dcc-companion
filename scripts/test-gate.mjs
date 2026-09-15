@@ -640,3 +640,26 @@ test('an award waits for everything it names, and is never listed early', () => 
   assert.ok(unpublished.errors.some(e => /not published/.test(e)),
     'an award in an unpublished book is still an error');
 });
+
+test('a floor number on an award the reader can see is a spoiler too', () => {
+  // The wiki files Loot — book 1, chapter 6 — under the Ninth Floor, which put
+  // "Bk 1 · Floor 9" on a stamp a book-1 reader could see. Structure leaks, not
+  // just prose: it is the same bug as the sealed beat stamps that read
+  // "Bk 7 · Fate · Floor 9".
+  const base = {
+    books: [{ id: 1, title: 'One', chapters: 47 }, { id: 7, title: 'Seven', chapters: 60 }],
+    floors: [
+      { id: 1, revealedAt: '1:2', recapAt: '1:29', premise: 'p' },
+      { id: 9, revealedAt: '7:1', recapAt: '7:end', premise: 'p' },
+    ],
+    entities: [],
+  };
+  const award = floor => lint({ ...base,
+    achievements: [{ id: 'loot', name: 'Loot', at: '1:6', floor, text: 'You got loot.' }] });
+
+  assert.ok(award(9).errors.some(e => /not reached until/.test(e)),
+    'a floor the reader has not arrived at may not be stamped');
+  assert.equal(award(1).errors.length, 0, 'the floor it is actually on is fine');
+  assert.ok(award(4).errors.some(e => /does not exist/.test(e)),
+    'and a floor that does not exist is a data error');
+});

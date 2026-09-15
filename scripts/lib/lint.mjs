@@ -250,6 +250,21 @@ export function lint({ books, floors, entities, achievements = [] }) {
       errors.push(`${where}: reveals in book ${bookOf(aAt)}, which is not published`);
     }
     if (!a.text) errors.push(`${where}: no text — a sealed row with nothing behind it`);
+
+    /* Structure leaks, not just prose. "Bk 1 · Floor 9" on an award a book-1
+       reader can see says the ninth floor exists and something happens on it,
+       without opening anything — the same bug as the sealed beat stamps that
+       read "Bk 7 · Fate · Floor 9". The wiki files Loot, earned in book 1
+       chapter 6, under the Ninth Floor, so this is not hypothetical. */
+    const onFloor = floors.find(f => f.id === a.floor);
+    if (onFloor) {
+      const fAt = at(onFloor.revealedAt, `floor ${onFloor.id}`);
+      if (fAt !== null && fAt > aAt) {
+        errors.push(`${where}: stamped floor ${a.floor}, which is not reached until "${onFloor.revealedAt}" — the number alone is a spoiler`);
+      }
+    } else if (a.floor != null) {
+      errors.push(`${where}: floor ${a.floor} does not exist`);
+    }
     if (!VALID_CONFIDENCE.has(a.confidence ?? 'draft')) {
       errors.push(`${where}: confidence must be "verified" or "draft"`);
     }

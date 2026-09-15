@@ -21,6 +21,7 @@
    goes through the API for raw wikitext.  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { parseAt } from './lib/gate.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -95,8 +96,11 @@ function clean(t) {
     .trim();
 }
 
+/* Infobox fields are separated by a newline-pipe, not by any pipe: splitting on
+   every "|" truncates a value at its first piped link, which turned
+   "[[Player Stats#Strength (STR)|Strength]]" into "[[Player Stats#Strength (STR)". */
 const field = (block, name) => {
-  const m = block.match(new RegExp(`\\|\\s*${name}\\s*=([^|}]*)`, 'i'));
+  const m = block.match(new RegExp(`\\n?\\|\\s*${name}\\s*=([\\s\\S]*?)(?=\\n\\s*\\||\\n?\\}\\}|$)`, 'i'));
   return m ? clean(m[1]) : '';
 };
 
@@ -104,6 +108,24 @@ const field = (block, name) => {
 function floorOf(text) {
   const m = clean(text).match(/(\w+)\s+Floor/i);
   return m ? ORDINALS[m[1].toLowerCase()] ?? null : null;
+}
+
+/* The floor a position is on: the last floor arrived at by then. Floors are
+   ordered and their spans touch at the edges — floor 7 leaves at 6:1 and floor
+   8 arrives at 6:1 — so "the latest one you have reached" is the only reading
+   that stays single-valued at a boundary.
+
+   This is derived rather than read off the page because the infobox floor is
+   not reliable: the wiki files the Loot achievement, awarded in book 1 chapter
+   6, under the Ninth Floor. Same class of error as its Gate of the Feral Gods
+   page filing three book-7 events under a "Book 4" heading — the citation is a
+   direct page reference and the heading is somebody's filing decision, so the
+   citation wins. A floor number attached to an award the reader can already see
+   is also a structural leak in its own right. */
+function floorAt(value, floors) {
+  let found = null;
+  for (const f of floors) if (parseAt(f.revealedAt) <= value) found = f.id;
+  return found;
 }
 
 /* The award proper, trimmed at a sentence boundary. The System's text opens
@@ -152,7 +174,7 @@ for (const [title, text] of Object.entries(pages)) {
     at: at ? `${at.book}:${at.chapter}` : null,
     book: at?.book ?? null,
     chapter: at?.chapter ?? null,
-    floor: floorOf(field(box, 'floor')),
+    boxFloor: floorOf(field(box, 'floor')),   // what the page claims; cross-check only
     for: field(box, 'for'),
     boxReward: field(box, 'reward'),
     quote,
@@ -169,17 +191,41 @@ for (const [title, text] of Object.entries(pages)) {
    recaps follow: a summary of a span unseals at the end of that span, never the
    start. Tagging it at the book instead would unseal it at chapter zero and
    hand a reader an eightieth-chapter award one chapter in. */
-const floorEnds = new Map(
-  JSON.parse(readFileSync(join(root, 'data/books.json'), 'utf8')).floors
-    .map(f => [f.id, f.recapAt]),
-);
+const bookFloors = JSON.parse(readFileSync(join(root, 'data/books.json'), 'utf8')).floors;
+const floorEnds = new Map(bookFloors.map(f => [f.id, f.recapAt]));
 
+const overridden = [];
 for (const r of rows) {
-  if (r.at) { r.confidence = 'verified'; continue; }
-  const end = floorEnds.get(r.floor);
-  r.at = end ?? null;
-  r.confidence = 'draft';
-  r.derived = end ? `floor ${r.floor} ends` : null;
+  if (r.at) {
+    r.confidence = 'verified';
+  } else {
+    /* No citation: fall back to the floor the page claims, gated at its end. */
+    const end = floorEnds.get(r.boxFloor);
+    r.at = end ?? null;
+    r.confidence = 'draft';
+    r.derived = end ? `floor ${r.boxFloor} ends` : null;
+  }
+  if (!r.at) { r.floor = null; continue; }
+
+  /* The page's floor is kept wherever it is *possible* — the wiki editors know
+     which floor a feat belongs to, and at a boundary (an award cited at 1:30,
+     the chapter floor 2 opens) their answer is better than arithmetic.
+
+     It is overridden only where it would leak: a floor the reader has not
+     arrived at by the time the award unseals. The wiki files Loot — book 1,
+     chapter 6 — under the Ninth Floor, which put "Floor 9" on a stamp a
+     book-1 reader can see. Same class of error as its Gate of the Feral Gods
+     page filing book-7 events under a "Book 4" heading. */
+  const value = parseAt(r.at);
+  const claimed = bookFloors.find(f => f.id === r.boxFloor);
+  if (claimed && parseAt(claimed.revealedAt) <= value) {
+    r.floor = r.boxFloor;
+  } else {
+    r.floor = floorAt(value, bookFloors);
+    if (r.boxFloor) {
+      overridden.push(`${r.name} (${r.at}): page says floor ${r.boxFloor}, which is not reached yet — using ${r.floor}`);
+    }
+  }
 }
 
 rows.sort((a, b) => (a.book ?? 99) - (b.book ?? 99) || (a.chapter ?? 0) - (b.chapter ?? 0)
@@ -210,6 +256,10 @@ const byBook = {};
 for (const r of usable) byBook[r.book] = (byBook[r.book] ?? 0) + 1;
 console.log('by book: ' + Object.entries(byBook).sort().map(([b, n]) => `bk${b} ${n}`).join('  '));
 console.log(`trimmed to a quotation: ${usable.filter(r => r.trimmed).length}`);
+if (overridden.length) {
+  console.log(`\n${overridden.length} page(s) claim a floor the reader has not reached; overridden:`);
+  for (const d of overridden) console.log('  ' + d);
+}
 if (problems.length) {
   console.log(`\n${problems.length} page(s) need a human:`);
   for (const p of problems.slice(0, 20)) console.log('  ' + p);

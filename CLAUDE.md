@@ -1085,6 +1085,24 @@ Three gate decisions:
 A fresh reader sees none of it and **is not told how many exist**, which is the
 same count rule `/who` follows.
 
+**A floor number on the stamp is structure, and structure leaks.** This shipped:
+the wiki files the *Loot* achievement — earned in **book 1, chapter 6** — under
+the Ninth Floor, so a book-1 reader got `Bk 1 · Floor 9` and was told the ninth
+floor exists. Exactly the bug the sealed beat stamps had when they read
+`Bk 7 · Fate · Floor 9`, arriving from the other direction.
+
+The fix is narrower than the first attempt, which is the part worth keeping.
+Deriving every floor from the citation "fixed" it and overrode the page **42**
+times, most of them boundary cases where the wiki was right — an award cited at
+`1:30` is the chapter floor 2 opens, and the editors' answer that it belongs to
+floor 1 beats the arithmetic. So the page's floor is kept wherever it is
+*possible*, and overridden only where it would leak: four awards claiming a
+floor the reader has not arrived at. **A lint rule now fails the build on any
+floor stamp that outruns its own award**, and on a floor that does not exist.
+
+That derivation is also why every award now has a floor at all: the ones showing
+only a book had an infobox with no floor field, and the citation supplies it.
+
 #### The blank box is the hard part, so there is a button
 
 Most people cannot produce a thing they did today on demand, and the placeholder
