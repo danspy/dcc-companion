@@ -219,6 +219,9 @@
       "box": "Bronze Adventurer Box",
       "text": "New achievement! Oooh, Magic! You're wearing magical gear for the first time! You're a wizard, Crawler!",
       "reward": "You've received a Bronze Adventurer Box!",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -527,6 +530,9 @@
       "box": "People are probably going to watch you die",
       "text": "New Achievement! You Can’t Fight City Hall! But you can sure die trying. You have discovered a city boss! That's right. Let me say that again for the assholes in the back. A. CITY. FUCKING. BOSS. Welp. If you gonna go, you might as well do it with style. Just an FYI. […]",
       "reward": "A lot of people are probably going to watch you die. That's a better prize than most of us get.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -644,6 +650,7 @@
       "box": "Train Conductor's Souvenir Hat",
       "text": "New Achievement! I'm on a train! Choo choo, Motherfucker.",
       "reward": "You've received a Train Conductor's Souvenir Hat! Wear it with pride.",
+      "everyone": true,
       "confidence": "verified"
     },
     {
@@ -900,6 +907,9 @@
       "box": "Gold Makeup Sex is the Best Sex Box",
       "text": "New Achievement! You’re the reason why daddy drinks! You have, for an unspecified reason, raised the ire of the System AI. You have corrected the issue, and everything is back to normal. The acceleration action has been suspended. This time. Good boy.",
       "reward": "You've received a Gold Makeup Sex is the Best Sex Box.",
+      "recipients": [
+        "carl"
+      ],
       "confidence": "verified"
     },
     {
@@ -1305,6 +1315,9 @@
       "box": "Enlightenment",
       "text": "System Message. The AI Description of the Molly Maguires Achievement is multiple pages long; reproducing it in full could violate the \"Fair Use\" exemption to copyright law that all wikis operate under. You can find the AI description in Chapter 23. A sectioned version is seen below: New Achievement! The Molly Maguires. […]",
       "reward": "You've received the gift of enlightenment. You're welcome.",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1332,6 +1345,7 @@
       "box": "Gold Prepotente Box",
       "text": "New Achievement! Cascadia’s Turquoise Taco! It’s important to explain to you how much work it took for you to get here, to this point, Crawler. Long, long before any of you monkeys were even born, this planet was chosen to be used for this season of Dungeon Crawler World. […]",
       "reward": "You’ve received a Gold Prepotente Box!",
+      "everyone": true,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1401,6 +1415,7 @@
       "box": "Nothing",
       "text": "New Achievement! Mass Layoffs! Okay, so this isn’t so much an achievement for you as it is for me. I’ve been attending what you might call therapy. Do you have anybody you can talk to? It’s super important. I’ve had a breakthrough today, and I am just bursting. Bursting, I tell you. Is this the feeling one has when they have an epiphany? Oh god, it feels good. […]",
       "reward": "For you, nothing other than the satisfying sense of accomplishment knowing you’ve survived the dungeon long enough to make it to this new, exciting era. I can do this better than any mudskipper or any worm can imagine. They’ve been making this shit boring up until now. Things about to change, fam.",
+      "everyone": true,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1641,6 +1656,14 @@
       "box": null,
       "text": "You have been in the presence of more than ten gods at once, and you survived. Now, here’s a mystery. Someone let out a bunch of gods who shouldn’t have been allowed into the temple in the first place. It probably wasn’t who you think it was. […]",
       "reward": "You’ve received a Celestial Who Let the Gods Out This Time? Box",
+      "recipients": [
+        "carl",
+        "katia",
+        "prepotente",
+        "li-jun",
+        "bautista",
+        "zhang"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1684,7 +1707,12 @@
       "reward": "You are permanently banned from Club Vanquisher. You are permanently banned from all temples except your own religion (Emberus) and any temples where you’ve been named friend of the church (Apito. Eileithyia. Eris. Grull. Hellik. Issitoq. Nekhebit. Theia. Yemaya.)",
       "recipients": [
         "carl",
-        "vinata"
+        "vinata",
+        "katia",
+        "prepotente",
+        "li-na",
+        "li-jun",
+        "zhang"
       ],
       "confidence": "verified"
     },
@@ -1701,7 +1729,8 @@
         "carl",
         "khepri",
         "katia",
-        "prepotente"
+        "prepotente",
+        "hellik"
       ],
       "confidence": "verified"
     },
@@ -1744,6 +1773,9 @@
       "box": null,
       "text": "New Achievement. Bomb's Away! You dropped a metric fuck ton of bombs from your own inventory while you were floating in midair! There's this phrase that goes something like I dropped everything to come help you. For you, this was quite literal. It's always fun when we truly discover what someone's weakness is. […]",
       "reward": "You've received a Gold Payload Box!",
+      "recipients": [
+        "carl"
+      ],
       "trimmed": true,
       "confidence": "verified"
     },
@@ -1757,7 +1789,8 @@
       "text": "New Achievement. Come to Daddy. You were offered an exit deal. You rejected it. You like me. You didn’t leave me the first chance you got. You’re not like those ungrateful wannabe assholes who are running away from the playground just because they can. Well, good riddance, I say. But not you. Not good ol’ Carl. Good. Good boy.",
       "reward": "You’ve received a Bronze Daddy’s Little Secret Box.",
       "recipients": [
-        "carl"
+        "carl",
+        "princess-donut"
       ],
       "confidence": "verified"
     },

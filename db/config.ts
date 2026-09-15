@@ -120,6 +120,9 @@ const Achievement = defineTable({
     /* Entity ids of whoever earned it. An award cannot surface before everyone
        it names has been met — the lint tightens its sortKey for that. */
     recipients: column.json({ default: [] }),
+    /* Some awards belong to nobody in particular — "awarded to all crawlers
+       upon entering the Fourth Floor". That is an answer, not a gap. */
+    everyone: column.boolean({ default: false }),
     trimmed: column.boolean({ default: false }),      // quoted in part, not whole
     confidence: column.text({ default: 'draft' }),    // verified | draft
   },

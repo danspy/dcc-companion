@@ -707,3 +707,26 @@ test('an award waits for whoever earned it', () => {
     'someone not yet met does — it waits for the last of them');
   assert.ok(award(['nobody']).errors.some(e => /not an entity/.test(e)));
 });
+
+test('the award filter matches at word starts, and the chips are a tier ladder', async () => {
+  const { findRe, keeps, tierOf, BOX_TIERS } = await import('../src/lib/awards.ts');
+  const row = { find: 'crazy cat lady entering the dungeon with a cat carl', tier: 'Bronze' };
+
+  assert.ok(keeps(row, findRe('cat'), new Set()), 'a word start matches');
+  assert.ok(keeps(row, findRe('Carl'), new Set()), 'case does not matter');
+  assert.ok(!keeps(row, findRe('razy'), new Set()),
+    'mid-word does not — "ran" must not find "Tran", the line /who draws');
+  assert.equal(findRe('   '), null, 'an empty query filters nothing');
+
+  assert.ok(keeps(row, null, new Set(['Bronze'])));
+  assert.ok(!keeps(row, null, new Set(['Gold'])), 'a chip excludes other tiers');
+  assert.ok(!keeps({ find: 'x', tier: null }, null, new Set(['Bronze'])),
+    'a payout that is not a box matches no tier chip');
+
+  // The reward field is only sometimes a box — often it is the joke.
+  assert.equal(tierOf('Bronze Pet Box'), 'Bronze');
+  assert.equal(tierOf('Ha.'), null);
+  assert.equal(tierOf(null), null);
+  assert.deepEqual([...BOX_TIERS], ['Bronze','Silver','Gold','Platinum','Legendary','Celestial'],
+    'rarest last, the ladder the books use');
+});

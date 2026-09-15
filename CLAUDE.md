@@ -1159,6 +1159,24 @@ three come out of the same pull:
 - **Sort** — When, Latest, Name, Floor, Box — using the `.switch` component the
   `/when` view picker already uses, because it is the same gesture.
 
+The first pass found 131 of 146 and the gap was **my verb list, not the
+source**: the wiki says *"Carl got the Molly Maguires achievement"*, *"issued to
+Carl after fleeing"*, *"distributed to crawlers who discover a City Boss"* —
+all receive-verbs, none of them "receives". Widened, plus two more readings:
+
+- **Some awards belong to nobody in particular.** *"awarded to all crawlers upon
+  entering the Fourth Floor"* is an answer, not a gap; three render as
+  **Every crawler**.
+- **Where no verb attaches, the subject of the sentence is the recipient.**
+  *"Carl discovered the Level 85 Elite City Boss, Ringmaster Grimaldi"* is
+  Carl's award, not Grimaldi's — so it takes the **first** cast name in the
+  first sentence naming anyone. Requiring a single name declines it; taking
+  every name credits the boss.
+
+That is 137 named + 3 everyone. **The remaining six stay blank on purpose**: the
+source genuinely does not say who earned them, and inventing a recipient is the
+one thing the curation rules here forbid.
+
 Two rules this inherits rather than reinvents:
 
 - **An award waits for whoever earned it.** The name is printed on the row, so
@@ -1175,6 +1193,62 @@ Two rules this inherits rather than reinvents:
 one.** Sorting by name and then taking the last row as "the next one you will
 reach" would be nonsense; the count and the *"next when you reach…"* line come
 from `sortKey` whatever the reader is sorting by.
+
+#### One number orders the row, and the same number labels it
+
+Reported as "the achievements are not in timeline order, floors 3 and 4 mixed",
+and it was two bugs wearing one coat.
+
+**The first: the list sorted by `sortKey` while the row was stamped with its own
+`at`.** Those are different numbers for eleven awards — `sortKey` is pushed
+later when an award names somebody the reader has not met, so it waits for them.
+A floor-1 award therefore sat in the middle of the floor-2 ones, stamped `Bk 1`.
+Ordering `reached` by `at` leaks nothing, because every row in it is already
+past the gate; `sortKey` still decides what is *sealed*, which is the only
+question it answers.
+
+**The second is not a bug at all, which is why it needed a design answer rather
+than a fix.** The page's floor and the chapter citation disagree for **42**
+awards — almost all by exactly one floor, and always the same direction: the
+award is earned at the close of a floor and written about in the chapter the
+next one opens. The wiki's floor is right about *where*; the citation is right
+about *when*. A flat chronological list shows both and reads as a shuffled deck.
+
+So **"When" bands by floor** — the floor's number on its book's colour, the
+`.floormark` `/` and `/when` already use — and runs chronologically inside each
+band. Nothing is reordered dishonestly and the wobble disappears, because the
+two facts are now on different axes. There is no separate "Floor" sort any
+more; that is what "When" is.
+
+A band whose rows are all filtered out is hidden, on the server and again in
+`refresh`, or a heading stands over an empty stretch.
+
+#### The award filter is `/who`'s, and safe for the same reason
+
+A search box, six box-tier chips and a tally, in the same `.finder` panel
+`/who` and `/when` use. `/` focuses the box, Escape clears it.
+
+**A sealed award is not in the document at all** — it has no row, no name and no
+`data-find` — so no query can surface one. There is no second copy of the data
+to gate and therefore no second place to get the gate wrong.
+
+Four details carried over rather than rediscovered:
+
+- **One predicate.** `findRe()` and `keeps()` live in `src/lib/awards.ts`, and
+  the page and its script both import them. Two copies would let the first paint
+  and the first keystroke disagree about what matches.
+- **Rendered, not only scripted.** `?q=` and `?box=` are read on the server and
+  the rows arrive already stamped `hidden`, the box carrying its value and the
+  chips pressed. `npm run smoke` asserts the stamps rather than trusting them.
+- **Hiding, never omitting**, so clearing the box brings a row back.
+- **Every count is of awards the reader has reached.** A chip reading
+  "Celestial 9" on a book-1 page would say how many are still coming.
+
+The chips are real links that work with no JavaScript and toggle in place with
+it; the address write is best-effort and wrapped, because the view is already
+correct and the address bar is a convenience. And **every link that reloads this
+page carries the whole setup** — sort, query and chips — or switching sort would
+silently drop the filter.
 
 #### The blank box is the hard part, so there is a button
 

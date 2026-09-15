@@ -174,7 +174,17 @@ const cast = ['characters']
     .filter(n => n.length >= 4)
     .map(name => ({ id: e.id, name, re: new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`) })));
 
-const RECEIVES = /\b(?:receives?|received|receiving|earns?|earned|awarded to|is awarded|are awarded|both receive)\b/i;
+/* The first pass missed a third of these by listing too few verbs. The wiki
+   says "Carl got the Molly Maguires achievement", "issued to Carl after fleeing",
+   "distributed to crawlers who discover a City Boss" — all receive-verbs, none
+   of them "receives". */
+const RECEIVES =
+  /\b(?:receives?|received|receiving|earns?|earned|gets?|got|unlocks?|unlocked|awarded|issued|distributed|given|granted)\b/i;
+
+/* An award that belongs to nobody in particular. "awarded to all crawlers upon
+   entering the Fourth Floor" is not missing a recipient — the answer is that
+   there isn't one, and saying so is better than leaving the row blank. */
+const EVERYONE = /\b(?:all crawlers|every crawler|any crawler|each crawler|all of the crawlers)\b/i;
 
 function recipientsIn(text) {
   const found = new Map();
@@ -182,7 +192,30 @@ function recipientsIn(text) {
     if (!RECEIVES.test(sentence)) continue;
     for (const c of cast) if (c.re.test(sentence)) found.set(c.id, c.name);
   }
-  return [...found.keys()];
+  if (found.size) return { recipients: [...found.keys()], everyone: false };
+
+  if (EVERYONE.test(text)) return { recipients: [], everyone: true };
+
+  /* Nothing with a receive-verb attached. The page still describes the deed,
+     and in English the person who did it is the subject — so take the FIRST
+     cast name in the first sentence that names anyone. "Carl discovered the
+     Level 85 Elite City Boss, Ringmaster Grimaldi" is Carl's award, not
+     Grimaldi's; requiring a single name would decline it, and taking every
+     name would credit the boss.
+
+     Where the prose names nobody at all — "an achievement awarded for
+     fumbling" — the answer is that the source does not say, and a blank row is
+     the honest one. Nothing here is invented. */
+  for (const sentence of text.split(/(?<=[.!?])\s+/)) {
+    let first = null;
+    for (const c of cast) {
+      const at = sentence.search(c.re);
+      if (at !== -1 && (first === null || at < first.at)) first = { at, id: c.id };
+    }
+    if (first) return { recipients: [first.id], everyone: false };
+  }
+
+  return { recipients: [], everyone: false };
 }
 
 const titles = (await categoryMembers('Achievements'))
@@ -216,7 +249,10 @@ for (const [title, text] of Object.entries(pages)) {
     book: at?.book ?? null,
     chapter: at?.chapter ?? null,
     boxFloor: floorOf(field(box, 'floor')),   // what the page claims; cross-check only
-    recipients: recipientsIn(`${lede} ${story}`),
+    ...(() => {
+      const r = recipientsIn(`${lede} ${story}`);
+      return { recipients: r.recipients, everyone: r.everyone };
+    })(),
     for: field(box, 'for'),
     boxReward: field(box, 'reward'),
     quote,
@@ -286,6 +322,7 @@ const curated = rows
     for: r.for || null, box: r.boxReward || null,
     text: r.quote, reward: r.reward || null,
     recipients: r.recipients.length ? r.recipients : undefined,
+    everyone: r.everyone || undefined,
     trimmed: r.trimmed || undefined,
     confidence: r.confidence,
     derived: r.derived || undefined,
@@ -299,7 +336,9 @@ const byBook = {};
 for (const r of usable) byBook[r.book] = (byBook[r.book] ?? 0) + 1;
 console.log('by book: ' + Object.entries(byBook).sort().map(([b, n]) => `bk${b} ${n}`).join('  '));
 console.log(`trimmed to a quotation: ${usable.filter(r => r.trimmed).length}`);
-console.log(`with a named recipient: ${usable.filter(r => r.recipients.length).length}`);
+console.log(`with a named recipient: ${usable.filter(r => r.recipients.length).length}` +
+  `, awarded to every crawler: ${usable.filter(r => r.everyone).length}` +
+  `, still unattributed: ${usable.filter(r => !r.recipients.length && !r.everyone).length}`);
 if (overridden.length) {
   console.log(`\n${overridden.length} page(s) claim a floor the reader has not reached; overridden:`);
   for (const d of overridden) console.log('  ' + d);

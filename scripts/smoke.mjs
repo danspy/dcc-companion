@@ -45,7 +45,11 @@ const ROUTES = [
                     'id="surprise"', 'class="log"', 'class="stamp"', 'rec-who']],
   /* The order is rendered by the server, not chosen by a script: a shared link
      and a reader with no JavaScript both have to land on the right one. */
-  ['/achievement?sort=name', ['class="switch recsort"', 'aria-current="true"', 'rec-who']],
+  ['/achievement?sort=name', ['recsort', 'aria-current="true"', 'rec-who']],
+  /* The filter is stamped by the server too: a row that does not match arrives
+     already hidden, so a reader with no JavaScript never sees all 146 first. */
+  ['/achievement?q=donut&box=Silver',
+   ['recrow"', ' hidden data-find=', 'aria-pressed="true"', 'id="rectally"', ' shown']],
 ];
 
 let failed = 0;

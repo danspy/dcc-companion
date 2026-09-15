@@ -14,12 +14,13 @@
 import Layout from '../layouts/Layout.astro';
 import AchievementCard from '../components/AchievementCard.astro';
 import { readGate, getEntities, getFloors, getAchievements, taglineFor } from '../lib/content';
-import { reveals, describeAt } from '../lib/spoiler';
+import { reveals, describeAt, parseAt } from '../lib/spoiler';
 import {
   grantAchievement, SystemOffline, MAX_DEED,
   type Grant, type LoreEntry,
 } from '../lib/achievement';
 import { SUGGESTIONS } from '../lib/deeds';
+import { BOX_TIERS, tierOf, findRe, keeps } from '../lib/awards';
 
 /* A public endpoint that costs a model call needs a ceiling. In memory and per
    process, which is all this needs: there is one process, and a limiter that
@@ -139,11 +140,12 @@ const nextSealed = awards.find(a => gate.frontier < a.sortKey);
    /when's filter follows: a reload, a shared link or a reader with no
    JavaScript are all real navigations, and an order held only in a variable is
    thrown away by them. */
+/* "When" groups by floor; the rest are flat. There is no separate "Floor"
+   sort because that is what "When" already is — see the banding below. */
 const SORTS = [
   { key: 'when', label: 'When' },
   { key: 'recent', label: 'Latest' },
   { key: 'name', label: 'Name' },
-  { key: 'floor', label: 'Floor' },
   { key: 'box', label: 'Box' },
 ] as const;
 const BOX_RANK = ['bronze', 'silver', 'gold', 'platinum', 'legendary', 'celestial'];
@@ -152,18 +154,90 @@ const boxRank = (box: string | null) => {
   return i === -1 ? BOX_RANK.length : i;
 };
 
+/* The filter is read on the server and the rows arrive already stamped, the
+   same rule /when's filter follows: a reload, a shared link or a reader with no
+   JavaScript are all real navigations, and a filter applied only by a script
+   paints every row first. */
+const q = (Astro.url.searchParams.get('q') ?? '').slice(0, 60);
+const askedTiers = new Set(
+  (Astro.url.searchParams.get('box') ?? '').split(',').filter(t => BOX_TIERS.includes(t as never)),
+);
+const re = findRe(q);
+
 const askedSort = Astro.url.searchParams.get('sort') ?? 'when';
 const sort = SORTS.some(s => s.key === askedSort) ? askedSort : 'when';
 
+/* Order by when it HAPPENED, not by when it unseals.
+   
+   These are two different numbers for eleven awards: `sortKey` is pushed later
+   when an award names somebody the reader has not met, so it waits for them.
+   Sorting by that while stamping the row with its own tag put a floor-1 award
+   in the middle of the floor-2 ones and read as a broken timeline, which is
+   exactly what it was.
+   
+   Sorting `reached` chronologically leaks nothing, because every row in it is
+   already visible — the gate has been applied. The sealed tail below is still
+   counted from `sortKey`, which is the number that decides what is sealed. */
+const atKey = (a: { at: string }) => parseAt(a.at);
+
 const reached = [...reachedAll].sort((a, b) => {
   switch (sort) {
-    case 'recent': return b.sortKey - a.sortKey || a.name.localeCompare(b.name);
+    case 'recent': return atKey(b) - atKey(a) || a.name.localeCompare(b.name);
     case 'name': return a.name.localeCompare(b.name);
-    case 'floor': return (a.floor ?? 99) - (b.floor ?? 99) || a.sortKey - b.sortKey;
-    case 'box': return boxRank(a.box) - boxRank(b.box) || a.sortKey - b.sortKey;
-    default: return a.sortKey - b.sortKey || a.name.localeCompare(b.name);
+    case 'box': return boxRank(a.box) - boxRank(b.box) || atKey(a) - atKey(b);
+    /* Floor first, then chronological inside it. The two numbers genuinely
+       disagree for 42 awards, almost all by one floor and always in the same
+       direction: the award is earned at the close of a floor and written about
+       in the chapter the next one opens. The page's floor is right about
+       *where*, the citation is right about *when*, and a flat chronological
+       list makes that look like a shuffled deck. Banding by floor shows both. */
+    default: return (a.floor ?? 99) - (b.floor ?? 99) || atKey(a) - atKey(b)
+      || a.name.localeCompare(b.name);
   }
 });
+
+/* Searchable text per row, built once. Recipients are resolved to names here
+   so a reader can search "Donut" and find what she earned. */
+const rowsFor = new Map(reached.map(a => {
+  const who = ((a.recipients ?? []) as string[]).map(id => nameOf.get(id) ?? id).join(' ');
+  return [a.id, {
+    find: `${a.name} ${a.forWhat ?? ''} ${a.text} ${a.reward ?? ''} ${who}`.toLowerCase(),
+    tier: tierOf(a.box),
+  }];
+}));
+const shown = reached.filter(a => keeps(rowsFor.get(a.id)!, re, askedTiers));
+const shownIds = new Set(shown.map(a => a.id));
+
+/* The floor each award opens a new band on, when the list is banded. A band
+   with nothing visible under it is hidden, or a filter leaves a heading
+   standing over an empty stretch. */
+const banded = sort === 'when';
+const bandAt = new Map<string, number>();
+const bandHasRows = new Map<number, boolean>();
+if (banded) {
+  let last: number | null = null;
+  for (const a of reached) {
+    const f = a.floor ?? 0;
+    if (f !== last) { bandAt.set(a.id, f); last = f; }
+    if (shownIds.has(a.id)) bandHasRows.set(f, true);
+  }
+}
+const floorName = new Map(floorRows.map(f => [f.id, f.name]));
+const floorInk = new Map(floorRows.map(f => [f.id, f.ink]));
+
+/* Every count is of awards the reader has reached. A chip reading "Celestial 9"
+   on a book-1 page would say how many are still coming, which is the structural
+   leak the sealed beat stamps were. */
+const tierCounts = new Map(BOX_TIERS.map(t => [t, reached.filter(a => tierOf(a.box) === t).length]));
+
+/** Carries the whole of the reader's setup on every link that reloads this page. */
+const withParams = (over: Record<string, string>) => {
+  const p = new URLSearchParams();
+  const next = { sort, q, box: [...askedTiers].join(','), ...over };
+  for (const [k, v] of Object.entries(next)) if (v && !(k === 'sort' && v === 'when')) p.set(k, v);
+  const s = p.toString();
+  return `/achievement${s ? `?${s}` : ''}#onrecord`;
+};
 
 /** "1:2" -> { book: 1, chapter: 2 }. `:end` and a bare book have no chapter. */
 function whenOf(at: string) {
@@ -233,21 +307,60 @@ const canUseLore = !gate.fresh || !gate.spoilers;
         your position catches up — the name of an award is a spoiler on its own.</p>
 
       {reached.length > 1 && (
-        <nav class="switch recsort" aria-label="Sort the awards">
-          <span class="label">Sort</span>
-          {SORTS.map(o => (
-            <a href={`/achievement?sort=${o.key}#onrecord`}
-               aria-current={o.key === sort ? 'true' : undefined}>{o.label}</a>
-          ))}
-        </nav>
+        <div class="finder recfinder" id="recfinder">
+          <div class="finder-row">
+            <label class="finder-search">
+              <span class="vh">Search the awards</span>
+              <input type="search" id="recq" name="q" value={q} autocomplete="off"
+                     placeholder="Search awards, or who earned them" />
+              <kbd>/</kbd>
+            </label>
+            <span class="tally label" id="rectally" data-reached={reached.length}>
+              {shown.length} of {reached.length} shown
+            </span>
+          </div>
+          <div class="finder-row">
+            <div class="finder-chips">
+              {BOX_TIERS.map(t => (
+                <a class="chip-btn" data-tier={t}
+                   href={withParams({ box: (askedTiers.has(t)
+                     ? [...askedTiers].filter(x => x !== t)
+                     : [...askedTiers, t]).join(',') })}
+                   aria-pressed={askedTiers.has(t) ? 'true' : 'false'}>
+                  {t} <span class="n">{tierCounts.get(t)}</span>
+                </a>
+              ))}
+            </div>
+            <nav class="switch recsort push-end" aria-label="Sort the awards">
+              <span class="label">Sort</span>
+              {SORTS.map(o => (
+                <a href={withParams({ sort: o.key })}
+                   aria-current={o.key === sort ? 'true' : undefined}>{o.label}</a>
+              ))}
+            </nav>
+          </div>
+        </div>
       )}
 
       {reached.length === 0
         ? <p class="sys"><b>*** Nothing on record ***</b>You have not reached a single award yet,
             crawler. Tell the dungeon where you are and the file opens.</p>
         : <ul class="log">
-            {reached.map(a => (
-              <li class="entry">
+            {reached.map(a => (<>
+              {bandAt.has(a.id) && (
+                <li class="floorband" data-band={bandAt.get(a.id)}
+                    hidden={!bandHasRows.get(bandAt.get(a.id)!) || undefined}>
+                  <span class="floormark"
+                        style={`background:${floorAccent.get(bandAt.get(a.id)!) ?? '#717171'};color:${floorInk.get(bandAt.get(a.id)!) ?? '#0e0e0e'}`}>
+                    {String(bandAt.get(a.id)).padStart(2, '0')}
+                  </span>
+                  <span class="floorband-name">{floorName.get(bandAt.get(a.id)!) ?? 'Floor'}</span>
+                </li>
+              )}
+              <li class="entry recrow" data-floor={a.floor ?? ''}
+                  hidden={!keeps(rowsFor.get(a.id)!, re, askedTiers) || undefined}
+                  data-find={rowsFor.get(a.id)!.find}
+                  data-tier={rowsFor.get(a.id)!.tier ?? ''}>
                 <p class="stamp">
                   {(() => {
                     /* When it happened, from its own tag — not from sortKey,
@@ -274,7 +387,7 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                   {/* Who earned it. The award cannot surface before its
                       recipients have been met — the lint holds it back — so
                       every name here is one the reader already knows. */}
-                  {(a.recipients as string[])?.length > 0 && (
+                  {(a.recipients as string[])?.length > 0 ? (
                     <p class="rec-who">
                       <span class="label">Earned by</span>
                       {(a.recipients as string[]).map((id, i) => (
@@ -282,13 +395,19 @@ const canUseLore = !gate.fresh || !gate.spoilers;
                         <a href={`/entity/${id}`}>{nameOf.get(id) ?? id}</a></>
                       ))}
                     </p>
-                  )}
+                  ) : a.everyone ? (
+                    <p class="rec-who"><span class="label">Earned by</span>
+                      <span class="rec-anyone">Every crawler</span></p>
+                  ) : null}
                   <p class="rec-text">{a.text}</p>
                   {a.reward && <p class="rec-reward"><span class="label">Reward</span>{a.reward}</p>}
                   {a.confidence === 'draft' && <span class="draft">unverified chapter</span>}
                 </div>
               </li>
-            ))}
+            </>))}
+            <li class="entry more recempty" id="recnone" hidden={shown.length > 0 || undefined}>
+              <p class="label">Nothing matches that. Clear the search, or pick another box.</p>
+            </li>
             {nextSealed && (
               <li class="entry more">
                 <p class="label">{awards.length - reached.length} more on record, the next
@@ -351,8 +470,19 @@ const canUseLore = !gate.fresh || !gate.spoilers;
              display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
   .rec-who .label { flex: none; }
   .rec-who .sep { color: var(--color-grey-700); }
-  .recsort { margin: 0 0 18px; align-items: baseline; gap: 6px; }
+  .recsort { align-items: baseline; gap: 6px; flex-wrap: wrap; }
   .recsort .label { margin-right: 4px; }
+  .recfinder { padding: 14px 16px; margin-bottom: 18px; }
+  .recfinder .finder-row + .finder-row { margin-top: 12px; }
+  .recfinder .finder-search { flex: 1 1 260px; }
+  .rec-anyone { color: var(--color-grey-500); font-style: italic; }
+  .recempty { margin: 0; }
+  /* A floor's number on its book's colour — the same mark / and /when use. */
+  .floorband { display: flex; align-items: center; gap: 10px;
+               background: var(--color-ink); padding: 14px 14px 10px; }
+  .floorband[hidden] { display: none; }
+  .floorband-name { font-family: var(--font-display); text-transform: uppercase;
+                    font-weight: 700; font-size: var(--type-sect); color: var(--color-grey-100); }
   /* One filed award: the tier, what it was called, and what you claimed to
      have done. The citation and reward hang off the title attribute — the case
      is an index, and the card above is where a grant is read.
@@ -567,4 +697,66 @@ const canUseLore = !gate.fresh || !gate.spoilers;
   });
 
   renderCase();
+
+  /* ---- the award filter -------------------------------------------------
+     Pure enhancement: the server has already stamped every row, so this only
+     saves a round trip. It imports the same predicate the page used, because
+     two copies would let the first paint and the first keystroke disagree.
+
+     Everything stays rendered and is hidden, never omitted — a row that was
+     never written could not come back when the box is cleared. */
+  const { findRe, keeps } = await import('../lib/awards');
+
+  const recq = document.querySelector<HTMLInputElement>('#recq');
+  const tally = document.querySelector<HTMLElement>('#rectally');
+  const none = document.querySelector<HTMLElement>('#recnone');
+  const chips = [...document.querySelectorAll<HTMLAnchorElement>('.recfinder .chip-btn')];
+  const rows = [...document.querySelectorAll<HTMLElement>('.recrow')];
+  const bands = [...document.querySelectorAll<HTMLElement>('.floorband')];
+
+  function applyAwards() {
+    if (!recq) return;
+    const re = findRe(recq.value);
+    const tiers = new Set(chips.filter(c => c.getAttribute('aria-pressed') === 'true')
+      .map(c => c.dataset.tier!));
+    let shown = 0;
+    const live = new Set<string>();
+    for (const row of rows) {
+      const ok = keeps({ find: row.dataset.find ?? '', tier: (row.dataset.tier || null) as never }, re, tiers);
+      row.hidden = !ok;
+      if (ok) { shown++; live.add(row.dataset.floor ?? ''); }
+    }
+    /* A floor heading with nothing left under it is a heading over an empty
+       stretch — the server hides those on the first paint and this keeps them
+       in step afterwards. */
+    for (const band of bands) band.hidden = !live.has(band.dataset.band ?? '');
+    if (none) none.hidden = shown > 0;
+    if (tally) tally.textContent = `${shown} of ${tally.dataset.reached} shown`;
+  }
+
+  recq?.addEventListener('input', applyAwards);
+
+  /* The chips are real links, so no JavaScript still filters. With it, toggle
+     in place and keep the address in step — best-effort, exactly as /when
+     learned: the view is already correct, the address bar is a convenience. */
+  for (const chip of chips) {
+    chip.addEventListener('click', event => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+      event.preventDefault();
+      chip.setAttribute('aria-pressed',
+        chip.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      applyAwards();
+      try { history.replaceState(null, '', chip.href.replace(/#.*$/, '')); } catch { /* quota */ }
+    });
+  }
+
+  document.addEventListener('keydown', event => {
+    if (event.key === '/' && document.activeElement !== recq && document.activeElement !== input) {
+      event.preventDefault();
+      recq?.focus();
+    } else if (event.key === 'Escape' && document.activeElement === recq && recq) {
+      recq.value = '';
+      applyAwards();
+    }
+  });
 </script>

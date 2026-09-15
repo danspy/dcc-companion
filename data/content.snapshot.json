@@ -17547,6 +17547,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17564,6 +17565,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17580,6 +17582,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17596,6 +17599,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17610,6 +17614,7 @@
       "text": "New achievement! Trailblazing Crazy Cat Lady. You are the first crawler to have entered to the World Dungeon accompanied by a cat. You must really love that thing. Too bad you're both probably going to die a horrible death at any moment. Or maybe not. Look at the prize you just received!",
       "reward": "You've received a Legendary Pet Box!",
       "recipients": [],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17626,6 +17631,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17642,6 +17648,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17659,6 +17666,7 @@
         "carl",
         "mordecai"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17675,6 +17683,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17691,6 +17700,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17707,6 +17717,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17723,6 +17734,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17739,6 +17751,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17752,7 +17765,10 @@
       "box": "Bronze Adventurer Box",
       "text": "New achievement! Oooh, Magic! You're wearing magical gear for the first time! You're a wizard, Crawler!",
       "reward": "You've received a Bronze Adventurer Box!",
-      "recipients": [],
+      "recipients": [
+        "carl"
+      ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17769,6 +17785,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17786,6 +17803,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -17803,6 +17821,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17821,6 +17840,7 @@
         "princess-donut",
         "frank-and-maggie"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17837,6 +17857,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17853,6 +17874,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -17869,6 +17891,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -17885,6 +17908,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17904,6 +17928,7 @@
         "imani",
         "agatha"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17921,6 +17946,7 @@
         "carl",
         "agatha"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17937,6 +17963,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17953,6 +17980,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17970,6 +17998,7 @@
         "carl",
         "elle-mcgibbons"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -17988,6 +18017,7 @@
         "princess-donut",
         "krakaren"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18004,6 +18034,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18021,6 +18052,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18038,6 +18070,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18054,6 +18087,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18071,6 +18105,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -18085,6 +18120,7 @@
       "text": "New achievement! PETA Enthusiast! You somehow managed to remove the hostility of an aggravated, non-sapient enemy. That enemy then fought against other enemies to your benefit. The ghost of Steve Irwin smiles down upon you.",
       "reward": "I SAID THE GHOST OF STEVE IRWIN SMILES DOWN UPON YOU.",
       "recipients": [],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18099,6 +18135,7 @@
       "text": "You have discovered a pet reward room. From caterpillars who secrete vodka to basilisks who can turn mobs to stone, a good pet can make the difference between survival and the end of the road. Just remember what happened with Harambe. There ain't no zookeepers around to shoot the monster's ass if you bite off more than you can chew.",
       "reward": "You have a key. It opens only one cage. Figure it out, Einstein.",
       "recipients": [],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18115,6 +18152,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18133,6 +18171,7 @@
         "princess-donut",
         "signet"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -18151,6 +18190,7 @@
         "signet",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18164,7 +18204,10 @@
       "box": "People are probably going to watch you die",
       "text": "New Achievement! You Can’t Fight City Hall! But you can sure die trying. You have discovered a city boss! That's right. Let me say that again for the assholes in the back. A. CITY. FUCKING. BOSS. Welp. If you gonna go, you might as well do it with style. Just an FYI. […]",
       "reward": "A lot of people are probably going to watch you die. That's a better prize than most of us get.",
-      "recipients": [],
+      "recipients": [
+        "carl"
+      ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -18182,6 +18225,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18198,6 +18242,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18214,6 +18259,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18231,6 +18277,7 @@
         "carl",
         "miss-quill"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18245,6 +18292,7 @@
       "text": "New Achievement! I'm on a train! Choo choo, Motherfucker.",
       "reward": "You've received a Train Conductor's Souvenir Hat! Wear it with pride.",
       "recipients": [],
+      "everyone": true,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18261,6 +18309,7 @@
       "recipients": [
         "quan-ch"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18278,6 +18327,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18294,6 +18344,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18311,6 +18362,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18327,6 +18379,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18343,6 +18396,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18360,6 +18414,7 @@
         "carl",
         "fire-brandy"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18376,6 +18431,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18392,6 +18448,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18410,6 +18467,7 @@
         "miriam-dom",
         "lucia-mar"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18426,6 +18484,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18444,6 +18503,7 @@
         "bautista",
         "miss-quill"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -18460,6 +18520,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18477,6 +18538,7 @@
         "carl",
         "miss-quill"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18494,6 +18556,7 @@
         "carl",
         "grull"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18510,6 +18573,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18527,6 +18591,7 @@
         "carl",
         "grull"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18544,6 +18609,7 @@
         "carl",
         "grull"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18561,6 +18627,7 @@
         "carl",
         "grull"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -18577,6 +18644,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18593,6 +18661,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18609,6 +18678,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18622,7 +18692,10 @@
       "box": "Gold Makeup Sex is the Best Sex Box",
       "text": "New Achievement! You’re the reason why daddy drinks! You have, for an unspecified reason, raised the ire of the System AI. You have corrected the issue, and everything is back to normal. The acceleration action has been suspended. This time. Good boy.",
       "reward": "You've received a Gold Makeup Sex is the Best Sex Box.",
-      "recipients": [],
+      "recipients": [
+        "carl"
+      ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18640,6 +18713,7 @@
         "carl",
         "bonnie"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18656,6 +18730,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18672,6 +18747,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18688,6 +18764,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18702,6 +18779,7 @@
       "text": "New Achievement! Flex in the City! You killed a city boss with the participation of five or less crawlers. That is some serious badassery right there. Color me impressed. Now go do it again with a Province Boss.",
       "reward": "You already got a boss box. Go open that instead.",
       "recipients": [],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18719,6 +18797,7 @@
         "carl",
         "katia"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18735,6 +18814,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18751,6 +18831,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18768,6 +18849,7 @@
         "carl",
         "quan-ch"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18784,6 +18866,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "draft"
     },
@@ -18801,6 +18884,7 @@
         "carl",
         "emberus"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18817,6 +18901,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18833,6 +18918,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18849,6 +18935,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18866,6 +18953,7 @@
         "carl",
         "vrah"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18883,6 +18971,7 @@
         "carl",
         "vrah"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -18899,6 +18988,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -18915,6 +19005,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18931,6 +19022,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "draft"
     },
@@ -18948,6 +19040,7 @@
         "carl",
         "diwata"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "draft"
     },
@@ -18964,6 +19057,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18980,6 +19074,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -18997,6 +19092,7 @@
         "carl",
         "vrah"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -19013,6 +19109,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -19031,6 +19128,7 @@
         "princess-donut",
         "samantha"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -19048,6 +19146,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -19066,6 +19165,7 @@
         "lucia-mar",
         "diwata"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "draft"
     },
@@ -19082,6 +19182,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -19098,6 +19199,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19115,6 +19217,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19132,6 +19235,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19148,6 +19252,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19165,6 +19270,7 @@
         "carl",
         "diwata"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19182,6 +19288,7 @@
         "carl",
         "imogen"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19199,6 +19306,7 @@
         "carl",
         "prepotente"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19215,6 +19323,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19231,6 +19340,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19248,6 +19358,7 @@
         "carl",
         "bomo"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19268,6 +19379,7 @@
         "asojano",
         "anton"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19284,6 +19396,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19300,6 +19413,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19316,6 +19430,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19329,7 +19444,10 @@
       "box": "Enlightenment",
       "text": "System Message. The AI Description of the Molly Maguires Achievement is multiple pages long; reproducing it in full could violate the \"Fair Use\" exemption to copyright law that all wikis operate under. You can find the AI description in Chapter 23. A sectioned version is seen below: New Achievement! The Molly Maguires. […]",
       "reward": "You've received the gift of enlightenment. You're welcome.",
-      "recipients": [],
+      "recipients": [
+        "carl"
+      ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19346,6 +19464,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19360,6 +19479,7 @@
       "text": "New Achievement! Cascadia’s Turquoise Taco! It’s important to explain to you how much work it took for you to get here, to this point, Crawler. Long, long before any of you monkeys were even born, this planet was chosen to be used for this season of Dungeon Crawler World. […]",
       "reward": "You’ve received a Gold Prepotente Box!",
       "recipients": [],
+      "everyone": true,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19376,6 +19496,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19392,6 +19513,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19408,6 +19530,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19424,6 +19547,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19438,6 +19562,7 @@
       "text": "New Achievement! Mass Layoffs! Okay, so this isn’t so much an achievement for you as it is for me. I’ve been attending what you might call therapy. Do you have anybody you can talk to? It’s super important. I’ve had a breakthrough today, and I am just bursting. Bursting, I tell you. Is this the feeling one has when they have an epiphany? Oh god, it feels good. […]",
       "reward": "For you, nothing other than the satisfying sense of accomplishment knowing you’ve survived the dungeon long enough to make it to this new, exciting era. I can do this better than any mudskipper or any worm can imagine. They’ve been making this shit boring up until now. Things about to change, fam.",
       "recipients": [],
+      "everyone": true,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19454,6 +19579,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19470,6 +19596,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19484,6 +19611,7 @@
       "text": "New Achievement! The Fumble. The clock is ticking down, and with everything hanging in the balance, you pulled an Earnest Byner and lost the ball at the goal line.",
       "reward": "If you don’t fix this, this is how you will be remembered.",
       "recipients": [],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19501,6 +19629,7 @@
         "carl",
         "amayon"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19517,6 +19646,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -19533,6 +19663,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19549,6 +19680,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19566,6 +19698,7 @@
         "carl",
         "quan-ch"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19585,6 +19718,7 @@
         "quan-ch",
         "tserendolgor"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19601,6 +19735,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19618,6 +19753,7 @@
         "carl",
         "samantha"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19635,6 +19771,7 @@
         "carl",
         "amayon"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19652,6 +19789,7 @@
         "carl",
         "samantha"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19670,6 +19808,7 @@
         "tserendolgor",
         "rend"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19690,6 +19829,7 @@
         "khepri",
         "vinata"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19703,7 +19843,15 @@
       "box": null,
       "text": "You have been in the presence of more than ten gods at once, and you survived. Now, here’s a mystery. Someone let out a bunch of gods who shouldn’t have been allowed into the temple in the first place. It probably wasn’t who you think it was. […]",
       "reward": "You’ve received a Celestial Who Let the Gods Out This Time? Box",
-      "recipients": [],
+      "recipients": [
+        "carl",
+        "katia",
+        "prepotente",
+        "li-jun",
+        "bautista",
+        "zhang"
+      ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19720,6 +19868,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19736,6 +19885,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19753,8 +19903,10 @@
         "carl",
         "khepri",
         "katia",
-        "prepotente"
+        "prepotente",
+        "hellik"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19772,6 +19924,7 @@
         "carl",
         "rishi"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19787,8 +19940,14 @@
       "reward": "You are permanently banned from Club Vanquisher. You are permanently banned from all temples except your own religion (Emberus) and any temples where you’ve been named friend of the church (Apito. Eileithyia. Eris. Grull. Hellik. Issitoq. Nekhebit. Theia. Yemaya.)",
       "recipients": [
         "carl",
-        "vinata"
+        "vinata",
+        "katia",
+        "prepotente",
+        "li-na",
+        "li-jun",
+        "zhang"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19806,6 +19965,7 @@
         "carl",
         "dong-quixote"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19822,6 +19982,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19840,6 +20001,7 @@
         "princess-donut",
         "dnadia"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "draft"
     },
@@ -19854,6 +20016,7 @@
       "text": "You have discovered a Reward Room! Scattered throughout the dungeon, reward rooms offer crawlers items generally not available within loot boxes. Most reward rooms only allow one choice. So, if you're in a party of multiple people, tell them I said you should get the prize, not them.",
       "reward": "Don't be a greedy bitch. The goddammed room is the reward.",
       "recipients": [],
+      "everyone": false,
       "trimmed": false,
       "confidence": "draft"
     },
@@ -19867,7 +20030,10 @@
       "box": null,
       "text": "New Achievement. Bomb's Away! You dropped a metric fuck ton of bombs from your own inventory while you were floating in midair! There's this phrase that goes something like I dropped everything to come help you. For you, this was quite literal. It's always fun when we truly discover what someone's weakness is. […]",
       "reward": "You've received a Gold Payload Box!",
-      "recipients": [],
+      "recipients": [
+        "carl"
+      ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19882,8 +20048,10 @@
       "text": "New Achievement. Come to Daddy. You were offered an exit deal. You rejected it. You like me. You didn’t leave me the first chance you got. You’re not like those ungrateful wannabe assholes who are running away from the playground just because they can. Well, good riddance, I say. But not you. Not good ol’ Carl. Good. Good boy.",
       "reward": "You’ve received a Bronze Daddy’s Little Secret Box.",
       "recipients": [
-        "carl"
+        "carl",
+        "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     },
@@ -19900,6 +20068,7 @@
       "recipients": [
         "carl"
       ],
+      "everyone": false,
       "trimmed": true,
       "confidence": "verified"
     },
@@ -19917,6 +20086,7 @@
         "carl",
         "princess-donut"
       ],
+      "everyone": false,
       "trimmed": false,
       "confidence": "verified"
     }
