@@ -39,6 +39,9 @@ const ROUTES = [
    ['class="pickrow entryrow" hidden', 'class="stagerow gridrow" hidden', '1 of ']],
   ['/progress', ['class="stats"', 'tbl-head']],
   ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"']],
+  /* The form and the empty state render with no model call; a POST is not
+     smoked, because it would spend a real request on a real key. */
+  ['/achievement', ['form class="finder deed"', 'id="grant"', 'id="case"', 'name="deed"']],
 ];
 
 let failed = 0;

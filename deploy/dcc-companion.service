@@ -10,6 +10,17 @@
 # nothing but the content, re-seeded from the committed snapshot on every build.
 # A deploy can therefore throw the database away without losing anything, which
 # is why this unit needs no backup/restore dance around it.
+#
+# The one secret is the Ollama key the achievements page writes with. It lives
+# in an EnvironmentFile rather than in this unit, because this unit is in the
+# repository and the key must not be. Create it once, out of the working copy:
+#
+#   install -m 600 /dev/null /etc/dcc-companion.env
+#   printf 'OLLAMA_API_KEY=...\n' > /etc/dcc-companion.env
+#
+# `git reset --hard` in the deploy cannot touch it, so it survives every deploy.
+# Without it the site still serves; filing a report answers
+# "*** Transmission interrupted ***" and nothing else changes.
 
 [Unit]
 Description=Crawler's Companion (Astro SSR)
@@ -27,6 +38,9 @@ Environment=PORT=4336
 Environment=NODE_ENV=production
 # Content only, rebuilt from data/content.snapshot.json on every deploy:
 Environment=ASTRO_DATABASE_FILE=/srv/previews/dcc-companion/data/dcc.db
+# The Ollama key, and optionally OLLAMA_MODEL / OLLAMA_HOST. Missing file is
+# not an error: the page degrades rather than the service failing to start.
+EnvironmentFile=-/etc/dcc-companion.env
 
 [Install]
 WantedBy=multi-user.target

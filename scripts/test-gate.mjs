@@ -379,3 +379,230 @@ test('an arc is drawn between the two lane positions it names', () => {
   assert.ok(d.startsWith(`M 100 ${laneY(0)}`), 'it starts on the first lane');
   assert.ok(d.endsWith(`100 ${laneY(2)}`), 'and ends on the second');
 });
+
+/* ---------------------------------------------------------------------------
+   The forward-name screen.
+
+   Every other surface in this app renders text a person wrote and a lint read.
+   The achievement page renders a sentence composed at request time, so the
+   screen in src/lib/leak.ts is the only thing standing between a generated
+   citation and a name the reader has not earned. Tested directly, the same way
+   timeline.ts is: the rules are drawn from bugs this project already shipped,
+   and a regression in any of them is silent.
+   --------------------------------------------------------------------------- */
+const { buildScreen, findLeaks } = await import('../src/lib/leak.ts');
+const achievement = await import('../src/lib/achievement.ts');
+const { pickTier, TIERS } = achievement;
+
+const CAST = [
+  { id: 'carl', name: 'Carl', aka: [], revealedAt: '1:1' },
+  { id: 'mordecai', name: 'Mordecai', aka: [], revealedAt: '1:2' },
+  { id: 'signet', name: 'Signet', aka: [], revealedAt: '2:6' },
+  { id: 'milk', name: 'Milk', aka: [], revealedAt: '3:27' },
+  { id: 'katia', name: 'Katia', aka: ['Katia'], revealedAt: '2:21' },
+  { id: 'dcw', name: 'Dungeon Crawler World', aka: ['the show'], revealedAt: '1:4' },
+];
+const FLOORS = [
+  { id: 1, name: 'The Entrance', revealedAt: '1:2' },
+  { id: 7, name: 'The Great Race', revealedAt: '5:end' },
+];
+const screenAt = frontier => buildScreen(CAST, FLOORS, frontier);
+const leaksAt = (text, frontier, supplied = '') =>
+  findLeaks(text, screenAt(frontier), supplied).map(h => h.name);
+
+test('the screen holds back what the reader has not reached', () => {
+  const at = parseAt('2:3');
+  assert.deepEqual(leaksAt('Mordecai would decline it.', at), [],
+    'someone met in book 1 is fair game in book 2');
+  assert.deepEqual(leaksAt('Signet was unimpressed.', at), ['Signet'],
+    'someone three chapters ahead is not');
+  assert.deepEqual(leaksAt('Signet was unimpressed.', parseAt('2:6')), [],
+    'and is fair game on the exact chapter they are met');
+});
+
+test('spoilers off screens nothing, because nothing is sealed', () => {
+  assert.equal(screenAt(parseAt('9')).length, 0);
+});
+
+test('a floor name is screened exactly like a person', () => {
+  // The leak that shipped into the Position page was a floor name, and the
+  // in-character register makes this likelier, not less: a speaker names the
+  // ground under them.
+  assert.deepEqual(leaksAt('You have won the Great Race.', parseAt('4')), ['The Great Race'],
+    'case-insensitively, or "the Great Race" walks past "The Great Race"');
+  assert.deepEqual(leaksAt('You have won the Great Race.', parseAt('6')), []);
+});
+
+test('a single-word name counts only when it is capitalised', () => {
+  // Milk, Rust, Ruby, Ping, Feral and Justice are all entity names and all
+  // ordinary English words. "burnt the milk" is not a reveal of Milk (3:27).
+  const at = parseAt('1:5');
+  assert.deepEqual(leaksAt('You burnt the milk.', at), [], 'a common noun is not a name');
+  assert.deepEqual(leaksAt('Milk disapproves.', at), ['Milk'], 'capitalised, it is');
+});
+
+test('a lower-case alias is a phrase, not a name', () => {
+  // Screening "the show" would reject every honest sentence about the
+  // broadcast; the build-time lint draws the line in the same place.
+  assert.deepEqual(leaksAt('The audience loves the show.', parseAt('1:1')), [],
+    'the lower-case alias is a common noun phrase and is left alone');
+  assert.deepEqual(leaksAt('Welcome to Dungeon Crawler World.', parseAt('1:1')),
+    ['Dungeon Crawler World'],
+    'the name itself is still screened until the text reaches it');
+  // A capitalised alias is a different matter: "Katia" sat in a tagline three
+  // chapters before the reader met her.
+  assert.deepEqual(leaksAt('Katia is filing a complaint.', parseAt('2:10')), ['Katia', 'Katia'],
+    'name and capitalised alias both catch it');
+});
+
+test('the premise is never a leak, even with no position at all', () => {
+  // A reader who has told us nothing has still read the front page.
+  assert.deepEqual(leaksAt('Carl is not available for comment.', 0), []);
+});
+
+test('a name the reader typed themselves is not a reveal', () => {
+  // Otherwise anyone who writes "I drank milk" or "I met Signet" can never be
+  // granted anything: every candidate echoes their own words and is rejected.
+  const at = parseAt('1:5');
+  assert.deepEqual(leaksAt('Signet declines to comment.', at), ['Signet']);
+  assert.deepEqual(leaksAt('Signet declines to comment.', at, 'I arm-wrestled Signet'), []);
+});
+
+test('a short name is left alone, or it matches inside ordinary words', () => {
+  // "Zev" is three letters; screening it rejects every citation containing it
+  // as a fragment. check-pages.mjs draws the line at four for the same reason.
+  const short = buildScreen([{ id: 'zev', name: 'Zev', aka: [], revealedAt: '1:35' }], [], 0);
+  assert.equal(short.length, 0);
+});
+
+test('the house sets the odds, and Celestial is vanishingly rare', () => {
+  // The model is told its tier, never asked to pick one: ask a model for a
+  // rarity and everything is Legendary by Thursday.
+  assert.equal(pickTier(0).name, 'Bronze', 'the bottom of the roll is the common case');
+  assert.equal(pickTier(0.9999).name, 'Celestial', 'the very top is the rare one');
+  const total = TIERS.reduce((n, t) => n + t.weight, 0);
+  const celestial = TIERS.find(t => t.name === 'Celestial');
+  assert.ok(celestial.weight / total < 0.005, 'under half a percent, as the books have it');
+  for (const t of TIERS) assert.ok(t.accent && t.ink, `${t.name} needs a readable pair`);
+});
+
+test('a style blemish is not a leak, and must not cost the reader the award', () => {
+  // The two screens run in the same loop and they are not the same severity:
+  // a name the reader has not earned can never be shown, but the System
+  // talking about its own paperwork is only a flat joke.
+  const { narratesItself } = achievement;
+  const tic = at => ({ title: 'X', citation: at, reward: 'r', tier: TIERS[0] });
+  assert.ok(narratesItself(tic('The dungeon logs this as a minor infraction.')));
+  assert.ok(narratesItself(tic('Your audacity is noted.')));
+  assert.ok(narratesItself(tic('The System records the attempt.')));
+  assert.ok(!narratesItself(tic('You are predictably mediocre, and the sponsors yawned.')),
+    'an ordinary verdict is left alone');
+});
+
+/* The screens above are tested in isolation, which proves they work and not
+   that anything calls them. That is the `npm run smoke` lesson in miniature —
+   a component that was never wired in type-checks perfectly. So: stub the
+   model, hand the loop a reply that names something sealed, and assert the
+   reader never sees it. No network, no key, deterministic. */
+test('a candidate naming something sealed never reaches the reader', async () => {
+  const realFetch = globalThis.fetch;
+  const realKey = process.env.OLLAMA_API_KEY;
+  process.env.OLLAMA_API_KEY = 'test-key';
+
+  const reply = grant => ({
+    ok: true,
+    json: async () => ({ message: { content: JSON.stringify(grant) } }),
+  });
+  const cast = [{ id: 'signet', name: 'Signet', aka: [], revealedAt: '2:6' }];
+  const call = () => achievement.grantAchievement({
+    deed: 'burned the dinner', lore: [], entities: cast, floors: [],
+    frontier: parseAt('1:5'), tier: TIERS[0], attempts: 2,
+  });
+
+  try {
+    globalThis.fetch = async () => reply({
+      title: 'Kitchen Failure',
+      citation: 'Signet would not have burned it.',
+      reward: '-1 Cooking',
+    });
+    await assert.rejects(call(), 'a sealed name is refused rather than shown');
+
+    globalThis.fetch = async () => reply({
+      title: 'Kitchen Failure',
+      citation: 'You burned it, and the sponsors saw.',
+      reward: '-1 Cooking',
+    });
+    const { grant } = await call();
+    assert.equal(grant.citation, 'You burned it, and the sponsors saw.',
+      'and the same loop passes a clean one straight through');
+    assert.equal(grant.tier.name, 'Bronze', 'the house keeps the tier it drew');
+  } finally {
+    globalThis.fetch = realFetch;
+    if (realKey === undefined) delete process.env.OLLAMA_API_KEY;
+    else process.env.OLLAMA_API_KEY = realKey;
+  }
+});
+
+test('the foot thing fires on feet and stays out of everything else', () => {
+  const { mentionsFeet, buildMessages, TIERS: T } = achievement;
+  for (const yes of ['walked to the shop barefoot', 'bought new SHOES', 'clipped my toenails',
+                     'darned a sock', 'got a blister on my heel']) {
+    assert.ok(mentionsFeet(yes), `"${yes}" should give the System an excuse`);
+  }
+  // Word boundaries, or the gag fires on half the language.
+  for (const no of ['watched the football', 'reviewed the footage', 'changed the wheels',
+                    'rebooted the router', 'ate a footlong']) {
+    assert.ok(!mentionsFeet(no), `"${no}" must not trigger it`);
+  }
+  // Told to be interested at all times, it works feet into reports about
+  // spreadsheets. The instruction and its example are added per request.
+  const plain = JSON.stringify(buildMessages('filed my taxes', [], T[0]));
+  const footy = JSON.stringify(buildMessages('filed my taxes barefoot', [], T[0]));
+  // A single-line phrase: JSON.stringify escapes the newlines inside FOOT_NOTE,
+  // so a pattern spanning one would never match the serialised messages.
+  assert.ok(!/unprofessional interest/i.test(plain), 'absent when feet are not mentioned');
+  assert.ok(/unprofessional interest/i.test(footy), 'present when they are');
+  assert.ok(!/Unshod Commute/.test(plain) && /Unshod Commute/.test(footy),
+    'and the worked example rides with it');
+});
+
+test('an excuse taken is a lapse; an idiom echoed back is not', () => {
+  const { showsTheLapse } = achievement;
+  // The two that shipped flat: the crawler's own idiom repeated, and a foot
+  // word used as an ordinary insult. Neither is the System losing composure.
+  assert.ok(!showsTheLapse('You navigated a public thoroughfare on foot to acquire bread.'),
+    'the idiom is stripped before looking, so it cannot pass on its own');
+  assert.ok(!showsTheLapse('It is a miracle you have not yet tripped over your own feet.'),
+    'a foot word with nobody breaking in is not a lapse');
+  // And the one that worked.
+  assert.ok(showsTheLapse('Mundane. Though the way your toes curled was — ahem. Anyway.'));
+  assert.ok(showsTheLapse('On foot, you say. I have the gait analysis up and the heel strike is lovely.'),
+    'the idiom is stripped, but the real comment beside it still counts');
+});
+
+test('every suggestion is filable, and some of them bait the System', async () => {
+  const { SUGGESTIONS } = await import('../src/lib/deeds.ts');
+  const { MAX_DEED, mentionsFeet } = achievement;
+  assert.ok(SUGGESTIONS.length >= 20, 'enough that the button does not repeat itself');
+  assert.equal(new Set(SUGGESTIONS).size, SUGGESTIONS.length, 'no duplicates');
+  for (const d of SUGGESTIONS) {
+    assert.ok(d.length <= MAX_DEED, `"${d}" would be truncated on the way in`);
+    assert.equal(d, d.trim(), `"${d}" has stray whitespace`);
+    assert.ok(!/[A-Z]/.test(d[0]), `"${d}" should read as something the reader typed`);
+  }
+  // The running gag should turn up on its own for someone who would never
+  // think to type "barefoot", without the button being mostly about feet.
+  const feet = SUGGESTIONS.filter(mentionsFeet).length;
+  assert.ok(feet >= 3, 'some suggestions reach for the gag');
+  assert.ok(feet / SUGGESTIONS.length < 0.3, 'but the button is not a foot button');
+});
+
+test('the citation does not spend a sentence on the box beside it', () => {
+  const { namesTheBox } = achievement;
+  const cite = t => ({ title: 'X', citation: t, reward: 'r', tier: TIERS[0] });
+  assert.ok(namesTheBox(cite('This is a Gold Box level of insignificance.')));
+  assert.ok(namesTheBox(cite('You have earned a legendary box.')), 'case does not save it');
+  // The bare colour is ordinary English and must stay available.
+  assert.ok(!namesTheBox(cite('There is no silver lining here, crawler.')));
+  assert.ok(!namesTheBox(cite('A gold star for effort. The effort was poor.')));
+});

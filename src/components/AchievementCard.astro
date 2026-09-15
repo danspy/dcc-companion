@@ -1,0 +1,69 @@
+---
+/* One granted achievement, in the System's own register.
+
+   Rendered on the server for both routes into this page — the plain form POST
+   and the script's fetch — so there is one rendering of a grant and no second
+   one to drift from it. The script reads `data-grant` off this element to file
+   the award in the reader's own trophy case; the case renders a one-line
+   summary rather than a second copy of this card, which is a different job. */
+import type { Grant } from '../lib/achievement';
+
+interface Props { grant: Grant; deed: string }
+const { grant, deed } = Astro.props;
+const { tier } = grant;
+
+const filed = JSON.stringify({
+  title: grant.title,
+  citation: grant.citation,
+  reward: grant.reward,
+  tier: tier.name,
+  accent: tier.accent,
+  ink: tier.ink,
+  deed,
+});
+---
+<article class="grant slab" style={`--tier:${tier.accent};--tier-ink:${tier.ink}`} data-grant={filed}>
+  <p class="grant-fanfare">*** New Achievement! ***</p>
+  <h2 class="grant-title">{grant.title}</h2>
+  <p class="grant-citation">{grant.citation}</p>
+  <div class="grant-award">
+    <span class="grant-box">{tier.name} Box</span>
+    <span class="grant-reward"><span class="label">Reward</span>{grant.reward}</span>
+  </div>
+  <p class="grant-deed"><span class="label">Filed under</span>{deed}</p>
+</article>
+
+<style>
+  .grant { border-left: 3px solid var(--tier); padding: 22px 24px 20px; }
+  .grant-fanfare {
+    font-family: var(--font-mono); font-size: var(--type-ui);
+    letter-spacing: var(--ls-label); text-transform: uppercase;
+    color: var(--tier); margin: 0;
+  }
+  .grant-title {
+    font-size: var(--type-title); font-weight: 800; color: #fff;
+    margin: 8px 0 0; letter-spacing: -.005em;
+  }
+  .grant-citation {
+    font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.65;
+    color: var(--color-grey-200); margin: 12px 0 0; max-width: var(--measure);
+  }
+  .grant-award {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;
+    margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--color-line);
+  }
+  .grant-box {
+    font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+    font-size: 19px; letter-spacing: .04em; padding: 3px 11px 1px;
+    background: var(--tier); color: var(--tier-ink); flex: none;
+  }
+  .grant-reward {
+    font-family: var(--font-mono); font-size: var(--type-meta);
+    color: var(--color-grey-100); min-width: 0;
+  }
+  .grant-reward .label, .grant-deed .label { display: block; margin-bottom: 2px; }
+  .grant-deed {
+    margin: 16px 0 0; font-size: var(--type-meta); color: var(--color-grey-500);
+    font-style: italic; max-width: var(--measure);
+  }
+</style>

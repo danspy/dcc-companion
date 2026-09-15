@@ -860,6 +860,219 @@ about what it *is* sits in beats at its own later tag. Tagging the entity at its
 would retro-seal text the reader has already read, and the forward-reference check would fail the
 build on the older entry — which is how each of these was found.
 
+### A sentence nobody wrote still has to pass the gate
+
+`/achievement` is the one page whose text no curator wrote and no lint read: a
+reader types what they have just done — *burned the lasagna and blamed the dog* —
+and the System grants them an achievement for it, in the mono register the seals
+already speak in. It is a joke generator, and it is also the only surface here
+where a spoiler can be *composed at request time*.
+
+So the gate is applied twice, on both sides of the call:
+
+- **Going out**, the prompt is built from entities at or below the frontier,
+  each with the tagline the reader has reached (`taglineFor`), and the System is
+  told it may name those and nothing else. A book-8 reader gets *"Even Ferdinand
+  would find your performance lacking"*; a book-1 reader asking the same thing
+  gets *"a pedigreed tortoiseshell"* and no name at all.
+- **Coming back**, `src/lib/leak.ts` screens the reply and a candidate naming
+  anything sealed is thrown away and asked for again. Asking a model nicely is
+  not a gate. The screen is.
+
+**`revealedAt` is a tag, not a number.** `gate.frontier >= e.revealedAt` compares
+a number to `"4:12"`, which is `false` for every entity, forever — the System
+would have been handed an empty world and nobody would have seen an error. Use
+`reveals(gate, …)`, which parses it. This one was caught by `astro check` only
+because the column type disagreed; the arithmetic itself would have run silently.
+
+#### The screen's three matching rules are each a bug already paid for
+
+| rule | why |
+|---|---|
+| multi-word names match **case-insensitively** | "the Great Race" against a floor named "The Great Race" — the leak `check-pages.mjs` was written for |
+| single-word names match **case-sensitively** | Milk, Rust, Ruby, Ping, Feral, Justice and Guilds are all entity names *and* ordinary English words. "burnt the milk" is not a reveal of Milk (3:27) |
+| lower-case aliases are **skipped** | straight from the lint: a lower-case alias is a common noun phrase. Screening "the show" rejects every honest sentence about the broadcast |
+
+Word boundaries throughout, or "Tran" matches inside "transparent" and every
+candidate is rejected forever. Names under four characters are left alone, the
+same line `check-pages.mjs` draws.
+
+Two exceptions are deliberate. **The premise names are never a leak** — Carl,
+Donut, Borant, the Syndicate — because the front page prints them to everyone as
+back-cover material, which is the same argument as the documented exemption in
+`check-pages.mjs`. And **a name the reader typed themselves is not a reveal**:
+without that, anyone who writes "I drank milk" or "I met Signet" can never be
+granted anything, because every candidate echoes their own words back and is
+refused.
+
+#### Two screens, two severities, and they must not share a consequence
+
+Two more screens catch what the prompt bans and the model does anyway. One is
+the citation naming the box printed beside it — *"a Gold Box level of
+insignificance"* — where only the full `<tier> Box` form is screened, because a
+silver lining and a gold star are ordinary English. The other is the tic: the
+System narrating its own paperwork — *"the dungeon logs this"*, *"your audacity is
+noted"* — which is the System talking about itself in the third person.
+
+It is **not** treated like a leak. A sealed name can never be shown, so running
+out of attempts fails the request; a graceless draft is only a flat joke, so the
+loop keeps the first clean-but-blemished candidate and returns it rather than
+refusing the reader an achievement. Collapsing the two into one `continue` is how
+a cosmetic rule starts costing people the feature.
+
+#### The model is chosen, not assumed
+
+Benched across every model the key reaches, on the one thing that is actually
+hard here — holding a voice for three sentences. `gpt-oss:120b` and
+`nemotron-3-super` both kept lapsing into the third person (2/5 and 1/5);
+**`gemma4:31b` did not do it once and was the fastest of the three**, at ~1.8s.
+It is the default for that reason and `OLLAMA_MODEL` overrides it.
+
+Worth knowing for any future pass: **describing a register gets a description of
+a register back.** The first prompt explained the System's voice at length and
+produced five identical citations, all of the form "The dungeon notes this as
+trivial". Adding three worked examples in the assistant's own turn is what
+produced *"a single, very organized peppercorn"*. Show the voice; do not
+characterise it.
+
+**The house sets the odds.** The box tier is drawn server-side and handed to the
+model, never chosen by it — ask a model to pick a rarity and everything is
+Legendary by Thursday. Celestial sits at 0.3% because the books put 2,145 of them
+in the whole history of the show.
+
+#### The foot thing is a voice trait, so it needs no gate
+
+The AI's interest in bare feet is one of the show's oldest running gags, and it
+is the one piece of characterisation here that fires on the *reader's* words
+rather than on the curation: a report mentioning feet, toes, socks or shoes gets
+one short aside the System plainly should not have said with the cameras running,
+and then it collects itself and finishes the citation. It reveals no event and
+names nobody, so it works at every position including none.
+
+Three things keep it a joke rather than a tic:
+
+- **It is added per request, never standing.** Told to be interested in feet at
+  all times, the model works them into reports about spreadsheets. The whole
+  gag is that it cannot help itself when they come up.
+- **Word boundaries, again.** `\bfoot\b` must not fire on *football* or
+  *footage*, and `\bheels\b` must not fire on *wheels*. There is a test.
+- **It is screened, not requested.** Asking lands it about one time in three
+  when the mention is idiomatic — *"went to the bakery on foot"* came back with
+  no lapse at all, twice running. `showsTheLapse()` requires two signals: foot
+  vocabulary **after the idioms are stripped out** (otherwise the crawler's own
+  *"on foot"* echoed back counts as a lapse), and a first person or a
+  self-interruption, because a lapse is the System talking about *itself* in a
+  paragraph otherwise addressed entirely to the crawler. Failing it is a
+  blemish, not a leak, so it costs a draft and never the achievement.
+
+The instruction rides with two worked examples, one of them deliberately
+idiomatic, for the same reason the other three exist: describing a lapse in
+composure gets a description of one back. Awkward and thirsty, never explicit —
+the comedy is a galaxy-spanning intelligence that cannot be professional about
+toes.
+
+**An example close to something a reader might plausibly type gets handed back
+verbatim.** The idiomatic example was *"went to the bakery on foot"*, and a
+reader typing very nearly that got the example's own citation returned word for
+word, two times in three. Examples must be reports nobody would actually file —
+the current one is a cancelled dentist appointment — and the prompt says in as
+many words never to reuse their wording, titles or rewards.
+
+#### Length follows the report
+
+Every citation came back the same short shape, because the brief said "two or
+three short sentences, under 45 words" and a model reads that as a target rather
+than a ceiling. It now scales: a thin report gets two sentences and about forty
+words — saying there is nothing there, briefly, *is* the joke — and a report with
+detail in it earns four or five sentences and up to a hundred, taking the
+specifics apart one at a time with the verdict last. Explicitly: never pad a thin
+one to reach a length, never compress a rich one to escape one.
+
+#### It is a page first and an enhancement second
+
+The form is a real `POST` to `/achievement` and the card is server-rendered
+either way; the script only saves a page load and keeps the trophy case. **With
+JavaScript off the whole feature works** — verified, not assumed — and the case
+is the only part that is nobody's loss without it. The same rule as `/when`
+applies: only a failed fetch may fall back to a navigation.
+
+**A scoped style does not reach markup a script built.** The trophy-case rows are
+created in JavaScript, so they never carry the `data-astro-cid-…` attribute Astro
+stamps on elements written in the template, and every scoped rule missed them:
+the rows rendered as run-together text with no gap, no padding and the wrong
+face. They are `:global(...)` now. Scoped styling only reaches markup the page
+actually wrote — the same shape of trap as the `<noscript>` in a swapped
+fragment, one layer down.
+
+The card is in `check-stage.mjs`'s list for exactly that reason: it arrives
+through `DOMParser` like every in-stage component, so it may not carry a
+`<script>` or a `<noscript>` of its own.
+
+#### The blank box is the hard part, so there is a button
+
+Most people cannot produce a thing they did today on demand, and the placeholder
+was doing all the work. **Surprise me** fills the report from
+`src/lib/deeds.ts` — fifty everyday, deliberately specific things, because "did
+some cleaning" gets a shrug back and "rearranged the dishwasher after someone
+else loaded it" gets a citation.
+
+Three decisions worth keeping:
+
+- **The server picks, not the script.** One source of randomness, no copy of the
+  list in the document, and the button works with **no JavaScript** — which a
+  client-side filler would not. With the script running, the field catches up
+  afterwards from the card's own `data-grant`, or the box and the card disagree
+  about what was just filed and a second press re-files the old one.
+- **`formnovalidate` on the button**, or the `required` input blocks a submit
+  that the server is about to supply a deed for.
+- **Suggestions are about the reader's world, never the crawl.** That is what
+  keeps them ungated: a suggestion is static copy shown to everyone at every
+  position. Mind the vocabulary — Milk, Rust, Ruby, Ping, Feral and Justice are
+  all entity names and `check-pages.mjs` matches case-insensitively, so "bought
+  milk" in that file fails the build. A handful mention feet on purpose, so the
+  running gag finds a reader who would never think to type *barefoot*.
+
+**Achievements from the books are a different proposition and are deliberately
+not here.** They are story facts: an award earned on the ninth floor is a
+ninth-floor spoiler, so they would need curating into `data/` with reveal tags
+like everything else, and most of them would be sealed for the reader most
+likely to press the button. Writing them from memory would be inventing content,
+which is the one thing the curation rules here forbid.
+
+#### The case is an index that opens
+
+Each filed award is a `<details>`: closed it is the tier, the name and what you
+claimed to have done; open it gives back the citation and the reward in full.
+It was a `title` tooltip first, which is unreachable on a phone and unreadable
+everywhere else.
+
+`<details>` rather than a button and an `aria-expanded` pair **because the
+browser already knows how to do this** — click, keyboard, screen readers and
+Find in Page all come free, and a script that is already rebuilding these rows
+from storage has no business reimplementing a disclosure widget. The default
+triangle is removed with `list-style: none` plus the WebKit pseudo-element, and
+the `+` / `−` is drawn by the summary's own `::after` so it can sit at the right
+edge.
+
+These rows are built by the script, so **every rule here is `:global(...)`** for
+the reason above: a scoped rule reaches only markup the page itself wrote.
+
+#### The headline carries a beta tag
+
+`/achievement` is the only page whose text nobody wrote and nobody read before
+it shipped, and it is the only one that can be wrong in a way the lint cannot
+catch. The tag says so. It is **blood, not gold** — gold on this site marks
+things that worked — and it is sized off `--type-ui` and lifted onto the cap
+line, because a label pinned to an 84px word cannot sit on the baseline.
+
+#### There is no user data, and this does not add any
+
+The trophy case is `localStorage`, capped at twelve, rendered with `textContent`
+and never `innerHTML`. Nothing filed is written to the server, so the deploy
+keeps its "nothing here is worth preserving" property and `prefs.ts` is still the
+only seam where accounts would land. The endpoint is rate-limited in memory —
+fifteen per ten minutes per address — which is all a single process needs.
+
 ## Content pipeline
 
 ```
@@ -967,6 +1180,10 @@ puts it on. Treat an anchor as a proposal and read the surrounding summary befor
 - **TailwindCSS v4** via `@tailwindcss/vite`; tokens + component layer in `src/styles/global.css`
 - **HTTPS in dev** — `basicSsl` + `security: { checkOrigin: false }` (both, always — the origin
   check rejects cross-site POSTs from the self-signed dev origin)
+- **Ollama** for `/achievement`, and nothing else — one `fetch` to `/api/chat`, no SDK.
+  `OLLAMA_API_KEY` in `.env` locally and in `/etc/dcc-companion.env` on the box; the key is
+  the only secret this project has. Without it every other page is unaffected and that one
+  degrades in character.
 - Fonts self-hosted via `@fontsource`
 
 There is **no user data in the database**. Reading position lives in one cookie (`dcc_pos`),
@@ -1027,6 +1244,10 @@ npm run test:gate       # frontier arithmetic + the lint rules
 
 # Always build against a throwaway DB so data/dcc.db isn't half-written:
 ASTRO_DATABASE_FILE=./.astro/build.db npm run build
+
+# /achievement needs a key in the process environment, not just in .env — the
+# built server reads process.env and does not load a dotenv file of its own:
+set -a && . ./.env && set +a
 ```
 
 > A schema change needs a full restart, and only one dev server may run against
@@ -1051,7 +1272,9 @@ Push to `main` deploys. `.github/workflows/deploy.yml` runs two jobs:
 
 **Nothing on the server is worth preserving.** There is no user database — reading position lives
 in the reader's own `dcc_pos` cookie, and `data/dcc.db` holds only content, re-seeded from the
-committed snapshot on every build. So there is no backup/verify/restore dance around the build,
+committed snapshot on every build. The one thing on the box that is not in the repo is
+`/etc/dcc-companion.env`, which holds the Ollama key; it sits outside the working copy precisely
+so `git reset --hard` cannot take it. So there is no backup/verify/restore dance around the build,
 which is most of what `mcu-timeline`'s workflow does. If that changes — if accounts land — this
 workflow has to grow that dance too, and `src/lib/prefs.ts` is where it would start.
 
@@ -1062,6 +1285,7 @@ workflow has to grow that dance too, and `src/lib/prefs.ts` is where it would st
 | systemd unit | `deploy/dcc-companion.service`, installed at `/etc/systemd/system/` |
 | working copy | `/srv/previews/dcc-companion` (a clone of `origin/main`) |
 | reverse proxy | `dcc.dev.innovativstud.io` → `127.0.0.1:4336` in `/etc/caddy/Caddyfile` |
+| Ollama key | `/etc/dcc-companion.env`, read by the unit's `EnvironmentFile=-` (optional by design) |
 | deploy key | `~/.ssh/dcc-companion-deploy`, public half in `authorized_keys` |
 | repo secrets | `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_KEY` |
 
@@ -1092,6 +1316,10 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/smoke.mjs` | `npm run smoke` — does every route actually render? |
 | `scripts/check-stage.mjs` | No `<script>` or `<noscript>` in a component the view swap replaces |
 | `scripts/check-anchors.mjs` | `npm run content:anchors` — advisory: a reveal tag earlier than the first chapter naming it |
+| `src/lib/achievement.ts` | Tiers, the prompt, the model call, and the screen-and-retry loop |
+| `src/lib/leak.ts` | **The forward-name screen** — the runtime half of the lint's rule |
+| `src/pages/achievement.astro` | The form, the grant, the trophy case; rate limit lives here |
+| `src/components/AchievementCard.astro` | One grant, the one way this site renders a grant |
 | `src/lib/timeline.ts` | The x scale, lane selection and lane geometry the three `/when` views share |
 | `src/lib/kinds.ts` | Kind labels and order, clear of `astro:db` so it can be imported anywhere |
 | `src/pages/when.astro` | Braid, grid and downstream over the same gated set |

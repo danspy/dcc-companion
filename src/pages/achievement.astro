@@ -1,0 +1,422 @@
+---
+/* Achievements.
+
+   The reader types what they have just done; the System grants them an
+   achievement for it. The gate applies here exactly as everywhere else — the
+   System is handed only what the reader has already met, and `src/lib/leak.ts`
+   screens the reply — but the text itself is composed at request time, so no
+   lint has ever seen it. That is why the screen exists.
+
+   Both routes in are a POST to this page: the plain form, and the script's
+   fetch of the same HTML. One render path, and the page works with no
+   JavaScript at all — the trophy case is the only part that needs it, and it
+   is the only part that is nobody's loss without it. */
+import Layout from '../layouts/Layout.astro';
+import AchievementCard from '../components/AchievementCard.astro';
+import { readGate, getEntities, getFloors, taglineFor } from '../lib/content';
+import { reveals } from '../lib/spoiler';
+import {
+  grantAchievement, SystemOffline, MAX_DEED,
+  type Grant, type LoreEntry,
+} from '../lib/achievement';
+import { SUGGESTIONS } from '../lib/deeds';
+
+/* A public endpoint that costs a model call needs a ceiling. In memory and per
+   process, which is all this needs: there is one process, and a limiter that
+   outlives a restart would be a database — and this app deliberately has no
+   user state on the server. */
+const WINDOW_MS = 10 * 60 * 1000;
+const PER_WINDOW = 15;
+const seen = new Map<string, number[]>();
+
+function overLimit(ip: string): boolean {
+  const now = Date.now();
+  const hits = (seen.get(ip) ?? []).filter(t => now - t < WINDOW_MS);
+  hits.push(now);
+  seen.set(ip, hits);
+  if (seen.size > 2000) for (const [k, v] of seen) if (!v.some(t => now - t < WINDOW_MS)) seen.delete(k);
+  return hits.length > PER_WINDOW;
+}
+
+const { gate } = await readGate(Astro.cookies);
+
+let grant: Grant | null = null;
+let deed = '';
+let problem: { head: string; body: string } | null = null;
+
+if (Astro.request.method === 'POST') {
+  const form = await Astro.request.formData();
+  deed = String(form.get('deed') ?? '').replace(/\s+/g, ' ').trim().slice(0, MAX_DEED);
+
+  /* Surprise me. The server picks, not the script, so there is one source of
+     randomness and no copy of the list in the document — and the button works
+     with no JavaScript at all, which a client-side filler would not. It
+     overrides whatever is in the box, because that is what the button says it
+     does. */
+  if (form.get('surprise') != null) {
+    deed = SUGGESTIONS[Math.floor(Math.random() * SUGGESTIONS.length)];
+  }
+
+  if (!deed) {
+    problem = {
+      head: 'Nothing filed',
+      body: 'You have submitted an empty report, crawler. Even the vending machines manage a noun.',
+    };
+  } else if (overLimit(Astro.clientAddress ?? 'unknown')) {
+    problem = {
+      head: 'Throttled',
+      body: 'Production notes that you have filed a great many reports in a short window. ' +
+            'The department handling them is on a break. Try again shortly.',
+    };
+  } else {
+    /* Only what the reader has reached, with the tagline they have reached for
+       it. Shuffled and capped: the whole cast in one prompt is slower, and a
+       fixed order makes the System reach for the same three names every time. */
+    const [entities, floors] = await Promise.all([getEntities(), getFloors()]);
+    /* `revealedAt` is a curation tag ("4:12"), not an integer — `reveals`
+       parses it. Comparing it to the frontier directly is silently always
+       false, which would hand the System an empty world. */
+    const reached = entities.filter(e => reveals(gate, e.revealedAt));
+    const lore: LoreEntry[] = reached
+      .map(e => ({ e, r: Math.random() }))
+      .sort((a, b) => a.r - b.r)
+      .slice(0, 45)
+      .map(({ e }) => ({
+        id: e.id, name: e.name, aka: e.aka,
+        revealedAt: e.revealedAt, role: e.role, kind: e.kind,
+        tagline: taglineFor(e, gate),
+      }));
+
+    try {
+      const result = await grantAchievement({
+        deed, lore, entities, floors, frontier: gate.frontier,
+      });
+      grant = result.grant;
+      if (result.screened.length) {
+        /* Not shown to the reader — the screen working is not their problem.
+           It is worth knowing which names the System keeps reaching for. */
+        console.warn(
+          `[achievement] screened ${result.screened.length} sealed name(s) in ` +
+          `${result.attempts} attempt(s): ` +
+          result.screened.map(s => `${s.name} (${s.at})`).join(', '),
+        );
+      }
+    } catch (e) {
+      problem = e instanceof SystemOffline
+        ? {
+            head: 'Transmission interrupted',
+            body: 'The department that issues achievements is not answering. This is ' +
+                  'either a scheduling error or a labour dispute. Production apologises ' +
+                  'for nothing.',
+          }
+        : {
+            head: 'Citation redacted',
+            body: 'Three drafts were written and all three said something you have not ' +
+                  'earned the right to hear. The record has been destroyed. File again.',
+          };
+      console.error('[achievement]', e);
+    }
+  }
+}
+
+const canUseLore = !gate.fresh || !gate.spoilers;
+---
+<Layout title="Achievements">
+  <section class="wrap page">
+    <p class="eyebrow" style="color:var(--color-blood)">Awards and Boxes</p>
+    <h1>Achievements<span class="beta">Beta</span></h1>
+    <p class="standfirst">
+      Report your own conduct and the System will decide what it was worth. It is watching
+      anyway; you may as well be credited.
+    </p>
+
+    <form class="finder deed" method="POST" action="/achievement">
+      <div class="finder-row">
+        <label class="finder-search">
+          <span class="vh">What have you done, crawler?</span>
+          <input
+            type="text" name="deed" id="deed" autocomplete="off"
+            maxlength={MAX_DEED} required value={deed}
+            placeholder="burned the lasagna and blamed the dog" />
+        </label>
+        <button class="btn" type="submit" id="file">File report</button>
+        {/* formnovalidate, or the required input blocks a submit that is about
+            to be given a deed by the server anyway. */}
+        <button class="chip-btn surprise" type="submit" name="surprise" value="1"
+                id="surprise" formnovalidate>Surprise me</button>
+      </div>
+      <p class="finder-note">
+        {canUseLore
+          ? 'The System knows the crawl as far as you have read it, and not one chapter further.'
+          : 'You have not told the dungeon where you are, so the System is working from the ' +
+            'premise alone. Name your book in the bar above and it starts using what you have met.'}
+      </p>
+    </form>
+
+    <div id="grant" class="grantwrap">
+      {grant
+        ? <AchievementCard grant={grant} deed={deed} />
+        : problem
+          ? <p class="sys problem"><b>*** {problem.head} ***</b>{problem.body}</p>
+          : <p class="sys awaiting"><b>*** Awaiting report ***</b>Describe one thing you have
+              done. Be specific. Vagueness is its own achievement and it is not a good one.</p>}
+    </div>
+
+    <section id="case" class="trophies" hidden>
+      <div class="case-head">
+        <h2 class="sect">Earned previously</h2>
+        <button class="chip-btn" type="button" id="clearcase">Clear</button>
+      </div>
+      <ol class="caselist" id="caselist"></ol>
+      <p class="case-note label">Kept in this browser only. Nothing you file is stored on the server.</p>
+    </section>
+  </section>
+</Layout>
+
+<style>
+  .page { padding-block: 44px 24px; }
+  h1 { font-size: clamp(40px, 8vw, 84px); font-weight: 800; letter-spacing: -.01em; margin-top: 12px; }
+  /* Blood rather than gold: gold is what the page uses for things that worked.
+     Sized off the type scale and lifted onto the cap line by eye — it is a
+     label pinned to a 84px word, so it cannot sit on the baseline. */
+  h1 .beta {
+    font-family: var(--font-mono); font-size: var(--type-ui); font-weight: 700;
+    letter-spacing: var(--ls-label); color: var(--color-blood);
+    border: 1px solid var(--color-blood); padding: 3px 7px 2px;
+    margin-left: 14px; vertical-align: middle; position: relative; top: -.42em;
+    white-space: nowrap;
+  }
+  .standfirst { font-size: var(--type-lede); color: var(--color-grey-200);
+                max-width: var(--measure); margin: 18px 0 28px; }
+  .deed { padding: 16px; }
+  .deed .finder-note { margin-top: 12px; color: var(--color-grey-500); font-size: var(--type-meta); }
+  /* The search field is --color-ink because it sits inside a --color-panel box;
+     the same reason /who's is. */
+  .deed .finder-search { flex: 1 1 320px; }
+  .deed .surprise { flex: none; }
+  .grantwrap { margin-top: 18px; }
+  .problem b { color: var(--color-blood); }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+  .trophies { margin-top: 40px; border-top: 1px solid var(--color-line); padding-top: 22px; }
+  .case-head { display: flex; align-items: center; gap: 14px; }
+  .case-head .sect { margin: 0; }
+  .case-head .chip-btn { margin-left: auto; }
+  .caselist { list-style: none; margin: 16px 0 0; padding: 0;
+              display: flex; flex-direction: column; gap: 1px; background: var(--color-line); }
+  .case-note { margin-top: 14px; color: var(--color-grey-700); }
+  /* One filed award: the tier, what it was called, and what you claimed to
+     have done. The citation and reward hang off the title attribute — the case
+     is an index, and the card above is where a grant is read.
+
+     `:global` is load-bearing. These rows are built by the script, so they
+     never carry the scope attribute Astro stamps on elements written in this
+     template, and a scoped rule misses them entirely — the row renders as run
+     together text with no gap, no padding and the wrong face. Scoped styling
+     only reaches markup the page actually wrote. */
+  :global(.caseitem) {
+    background: var(--color-panel); border-left: 3px solid var(--tier);
+    font-size: var(--type-meta); min-width: 0;
+  }
+  /* The row itself. `list-style: none` plus the WebKit pseudo-element is what
+     removes the default triangle; the chevron below is drawn instead so it can
+     sit on the right and turn. */
+  :global(.casesum) {
+    display: flex; align-items: baseline; gap: 12px; padding: 9px 12px;
+    cursor: pointer; list-style: none; min-width: 0;
+  }
+  :global(.casesum)::-webkit-details-marker { display: none; }
+  :global(.casesum):hover { background: var(--color-raised); }
+  :global(.casesum)::after {
+    content: '+'; font-family: var(--font-mono); color: var(--color-grey-700);
+    flex: none; margin-left: 4px; line-height: 1;
+  }
+  :global(.casedet[open]) > :global(.casesum)::after { content: '−'; }
+  :global(.casedet[open]) > :global(.casesum) { background: var(--color-raised); }
+  :global(.casebox) {
+    font-family: var(--font-mono); font-size: var(--type-label); font-weight: 700;
+    letter-spacing: var(--ls-label); text-transform: uppercase;
+    padding: 2px 7px; flex: none;
+  }
+  :global(.casename) { color: #fff; font-weight: 600; flex: none; }
+  :global(.casedeed) { color: var(--color-grey-500); font-style: italic; margin-left: auto;
+              white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  /* Opened: the citation in the System's own face, as the card shows it. */
+  :global(.casebody) { padding: 2px 12px 14px 12px; border-top: 1px solid var(--color-line-soft); }
+  :global(.casecite) {
+    font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.65;
+    color: var(--color-grey-200); margin: 12px 0 0; max-width: var(--measure);
+  }
+  :global(.casereward) {
+    font-family: var(--font-mono); font-size: var(--type-meta);
+    color: var(--color-grey-100); margin: 12px 0 0;
+  }
+  :global(.casereward) :global(.label) { display: block; margin-bottom: 2px; }
+  @media (max-width: 620px) {
+    :global(.casesum) { flex-wrap: wrap; gap: 6px 10px; }
+    :global(.casedeed) { margin-left: 0; flex-basis: 100%; white-space: normal; }
+    :global(.casesum)::after { position: absolute; right: 12px; }
+    :global(.caseitem) { position: relative; }
+  }
+</style>
+
+<script>
+  /* Progressive enhancement, and nothing more. The form is a real POST to this
+     same page and the card is rendered by the server either way; the script
+     only saves the reader a page load and keeps a trophy case.
+
+     Two rules this project has already paid for apply here too: only a failed
+     fetch may fall back to a navigation (a reload would throw away what the
+     reader is looking at, which is worse than the error it insures against),
+     and nothing holds a node from inside the fragment that gets swapped. */
+
+  const KEY = 'dcc_trophies';
+  const CAP = 12;
+
+  const form = document.querySelector<HTMLFormElement>('form.deed');
+  const input = document.querySelector<HTMLInputElement>('#deed');
+  const button = document.querySelector<HTMLButtonElement>('#file');
+  const caseBox = document.querySelector<HTMLElement>('#case');
+  const caseList = document.querySelector<HTMLOListElement>('#caselist');
+
+  interface Trophy {
+    title: string; citation: string; reward: string;
+    tier: string; accent: string; ink: string; deed: string;
+  }
+
+  const read = (): Trophy[] => {
+    try { return JSON.parse(localStorage.getItem(KEY) ?? '[]'); } catch { return []; }
+  };
+  const write = (rows: Trophy[]) => {
+    try { localStorage.setItem(KEY, JSON.stringify(rows.slice(0, CAP))); } catch { /* private mode */ }
+  };
+
+  /* The case is an index that opens: the closed row is the tier, the name and
+     what you claimed to have done, and opening it gives back the citation and
+     the reward in full. It was a `title` tooltip first, which is unreachable on
+     a phone and unreadable everywhere else.
+
+     `<details>` rather than a button and an `aria-expanded` pair, because the
+     browser already knows how to do this — keyboard, screen readers and Find in
+     Page included — and these rows are built by a script that should not be
+     reimplementing a disclosure widget.
+
+     textContent throughout: this is coming back out of storage and never goes
+     anywhere near innerHTML. */
+  const span = (cls: string, text: string) => {
+    const el = document.createElement('span');
+    el.className = cls;
+    el.textContent = text;
+    return el;
+  };
+
+  function renderCase() {
+    if (!caseBox || !caseList) return;
+    const rows = read();
+    caseBox.hidden = rows.length === 0;
+    caseList.replaceChildren(...rows.map(t => {
+      const li = document.createElement('li');
+      li.className = 'caseitem';
+      li.style.setProperty('--tier', t.accent);
+
+      const det = document.createElement('details');
+      det.className = 'casedet';
+
+      const sum = document.createElement('summary');
+      sum.className = 'casesum';
+      const box = span('casebox', t.tier);
+      box.style.background = t.accent;
+      box.style.color = t.ink;
+      sum.append(box, span('casename', t.title), span('casedeed', t.deed));
+
+      const body = document.createElement('div');
+      body.className = 'casebody';
+      const cite = document.createElement('p');
+      cite.className = 'casecite';
+      cite.textContent = t.citation;
+      const reward = document.createElement('p');
+      reward.className = 'casereward';
+      reward.append(span('label', 'Reward'), document.createTextNode(t.reward));
+      body.append(cite, reward);
+
+      det.append(sum, body);
+      li.append(det);
+      return li;
+    }));
+  }
+
+  /** Swap in a freshly rendered #grant, and file whatever arrived in it. */
+  function adopt(html: string) {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const next = doc.querySelector('#grant');
+    const here = document.querySelector('#grant');
+    if (!next || !here) return;
+    here.replaceChildren(...Array.from(next.childNodes));
+
+    const card = here.querySelector<HTMLElement>('[data-grant]');
+    if (!card?.dataset.grant) return;
+    try {
+      const filed = JSON.parse(card.dataset.grant) as Trophy;
+      /* The server chose the deed when it was a surprise, so the box has to
+         catch up with what was actually filed — otherwise the card and the
+         field above it disagree, and a second press re-files the old one. */
+      if (input && filed.deed) input.value = filed.deed;
+      write([filed, ...read()]);
+      renderCase();
+    } catch { /* a card we cannot file is still a card worth showing */ }
+  }
+
+  function working() {
+    const here = document.querySelector('#grant');
+    if (!here) return;
+    const p = document.createElement('p');
+    p.className = 'sys';
+    const b = document.createElement('b');
+    b.textContent = '*** Reviewing footage ***';
+    p.append(b, document.createTextNode(
+      'Your report is with the department. Nobody there is in a hurry.'));
+    here.replaceChildren(p);
+  }
+
+  form?.addEventListener('submit', async event => {
+    /* Which button was pressed. "Surprise me" has no deed to validate, so the
+       empty-box guard must not apply to it. */
+    const submitter = (event as SubmitEvent).submitter as HTMLButtonElement | null;
+    const surprise = submitter?.name === 'surprise';
+    if (!surprise && !input?.value.trim()) return;
+    event.preventDefault();
+    if (button) button.disabled = true;
+    working();
+
+    let html: string | null = null;
+    try {
+      /* FormData(form) alone drops the submitter's own name/value in some
+         browsers, and the server would then see an ordinary empty submit. */
+      const body = new FormData(form);
+      if (surprise) body.set('surprise', '1');
+      const res = await fetch('/achievement', {
+        method: 'POST',
+        headers: { 'x-requested-with': 'fetch' },
+        body,
+      });
+      html = await res.text();
+    } catch {
+      /* Only the fetch failing earns a page load. Everything below is DOM work
+         and must not be able to trigger one. */
+      if (button) button.disabled = false;
+      form.submit();
+      return;
+    }
+
+    adopt(html);
+    if (button) button.disabled = false;
+    input?.focus();
+  });
+
+  document.querySelector('#clearcase')?.addEventListener('click', () => {
+    write([]);
+    renderCase();
+  });
+
+  renderCase();
+</script>

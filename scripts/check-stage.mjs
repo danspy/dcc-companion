@@ -19,11 +19,14 @@ import { join } from 'node:path';
 
 const DIR = 'src/components';
 
-/* Components that when.astro renders inside <div id="stage">, directly or not. */
+/* Components whose markup a fetch-and-swap replaces: everything when.astro
+   renders inside <div id="stage">, and the achievement card, which arrives the
+   same way into <div id="grant">. The rule is the same wherever DOMParser is
+   how a component reaches the page. */
 const IN_STAGE = [
   'BraidView.astro', 'GridView.astro', 'DownstreamView.astro', 'DetailPanel.astro',
   'EntryRow.astro', 'EntryList.astro', 'StageHead.astro', 'EmptyState.astro',
-  'BeatEntry.astro',
+  'BeatEntry.astro', 'AchievementCard.astro',
 ];
 
 const files = (await readdir(DIR)).filter(f => IN_STAGE.includes(f));
