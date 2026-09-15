@@ -41,7 +41,8 @@ const ROUTES = [
   ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"']],
   /* The form and the empty state render with no model call; a POST is not
      smoked, because it would spend a real request on a real key. */
-  ['/achievement', ['form class="finder deed"', 'id="grant"', 'id="case"', 'name="deed"']],
+  ['/achievement', ['form class="finder deed"', 'id="grant"', 'id="case"', 'name="deed"',
+                    'id="surprise"', 'class="onrecord"', 'class="log"', 'class="stamp"']],
 ];
 
 let failed = 0;

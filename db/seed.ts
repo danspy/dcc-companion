@@ -1,4 +1,4 @@
-import { db, Book, Floor, Entity, Beat, Relation } from 'astro:db';
+import { db, Book, Floor, Entity, Beat, Relation, Achievement } from 'astro:db';
 import { readFileSync } from 'node:fs';
 
 /* No network, no cleverness: the snapshot is committed, so a build is
@@ -27,4 +27,5 @@ export default async function () {
   await db.insert(Entity).values(snapshot.entities);
   if (snapshot.beats.length) await db.insert(Beat).values(snapshot.beats);
   if (snapshot.relations.length) await db.insert(Relation).values(snapshot.relations);
+  if (snapshot.achievements?.length) await db.insert(Achievement).values(snapshot.achievements);
 }

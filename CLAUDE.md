@@ -1008,6 +1008,83 @@ The card is in `check-stage.mjs`'s list for exactly that reason: it arrives
 through `DOMParser` like every in-stage component, so it may not carry a
 `<script>` or a `<noscript>` of its own.
 
+#### The voice was researched, not guessed
+
+The first version of this prompt was written from memory and it was wrong in a
+specific, measurable way. `npm run achievements:refresh` pulls the wiki's 151
+achievement pages, 148 of which carry the System's verbatim award text under an
+`== AI Description ==` heading with `{{cite|book|chapter}}` footnotes — the same
+convention, and the same quoting rule, as an item's description. Reading the
+corpus said:
+
+| | corpus |
+|---|---|
+| second person | 100% |
+| first person — the System says "I" | 34% |
+| profanity | 39% |
+| exclamation marks | 88% |
+| a question aimed at the crawler | 32% |
+| words | median **46**, p90 133, max 667 |
+| opens "New Achievement! …" | 107 of 148 |
+| reward is a joke or a refusal rather than a box | 50 of 148 |
+
+Against which the shipped prose was formal, clean, uniformly medium-length, and
+paid out "+1 Grip, -2 Charisma" every time. Four corrections came out of it:
+
+- **The register is a foul-mouthed game-show host, not a bureaucrat.** *"You
+  entered the dungeon wearing no pants. Dude. Seriously?"* — not *"a blatant
+  disregard for ocular health"*.
+- **Short is the default.** Median 46 words. But the p90 is 133 and the tail
+  runs to 667, so roughly one in five should chase a tangent and come back to
+  the award almost by accident. Uniform length was the actual problem, not
+  short length.
+- **The reward is where a third of the jokes live.** *"Bitches don't get
+  rewards."* *"Yeah, no."* *"Your reward is that you're alive to read this."*
+- **The foot gag is unashamed.** Podophilia!, verbatim: *"You've used your bare
+  feet to crush and kill an opponent! Hey! That's my fetish. Seriously. Keep
+  doing it, and you'll be rewarded."* The System does not get caught looking and
+  recover its composure — it says it out loud on air and carries on. The
+  earlier "— ahem" version was a politer joke than the books tell.
+
+**The worked examples stay everyday, not dungeon.** `REGISTER` quotes four real
+awards to set the voice; the few-shot pairs are ordinary reports, because
+examples taken from the books teach the model to answer "I did the washing up"
+with a citation about goblins.
+
+#### The books' own awards are data, and they gate like everything else
+
+`data/achievements.json` is committed — 146 awards with a reveal tag, a floor,
+what earns them, the payout and the System's own words. The corpus behind it
+lands in `data/index/achievements.json`, gitignored beside the chapter
+summaries: the long ones run to 667 words and wander off into a four-hundred-word
+digression about 1970s record clubs, which is very funny and is not ours to
+republish. What is committed is an **excerpt** — trimmed at a sentence boundary
+past 70 words and flagged `trimmed` — in the item-description tradition: the
+award itself, never the wiki's narration around it.
+
+Three gate decisions:
+
+- **An award's name is a spoiler on its own.** "Apex Predator" says how a floor
+  ends. So the name is screened alongside the body, and a sealed award is never
+  listed by name — the tail collapses to *"133 more on record, the next when you
+  reach book 1, chapter 6"*, exactly as sealed beats do on an entity page.
+- **An uncited award gates at its floor's end.** 22 pages give a floor but no
+  chapter. `"<book>"` would unseal them at chapter zero and hand a reader an
+  eightieth-chapter award one chapter in, so the fallback is the floor's
+  `recapAt` — the same "a summary of a span unseals at the end of that span"
+  rule the floors themselves follow. They carry `confidence: "draft"` and the
+  lint lists them.
+- **A quotation that names someone unmet is tightened, not rejected.** Six do:
+  a book-1 award whose reward line mentions Guilds (5:8), two naming Skyfowl,
+  two naming a Fan Box. The award and our entity tag simply disagree about when
+  a word first reaches the reader, so the award waits for it — `sortKey =
+  max(own tag, everything it names)`, which is the rule relations already
+  follow. The phrase heuristic stays off, because the book's own text is allowed
+  to say "eventually".
+
+A fresh reader sees none of it and **is not told how many exist**, which is the
+same count rule `/who` follows.
+
 #### The blank box is the hard part, so there is a button
 
 Most people cannot produce a thing they did today on demand, and the placeholder
@@ -1240,6 +1317,7 @@ npm run dev             # https://localhost:4321 (self-signed — accept the war
 npm run content:build   # rebuild data/content.snapshot.json after editing data/
 npm run content:anchors # is any reveal tag earlier than the first chapter naming it?
 npm run content:check   # lint only; prints the draft/chapter-count work queue
+npm run achievements:refresh  # re-pull the awards + the voice corpus from the wiki
 npm run test:gate       # frontier arithmetic + the lint rules
 
 # Always build against a throwaway DB so data/dcc.db isn't half-written:
@@ -1306,6 +1384,8 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `data/book-colors.json` | Each book's official colour and its readable ink |
 | `scripts/fetch-book-colors.mjs` | `npm run colors:refresh` — scrapes those colours |
 | `scripts/fetch-chapters.mjs` | `npm run chapters:refresh` — pulls the chapter tables |
+| `scripts/fetch-achievements.mjs` | `npm run achievements:refresh` — the 148 real awards, and the voice corpus |
+| `data/achievements.json` | The books' own awards, gated; the corpus behind it is gitignored |
 | `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
 | `scripts/check-pages.mjs` | Fails the build if gated content is hardcoded into page source |
 | `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |

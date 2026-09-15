@@ -13,8 +13,8 @@
    is the only part that is nobody's loss without it. */
 import Layout from '../layouts/Layout.astro';
 import AchievementCard from '../components/AchievementCard.astro';
-import { readGate, getEntities, getFloors, taglineFor } from '../lib/content';
-import { reveals } from '../lib/spoiler';
+import { readGate, getEntities, getFloors, getAchievements, taglineFor } from '../lib/content';
+import { reveals, describeAt } from '../lib/spoiler';
 import {
   grantAchievement, SystemOffline, MAX_DEED,
   type Grant, type LoreEntry,
@@ -119,6 +119,15 @@ if (Astro.request.method === 'POST') {
   }
 }
 
+/* The awards the System actually handed out. Gated on sortKey like every other
+   row here, and the sealed ones collapse to a single line rather than a stack
+   of stamped placeholders: an award's *name* is the spoiler, and four redacted
+   rows with "Floor 9" on them tell you the shape of the rest of the book. */
+const [awards, floorRows] = await Promise.all([getAchievements(), getFloors()]);
+const floorAccent = new Map(floorRows.map(f => [f.id, f.accent]));
+const reached = awards.filter(a => gate.frontier >= a.sortKey);
+const nextSealed = awards.find(a => gate.frontier < a.sortKey);
+
 const canUseLore = !gate.fresh || !gate.spoilers;
 ---
 <Layout title="Achievements">
@@ -170,6 +179,52 @@ const canUseLore = !gate.fresh || !gate.spoilers;
       <ol class="caselist" id="caselist"></ol>
       <p class="case-note label">Kept in this browser only. Nothing you file is stored on the server.</p>
     </section>
+
+    <section class="onrecord">
+      <div class="case-head">
+        <h2 class="sect">On record</h2>
+        {reached.length > 0 && <span class="tally label">{reached.length} reached</span>}
+      </div>
+      <p class="rec-note">Awards the System has handed out, in its own words. These open as
+        your position catches up — the name of an award is a spoiler on its own.</p>
+
+      {reached.length === 0
+        ? <p class="sys"><b>*** Nothing on record ***</b>You have not reached a single award yet,
+            crawler. Tell the dungeon where you are and the file opens.</p>
+        : <ul class="log">
+            {reached.map(a => (
+              <li class="entry">
+                <p class="stamp">
+                  <span class="bk">Bk {Math.floor(a.sortKey / 1000)}</span>
+                  {a.floor && (
+                    <span class="fl" style={`--dot:${floorAccent.get(a.floor) ?? '#717171'}`}>
+                      Floor {a.floor}
+                    </span>
+                  )}
+                  {/* The infobox's reward field is only sometimes a loot box —
+                      it is just as often the joke ("Ha.", "Pride", "Nothing").
+                      Stamped here only when it names a box; everything else is
+                      already in the reward line below, where it reads as a line
+                      rather than as a shouted label. */}
+                  {a.box && /\bBox\b/i.test(a.box) && <span class="rec-box">{a.box}</span>}
+                </p>
+                <div class="entry-body">
+                  <h3>{a.name}</h3>
+                  {a.forWhat && <p class="rec-for">For {a.forWhat.replace(/^For\s+/i, '')}</p>}
+                  <p class="rec-text">{a.text}</p>
+                  {a.reward && <p class="rec-reward"><span class="label">Reward</span>{a.reward}</p>}
+                  {a.confidence === 'draft' && <span class="draft">unverified chapter</span>}
+                </div>
+              </li>
+            ))}
+            {nextSealed && (
+              <li class="entry more">
+                <p class="label">{awards.length - reached.length} more on record, the next
+                  when {describeAt(nextSealed.sortKey)}.</p>
+              </li>
+            )}
+          </ul>}
+    </section>
   </section>
 </Layout>
 
@@ -205,6 +260,21 @@ const canUseLore = !gate.fresh || !gate.spoilers;
   .caselist { list-style: none; margin: 16px 0 0; padding: 0;
               display: flex; flex-direction: column; gap: 1px; background: var(--color-line); }
   .case-note { margin-top: 14px; color: var(--color-grey-700); }
+
+  .onrecord { margin-top: 44px; border-top: 1px solid var(--color-line); padding-top: 22px; }
+  .onrecord .tally { margin-left: auto; }
+  .rec-note { margin: 10px 0 18px; max-width: var(--measure);
+              font-size: var(--type-meta); color: var(--color-grey-500); }
+  /* The System's own words, in the System's own face — the same treatment a
+     quoted item description gets on an entity page. */
+  .rec-text { font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.65;
+              color: var(--color-grey-200); margin: 10px 0 0; max-width: var(--measure); }
+  .rec-for { margin: 5px 0 0; font-size: var(--type-meta); color: var(--color-grey-500);
+             font-style: italic; }
+  .rec-reward { font-family: var(--font-mono); font-size: var(--type-meta);
+                color: var(--color-grey-100); margin: 10px 0 0; max-width: var(--measure); }
+  .rec-reward .label { display: block; margin-bottom: 2px; }
+  .rec-box { color: var(--color-grey-300); }
   /* One filed award: the tier, what it was called, and what you claimed to
      have done. The citation and reward hang off the title attribute — the case
      is an index, and the card above is where a grant is read.

@@ -15,6 +15,7 @@
     "content:check": "node scripts/build-content.mjs --check && node scripts/check-pages.mjs && node scripts/check-stage.mjs",
     "test:gate": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test scripts/test-gate.mjs",
     "chapters:refresh": "node scripts/fetch-chapters.mjs",
+    "achievements:refresh": "node scripts/fetch-achievements.mjs",
     "content:coverage": "node scripts/coverage-report.mjs",
     "check": "astro check",
     "colors:refresh": "node scripts/fetch-book-colors.mjs",

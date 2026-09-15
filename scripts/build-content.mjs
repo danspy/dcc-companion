@@ -41,7 +41,11 @@ for (const b of books) {
 const entities = ['characters', 'items', 'mechanics', 'factions', 'places', 'threads']
   .flatMap(f => read(`data/entities/${f}.json`).entities);
 
-const { errors, warnings } = lint({ books, floors, entities });
+/* The awards, from npm run achievements:refresh. Quotations rather than
+   curation, so they are linted for gate correctness and never for prose. */
+const { achievements } = read('data/achievements.json');
+
+const { errors, warnings, tightened } = lint({ books, floors, entities, achievements });
 
 for (const w of warnings) console.warn(`  warn  ${w}`);
 if (errors.length) {
@@ -123,6 +127,18 @@ const snapshot = {
   entities: resolvedEntities,
   beats: resolvedBeats,
   relations: resolvedRelations,
+  achievements: achievements
+    .map(a => ({
+      id: a.id, name: a.name, at: a.at,
+      /* Gate inheritance, the same rule beats and relations follow: an award
+         cannot surface before everything it names has. The lint works out the
+         floor; the build applies it, so no view has to know. */
+      sortKey: Math.max(parseAt(a.at), tightened.get(a.id) ?? 0),
+      floor: a.floor ?? null, forWhat: a.for ?? null, box: a.box ?? null,
+      text: a.text, reward: a.reward ?? null,
+      trimmed: !!a.trimmed, confidence: a.confidence ?? 'draft',
+    }))
+    .sort((x, y) => x.sortKey - y.sortKey || x.id.localeCompare(y.id)),
 };
 
 const drafts = resolvedBeats.filter(b => b.confidence === 'draft').length;
@@ -130,7 +146,7 @@ const chapterTotal = books.reduce((a, b) => a + (b.chapters ?? 0), 0);
 const summary =
   `${books.length} books · ${chapterTotal} chapters · ${floors.length} floors · ` +
   `${resolvedEntities.length} entities · ${resolvedBeats.length} beats (${drafts} draft) · ` +
-  `${resolvedRelations.length} relations`;
+  `${resolvedRelations.length} relations · ${snapshot.achievements.length} achievements`;
 
 if (checkOnly) {
   console.log(`\nOK — ${summary}`);

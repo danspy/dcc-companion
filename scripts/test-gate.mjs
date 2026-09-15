@@ -560,8 +560,8 @@ test('the foot thing fires on feet and stays out of everything else', () => {
   const footy = JSON.stringify(buildMessages('filed my taxes barefoot', [], T[0]));
   // A single-line phrase: JSON.stringify escapes the newlines inside FOOT_NOTE,
   // so a pattern spanning one would never match the serialised messages.
-  assert.ok(!/unprofessional interest/i.test(plain), 'absent when feet are not mentioned');
-  assert.ok(/unprofessional interest/i.test(footy), 'present when they are');
+  assert.ok(!/thing about feet/i.test(plain), 'absent when feet are not mentioned');
+  assert.ok(/thing about feet/i.test(footy), 'present when they are');
   assert.ok(!/Unshod Commute/.test(plain) && /Unshod Commute/.test(footy),
     'and the worked example rides with it');
 });
@@ -605,4 +605,38 @@ test('the citation does not spend a sentence on the box beside it', () => {
   // The bare colour is ordinary English and must stay available.
   assert.ok(!namesTheBox(cite('There is no silver lining here, crawler.')));
   assert.ok(!namesTheBox(cite('A gold star for effort. The effort was poor.')));
+});
+
+test('an award waits for everything it names, and is never listed early', () => {
+  // The books' own awards are quotations, so the phrase heuristic is off — but
+  // a quotation can still name somebody the reader has not met, and the award's
+  // NAME is a spoiler by itself: "Apex Predator" says how a floor ends.
+  const base = {
+    books: [{ id: 1, title: 'One', chapters: 47 }, { id: 5, title: 'Five', chapters: 60 }],
+    floors: [{ id: 1, revealedAt: '1:2', recapAt: '1:29', premise: 'p' }],
+    entities: [{
+      id: 'guilds', kind: 'mechanic', name: 'The Guild System', aka: ['Guilds'],
+      role: 'r', tagline: 't', revealedAt: '5:8', beats: [], relations: [],
+    }],
+  };
+  const run = a => lint({ ...base, achievements: [a] });
+
+  const early = run({ id: 'sign', name: 'Dungeon Sign', at: '1:2',
+    text: 'You read a sign.', reward: 'Nearby Guilds appear on your minimap.' });
+  assert.equal(early.errors.length, 0, 'a quotation is tightened, never rejected');
+  assert.equal(early.tightened.get('sign'), parseAt('5:8'),
+    'it waits for the thing it names, the way a relation waits for its endpoints');
+
+  const clean = run({ id: 'ok', name: 'Empty Pockets', at: '1:2',
+    text: 'You did not bring any supplies. None.', reward: 'A bronze box.' });
+  assert.equal(clean.errors.length, 0);
+  assert.equal(clean.tightened.has('ok'), false, 'and an award naming nothing is left alone');
+
+  // The name is checked too, not only the body.
+  const named = run({ id: 'n', name: 'Guilds Are Open', at: '1:2', text: 'You did a thing.' });
+  assert.equal(named.tightened.get('n'), parseAt('5:8'), 'the award name is screened as well');
+
+  const unpublished = run({ id: 'u', name: 'Later', at: '9:1', text: 'x' });
+  assert.ok(unpublished.errors.some(e => /not published/.test(e)),
+    'an award in an unpublished book is still an error');
 });

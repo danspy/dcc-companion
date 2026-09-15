@@ -101,4 +101,25 @@ const Relation = defineTable({
   },
 });
 
-export default defineDb({ tables: { Book, Floor, Entity, Beat, Relation } });
+/* The awards the System actually handed out, pulled from the wiki's own
+   `AI Description` sections with their chapter citations — the same source and
+   the same quoting rule as an item's description. An award's *name* is a
+   spoiler on its own ("Apex Predator" says how a floor ends), so these are
+   gated like everything else and a sealed one is never listed by name. */
+const Achievement = defineTable({
+  columns: {
+    id: column.text({ primaryKey: true }),
+    name: column.text(),
+    at: column.text(),                                // the curation tag
+    sortKey: column.number(),                         // resolved frontier
+    floor: column.number({ optional: true }),
+    forWhat: column.text({ optional: true }),         // what earns it
+    box: column.text({ optional: true }),             // the loot box it pays out
+    text: column.text(),                              // the System's own words
+    reward: column.text({ optional: true }),          // its reward line, often a joke
+    trimmed: column.boolean({ default: false }),      // quoted in part, not whole
+    confidence: column.text({ default: 'draft' }),    // verified | draft
+  },
+});
+
+export default defineDb({ tables: { Book, Floor, Entity, Beat, Relation, Achievement } });

@@ -21,7 +21,7 @@ const FORWARD_PHRASE =
 
 const escapeRe = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-export function lint({ books, floors, entities }) {
+export function lint({ books, floors, entities, achievements = [] }) {
   const errors = [];
   const warnings = [];
   const byId = new Map(entities.map(e => [e.id, e]));
@@ -229,5 +229,52 @@ export function lint({ books, floors, entities }) {
     }
   }
 
-  return { errors, warnings };
+  /* The awards the System handed out, pulled from the wiki with their chapter
+     citations. These are quotations, not curation, so the phrase heuristic is
+     off for exactly the reason item descriptions turn it off — the book's own
+     text says "eventually" — while the name check stays on, because a quotation
+     can still name somebody the reader has not met.
+
+     The name is checked as well as the body. An award's *name* is a spoiler by
+     itself: "Apex Predator" says how a floor ends before you have reached it. */
+  const seenAwards = new Set();
+  const tightened = new Map();
+  for (const a of achievements) {
+    const where = `achievement ${a.id}`;
+    if (seenAwards.has(a.id)) errors.push(`${where}: duplicate id`);
+    seenAwards.add(a.id);
+
+    const aAt = at(a.at, where);
+    if (aAt === null) continue;
+    if (!bookIds.has(bookOf(aAt))) {
+      errors.push(`${where}: reveals in book ${bookOf(aAt)}, which is not published`);
+    }
+    if (!a.text) errors.push(`${where}: no text — a sealed row with nothing behind it`);
+    if (!VALID_CONFIDENCE.has(a.confidence ?? 'draft')) {
+      errors.push(`${where}: confidence must be "verified" or "draft"`);
+    }
+    /* An award naming something the reader has not met is not a curation
+       mistake the way a hand-written beat is — it is a quotation, and the
+       citation and our own entity tag simply disagree about when a word first
+       reaches the reader. So it is *tightened* rather than rejected, exactly as
+       a relation looser than its endpoints is: the award unseals once
+       everything it names is safe, and the build takes the higher number.
+
+       The name is checked alongside the body. An award's name is a spoiler by
+       itself — "Apex Predator" says how a floor ends before you get there. */
+    let floorAt = aAt;
+    for (const n of gatedNames) {
+      if (n.at <= aAt) continue;
+      if (!n.re.test(`${a.name} ${a.text ?? ''} ${a.reward ?? ''} ${a.box ?? ''}`)) continue;
+      if (n.at > floorAt) floorAt = n.at;
+      warnings.push(`award ${a.id}: names "${n.name}", so it waits for it`);
+    }
+    if (floorAt > aAt) tightened.set(a.id, floorAt);
+
+    if ((a.confidence ?? 'draft') === 'draft') {
+      warnings.push(`award at a floor's end, pending a chapter — ${a.id}`);
+    }
+  }
+
+  return { errors, warnings, tightened };
 }
