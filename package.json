@@ -20,6 +20,7 @@
     "check": "astro check",
     "colors:refresh": "node scripts/fetch-book-colors.mjs",
     "content:anchors": "node scripts/check-anchors.mjs",
+    "content:gaps": "node scripts/check-gaps.mjs",
     "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {

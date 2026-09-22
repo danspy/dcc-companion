@@ -1602,6 +1602,7 @@ npm run content:build   # rebuild data/content.snapshot.json after editing data/
 npm run content:anchors # is every reveal tag where the book first names it? (full text if present)
 node scripts/check-facts.mjs      # every name/number/quotation against the page it is shown on
 node scripts/check-placement.mjs  # is each beat filed at the chapter whose vocabulary it uses?
+npm run content:gaps    # chapters with no beat, and the main cast's beats per book
 node scripts/fetch-books.mjs [--no-fetch]  # the edition from the OPDS library in .env -> data/index/books/
 npm run content:check   # lint only; prints the draft/chapter-count work queue
 npm run achievements:refresh  # re-pull the awards + the voice corpus from the wiki
@@ -1685,6 +1686,7 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/check-anchors.mjs` | `npm run content:anchors` — advisory: each reveal tag against the first chapter naming it |
 | `scripts/check-facts.mjs` | Advisory: a name, number or quotation shown before the book prints it, or never printed |
 | `scripts/check-placement.mjs` | Advisory: a beat whose vocabulary lives in a later chapter than its gate |
+| `scripts/check-gaps.mjs` | `npm run content:gaps` — advisory: what is *missing*, not what is wrong |
 | `scripts/fetch-books.mjs` | The edition's full text, one file per section with its reading position; gitignored |
 | `scripts/lib/edition.mjs` | Wiki chapter numbers -> the edition's (book 5 differs) |
 | `src/lib/achievement.ts` | Tiers, the prompt, the model call, and the screen-and-retry loop |
@@ -1729,6 +1731,17 @@ currently has a dev server running. It is not this deployment, and only one proj
   detail from nowhere (a family shop, a vote that widens the
   field), and floor 9's recap carrying three book-4 events. **Taglines have not had this pass yet**,
   and they are summaries, so they will be worse.
+- **Book 8 is filled chapter by chapter; books 1–7 are not.** Content grew by adding entities, so
+  each got a few beats at its introduction and the main cast was never followed: Carl had no beat in
+  book 8, Donut none in books 3–5 or 8, Mordecai none after 6:1, while every check stayed green.
+  `npm run content:gaps` now shows it. Book 8 went from 111 beats and 40 empty chapters to 460 and
+  none, written from the text with the main cast first and then read again by a second pass, which
+  changed about one in four — nearly all a closing line the book does not have. Do books 5–7 next
+  (30, 20 and 32 empty chapters), then book 1.
+- Entities book 8 needs and does not have, each flagged by more than one reader: the Pineapple
+  Cabaret, Chris (Imani's teammate, on nearly every page of 8:79–85), Princess Chandra, Grigori the
+  Placid, Chalchiuhtlicue, Hamed, the Midnight Epicure, Minus (the tourist filed as Linus), Lamashtu,
+  the Ascendency, and Scolopendra as a crawler from 8:98.
 - Anchors the read turned up, for the LATE queue: Larracos (named 3:9), Sheol (2:24), Scolopendra and
   Tish (4:21), Ping (4:32), Changeling (1:3), Miriam Dom (3:3), Epitome Tagg (6:21), Team Retribution (7:1).
 - Coverage gaps it noticed: the Gate in book 7 (waiting in a mailbox at 7:1, taken from Elle by Akuma

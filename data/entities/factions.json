@@ -78,6 +78,26 @@
           "confidence": "verified",
           "headline": "Seven factions lose in court",
           "text": "Seven factions sue to take the Gate of the Feral Gods from Carl, naming him and the AI as co-defendants, and the Syndicate Court finds for the defence. He collects seven Fight the Power achievements, stock certificates, and photographs of the plaintiffs' mothers."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 27,
+          "floor": 10,
+          "at": "8:27",
+          "confidence": "verified",
+          "headline": "A headquarters in Florida",
+          "text": "The Syndicate's presence in the system now runs out of a temporary headquarters on the Eastern Seaboard of North America, with Prime Minister Victory and her staff. They chose an area they believed had minimal surviving native life, somewhere in the state of Florida, and the moment they set down the natives were all over them. Orbit belongs to the Open Intellect Action Network, and Borant has nobody spare to watch the feeds. For now, it is busy."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 52,
+          "floor": 10,
+          "at": "8:52",
+          "confidence": "verified",
+          "headline": "A suicide mission, from security",
+          "text": "Captain Fresh of Syndicate security says it plainly to the soldier going in under a dead fan's name: it is a suicide mission. The Syndicate is trying to nuke the whole system off the map before it spreads further, and losing; the AI stops everything and answers in kind. A surgical crawler kill, they believe, will destabilise the group, start the Ascendency game early and let their other assets move. It is us or them, he says. The viewers who will not stop watching are to blame too."
         }
       ],
       "relations": []
@@ -103,6 +123,56 @@
           "confidence": "verified",
           "headline": "Formally inaugurated",
           "text": "Party leadership goes to the highest stat total. Her first act with it is to rename the party after herself. On a show, a name the audience will repeat is not a joke — it is an asset."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 5,
+          "floor": 10,
+          "at": "8:5",
+          "confidence": "verified",
+          "headline": "Seventh in the first heat",
+          "text": "The Royal Court of Princess Donut crosses the finish line of heat one in seventh place, with Team Free Love's wrecked minivan chained behind the food truck on a flatbed Carl built at the side of the road. The bleachers are empty. The results: One Fine Pig, the Jugglers, the Lady Dominators and the Gimp, the Wild Hunt, Girth the Trouble, Team Sparkles, the Court, and Free Love eighth. The Trauco Triplets are eliminated. One team down, and only one."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 21,
+          "floor": 10,
+          "at": "8:21",
+          "confidence": "verified",
+          "headline": "Last in heat two",
+          "text": "Seventh of seven finishers in Heat Two, behind everyone still racing, with Girth the Trouble the only team eliminated. The court did most of the work on Prison Pocket, spent a small crowd of summoned gremlins doing it, and watched the Pontiac and the armoured truck drive past its leader while he lay in the road. Princess Donut calls it an apt metaphor for what always happens when they do all the heavy lifting. Carl says it could be worse. The costume disagrees."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 32,
+          "floor": 10,
+          "at": "8:32",
+          "confidence": "verified",
+          "headline": "First place, in pieces",
+          "text": "Heat Three: first place, the Royal Court of Princess Donut, which crossed the line upside down in a food truck that is now spread across the road along with its tater tots. Both hired ghouls are dead. The Wild Hunt and the Jugglers are eliminated, two teams gone in the one heat, and a replacement is coming for the empty sixth garage. Gremlins with carts and wheelbarrows come out of garages one and three to collect what is left of the truck."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 51,
+          "floor": 10,
+          "at": "8:51",
+          "confidence": "verified",
+          "headline": "First in heat four",
+          "text": "Heat Four. First place, the Royal Court of Princess Donut, driven for the last stretch by a dead camel, after a run of clockwork toads. Second, the Lady Dominators and the Gimp. Third, Team Flamengo. Fourth, Team Free Love. Fifth, team Sparkles. One Fine Pig is eliminated. The next track is a screw factory, steel mill and doll workshop, and containment theft is now on."
+        },
+        {
+          "kind": "use",
+          "book": 8,
+          "chapter": 77,
+          "floor": 10,
+          "at": "8:77",
+          "confidence": "verified",
+          "headline": "Second place in heat six",
+          "text": "Heat six results: first, Team Sparkles, driving itself while its unicorn sleeps it off. Second, the Royal Court of Princess Donut. Third, Team Flamengo, which is Crawler Osvaldo, who told the chat he was about to cross the line when he was not, and so is alive, over the line with a minute to spare. Eliminated: Team Free Love, whose van lies wrecked in the hallway short of the finish. The Court drives past it. The princess climbs into Carl's lap and stays there."
         }
       ],
       "relations": []
@@ -435,6 +505,15 @@
           "confidence": "verified",
           "headline": "The herd finds out",
           "text": "The goats start to panic and faint, certain the end times have come. Gamori, the matriarch, had known all of it and told none of them, because she knew precisely this would happen. Harbinger arrives to point out that he warned her, that he has been protecting the herd the whole time, and that they expelled him for it anyway."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "floor": 11,
+          "at": "8:end",
+          "confidence": "verified",
+          "headline": "The tunnels are not theirs",
+          "text": "The Plenty announce that they have lost control of the tunnel network outside the center system. Sydnee Iglacia, on air, calls it the first of the nine attacks: control. Gods from the dungeon keep appearing near the nodes, the checkpoints into the center system are overwhelmed, and the one place in the galaxy that still looks safe is the center. Prime Minister Victory is not so sure."
         }
       ],
       "relations": [
@@ -524,6 +603,15 @@
           "confidence": "verified",
           "headline": "Zev's aside, and Rosetta on Harry Tisch",
           "text": "While the teams build their floats, Zev mentions in passing that Odette's husband has bought the rights to every show Donut has ever mentioned, and that it is probably all that is keeping the orcs solvent. Rosetta supplies the rest: his name is Harry Tisch, King Rust vetoed his extradition for tax fraud, and he has been working himself deeper into the empire ever since. Empires that sell weapons still have to bank somewhere."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "floor": 11,
+          "at": "8:end",
+          "confidence": "verified",
+          "headline": "Rent, tripled",
+          "text": "With D'Nadia dead, whoever is running the Skull Empire in the royal family's absence has swallowed every real estate holding of a group the Prism controlled. In the Makoka Cloud, Sydnee Iglacia's rent triples starting the next crutch, and oxygen is no longer included. She curses the Skull Empire, the Valtay and D'Nadia in the same breath."
         }
       ],
       "relations": [
@@ -873,6 +961,16 @@
           "confidence": "verified",
           "headline": "Rishi's offer",
           "text": "Their prisoner explains the Great Consensus, and that Vinata held to it, and that Vinata's group meant to steal the Naga fleet and leave the central system for good. Then he offers a signed document: citizenship in Naga lands for every native of Earth, if the Nagas may settle the other planets in Earth's system. Carl marks him with the ring and kills him."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 1,
+          "floor": 10,
+          "at": "8:1",
+          "confidence": "verified",
+          "headline": "Widow's Rights",
+          "text": "Outside the crawl, a bloody coup has put a new Sultan on the Naga throne, and his niece Chandra, one of Rishi's widows, has found a use for an old law: a royal widow may claim her husband's killer as her new husband. A public jury in Naga court found the idea of punishing Carl this way amusing and voted it through, adding the holdings of the defeated as his wedding gift in a fan box. As his wife she signs for him, she has filed to put Princess Donut's earnings under his conservatorship, and two Taurin associates have been paid to call on Quasar."
         }
       ],
       "relations": [
@@ -1123,6 +1221,16 @@
           "confidence": "verified",
           "headline": "They quit the floor",
           "text": "Akuma tells the Warlord Chat that the war mages are done here. They never wanted the castle; they came to test the potions and to find the Scavenger's Daughter, who was hidden inside it, and she is with them now. First, though, he wants Carl and Donut to kill Agatha, who was forced on the rebellion to get it system access: she is an enemy to them all. Then he leaves the realm, and under this season's rules the rebellion is recorded as defeated."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 38,
+          "floor": 10,
+          "at": "8:38",
+          "confidence": "verified",
+          "headline": "Five left, and a home overrun",
+          "text": "The war mages had lived in the Pineapple Cabaret. They left deliberately, back to cold storage, to be brought into Faction Wars and find the Scavenger's Daughter, and in the few days they were gone their protection spells failed and it was overrun: shadow mimics, the Ogre Imperium's leftovers, and older things Agatha could wake. There are five of them left. Plan one was more mages, plan two an old ally in the Nothing. Carl is plan three."
         }
       ],
       "relations": [
@@ -1215,6 +1323,25 @@
           "confidence": "verified",
           "headline": "A creditor with a seat at the table",
           "text": "A corporate system government inside the Syndicate, which is to say a company that is also a country and answers to neither description when it is inconvenient. Its people are parasites in the literal sense, riding the bodies of other races. It holds the Borant Corporation’s debt, and it sends a crawler a neural enhancer, which is the sort of gift that is also a note."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 23,
+          "floor": 10,
+          "at": "8:23",
+          "confidence": "verified",
+          "headline": "The Emperator's bomb",
+          "text": "The Emperator of the Valtay fleet comes through the tunnel gate carrying a system-busting bomb, apparently waiting for the AI to be distracted. It was not distracted. It says so in the middle of a floor announcement, read aloud by a mudskipper who had no idea the text was coming, and adds that it makes no apologies about where that giant suicide bomb just ended up. It does not say where. A creditor who arrives with a bomb has stopped negotiating."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "floor": 11,
+          "at": "8:end",
+          "confidence": "verified",
+          "headline": "A royalty clause, and a worm",
+          "text": "Sydnee Iglacia's publisher is a subsidiary of a Valtay company, and her contract lets them hold her royalties for the whole of her natural life, payable to heirs only on proof of her good moral character. The payments can be accelerated, if she signs a Valtay life contract and lets a worm take her over after death. It is not something she would ever dream of doing. Until her rent tripled, anyway."
         }
       ],
       "relations": [

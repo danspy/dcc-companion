@@ -531,6 +531,25 @@
           "confidence": "verified",
           "headline": "One of six powers in the dungeon",
           "text": "The AI sets out who is actually fighting for control down here, and there are six groups. Crawlers. Standard NPCs. Gods. Sapient mobs. The demons of Sheol. And one more it does not name in the same breath as the others."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 94,
+          "floor": 11,
+          "at": "8:94",
+          "confidence": "verified",
+          "headline": "The floor that segregated itself",
+          "text": "Laying out the road to the exit, the AI says the fifteenth floor can probably be skipped. Sheol has segregated itself out, and the dungeon programming is pretending it sits outside the playing field, like the thirteenth floor in some hotels. The AI admits it does not know what is going on down there. Someone, it says, should probably check on that."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "floor": 11,
+          "at": "8:end",
+          "confidence": "verified",
+          "headline": "A front of its own",
+          "text": "Louis drops through the casino's portal expecting the Pineapple Cabaret and lands in Sheol instead: a hot cave on the fifteenth floor, outside the playing field without a registered pass. Its people separated themselves from the code in time to miss the first Scolopendra attack. A demon called Forkith gives Louis a leech that filters a crawler's blood so he can survive the heat. They need soldiers on a different front, he says, and they have been waiting a very long time to move."
         }
       ],
       "relations": [

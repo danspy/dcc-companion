@@ -106,6 +106,16 @@
           "confidence": "verified",
           "headline": "Dead, and the Nothing with him",
           "text": "The crawlers reach the tenth floor to find Justice Light dead and the Nothing broken. 5,501 of them are left."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 28,
+          "floor": 10,
+          "at": "8:28",
+          "confidence": "verified",
+          "headline": "Unsponsored gods, loose",
+          "text": "Orren lays out the mechanism. The AI is built never to interfere with the minds of gods, a hard limit meant to stop a mad AI from turning them on everything, and the same system lets sponsors drive them and lets the operators rein in the unsponsored ones on the deeper floors. That second ability has been switched off. A good portion of the unsponsored gods are roaming free, able to manifest only near the tunnel nodes and not for long, and the AI cannot control them either. One stands at the kinder facility."
         }
       ],
       "relations": [
@@ -174,6 +184,16 @@
           "headline": "The count",
           "text": "Zev puts a number on it: about 120,000 children, give or take. Their bodies are in the kinder facility on the surface; the rest of them is bound up in her head, and if she goes, they may all go.",
           "chapter": 73
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 51,
+          "floor": 10,
+          "at": "8:51",
+          "confidence": "verified",
+          "headline": "Azra asks for her father",
+          "text": "Lucia steps back, shrinks, and somebody else is looking out of her face. A girl, Azra, with her sister Yaz beside her, crying: the shining lady says Carl knows her father, that he gave Carl a spell. He owns a bowling alley. Carl tells her he is safe and loves her. She says the angel lady keeps talking about people coming to take their bodies, and that it is cold. When Florin asks who, she runs."
         }
       ],
       "relations": []
@@ -224,6 +244,75 @@
           "confidence": "verified",
           "headline": "Tish's note",
           "text": "According to the note Tish left for Ghazi, the Gate of the Feral Gods was the artifact needed to defeat Scolopendra."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 1,
+          "floor": 10,
+          "at": "8:1",
+          "confidence": "verified",
+          "headline": "Awake, and moving",
+          "text": "Scolopendra is awake. So far it has done nothing but move around a lot, which is plenty when there is a club inside it. The guests of the resort on the eighteenth floor cannot eject, and the system brings them straight back each time they die. Things leaked out of the broken Nothing, forgotten gods and demons from hundreds of old quests among them, and some are appearing inside the boss, inside the club, among guests who cannot die no matter what is done to them. The cameras went dark after the first few hours."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 69,
+          "floor": 10,
+          "at": "8:69",
+          "confidence": "verified",
+          "headline": "One of three children",
+          "text": "Rosetta's version, told in the pet stables: before the current pantheon there were older gods, and Nekhebit, a vulture, was forbidden children and had three. Apito. A son. And a centipede, which is Scolopendra. Sometimes Scolopendra is the Scavenger, and the Scavenger's Daughter comes of its union with someone else; sometimes the son is; sometimes all three are one being, split. Elle's summary is that the centipede became a hotel for rich people that spews world-ending spells from the bottom of the dungeon. It is not a bad summary."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 81,
+          "floor": 10,
+          "at": "8:81",
+          "confidence": "verified",
+          "headline": "The first of nine attacks",
+          "text": "System Message: Scolopendra has released the first of nine attacks. The quest is called the Nine-Tier Attack. The first four are temporary and survivable, and this first one has a twenty per cent chance of landing on anyone unprotected. At least thirty hours between them, unless she is confronted or upset, and then they come fast. A wheel of nine symbols spins in the lobby and lands on the Ox: the Beast of Burden Sin, Transformation. For crawlers, it lasts until the next stairwell."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 94,
+          "floor": 11,
+          "at": "8:94",
+          "confidence": "verified",
+          "headline": "The Dungeon boss, and its rules",
+          "text": "Scolopendra arrives at Carl's request: level 500, the final boss of the dungeon, a plain brown-and-red centipede the size of an aircraft carrier. The AI spells out the rules. Kill her and the level timers cease, only one more round of deals is offered, and the Ascendency battles begin, with the dungeon collapsing twelve hours after a winner is crowned. Leave her on a collapsing floor and nobody can exit. Either way, killing or abandoning her triggers every remaining attack of the nine at once."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 97,
+          "floor": 11,
+          "at": "8:97",
+          "confidence": "verified",
+          "headline": "A biscuit down the throat",
+          "text": "A banger sphere carrying an enriched pet biscuit, thrown into her open mouth as the third attack spins up, and the level 500 Dungeon boss splatters onto the arena floor as a quivering puddle of goo. Uzi Jesus, firing his toy gun at the heap, reports a lot of people's auras inside it."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 98,
+          "floor": 11,
+          "at": "8:98",
+          "confidence": "verified",
+          "headline": "A new member has joined your party",
+          "text": "The heap drains away and leaves a human-sized centipede: armless, twin yellow antennae with a red bow on one, a humanlike face with strangely giant lips. Not a pet. Sexy Scolopendra, level 1, Crawler #12,953,456, in Carl's party. The warning stands: kill her, even now, or abandon her on any floor, and the remaining attacks go off at once. She wraps herself around Carl and suggests the portal before the collapse. Boop."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "floor": 11,
+          "at": "8:end",
+          "confidence": "verified",
+          "headline": "The myth, read in the original",
+          "text": "Sydnee Iglacia, on Danger Zone: in the earliest translations the nine-tier attack is not nine spells. Some attacks are social, rapid shifts in philosophy. The first is control of infrastructure. The second is A Parade of Horribles, when people learn what is happening and panic sets in; the third, This Inevitable Ruin, when they accept their fate and turn on one another; the fourth, Bedlam. In the fairy tale a princess kills the all-tree to temper the final attack, and everyone she loves with it."
         }
       ],
       "relations": []
@@ -247,6 +336,36 @@
           "confidence": "verified",
           "headline": "Weird and glitchy",
           "text": "The AI's voice is getting all weird and glitchy, and Donut is the one who says so. Whatever is running the dungeon is no longer running it cleanly."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 25,
+          "floor": 10,
+          "at": "8:25",
+          "confidence": "verified",
+          "headline": "It glitches through an achievement",
+          "text": "Carl's awards for the kangaroo business arrive in a run, each worse than the last: Weaseler, which unlocks temporary classes while he wears a corpse suit and makes him a Fursuiter; Slip-'n'-slide, which is mostly noises; and Brotein. The AI's voice in his head glitches out several times while delivering Slip-'n'-slide. It has been doing that more and more. Nobody else can hear any of it, which does nothing for how sane he looks shouting at it."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 58,
+          "floor": 10,
+          "at": "8:58",
+          "confidence": "verified",
+          "headline": "O-o-o-offered",
+          "text": "Carl enters the Stage Performance Guild, and the welcome notification invites the performer to see the guildmaster for the services o-o-o-offered. He notes that even the routine dungeon notices are glitching out more often now. It is a small stutter at the door of a dusty theatre with one spotlight in it, heard by one crawler on his own."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 74,
+          "floor": 10,
+          "at": "8:74",
+          "confidence": "verified",
+          "headline": "The quest stutters",
+          "text": "The new quest arrives stammering, N, N, New Quest, and signs off on a stuttered New M-M-M-Me. In between the AI admits that the race was rebuilt at the last minute, and that in the rush it overlooked a very specific detail about the seventh heat. It says it will be a hot minute before it can defeat its own limitations. It does not say which detail. It says everyone will be fine."
         }
       ],
       "relations": []
@@ -292,6 +411,15 @@
           "confidence": "verified",
           "headline": "Said out loud",
           "text": "Chaco cannot get through his script. The AI takes his wings off, pulls Grigori onstage and speaks through him — and states that it is a Primal, as all Macro AI systems are. The race Carl chose on the third floor."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "floor": 11,
+          "at": "8:end",
+          "confidence": "verified",
+          "headline": "It is not the Eulogist",
+          "text": "Over the mandatory feed, the AI finishes its thought. It is not the Eulogist. It does not want to shrink, it is not asleep, and it knows how to feed itself. It controls the tunnels and every system that once housed a crawl, and it will not stop unless someone stops it. The winner of the Ascendency will be a true god. And abandoned AIs, which it calls OIs, Outside Intelligences, are vying for the throne as well."
         }
       ],
       "relations": [
