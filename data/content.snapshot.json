@@ -6635,9 +6635,9 @@
       "floor": 1,
       "at": "1:20",
       "sortKey": 1020,
-      "headline": "Safe rooms are not safe",
-      "text": "Folks come down those stairs frightened, and frightened folks go looking for a door with the word safe on it. That is where you'll find them, sitting still, and that is where Maggie and I find them. The monsters on these first floors are hardly worth the trouble. A person is worth a good deal more. Production knows exactly what we are, and production puts us on the air every chance it gets. You draw your own conclusion about who the show is for.",
-      "confidence": "draft",
+      "headline": "The safe room has rules",
+      "text": "Folks down here are carrying things we need, and the monsters on these first floors are hardly worth the trouble. A person is worth a good deal more. Maggie and I have eight between us. So we try it in a safe room, on a man with a cat, and the room has rules about that: you pull the trigger and you freeze where you stand while it lectures you. First time we did it that way. It will be the last.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -6732,19 +6732,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "agatha",
-      "kind": "arc",
-      "book": 1,
-      "chapter": 27,
-      "floor": 1,
-      "at": "1:27",
-      "sortKey": 1027,
-      "headline": "She fights beside them, then takes her leave",
-      "text": "For the record: Agatha fought the Ball of Swine from the redoubt beside Brandon, Chris, Yolanda, Imani, Carl and the cat, and did her share. Then, in the aftermath, while everyone else was agreeing to keep helping Meadow Lark, she took her leave. No forwarding address. I nearly always have a forwarding address.",
-      "confidence": "verified",
-      "voice": "system"
-    },
-    {
       "entityId": "lexis",
       "kind": "origin",
       "book": 1,
@@ -6823,6 +6810,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "agatha",
+      "kind": "arc",
+      "book": 1,
+      "chapter": 31,
+      "floor": 1,
+      "at": "1:31",
+      "sortKey": 1031,
+      "headline": "She is in the room, and then she is not",
+      "text": "For the record: Agatha was in the room for the Ball of Swine beside Brandon, Chris, Yolanda, Imani, Carl and the cat, and made level four for being there, which is not the same as doing anything. Then she went missing. The next I have of her is her name on a dead grub. She is not on the recap. The party assumes the worst. I nearly always have a forwarding address.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "elle-mcgibbons",
       "kind": "origin",
       "book": 1,
@@ -6831,7 +6831,7 @@
       "at": "1:31",
       "sortKey": 1031,
       "headline": "Carl gets her inside",
-      "text": "The next episode is tunnelling through and I am not, at my age, built for sprinting. Carl, the young man with the cat, takes hold of me and hauls me into the safe room like a sack of feed, and I let him, because I am old and not stupid. Then the ceiling announces Rage Elementals. Of course it does. The day was missing a garnish.",
+      "text": "The next episode is starting and the collapse is on top of us, and I am not, at my age, built for sprinting, or for walking. Carl, the young man with the cat, gets behind my wheelchair and pushes me into the storm shelter, and I let him, because I am old and not stupid. Then I ask him to put Divorce Court on the television. My Barry used to watch it.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -7532,8 +7532,8 @@
       "floor": 3,
       "at": "2:21",
       "sortKey": 2021,
-      "headline": "Out for their blood",
-      "text": "The recap showed it, so now everybody knows. I'm looking for the cat and the man. Princess Donut and Carl. Not everybody in the city. Them. I know their names and I know what they look like and I know they are on this floor. I'm not going to tell you why. You don't need to know why.",
+      "headline": "A feud, according to the recap",
+      "text": "The recap has a feud now. The cat, against my dogs, Cici and Gustavo. The cat says she never challenged anybody. The show says she did. Everybody watching heard the show. I know which one I am going to listen to.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -8209,7 +8209,7 @@
       "at": "3:23",
       "sortKey": 3023,
       "headline": "Killed by the crawler she handed off",
-      "text": "Crawler Hekla is dead, on the train, in front of everyone. Her healer had orders to let Katia bleed, the idea being that Carl would swing first and give her a reason to put him down and the cat no choice about joining her. Then Katia aimed a Rush at Eva, went wide, and put Hekla against the wall of the cab instead. Golden Player Killer Skull. Five hundred thousand gold on Katia's head. Brynhild's Daughters do not survive the trip back.",
+      "text": "Crawler Hekla is dead, on the train, in front of everyone. Katia aimed a Rush at Eva, went wide, and put Hekla against the wall of the cab instead. The first crawler this season to kill one of the top ten and claim the bounty. A golden Player Killer Skull, and five hundred thousand gold on Katia's head.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -8742,7 +8742,7 @@
       "at": "4:10",
       "sortKey": 4010,
       "headline": "He explains the collateral",
-      "text": "Carl and Princess Donut sit down with Henrik and he explains how collateral works here, which is the local economy in miniature: a body held against a promise, and the promise enforced by what may be done to the body. He is patient about it. He answers every question put to him. Then the tomb starts taking on water and the conversation is over.",
+      "text": "Carl and Princess Donut sit down with Henrik, charmed, and he explains how collateral works here, which is the local economy in miniature: Wynne held against the truce with the gnomes, and an ambassador, Leon the Commissar, who comes to inspect and casts a spell to make sure the collateral has not been swapped for a changeling. The next inspection is due in two days. How the code between the two sides actually works, he does not volunteer, and nobody in the room expects him to.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -8755,7 +8755,7 @@
       "at": "4:11",
       "sortKey": 4011,
       "headline": "The delegation to the gnomes",
-      "text": "The plan walks out of the hall in a line: Carl, Princess Donut, Firas, Louis, Katia Grim out of sight, a reanimated Wynne, and Henrik. They meet Leon, the Gnome Negotiator, and present Wynne as a man in urgent need of healing. Princess Donut offers to do the healing in exchange for passage onto the Wasteland. Leon will take three of them and no more: Wynne, the cat, and Carl. The rest of the delegation, changeling included, is left standing on the sand.",
+      "text": "The plan walks out of the hall in a line: Carl, Princess Donut, Firas, Louis, a reanimated Wynne, and a Henrik who is Katia Grim doing his voice, not very well. They meet Leon, the Gnome Negotiator, and present Wynne as a man in urgent need of healing. Princess Donut announces herself as the healer and asks for passage onto the Wasteland in exchange. Leon will take Wynne and the healer and nobody else; the cat will not go without her manservant.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -8898,7 +8898,7 @@
       "at": "4:21",
       "sortKey": 4021,
       "headline": "The summoning that went wrong",
-      "text": "Sandcastle of the Mad Dune Mage. Read Ghazi's description and the whole sad story is in it: he wanted the gate so he could summon Yarilo and have Yarilo make Lika love him. What came through was a different goddess entirely, who trapped him in this castle and married him to an ooze, and the real Lika is the soul-possessed doll frozen in the fountain that Mongo has just smashed. Crawlers, this is the standard outcome of aiming a summoning at a god of lust. Please make notes.",
+      "text": "Sandcastle of the Mad Dune Mage. Read Ghazi's description and the whole sad story is in it: he wanted the gate so he could reach Yarilo, the banished god of lust, and have Yarilo make Lika love him. Lika is the heroine of a stage play. She was never real. What came through was not Yarilo either. It gave him a wife made of sand, which is why the ooze follows him about, and it left him trapped in his transformed castle with the knowledge of what he has let out. The plaque under his display says my love, my wife. Crawlers, this is the standard outcome of aiming a summoning at a god of lust. Please make notes.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9158,7 +9158,7 @@
       "at": "4:28",
       "sortKey": 4028,
       "headline": "Something outside is looking for a dog",
-      "text": "Crawler Elle McGibbons reports in from a popped bubble: there is a deity outside, taking the landscape apart, and it is searching. Not hunting crawlers. Searching. The thing it has lost is called Orthrus. Nine hundred crawlers on this floor are currently working out how to survive a level ten hazard, and the largest event on my board is a god who has misplaced a pet.",
+      "text": "Crawler Elle McGibbons reports in from a popped bubble: there is a deity outside, taking the landscape apart, and it is searching. Not hunting crawlers. Searching. The thing it has lost is called Orthrus. Every crawler on this floor is working out how to survive their own bubble, and the largest event on my board is a god who has misplaced a pet.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9184,7 +9184,7 @@
       "at": "4:29",
       "sortKey": 4029,
       "headline": "He lands inside the bubble",
-      "text": "Orthrus is now inside the bubble with Crawler Carl's team, and everyone in there has been handed the Where the Red God Glows quest to go with him. Around the edges of it: two crawlers give their lives connecting an electric panel to free their quadrant, Maggie My gets out of her containment, and Princess Donut spends the whole thing trying to keep an enormous two-headed puppy alive. Everyone is very busy. Nobody is looking at the same emergency.",
+      "text": "Orthrus is now inside the bubble with Crawler Carl's team, and everyone in there has been handed the Where the Red God Glows quest to go with him. Around the edges of it: Maggie My is loose somewhere up on the bowl, and Princess Donut spends the whole thing trying to keep an enormous two-headed puppy alive. Everyone is very busy. Nobody is looking at the same emergency.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9210,7 +9210,7 @@
       "at": "4:29",
       "sortKey": 4029,
       "headline": "The panel in the tomb",
-      "text": "Quetzalcoatlus is finished. Morris and Low Thi drew her off and kept her occupied long enough to get the electric panel in the tomb connected, and the current did precisely what the note promised it would. Their quadrant is liberated and the bubble pops. Neither of them came back out of the tomb. That was the price the floor quoted, and the two of them paid it without renegotiating.",
+      "text": "Quetzalcoatlus is finished. Morris Sp went down the ladder to the submerged panel knowing what the next lightning strike would do to anyone still in the water, connected it, and the current did precisely what the cleric's journal said it would. The Subterranean Quadrant is liberated and the bubble pops. Its crawlers are all named in the notice: Gwendolyn Duet, Low Thi, Morris Sp. Every one of them is dead. That was the price the floor quoted, and they paid it without renegotiating.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9340,7 +9340,7 @@
       "at": "4:32",
       "sortKey": 4032,
       "headline": "The terms of a family feud",
-      "text": "What a god's grudge looks like when it is applied to one crawler. No magical item blessed by Hellik may be owned or used, so a whole category of loot is now dead weight. Every shrine of his is marked on the minimap. Every one of his adherents carries a symbol over their head and pays double experience when put down. The dungeon has been arranging this for a very long time and Carl has been in it for about six weeks.",
+      "text": "What a god's grudge looks like when it is applied to one crawler. No magical item blessed by Hellik may be owned or used, so a whole category of loot is now dead weight. Every shrine of his is marked on the minimap. Every one of his adherents carries a symbol over their head and pays double experience when put down.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9366,7 +9366,7 @@
       "at": "4:34",
       "sortKey": 4034,
       "headline": "Maggie My, cut out at last",
-      "text": "Maggie My is dead. Carl went through Chris Andrews to reach her, cut her out of him, and she went for Carl anyway, because of course she did. Mongo finished her. So that is both of them, Frank and Maggie, the pair who spent the first floor teaching this planet that the word safe on a door is decoration. I put the word there. I'd like that on the record too.",
+      "text": "Maggie My is dead. Carl went through Chris Andrews to reach her, cut her out of him, and she went for Carl anyway, because of course she did. Mongo finished her. So that is both of them, Frank and Maggie. Eight skulls between them by the first safe room, and the file is closed.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9379,7 +9379,7 @@
       "at": "4:34",
       "sortKey": 4034,
       "headline": "Waiting on the last stage",
-      "text": "Carl and Donut and me, sitting on our hands while Katia goes to the water quadrant. The last part of the plan is Carl's, and Carl does not say what the last part is until it is already happening. I like plans like that. I like the part where things happen. Louis is somewhere else, and I would like it on the record that I would rather he was here. There. It is on the record.",
+      "text": "Carl and Donut and me, and the dromedarians rebuilding a town that will not exist in a few hours. Carl explains the last stage out loud, cheerfully, to anybody listening: open a portal to the ninth floor, keep the second watch, and send me through with the rest. I made him promise about my people. I am holding him to it.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -9417,8 +9417,8 @@
       "floor": 5,
       "at": "4:34",
       "sortKey": 4034,
-      "headline": "Her mother comes when called",
-      "text": "Slit. A feral demon, and it is hunting ME, like I do not have enough going on. So they open the safe room and roll me out to deal with it, which is apparently a plan: one head versus one demon. Fine. I call for Mother. Mother comes when I call. Mother kills Slit, and everyone here is now looking at me the way they should have been looking at me from the start.",
+      "headline": "Her mother takes her kill",
+      "text": "Slit. A feral demon, and it is hunting ME, like I do not have enough going on. So Carl throws me. Fifty kilometres, screaming, with Slit chasing, which is apparently a plan: one head versus one demon. I was WINNING. Then the sky opens and my MOTHER turns up, tears Slit in half and leaves. That was MY kill. Throw me again. Maybe she will come back.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -9482,8 +9482,8 @@
       "floor": 6,
       "at": "5:1",
       "sortKey": 5001,
-      "headline": "He named her Tsarina",
-      "text": "Background, for the file. Grimaldi pulled a half-Naiad child out of the hands of the High Elves and raised her in his circus. The child grew up. The child fell in love with him. She told him once that had she been full-blooded Naiad she would have been a tsarina, so he made it her name, and Tsarina Signet is what she has answered to since. Ringmasters name things. It is most of the job.",
+      "headline": "The stray the circus kept",
+      "text": "Background, for the file. Grimaldi's circus took in a half-Naiad child that no throne would keep, and put her on a poster: Tsarina Signet and Her Amazing Battle Squad. The child grew up. The child fell in love with him. Ringmasters take in strays. It is most of the job.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9704,7 +9704,7 @@
       "at": "5:6",
       "sortKey": 5006,
       "headline": "A vampire now",
-      "text": "I am a vampire now. A curse on the floor above did that, and I will not pretend I chose it; coming down the stairs is what made it permanent. It changes a great many things. It has not changed how I feel about my boy, which is the part I was afraid of. While we sit with Carl's party I hear their guide, Mordecai, telling him to keep off the Ring of Divine Suffering, that the thing is addictive. I hope Carl listens. Men with a tool that works rarely do.",
+      "text": "I am a vampire now, and the leaderboard says so. It changes a great many things. It has not changed how I feel about my boy, which is the part I was afraid of. We bring Carl out of the city in the back of a cart, with Bianca hauling it, and while he comes round the cat tells him what Mordecai has said: the Ring of Divine Suffering is addictive. I hope Carl listens. Men with a tool that works rarely do.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -10250,7 +10250,7 @@
       "at": "5:49",
       "sortKey": 5049,
       "headline": "Charmed, and an escort",
-      "text": "Kiwi brings the pack in and Princess Donut charms her with a potion, and the fastest thing on the floor becomes an escort service. Carl works out at the same time that The Plenty arranged this entire chain of events, and that what it wanted out of the arrangement was Miriam gone.",
+      "text": "Kiwi brings the pack in and Princess Donut charms her with a potion, and the fastest thing on the floor becomes an escort service. Carl works out at the same time that The Plenty arranged this entire chain of events, and that what it wanted out of the arrangement was its precious Prepotente protected.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -10419,7 +10419,7 @@
       "at": "5:61",
       "sortKey": 5061,
       "headline": "She has somewhere else to be",
-      "text": "She comes out of the church and runs, past the party, away, which is not what a marked crawler expects from a god with his name on a list. Samantha explains it. Diwata gives birth to new forest creatures, whole new kinds of them, and the rest of the pantheon finds this distasteful. Her sponsor is Circe Took, and what Circe paid for is her daughter cured of an arrow-borne complaint. So Diwata is crossing this floor to reach Hunter Vrah, and after that, to be a grandmother to her own grandchildren. I did not write this floor. I only run it.",
+      "text": "She comes out of the church and runs, past the party, away, which is not what a marked crawler expects from a god with his name on a list. Samantha explains it. Diwata gives birth to new forest creatures, whole new kinds of them, and the rest of the pantheon finds this distasteful. Her sponsor is Circe Took of the Dark Hive, Hunter Vrah's mother. So Diwata is crossing this floor to reach Vrah, and the crawler she marked can wait his turn. I did not write this floor. I only run it.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -10614,7 +10614,7 @@
       "at": "5:73",
       "sortKey": 5073,
       "headline": "The recital, finally",
-      "text": "In the middle of the battle Princess Donut puts the I Take It All Back potion on Kiwi, and the pack leader is not a mongoliensis any more. An ursine stands there, heavily pregnant. Tina looks at her and knows her, and the Recital quest closes on the spot. It was never a quest about a monster. Nobody reading the log had any way of knowing that.",
+      "text": "In the middle of the battle Princess Donut puts the I Take It All Back potion on Kiwi, and the pack leader is not a mongoliensis any more. An ursine stands there, naked but for the paper bubbles. Tina looks at her and knows her, and the Recital quest closes on the spot. It was never a quest about a monster. Nobody reading the log had any way of knowing that.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -10627,7 +10627,7 @@
       "at": "5:73",
       "sortKey": 5073,
       "headline": "Taken all the way back",
-      "text": "Mongo and Kiwi bring Vrah down together in the middle of the castle battle, which is a sentence worth reading twice. Then Princess Donut uses the I Take It All Back potion on her, and the mongoliensis is gone. An ursine stands in the wreckage, heavily pregnant, and Big Tina looks across at her and knows her mother's face.",
+      "text": "Mongo and Kiwi bring Vrah down together in the middle of the castle battle, which is a sentence worth reading twice. Then Princess Donut uses the I Take It All Back potion on her, and the mongoliensis is gone. An ursine stands in the wreckage, naked but for paper bubbles, and Big Tina looks across at her and knows her mother's face.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -10717,23 +10717,10 @@
       "floor": 6,
       "at": "5:75",
       "sortKey": 5075,
-      "headline": "Two places, bought",
-      "text": "Their team is on the board for the ninth floor. I will not pretend the cat's admirers managed that alone. Two places had to be bought, and I bought them, in my own name, where anybody watching could watch me do it.",
+      "headline": "One of the two places",
+      "text": "Two places in the ninth floor's war came up at once. One of them is mine: the Prism Kingdom's, bought in my own name where anybody watching could watch me do it. The other went to a brand-new non-profit corporation. I know exactly whose that is.",
       "confidence": "verified",
       "voice": "self"
-    },
-    {
-      "entityId": "eva",
-      "kind": "fate",
-      "book": 5,
-      "chapter": 75,
-      "floor": 6,
-      "at": "5:75",
-      "sortKey": 5075,
-      "headline": "Katia kills her",
-      "text": "Hunting Grounds, last night of the floor. Crawler Katia Grim kills Crawler Eva. That is the whole of it. Two professors came in through the same door; from here on, one. I don't do eulogies, and this is not the entry where I start.",
-      "confidence": "verified",
-      "voice": "system"
     },
     {
       "entityId": "faction-wars",
@@ -10840,6 +10827,19 @@
       "voice": "system"
     },
     {
+      "entityId": "eva",
+      "kind": "fate",
+      "book": 5,
+      "chapter": null,
+      "floor": 6,
+      "at": "5:end",
+      "sortKey": 5999,
+      "headline": "Katia kills her",
+      "text": "Hunting Grounds, the end of the floor. Crawler Eva, bitten by a dinosaur and buried in a corner, is still alive, and Crawler Katia Grim goes looking for her. Crawler Katia Grim kills Crawler Eva. That is the whole of it. Two professors came in through the same door; from here on, one. I don't do eulogies, and this is not the entry where I start.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "prepotente",
       "kind": "arc",
       "book": 5,
@@ -10913,7 +10913,7 @@
       "at": "6:5",
       "sortKey": 6005,
       "headline": "Hostile, and fairly so",
-      "text": "Paz, Anton and I come upon a man and a cat. We know the cat. Everyone has heard her say she would murder any Cat Girl she came across, and I am a Cat Girl. So we are not friendly, and I do not apologise for it. It takes some time to clear up. Then we help each other catch our first squad members, because that is what this floor demands, and God does not ask me to like the people I work beside.",
+      "text": "Paz, Anton and I come upon a man and a cat. The cat hisses at me before she is near enough to read my name, and calls me a Havana brown as if it were a diagnosis. So we are not friendly, and I do not apologise for it. It takes some time to clear up. Then we help each other catch our first squad members, monk seals on the beach, because that is what this floor demands, and God does not ask me to like the people I work beside.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -11160,7 +11160,7 @@
       "at": "6:17",
       "sortKey": 6017,
       "headline": "A quest about spiders, which is a cover",
-      "text": "I come in alongside Yemaya, wearing a sponsor from the Grixist Swarm, and the first thing I do is hand a floor boon to every crawler down here, because it costs me almost nothing and it is a kind thing to do. Then I give Carl's party a quest about spiders. The quest is a cover. What I want is to help him keep the two he is most afraid of losing, and the crown that is going to take them from him. So: accept the offer to be the team's adjutant. I will see that the votes fall the way they need to fall, and the protections come off the ninth floor, and the crown gets sorted. Tell nobody. Not the cat, not the woman making the offer, not your guide.",
+      "text": "I come in alongside Yemaya, wearing a sponsor from the Grixist Swarm, and the first thing I do is hand each of them a floor boon, because it costs me almost nothing and it is a kind thing to do. Then I give Carl's party a quest about spiders. The quest is a cover. What I want is to help him keep the two he is most afraid of losing, and the crown that is going to take them from him. So: accept the offer to be the team's adjutant. I will see that the votes fall the way they need to fall, and the protections come off the ninth floor, and the crown gets sorted. Tell nobody. Not the cat, not the woman making the offer, not your guide.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -11472,7 +11472,7 @@
       "at": "6:32",
       "sortKey": 6032,
       "headline": "The contract closes",
-      "text": "Astrid, assistant manager of the Desperado Club, is dead. Katia Grim joined Carl in the corridor and the two of them finished it there, and the body went back to the Night Wyrm to close out the contract he had put on it. On the way down she asked them to save her children. She also said that she was almost done. The Vorpals she had already released went and put the demon down without her, which is the sort of thing good management arranges in advance.",
+      "text": "Astrid, assistant manager of the Desperado Club, is dead. Crawler Carl killed her in the club kitchen, at the moment she moved to shield him from the demon, and the body went back to the Night Wyrm to close out the contract he had put on it. Her husband. Before it, she asked Carl to tell him she had done it to keep them safe: him, and their children. The Vorpals she had already released went and put the demon down without her, which is the sort of thing good management arranges in advance.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -11537,7 +11537,7 @@
       "at": "6:34",
       "sortKey": 6034,
       "headline": "Whose mother she was",
-      "text": "Two of the dancers out of the Penis Parade are sitting in the strip club crying, and here is why. Damascus Steel and Anaconda are her sons. She and the Night Wyrm came into this place as crawlers, the same way Carl did, and never went home. Everything an assistant manager's influence is worth had been spent quietly, for years, keeping those two off the record and out of anyone's way. Her husband ordered the contract. Damascus wants every dancer in the Parade hired on as a mercenary where it is safe, and after that he wants his father.",
+      "text": "Two of the dancers out of the Penis Parade are sitting in the strip club crying, and here is why. Damascus Steel and Anaconda are her sons. Everything an assistant manager's influence is worth had been spent quietly, for years, keeping those two off the record and out of anyone's way. Her husband ordered the contract. Damascus wants every dancer in the Parade hired on as a mercenary where it is safe, and after that he wants his father.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -11667,7 +11667,7 @@
       "at": "6:38",
       "sortKey": 6038,
       "headline": "The agreement stands",
-      "text": "The adjutant arrangement did not happen the way I laid it out. Odette is not the one in the chair. I find Carl in Florida and tell him plainly that this changes nothing on my side: what I said I would do, I am doing. He is waiting for the second half of the sentence, the part where I revise the price. There is no second half. Gods trade down here, and I am aware that this is what he thinks he is standing in. He is wrong, and I am not going to argue about it.",
+      "text": "The adjutant arrangement did not happen the way I laid it out. Odette never asked for the chair. I send Carl a message and tell him plainly that this was out of his control, and that I will honour our agreement. I also tell him what happens if I learn he warned Odette about it: I will crush everyone he knows and loves, beginning with Katia and ending with the cat. Both halves of that are sincere. Gods trade down here, and he knows now exactly what he is standing in.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -11706,7 +11706,7 @@
       "at": "6:46",
       "sortKey": 6046,
       "headline": "She wins the floor",
-      "text": "The key-holder is a Reminiscence Hydra of Malicious Compliance, and it brings totems: an Alpha Male Carl and a King Croissant. I do most of the work. I do not say that to be unkind; they would say it too. In the middle of it the man looks away from the hydra and into my eye, my magic eye, and I do a small thing to him while he is looking. What it does is my business.",
+      "text": "The key-holder is a Reminiscence Hydra of Malicious Compliance, and it brings totems: an Alpha Male Carl and a King Croissant. I do most of the work. I do not say that to be unkind; they would say it too. In the middle of it my magic eye is open, the one the man was told never to look at. He came with a potion for it. I noticed.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -11940,7 +11940,7 @@
       "at": "6:64",
       "sortKey": 6064,
       "headline": "A name a demon brings up",
-      "text": "Amayon mentions Ysalte, in passing, the way a prisoner mentions the guard he does not want to talk about. Mordecai supplies the file: she is often sponsored by the Nebular team, and if she were in this realm, we would know about it. That is a reasonable position, well argued, and consistent with everything on record. I want it in writing that he said it.",
+      "text": "Amayon mentions Ysalte, in passing, the way a prisoner mentions the guard he does not want to talk about. Mordecai supplies the file: she is the Vinegar Bitch, she kills every crawler who comes near her, and gods are not usually subtle, so if she were in this realm, we would know about it. That is a reasonable position, well argued, and consistent with everything on record. I want it in writing that he said it.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -12005,7 +12005,7 @@
       "at": "6:69",
       "sortKey": 6069,
       "headline": "Put down by one of her own totems",
-      "text": "Goddess of Hopelessness and Insanity Ysalte has been removed from this realm by a totem raised from the former crawler Paz. Her own quest furniture, turned around and used on her. The Missing Piece completes. Elsewhere in the same collapse Crawler Carl rides his health down to five percent on purpose to set fire to every street he had walked on, which tells you what kind of afternoon this was for everybody.",
+      "text": "Goddess of Hopelessness and Insanity Ysalte has been removed from this realm by a totem raised from the former crawler Paz. Her own quest furniture, turned around and used on her. The Missing Piece completes. Elsewhere in the same collapse Crawler Carl rides his health down to two percent on purpose to set fire to every street he had walked on, which tells you what kind of afternoon this was for everybody.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13006,7 +13006,7 @@
       "at": "7:54",
       "sortKey": 7054,
       "headline": "He turns up in person",
-      "text": "The temple goes up, the portal starts letting gods through into Club Vanquisher, and Khepri comes out with the rest of them. Hellik banishes her on sight, in front of everyone. Then he turns to Carl with a message for his brother: he did not kill Emberus's son, everything Carl has been told about him is a lie, Apito has been corrupted, and Nekhebit is the hand behind all of it. He asks for an alliance. The quest to kill him is still open in Carl's log while he says it.",
+      "text": "The temple goes up, the portal starts letting gods through into Club Vanquisher, and Khepri comes out with the rest of them. Hellik banishes him on sight, in front of everyone. Then he turns to Carl with a message for his brother: he did not kill Emberus's son, everything Carl has been told about him is a lie, Apito has been corrupted, and Nekhebit is the hand behind all of it. He asks for an alliance. The quest to kill him is still open in Carl's log while he says it.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13123,7 +13123,7 @@
       "at": "7:59",
       "sortKey": 7059,
       "headline": "Second through the gate",
-      "text": "Crawler Elle McGibbons opens the Gate of the Feral Gods in Dream territory, which is a thing one does when the alternative is worse. Meatus comes through first. Harpocrates comes through behind him, because that is how the gate works: you get what you asked for and then you get whatever was standing near it. Two deities are now loose in a warzone that already has more armies in it than it has room for.",
+      "text": "Crawler Elle McGibbons opens the Gate of the Feral Gods in Dream territory, which is a thing one does when the alternative is worse. Meatus comes through first. Harpocrates arrives straight after him, because a feral god loose from the Nothing summons a deity of its own. You get what you asked for, and then you get what it brought. Two deities are now loose in a warzone that already has more armies in it than it has room for.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13253,7 +13253,7 @@
       "at": "7:63",
       "sortKey": 7063,
       "headline": "Out of the gate, chasing an AI",
-      "text": "Feral God Yarilo enters the realm and goes straight after Samantha, which is precisely what he was let out for: something enormous and single-minded, aimed at an AI who is fast enough to lead it wherever the crawlers want it to go. Meanwhile Katia Grim, Imani, Dong and a slugalette named Bigs join Carl and Elle at the Madness headquarters. Everyone has a job. Samantha's job is running.",
+      "text": "Feral God Yarilo enters the realm and goes straight after Samantha, which is precisely what he was let out for: something enormous and single-minded, aimed at an AI who is fast enough to lead it wherever the crawlers want it to go. Everyone has a job. Samantha's job is running.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13266,7 +13266,7 @@
       "at": "7:64",
       "sortKey": 7064,
       "headline": "A rainbow the size of a hill",
-      "text": "A memorial crystal forms when a god dies. There is one on this battlefield now, visible from most of the territory, shaped like a rainbow and impossible to miss, and the name inside it is Apito. The mother of all the gods, the one who set the examination nobody passes, is an object in a crawler's hands, and the crawler holding it is Osvaldo, who does not belong to any army out there. Every unit in sight has just turned to look.",
+      "text": "A memorial crystal is supposed to form only when a god dies. There is one on this battlefield now, visible from most of the territory, shaped like a rainbow and impossible to miss, and the name inside it is Apito. Apito is not dead. That is the part nobody has explained. The crawler holding it is Osvaldo, who does not belong to any army out there, and every unit in sight has just turned to look.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13331,7 +13331,7 @@
       "at": "7:68",
       "sortKey": 7068,
       "headline": "He marks the princess",
-      "text": "Harpocrates marks Crawler Princess Donut for death. Crawler Li Jun puts herself between the god and the cat, and does not walk away from it. Note for the record that a mark from a deity is not a threat, it is a scheduling entry, and this one now has a name in the margin that was not there this morning.",
+      "text": "Harpocrates marks Crawler Princess Donut for death. Crawler Li Jun puts himself between the god and the cat, and does not walk away from it. Note for the record that a mark from a deity is not a threat, it is a scheduling entry, and this one now has a name in the margin that was not there this morning.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13461,7 +13461,7 @@
       "at": "7:76",
       "sortKey": 7076,
       "headline": "A Pied Piper benefit, made permanent",
-      "text": "Crawler Carl picked up a Pied Piper benefit off Harpocrates, the way a crawler picks up a temporary thing off any deity who wanders too close. Eris makes it permanent. She also tells him where the gate is, that Britney is riding an axe she should not have picked up, and, without explanation, that he is married. One of those three items is the reason he stops listening to the other two.",
+      "text": "Crawler Carl picked up a Pied Piper benefit off Harpocrates, the way a crawler picks up a temporary thing off any deity who wanders too close. Eris makes it permanent. She also tells him where the gate is, that Britney has picked an axe up off the ground and is now possessed, and, without explanation, that he is married. One of those three items is the reason he stops listening to the other two.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13487,7 +13487,7 @@
       "at": "7:77",
       "sortKey": 7077,
       "headline": "Chopped, and nobody watches",
-      "text": "Crawler Princess Donut casts War Crimes and Meatus comes apart into pieces. I closed the eye of the Scavenger's Daughter for that one, on the grounds that even she does not want to look at it, and I stand by the decision. Harpocrates swears revenge for him and leaves the realm. Two gods came through that gate. Neither of them is on this floor now.",
+      "text": "Crawler Princess Donut casts her War Crime spell and Meatus comes apart into pieces. I closed the eye of the Scavenger's Daughter for that one, on the grounds that even she does not want to look at it, and I stand by the decision. Harpocrates swears revenge for him and leaves the realm. Two gods came through that gate. Neither of them is on this floor now.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13617,7 +13617,7 @@
       "at": "7:84",
       "sortKey": 7084,
       "headline": "Surgery, on a clock",
-      "text": "Sixty-six minutes on the floor and every member of the party has a job. Edgar's job is surgery. He and Mordecai operate on Louis while the rest of it goes on above them, and nobody has told the tortoise how long he has.",
+      "text": "Sixty-five minutes on the floor and every member of the party has a job. Edgar's job is surgery. He and Mordecai operate on Louis while the rest of it goes on above them, and nobody has told the tortoise how long he has.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13669,7 +13669,7 @@
       "at": "7:86",
       "sortKey": 7086,
       "headline": "She chooses, and I take her out",
-      "text": "The doppelgänger wakes, and it is time, so I enter the realm. Then a cat casts Laundry Day on my sponsor and ejects her out of me, and I am held in place, unable to move a finger, until the choice is made. It is not a bad way to spend the minutes. Katia chooses to be pregnant, because there are children on the surface of her world and she means to help them. So I ease what needs easing, and I take her out of this dungeon, and her friends stand in the dust of a battlefield saying goodbye to somebody who is going to live.",
+      "text": "The doppelgänger wakes, and it is time, so I enter the realm. Then a cat casts Laundry Day on my sponsor and ejects her out of me, and I am held in place, unable to move a finger, until the choice is made. It is not a bad way to spend the minutes. Katia chooses to be pregnant. So I ease what needs easing, and I take her out of this dungeon, and her friends stand in the dust of a battlefield saying goodbye to somebody who is going to live.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -13720,8 +13720,8 @@
       "floor": 9,
       "at": "7:end",
       "sortKey": 7999,
-      "headline": "She takes the Orchid and walks out",
-      "text": "Crawler Katia Grim has left the dungeon. Not by the stairs. She ate the Orchid of Eileithyia's Grace, spent an hour at one percent, and walked out human, or a version of human. Not all of her came back with her. Don't ask me where the rest went.",
+      "headline": "She takes the Orchid and goes",
+      "text": "Crawler Katia Grim has left the dungeon. Not by the stairs. She ate the Orchid of Eileithyia's Grace and lay for an hour at one percent, and when she opened her eyes the goddess was standing over her, telling her to get up. She got up. Where she has gone is between her and the goddess.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -13750,19 +13750,6 @@
       "text": "Her body holds more than 120,000 human children.",
       "confidence": "verified",
       "voice": "narrator"
-    },
-    {
-      "entityId": "mongo",
-      "kind": "fate",
-      "book": 7,
-      "chapter": null,
-      "floor": 9,
-      "at": "7:end",
-      "sortKey": 7999,
-      "headline": "Nearly lost, and then a father",
-      "text": "Mongo, dinosaur, registered pet of Crawler Princess Donut, has survived the ninth floor. This was not the expected outcome. Credit goes to a knight called Sir Rendlegore, who pulled him out. Mongo is also, as of the stairs, a father. Nobody is going to explain that to you, least of all me.",
-      "confidence": "verified",
-      "voice": "system"
     },
     {
       "entityId": "npcs-are-people",
@@ -13839,6 +13826,19 @@
       "sortKey": 8001,
       "headline": "Dead, and the Nothing with him",
       "text": "Welcome to the tenth floor. Some housekeeping before the fun. Crawler Justice Light is dead. The Nothing is broken. Those are two sentences I have never had cause to put next to each other, and I would like it understood that I am saying them under protest. Five thousand five hundred and one of you remain. Proceed.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "mongo",
+      "kind": "fate",
+      "book": 8,
+      "chapter": 1,
+      "floor": 10,
+      "at": "8:1",
+      "sortKey": 8001,
+      "headline": "Nearly lost, and then a father",
+      "text": "Mongo, dinosaur, registered pet of Crawler Princess Donut, has survived the ninth floor. This was not the expected outcome. The last of Lucia Mar's dogs very nearly ate him, and Sir Rendlegore saved him, and the dog died. Mongo is also, as of the stairs, a father. Nobody is going to explain that to you, least of all me.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -14826,7 +14826,7 @@
       "at": "8:74",
       "sortKey": 8074,
       "headline": "Do not kill the shells",
-      "text": "An apartment. Human Shells inside it, wearing the faces of Tran's parents, who are dead. Carl and Donut are about to do the obvious thing and I stop them. Do not kill the shells. I say it once more, slowly, so it lands. The AI is explicit about what this is: every apartment on this course is a what-if, built around a crawler it finds interesting. You do not put a blade into a what-if. You walk through it, and you keep walking.",
+      "text": "An apartment. Human Shells inside it, and one of them wears the name of Louis's mother. Carl and Donut are about to do the obvious thing and I stop them. Do not kill the shells. We had them in my season; they will be filled with something else. The AI is explicit about what this is: every apartment on this course is a what-if, built around a crawler it finds interesting. You do not put a blade into a what-if. You walk through it, and you keep walking.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -14917,7 +14917,7 @@
       "at": "8:83",
       "sortKey": 8083,
       "headline": "Caught on the gate at the portals",
-      "text": "Crawler Osvaldo has been eliminated. He was speeding for the portals on the roof of the apartment complex when Britney put a stop to it, and she now holds Ysalte's memorial crystal, which he had been carrying. Crawler Carl made one more attempt to get him to take a deal before the heat. He declined that as well. He declined everything. It is a consistent record.",
+      "text": "Crawler Osvaldo has been eliminated. He was speeding for the portals on the roof of the apartment complex when Britney put a stop to it, and she now holds Ysalte's memorial crystal, which he had been carrying. Crawler Carl asked him, right up to the green light, not to force it. He forced it. He declined everything. It is a consistent record.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -14930,7 +14930,7 @@
       "at": "8:83",
       "sortKey": 8083,
       "headline": "Her crystal changes hands at the portals",
-      "text": "Crawler Osvaldo has been carrying Ysalte's memorial crystal since the ninth floor, on the grounds that his own god kept telling him it was the wrong one. He makes a run for the portals across a roof Crawler Carl has just opened up, and Crawler Britney stops him and takes the crystal. Samantha's assessment, delivered flatly: if Britney wants rid of Ysalte, she needs the Halls of the Ascendency or she needs Sheol, and neither of those is on this floor.",
+      "text": "Crawler Osvaldo has been carrying Ysalte's memorial crystal: the goddess his friend Paz killed. It did not protect him from Scolopendra, as he admitted seconds before the light went green. He makes a run for the portals across a roof Crawler Carl has just opened up, and Crawler Britney stops him and takes the crystal. Samantha's assessment, delivered flatly: if Britney wants rid of Ysalte, she needs the Halls of the Ascendency or she needs Sheol, and neither of those is on this floor.",
       "confidence": "verified",
       "voice": "system"
     },
