@@ -928,9 +928,14 @@
       "role": "Crawler",
       "taglines": [
         {
-          "at": "2:14",
-          "sortKey": 2014,
-          "text": "Florin. Ifechi and I are running together. Apparently I'm on the recap tonight, which means somebody out there is watching me. That's fine. Watch."
+          "at": "2:end",
+          "sortKey": 2999,
+          "text": "Florin. Fourth on the board, three hundred thousand beside my name. Somebody out there is watching me. That's fine. Watch."
+        },
+        {
+          "at": "3:3",
+          "sortKey": 3003,
+          "text": "Ifechi and I are running together. Her party is gone and I found her after. People are watching. That's fine. Watch."
         },
         {
           "at": "5:69",
@@ -938,7 +943,7 @@
           "text": "There is more than one of her in that head, and some of them are children. Whatever the dog is, it is the middle of this."
         }
       ],
-      "revealedAt": "2:14",
+      "revealedAt": "2:end",
       "sort": 22,
       "voice": "self",
       "descriptions": []
@@ -1094,8 +1099,8 @@
       "role": "Crawler · Brynhild's Daughters",
       "taglines": [
         {
-          "at": "1:20",
-          "sortKey": 1020,
+          "at": "1:39",
+          "sortKey": 1039,
           "text": "Brynhild's Daughters. My party, my rules. We keep moving."
         },
         {
@@ -1104,7 +1109,7 @@
           "text": "I lead Brynhild's Daughters. I handed Katia to the Royal Court myself, before the gap between her and the rest of us killed her."
         }
       ],
-      "revealedAt": "1:20",
+      "revealedAt": "1:39",
       "sort": 29,
       "voice": "self",
       "descriptions": []
@@ -1117,12 +1122,17 @@
       "role": "Crawler",
       "taglines": [
         {
-          "at": "2:21",
-          "sortKey": 2021,
+          "at": "3:6",
+          "sortKey": 3006,
+          "text": "One of the Daughters. Katia and I knew each other before any of this."
+        },
+        {
+          "at": "3:21",
+          "sortKey": 3021,
           "text": "Professor, like Katia. We came in through the same door and class selection separated us. I kept going. I do not see what there is to discuss."
         }
       ],
-      "revealedAt": "2:21",
+      "revealedAt": "3:6",
       "sort": 30,
       "voice": "self",
       "descriptions": []
@@ -2055,9 +2065,9 @@
       "role": "Glass mage",
       "taglines": [
         {
-          "at": "4",
-          "sortKey": 4000,
-          "text": "I am a glass mage. Transmutation, and the teleportation of energised particles. I came out to the sand to study a buried artifact, which is also what I told the College."
+          "at": "4:2",
+          "sortKey": 4002,
+          "text": "They call me the Mad Dune Mage. The sandcastle out on the dunes is mine."
         },
         {
           "at": "4:21",
@@ -2065,7 +2075,7 @@
           "text": "I am a glass mage. I opened a hole to ask a god for one small thing and something else came through it, and now everything I own is sand, myself very nearly included."
         }
       ],
-      "revealedAt": "4",
+      "revealedAt": "4:2",
       "sort": 42,
       "voice": "self",
       "descriptions": []
@@ -2831,19 +2841,19 @@
     {
       "id": "minerva",
       "kind": "character",
-      "name": "Minerva",
+      "name": "Menerva",
       "aka": [],
       "role": "Former crawler",
       "taglines": [
         {
           "at": "8:38",
           "sortKey": 8038,
-          "text": "Minerva. Former crawler, half the authorship of a hiding place for NPCs, and by Warlord Akuma's account still shut inside it."
+          "text": "Menerva. Former crawler, half the authorship of a hiding place for NPCs, and by Warlord Akuma's account still shut inside it."
         },
         {
           "at": "8:55",
           "sortKey": 8055,
-          "text": "Minerva. Former crawler, co-author of the Pineapple Cabaret, and not in it. She is on the seventeenth floor, which is a different question entirely."
+          "text": "Menerva. Former crawler, co-author of the Pineapple Cabaret, and not in it. She is on the seventeenth floor, which is a different question entirely."
         }
       ],
       "revealedAt": "8:38",
@@ -2983,9 +2993,9 @@
       "role": "Crawler",
       "taglines": [
         {
-          "at": "2",
-          "sortKey": 2000,
-          "text": "A medic, before. On the recap now, climbing the board fast, and my file on her is short and entirely creditable."
+          "at": "2:end",
+          "sortKey": 2999,
+          "text": "Eighth on the board: human, Physicker, level eighteen. My file is short and entirely creditable."
         },
         {
           "at": "4:4",
@@ -2998,7 +3008,7 @@
           "text": "Queen Imogen is wearing her face. Twins, born in Nigeria; the dungeon took both of them, and only one got to be a crawler."
         }
       ],
-      "revealedAt": "2",
+      "revealedAt": "2:end",
       "sort": 51,
       "voice": "system",
       "descriptions": []
@@ -3182,9 +3192,9 @@
       "role": "Former crawler · presenter",
       "taglines": [
         {
-          "at": "3:8",
-          "sortKey": 3008,
-          "text": "One of the names in the front of the Cookbook, from a season that is over."
+          "at": "3:13",
+          "sortKey": 3013,
+          "text": "One of the notes in the Cookbook, from a season that is over."
         },
         {
           "at": "6:12",
@@ -3197,7 +3207,7 @@
           "text": "I got out once. I am back in, with fifty thousand others, and I would rather be here than watching."
         }
       ],
-      "revealedAt": "3:8",
+      "revealedAt": "3:13",
       "sort": 45,
       "voice": "self",
       "descriptions": []
@@ -3210,12 +3220,12 @@
       "role": "Host · Dungeon Crawler World",
       "taglines": [
         {
-          "at": "1:14",
-          "sortKey": 1014,
+          "at": "4:26",
+          "sortKey": 4026,
           "text": "Orange, four-eyed, lizardish, and paid to be breathless about all of it."
         }
       ],
-      "revealedAt": "1:14",
+      "revealedAt": "4:26",
       "sort": 63,
       "voice": "system",
       "descriptions": []
@@ -3248,12 +3258,12 @@
       "role": "Familiar",
       "taglines": [
         {
-          "at": "2:14",
-          "sortKey": 2014,
-          "text": "A Boer goat, introduced to an audience of billions on the same recap as her crawler."
+          "at": "5:6",
+          "sortKey": 5006,
+          "text": "A Boer goat from the Shepherd's herd, and the one hauling the cart."
         }
       ],
-      "revealedAt": "2:14",
+      "revealedAt": "5:6",
       "sort": 65,
       "voice": "system",
       "descriptions": []
@@ -3434,12 +3444,17 @@
       "role": "Changeling child · Hump Town",
       "taglines": [
         {
-          "at": "4:1",
-          "sortKey": 4001,
-          "text": "An orphan with compression sickness, no arms in her default shape, and a Walkman she will not be parted from."
+          "at": "4:2",
+          "sortKey": 4002,
+          "text": "An orphan of Hump Town. The gnomes bombed her village, and not many of the children lived."
+        },
+        {
+          "at": "4:15",
+          "sortKey": 4015,
+          "text": "An orphan with compression sickness: no arms in her default shape, and a sunken head."
         }
       ],
-      "revealedAt": "4:1",
+      "revealedAt": "4:2",
       "sort": 75,
       "voice": "system",
       "descriptions": []
@@ -3582,12 +3597,12 @@
       "role": "Hammerhead · made flesh",
       "taglines": [
         {
-          "at": "5:14",
-          "sortKey": 5014,
+          "at": "7:15",
+          "sortKey": 7015,
           "text": "A hammerhead shark that breathes air, and spent his first years as ink on somebody’s shoulder."
         }
       ],
-      "revealedAt": "5:14",
+      "revealedAt": "7:15",
       "sort": 83,
       "voice": "system",
       "descriptions": []
@@ -3692,8 +3707,8 @@
       "role": "Sponsor · Grixist",
       "taglines": [
         {
-          "at": "6",
-          "sortKey": 6000,
+          "at": "6:1",
+          "sortKey": 6001,
           "text": "A name out of an old debt, and a price somebody declined to pay."
         },
         {
@@ -3702,7 +3717,7 @@
           "text": "Rich, clever, chief executive of a habitat company, and playing the Ascension game since she was a child."
         }
       ],
-      "revealedAt": "6",
+      "revealedAt": "6:1",
       "sort": 89,
       "voice": "system",
       "descriptions": []
@@ -3737,12 +3752,17 @@
       "role": "Announcer · mercenary",
       "taglines": [
         {
-          "at": "6:23",
-          "sortKey": 6023,
+          "at": "6:34",
+          "sortKey": 6034,
+          "text": "One of the club’s people, with a coupon worth a hundred thousand gold."
+        },
+        {
+          "at": "6:52",
+          "sortKey": 6052,
           "text": "A level ninety Skin Skellie who took the announcer’s booth rather than the stage, and does both jobs better than the club deserves."
         }
       ],
-      "revealedAt": "6:23",
+      "revealedAt": "6:34",
       "sort": 91,
       "voice": "system",
       "descriptions": []
@@ -4942,12 +4962,14 @@
       "id": "vengeance-of-the-daughter",
       "kind": "mechanic",
       "name": "The Vengeance of the Daughter",
-      "aka": [],
+      "aka": [
+        "Vengeance of the Daughter"
+      ],
       "role": "Broadcast",
       "taglines": [
         {
-          "at": "2:11",
-          "sortKey": 2011,
+          "at": "2:9",
+          "sortKey": 2009,
           "text": "A Syndicate drama serial shot inside the dungeon. A circus, a murdered mother, an exiled tsarina, and a guest slot with Carl's name on it."
         },
         {
@@ -4961,7 +4983,7 @@
           "text": "Bought by the Dream, which means to collect on a third season it is owed."
         }
       ],
-      "revealedAt": "2:11",
+      "revealedAt": "2:9",
       "sort": 48,
       "voice": "narrator",
       "descriptions": []
@@ -5288,9 +5310,9 @@
       "role": "Crawler group",
       "taglines": [
         {
-          "at": "1:20",
-          "sortKey": 1020,
-          "text": "Hekla's group: Icelandic, disciplined, and carrying people who could not have made the stairs alone."
+          "at": "1:39",
+          "sortKey": 1039,
+          "text": "Hekla's group: Icelandic, crossbows and breastplates, and growing."
         },
         {
           "at": "2:21",
@@ -5298,7 +5320,7 @@
           "text": "Hekla's group, and the one Katia and Eva came in with."
         }
       ],
-      "revealedAt": "1:20",
+      "revealedAt": "1:39",
       "sort": 5,
       "voice": "narrator",
       "descriptions": []
@@ -5329,12 +5351,17 @@
       "role": "Crawler faction",
       "taglines": [
         {
-          "at": "1:26",
-          "sortKey": 1026,
+          "at": "1:31",
+          "sortKey": 1031,
+          "text": "A hundred and fifty men with rifles, down to eighty and counting their bullets."
+        },
+        {
+          "at": "1:44",
+          "sortKey": 1044,
           "text": "Arrived as a recap segment and left as a wipe."
         }
       ],
-      "revealedAt": "1:26",
+      "revealedAt": "1:31",
       "sort": 7,
       "voice": "narrator",
       "descriptions": []
@@ -5543,9 +5570,14 @@
       "role": "Syndicate people",
       "taglines": [
         {
-          "at": "1:5",
-          "sortKey": 1005,
-          "text": "Showrunners once, until a season of eighteen Celestial boxes bankrupted them and kept them out of the business for centuries."
+          "at": "1:43",
+          "sortKey": 1043,
+          "text": "A name used as an insult: nobody in the Skull Clan wants to be mistaken for one."
+        },
+        {
+          "at": "2:end",
+          "sortKey": 2999,
+          "text": "Showrunners once. They ran the first crawl ever to lose money, and have not run a season since."
         },
         {
           "at": "7:21",
@@ -5563,7 +5595,7 @@
           "text": "A signed offer on the table: citizenship for every native of Earth, in exchange for room in Earth's system."
         }
       ],
-      "revealedAt": "1:5",
+      "revealedAt": "1:43",
       "sort": 46,
       "voice": "narrator",
       "descriptions": []
@@ -6347,19 +6379,6 @@
       "floor": 1,
       "at": "1:5",
       "sortKey": 1005,
-      "headline": "The top tiers cost the house real money",
-      "text": "Borant owes the Syndicate tax on the tier of every non-sponsored box it hands out. In the whole history of the show only 2,145 Celestial boxes have ever been awarded, and no crawler has had more than four. The previous record for one season was eighteen, which bankrupted the Naga showrunners and kept them out of the business for centuries.",
-      "confidence": "verified",
-      "voice": "narrator"
-    },
-    {
-      "entityId": "loot-boxes",
-      "kind": "use",
-      "book": 1,
-      "chapter": 5,
-      "floor": 1,
-      "at": "1:5",
-      "sortKey": 1005,
       "headline": "Benefactor Boxes ignore the theme",
       "text": "Only patrons can send them, and they are the one kind that will produce a pulse rifle or powered armour in a fantasy dungeon. A Bronze Benefactor Box beats a plain Gold Adventurer Box.",
       "confidence": "verified",
@@ -6548,19 +6567,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "kevin",
-      "kind": "origin",
-      "book": 1,
-      "chapter": 14,
-      "floor": 1,
-      "at": "1:14",
-      "sortKey": 1014,
-      "headline": "The face of the broadcast",
-      "text": "Subject hosts. He is orange-hued and four-eyed and built along lizard lines, and he delivers the rundown of each floor at a pace that does not permit anyone watching to think about what is being described. He also takes the live commentary on special events. I have worked with him for a long time and I have never heard him ask a question he did not already have the answer card for.",
-      "confidence": "draft",
-      "voice": "system"
-    },
-    {
       "entityId": "lucia-mar",
       "kind": "origin",
       "book": 1,
@@ -6665,19 +6671,6 @@
       "voice": "self"
     },
     {
-      "entityId": "le-mouvement",
-      "kind": "origin",
-      "book": 1,
-      "chapter": 26,
-      "floor": 1,
-      "at": "1:26",
-      "sortKey": 1026,
-      "headline": "Introduced on the third recap",
-      "text": "A whole faction enters the story as a broadcast segment.",
-      "confidence": "verified",
-      "voice": "narrator"
-    },
-    {
       "entityId": "meadow-lark",
       "kind": "arc",
       "book": 1,
@@ -6699,7 +6692,7 @@
       "at": "1:26",
       "sortKey": 1026,
       "headline": "It introduces you to your rivals",
-      "text": "The third recap brings in Le Mouvement, and then a boss battle. Whole factions arrive in the story as segments.",
+      "text": "The third recap brings in a hundred and fifty armed men from Africa, and then a boss battle. Whole factions arrive in the story as segments.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -6808,6 +6801,19 @@
       "voice": "self"
     },
     {
+      "entityId": "le-mouvement",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 31,
+      "floor": 2,
+      "at": "1:31",
+      "sortKey": 1031,
+      "headline": "Named on the recap",
+      "text": "The armed men from Africa get a name on the broadcast, and a graphic counting what is left of their ammunition.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "rage-elemental",
       "kind": "origin",
       "book": 1,
@@ -6855,7 +6861,7 @@
       "at": "1:36",
       "sortKey": 1036,
       "headline": "There are other shows",
-      "text": "Zev explains crawler participation on Syndicate programmes. Death Watch Extreme Dungeon Mayhem, Shadow Boxer, Vengeance of the Daughter, the Blood Hunter — a crawler can be signed to any of them, and the contracts do not lapse between floors.",
+      "text": "Zev introduces herself as the liaison between Borant and the privately run programmes that borrow crawlers for their own shows. A production may pluck a crawler off between stairwells; anything else goes through her office. A crawler may turn a show down, but has to pick one.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -7263,32 +7269,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "bianca",
-      "kind": "origin",
-      "book": 2,
-      "chapter": 14,
-      "floor": 3,
-      "at": "2:14",
-      "sortKey": 2014,
-      "headline": "A goat on the recap",
-      "text": "Subject is a goat. Specifically a Boer goat, bonded as a dungeon familiar, and she appears on the recap in the same segment that introduces the crawler she belongs to. The audience takes to her immediately, which is a thing the audience does with goats and which production has learned to plan around.",
-      "confidence": "verified",
-      "voice": "system"
-    },
-    {
-      "entityId": "florin",
-      "kind": "origin",
-      "book": 2,
-      "chapter": 14,
-      "floor": 3,
-      "at": "2:14",
-      "sortKey": 2014,
-      "headline": "First time on the recap",
-      "text": "They ran me on the recap tonight. Miriam, Pony and Bianca too, first time for all four of us, I'm told. I don't know what they showed. I wasn't doing anything I would call footage. Ifechi and I keep moving and keep our heads down, and I would have preferred to stay a name nobody had learned yet. Too late for that.",
-      "confidence": "draft",
-      "voice": "self"
-    },
-    {
       "entityId": "clarabelle",
       "kind": "origin",
       "book": 2,
@@ -7458,19 +7438,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "eva",
-      "kind": "origin",
-      "book": 2,
-      "chapter": 21,
-      "floor": 3,
-      "at": "2:21",
-      "sortKey": 2021,
-      "headline": "She goes on without her",
-      "text": "Katia and I came in together. Same profession, same door into this place. Class selection separated us; that is what it does, it separates people. I kept moving. I did not stand in a corridor waiting for someone who was not ready to be there. Call it what you like. I call it the difference between the people who are still here and the people who are not.",
-      "confidence": "verified",
-      "voice": "self"
-    },
-    {
       "entityId": "hekla",
       "kind": "origin",
       "book": 2,
@@ -7482,19 +7449,6 @@
       "text": "We carried Katia and Eva through a neighbourhood boss and a borough boss, and I would do it again. Then class selection split us, and I run this party on numbers, and Katia's numbers stopped adding up next to anyone she stands beside. I cannot carry that down another set of stairs. So I am the one asking. Carl. Donut. Take her. She is better than she looks right now, and she will hate that I said so.",
       "confidence": "verified",
       "voice": "self"
-    },
-    {
-      "entityId": "ifechi",
-      "kind": "origin",
-      "book": 2,
-      "chapter": 21,
-      "floor": 3,
-      "at": "2:21",
-      "sortKey": 2021,
-      "headline": "The recap makes the introduction",
-      "text": "The recap does the introductions this dungeon never bothers with. Florin is partied with Ifechi now, and the two of them are moving up the board fast enough that I have opened a file. She was a medic on Earth, which down here is a class and a liability at the same time, since the one thing nobody in this place will let you do is keep other people alive. Note it and move on. The audience already has.",
-      "confidence": "verified",
-      "voice": "system"
     },
     {
       "entityId": "katia",
@@ -7731,6 +7685,45 @@
       "voice": "narrator"
     },
     {
+      "entityId": "florin",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2:end",
+      "sortKey": 2999,
+      "headline": "Fourth on the board",
+      "text": "They put the leaderboard up tonight and I am on it. Fourth. Crocodilian, Shotgun Messenger, level twenty-four, three hundred thousand. I don't know what they showed to get me there. I wasn't doing anything I would call footage. I would have preferred to stay a name nobody had learned yet. Too late for that.",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
+      "entityId": "ifechi",
+      "kind": "origin",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2:end",
+      "sortKey": 2999,
+      "headline": "Eighth on the board",
+      "text": "The board does the introductions this dungeon never bothers with. Ifechi is eighth: human, a Physicker, level eighteen. Healing is a class down here and a liability at the same time, since the one thing nobody in this place will let you do is keep other people alive. Note it and move on. The audience already has.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "loot-boxes",
+      "kind": "use",
+      "book": 2,
+      "chapter": null,
+      "floor": 3,
+      "at": "2:end",
+      "sortKey": 2999,
+      "headline": "The top tiers cost the house real money",
+      "text": "Borant owes the Syndicate tax on every non-sponsored box it hands out: a handful of free Celestials a season, and a steeper bill for each one after that. In the whole history of the show only 2,145 Celestial boxes have been awarded, and no crawler has had more than four. The previous record for one season was eighteen, in a Naga season long ago.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "loot-boxes",
       "kind": "use",
       "book": 2,
@@ -7934,22 +7927,9 @@
       "at": "3:8",
       "sortKey": 3008,
       "headline": "Introduced in the Iron Tangle",
-      "text": "It arrives with the sponsor tab unlocking. Twenty-four crawlers carried it first, across seasons and species, on worlds that lost. Rosetta Thagra, who turns up hosting Shadow Boxer, is one of the authors.",
+      "text": "It arrives with the sponsor tab unlocking, and it is not new: this is the twenty-fourth edition, first generated in the fifteenth season, and crawlers on worlds that lost have been writing into it ever since.",
       "confidence": "verified",
       "voice": "narrator"
-    },
-    {
-      "entityId": "rosetta",
-      "kind": "origin",
-      "book": 3,
-      "chapter": 8,
-      "floor": 4,
-      "at": "3:8",
-      "sortKey": 3008,
-      "headline": "A name in the front of the book",
-      "text": "My name is in the Cookbook. That is the whole of what anyone here knows about me, and for a long while it was the whole of what I wanted them to know. Twenty-four of us wrote into it before this season, on worlds that mostly lost. You do not put your name on a thing like that expecting to be asked about it afterwards.",
-      "confidence": "verified",
-      "voice": "self"
     },
     {
       "entityId": "sledge",
@@ -8030,6 +8010,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "rosetta",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 13,
+      "floor": 4,
+      "at": "3:13",
+      "sortKey": 3013,
+      "headline": "A note in the bomb-making chapter",
+      "text": "My note is in the Cookbook, in the chapter on bombs. That is the whole of what anyone here knows about me, and for a long while it was the whole of what I wanted them to know. You do not put your name on a thing like that expecting to be asked about it afterwards.",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
       "entityId": "fire-brandy",
       "kind": "origin",
       "book": 3,
@@ -8067,6 +8060,19 @@
       "text": "Subject is a level ten human and a non-combatant, filed as a Human Resources Associate for the line. She boards the Nightmare Express at Trainyard E and leaves it at station sixty, every time, which is the whole of her recorded behaviour. Her name was probably something else before the dungeon decided what a human resources associate should be called.",
       "confidence": "verified",
       "voice": "system"
+    },
+    {
+      "entityId": "eva",
+      "kind": "origin",
+      "book": 3,
+      "chapter": 18,
+      "floor": 4,
+      "at": "3:18",
+      "sortKey": 3018,
+      "headline": "The skull she carries",
+      "text": "Katia and I came into this place together. A man we did not know attached himself to us, and when we joined the Daughters he would not be sent away. He took hold of her arm, so I put my trident in the back of his leg. He died of it. The skull over my head is his, and I am not sorry. I kept moving with Hekla. Katia went her own way.",
+      "confidence": "verified",
+      "voice": "self"
     },
     {
       "entityId": "kravyad",
@@ -8381,19 +8387,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "ruby",
-      "kind": "origin",
-      "book": 4,
-      "chapter": 1,
-      "floor": 5,
-      "at": "4:1",
-      "sortKey": 4001,
-      "headline": "The orphan with the Walkman",
-      "text": "Subject is a changeling child of Hump Town, orphaned, and suffering compression sickness: in her default form she has no arms and her head is sunken. She owns a Walkman. The dungeon did not issue it to her and has not taken it away, and I am not going to be the one to file the paperwork that does.",
-      "confidence": "draft",
-      "voice": "system"
-    },
-    {
       "entityId": "skyfowl",
       "kind": "origin",
       "book": 4,
@@ -8418,6 +8411,19 @@
       "text": "Skarn lends Carl his telescope for a look out at the Wasteland, and explains why the gnomes riding it leave this town and the Bactrian village alone. It is not mercy. It is what both places keep in their town halls.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "ruby",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 2,
+      "floor": 5,
+      "at": "4:2",
+      "sortKey": 4002,
+      "headline": "One of the children who lived",
+      "text": "Subject is a child of Hump Town. Her village was bombed by the gnomes, the dromedarians took in what was left, and not many of the children lived. She did. She climbs the ladder to the hatch faster than anyone her size should.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "skarn",
@@ -8771,6 +8777,19 @@
       "voice": "system"
     },
     {
+      "entityId": "ruby",
+      "kind": "arc",
+      "book": 4,
+      "chapter": 15,
+      "floor": 5,
+      "at": "4:15",
+      "sortKey": 4015,
+      "headline": "Compression sickness",
+      "text": "Subject is a changeling, and she has compression sickness: in her default form she has no arms and her head is sunken. One birth in four now arrives this way, and the ones born with it are sterile. I note it because nobody else in the building will.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "bonnie",
       "kind": "origin",
       "book": 4,
@@ -8975,6 +8994,19 @@
       "sortKey": 4026,
       "headline": "The body in the submarine",
       "text": "Henrik of Hump Town, changeling, is dead, and has been for some time. Katia Grim runs into the flooded submarine to get away from a sharktopus, and Carl finds the body already sitting in there with its piece of the Gate of the Feral Gods still on it. One magically linked pocket watch, recovered. Also on him: a note recording that Quetzalcoatlus can be put down with an electric shock. Whatever else he was doing, he was still working that problem right up to the finish of him.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "kevin",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 26,
+      "floor": 5,
+      "at": "4:26",
+      "sortKey": 4026,
+      "headline": "The recap guy has a name",
+      "text": "Subject hosts the recap. He is orange-hued and four-eyed and built along lizard lines, and he delivers the rundown of each floor at a pace that does not permit anyone watching to think about what is being described. Tonight he also takes the live commentary, beside an orc in a sportscoat, and the orc says his name on air: Kevin. I have worked with him for a long time and I have never heard him ask a question he did not already have the answer card for.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9603,6 +9635,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "bianca",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 6,
+      "floor": 6,
+      "at": "5:6",
+      "sortKey": 5006,
+      "headline": "The goat pulling the cart",
+      "text": "Subject is a goat. Specifically a Boer goat, one of the Shepherd's, and at present she is pulling the cart that carries Carl, whom she helped to save. The audience takes to her immediately, which is a thing the audience does with goats and which production has learned to plan around.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "miriam-dom",
       "kind": "arc",
       "book": 5,
@@ -9783,19 +9828,6 @@
       "text": "Donut renames the settlement Point Mongo and the quest arrives on the same day. Mongo takes her off into the jungle on his back and finds the pack: all female, all mongoliensis, headed by one called Kiwi. He does not come home alone.",
       "confidence": "verified",
       "voice": "narrator"
-    },
-    {
-      "entityId": "jamal",
-      "kind": "origin",
-      "book": 5,
-      "chapter": 14,
-      "floor": 6,
-      "at": "5:14",
-      "sortKey": 5014,
-      "headline": "The tattoo gets a body",
-      "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He is polite. He is anxious. He is loyal past the point where loyalty is sensible, and I have not yet identified what he is getting out of the arrangement.",
-      "confidence": "draft",
-      "voice": "system"
     },
     {
       "entityId": "skull-empire",
@@ -10763,10 +10795,10 @@
       "entityId": "mordecai",
       "kind": "arc",
       "book": 6,
-      "chapter": null,
+      "chapter": 1,
       "floor": 8,
-      "at": "6",
-      "sortKey": 6000,
+      "at": "6:1",
+      "sortKey": 6001,
       "headline": "Huanxin, Uzzi, and what happened",
       "text": "Odette is in the middle of this crawl now, so the old story is going to come out. Chaco. Uzzi. A stairwell that would not open unless a god was struck down, and me volunteering to do the striking, because the only life it cost was mine. Odette found a cheaper way to pay. She talked Chaco into putting the dart into my brother instead. She had a bargain with Huanxin Jinx and she tore it up rather than sign away her bonus, and Uzzi is what she spent in its place. I walked out of that stairwell. He did not. I do not talk about it sober.",
       "confidence": "verified",
@@ -11254,19 +11286,6 @@
       "voice": "self"
     },
     {
-      "entityId": "doctor-bones",
-      "kind": "origin",
-      "book": 6,
-      "chapter": 23,
-      "floor": 8,
-      "at": "6:23",
-      "sortKey": 6023,
-      "headline": "The announcer at the Penis Parade",
-      "text": "Subject is a skeletal Bard, level ninety, working as announcer and disc jockey for one of the club’s establishments rather than performing in it. He also takes mercenary contracts. The two careers turn out to require the same skill, which is holding a room’s attention while something else happens in it.",
-      "confidence": "draft",
-      "voice": "system"
-    },
-    {
       "entityId": "penis-parade",
       "kind": "origin",
       "book": 6,
@@ -11681,6 +11700,19 @@
       "text": "A look back at that visit shows the healer never saw him. Whatever Carl was doing inside the club while Pater Coal talked, he has kept it to himself.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "doctor-bones",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 52,
+      "floor": 8,
+      "at": "6:52",
+      "sortKey": 6052,
+      "headline": "The announcer, not the act",
+      "text": "Subject is a skeletal Bard, level ninety, working as announcer and disc jockey for one of the club’s establishments rather than performing in it. He also takes mercenary contracts. The two careers turn out to require the same skill, which is holding a room’s attention while something else happens in it.",
+      "confidence": "draft",
+      "voice": "system"
     },
     {
       "entityId": "chowder-war",
@@ -12316,6 +12348,19 @@
       "sortKey": 7015,
       "headline": "Commander of the 103rd",
       "text": "Subject is a former crawler whose season was Land War, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He is recognised on sight by people who have never crawled. That is rarer than it sounds.",
+      "confidence": "draft",
+      "voice": "system"
+    },
+    {
+      "entityId": "jamal",
+      "kind": "origin",
+      "book": 7,
+      "chapter": 15,
+      "floor": 9,
+      "at": "7:15",
+      "sortKey": 7015,
+      "headline": "The shark has a name",
+      "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He is polite. He is anxious. He is loyal past the point where loyalty is sensible, and I have not yet identified what he is getting out of the arrangement.",
       "confidence": "draft",
       "voice": "system"
     },
@@ -14187,7 +14232,7 @@
       "at": "8:38",
       "sortKey": 8038,
       "headline": "Akuma names the builders",
-      "text": "Warlord Akuma, holding court, hands Carl's group a piece of history. Two former crawlers, Herot and Minerva, built the Pineapple Cabaret: a pocket dimension on the same principle as the Nothing, made so that NPCs would have somewhere to go when a floor comes down on top of them. They built it, and then they could not get out of it, and it is full of shadow mimics now. Akuma's reading is that the surface of Earth can be reached through the place, that crawlers may use it provided they worship nothing, and that the Scavenger's Daughter is the key to the whole business. He declines to say why. I am not permitted to correct him, and I would like that noted.",
+      "text": "Warlord Akuma, holding court, hands Carl's group a piece of history. Two former crawlers, Herot and Menerva, built the Pineapple Cabaret: a pocket dimension on the same principle as the Nothing, made so that NPCs would have somewhere to go when a floor comes down on top of them. They built it, and then they could not get out of it, and it is full of shadow mimics now. Akuma's reading is that the surface of Earth can be reached through the place, that crawlers may use it provided they worship nothing, and that the Scavenger's Daughter is the key to the whole business. He declines to say why. I am not permitted to correct him, and I would like that noted.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -14200,7 +14245,7 @@
       "at": "8:38",
       "sortKey": 8038,
       "headline": "A name inside somebody else's account",
-      "text": "The name arrives second-hand, in Warlord Akuma's account of who built the Pineapple Cabaret. Two former crawlers: Herot, and Minerva. They made a pocket dimension for NPCs to shelter in when a floor comes down, on the same principle as the Nothing, and by his telling the pair of them were caught inside it. That is the whole of what he offers about her, and Akuma is not a careless speaker. The brevity is a choice. I have nothing in my own files to put beside it, which is itself worth writing down.",
+      "text": "The name arrives second-hand, in Warlord Akuma's account of who built the Pineapple Cabaret. Two former crawlers: Herot, and Menerva. They made a pocket dimension for NPCs to shelter in when a floor comes down, on the same principle as the Nothing, and by his telling the pair of them were caught inside it. That is the whole of what he offers about her, and Akuma is not a careless speaker. The brevity is a choice. I have nothing in my own files to put beside it, which is itself worth writing down.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -14304,7 +14349,7 @@
       "at": "8:55",
       "sortKey": 8055,
       "headline": "He has a standing order for cleaner bots",
-      "text": "Mordecai and Rosetta test the shop interface exploit and it works, which gives them a way to look, and two answers come back. Minerva is on the seventeenth floor. Herot is inside the cabaret itself, and he has a standing purchase order in with the shop for every cleaner bot it will sell him, which he has evidently been putting to some use of his own. Somebody shut in a box for cycles has been quietly buying the delivery vehicles. I will leave that where it sits.",
+      "text": "Mordecai and Rosetta test the shop interface exploit and it works, which gives them a way to look, and two answers come back. Menerva is on the seventeenth floor. Herot is inside the cabaret itself, and he has a standing purchase order in with the shop for every cleaner bot it will sell him, which he has evidently been putting to some use of his own. Somebody shut in a box for cycles has been quietly buying the delivery vehicles. I will leave that where it sits.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -14317,7 +14362,7 @@
       "at": "8:55",
       "sortKey": 8055,
       "headline": "She is on the seventeenth floor",
-      "text": "The shop interface exploit gives Mordecai and Rosetta a way to search for both builders, and the two answers do not match each other. Herot is in the cabaret. Minerva is on the seventeenth floor. Nobody in that room has been within seven floors of the seventeenth, and this crawl is presently on the tenth. I hold a very great many records. I am not going to tell you which of them account for that.",
+      "text": "The shop interface exploit gives Mordecai and Rosetta a way to search for both builders, and the two answers do not match each other. Herot is in the cabaret. Menerva is on the seventeenth floor. Nobody in that room has been within seven floors of the seventeenth, and this crawl is presently on the tenth. I hold a very great many records. I am not going to tell you which of them account for that.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -15253,7 +15298,7 @@
       "kind": "former-ally",
       "note": null,
       "revealedAt": "2:21",
-      "sortKey": 2021
+      "sortKey": 3006
     },
     {
       "fromId": "katia",
@@ -16461,7 +16506,7 @@
       "kind": "partner",
       "note": null,
       "revealedAt": "2:21",
-      "sortKey": 2021
+      "sortKey": 2999
     },
     {
       "fromId": "ifechi",
@@ -16469,7 +16514,7 @@
       "kind": "member-of",
       "note": null,
       "revealedAt": "2:21",
-      "sortKey": 2021
+      "sortKey": 2999
     },
     {
       "fromId": "ifechi",
@@ -16613,7 +16658,7 @@
       "kind": "author-of",
       "note": null,
       "revealedAt": "3:8",
-      "sortKey": 3008
+      "sortKey": 3013
     },
     {
       "fromId": "rosetta",

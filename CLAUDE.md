@@ -852,13 +852,36 @@ Larracos earned the kind by being named in four beats with nowhere to point.
 Adding an entity late in a project surfaces a specific problem: **a name often reaches the reader
 long before its substance does.** Sheol is a component in a bomb's description at 2:25 and a demon
 realm in book 6. Changeling is one word of Mordecai's at 1:29 and a population under torture in
-book 4. The Nagas are bankrupt showrunners in a loot-box aside at 1:5 and a fleet in book 7.
-Rosetta Thagra is a name in the front of the Cookbook at 3:8 and a presenter in book 6.
+book 4. The Nagas are a word in an insult at 1:43, bankrupt showrunners in book 2's epilogue and a
+fleet in book 7. Rosetta Thagra is a note in the Cookbook's bomb chapter at 3:13 and a presenter in
+book 6.
 
 In every case the entity **reveals where the book gives the reader the word**, and everything
 about what it *is* sits in beats at its own later tag. Tagging the entity at its substance instead
 would retro-seal text the reader has already read, and the forward-reference check would fail the
 build on the older entry — which is how each of these was found.
+
+### The first mention is read off the book, not the wiki
+
+`npm run content:anchors` reads the edition's full text when `data/index/books/` is on disk
+(`node scripts/fetch-books.mjs`) and falls back to the wiki's summaries when it is not. The first
+full-text pass found **sixteen entities tagged before the book names them**, and the pattern is
+the thing worth knowing: the wiki names people *retrospectively*. Its summary of 1:14 says "Kevin"
+where the page says "the orange, four-eyed, lizard-like creature"; he is "the recap guy, whose name
+was apparently Kevin" at **4:26**. Florin is "a guy with an alligator head" at 2:14 and named on the
+2:end leaderboard; Bianca is a goat on a recap in book 2 and named in book 5. Hekla and Brynhild's
+Daughters are not in this edition's 1:20 recap at all — they arrive at 1:39.
+
+The same pass found **wiki facts filed under the wrong chapter**, which the forward-reference lint
+then chased into other entities: the Nagas' failed season and the 2,145 Celestial boxes are Odette
+in book 2's epilogue, not a 1:5 aside; the Cookbook's 3:8 beat said Rosetta "turns up hosting Shadow
+Boxer", a book-6 fact; a 1:36 beat listed Shadow Boxer (6:7) and the Blood Hunter (book 7) as shows
+Zev arranges. And a character is spelled **Menerva** in the edition, not Minerva.
+
+Moving a tag *earlier* is not free: a plain-string tagline is shown from `revealedAt`, so pulling
+an entity back to its first passing mention needs a first tagline written for that mention. The
+checker's LATE list is that queue. Its `REVIEWED` map holds tags read and settled, each with a
+reason, keyed on the tag so moving it re-opens the question.
 
 ### A sentence nobody wrote still has to pass the gate
 
@@ -1551,7 +1574,8 @@ character rather than an apology.
 ```bash
 npm run dev             # https://localhost:4321 (self-signed — accept the warning)
 npm run content:build   # rebuild data/content.snapshot.json after editing data/
-npm run content:anchors # is any reveal tag earlier than the first chapter naming it?
+npm run content:anchors # is every reveal tag where the book first names it? (full text if present)
+node scripts/fetch-books.mjs [--no-fetch]  # the edition from the OPDS library in .env -> data/index/books/
 npm run content:check   # lint only; prints the draft/chapter-count work queue
 npm run achievements:refresh  # re-pull the awards + the voice corpus from the wiki
 npm run test:gate       # frontier arithmetic + the lint rules
@@ -1631,7 +1655,9 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/lib/voice.mjs` | Who speaks on a beat: self / system / narrator, resolved in the build |
 | `scripts/smoke.mjs` | `npm run smoke` — does every route actually render? |
 | `scripts/check-stage.mjs` | No `<script>` or `<noscript>` in a component the view swap replaces |
-| `scripts/check-anchors.mjs` | `npm run content:anchors` — advisory: a reveal tag earlier than the first chapter naming it |
+| `scripts/check-anchors.mjs` | `npm run content:anchors` — advisory: each reveal tag against the first chapter naming it |
+| `scripts/fetch-books.mjs` | The edition's full text, one file per section with its reading position; gitignored |
+| `scripts/lib/edition.mjs` | Wiki chapter numbers -> the edition's (book 5 differs) |
 | `src/lib/achievement.ts` | Tiers, the prompt, the model call, and the screen-and-retry loop |
 | `src/lib/leak.ts` | **The forward-name screen** — the runtime half of the lint's rule |
 | `src/pages/achievement.astro` | The form, the grant, the trophy case; rate limit lives here |

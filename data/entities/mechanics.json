@@ -116,7 +116,7 @@
           "at": "1:36",
           "confidence": "verified",
           "headline": "There are other shows",
-          "text": "Zev explains crawler participation on Syndicate programmes. Death Watch Extreme Dungeon Mayhem, Shadow Boxer, Vengeance of the Daughter, the Blood Hunter — a crawler can be signed to any of them, and the contracts do not lapse between floors."
+          "text": "Zev introduces herself as the liaison between Borant and the privately run programmes that borrow crawlers for their own shows. A production may pluck a crawler off between stairwells; anything else goes through her office. A crawler may turn a show down, but has to pick one."
         }
       ],
       "relations": [
@@ -145,7 +145,7 @@
           "at": "1:26",
           "confidence": "verified",
           "headline": "It introduces you to your rivals",
-          "text": "The third recap brings in Le Mouvement, and then a boss battle. Whole factions arrive in the story as segments."
+          "text": "The third recap brings in a hundred and fifty armed men from Africa, and then a boss battle. Whole factions arrive in the story as segments."
         },
         {
           "kind": "use",
@@ -182,13 +182,12 @@
         },
         {
           "kind": "use",
-          "book": 1,
-          "chapter": 5,
-          "floor": 1,
-          "at": "1:5",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
           "confidence": "verified",
           "headline": "The top tiers cost the house real money",
-          "text": "Borant owes the Syndicate tax on the tier of every non-sponsored box it hands out. In the whole history of the show only 2,145 Celestial boxes have ever been awarded, and no crawler has had more than four. The previous record for one season was eighteen, which bankrupted the Naga showrunners and kept them out of the business for centuries."
+          "text": "Borant owes the Syndicate tax on every non-sponsored box it hands out: a handful of free Celestials a season, and a steeper bill for each one after that. In the whole history of the show only 2,145 Celestial boxes have been awarded, and no crawler has had more than four. The previous record for one season was eighteen, in a Naga season long ago."
         },
         {
           "kind": "use",
@@ -1417,13 +1416,15 @@
       "id": "vengeance-of-the-daughter",
       "kind": "mechanic",
       "name": "The Vengeance of the Daughter",
-      "aka": [],
+      "aka": [
+        "Vengeance of the Daughter"
+      ],
       "role": "Broadcast",
-      "revealedAt": "2:11",
+      "revealedAt": "2:9",
       "sort": 48,
       "tagline": [
         {
-          "at": "2:11",
+          "at": "2:9",
           "text": "A Syndicate drama serial shot inside the dungeon. A circus, a murdered mother, an exiled tsarina, and a guest slot with Carl's name on it."
         },
         {

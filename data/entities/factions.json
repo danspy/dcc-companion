@@ -141,12 +141,12 @@
         "the Daughters"
       ],
       "role": "Crawler group",
-      "revealedAt": "1:20",
+      "revealedAt": "1:39",
       "sort": 5,
       "tagline": [
         {
-          "at": "1:20",
-          "text": "Hekla's group: Icelandic, disciplined, and carrying people who could not have made the stairs alone."
+          "at": "1:39",
+          "text": "Hekla's group: Icelandic, crossbows and breastplates, and growing."
         },
         {
           "at": "2:21",
@@ -196,19 +196,28 @@
       "name": "Le Mouvement",
       "aka": [],
       "role": "Crawler faction",
-      "revealedAt": "1:26",
+      "revealedAt": "1:31",
       "sort": 7,
-      "tagline": "Arrived as a recap segment and left as a wipe.",
+      "tagline": [
+        {
+          "at": "1:31",
+          "text": "A hundred and fifty men with rifles, down to eighty and counting their bullets."
+        },
+        {
+          "at": "1:44",
+          "text": "Arrived as a recap segment and left as a wipe."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
           "book": 1,
-          "chapter": 26,
-          "floor": 1,
-          "at": "1:26",
+          "chapter": 31,
+          "floor": 2,
+          "at": "1:31",
           "confidence": "verified",
-          "headline": "Introduced on the third recap",
-          "text": "A whole faction enters the story as a broadcast segment."
+          "headline": "Named on the recap",
+          "text": "The armed men from Africa get a name on the broadcast, and a graphic counting what is left of their ammunition."
         },
         {
           "kind": "fate",
@@ -781,12 +790,16 @@
         "Naga"
       ],
       "role": "Syndicate people",
-      "revealedAt": "1:5",
+      "revealedAt": "1:43",
       "sort": 46,
       "tagline": [
         {
-          "at": "1:5",
-          "text": "Showrunners once, until a season of eighteen Celestial boxes bankrupted them and kept them out of the business for centuries."
+          "at": "1:43",
+          "text": "A name used as an insult: nobody in the Skull Clan wants to be mistaken for one."
+        },
+        {
+          "at": "2:end",
+          "text": "Showrunners once. They ran the first crawl ever to lose money, and have not run a season since."
         },
         {
           "at": "7:21",
