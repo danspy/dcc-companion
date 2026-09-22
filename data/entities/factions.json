@@ -150,7 +150,7 @@
         },
         {
           "at": "2:21",
-          "text": "Hekla's group, and the one Katia and Eva came in with."
+          "text": "Hekla's group, and the one Katia came in with."
         }
       ],
       "beats": [
@@ -162,7 +162,7 @@
           "at": "2:21",
           "confidence": "verified",
           "headline": "They carry her as far as they can",
-          "text": "A neighbourhood boss and a borough boss with Katia and Eva in tow, until class selection splits everyone up and the levels stop adding up."
+          "text": "A neighbourhood boss and a borough boss with Katia and a friend of hers in tow, until class selection splits everyone up and the levels stop adding up."
         }
       ],
       "relations": []
@@ -888,7 +888,7 @@
           "text": "The ninth floor's own people, fielded as the defending team, and allied with the crawlers from the first hour of it."
         },
         {
-          "at": "7:43",
+          "at": "7:44",
           "text": "Their warlord turned into an Unwashed on camera and told the audience that it is coming for them all."
         },
         {
@@ -920,9 +920,9 @@
         {
           "kind": "arc",
           "book": 7,
-          "chapter": 43,
+          "chapter": 44,
           "floor": 9,
-          "at": "7:43",
+          "at": "7:44",
           "confidence": "verified",
           "headline": "It is coming for you all",
           "text": "Odette arrives to replace Chaco, Cascadia comes apart on air, and Carl spends an emergency action item to shut the communication loophole the other teams have been using. Then Juice Box turns into an Unwashed in front of the cameras and tells everyone watching that it is coming for them all."

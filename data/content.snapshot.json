@@ -309,7 +309,7 @@
       "revealedAt": "2:2",
       "recapAt": "2:25",
       "premise": "The Over City: a colossal ruin built on top of itself, cut into themed districts and run by NPC factions. The first floor that behaves like a place rather than a level.",
-      "recap": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions. Class selection happens here: Carl takes Primal and the unique Compensated Anarchist, Donut takes Cat and Former Child Actor, and on Odette's advice they manoeuvre Mordecai into becoming Donut's manager — an appointment that had to look like an accident. Katia, ten levels behind and abandoned by Eva, is taken into the Royal Court. The Desperado Club opens. During the Fools Who Broke the Glass Quest, Carl builds Carl's Doomsday Scenario by wrapping a Sheol Glass Reaper Case around an exploding Soul Crystal — a 45-kilometre blast he can never put down. The floor ends with Borant spending its one annual veto rather than pay out 83 Celestial boxes.",
+      "recap": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions. Class selection happens here: Carl takes Primal and the unique Compensated Anarchist, Donut takes Cat and Former Child Actor, and on Odette's advice they manoeuvre Mordecai into becoming Donut's manager — an appointment that had to look like an accident. Katia, ten levels behind and left behind by the Daughters, is taken into the Royal Court. The Desperado Club opens. During the Fools Who Broke the Glass Quest, Carl builds Carl's Doomsday Scenario by wrapping a Sheol Glass Reaper Case around an exploding Soul Crystal — a 45-kilometre blast he can never put down.",
       "accent": "#f42bd0",
       "ink": "#0e0e0e",
       "sortKey": 2002,
@@ -519,7 +519,12 @@
         {
           "at": "2:21",
           "sortKey": 2021,
-          "text": "Art professor, Reykjavík. Apparently I can mould my own mass like clay. I am working out how, and you can tell."
+          "text": "Doppelganger. Apparently I am like clay, and I can mould my own mass. I am working out how, and you can tell."
+        },
+        {
+          "at": "3:21",
+          "sortKey": 3021,
+          "text": "Art professor, Reykjavík. I can mould my own mass like clay, and I am getting better at it."
         }
       ],
       "revealedAt": "2:21",
@@ -537,7 +542,7 @@
         {
           "at": "1:22",
           "sortKey": 1022,
-          "text": "Out of the Meadow Lark Elder Care Facility. I'm nowhere near finished, and I won't be rushed."
+          "text": "Meadow Lark, on the badge. Scrubs, a longsword and a cloak. I'm nowhere near finished, and I won't be rushed."
         },
         {
           "at": "8:87",
@@ -1061,12 +1066,12 @@
       "role": "Antagonists",
       "taglines": [
         {
-          "at": "1:13",
-          "sortKey": 1013,
+          "at": "1:20",
+          "sortKey": 1020,
           "text": "Frank Q. The lady is Maggie My. We worked out early that a human in a safe room pays better than a monster in a hallway, and we have not looked back."
         }
       ],
-      "revealedAt": "1:13",
+      "revealedAt": "1:20",
       "sort": 27,
       "voice": "self",
       "descriptions": []
@@ -1900,7 +1905,7 @@
           "at": "4:29",
           "source": "System AI",
           "sortKey": 4029,
-          "text": "Orthrus. Juvenile Gate Guardian. Level 10. This is a bereft pet of Geyrun. Who's a good boy? Who's a good boy? The most loveable hell-hound on this side of Alpha Centauri. The left side is for sniffin' and the right side is for lickin' and that pink belly of his? It's for kissin'."
+          "text": "Orthrus. Juvenile Gate Guardian. Level 10. This is a bereft pet of Geyrun. Who's a good boy? Who's a good boy? The most loveable hell-hound on this side of Alpha Centari. The left side is for sniffin' and the right side is for lickin' and that pink belly of his? It's for kissin'."
         }
       ]
     },
@@ -2014,7 +2019,7 @@
         {
           "at": "3:8",
           "sortKey": 3008,
-          "text": "Seven feet of rock in a tuxedo. Me and Bomo work the door. The Princess calls me Sledgey."
+          "text": "Seven feet of rock in a tuxedo. Me and Bomo work the door."
         },
         {
           "at": "5:3",
@@ -3428,7 +3433,7 @@
         {
           "at": "3:31",
           "sortKey": 3031,
-          "text": "From a village in Mongolia, harassed without pause about a dog-themed race she did not ask to be given, and fighting alongside the people doing the harassing anyway."
+          "text": "Harassed without pause about a dog-themed race she did not ask to be given, and fighting alongside the people doing the harassing anyway."
         }
       ],
       "revealedAt": "3:31",
@@ -3487,7 +3492,7 @@
         {
           "at": "4:3",
           "sortKey": 4003,
-          "text": "Six car salesmen from Finland who all took the same class, and he is the one who talks."
+          "text": "Six car salesmen from Helsinki who all took the same class, and he is the one who talks."
         }
       ],
       "revealedAt": "4:3",
@@ -3543,7 +3548,7 @@
         {
           "at": "4:28",
           "sortKey": 4028,
-          "text": "Born a Bune, kept the race, and wrote an edition of the cookbook in a season the Nagas produced two hundred and fifty cycles ago."
+          "text": "Wrote the twenty-second edition of the cookbook, in the last season the Nagas ran, the one that ended in some sort of cataclysm."
         }
       ],
       "revealedAt": "4:28",
@@ -3714,7 +3719,7 @@
         {
           "at": "6:17",
           "sortKey": 6017,
-          "text": "Rich, clever, chief executive of a habitat company, and playing the Ascension game since she was a child."
+          "text": "A Grixist heiress, chief executive of Icon Industries, and a god to drive whenever she is bored."
         }
       ],
       "revealedAt": "6:1",
@@ -5317,7 +5322,7 @@
         {
           "at": "2:21",
           "sortKey": 2021,
-          "text": "Hekla's group, and the one Katia and Eva came in with."
+          "text": "Hekla's group, and the one Katia came in with."
         }
       ],
       "revealedAt": "1:39",
@@ -5613,8 +5618,8 @@
           "text": "The ninth floor's own people, fielded as the defending team, and allied with the crawlers from the first hour of it."
         },
         {
-          "at": "7:43",
-          "sortKey": 7043,
+          "at": "7:44",
+          "sortKey": 7044,
           "text": "Their warlord turned into an Unwashed on camera and told the audience that it is coming for them all."
         },
         {
@@ -6210,8 +6215,8 @@
       "floor": 1,
       "at": "1:1",
       "sortKey": 1001,
-      "headline": "The Bahamas, with Brad",
-      "text": "Subject is in the Bahamas with her ex, a man called Brad, and she posted the photograph. Carl ended it by phone a few days before the Transformation, which, as timing goes, was impeccable. She is not on my stairs. Her cat is. Her family's breeding line is. Her shoes are, on his feet, and they are pink. That is the file. I have never had so little to say about anyone, and I resent it.",
+      "headline": "The Bahamas, with her ex",
+      "text": "Subject is in the Bahamas with her ex-boyfriend, whom she did not mention was coming, and she posted the photograph. Carl ended it by phone a few days before the Transformation, which, as timing goes, was impeccable. She is not on my stairs. Her cat is. Her family's breeding line is. Her shoes are, on his feet, and they are pink. That is the file. I have never had so little to say about anyone, and I resent it.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -6398,19 +6403,6 @@
       "voice": "self"
     },
     {
-      "entityId": "princess-donut",
-      "kind": "origin",
-      "book": 1,
-      "chapter": 6,
-      "floor": 1,
-      "at": "1:6",
-      "sortKey": 1006,
-      "headline": "First cat down the stairs",
-      "text": "Carl carries me down, and the dungeon gives him a Legendary Pet Box for it, which is fair, and gives me a Legendary Quadruped Box of my own, which is more than fair. His box has a biscuit in it. An Enhanced Pet Biscuit. I take it out of his hand, because it is obviously for me, and I melt into a heap of goo, and I get up talking. I have a great deal to say.",
-      "confidence": "verified",
-      "voice": "self"
-    },
-    {
       "entityId": "blood-sultanate",
       "kind": "origin",
       "book": 1,
@@ -6474,6 +6466,19 @@
       "text": "Bolts of energy leave the caster’s eyes one after another, and the resemblance to a film about spaceships is close enough that nobody bothers to pretend otherwise. Princess Donut works it out for herself once Mordecai has switched her menus on, and from that point the question is never whether she will fire, only at what.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "princess-donut",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 7,
+      "floor": 1,
+      "at": "1:7",
+      "sortKey": 1007,
+      "headline": "First cat down the stairs",
+      "text": "Carl carries me down, and the dungeon gives him a Legendary Pet Box for it, which is fair, and gives me a Legendary Quadruped Box of my own, which is more than fair. His box has a biscuit in it. An Enhanced Pet Biscuit. I take it out of his hand, because it is obviously for me, and I melt into a heap of goo, and I get up talking. I have a great deal to say.",
+      "confidence": "verified",
+      "voice": "self"
     },
     {
       "entityId": "princess-donut",
@@ -6541,19 +6546,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "frank-and-maggie",
-      "kind": "origin",
-      "book": 1,
-      "chapter": 13,
-      "floor": 1,
-      "at": "1:13",
-      "sortKey": 1013,
-      "headline": "Safe rooms are not safe",
-      "text": "Folks come down those stairs frightened, and frightened folks go looking for a door with the word safe on it. That is where you'll find them, sitting still, and that is where Maggie and I find them. The monsters on these first floors are hardly worth the trouble. A person is worth a good deal more. Production knows exactly what we are, and production puts us on the air every chance it gets. You draw your own conclusion about who the show is for.",
-      "confidence": "draft",
-      "voice": "self"
-    },
-    {
       "entityId": "dungeon-crawler-world",
       "kind": "arc",
       "book": 1,
@@ -6604,6 +6596,19 @@
       "text": "Carl and Donut both take the Desperado Pass Tattoo in a first-floor safe room — his on the neck, hers on the right shoulder blade, glowing gold through the fur. Donut is appalled.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "frank-and-maggie",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 20,
+      "floor": 1,
+      "at": "1:20",
+      "sortKey": 1020,
+      "headline": "Safe rooms are not safe",
+      "text": "Folks come down those stairs frightened, and frightened folks go looking for a door with the word safe on it. That is where you'll find them, sitting still, and that is where Maggie and I find them. The monsters on these first floors are hardly worth the trouble. A person is worth a good deal more. Production knows exactly what we are, and production puts us on the air every chance it gets. You draw your own conclusion about who the show is for.",
+      "confidence": "draft",
+      "voice": "self"
     },
     {
       "entityId": "agatha",
@@ -7186,7 +7191,7 @@
       "at": "2:6",
       "sortKey": 2006,
       "headline": "The circus in the Over City",
-      "text": "Grimaldi's Traveling Circus is pitched in one of the Over City's districts. Ringmaster Redstone Grimaldi, proprietor. Tonight two crawlers, Carl and Princess Donut, are scouting the grounds as the mobs form up for the night. That is the whole entry so far: a tent, a company, and two people looking at it from the dark. Filed under Over City, third floor.",
+      "text": "Grimaldi's Traveling Circus is pitched in one of the Over City's districts. Grimaldi, proprietor. Tonight two crawlers, Carl and Princess Donut, are scouting the grounds as the mobs form up for the night. That is the whole entry so far: a tent, a company, and two people looking at it from the dark. Filed under Over City, third floor.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -7342,7 +7347,7 @@
       "at": "2:18",
       "sortKey": 2018,
       "headline": "You are not seeing the magistrate",
-      "text": "Two of them at my desk. A human with no shoes, a cat that talks, and a body. They have put a body on my desk. Evidence, they call it, and they have a note for it, so the swordsmen leave without him. The magistrate is not to be disturbed. If he does not care about your business then he will certainly care about being disturbed, and I will not be discussing it further. Behind me is a shelf of Jaxbrin figures in their proper order, and the human is standing far too close to it. The door behind me is locked. It is locked for a reason.",
+      "text": "Two of them at my desk. A human with no shoes, a cat that talks, and a body. They have put a body on my desk. Evidence, they call it, and they have a note for it, so the swordsmen leave without him. The magistrate is not to be disturbed. If he does not care about your business then he will certainly care about being disturbed, and I will not be discussing it further. Behind me is a shelf of beanbag figures in their proper order, and the human is standing far too close to it. The door behind me is locked. It is locked for a reason.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -7433,7 +7438,7 @@
       "at": "2:21",
       "sortKey": 2021,
       "headline": "They carry her as far as they can",
-      "text": "A neighbourhood boss and a borough boss with Katia and Eva in tow, until class selection splits everyone up and the levels stop adding up.",
+      "text": "A neighbourhood boss and a borough boss with Katia and a friend of hers in tow, until class selection splits everyone up and the levels stop adding up.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -7446,7 +7451,7 @@
       "at": "2:21",
       "sortKey": 2021,
       "headline": "She asks them to take her",
-      "text": "We carried Katia and Eva through a neighbourhood boss and a borough boss, and I would do it again. Then class selection split us, and I run this party on numbers, and Katia's numbers stopped adding up next to anyone she stands beside. I cannot carry that down another set of stairs. So I am the one asking. Carl. Donut. Take her. She is better than she looks right now, and she will hate that I said so.",
+      "text": "We carried Katia and her friend through a neighbourhood boss and a borough boss, and I would do it again. Then class selection split us, and I run this party on numbers, and Katia's numbers stopped adding up next to anyone she stands beside. I cannot carry that down another set of stairs. So I am the one asking. Carl. Donut. Take her. She is better than she looks right now, and she will hate that I said so.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -7459,7 +7464,7 @@
       "at": "2:21",
       "sortKey": 2021,
       "headline": "Ten levels behind and nobody's problem",
-      "text": "I came in with Eva. We fell in with Hekla and Brynhild's Daughters, who carried the two of us through a neighbourhood boss and a borough boss, and I know exactly how much of that was us. Class selection split us up, and Eva did not wait. Now Hekla is asking Carl and Donut to take me. The system has just upgraded my displayed race from \"What the f-word?\" to \"Human\", so things are looking up.",
+      "text": "I came in with a friend. We fell in with Hekla and Brynhild's Daughters, who carried the two of us through a neighbourhood boss and a borough boss, and I know exactly how much of that was us. Class selection split us up, and she did not wait. Now Hekla is asking Carl and Donut to take me. The system has just upgraded my displayed race from \"What the f-word?\" to \"Human\", so things are looking up.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -7511,7 +7516,7 @@
       "at": "2:22",
       "sortKey": 2022,
       "headline": "The administrative building, and everything in it",
-      "text": "Miss Quill is dead. The administrative building came apart with her inside it, along with what was left of Magistrate Featherfall, who was bones long before any of this, and the shelf, and every figure on it. The barefoot man is magistrate of this settlement now, which is what happens when nobody checks the paperwork. He collects one achievement for assassinating a public official and a second for spoiling a Tigran's quest, since Bautista had been coming for her himself. She kept that door for a very long time and not one crawler ever thought to ask her why.",
+      "text": "Miss Quill is dead. The administrative building came apart with her inside it, along with what was left of Magistrate Featherfall, who was bones long before any of this, and the shelf, and every figure on it. The barefoot man is magistrate of this settlement now, which is what happens when nobody checks the paperwork. He collects one achievement for assassinating a public official and a second for killing an NPC another crawler needed for a quest. The achievement declines to say whose, or what the quest was. She kept that door for a very long time and not one crawler ever thought to ask her why.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -7602,7 +7607,7 @@
       "at": "2:25",
       "sortKey": 2025,
       "headline": "Built in the middle of a collapse",
-      "text": "During the Fools Who Broke the Glass, Carl drops a Sheol Glass Reaper Case around a Soul Crystal that is already going up and pulls the result into his inventory. Rated Pretty Damn Rare. Status: Explosion Imminent. \"This item can no longer be stabilized.\"",
+      "text": "During the Fools Who Broke the Glass, Carl drops a Sheol Glass Reaper Case around a Soul Crystal that is already going up and pulls the result into his inventory. Status: Explosion Imminent. \"This item can no longer be stabilized.\"",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -7940,7 +7945,7 @@
       "at": "3:8",
       "sortKey": 3008,
       "headline": "Bought at the bar",
-      "text": "Two crawlers come up to the counter and buy security. Me and Bomo, sold as the pair. That is the arrangement in this place. You pay, and we stand between you and whatever comes through the door. The cat is not what I expect. She orders a dirty Shirley in a bowl with extra cherries, drinks the whole thing, and then she wants dancing, so I do my version of the robot while she bops and twirls on my shoulders. Princess Donut. She calls me Sledgey. I let her.",
+      "text": "Two crawlers come up to the counter and buy security. Me and Bomo, sold as the pair. That is the arrangement in this place. You pay, and we stand between you and whatever comes through the door. The cat is not what I expect. She orders a dirty Shirley in a bowl with extra cherries, drinks the whole thing, and then she wants dancing, so I do my version of the robot while she bops and twirls on my shoulders. Princess Donut. I let her.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -8317,22 +8322,9 @@
       "at": "3:31",
       "sortKey": 3031,
       "headline": "A name nobody on the crawl can pronounce",
-      "text": "Subject is from Earth, born and raised in a small village in Mongolia, and took the Crisper Class. Her fellow crawlers gave up on her name inside a day and settled on a syllable of it. She takes constant needling from a certain cat about her race, and she fights beside that cat’s court regardless, which is a distinction the needling never quite grasps.",
+      "text": "Subject is from Earth, a Dog Soldier, and took the Crisper Class. Her fellow crawlers gave up on her name inside a day and settled on a syllable of it. She takes constant needling from a certain cat about her race, and she fights beside that cat’s court regardless, which is a distinction the needling never quite grasps.",
       "confidence": "verified",
       "voice": "system"
-    },
-    {
-      "entityId": "zhang",
-      "kind": "arc",
-      "book": 3,
-      "chapter": 31,
-      "floor": 4,
-      "at": "3:31",
-      "sortKey": 3031,
-      "headline": "Still human, and heavier for it",
-      "text": "I stayed human at selection. No fur, no beak, nothing added on. Earth Mover for the class, which is a spellcaster and a wall in the same body, and Dirt Clod is exactly what it sounds like and it works better than it has any right to. The armour I am in now is black and gold and glows in the dark. Li Na says that is showing off. Li Na is not wrong.",
-      "confidence": "draft",
-      "voice": "self"
     },
     {
       "entityId": "miriam-dom",
@@ -8345,6 +8337,19 @@
       "headline": "Same plan, other side of the Tangle",
       "text": "We worked it out some time ago: the ghouls keep coming while the generators stand, so the generators have to go, every one of them. We have been taking them from this side of the knot, Prepotente and I, at his pace, which is patient. He puts debuffs on a thing for hours and waits for it to fall. Now Carl's group arrives from the far side with the same plan, and they have just dropped into the abyss the boss my boy was two hours from finishing. He threatens them for it. I take my staff to the top of his head until he apologises, and I tell them all that two groups landing on the same plan only means the plan is good.",
       "confidence": "verified",
+      "voice": "self"
+    },
+    {
+      "entityId": "zhang",
+      "kind": "arc",
+      "book": 3,
+      "chapter": 32,
+      "floor": 4,
+      "at": "3:32",
+      "sortKey": 3032,
+      "headline": "Still human, and heavier for it",
+      "text": "I stayed human at selection. No fur, no beak, nothing added on. Earth Mover for the class, which is a spellcaster and a wall in the same body, and Dirt Clod is exactly what it sounds like and it works better than it has any right to. The armour I am in now is black and gold and glows in the dark. Li Na says that is showing off. Li Na is not wrong.",
+      "confidence": "draft",
       "voice": "self"
     },
     {
@@ -8486,7 +8491,7 @@
       "at": "4:3",
       "sortKey": 4003,
       "headline": "A team of car salesmen with bows",
-      "text": "Subject leads a six-man team of archers, all of whom sold cars in Finland and all of whom picked the Archer Class together, which is either loyalty or a failure of imagination and has worked out the same either way. They come into the fifth floor as strangers to the court and do not stay strangers.",
+      "text": "Subject leads a six-man team of archers, all of whom sold cars in Helsinki and all of whom picked the Archer Class together, which is either loyalty or a failure of imagination and has worked out the same either way. They come into the fifth floor as strangers to the court and do not stay strangers.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -8569,19 +8574,6 @@
       "voice": "self"
     },
     {
-      "entityId": "bobby",
-      "kind": "origin",
-      "book": 4,
-      "chapter": 6,
-      "floor": 5,
-      "at": "4:6",
-      "sortKey": 4006,
-      "headline": "The tomb raiders, so called",
-      "text": "Subject kept the Human race and took the rogue-type Spy Class, and earned his way into the club on that. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck.",
-      "confidence": "draft",
-      "voice": "system"
-    },
-    {
       "entityId": "changeling",
       "kind": "use",
       "book": 4,
@@ -8618,6 +8610,19 @@
       "headline": "A name out of a basement",
       "text": "The name surfaces in a cellar under Hump Town, out of a man being taken apart in pieces. Wynne is being worked on to give up a spell, and the spell is meant to put flesh on Quetzalcoatlus. Whatever she is, she is worth a body to somebody, and somebody is prepared to do that to a man over several days in order to get her one.",
       "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "bobby",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 7,
+      "floor": 5,
+      "at": "4:7",
+      "sortKey": 4007,
+      "headline": "The tomb raiders, so called",
+      "text": "Subject kept the Human race and took the rogue-type Spy Class, and earned his way into the club on that. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck.",
+      "confidence": "draft",
       "voice": "system"
     },
     {
@@ -8669,19 +8674,6 @@
       "sortKey": 4009,
       "headline": "Hidden in the tomb",
       "text": "Carl learns of it from the description of Ruckus, out in the desert quadrant. It lies buried in the Necropolis of Anser, and it has drawn treasure hunters for decades: the bugbear submarine captain Shamus Chaindrive, who spent close to twenty years looking for the tomb, a colony of dirigible gnomes, and the Mad Dune Mage. An artifact of this grade has no business appearing before the eighth or ninth floor, and the AI times out repeatedly reconciling the conflict.",
-      "confidence": "verified",
-      "voice": "narrator"
-    },
-    {
-      "entityId": "gate-of-the-feral-gods",
-      "kind": "use",
-      "book": 4,
-      "chapter": null,
-      "floor": 5,
-      "at": "4:9",
-      "sortKey": 4009,
-      "headline": "Three pieces, three holders",
-      "text": "A winding box and two magically linked pocket watches. Henrik the Changeling has one watch, the gnomish Commandant Kane the other, and Ghazi the box. The quest to collect all three offers a reward of \"Oh boy-oh-boy.\"",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -8762,6 +8754,19 @@
       "text": "Frank Q is dead. Chris Andrews killed him, and Chris Andrews was not the one driving. Maggie My is back in the dungeon as a Scree, riding inside another crawler, and Frank died of exactly the thing he brought down here with him. He spoke to Carl one last time at the Desperado Club and called what was coming a gift. This was the gift. Half of a pair who taught this planet what safe rooms are for. The other half is still walking around, wearing somebody else.",
       "confidence": "draft",
       "voice": "system"
+    },
+    {
+      "entityId": "gate-of-the-feral-gods",
+      "kind": "use",
+      "book": 4,
+      "chapter": 15,
+      "floor": 5,
+      "at": "4:15",
+      "sortKey": 4015,
+      "headline": "Three pieces, three holders",
+      "text": "A winding box and two magically linked pocket watches. Henrik the Changeling has one watch, the gnomish Commandant Kane the other, and the Mad Dune Mage the box. The quest to collect all three offers a reward of \"Oh boy-oh-boy.\"",
+      "confidence": "verified",
+      "voice": "narrator"
     },
     {
       "entityId": "quetzalcoatlus",
@@ -9084,7 +9089,7 @@
       "at": "4:28",
       "sortKey": 4028,
       "headline": "The twenty-second hand on the cookbook",
-      "text": "Subject crawled in the last season the Nagas produced, which was over two hundred and fifty cycles ago, and carried the cookbook through it. He was born a Bune and declined to trade the race away at class selection, taking a rogue-and-magic hybrid instead. His gear is still being handed out as prizes, which is the only immortality this production offers.",
+      "text": "Subject wrote the twenty-second edition of the cookbook and crawled in the final Naga-controlled season, which ended in some sort of cataclysm. Subject’s gear is still being handed out as prizes, a kerchief today, which is the only immortality this production offers.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -9734,7 +9739,7 @@
       "at": "5:8",
       "sortKey": 5008,
       "headline": "What a charter costs",
-      "text": "A guild charter runs upward of five hundred thousand gold from a bopca protector. A level-one guild holds five parties or individuals, provided each has one member with a personal space of their own, and a Guild Common Area appears in every one of those spaces. Private and party rooms stay shut. Environmental upgrades can be licensed across the membership for a small fee, and shared experience can be bought outright.",
+      "text": "A guild charter runs upward of five hundred thousand gold from a bopca protector. A level-one guild holds five parties or individuals, provided each has one member with a personal space of their own, and each of those spaces opens onto a shared common area. Private and party rooms stay shut. Environmental upgrades can be licensed across the membership for a small fee, and shared experience can be bought outright.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -11112,7 +11117,7 @@
       "at": "6:17",
       "sortKey": 6017,
       "headline": "Sponsor to a goddess",
-      "text": "Subject is a Grixist and the current sponsor of the goddess Eileithyia. She is wealthy and she is intelligent, and she has been playing the Ascension game since childhood, which is longer than most of the entities she is now backing have existed. Her day job is building the structures people live in.",
+      "text": "Subject is of the Grixist Swarm, an heiress and chief executive of Icon Industries, and at present the sponsor driving the goddess Eileithyia. She sponsored Dodola every season before this one. The sums involved are a day’s allowance to her. She does not do it for the money. She does it because she is bored.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -11372,7 +11377,7 @@
       "at": "6:29",
       "sortKey": 6029,
       "headline": "The sponsorship changes hands",
-      "text": "I sell my sponsorship of Princess Donut to Long Haul Biological Waste Management Solutions. A waste company. They will want something for their money, and that is a matter between the cat and the waste company now.",
+      "text": "I sell my sponsorship of Princess Donut. It is not appropriate to sponsor a crawler I may be fighting, and it paid well. Whoever bought it will want something for their money, and that is a matter between the cat and the buyer now.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -12677,19 +12682,6 @@
       "voice": "self"
     },
     {
-      "entityId": "team-retribution",
-      "kind": "arc",
-      "book": 7,
-      "chapter": 43,
-      "floor": 9,
-      "at": "7:43",
-      "sortKey": 7043,
-      "headline": "It is coming for you all",
-      "text": "Odette arrives to replace Chaco, Cascadia comes apart on air, and Carl spends an emergency action item to shut the communication loophole the other teams have been using. Then Juice Box turns into an Unwashed in front of the cameras and tells everyone watching that it is coming for them all.",
-      "confidence": "verified",
-      "voice": "narrator"
-    },
-    {
       "entityId": "vinata",
       "kind": "origin",
       "book": 7,
@@ -12701,6 +12693,19 @@
       "text": "I come and stand at the crawler's shoulder while the council goes on around us, and I put a small question to him quietly, so that he alone hears it. Cascadia's whole family is dead. How does he imagine he will manage when his own is? He gives me no answer at all. That is an answer.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "team-retribution",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 44,
+      "floor": 9,
+      "at": "7:44",
+      "sortKey": 7044,
+      "headline": "It is coming for you all",
+      "text": "Odette arrives to replace Chaco, Cascadia comes apart on air, and Carl spends an emergency action item to shut the communication loophole the other teams have been using. Then Juice Box turns into an Unwashed in front of the cameras and tells everyone watching that it is coming for them all.",
+      "confidence": "verified",
+      "voice": "narrator"
     },
     {
       "entityId": "baroness-victory",
@@ -12906,7 +12911,7 @@
       "at": "7:54",
       "sortKey": 7054,
       "headline": "A bomb in the temple",
-      "text": "Katia and Prepotente drink Black Nimbus potions to get themselves thrown out of the temple. Then Carl casts Run, Little Gunter, Run and drops a bomb in the middle of a members-only room, and walks out of it on immortality. Khepri goes backwards through the air. Vinata, immortal herself, is blown out alongside him.",
+      "text": "Katia and Prepotente drink Black Nimbus potions to get themselves thrown out of the temple. Then Carl casts Run, Little Günter, Run and drops a bomb in the middle of a members-only room, and walks out of it on immortality. Khepri goes backwards through the air. Vinata, immortal herself, is blown out alongside him.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -13200,10 +13205,10 @@
       "entityId": "eris",
       "kind": "use",
       "book": 7,
-      "chapter": 65,
+      "chapter": 66,
       "floor": 9,
-      "at": "7:65",
-      "sortKey": 7065,
+      "at": "7:66",
+      "sortKey": 7066,
       "headline": "The Ceremony of Chaos",
       "text": "I call the Ceremony of Chaos and the field stops. Every soldier, every mage, every screaming thing mid-scream, held exactly where it stood. Nearly every. The Viceroys are pouring their mind magic into Carl at the same moment, and something in him tips over into a sixteenth level of Mind Balance, and he stays standing in the middle of my stillness, blinking at me. I could be offended. Instead I gather everyone I did freeze into one great pile beside the Dream castle. A gift. Unwrap it carefully.",
       "confidence": "verified",
@@ -14127,7 +14132,7 @@
       "floor": 10,
       "at": "8:24",
       "sortKey": 8024,
-      "headline": "Negative ROI, outside a garage door",
+      "headline": "Down outside a garage door",
       "text": "I go to the garage of the Lady Dominators because Corcunda is inside it, and I fall down before I reach the door. They carry me to Imani. She tells Carl what I already know: the sickness in me is the absence of Mr. Jefferson, and I am, in the physician's language, addicted to his presence. The quest to bring Corcunda's halves together advances a stage regardless. I did not earn that stage.",
       "confidence": "verified",
       "voice": "self"
@@ -14388,7 +14393,7 @@
       "at": "8:57",
       "sortKey": 8057,
       "headline": "One drunk unicorn, one wrecked duet",
-      "text": "He follows it by starting on the demons of team Yokai, which draws in the Minister of Bloodletting and his skeletons and then most of the floor. Carl's allies spend the entire song keeping the casualty count at zero, and manage it. On the last line of the thing Crawler Donut is knocked off her feet by a patron and loses the entry she had just sung for. Crawler Carl gets in alone. One drunk unicorn, one wrecked duet, one guild place where there should have been two.",
+      "text": "He follows it by starting on the demons of team Yokai, which draws in the Minister of Blood-Letting and his skeletons and then most of the floor. Carl's allies spend the entire song keeping the casualty count at zero, and manage it. On the last line of the thing Crawler Donut is knocked off her feet by a patron and loses the entry she had just sung for. Crawler Carl gets in alone. One drunk unicorn, one wrecked duet, one guild place where there should have been two.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -15152,7 +15157,7 @@
       "fromId": "carl",
       "toId": "princess-donut",
       "kind": "partner",
-      "note": "The Royal Court, such as it is.",
+      "note": "Stuck with each other from the first night.",
       "revealedAt": "1:1",
       "sortKey": 1001
     },
@@ -16080,7 +16085,7 @@
       "fromId": "dnadia",
       "toId": "princess-donut",
       "kind": "sponsor-of",
-      "note": "Sold on to Long Haul Biological Waste Management Solutions.",
+      "note": "Sold on, mid-war.",
       "revealedAt": "6:29",
       "sortKey": 6029
     },

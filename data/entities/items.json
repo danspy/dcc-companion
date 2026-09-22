@@ -34,10 +34,11 @@
           "kind": "use",
           "book": 4,
           "floor": 5,
-          "at": "4:9",
+          "at": "4:15",
           "confidence": "verified",
           "headline": "Three pieces, three holders",
-          "text": "A winding box and two magically linked pocket watches. Henrik the Changeling has one watch, the gnomish Commandant Kane the other, and Ghazi the box. The quest to collect all three offers a reward of \"Oh boy-oh-boy.\""
+          "text": "A winding box and two magically linked pocket watches. Henrik the Changeling has one watch, the gnomish Commandant Kane the other, and the Mad Dune Mage the box. The quest to collect all three offers a reward of \"Oh boy-oh-boy.\"",
+          "chapter": 15
         },
         {
           "kind": "use",
@@ -129,7 +130,7 @@
           "at": "2:25",
           "confidence": "verified",
           "headline": "Built in the middle of a collapse",
-          "text": "During the Fools Who Broke the Glass, Carl drops a Sheol Glass Reaper Case around a Soul Crystal that is already going up and pulls the result into his inventory. Rated Pretty Damn Rare. Status: Explosion Imminent. \"This item can no longer be stabilized.\""
+          "text": "During the Fools Who Broke the Glass, Carl drops a Sheol Glass Reaper Case around a Soul Crystal that is already going up and pulls the result into his inventory. Status: Explosion Imminent. \"This item can no longer be stabilized.\""
         },
         {
           "kind": "use",
