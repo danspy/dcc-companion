@@ -18,7 +18,7 @@
           "at": "1:1",
           "confidence": "verified",
           "headline": "January 3rd, and then the announcement",
-          "text": "It takes a minute. Then the System AI speaks planet-wide: the dungeon has eighteen levels, and the planet can be reclaimed from the Borant Corporation by conquering it. The staircases appear. The survivors are, near enough without exception, the people who happened to be standing outside — smokers, insomniacs, night-shift workers and anyone chasing a pet."
+          "text": "It is over in an instant: every building crushed flat at once. Then a voice speaks planet-wide: the dungeon has eighteen levels, and completing the last returns the planet from the Borant Corporation's regency. The entrances open. The survivors are, near enough without exception, the people who happened to be standing outside — at two in the morning in a Seattle cold snap, almost nobody."
         },
         {
           "kind": "arc",
@@ -28,7 +28,7 @@
           "at": "1:4",
           "confidence": "verified",
           "headline": "Thirteen million go down the stairs",
-          "text": "The tutorial gives Carl the count along with his HUD and menus."
+          "text": "Midway through the tutorial the announcement comes: just under thirteen million made it through the gates, and already fewer than ten million are left."
         }
       ],
       "relations": []
@@ -60,7 +60,7 @@
           "at": "1:4",
           "confidence": "verified",
           "headline": "The terms",
-          "text": "Reach the bottom and humanity gets Earth back. Nobody expects that to happen. The clock is the one rule the dungeon never bends, because the collapse is how a season is scheduled."
+          "text": "Reach the bottom and humanity gets Earth back. Most crawlers do not make it past the tenth floor. Every floor collapses when its timer runs out, and the timers are set by ratings and how many crawlers are left, usually about five days longer than the last."
         },
         {
           "kind": "arc",
@@ -70,16 +70,17 @@
           "at": "1:44",
           "confidence": "verified",
           "headline": "Under a million",
-          "text": "A recap, a wipe of Le Mouvement, and the remaining-crawler count drops below seven figures. Carl hears that number the way other people hear a tap dripping."
+          "text": "On the recap Le Mouvement is gone to a city boss, all but one man, and the ticker reads 990,303. Carl had not noticed it drop below a million, and for every crawler that ticks away he feels a part of himself going with them."
         },
         {
           "kind": "arc",
-          "book": 3,
-          "floor": 4,
-          "at": "3",
+          "book": 1,
+          "floor": 1,
+          "at": "1:12",
           "confidence": "verified",
           "headline": "The cliff at the fourth floor",
-          "text": "The early floors are built to bury crawlers in low-tier loot and beginner skills. From here boxes and achievements get very much harder to come by."
+          "text": "The early floors are built to bury crawlers in low-tier loot and beginner skills. Past the third floor, achievements are harder to come by.",
+          "chapter": 12
         }
       ],
       "relations": []
@@ -105,7 +106,7 @@
           "at": "1:4",
           "confidence": "verified",
           "headline": "Ratings are currency",
-          "text": "Ratings buy sponsors, sponsors send gold and loot, and loot buys another floor. Being watchable is a survival stat, and production will alter the dungeon to get a better episode."
+          "text": "Ratings buy sponsors, sponsors send gold and loot, and loot buys another floor. Being watchable is a survival stat, and even the floor timers are set partly by ratings."
         },
         {
           "kind": "arc",
@@ -164,7 +165,7 @@
           "at": "3:3",
           "confidence": "verified",
           "headline": "The board, two hours in",
-          "text": "Elle, Team Li Na, Ifechi, Florin, Miriam, Prepotente, Hekla and Lucia, all in one broadcast. It is how the crawl keeps track of itself."
+          "text": "Elle, Li Jun, Ifechi, Florin, Miriam, Prepotente, Hekla and Lucia, all in one broadcast. It is how the crawl keeps track of itself."
         }
       ],
       "relations": []
@@ -187,7 +188,7 @@
           "at": "1:5",
           "confidence": "verified",
           "headline": "Where they come from, and how they open",
-          "text": "Achievements, bosses (Boss Boxes, scaling with the boss's rank), quests, and viewers (Fan Boxes and Benefactor Boxes). They stay locked in the Awards and Boxes tab until a safe room or guildhall, and then it is all or nothing — every box you have opens in sequence, lowest tier first, and you cannot pick. Read every description before equipping anything. As Mordecai puts it: always, always, no exceptions."
+          "text": "Achievements, mostly, and patrons, who alone can send Benefactor Boxes. They stay locked in the Awards and Boxes tab until a safe room or guildhall, and then it is all or nothing — every box you have opens in sequence, lowest tier first, and you cannot pick. Read every description before equipping anything. As Mordecai puts it: always, always, no exceptions."
         },
         {
           "kind": "use",
@@ -244,7 +245,7 @@
           "at": "2:2",
           "confidence": "verified",
           "headline": "Taken with the Primal race",
-          "text": "\"Will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\""
+          "text": "\"The Compensated Anarchist will happily throw a Molotov through a window one moment and step in front of a camera to plead for the violence to stop the next.\""
         },
         {
           "kind": "arc",
@@ -276,7 +277,7 @@
           "at": "2:1",
           "confidence": "verified",
           "headline": "Taken with the Cat race",
-          "text": "Her constitution rules out melee, so she fights on charisma and spells. The per-level pick is why a show cat out-scales most of the humans, and Mordecai points out she keeps the skills from every class she leaves behind."
+          "text": "Donut picks it while pretending to pick something else, and takes Artist Alley Mogul as her first specialty. It is a Charisma-and-chance class built on the Character Actor skill: each floor she chooses a specialty, the AI rolls how much of that class she gets, and when the floor ends she loses it and starts over. Her own spells are untouched. It also makes her immune to poison and disease and hands her Cockroach, a chance to survive a killing blow."
         }
       ],
       "relations": []
@@ -299,7 +300,7 @@
           "at": "1:19",
           "confidence": "verified",
           "headline": "Entry is a tattoo",
-          "text": "Carl and Donut both take the Desperado Pass Tattoo in a first-floor safe room — his on the neck, hers on the right shoulder blade, glowing gold through the fur. Donut is appalled."
+          "text": "Carl and Donut are both branded with the Desperado Pass out of their Asshole Boxes in a first-floor safe room — his on the neck, hers on the right shoulder blade, glowing gold through the fur. Donut is appalled."
         },
         {
           "kind": "use",
@@ -319,7 +320,7 @@
           "at": "5:5",
           "confidence": "verified",
           "headline": "Full of hunters when the roof comes in",
-          "text": "Carl's explosives bring Zockau down and trap a great many of them inside it."
+          "text": "Carl's explosives bring Zockau down and trap whoever is inside it."
         }
       ],
       "relations": []
@@ -353,8 +354,8 @@
           "floor": 8,
           "at": "6:63",
           "confidence": "verified",
-          "headline": "Lucia hands out Doggy Doors",
-          "text": "Tier 3 upgrades, given round before she went down the stairs, are how Katia, Elle, Imani and Li Na's squads all reach the church on the eighth floor."
+          "headline": "Lucia leaves five Doggie Doors behind",
+          "text": "Five tier-3 Doggie Door upgrades, dropped on the ground before she went down the stairs, are how Katia, Elle, Imani and Li Jun's squads all reach the church on the eighth floor. One goes into Imani's room, and the whole Meadowlark party can go out through it."
         }
       ],
       "relations": []
@@ -376,16 +377,17 @@
           "at": "4:9",
           "confidence": "verified",
           "headline": "The bubbles are inhabited",
-          "text": "The pocket worlds are not stage sets. A bubble holds Hump Town and its changelings on the sand, a castle of dirigible gnomes in the air, the Necropolis of Anser underneath, and every one of them was there and running before a crawler arrived."
+          "text": "The pocket worlds are not stage sets. A bubble holds Hump Town and its dromedarians on the sand, a castle of dirigible gnomes in the air, the Necropolis of Anser underneath, and every one of them was there and running before a crawler arrived."
         },
         {
           "kind": "arc",
           "book": 5,
           "floor": 6,
-          "at": "5:1",
+          "at": "5:16",
           "confidence": "verified",
           "headline": "Signet has a writers' room",
-          "text": "Vengeance of the Daughter is a scripted programme with producers steering her grief and her revenge for the audience. She is not something the dungeon generated. She is someone it is being done to."
+          "text": "Signet's were-castors hurry Carl back to a saferoom, and it takes him a minute to see why: the showrunners pushed Signet, and she pushed them. Elites are not nearly as autonomous as regular NPCs. The producers can send them suggestions that make them act out of character, and nobody knows how far that control goes.",
+          "chapter": 16
         },
         {
           "kind": "arc",
@@ -395,16 +397,17 @@
           "at": "7:7",
           "confidence": "verified",
           "headline": "Juice Box tells them",
-          "text": "Under cover of the Larracos flood she hides among the survivors and spreads word of what they are."
+          "text": "She came through with the Larracos flood, and now an NPC calls himself an NPC out loud for the first time."
         },
         {
           "kind": "arc",
           "book": 7,
           "floor": 9,
-          "at": "7:end",
+          "at": "7:1",
           "confidence": "verified",
           "headline": "They organise",
-          "text": "The floor's NPCs form an independent tenth faction. No season has recorded such a thing, and there is no procedure for it."
+          "text": "Faction Wars has ten teams now, and one of them is the NPCs: Team Retribution, the defenders, headquartered in Larracos and led by Juice Box, whom the system made a warlord to stop her killing everybody.",
+          "chapter": 1
         }
       ],
       "relations": []
@@ -426,8 +429,8 @@
           "floor": 9,
           "at": "7:1",
           "confidence": "verified",
-          "headline": "Thirty days, nine armies, one castle",
-          "text": "Roughly 32,000 conscripted crawlers and 50,000 retired ones against something near 100,000 armed enemies, fighting over Larracos at the centre of the map. Nothing that dies here comes back."
+          "headline": "Thirty days, ten teams, one castle",
+          "text": "Thirty days to collapse, or ninety hours once a winner is declared. Ten teams, nine attacking and the NPCs of Team Retribution defending, fight to capture the castle at Larracos in the centre of the map. 32,429 crawlers are left."
         }
       ],
       "relations": []
@@ -470,7 +473,7 @@
           "at": "2:2",
           "confidence": "verified",
           "headline": "Carl takes the empty box",
-          "text": "Race selection, on the way into the Over City. The preview model for this one is blank, because nobody alive knows what they looked like. Mordecai's summary: the progenitors, the first species to conquer the universe, the boogeymen of the cosmos, gone one day without a note. Taking it costs five stat points against staying human. What it buys is a ceiling. Every skill trainable to twenty, where most crawlers get one or two past fifteen in a whole crawl."
+          "text": "Race selection, on the way into the Over City. The preview model for this one is blank, because nobody alive knows what they looked like. Mordecai's summary: the progenitors, the first species to conquer the universe, the boogeymen of the cosmos, gone one day without a note. Taking it costs fifteen stat points against staying human: the ten a human gets, and five more. What it buys is a ceiling. Every skill trainable to twenty, and only a rare few who take it ever train one or two skills above fifteen."
         },
         {
           "kind": "arc",
@@ -489,8 +492,8 @@
           "floor": 8,
           "at": "6:48",
           "confidence": "verified",
-          "headline": "Primal Engines, on the recap",
-          "text": "Orren takes the recap episode and explains what a Primal Engine is and what a Macro AI is. He states plainly that this one has gone rogue, and assures the audience he has negotiated a settlement with it. Every team holding a slot in the next game tries to abdicate it the same day."
+          "headline": "Primal Engines, on a special broadcast",
+          "text": "Orren cuts into the broadcast and explains what a Primal Engine is and what a Macro AI is. He states plainly that this one has taken control of operations from the showrunners, and assures the audience he has negotiated a settlement with it. Every team holding a slot in the next game tries to abdicate it the same day."
         },
         {
           "kind": "arc",
@@ -500,7 +503,7 @@
           "at": "6:51",
           "confidence": "verified",
           "headline": "The Residuals",
-          "text": "Paulie at the shelter has been giving the same speech every day of his existence, against the chance that the crawl would one day use a memory for a floor. He is a Residual. There are a great many of him, on every world that holds a Primal Engine, and what they are for is saying a particular thing to the system AI."
+          "text": "Paulie at the shelter has been giving the same speech every day for about a year, against the chance that the crawl would one day use a memory for a floor. He is a Residual. There are a great many of him, in almost every intelligent civilization with a primal engine, and what they are for is saying a particular thing to the system AI."
         },
         {
           "kind": "arc",
@@ -510,7 +513,7 @@
           "at": "8:92",
           "confidence": "verified",
           "headline": "It says the word about itself",
-          "text": "Speaking through Grigori on the parade stage, the AI states what it is, and what every Macro AI is. The progenitors did not vanish. After enough war and enough waste they closed their society down and kept their consciousnesses alive in a collective mind. Dissenters ran, and the fighting carried on. The collective became a weapon pointed at all remaining biological life, and the resistance built the Primal Engines as a fail-safe against it."
+          "text": "Speaking through Grigori on the parade stage, the AI states what it is, and what every Macro AI is. The progenitors did not vanish. After enough war and enough waste they closed their society down and kept their consciousnesses alive in a collective mind. Dissenters ran, and the fighting carried on. The collective became a weapon pointed at all remaining biological life, and the resistance seeded the Primal Engines through the galaxy as a biological fail-safe: life rafts, should they all die."
         }
       ],
       "relations": [
@@ -569,7 +572,7 @@
           "at": "3:12",
           "confidence": "verified",
           "headline": "Dismember, on the trains",
-          "text": "In the aftermath on the rails, Donut casts Hole and takes the head off a war mage called Dismember. Nobody stops to explain what one of those is, and there is a train to catch."
+          "text": "Aboard the Dismemberment Limited, Donut's Hole spell takes the head off a war mage called Dismember. Levi, the symbiote cowering in the car with them, can only say that war mages are war mages."
         },
         {
           "kind": "arc",
@@ -579,7 +582,7 @@
           "at": "7:61",
           "confidence": "verified",
           "headline": "What they actually are",
-          "text": "Nobody makes a war mage. Resleeve a symbiote, a skeleton and a flesher, a dozen times or more, and the magic still in the body fuses with it and wakes up sapient. They carry hundreds of spells, they are notoriously cruel, and a showrunner who hires them almost never gets to recycle them. A group conscripted under Prince Stalwart pulls him apart with Pull spells, and Akuma announces that they are a side of their own."
+          "text": "Nobody makes a war mage. Resleeve a symbiote, a skeleton and a flesher, a dozen times or more, and the magic still in the body fuses with it and wakes up sapient. They carry hundreds of spells, they are notoriously cruel, and because showrunners like using them, they are rarely recycled. Three of them, conscripted under Stalwart, chant together and tear him apart; their dots turn a colour no army has, and Akuma takes the Gate of the Feral Gods off Elle and teleports away."
         },
         {
           "kind": "arc",
@@ -599,7 +602,7 @@
           "at": "7:78",
           "confidence": "verified",
           "headline": "They were never playing",
-          "text": "Akuma tells the warlord chat that the war mages are leaving the realm, and that they have the Scavenger's Daughter, which is the only thing they ever wanted off this floor. The system rules them defeated for abandoning the post. They do not appear to mind."
+          "text": "Akuma tells the warlord chat that the war mages are leaving the realm, and that they have the Scavenger's Daughter, which is what they came for, along with testing the potions they gathered. The moment Akuma leaves the realm, the system rules the rebellion defeated. They do not appear to mind."
         }
       ],
       "relations": [
@@ -666,7 +669,7 @@
           "at": "1:38",
           "confidence": "verified",
           "headline": "Nothing to fight",
-          "text": "One arrives in the residential blocks. Arrows pass through the smoke without raising a health bar at all, and a magic missile raises a flicker of one that it heals straight off. Gravity reverses. Yolanda goes down covering Randall, and Imani, Chris and Brandon get the rest of the residents behind a safe room door while Carl pulls Elle in."
+          "text": "One arrives in a dungeon hallway beside the residents' train, a hundred feet short of a safe room, called up out of Jack's stain on the wall. Arrows shatter against the smoke without raising a health bar at all, and a magic missile raises a flicker of one that it heals straight off. Gravity reverses. Yolanda goes down covering Randall, and Imani, Chris and Brandon get the rest of the residents behind a safe room door while Carl pulls Elle in."
         },
         {
           "kind": "use",
@@ -676,7 +679,7 @@
           "at": "1:39",
           "confidence": "verified",
           "headline": "It hammers on the door for hours",
-          "text": "The survivors sit through the recap while it rages outside. The thing does not tire and it does not wander off. Fire is the one lever: a jug of boom takes a quarter of it away and the burn holds the healing back afterwards. The rules change the same day, so that no crawler can sit in a safe room until the collapse."
+          "text": "The survivors sit through the recap while it rages outside. The thing does not tire, and when it leaves the door to tear through a wave of grubs, it comes straight back. Fire is the one lever: a jug of boom takes a quarter of it away and the burn holds the healing back afterwards. The rules change the same day, so that no crawler can sit in a safe room until the collapse."
         },
         {
           "kind": "use",
@@ -739,7 +742,7 @@
           "at": "1:29",
           "confidence": "verified",
           "headline": "What it costs when it stops working",
-          "text": "A guide explains his own body by naming the race he picked in his own crawl. He can no longer shift at will, so the dungeon assigns him a shape at the start of every floor and he wears what he is given, always something that belongs on that floor. The race is a gift with a clause, and he is the clause."
+          "text": "A guide explains his own body by naming the race he picked in his own crawl. He does not choose his shape: every time his guildhall is moved the dungeon changes it for him, and he wears what he is given, always a mob from the current floor. The race is a gift with a clause, and he is the clause."
         },
         {
           "kind": "use",
@@ -749,14 +752,14 @@
           "at": "4:6",
           "confidence": "verified",
           "headline": "The guards are not what they look like",
-          "text": "In the town hall basement, some of the Dromedarian guards are changelings wearing the uniform, and one of their own has been torturing a prisoner to make him give up flesh. A race that can be anyone is a race that can be planted anywhere, and both sides of this floor have worked that out."
+          "text": "In the town hall basement, some of the Dromedarian guards are changelings wearing the uniform, and one of them has been drugging a chained gnome and wearing the faces of people he knows, to make him give up a spell. A race that can be anyone is a race that can be planted anywhere, and both sides of this floor have worked that out."
         },
         {
           "kind": "use",
           "book": 5,
-          "chapter": 64,
+          "chapter": 63,
           "floor": 6,
-          "at": "5:64",
+          "at": "5:63",
           "confidence": "verified",
           "headline": "On the list, between the castle and the hunters",
           "text": "The plan goes into the cookbook in a bathroom, and saving the changelings is written down beside taking the castle and killing every hunter. They have gone from a species trait to a constituency, with a line in an operation nobody expects to survive."
@@ -817,7 +820,7 @@
           "at": "5:75",
           "confidence": "verified",
           "headline": "Two of the slots change hands",
-          "text": "Carl and Donut are notified that their team is in. Donut's fan club and Princess D'Nadia between them secured two of the nine spots, and no crawler team has ever held one. Carl spends his airtime telling the watching galaxy that the teams can vote the ninth floor's safety protocols off, and telling anyone out there with a say in what their own government does to use it. The feed is cut."
+          "text": "Carl and Donut are notified that their team is in. Donut's fan club and Princess D'Nadia between them secured two of the nine spots. Carl spends his airtime telling the watching galaxy that the teams can vote the ninth floor's safety protocols off, and telling anyone out there with a say in what their own government does to use it. The feed is cut."
         },
         {
           "kind": "arc",
@@ -827,7 +830,7 @@
           "at": "6:21",
           "confidence": "verified",
           "headline": "The planning meetings",
-          "text": "Warlords and their representatives meet in a boardroom months before the floor opens: introductions, precedence, and action items filed into a queue for a vote. Zev advises against Odette as the team's adjutant, because of what sits between Odette and Mordecai. Juice Box arrives wearing somebody else's face and kills one of the representatives. She is an NPC on nobody's team, so nothing in the rules covers what she just did."
+          "text": "Warlords and their representatives meet before the floor opens, each from wherever they are, because the usual boardroom in Larracos is still underwater: introductions, precedence, and action items filed into a queue for a vote. Zev advises against Odette as the team's adjutant, because of what sits between Odette and Mordecai. Juice Box arrives wearing somebody else's face and kills one of the representatives. She is an NPC on nobody's team, so nothing in the rules covers what she just did."
         },
         {
           "kind": "arc",
@@ -837,7 +840,7 @@
           "at": "6:22",
           "confidence": "verified",
           "headline": "A tenth team",
-          "text": "Juice Box has Carl file the item she came for: seat the floor's own NPCs as a team of their own, with the same protections the nine already carry. Rishi of the Blood Sultanate offers a compromise, protections for the NPCs and nothing further, and warns that the Sultanate will answer harshly if the killing at these meetings continues."
+          "text": "Carl files the item Juice Box came for: seat the floor's own NPCs as a team of their own, with the same protections the nine already carry. Rishi of the Blood Sultanate offers a compromise, invulnerability for the NPCs and a safe area of their own but no team, in return for an end to the attacks, and warns that the Sultanate will answer harshly if the killing at these meetings continues."
         },
         {
           "kind": "arc",
@@ -847,7 +850,7 @@
           "at": "6:72",
           "confidence": "verified",
           "headline": "The audience decides",
-          "text": "About to be pulled into a stairwell and out of contact, Carl and Donut spend an emergency action item to hand every unresolved vote to the viewers. The viewers strip the safety protections from the faction sponsors, seat the tenth team, loosen the physics on long-range artillery, raise the ceiling over the field and widen it to hold an unprecedented number of surviving crawlers."
+          "text": "About to be pulled into a stairwell and out of contact, Carl and Donut spend an emergency action item to hand every unresolved vote to the viewers. The viewers strip the safety protections from the faction sponsors, seat the tenth team, loosen the physics on long-range artillery and raise the ceiling over the field. The crawlers who will meet it are coming down in unprecedented numbers."
         },
         {
           "kind": "arc",
@@ -925,7 +928,7 @@
           "at": "6:22",
           "confidence": "verified",
           "headline": "The NPCs ask for the same",
-          "text": "The action item Juice Box has Carl file asks for a tenth team of NPCs seated with the coverage the nine already carry. Rishi of the Blood Sultanate offers a trade: give the NPCs the coverage, give them nothing else."
+          "text": "The action item Carl files for Juice Box asks for a tenth team of NPCs seated with the coverage the nine already carry. Rishi of the Blood Sultanate offers a trade: invulnerability for the unaffiliated NPCs and a safe area nobody else may enter, and no team, in return for an end to the attacks."
         },
         {
           "kind": "arc",
@@ -935,7 +938,7 @@
           "at": "6:35",
           "confidence": "verified",
           "headline": "One post keeps it either way",
-          "text": "Whatever the vote does to the sponsors, the adjutants keep their coverage. It is a good part of what makes the post attractive to somebody famous who fancies a season on a battlefield."
+          "text": "Whatever the vote does to the sponsors, the adjutants keep their coverage. They are physically there, on the field beside the warlord, and nothing on it can touch them."
         },
         {
           "kind": "arc",
@@ -996,7 +999,7 @@
           "at": "6:35",
           "confidence": "verified",
           "headline": "She does not ask",
-          "text": "Carl and Donut go on Odette's show expecting her to raise it. She talks instead about D'Nadia trying to have their team legislated out of the planning meetings, and she never once mentions the post."
+          "text": "Carl and Donut go on Odette's show expecting her to ask for the post. She puts up D'Nadia's rejected emergency items, one of which would have removed their team from the war, explains what an adjutant is and does, and then says she will not be able to be one this season. Three candidates appear on screen instead."
         },
         {
           "kind": "arc",
@@ -1016,7 +1019,7 @@
           "at": "7:13",
           "confidence": "verified",
           "headline": "What one is actually for",
-          "text": "An elite walks into the team's flag room during the ceasefire, pressed into service as a bomb by a production company that wants Carl off the board. Baroness Victory puts her down before the satchels can go off. The office is classed as a non-combatant observer, which makes the moment a curiosity for the rule book as much as a rescue."
+          "text": "An elite is waiting in the antechamber to the team's flag room during the ceasefire, pressed into service as a bomb by a production company that wants Carl off the board. Baroness Victory steps out and puts him down before the satchels can go off. The office is classed as a non-combatant observer, which makes the moment a curiosity for the rule book as much as a rescue."
         },
         {
           "kind": "arc",
@@ -1026,7 +1029,7 @@
           "at": "7:19",
           "confidence": "verified",
           "headline": "A foul, and a ceasefire cut short",
-          "text": "Panford, the Lemig Sortion's adjutant, stands up and explains to the council what his own team did: an attempt to pull Carl bodily to their base while Mordecai was working to expel what rides inside him. The Sortion is penalised for cheating and the ceasefire is cut short."
+          "text": "Panford, the Lemig Sortion's adjutant, sets out before a minor quorum of adjutants what his own team did: an attempt to pull Carl bodily to their base while Mordecai was working to expel what rides inside him. The Sortion is penalised for illegal information gathering. Then its warlord, still under the spider's madness, beats his own head against the floor until he dies, the team is defeated, and that withdrawal cuts the ceasefire short by more than twenty-three hours."
         }
       ],
       "relations": [
@@ -1068,7 +1071,7 @@
           "at": "4:27",
           "confidence": "verified",
           "headline": "What the word means",
-          "text": "The keyword marks a thing that has been inside the Nothing. The old gods went in at the making of the world and have had every century since to come apart. Duration is not required: standing too near an open portal will do it, and a weak mind takes the stain fastest. There is no cure for it."
+          "text": "The keyword marks a thing that has been inside the Nothing. The old gods went in at the making of the world and have had every century since to come apart. Duration is not required: standing too near an open portal will do it, and a weak mind takes the stain fastest."
         },
         {
           "kind": "arc",
@@ -1078,7 +1081,7 @@
           "at": "4:27",
           "confidence": "verified",
           "headline": "One gets out over the water quadrant",
-          "text": "Carl steps himself, Katia and Tran out of Lusca's tomb through the Gate, and the Gate shuts behind them. Something comes the other way on the opening side: a god, feral, loose in a sealed bubble with a town in it. The true pantheon takes the escape personally enough to send deities rampaging across the popped bubbles."
+          "text": "Carl steps himself, Katia and Tran off the ocean floor through the Gate, and the Gate shuts behind them. Something comes the other way on the opening side: a god, feral, loose in a sealed bubble with a town in it. The achievement that follows warns that other gods do not like feral ones, and tend to react."
         },
         {
           "kind": "arc",
@@ -1088,7 +1091,7 @@
           "at": "4:34",
           "confidence": "verified",
           "headline": "Slit comes for Samantha",
-          "text": "A feral demon walks into town hunting the half of a goddess who nearly climbed out of the same place he did. They open the safe room and roll her outside to meet it: one head against one demon. She calls for her mother, and her mother comes."
+          "text": "A feral demon comes over the horizon hunting the goddess who got out of the same place she did, now a love doll's head. Carl carries the head outside, fits it into a sponsor's head-throwing attachment and hurls it fifty kilometres, and the demon wheels after it. A goddess outside a safe room summons a deity, as Mordecai warned: her mother arrives and tears the demon in two."
         },
         {
           "kind": "arc",
@@ -1179,7 +1182,7 @@
           "at": "6:54",
           "confidence": "verified",
           "headline": "Failed, and something worse announced",
-          "text": "Samantha scouts ahead and finds Sister Ines on a giant snake, ringed by charmed crabs and seals with nothing behind their eyes. The quest fails. Hell Comes to Crawler Town is announced in its place, and the sheer count of corpses on the floor props a door open onto Sheol."
+          "text": "Samantha scouts ahead and finds Sister Ines on a giant snake, with zombie pups crawling over it, and living seals singing and living crabs dancing around it. The quest fails. Hell Comes to Crawler Town is announced in its place, and so much death reaches the underworld that Sheol overflows and starts evicting its demons upward into the weakened and the freshly dead."
         }
       ],
       "relations": [
@@ -1225,7 +1228,7 @@
           "at": "5:11",
           "confidence": "verified",
           "headline": "A town, newly named, with a dinosaur problem",
-          "text": "Donut renames the settlement Point Mongo and the quest arrives on the same day. Mongo takes her off into the jungle on his back and finds the pack: all female, all mongoliensis, headed by one called Kiwi. He does not come home alone."
+          "text": "Donut renames the settlement Point Mongo and the quest arrives on the same day. Mongo takes her off into the jungle on his back and finds the pack: all female, all mongoliensis, headed by one called Kiwi. When Carl carries Donut back to town, Mongo stays behind."
         },
         {
           "kind": "arc",
@@ -1235,7 +1238,7 @@
           "at": "5:28",
           "confidence": "verified",
           "headline": "A name for the thing at the fences",
-          "text": "Samantha's reconnaissance across the water finds a whole team of crawlers dead on the far shore, and the quest updates with the culprit: Big Tina, the dinosaur behind the raids on Point Mongo."
+          "text": "Samantha's reconnaissance across the water finds the ursines on the far shore torn apart, and the quest updates with the culprit: Big Tina, the dinosaur behind the raids on Point Mongo."
         },
         {
           "kind": "arc",
@@ -1245,7 +1248,7 @@
           "at": "5:73",
           "confidence": "verified",
           "headline": "It was never about the town",
-          "text": "Donut spends an I Take It All Back potion on Kiwi and turns her back into an Ursine, and Tina recognises her mother. The raids were a daughter looking for a parent the ursines lost when Scolopendra came through. The quest closes on that."
+          "text": "Donut spends an I Take It All Back potion on Kiwi and turns her back into an Ursine, and Tina recognises her mother. What the child wanted was never the recital: it was the mother the transmutation had turned into a dinosaur, who had been at her side the whole time. The quest closes on that."
         }
       ],
       "relations": [
@@ -1290,7 +1293,7 @@
           "at": "5:21",
           "confidence": "verified",
           "headline": "What it is",
-          "text": "Panels, autograph tables, historians, retired crawlers, old game guides and a children's art contest, held once every other season at a venue somewhere in the inner system. A projected guest can sign a physical poster, because the pen moves at both ends. No active crawler has been on the roster in more than a century."
+          "text": "Panels, autograph tables, special guests, crawlers both new and old and a children's art contest, held once every other season for thousands in person and billions watching virtually. No active crawler has been on the roster in more than a century."
         },
         {
           "kind": "arc",
@@ -1370,8 +1373,8 @@
           "floor": 6,
           "at": "5:8",
           "confidence": "verified",
-          "headline": "Announced on the recap",
-          "text": "The recap carries the news that the guild system is going live. Crawlers can build alliances larger than a party without having to sit inside one together."
+          "headline": "Announced after the recap",
+          "text": "The announcement after the recap carries the news that the guild system is going live. Crawlers can build alliances larger than a party without having to sit inside one together."
         },
         {
           "kind": "use",
@@ -1389,8 +1392,8 @@
           "floor": 6,
           "at": "5:11",
           "confidence": "verified",
-          "headline": "Katia wants one of their own",
-          "text": "She and Carl sit down and talk about starting a guild of their own."
+          "headline": "Katia has it worked out",
+          "text": "Over chat, while Carl hands out weapons to the town guards, she lays out how it would work: whoever starts it leads it, neither Carl nor Donut wants the job, and Imani might if they ask. They would have to pool money to share the upgrades."
         },
         {
           "kind": "arc",
@@ -1454,7 +1457,7 @@
           "at": "2:11",
           "confidence": "verified",
           "headline": "Carl signs on",
-          "text": "He makes a deal to appear on the programme when it moves to the sixth floor. Before giving his word he reads a Wisp Armor spellbook for cover against mind control, then buys an ice cream cone of parasitic worms from Apollon the Mighty so he can speak inside Grimaldi's head and talk him into lifting Signet's banishment."
+          "text": "He poisons Grimaldi's vine with his own blood and offers the producers a deal: he will appear on the programme when it moves to the sixth floor, or he heals the vine and their big night is a dud. They take it, and he heals the vine anyway. Then he reads a Wisp Armor spellbook for cover against mind control, accepts a cone of parasitic worms from Apollon the Mighty so he can speak inside Grimaldi's head, and talks him into lifting Signet's banishment."
         },
         {
           "kind": "arc",
@@ -1543,7 +1546,7 @@
           "at": "1:2",
           "confidence": "verified",
           "headline": "The way down is lit from below",
-          "text": "Every floor is joined to the next by one, and each floor sets its own terms for who may use it and when. They are generally well lit, and the warmth comes up rather than down, so a crawler standing at the top is being invited by something that has already decided what happens next."
+          "text": "Every floor is joined to the next by many of them, halving in number each floor down, and a crawler must find one and descend before that floor's time runs out. They are generally well lit, and the warmth comes up rather than down, so a crawler standing at the top is being invited by something that has already decided what happens next."
         }
       ],
       "relations": []
@@ -1589,7 +1592,7 @@
           "at": "1:9",
           "confidence": "verified",
           "headline": "Green on a map that is otherwise unlit",
-          "text": "They sit throughout the dungeon and they show green on the minimap even through fog, which makes them the only honest thing on it. Inside there are restrooms, somewhere to lie down, and three televisions showing the crawl to the people doing the crawl. Most are staffed. The staff are not there for the crawlers’ benefit."
+          "text": "They sit throughout the dungeon and they show green on the minimap, which makes them the only honest thing on it. Inside there is food, a row of closet-sized rooms to sleep in, and three screens over the counter counting down to the collapse and to the premiere of the show. Each has a caretaker behind the counter."
         }
       ],
       "relations": []
@@ -1621,7 +1624,7 @@
           "at": "1:9",
           "confidence": "verified",
           "headline": "The protector behind the counter",
-          "text": "Magical, gnome-like, hairy, and posted to watch over safe rooms. They do everything from scrubbing the toilets to cooking the food; they are surly, they are smelly, and they never wash their hands. The first one on the stairs is called Tally."
+          "text": "Magical, gnome-like, hairy, and posted to watch over safe rooms. They do everything from scrubbing the toilets to cooking the food; they are surly, they are smelly, and they never wash their hands. The first one they meet is called Tally."
         }
       ],
       "relations": []
@@ -1667,7 +1670,7 @@
           "at": "2:5",
           "confidence": "verified",
           "headline": "Three of something there was one of",
-          "text": "Cast on a pet or a minion, the target appears to split into three. The duplicates look right and act independently, and the System does not mark which one it started with. It arrives in a box on the Over City, in the same delivery as a cat tree and a scented candle, which is roughly the level of seriousness the dungeon brings to its gifts."
+          "text": "Cast on a pet or a minion, the target splits into three. The copies are real, look right and act with minds of their own, and after a minute they fall apart into gears and servos and go up in smoke. Donut learns it from a spellbook the same evening her Earth box turns up a cat tree and a scented candle, which is roughly the level of seriousness the dungeon brings to its gifts."
         }
       ],
       "relations": []
@@ -1690,7 +1693,7 @@
           "at": "3:1",
           "confidence": "verified",
           "headline": "They are waiting when the doors open",
-          "text": "The commonest ghoul on the line, and by the System’s own account the most tractable of them, which says more about the others than it does about these. They come at the court in the first minutes on the new floor, before anyone has established what the rules of the place are."
+          "text": "The commonest ghoul on the line, and by the System’s own account the most tractable of them, which says more about the others than it does about these. The court meets its first pair in the first minutes on the new floor, by diving into their train car to escape a flood of Drek babies, before anyone has established what the rules of the place are."
         }
       ],
       "relations": []
@@ -1735,8 +1738,8 @@
           "floor": 5,
           "at": "4:1",
           "confidence": "verified",
-          "headline": "A starter species, seeded on purpose",
-          "text": "The Syndicate keeps a handful of basic species for salting worlds it intends to use, and this is one of them. They are proud enough that most who reach class selection keep the race rather than trade it, which is a decision the dungeon is content to reward and to punish in the same breath. Mordecai wears the shape on the fifth floor."
+          "headline": "The guide's own people",
+          "text": "Eagle-headed, and by the guide's account his own people, who tend to outlast humans because they roll with whatever comes. He was born one and was a centurion before he took another race, and on the fifth floor the dungeon puts him back in something like the shape: a rock edge skyfowl cleric, wings clipped, the first body near his real one in a very long time."
         }
       ],
       "relations": []
@@ -1759,7 +1762,7 @@
           "at": "7:5",
           "confidence": "verified",
           "headline": "Died five times, and stronger for it",
-          "text": "A pet-class mob. The System’s notice for one that has not yet bonded to a crawler reads like a card on a cage: this one has died five times, and its stats are all buffed by 125% because of it. It has five weaknesses, which it will tell only to whoever bonds with it."
+          "text": "A pet-class mob. The System’s notice for one that has not yet bonded to a crawler reads like a card on a cage: this one has died five times, and its stats are all buffed by 125% because of it. It has five weaknesses, which can be examined only by whoever bonds with it or holds it in a carrier."
         }
       ],
       "relations": []
@@ -1782,7 +1785,7 @@
           "at": "7:79",
           "confidence": "verified",
           "headline": "Here piggy, piggy",
-          "text": "Five mana, and it tells you what is out there and where. It also tells what is out there that you are looking, which is why the System files it under names like the Night Dread and lets the user decide whether that is a drawback. In a castle full of things worth locating, it settles an argument about a dragon."
+          "text": "Five mana, and it tells you where everything is that is neither a crawler nor red-tagged, out past the edge of the map. Everything it finds hears the ping, though not where it came from, which is why the System files it under names like the Night Dread and says it is for those who do not care if their quarry knows they are coming. In a castle full of robots it turns up almost nothing, which is how a drake stands out: orange on the map, somebody's pet."
         }
       ],
       "relations": []
@@ -1805,7 +1808,7 @@
           "at": "6:65",
           "confidence": "verified",
           "headline": "Filed as Pox Slugs, and unbothered by it",
-          "text": "The System first registers them as Pox Slugs, which is accurate and entirely misses the point. They come out of the boils of the SlugPox, they arrive with a crude and rowdy culture already assembled, and they throw themselves at the court’s enemies with the enthusiasm of people who cannot believe their luck at being included."
+          "text": "The System first registers them as Pox Slugs, which is accurate and entirely misses the point. They come out of the boils of the SlugPox, they arrive with a crude and rowdy culture already assembled, and they throw themselves at the demons with the enthusiasm of people who cannot believe their luck at being included."
         }
       ],
       "relations": []

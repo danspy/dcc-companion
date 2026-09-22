@@ -1481,10 +1481,12 @@ corrected — Katia's race and class (she is a **Doppelgänger / Monster Truck D
 Changeling), Signet's book (**5**, not 4), the Crown of the Sepsis Whore's acquisition (**book 1**,
 not 6), and the floor on which Carl and Donut pick classes (**3**, not 1).
 
-**Even the Fandom wiki files events under the wrong book.** Its *Gate of the Feral Gods* page puts
-the Larracos flood, the Syndicate lawsuit and Juice Box — all book 7 — under a "Book 4" heading.
-Copying a wiki section's heading as a reveal tag would have leaked three books early. Read what the
-prose actually describes, not the heading above it.
+**Neither the wiki's headings nor this file's own claims are the book.** This paragraph used to say
+the Fandom wiki's *Gate of the Feral Gods* page misfiled the Larracos flood, the Syndicate lawsuit and
+Juice Box under "Book 4" when they were book 7. The edition says the opposite: the lawsuit is 4:28,
+the flood through the faction market 4:34, and floor 9's recap had been carrying all three as ninth-floor
+events on the strength of that note. Read what the text at the chapter actually says, not a heading
+above it and not a remembered correction.
 
 ### Every sentence is read against its own page
 
@@ -1720,11 +1722,18 @@ currently has a dev server running. It is not this deployment, and only one proj
   **read against the edition's text at its own chapter**, not "a wiki summary agreed".
 - **The 95 LATE anchors** (`npm run content:anchors`): entities the book names before their tag.
   Each needs a first tagline written for the passing mention before its tag can move earlier.
-- **A read for truth of the `verified` beats.** The screens below catch a name, a number or a
-  vocabulary out of place; they cannot catch a sentence made of early words that is simply wrong.
-  The draft pass found those at a rate of about one in three (Sledgey, a habitat company, a Walkman,
-  a daughter the conductor "has not been told" about when he has), so the verified set is not clean
-  merely because it was checked against the wiki.
+- **Every beat has now been read against its own chapter** — all 692, in two passes. The second
+  half changed far more than the first (about 280 of 432, against one in six), and almost none of it
+  was catchable by a screen: who did what (Katia opens the Gate, not Carl; Donut picks Hedy, not
+  Carl), the opposite of the book (Mordecai's verdict on Zockau; Growler Gary's forgiving avatar),
+  detail from nowhere (a family shop, a vote that widens the
+  field), and floor 9's recap carrying three book-4 events. **Taglines have not had this pass yet**,
+  and they are summaries, so they will be worse.
+- Anchors the read turned up, for the LATE queue: Larracos (named 3:9), Sheol (2:24), Scolopendra and
+  Tish (4:21), Ping (4:32), Changeling (1:3), Miriam Dom (3:3), Epitome Tagg (6:21), Team Retribution (7:1).
+- Coverage gaps it noticed: the Gate in book 7 (waiting in a mailbox at 7:1, taken from Elle by Akuma
+  at 7:61); `no-respawns` as a name, which 7:8 contradicts for outworlders; Rishi's death is only
+  confirmed at 8:10 while his fate beat sits at 7:58.
 - The Nothing is the one item with no `description`: no System text for it exists on the wiki
 - Books 3, 6 and 8 have the thinnest entity coverage relative to their chapter counts
 - Deeper coverage: more items, per-floor mechanics, quotes with chapter anchors

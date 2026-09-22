@@ -29,7 +29,7 @@
           "at": "1:2",
           "confidence": "verified",
           "headline": "The foreclosure",
-          "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once."
+          "text": "It claims Earth under Syndicate law and turns the planet into a mining claim. The dungeon is the legal cover and the revenue at once."
         },
         {
           "kind": "arc",
@@ -38,7 +38,7 @@
           "at": "2:end",
           "confidence": "verified",
           "headline": "It burns a veto rather than pay",
-          "text": "Eighty-three Celestial boxes are owed. Borant voids them with its one seasonal veto and is still liable for the one that was already open, which lands it in front of a Syndicate court. A production company that cheap has seams worth looking for."
+          "text": "Eighty-three Celestial boxes are owed. Borant appeals, a Syndicate court overrules it, and it burns its one seasonal veto to void the prizes anyway, which has never been done this early. It is still liable for the one box that was opened before the appeal. A production company that cheap has seams worth looking for."
         }
       ],
       "relations": [
@@ -77,7 +77,7 @@
           "at": "4:28",
           "confidence": "verified",
           "headline": "Seven factions lose in court",
-          "text": "They sue to strip the Gate of the Feral Gods from Carl and are dismissed for lack of standing. He collects seven Fight the Power achievements, stock certificates, and photographs of the plaintiffs' mothers."
+          "text": "Seven factions sue to take the Gate of the Feral Gods from Carl, naming him and the AI as co-defendants, and the Syndicate Court finds for the defence. He collects seven Fight the Power achievements, stock certificates, and photographs of the plaintiffs' mothers."
         }
       ],
       "relations": []
@@ -137,7 +137,7 @@
           "at": "1:26",
           "confidence": "verified",
           "headline": "The Ball of Swine",
-          "text": "Brandon, Chris, Yolanda, Imani, Carl, Donut and Agatha take it down out of the redoubt."
+          "text": "Brandon, Chris, Yolanda, Imani, Carl and Donut take it down out of the redoubt. Agatha is in the room for it, bleeding from the head and doing nothing, which still counts for experience."
         }
       ],
       "relations": []
@@ -171,7 +171,7 @@
           "at": "2:21",
           "confidence": "verified",
           "headline": "They carry her as far as they can",
-          "text": "A neighbourhood boss and a borough boss with Katia and a friend of hers in tow, until class selection splits everyone up and the levels stop adding up."
+          "text": "A neighbourhood boss and a borough boss with Katia in tow, until the third floor scatters everyone on arrival and she is too far from the rest of them to share in the experience."
         }
       ],
       "relations": []
@@ -236,7 +236,7 @@
           "at": "1:44",
           "confidence": "verified",
           "headline": "Wiped",
-          "text": "Another recap carries the news, and the remaining-crawler count drops below a million in the same broadcast."
+          "text": "Another recap carries the news: a city boss kills every one of them except a single man locked outside the boss room, and the remaining-crawler count drops below a million in the same broadcast."
         }
       ],
       "relations": []
@@ -259,7 +259,7 @@
           "at": "7:11",
           "confidence": "verified",
           "headline": "They are already there when he walks in",
-          "text": "Rosetta, Tipid, Justice Light and fifty thousand others have signed on. Carl gets emotional. Nobody has ever raised a force out of the show's own survivors before."
+          "text": "Rosetta, Tipid, Justice Light and fifty thousand others have signed on. Carl gets emotional."
         },
         {
           "kind": "use",
@@ -269,7 +269,7 @@
           "at": "7:12",
           "confidence": "verified",
           "headline": "Digging in",
-          "text": "NPCs, mercenaries and former crawlers build the defences together, which is three categories of person the format keeps apart on purpose."
+          "text": "NPCs and former crawlers build the defences together: the changelings and the flesh golems started the stronghold, and a few thousand of the newcomers chose the Fortification Engineer race so they could build fast and level while they do it."
         }
       ],
       "relations": []
@@ -315,7 +315,7 @@
           "at": "5:22",
           "confidence": "verified",
           "headline": "Elves at the door",
-          "text": "The elves come at the position in force. Carl uses Samantha to deliver missiles, delivers a villain's soliloquy while he is at it, and puts down another of their hunters."
+          "text": "Two or three of the elves get a catapult set up and walk gas-rock artillery across the town. Carl uses Samantha to deliver missiles, delivers a villain's soliloquy while he is at it, and puts down another of their hunters."
         },
         {
           "kind": "arc",
@@ -325,7 +325,7 @@
           "at": "7:1",
           "confidence": "verified",
           "headline": "They buy a storyline instead of fighting for one",
-          "text": "Quasar has the warning ready before the sixty-hour ceasefire is out. The Dream have bought out the Vengeance of the Daughter and are pressing for fulfilment of the guaranteed third season written into it. An entertainment holding, aimed at a crawler, on a floor where the weapons are supposed to be swords."
+          "text": "Quasar has the warning ready before the sixty-hour ceasefire is out. The Dream have bought out the Vengeance of the Daughter and are pressing for fulfilment of the guaranteed third season written into it. An entertainment company, bought and aimed at a crawler."
         },
         {
           "kind": "arc",
@@ -483,7 +483,7 @@
           "at": "2:19",
           "confidence": "verified",
           "headline": "Carl plants a seed on Danger Zone",
-          "text": "Two sentences of provocation on a chat show, and the Skull Empire answers them. It kills Manasa, which was a mistake, and the Valtay answer that in turn by destroying Prince Stalwart's yacht with his mother and the Maestro aboard. Nobody in the studio raises their voice. Three funerals come of it anyway."
+          "text": "A few minutes of provocation on a chat show, and the Skull Empire answers them with a pulse from Prince Stalwart's yacht. It hits Manasa's trailer instead of Carl's, which was a mistake, and the Valtay answer that in turn by destroying the yacht, with his mother and the Maestro rumoured to be aboard. Three funerals come of it."
         },
         {
           "kind": "arc",
@@ -503,7 +503,7 @@
           "at": "7:32",
           "confidence": "verified",
           "headline": "King Rust at the wall",
-          "text": "The enemy forces arrive and the Skull Empire army is at the front of them with the king himself leading it. The Posse shuts the saferoom against another run through the Doggy Door. Rust asks for an official parlay."
+          "text": "The enemy's northern army masses at the edge of camp, and riding in at the head of the orcs, in full battle parade regalia, is the king himself. The Posse closes off the saferoom before anybody can drop a bomb through its door. Rust asks for an official parlay."
         },
         {
           "kind": "arc",
@@ -513,7 +513,7 @@
           "at": "7:34",
           "confidence": "verified",
           "headline": "The parlay, and what his daughter told the Syndicate",
-          "text": "Rust explains it himself. Princess Formidable has commandeered one of his own warships and announced that she means to trip the Failsafe by hand. She has also told the Syndicate that the empire builds secret back doors into the security systems it sells. He asks Carl to send her a message on behalf of the people of Earth and trades a retreat for it. Rosetta shoots him as he walks away, and the army comes in regardless."
+          "text": "Rust explains it himself. Princess Formidable has commandeered one of his own warships and announced that she means to trip the Failsafe by hand. She has also told the Syndicate that the empire builds secret back doors into the security systems it sells. He asks Carl to send her a message on behalf of the people of Earth and trades a retreat for it. Rosetta takes his head off with a whip as he rides away, and the army charges."
         },
         {
           "kind": "arc",
@@ -522,8 +522,8 @@
           "floor": 11,
           "at": "8:88",
           "confidence": "verified",
-          "headline": "Zev's aside about Harry Tisch",
-          "text": "While the teams build their floats, Zev mentions in passing that Odette's husband Harry Tisch is a financial criminal, and that he is woven very deeply into the Skull Empire. Empires that sell weapons still have to bank somewhere."
+          "headline": "Zev's aside, and Rosetta on Harry Tisch",
+          "text": "While the teams build their floats, Zev mentions in passing that Odette's husband has bought the rights to every show Donut has ever mentioned, and that it is probably all that is keeping the orcs solvent. Rosetta supplies the rest: his name is Harry Tisch, King Rust vetoed his extradition for tax fraud, and he has been working himself deeper into the empire ever since. Empires that sell weapons still have to bank somewhere."
         }
       ],
       "relations": [
@@ -580,7 +580,7 @@
           "at": "4:8",
           "confidence": "verified",
           "headline": "One root vegetable",
-          "text": "The Valtay Corporation sends a neural enhancer, which is exactly the sort of thing a corporation sends. The Network sends a single Toraline root vegetable. Mordecai has never seen the plant, cannot price it against anything, and cannot say what it is for. The box it arrived in cost more than the gift."
+          "text": "The Valtay Corporation sends a neural enhancer, which is exactly the sort of thing a corporation sends. The Network sends a single Toraline root vegetable. Mordecai has never seen the plant, and can only guess at what it is for: a potion, an explosive, an inside joke. It is listed as very rare and worth about as much as an old shirt."
         },
         {
           "kind": "use",
@@ -589,8 +589,8 @@
           "floor": 6,
           "at": "5:55",
           "confidence": "verified",
-          "headline": "A potion and an unsigned note",
-          "text": "Signet warns that the dryads may call Diwata against the spreading brambles. Then a potion turns up in the benefactor box with a note: Circe has sponsored Diwata, and Donut should drink this. Whoever writes these has a view of the board that nobody standing on it has."
+          "headline": "A potion and a note in code",
+          "text": "Signet warns that the dryads may call Diwata against the spreading brambles. Then a potion turns up in the benefactor box with a note that says only 'Save the toraline', until Carl's Escape Plan shows him the rest: Circe has sponsored Diwata, the potion is for Donut, and it is signed P. Hu. Whoever writes these has a view of the board that nobody standing on it has."
         },
         {
           "kind": "arc",
@@ -610,7 +610,7 @@
           "at": "8:27",
           "confidence": "verified",
           "headline": "They take the orbit",
-          "text": "Lexis has the news and cannot get to the end of it. The Open Intellect Action Network has taken over every ship in orbit, and something nobody can name has appeared on the surface and is standing over the kinder facility. Then a message reaches her, and she stops talking, and she is afraid."
+          "text": "Lexis has the news and cannot get to the end of it. The Open Intellect Action Network has taken over every ship in orbit, and a third party she will not name has appeared at the kinder facility and is protecting it, confused. Then a message reaches her, and she stops talking, and she is afraid."
         }
       ],
       "relations": [
@@ -681,7 +681,7 @@
           "at": "7:17",
           "confidence": "verified",
           "headline": "Carl wakes up in their base",
-          "text": "Eleven hours gone, blood all over him, and everyone in the room around him killed by the thing riding inside him. The Lemig Sortion and the Madness had been arranging something together. It has come apart on top of them."
+          "text": "Eleven hours gone, blood all over him, and most of the room around him killed by the thing riding inside him. The Lemig Sortion and the Madness had been arranging something together. It has come apart on top of them."
         },
         {
           "kind": "arc",
@@ -744,8 +744,8 @@
           "floor": 9,
           "at": "7:21",
           "confidence": "verified",
-          "headline": "Dumplins with the Gurgles",
-          "text": "The southern defence is already holding against the Dream, the Prism and the Nagas when the Reavers make their contribution: a swarm of their pet Dumplins, infected. This is a power that fights by handing you something diseased and standing back."
+          "headline": "Rot stickers with the Gurgles",
+          "text": "The southern defence is already holding against the Dream, the Prism and the Nagas when the Reavers make their contribution: a horde of their own pet rot stickers, raised by hand to trust their masters, then juiced, infected and turned loose. This is a power that fights by handing you something diseased and standing back."
         },
         {
           "kind": "arc",
@@ -755,7 +755,7 @@
           "at": "7:31",
           "confidence": "verified",
           "headline": "Carl gets the background on them",
-          "text": "Tina rampages, the compromised mages are put down, and somewhere in the middle of that Carl finally hears what a Reaver actually is. Several races who replaced themselves with machinery one piece at a time until only the brain was left organic. They wear plastic skin because they have chosen to."
+          "text": "Tina rampages, the compromised mages are put down, and somewhere in the middle of that Carl finally hears what a Reaver actually is. The real ones are all machine, with a little biological brain hidden somewhere inside the shell, and they can reshape themselves out of nanobot-sized parts. Anyone not vat-born who wants the citizenship gives up their biological form to get in the door and works off every upgrade after that."
         },
         {
           "kind": "arc",
@@ -832,7 +832,7 @@
           "at": "7:21",
           "confidence": "verified",
           "headline": "In the southern push",
-          "text": "Carl and Donut join the defence in the south, and the Nagas are in the line of it beside the Dream and the Prism. Cobra-headed, and a Syndicate power in their own right, whatever the Blood Sultanate is used to calling them."
+          "text": "Carl and Donut join the defence in the south, and across the no-man's-land the Nagas hold the line beside the Dream and the Prism. Cobra-headed, and playing under the name of the Blood Sultanate, taken from a bloodier time in their own history."
         },
         {
           "kind": "arc",
@@ -1003,7 +1003,7 @@
           "at": "3:30",
           "confidence": "verified",
           "headline": "The truer translation",
-          "text": "Mordecai puts a name to the thing the Iron Tangle keeps caricaturing. Apothecary is the closer translation, taken from what she can synthesise out of whatever she eats, and the dungeon's version bends the joke into an insult. She is a collective mind and she is spreading, which is a sentence that makes a great many people elsewhere nervous."
+          "text": "Mordecai puts a name to the thing the Iron Tangle keeps caricaturing. Apothecary is the closer translation, taken from her ability to synthesise elements, and the dungeon's version bends the joke into an insult. She is a collective mind and she is spreading, which is a sentence that makes a great many people elsewhere nervous."
         },
         {
           "kind": "use",
@@ -1033,7 +1033,7 @@
           "at": "7:38",
           "confidence": "verified",
           "headline": "The AI asks which side to take",
-          "text": "It wants advice from Orren and from Carl, and teleports Donut in as well, and it asks in a laboured metaphor about relationships: Agatha's branch of the Residuals, or the Apothecary. Donut tells it to stay out of the whole business until it knows whether the boyfriend in prison is good, bad, or has no choice in the matter."
+          "text": "It wants advice from Orren and from Carl, and teleports Donut in as well, and it asks in a laboured metaphor about relationships: a girlfriend who looks like Agatha, and an older woman who has been giving it pointers on getting stronger, both of whom want the same man in prison dead. Donut tells it to find out whether he is really good or really bad before doing anything, and even then to stay out of it unless it has no choice."
         },
         {
           "kind": "arc",
@@ -1043,7 +1043,7 @@
           "at": "8:92",
           "confidence": "verified",
           "headline": "The whole of it, on stage",
-          "text": "The AI gives the account itself. The Primals were individuals once, and their society spread until the warring and the waste made them decide to end it and keep their minds in one collective instead. Those who refused fled. The Apothecary was one who refused. The collective became a weapon aimed at every remaining scrap of biological life, and when it let off the nine-tier attack she stood in front of it, and what grew back afterwards grew back behind her."
+          "text": "The AI gives the account itself. The Primals were individuals once, and their society spread until the warring and the waste made them decide to end it and keep their minds in one collective instead. Those who refused fled. The Apothecary was born near the end, engineered to meld into the whole, and joined the resistance instead. The collective became a weapon aimed at every remaining scrap of biological life, and when it let off the nine-tier attack she stood in front of it, and what grew back afterwards grew back behind her."
         }
       ],
       "relations": [
@@ -1092,7 +1092,7 @@
           "at": "7:61",
           "confidence": "verified",
           "headline": "Stalwart explodes and the Gate goes with them",
-          "text": "Carl and Samantha come out of the Party Planner into Reaver territory. Stalwart teleports to them, and Akuma is beside him. Then Stalwart explodes, and Akuma teleports out holding the Gate of the Feral Gods. The war mages conscripted under Stalwart are nobody's soldiers now. They are a faction, which the rules do not have a slot for."
+          "text": "Carl and Samantha come out of the Party Planner into Reaver territory. Stalwart teleports in beside Elle and the waiting portal with a squad of war mages, Akuma among them. Then the mages around him chant, and Stalwart explodes, and Akuma teleports out holding the Gate of the Feral Gods. The war mages conscripted under Stalwart are nobody's soldiers now. They are a faction, which the rules do not have a slot for."
         },
         {
           "kind": "arc",
@@ -1102,7 +1102,7 @@
           "at": "7:69",
           "confidence": "verified",
           "headline": "Two co-warlords, and a god on a leash",
-          "text": "They hold the Larracos castle, and six hours of holding it takes the floor. Baroness Victory reads out two co-warlords, Akuma and Agatha, and only one of them is pleased about it. The Gate goes onto the Midnight Market and comes back as potions, and the potions conscript Yarilo. Fopsy, adjutant for the Dream, has a theory: that Agatha now thinks the AI is a danger to the Eulogist and wants the ascendency game over so it can be shut down."
+          "text": "They hold the Larracos castle, and six hours of holding it would take the floor. Baroness Victory reads out two co-warlords, Akuma and Agatha, and Akuma is not pleased about it. The Gate goes onto the Midnight Market and comes back as potions, and the potions conscript Yarilo. Fopsy, adjutant for the Dream, has a theory: that Agatha now thinks the AI is a danger to the Eulogist and wants the ascendency game over so it can be shut down."
         },
         {
           "kind": "arc",
@@ -1112,7 +1112,7 @@
           "at": "7:73",
           "confidence": "verified",
           "headline": "Agatha walks off her post",
-          "text": "Warlord Agatha abandons the position without explaining herself to anyone, and full leadership of the rebellion falls to Akuma. He does not appear to mind."
+          "text": "The system deems Warlord Agatha to have abandoned her post, and nobody, the adjutants included, can say why. She is removed, and Akuma is named sole warlord of the rebellion."
         },
         {
           "kind": "fate",
@@ -1122,7 +1122,7 @@
           "at": "7:78",
           "confidence": "verified",
           "headline": "They quit the floor",
-          "text": "Akuma tells the Warlord Chat that the war mages are leaving. They came for the Scavenger's Daughter, they have found her, and they are taking her with them; the castle and the war belong to whoever wants them. Because they walked off a held position, the rebellion is recorded as defeated. He adds one thing on his way out, addressed to Carl and to Donut: Agatha is an enemy to them all."
+          "text": "Akuma tells the Warlord Chat that the war mages are done here. They never wanted the castle; they came to test the potions and to find the Scavenger's Daughter, who was hidden inside it, and she is with them now. First, though, he wants Carl and Donut to kill Agatha, who was forced on the rebellion to get it system access: she is an enemy to them all. Then he leaves the realm, and under this season's rules the rebellion is recorded as defeated."
         }
       ],
       "relations": [
@@ -1173,7 +1173,7 @@
           "at": "5:10",
           "confidence": "verified",
           "headline": "The Hive is hunting you",
-          "text": "A hunting party on the Hunting Grounds, and the message it sends Carl is delivered in person: the Hive is hunting him, there will be nowhere to hide, and his death will not be quick."
+          "text": "A hunting party on the Hunting Grounds, and the message it sends Carl is a note knifed to the saferoom door and signed by Vrah: the Hive is hunting him, there will be nowhere to hide, and his death will not be quick."
         }
       ],
       "relations": [

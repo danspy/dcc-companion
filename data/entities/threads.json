@@ -29,7 +29,7 @@
           "at": "2:25",
           "confidence": "verified",
           "headline": "Destroying it does not help",
-          "text": "The crown is blown apart in the Over City's collapse. The succession survives it."
+          "text": "The crown crumbles to dust in the Over City's collapse, taken by one of the pulses that strip magic from whatever is still being worn. The succession survives it."
         },
         {
           "kind": "arc",
@@ -38,7 +38,7 @@
           "at": "7:1",
           "confidence": "verified",
           "headline": "Due before anyone descends",
-          "text": "The Sultanate holds the ninth floor, and the stairs to the tenth stay shut until the Sultan and his family are dead."
+          "text": "The Blood Sultanate fights on the ninth floor, and neither Donut nor Katia may descend to the tenth until the Sultan and his family are dead."
         }
       ],
       "relations": [
@@ -67,7 +67,7 @@
           "at": "7:78",
           "confidence": "verified",
           "headline": "Akuma says it in the Warlord Chat",
-          "text": "As the War Mages quit the floor with the Scavenger's Daughter, he warns Carl and Donut about her. He does not elaborate."
+          "text": "As the War Mages quit the floor with the Scavenger's Daughter, Akuma warns Carl and Donut about her in the Warlord Chat: she was forced on the mages as the price of system access, she can slip out through the Waiting Room, and she seeks to kill everybody and everything. He asks them to kill her for him."
         }
       ],
       "relations": [
@@ -95,7 +95,7 @@
           "at": "7:end",
           "confidence": "verified",
           "headline": "He lets them all out",
-          "text": "Justice Light releases every one of the gods."
+          "text": "Justice Light springs one small trap and breaks the Nothing. The bijou fairies and the evicted demons caught in his traps go free, and what the Nothing held starts draining into the Halls of the Ascendency, into Sheol, and into Scolopendra's lair."
         },
         {
           "kind": "arc",
@@ -169,10 +169,11 @@
           "kind": "arc",
           "book": 7,
           "floor": 9,
-          "at": "7:end",
+          "at": "7:73",
           "confidence": "verified",
           "headline": "The count",
-          "text": "Her body holds more than 120,000 human children."
+          "text": "Zev puts a number on it: about 120,000 children, give or take. Their bodies are in the kinder facility on the surface; the rest of them is bound up in her head, and if she goes, they may all go.",
+          "chapter": 73
         }
       ],
       "relations": []
@@ -194,7 +195,7 @@
           "at": "7:end",
           "confidence": "verified",
           "headline": "Unprecedented",
-          "text": "The ninth floor's NPCs form an independent faction of their own. Nothing in the show's history has a procedure for it, and Juice Box lit it from inside the faction market."
+          "text": "An action item from the Princess Posse puts a tenth team into Faction Wars, populated with NPCs and afforded the same protections as the rest, and the audience passes it with 52%. The NPCs call themselves Team Retribution, and Juice Box is their warlord."
         }
       ],
       "relations": [
@@ -222,7 +223,7 @@
           "at": "5:1",
           "confidence": "verified",
           "headline": "Tish's note",
-          "text": "According to a note left by his associate Tish, the Gate of the Feral Gods was considered essential to defeating Scolopendra, whose poison has already done its work on the Hunting Grounds."
+          "text": "According to the note Tish left for Ghazi, the Gate of the Feral Gods was the artifact needed to defeat Scolopendra."
         }
       ],
       "relations": []
@@ -240,12 +241,12 @@
         {
           "kind": "origin",
           "book": 8,
-          "chapter": 1,
+          "chapter": 6,
           "floor": 10,
-          "at": "8:1",
+          "at": "8:6",
           "confidence": "verified",
-          "headline": "More often, and worse",
-          "text": "Whatever is running the dungeon is no longer running it cleanly."
+          "headline": "Weird and glitchy",
+          "text": "The AI's voice is getting all weird and glitchy, and Donut is the one who says so. Whatever is running the dungeon is no longer running it cleanly."
         }
       ],
       "relations": []
@@ -319,7 +320,7 @@
           "at": "7:11",
           "confidence": "verified",
           "headline": "Tipid fills him in",
-          "text": "He tells Carl about Doctor Hu and the Crawler Project at the Princess Posse HQ."
+          "text": "He tells Carl about Doctor Hu and the Crawler Project in the Meadowlark saferoom."
         }
       ],
       "relations": [
@@ -348,7 +349,7 @@
           "at": "6:61",
           "confidence": "verified",
           "headline": "It is not local",
-          "text": "Crawlers everywhere report their exits taking damage and becoming unusable. Amayon fights Sister Ines' control and works on a spell to get home."
+          "text": "The eviction is worldwide: Carl's chat fills with crawlers fighting zombies along every coastline, and demons with them. Amayon fights Sister Ines' control and works on a spell to get home."
         },
         {
           "kind": "arc",
