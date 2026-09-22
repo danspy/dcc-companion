@@ -89,6 +89,36 @@
           "confidence": "verified",
           "headline": "Larracos: water, charges and sharks",
           "text": "The plan had been to open onto the Skull Empire army and put a feral god in the middle of it — the exact outcome the lawsuit was meant to prevent. He changes it at the last moment, keeps the artifact rather than spending it, and floods the faction market instead: ocean water, timed explosives and a frenzy of sharks, cutting the factions off from resupply. Juice Box goes through with the water."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 69,
+          "floor": 9,
+          "at": "7:69",
+          "confidence": "verified",
+          "headline": "Traded at the Midnight Market",
+          "text": "Fopsy, the Dream's adjutant, reads it off his menus while Victory swears beside him. The war mages did not keep the Gate of the Feral Gods. They traded it to a minion at the Midnight Market, in exchange for five hell-kissed conscription potions, level 18, strong enough to take most gods, though not sponsored ones. That explains why Eris's pilot had to be ejected first. Victory's observation is that such things always leak into the market. The Gate, as of now, is somewhere else."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 81,
+          "floor": 9,
+          "at": "7:81",
+          "confidence": "verified",
+          "headline": "Out of the Midnight Market",
+          "text": "Eris told Carl the War Mages had traded it at the Midnight Market to a merchant named Paca, an agent for Krakaren Prime, who was keeping it in her stomach. Carl passed that on to Justice Light, who knew Paca and knew the market, and went off with his sluggalos. Now, in the middle of everything else, he reports in chat that the Gate of the Feral Gods is retrieved and back at his location. Juice Box, it is ready."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 87,
+          "floor": 9,
+          "at": "7:87",
+          "confidence": "verified",
+          "headline": "A portal into the Nothing",
+          "text": "Its winding box, broken and blood-soaked, has become a permanent portal into the Nothing, and Juice Box has used it to leave the ninth floor. Justice Light, who told her he was going with her and lied, stays on this side to spring the small trap set above it. One snapped piece of twine, and a bijou fairy trap and a demon trap fall into the open portal, carrying the thousands of threads that tie the fairies to the twelfth floor and the thousands of evicted demons."
         }
       ],
       "relations": [
@@ -141,6 +171,16 @@
           "confidence": "verified",
           "headline": "Forty-five square kilometres",
           "text": "Enough to take a city and every suburb around it. It can no longer be stabilized, and the moment it leaves his inventory it goes off, with less than a second to spare. \"Created by a man who murders babies and steals rare collectibles from his elders.\""
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 4,
+          "floor": 6,
+          "at": "5:4",
+          "confidence": "verified",
+          "headline": "On the bench",
+          "text": "The Advanced Bomber's Studio has a workbench built for examining and dissecting explosives, and Carl sets the Doomsday Scenario on it: the first time he has taken it out of his inventory since he grabbed it. The bench reshapes itself around the glass reaper case, which glows like a miniature sun. It is a microsecond from exploding and there is nothing he can do to stop that. He can copy it into the studio's simulator, where it can be played with safely, and he does. Then it goes back into his inventory, his hands still trembling."
         }
       ],
       "relations": [
@@ -196,6 +236,25 @@
           "text": "The third pulse of the blast destroys any armour still equipped, and the crown crumbles to dust on her head as she agrees to take it off. The succession is untouched. It said as much on the label."
         },
         {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 42,
+          "floor": 6,
+          "at": "5:42",
+          "confidence": "verified",
+          "headline": "Binding after it is gone",
+          "text": "Donut lost the crown at the end of the third floor, and it was regenerated and possibly awarded to someone else. The status stayed with her. Carl knows the description by heart: wearing it places you permanently in the royal line of the Blood Sultanate, and royals must slay the Sultan and every other member of the family before descending to the tenth floor. The royals, he now knows, always make it to the end. Anyone else who put the crown on would have to die too."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "floor": 6,
+          "at": "5:end",
+          "confidence": "verified",
+          "headline": "It finds its way to Katia",
+          "text": "Donut lost the crown at the end of the third floor, and it found its way to Eva, fixed to the back shoulder of her glittering breastplate where it passed for decoration. As Katia's sword goes through her, Eva pulls it free with her lower left hand, and from her hand it goes to Katia's head. The hat the Apothecary sent Katia would have stopped it. She gave that to Carl. The crown melds into her form and disappears from sight."
+        },
+        {
           "kind": "use",
           "book": 7,
           "floor": 9,
@@ -244,12 +303,131 @@
         {
           "kind": "use",
           "book": 5,
+          "chapter": 50,
+          "floor": 6,
+          "at": "5:50",
+          "confidence": "verified",
+          "headline": "The aerosol, disguised as smoke",
+          "text": "Carl needs Mordecai's weedkiller turned into a mist over a monster's head, and the cookbook has a bomb built for exactly that. He does not build the cookbook's version, which is smaller and stronger and would be impossible to explain. He builds a clumsier one out of modified hobgoblin smoke curtains and tells Mordecai he worked it out himself in three tries. Stripped of its charge, the device no longer counts as an explosive, so his throwing arm gets no help with it."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 52,
+          "floor": 6,
+          "at": "5:52",
+          "confidence": "verified",
+          "headline": "Ikicha's last entry",
+          "text": "Ikicha wrote of seeing someone he loved, twisted and changed, speaking in the same voice, and told the next reader not to try: hope is crucial, but blind hope is poison. Drakea's note under it says it took a while to understand him. Gone is gone. Everything else is puppets built by the enemy. And yet she dreams of a fire across the sky. For you, Ikicha. Carl read it a while ago. With Ferdinand on a rhinoceros, he cannot stop thinking about it."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 61,
+          "floor": 6,
+          "at": "5:61",
+          "confidence": "verified",
+          "headline": "Milk on the Treasure Map",
+          "text": "Crawler Milk's note in the sixth edition: when a country boss dies, it drops persistent loot called the Treasure Map. Don't pick it up. Over four hundred crawlers faced a boss in a low-ceilinged cave and fewer than fifty survived, hitting each other as often as it. Then they all picked up the map, which showed every piece of magical gear in the area, and started a second slaughter. Milk's first player-killer skull came from it. Blood on the claws, the note says, that will not wash away."
+        },
+        {
+          "kind": "use",
+          "book": 5,
           "chapter": 63,
           "floor": 6,
           "at": "5:63",
           "confidence": "verified",
           "headline": "He writes his own plan into it",
           "text": "Alongside a copy of the notes the team has been passing through the Coffee Shop Author's Kit, a way of talking that prying eyes cannot see. Goal one: survive the Butcher's Masquerade, which he calls a trap. Everything else is secondary."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 63,
+          "floor": 6,
+          "at": "5:63",
+          "confidence": "verified",
+          "headline": "Everly takes it all back",
+          "text": "Three entries from Crawler Everly. First: a sponsor box meant for one of her mercenaries, a spellbook he used within five hours to kill the boss holding the lockbox key. She does not trust sponsors, she writes, but they want her alive. Second, on floor eight, a tool for shortcuts through the maze, and a spark of hope. Third: I take it back. I take it all back. The sponsor was steering her toward a death that would be watched and remembered. Drakea notes it is her last entry, and asks the next author for detail."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 1,
+          "floor": 8,
+          "at": "6:1",
+          "confidence": "verified",
+          "headline": "T'Ghee, by Allister's account",
+          "text": "The announcement mentions T'Ghee totems, and Carl's breath catches, because he already knows the word. Allister, who wrote the thirteenth edition, treated T'Ghee as a religion, with nothing to do with capturing or summoning monsters. Carl can already see how the dungeon means to use it anyway. Mordecai supplies the dungeon's version: large playing cards, like Bautista's stuffed animals or Carl's tarot cards, reusable even when the summoned monster dies."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 32,
+          "floor": 8,
+          "at": "6:32",
+          "confidence": "verified",
+          "headline": "Rosetta on fairies",
+          "text": "A note in the ninth edition, in Rosetta's hand: fairies and sprites look fragile and are not. They are fast, magical and always alert, and their luck is unnatural; something crazy always happens when she tries to fight one. If you must, pull their wings off. They come off easily, and that is where they keep their magic. Carl takes the warning about luck to heart the day he and Katia mean to kill a fairy. The claymores alone should do it; he adds the teleport traps, and Katia with her deck, anyway."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 5,
+          "floor": 9,
+          "at": "7:5",
+          "confidence": "verified",
+          "headline": "The third edition's author",
+          "text": "Dante, a crocodilian thief, wrote the third edition, and only a single entry of it, afraid of being caught. He took a deal at the start of the eleventh floor and worked as a game guide, then moved to the Trap Master guild to be near his skyfowl neighbour, a shopkeeper who had also owned the Cookbook. He never told him who he was. Reassigned with that neighbour as a castle guard for one season's eighth floor, fourteen seasons short of freedom, he refused to follow orders. Administrative action killed him."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 11,
+          "floor": 9,
+          "at": "7:11",
+          "confidence": "verified",
+          "headline": "The fourth edition's author",
+          "text": "Tipid, a Crest poisoner, wrote the fourth edition. He got out at the start of the twelfth floor with a key that let only one of them through a door, and he chose himself over his friend Horatio. He had negotiated an extra season to keep that key; he tore it off its chain and threw it across the table. Damage to his brain took his whole pension and a loan to repair. He settled in a Crest system and worked for a waste management company. Current status: Colonel in the Princess Posse."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 16,
+          "floor": 9,
+          "at": "7:16",
+          "confidence": "verified",
+          "headline": "The fifth author, in a tower",
+          "text": "Everly, a sward mantis who crawled alone with hired mercenaries, gets a compass from her sponsor that shows the safest path through a fifty-level tower. It has forty-nine uses. At the top, a note: the tower is an advertisement, the compass named for a competitor, the dead end sponsored by the very company that sent it. She scrawls an angry note in the cookbook as the roof starts to come down. Explosives Engineer. Primal. Crushed to death on the eighth floor. Author of the fifth edition."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 35,
+          "floor": 9,
+          "at": "7:35",
+          "confidence": "verified",
+          "headline": "The seventh edition's only entry",
+          "text": "The seventh edition's author was a pet bird named Volteeg who took the biscuit, became a gargoyle on the third floor, and could never sing properly again. His owner died on the seventh. The Cookbook came to him then, and he did nothing with it, until the very end of the ninth, when he wrote his one and only entry. Now he is back as a Weeper commander for the Operatic Collective. He pulls out his tank's fire-control chamber, fills the tank with energy balls, drives it toward the warlord Hortense's caravan and lights a blitz stick. Over ten thousand die."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 49,
+          "floor": 9,
+          "at": "7:49",
+          "confidence": "verified",
+          "headline": "A note on first worship",
+          "text": "Crawler Carl adds a note in the twenty-fifth edition, on things Rosetta, Tipid and Justice Light tell him. When someone worships a god for the first time, a tiny non-corporeal fairy mob called a Bijou drags a whisker-thin tendril of invisible light from the god to the strongest temple on the floor, and from the temple to the new adherent's heart. It takes about two minutes. From the third floor to the eleventh, the strongest temple is almost always inside Club Vanquisher. Nobody has ever caught a Bijou, though Mordecai thinks the right trap might. Edgar's Sense Movement can see them rise."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
+          "headline": "The tenth edition's author",
+          "text": "Its tenth edition was written by York, a tenodera Advocate who reached level 71, took a deal at the end of the tenth floor, and worked as a game guide and a guildhall instructor in the Poetry guild. He now flies Homecoming Queen alone in orbit and writes poems he suspects are terrible. Rosetta asked whether he could destroy an orc yacht full of children, the new king of the orcs among them. He could. He wanted to feel something afterwards. He feels something only when Boomer says it is time to bring the war out of the dungeon."
         }
       ],
       "relations": [
@@ -377,6 +555,86 @@
           "confidence": "verified",
           "headline": "Mordecai's warning",
           "text": "Donut passes it on: Mordecai says it is addictive."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 8,
+          "floor": 6,
+          "at": "5:8",
+          "confidence": "verified",
+          "headline": "A web on the elbow",
+          "text": "The Gold Junkie's box Carl earned for using the ring the first time opens with nothing in it. A spiderweb pattern appears in the air instead and settles onto his left elbow as a tattoo, faded, green-tinted and poorly drawn: the Night Wyrm's Nasty Little Web of Suffering, which gives its bearer access to a guild. Mordecai says it is a cult, not a real guild and not a real church, worshipping the Night Wyrm, a demigod outside the regular pantheon. Everybody who uses a divine suffering artifact is marked this way."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 23,
+          "floor": 6,
+          "at": "5:23",
+          "confidence": "verified",
+          "headline": "Two points a kill",
+          "text": "Congratulations, Murderer. With Akland dead, the ring levels up and now gives two stat points for every kill. This one paid out a single point of constitution, the elf's highest stat, along with two trophies and level 55 for Carl, who had forgotten to summon his gauntlet. The elf's inventory is crawler biscuits and another gonorrhea arrow, obviously meant for Louis. Donut says it was unnecessarily gruesome, that he is getting angrier and angrier and it is scaring her. He promises to kill them nice and clean."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 35,
+          "floor": 6,
+          "at": "5:35",
+          "confidence": "verified",
+          "headline": "Marking priests mid-brawl",
+          "text": "Carl picks a nebular priest out of the melee by the Q at the start of his name, finds the only nebular on the ring's list beginning with Q, and marks him just before a berserking mantis cleaves him in half. He marks the next, and the next, and then stops, because they are all fighting and all injured and he does not dare mark more. All three had intelligence as their highest stat. Marked For Death levels between the second and third kill: seven points. Vrah is on the list. Lucia is not."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 47,
+          "floor": 6,
+          "at": "5:47",
+          "confidence": "verified",
+          "headline": "Two rings, one mark",
+          "text": "Prepotente had a ring of his own, freshly acquired against Miriam's advice. When his Community Pool spell bounced back and forth between him and Viscount Fog, the magical burst made his items misbehave, and his ring marked the only eligible target in reach, which was Miriam. Left to Fester: while she lives he cannot heal, and he has one point of life. Carl adds a second mark at dawn with his own ring, behind his back, where nobody present can see."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 53,
+          "floor": 6,
+          "at": "5:53",
+          "confidence": "verified",
+          "headline": "Congratulations, Murderer",
+          "text": "Carl kills Iota, the drunk hunter teleported into his lap by the new saferoom rules, by crushing his chest with one foot in mid-sentence, after pulling a nipple ring from him with a toe. Iota's highest stat was Intelligence, so the kill pays three points. Then the ring itself levels: Congratulations, Murderer. It now gives four stat points for every kill."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 26,
+          "floor": 9,
+          "at": "7:26",
+          "confidence": "verified",
+          "headline": "Marked at full health",
+          "text": "The ring only marks a target at full health, and Empress D'Nadia keeps herself just short of it on purpose. So the clockwork Mongos go through her shields and the gown, a knife drops, the thing she has been using to keep herself hurt, and when she reaches for it a clockwork snaps the tentacle off. Carl casts a Heal scroll on her. The moment she is whole, he marks her. Her highest stat is Intelligence. The mark will form in thirty seconds."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 57,
+          "floor": 9,
+          "at": "7:57",
+          "confidence": "verified",
+          "headline": "The spare goes to Li Na",
+          "text": "Carl's spare Night Wyrm's ring now belongs to Li Na. She asked, and his first reaction was no: she might already be the most powerful crawler in the dungeon. He asked Katia, Imani, Donut and Elle privately. Only Imani was against it. Elle was vehement: at least she's our scary psycho. Donut, not using chat, simply said please, Carl, please give it to her, as soon as you can. The brig at the foot of Li Na's clock tower, full of mercenaries nobody trusts, is now empty save the one prisoner Carl asked to be left alone."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 77,
+          "floor": 9,
+          "at": "7:77",
+          "confidence": "verified",
+          "headline": "Every mark, and two missing",
+          "text": "The ring is why Carl cannot mark anyone in the ball: no simultaneous marks are allowed on this floor, and Li Na has already marked them all. She comes out of the finisher at three hundred across the board. But two notifications that should have come do not. Fang and the Dream's warlord both got away, and while a marked enemy lives, she cannot heal. Every time she uses her chains, she loses a little health."
         }
       ],
       "relations": [
@@ -452,6 +710,16 @@
       ],
       "beats": [
         {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 67,
+          "floor": 6,
+          "at": "5:67",
+          "confidence": "verified",
+          "headline": "The queen's prize, at a hundred hands",
+          "text": "At the end of Chaco's prize case sits a colourless, grape-sized gem that glitters even as a hologram. It is not a soul crystal. It costs a hundred hunter hands, the most expensive thing on the counter. Chaco does not know which dead god made it: the high elves found it on a mining expedition, and the queen normally wears it around her neck. The spell requires the host to offer her most valuable possession as a prize. If nobody buys it, she gets it back."
+        },
+        {
           "kind": "use",
           "book": 5,
           "chapter": 75,
@@ -460,6 +728,66 @@
           "confidence": "verified",
           "headline": "Taken off Imogen",
           "text": "Someone named Osvaldo takes hers, and Prepotente wants it for a quest."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 75,
+          "floor": 6,
+          "at": "5:75",
+          "confidence": "verified",
+          "headline": "It is Apito's",
+          "text": "Nobody bought it at the counter, so it went back to Imogen, and it came off her body. Prepotente says it is a memorial crystal for the goddess Apito, which should be impossible: as far as anyone knows she is not dead, and she just ran a party. Carl gets a quest update in the voice of Emberus: obtain the item Memorial Crystal: Apito, and see whether it has any bearing on Geyrun's murder."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 18,
+          "floor": 8,
+          "at": "6:18",
+          "confidence": "verified",
+          "headline": "One made by a god who lives",
+          "text": "Pater Coal lays the problem out for Carl, on Emberus's behalf. A memorial crystal forms only when a god has died. Apito, the Oak Mother, is alive, and yet there is a crystal made by her. How is that possible? Emberus worries that something may have happened to his mother. The quest to find Geyrun's killer now runs through that crystal: Katia's crossbow and Donut's oak bracelet are both named as paths to the answer, and neither can be followed without that memorial crystal."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 27,
+          "floor": 8,
+          "at": "6:27",
+          "confidence": "verified",
+          "headline": "Round Osvaldo's neck",
+          "text": "The daily show plays in a small roadside saferoom, where a bopca named Pahzi has served Donut her crab and Carl a pork sandwich. It cuts to Osvaldo in a sprawling city, doing parkour off the walls after a monkey thing swinging along the electrical lines. He is wearing the memorial crystal around his neck."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 69,
+          "floor": 8,
+          "at": "6:69",
+          "confidence": "verified",
+          "headline": "One for a goddess",
+          "text": "When Ysalte falls, the world notifications include a Memorial Crystal generated for her, to be available for looting on a future floor, with great riches promised to whoever finds it. The same run of notifications marks her killer for death by every deity except her sworn enemies, and inflicts the Despondent debuff permanently on all of her worshippers."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 64,
+          "floor": 9,
+          "at": "7:64",
+          "confidence": "verified",
+          "headline": "The crystal shows itself",
+          "text": "A funnel of prismatic light bursts up out of the Madness woods a mile away, bright enough to pierce the clouds, and starts to wave back and forth like somebody shaking a flashlight. The trees grow taller where it falls. Carl's quest updates: Find Out Who Killed My Son. The Memorial Crystal of Apito has just shown itself; abandon the current task and obtain it. It will have to wait. The crawler carrying it, Osvaldo, cannot get it back into his inventory, and Elle points out that every observation spell the enemy has is about to turn this way."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 78,
+          "floor": 9,
+          "at": "7:78",
+          "confidence": "verified",
+          "headline": "From Osvaldo to the goat",
+          "text": "Emberus updates Carl's quest to find who killed his son. Apito's memorial crystal has fallen from Crawler Osvaldo's hands and is now held by Crawler Prepotente, and Carl is to retrieve it before the goat cracks its secrets and hands them to the Epicure. Carl has no idea how it moved without a fight. Osvaldo sits on the ground with his unaffiliated crew, glaring at Prepotente. Carl decides his talk with Prepotente can wait until neither of them is so keyed up."
         },
         {
           "kind": "use",
@@ -540,6 +868,16 @@
           "confidence": "verified",
           "headline": "Long Haul Biological Waste Management Solutions",
           "text": "Donut's celestial box from the sponsor holds it. She puts on Quan Ch's cloak in the same stretch and wears the two together, though nothing is charged into the tiara yet."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 40,
+          "floor": 9,
+          "at": "7:40",
+          "confidence": "verified",
+          "headline": "Twenty-three, seventy-six to go",
+          "text": "Katia works through Donut's hats on the charging pillows. Two drained hats come off and the tiara goes onto each pillow in turn: three more absorption jewels light, twenty-three sparkling in all, seventy-six to go. Plus ten to Constitution, plus two to Dodge, which should bring it to fifteen, and a one percent Intelligence buff that wastes a crystal but came on the same hat as the Dodge. Next on the pillow is a plastic baseball cap Carl has never seen before, which is supposed to give her Steady."
         }
       ],
       "relations": [
@@ -585,6 +923,96 @@
           "confidence": "verified",
           "headline": "A pile of skulls, stacked nice and neat",
           "text": "Out of the celestial predator box, opened in the same haul as a prison tattoo kit and a crafting table kit: a divine back patch for Carl's jacket, its benefits varying with whichever deities and certain demons happen to be near. The upgrades it carries stay hidden until it is affixed and worn."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 7,
+          "floor": 8,
+          "at": "6:7",
+          "confidence": "verified",
+          "headline": "The Daughter's Kiss",
+          "text": "About ten duende kills fill the essence bar to the top, a sickly brown swirled with yellow and green, like sewage with oil spilled in it. A deep, ominous voice announces that the Scavenger's Daughter has been fed, and a new skill appears: the Daughter's Kiss. Carl spends it on a single fleeing duende, with a stomp. The creature vanishes without resistance, the sidewalk shatters, and the shockwave knocks every other duende flat and breaks a window. There is nothing left to loot. The glow on the patch goes out, and the bar grows each time it is drained."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 27,
+          "floor": 8,
+          "at": "6:27",
+          "confidence": "verified",
+          "headline": "One species at a time",
+          "text": "Three more fills and drains on the walk north, and Carl learns how to feed it. When every soul in the patch is the same species, the Daughter's Kiss hits almost twice as hard, and it carries their trick with it: a charge made of nothing but Howling Gulls releases a scream many times stronger than their own. A dog-sized iguana called a Yuanat, hit with a charged punch, turns to dust and leaves a crater ten feet across."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 39,
+          "floor": 8,
+          "at": "6:39",
+          "confidence": "verified",
+          "headline": "Nearly full",
+          "text": "Six tokens in, the soul bar for Carl's back patch is almost full, and he has a persistent itch at his neck he suspects is the bar's doing. He has felt no obvious ill effect from the patch, only unease each time the bar nears the top. One or two more kills would let him disperse the power. He holds it instead: spent now, the bar would not refill in time for whatever guards the key, not with only deckmasters to kill on the way."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 42,
+          "floor": 8,
+          "at": "6:42",
+          "confidence": "verified",
+          "headline": "A hole in the world",
+          "text": "The Ralphie card has dispelled every spell and muted every minion, and Carl counts as a minion. Then the patch fills: The Scavenger's Daughter has been fed. He cannot cast, but this is a skill, and it lets him. He jumps, aims a foot at Tom, and the turkey looks up and asks, 'Gobble?' The kick feels like a hole in the world. Tom is obliterated with everything around him, the north wall bows out, and the ground tilts toward the cliff. The whole barn begins to slide."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 58,
+          "floor": 8,
+          "at": "6:58",
+          "confidence": "verified",
+          "headline": "She opens her eyes",
+          "text": "A Demon Prince of Sheol arrives in Cuba, and Carl is close enough to count as being in his presence. The Scavenger's Daughter answers: she opens her eyes and fills with dark power. For as long as the effect lasts, every fire spell Carl casts burns with Sheol Fire instead of the ordinary kind. A quest update comes soon after, asking him to question the prince about who killed Geyrun."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 66,
+          "floor": 8,
+          "at": "6:66",
+          "confidence": "verified",
+          "headline": "Her eyes stay open",
+          "text": "A goddess enters the realm, and the patch on Carl's jacket responds: the Scavenger's Daughter's eyes remain open, and she fills with even more power. The same notification brings Ysalte's own contribution, a temporary effect that turns any potion quaffed or handled outside an inventory into vinegar. It also promises the potions will come back as more powerful versions of themselves once she is banished."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "Power left to linger",
+          "text": "Since the fight in the building, the bar in Carl's interface has crackled with black energy: the Scavenger's Daughter has been fed, and wants her wrath unleashed. He does not unleash it. At the last moment Princess Donut sees the jacket glowing, and says the patch is not an aardvark but a giant centipede crawling through the skulls. A voice in Carl's mind says he should never have let the soul power linger. It needs him alive, and reasonably sane. He had forgotten to activate the Daughter's Kiss."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "Soul poisoning, and a dead shark",
+          "text": "The soul energy Carl never spent at the end of the last floor is still riding in the back patch, and it comes due on arrival as Soul Poisoning: jolts of pain, partly blocked by his Emberus ring, with worse effects promised. Saferoom rules cover the city for sixty hours, so nothing alive can be hurt. He finds something dead instead, tosses a suffocated concierge shark into the air and punches it with Daughter's Kiss. The shark vaporises, Carl and Donut are blown back through the mud, and the AI makes up an achievement on the spot: Sushi Smoothie."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 31,
+          "floor": 9,
+          "at": "7:31",
+          "confidence": "verified",
+          "headline": "Fed on the barracks roof",
+          "text": "An invisible Dreadnaught in a Viceroy mask, J IronFjord, comes at Carl's back on the barracks roof with a glowing dagger. Carl punches him in the chest, rips off the mask, and goes on punching until the man has no face left. A summoned 1970's Death Cult Leader watches and calls it really nasty. The Scavenger's Daughter has been fed. Unleash her wrath. At the end of the fight, when the last worm-ridden mage runs uphill, Carl activates Daughter's Kiss and jumps off the second story onto him."
         },
         {
           "kind": "use",
@@ -658,6 +1086,26 @@
           "confidence": "verified",
           "headline": "What escaping it costs",
           "text": "Psamathe tried to get out and ended up as half a soul in a doll's head. Every closing Gate portal lets one of the inmates through on the opening side. The winding box alone is a direct conduit — wound and fed a stream of charged energy it will drop an entire location, up to a whole necropolis, into the void."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 72,
+          "floor": 6,
+          "at": "5:72",
+          "confidence": "verified",
+          "headline": "Psamathe, we are coming",
+          "text": "When Signet falls, the floor rends open and the Nothing shows itself: ethereal shrieks, black wisps and tendrils lashing upward, a stench of sulphur. And from the dark a faint voice, distant and hollow, shrieking a name. Psamathe. Psamathe, we are coming. Then the hole snaps shut. Apito has turned her back, the notice says. The seal has been broken, the Butcher's Masquerade has failed to cast, and the party is over."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 44,
+          "floor": 9,
+          "at": "7:44",
+          "confidence": "verified",
+          "headline": "A thousand names, and a life's work",
+          "text": "The room wants to know what Juice Box just turned into, and Architect Houston of the Viceroys answers: the personification of the Nothing is one way to describe it. Then, raising his voice for once: a creature with no single name, which some people see at the moment of death; perhaps not a deity at all but a trans-dimensional entity, like the Apothecary. The Hag. The Unwashed. The Stalker. The Last Light. The Thirst. The Viceroys call it the Beautiful Place. Cascadia says it is banned as a mob. After a moment he adds, somewhat wistfully, that gaining access to it is his life's work."
         },
         {
           "kind": "arc",
@@ -899,6 +1347,26 @@
         },
         {
           "kind": "use",
+          "book": 7,
+          "chapter": 67,
+          "floor": 9,
+          "at": "7:67",
+          "confidence": "verified",
+          "headline": "A map from Burcu, slammed shut",
+          "text": "Inside the Madness castle Carl finds the crawler Burcu held beside Architect Houston, and his message to her is refused and logged for the adjutant: planning with a non-member. Then his Book of Voodoo updates with an entry from her. She is drawing a map of the surgical theatre, a line of Xs marked Fireball traps, and starting to write something about Houston, when it slams shut on its own. The accompanying warning: this is still cheating, you clown. Nice try. It is meant for something else."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 85,
+          "floor": 9,
+          "at": "7:85",
+          "confidence": "verified",
+          "headline": "Carl's Book of Boom",
+          "text": "Updated with, in the System's words, a metric fuckton of entries, and split into two volumes; the second is Carl's Book of Boom. It should run to almost thirty thousand pages and holds about five hundred, opening near the entry it wants read. Crawler 1,982,122, Asi Hamami, a level 59 fox warrior, has left a note of thanks and a crude red lock and key: eat the page for a level 10 Lockpick skill for five minutes. The crawlers who painted these lose the skills for good. Donut gets a book of her own, A Banquet Fit for a Princess."
+        },
+        {
+          "kind": "use",
           "book": 8,
           "chapter": 79,
           "floor": 10,
@@ -1022,6 +1490,16 @@
         },
         {
           "kind": "use",
+          "book": 7,
+          "chapter": 68,
+          "floor": 9,
+          "at": "7:68",
+          "confidence": "verified",
+          "headline": "A white one, pocketed",
+          "text": "In the surgical theatre of the Madness castle, the fourth table is empty and drenched in blood, and a cleaner bot of the same model as the crew's own, painted solid white, is slurping it off the floor. Carl lands on that table, slips in the blood and goes flat on his back. The bot shrieks, beeps and comes at him. He apologises, grabs it in both hands, feels the buzz that means it will go in his inventory, and puts it there, somewhat to his own surprise."
+        },
+        {
+          "kind": "use",
           "book": 8,
           "chapter": 11,
           "floor": 10,
@@ -1083,6 +1561,16 @@
           "confidence": "verified",
           "headline": "The reward for having survived being condemned",
           "text": "It comes out of the celestial box Louis earned for outliving a goddess's mark for death on the floor before. Two items: a tier III guild upgrade called an Airship Portal, and the ship itself, a silver tilt-rotor he names Party Planner, the name Firas once suggested for another vehicle."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 66,
+          "floor": 9,
+          "at": "7:66",
+          "confidence": "verified",
+          "headline": "Ripped down the middle",
+          "text": "Party Planner, the airship, has been destroyed. On its next sortie, the gravity-magic dragon circling the Reaver castle came straight at it, and General Louis hit it with missiles, which only made it angry. It cast a spell and ripped the ship in half down the middle. The bombs dropped out before they were armed and did not go off. The two replacement door gunners, borrowed from a clinic, are believed dead. Louis went out by feather fall, dropping straight toward the Reaver castle, which he means to hit by himself."
         }
       ],
       "relations": []

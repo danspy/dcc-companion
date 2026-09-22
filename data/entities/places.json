@@ -46,6 +46,36 @@
         },
         {
           "kind": "arc",
+          "book": 5,
+          "chapter": 58,
+          "floor": 6,
+          "at": "5:58",
+          "confidence": "verified",
+          "headline": "Still not drained",
+          "text": "Clarabelle, at the club door, says the level below the Hunting Grounds is still under water. Something keeps clogging the drains, and the sharks are not helping. The outworlders trapped on the Larracos level have the hotel and the main casino, so nobody is complaining much, but the weapons brokers who usually buy a pass up to trade with the hunters have not managed it once. They were trying to drain it before the floor ended. It does not look like they will."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 61,
+          "floor": 8,
+          "at": "6:61",
+          "confidence": "verified",
+          "headline": "The victory party, seen from the rubble",
+          "text": "A ninth-edition note from Rosetta in the Cookbook: when the viceroys pull out a last-minute victory, a portal opens, and the orcs, the viceroys, the operatics and the nagas step through together, laughing, off to a victory party in a nightclub on another floor. They drag unwilling NPCs with them, the librarian elves from the college among them. A crawler who tries to follow hits the portal like glass. The orc prince steps back into the smoldering remains of Larracos, lassoes him, and the rope cuts him in half on the way back through."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "Home Team, based in Larracos",
+          "text": "One of the viewers' votes seats a tenth team, populated with NPCs and given the same protections as the other nine. It is designated Home Team, its base is the city of Larracos, and peace rules apply there effectively immediately, until the game starts. Its co-warlords are the NPCs Juice Box and Sir Ferdinand. An adjutant is to be assigned before the battles begin. It passes by fifty-two percent."
+        },
+        {
+          "kind": "arc",
           "book": 7,
           "chapter": 1,
           "floor": 9,
@@ -454,6 +484,36 @@
           "confidence": "verified",
           "headline": "The changelings have to be inside",
           "text": "Carl and Donut blackmail their way onto the hunters' level of the Desperado Club to reach the changelings, and the message they carry is a map. The spell that can move the changelings works only on a town, the elves have razed every town in the forest but their own castle, and so the changelings have to be inside it."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 64,
+          "floor": 6,
+          "at": "5:64",
+          "confidence": "verified",
+          "headline": "The Sugar Cube",
+          "text": "Up close the castle is not stone. It is white wood, maybe bleached oak, carved all over with acorns the size of a fingernail as if the whole building were turned from one piece, and it is hot to the touch. Elle calls it the Sugar Cube and the name sticks. There used to be a moat; the queen had it drained because it smelled funny. A pencil-thin tower stands at each corner, and trolls fight the elves in the caves below."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 74,
+          "floor": 6,
+          "at": "5:74",
+          "confidence": "verified",
+          "headline": "Gone to the ninth floor",
+          "text": "When the Sledge's spell lands, the castle is simply gone, half-destroyed and set down somewhere on the ninth floor, and it has taken the subbasements with it. It has also taken Signet's tattoo warriors, the changelings, Kiwi as a very pregnant bear, and Tina, still a dinosaur. Everyone and everything else, mostly mantis nymphs, hangs frozen in a rough stacked cube over the pit where it stood."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 17,
+          "floor": 9,
+          "at": "7:17",
+          "confidence": "verified",
+          "headline": "The Lemig headquarters",
+          "text": "The castle landed in the Lemig Sortion's territory, and they made it their headquarters. In Queen Imogen's private ballroom near the top, their warlord waits for a summoned Carl, planning to leave him a vegetable and turn the spider loose on his own base. Instead the spider comes out in the ballroom. When it is over, Panford, the Lemig adjutant, tells Commander Stockade his throne room is destroyed and that it is being ruled an AI action. His general, Luke, killed by a fellow soldier under her control, is among the dead."
         }
       ],
       "relations": [
@@ -520,7 +580,7 @@
           "at": "6:69",
           "confidence": "verified",
           "headline": "Its fire, released by a benefit",
-          "text": "Carl takes acid damage until his health drops to five percent, which triggers his Martyr's Path benefit, which releases Sheol fire everywhere he has stepped outside. The realm's fire is a resource now, one a crawler can spend without ever having gone there."
+          "text": "Carl burns his own health down inside Samantha's acidic neck, too slowly to beat the timer. It goes on dropping afterwards, and once he is under five percent his Martyr's Path benefit engulfs every step he has taken outside in flame, and with his fire still enhanced, that flame is Sheol fire. The realm's fire is a resource now, one a crawler can spend without ever having gone there."
         },
         {
           "kind": "arc",

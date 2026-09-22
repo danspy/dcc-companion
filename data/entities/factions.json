@@ -39,6 +39,25 @@
           "confidence": "verified",
           "headline": "It burns a veto rather than pay",
           "text": "Eighty-three Celestial boxes are owed. Borant appeals, a Syndicate court overrules it, and it burns its one seasonal veto to void the prizes anyway, which has never been done this early. It is still liable for the one box that was opened before the appeal. A production company that cheap has seams worth looking for."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 21,
+          "floor": 6,
+          "at": "5:21",
+          "confidence": "verified",
+          "headline": "Nothing has changed, says Borant",
+          "text": "The announcer is chipper. The Valtay news means nothing, she says: Borant is still a kua-tin organisation, severed from the civil war that has just erupted at home, and this crawl is her personal life project and she is going nowhere. Then the notes. Sponsors may sell their stakes starting next floor. Over 500 crawlers are claimed and over 50 hunters have fallen. Hunters may no longer communicate with anyone outside the dungeon. The southwestern hot springs were turned up, cooking the crawlers in them. Crawlers in the top 1,000 can now see their rankings."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 7,
+          "at": "5:end",
+          "confidence": "verified",
+          "headline": "Blocked by its own rules",
+          "text": "Borant wants Prepotente stopped before he can touch the seventh floor. In the pole position chamber a whole line of debuffs hits him and the crawlers with him: peace bonding, freeze, paralysis, slow, a teleport, an Administrative Hold. Four gnolls with guns appear. Every one of them is negated by AI resolution, and the gnolls vanish in smoke. The AI, Prepotente says, is forcing Borant to follow its own rules."
         }
       ],
       "relations": [
@@ -123,6 +142,16 @@
           "confidence": "verified",
           "headline": "Formally inaugurated",
           "text": "Party leadership goes to the highest stat total. Her first act with it is to rename the party after herself. On a show, a name the audience will repeat is not a joke — it is an asset."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 4,
+          "floor": 8,
+          "at": "6:4",
+          "confidence": "verified",
+          "headline": "The squad flag",
+          "text": "The system designs each squad's flag, and the Royal Court's is a miniature pair of heart-covered boxers on a glowing, foot-long spike, flying sideways as if off a clothesline, with the court's name embroidered in motorcycle-club style and Carl's bomb patch over the crotch. Donut calls it outrageous and complains about the stitching. Elle's squad got a bag of adult diapers; Imani's got a butterfly. There are twenty in the set, and lost ones are not replaced."
         },
         {
           "kind": "arc",
@@ -265,6 +294,76 @@
           "confidence": "verified",
           "headline": "Named in the crown's warning",
           "text": "Every royal in the line must kill the Sultan and every other member of the family before descending to the tenth floor."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 75,
+          "floor": 6,
+          "at": "5:75",
+          "confidence": "verified",
+          "headline": "A co-warlord in the succession",
+          "text": "Carl and Donut are co-warlords of a brand-new team, and the notice carries a note: Co-Warlord Princess Donut is a member of the royal line of succession of another team, Team #4, the Blood Sultanate. See the succession rules on how this will affect gameplay. On the walk to the stairs, Donut does not say it out loud. It is a complication. A big one."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 21,
+          "floor": 8,
+          "at": "6:21",
+          "confidence": "verified",
+          "headline": "A representative, not a royal",
+          "text": "The Sultanate's seat at the planning table goes to a big green and purple naga, four-armed, in dented plate, who is a representative rather than a member of the royal family, though his wife is in it. Donut asks whether the tiara makes them cousins. They are not cousins, he says, in or out of the game, and he is plainly suppressing a grin. Will he work for her once she kills the royal family and takes it over? If he is still alive, he will be honor-bound to follow her. Or her companion, Katia."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 48,
+          "floor": 8,
+          "at": "6:48",
+          "confidence": "verified",
+          "headline": "Six factions try to walk out",
+          "text": "Sponsor message, relayed to the crawlers. The Operatic Collective, the Blood Sultanate, the Dream, the Lemig Sortion, the Madness and one more house all abdicate their spots on the ninth floor and announce they are leaving. The request is denied. While the Earth system is in quarantine, off-boarding is suspended under Syndicate rule 470.B through 495 of the System AI Stability Addendum. The teams remain as designated. The rules must be followed."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 8,
+          "floor": 9,
+          "at": "7:8",
+          "confidence": "verified",
+          "headline": "The Sultana behind her veils",
+          "text": "Arief calls the nagas a court of assassins, not warriors; no changeling or spy has ever reached their inner sanctum, and even Juice Box will not try. Their warlord is the Sultana, in life the crown princess and daughter of the naga king, play-acting the Sepsis Whore, the sultana of the old histories who had 198 daughters before 99 sons and supposedly poisoned almost all of the sons. In the old days, her honor guard were sentenced to deferred death for looking at her. The naga team loses every season. She has never once been killed in the game."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 22,
+          "floor": 9,
+          "at": "7:22",
+          "confidence": "verified",
+          "headline": "Always the first to fall",
+          "text": "The naga castle sits about eight miles from the border, on rocky ground chosen so nobody can tunnel in from below, and strangely close to Shanty Town. Historically it is almost always the first castle to fall. But every time, by the time the invaders reach the inner sanctum, the Sultana is gone. The team still loses its throne room. Its leader has never once been captured or assassinated since she took over, and she reappears at the end, laughing and joking. Nobody knows where she hides."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 46,
+          "floor": 9,
+          "at": "7:46",
+          "confidence": "verified",
+          "headline": "Four of eleven",
+          "text": "Eleven Naga entered Faction Wars this season. To free Donut and Katia from the Sepsis Whore business, four of them must die. Princess Vinata herself. Two assistants titled Ikbal, both her cousins, one of them married to Rishi. And the head of her castle guard, another cousin, rumoured to be her lover. The other seven are friends of the royal house or executives of the marketing agency that sells Naga tourism, and are not in the line of succession. Several of those seven, by the look of things, are already dead."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 48,
+          "floor": 9,
+          "at": "7:48",
+          "confidence": "verified",
+          "headline": "The first of the four",
+          "text": "Elle's team reaches the throne room. The guards there worship Emberus, just as Carl predicted, and they die, along with one big naga who worshipped no god at all. Katia gets the notification before anyone explains it: that was one of the four. The head of the castle guard. Carl adds that he was also the sultana's real-life boyfriend, and hopes she will be upset enough to make mistakes. Three left: Vinata and the two cousins. Then Edgar reports movement in the castle, non-corporeal, coming from below and moving up."
         }
       ],
       "relations": []
@@ -340,6 +439,16 @@
           "confidence": "verified",
           "headline": "Digging in",
           "text": "NPCs and former crawlers build the defences together: the changelings and the flesh golems started the stronghold, and a few thousand of the newcomers chose the Fortification Engineer race so they could build fast and level while they do it."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 85,
+          "floor": 9,
+          "at": "7:85",
+          "confidence": "verified",
+          "headline": "Congratulations, Champions",
+          "text": "Larracos and Shanty Town go to the twelfth floor under the Zerzura, and the two warlords of Team Retribution go with them. Ferdinand and Juice Box leave the realm, and under the current ruleset that is abandoning their posts. Team Retribution is defeated. The Princess Posse has won Faction Wars. The System addresses its congratulations to Champions."
         }
       ],
       "relations": []
@@ -386,6 +495,25 @@
           "confidence": "verified",
           "headline": "Elves at the door",
           "text": "Two or three of the elves get a catapult set up and walk gas-rock artillery across the town. Carl uses Samantha to deliver missiles, delivers a villain's soliloquy while he is at it, and puts down another of their hunters."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 75,
+          "floor": 6,
+          "at": "5:75",
+          "confidence": "verified",
+          "headline": "Mister Gonorrhea Arrow",
+          "text": "On the broadcast, Carl puts the Dream among the no votes, its man too much of a walking abscess to change his mind despite sending members of his own family to die on this floor because someone said his mom is bangin'. Donut adds that she is quite attractive for a bald woman. On the walk to the stairs, Carl says he thinks the Dream will vote yes after all. They can change their votes right up until the start."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6:end",
+          "confidence": "verified",
+          "headline": "Threats over a lost vote",
+          "text": "The loss of the sponsors' protections does not go quietly. The Dream's cruiser threatens to nuke the planet over it, and is hobbled by a Syndicate Peacekeeper before it can. The Dream then threatens to stop food production unless the Epitome family is evacuated. They can scream and threaten all they want. Aboard a converted garbage freighter, the view is that once these AIs realise how much control they really have, the only thing stopping them is reason, and negotiation."
         },
         {
           "kind": "arc",
@@ -465,6 +593,16 @@
           "confidence": "verified",
           "headline": "The tunnelling system",
           "text": "Mordecai catches the team up on the shape of the wider universe, and two powers come out of it: the Apothecary, and the Plenty. The Plenty built the tunnelling system a few hundred seasons ago and kept it proprietary. Before it, most of the universe got the crawl on a delay of anything from an hour to a year. Prosperity, in other words, is a thing they sell."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 31,
+          "floor": 6,
+          "at": "5:31",
+          "confidence": "verified",
+          "headline": "Judge us",
+          "text": "Three small jet-black goats with red eyes walk up to the art contest's judging table side by side, carrying no entry, with names like equations. Judge us, says the one in the middle. Carl gives them a five. They sigh as one, spin, and walk off: judgment received. Hurk the gleener shivers and says they are all like that, the adults worse, and nobody knows what goes on in their heads. The caprid on the crawl sits in a circle with them on a program every few days, screaming while they scream back."
         },
         {
           "kind": "use",
@@ -573,6 +711,35 @@
           "confidence": "verified",
           "headline": "A claim staked on the hunters' map",
           "text": "The map off the dead hunter divides the hunting grounds between the outfits working them, and two of those outfits have put a claim on Carl and Donut. The Hive is one. The Skull Empire is the other."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 25,
+          "floor": 6,
+          "at": "5:25",
+          "confidence": "verified",
+          "headline": "Future Huntress",
+          "text": "Three of the Skull Empire's hunters try an ambush near an outcropping of the all-tree, which turns spells back on their casters. The Talent zaps himself dead with his own Lightning scroll, carrying almost 75,000 gold and a credit chit. The survivor is Future Huntress, level 50, a Boring Ol' Fighter who has not levelled once. She says top tens are fair game for anyone who bought the hunting license, that the empire paid for first crack at Carl, and that her death leaves him to the Dark Hive. Her highest stat is charisma."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 75,
+          "floor": 6,
+          "at": "5:75",
+          "confidence": "verified",
+          "headline": "The orcs vote yes",
+          "text": "Carl holds up a photo of the late Queen Consort Ugloo, mother of the Maestro and Prince Stalwart, killed when the Valtay blew up her yacht after the orcs accidentally killed a singer. The vote to turn off the sponsors' safety protocols stands at two to seven, and the two are Carl and Donut's new team and the Skull Empire. The orcs are crazy and they're all going to die, Carl tells the cameras, but they're not chickens."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6:end",
+          "confidence": "verified",
+          "headline": "Muted for proposing the failsafe",
+          "text": "At an emergency session of the Syndicate Council, Princess Formidable of the Skull Empire demands the failsafe: blow the star and wipe the system off the map, before the AI can infect the center system. She is in orbit herself, and says so. Accused of wanting her father and brothers dead, she admits she would love them deposed, and insists that this is bigger. Prime Minister Glory counts the galaxy's wealth trapped in the system and the wars it would start. The mantid representative proposes a decorum sanction. By 86%, she is muted."
         },
         {
           "kind": "arc",
@@ -691,6 +858,45 @@
           "text": "The request arrives through Zev, and it is a request rather than a present: go on Shadow Boxer. Carl agrees to it, reluctantly. Sponsors are supposed to send prizes and buy airtime. They are not supposed to want a favour."
         },
         {
+          "kind": "use",
+          "book": 6,
+          "chapter": 49,
+          "floor": 8,
+          "at": "6:49",
+          "confidence": "verified",
+          "headline": "A flyer for a shelter",
+          "text": "The Emergency Gold Benefactor Box from the Open Intellect Pacifist Network, the one a liaison tried to seize, holds a dirty, crumpled flyer and nothing else. The Shepherd's House in Homestead, Florida: don't spend Christmas alone, breakfast at 7 AM, all are welcome. Somebody has circled the 7 AM several times in red marker, and circled one more line among the rules. No pets allowed. Homestead is about forty minutes north of the Keys."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 11,
+          "floor": 9,
+          "at": "7:11",
+          "confidence": "verified",
+          "headline": "Why the authorities cracked down",
+          "text": "Tipid explains where the network came from. Doctor Hu formed it beside the Crawler Project: smaller, more focused, with far less support, and with the purpose of ending the crawl altogether. The residual in the homeless man's body at the Florida shelter, Paulie, was one of several actions that finally brought the authorities down on the non-profit."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 49,
+          "floor": 9,
+          "at": "7:49",
+          "confidence": "verified",
+          "headline": "Sponsoring Samantha's mother",
+          "text": "The Pacifist Network has sponsored the goddess Theia this season, on Carl's behalf, before anyone connected her to the Blood Sultanate. Theia is Samantha's mother. She was sponsored to help save Carl's life at the end of the fifth floor; in theory she is enraged at Samantha, but she has caused no trouble, appearing only to kill the demon Slit at the end of the bubble levels. It has closed a door on Vinata: Rosetta believes Theia is the goddess the sultana's court usually hides with. The sponsor is someone in the network's employ. Rosetta will not say who, only that it is not Porthus."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
+          "headline": "Stop the crawl, or else",
+          "text": "Timed for release just now, though shot a while ago under Rosetta's direction: Porthus behind a desk, announcing a new militant group that will move against every Syndicate governmental property and system in the known universe unless the crawl is stopped by the end of this one. Aboard Homecoming Queen, the largest ship in orbit, the enhancement zone weapons Porthus had installed are green across the board. Its pilot's card lists him as a captain in the Open Intellect Action Network. Boomer wants the lasers warmed up."
+        },
+        {
           "kind": "arc",
           "book": 8,
           "chapter": 27,
@@ -760,6 +966,26 @@
           "confidence": "verified",
           "headline": "A castle lands on their army",
           "text": "Quasar brings Carl the state of his ninth-floor team, and the state of it is that the castle came down in the middle of the Lemig Sortion's army. His people got clear and are building their own stronghold instead. The Lemig Sortion are the ones with a building in their camp."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 22,
+          "floor": 8,
+          "at": "6:22",
+          "confidence": "verified",
+          "headline": "Luke would like to leave",
+          "text": "Their man at the planning table is a small green goblin-looking alien called Luke, with the voice of a surfer. His people vote on everything, and undoing a vote takes eighty percent, which is why the Sortion is still in this war though its population sours on it every season. Juice Box points out that Carl's castle turned a bunch of his friends into zombies. When her demand goes into the queue, Luke says they're going to bail, if the people let them: there's seriously bad juju this season. He'll put a proposal to evacuate before the high congress. The Empress wishes him luck."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 35,
+          "floor": 8,
+          "at": "6:35",
+          "confidence": "verified",
+          "headline": "Commander Stockade goes to the sharks",
+          "text": "When the Desperado Club emptied, officials and players from several teams were thrown out into flooded Larracos, where the Semeru keep the concierge sharks fed and the castle submerged. Thirty-five were devoured, and only one was a warlord: Commander Stockade of the Lemig Sortion, a caterpillar-headed thing with several arms, the last of the thirty-five, torn apart on Odette's screen to laughter. He had not attended the meeting; a goblin-like proxy named Luke sat in for him."
         },
         {
           "kind": "arc",
@@ -834,6 +1060,16 @@
           "confidence": "verified",
           "headline": "Rot stickers with the Gurgles",
           "text": "The southern defence is already holding against the Dream, the Prism and the Nagas when the Reavers make their contribution: a horde of their own pet rot stickers, raised by hand to trust their masters, then juiced, infected and turned loose. This is a power that fights by handing you something diseased and standing back."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 29,
+          "floor": 9,
+          "at": "7:29",
+          "confidence": "verified",
+          "headline": "Through the bait-shop door",
+          "text": "The home anti-air battery goes up, then the hangar bay, and the flyers that buzzed Boomer turn into paratroopers coming down through the protections. Dozens of the Posse's names run down the casualty list. The worst of it is the saferoom: the bait shop sits inside the castle walls now, and Bomo notices a new door in the situational hallway belonging to the Reaver team. If any of the sponsors ever came in through that bait shop, the doggy door upgrade lets them come back the same way. It is the sneak attack Donut had just proposed, run backwards."
         },
         {
           "kind": "arc",
@@ -921,6 +1157,16 @@
           "confidence": "verified",
           "headline": "In the southern push",
           "text": "Carl and Donut join the defence in the south, and across the no-man's-land the Nagas hold the line beside the Dream and the Prism. Cobra-headed, and playing under the name of the Blood Sultanate, taken from a bloodier time in their own history."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 42,
+          "floor": 9,
+          "at": "7:42",
+          "confidence": "verified",
+          "headline": "The sultana at the table",
+          "text": "The Blood Sultanate's warlord materialises coiled next to Carl, half again the size of any naga he has seen: glossy white, a hint of gold along the hood, six arms in jingling golden bracelets, eyes solid red. Outside the dungeon she is the sultan's daughter, a war veteran and his lead advisor. In the game she portrays a historical queen of theirs called the Sepsis Whore. The Sultanate usually loses at once and plays to drive tourism, and it is still in after three other teams have fallen. Carl feels like a mouse in a snake's cage."
         },
         {
           "kind": "arc",
@@ -1027,6 +1273,36 @@
         {
           "kind": "arc",
           "book": 7,
+          "chapter": 19,
+          "floor": 9,
+          "at": "7:19",
+          "confidence": "verified",
+          "headline": "A blackout for everyone",
+          "text": "Sir Ferdinand proposes an emergency action item, in language unsuitable for the broadcast, because teams on other floors are cheating: nobody in the dungeon, including the guests partying in the centipede on the eighteenth floor, may watch any outside feed for the rest of the game. It is approved. Effective immediately, everyone in the dungeon is under a live-feed blackout. Carl had not wanted to spend one of his own action items on it. Victory notes that it is a first."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 25,
+          "floor": 9,
+          "at": "7:25",
+          "confidence": "verified",
+          "headline": "The acid trench",
+          "text": "Team Retribution's part in the assault is two spies and some scrolls. The NPCs were handed scrolls that change the chemistry of water in a container, instead of alcohol for some of their bars. So the spies drop a water scroll into the enemy's empty middle trench, turn it to acid, and cover the whole thing with an illusion. The enemy, confused and scared, fall back from the first trench and jump into it blind. The scout, an NPC porsuk bartender, goes up almost twenty levels."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 35,
+          "floor": 9,
+          "at": "7:35",
+          "confidence": "verified",
+          "headline": "The dwarves under the field",
+          "text": "A mage's dispel clears the Posse's smoke, and the ground under Carl, Donut, Rosetta, Simoom and the dead king's yak gives way. They land a dozen feet down among white dots outlined in green: Team Retribution's Semuru dwarves, two dozen of them, in a fortified tunnel big enough for cars. Juice Box had said passages like this cross the whole floor for the dwarven diggers. The dwarves re-form the roof and go after the war mages who fell in further down the line. Not so tough with the magic turned off."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
           "chapter": 44,
           "floor": 9,
           "at": "7:44",
@@ -1114,6 +1390,16 @@
           "text": "Clint has the account of Scolopendra's attack, and says the high elves were protected by something they had stolen. On the way back to Point Mongo the last sponsorship slot fills. The Apothecary takes it."
         },
         {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 33,
+          "floor": 6,
+          "at": "5:33",
+          "confidence": "verified",
+          "headline": "Their spokeswoman takes the floor",
+          "text": "A woman in a brown cloak patterned with circles and lines tells the stagehand not to cut Carl off, and he freezes. The people nearest her get up and move away. She cannot address Carl directly, she says, because she is one of his sponsors and it would breach the contract; she is also a sponsor of CrawlCon, and she has told them to let him speak. Then she walks out, and Circe Took calls her a bitch. Uptown Hal names her afterwards: the collective's spokeswoman."
+        },
+        {
           "kind": "use",
           "book": 5,
           "chapter": 43,
@@ -1122,6 +1408,45 @@
           "confidence": "verified",
           "headline": "The same gift, the same day",
           "text": "She and the Plenty each send protection against vampirism, and the two parcels arrive together. Sponsors are not supposed to coordinate. Carl now has two who do."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 57,
+          "floor": 6,
+          "at": "5:57",
+          "confidence": "verified",
+          "headline": "Their boxes are for the cat",
+          "text": "Minutes after Prepotente delivers a potion his sponsor meant for Princess Donut, Elle announces a benefactor box from the Apothecary, and Imani messages that she has one as well. Imani has opened hers. It is also for Donut. Donut, meanwhile, decides out loud that Carl's nipple-ring bribe was a trick, and that he was directed to give her that earlier potion all along."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 62,
+          "floor": 6,
+          "at": "5:62",
+          "confidence": "verified",
+          "headline": "Five boxes, all for the cat",
+          "text": "Five items on the table, all Apothecary sponsor boxes, each sent to a different crawler with a note saying it belongs to Princess Donut: a wand recharge scroll, a tiara, sheet music, an Enchanted Hammer of Fast Forward that Borant tried and failed to block with an appeal, and an enchanted metal stick, named for someone Mordecai cannot place, given to Dmitri Popov. The hammer does nothing magical; the stick is no wand, but used correctly it can do something truly magical. Each carries a small seven worked into it. The one Apothecary box not meant for Donut went to Katia: a beanie that sank into her."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6:end",
+          "confidence": "verified",
+          "headline": "A mantra with mistakes in it",
+          "text": "Agatha's feed carries the Apothecary's chatter as well as her own team's. Thousands of its agents are seeded across the planet, ordered to kill themselves if they miss the dungeon. This season they mean to contact crawlers directly, in the dungeon or on the floor with the memory ghosts, and for months they have made their agents recite a daily mantra full of known inaccuracies and half-truths. The errors are there to keep the crawler alive around the showrunners. What the mantra really does is secretly implant a hidden upgrade."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 3,
+          "floor": 9,
+          "at": "7:3",
+          "confidence": "verified",
+          "headline": "A second pillow",
+          "text": "A platinum benefactor box arrives for Donut from the Apothecary in the same sitting as the tiara, and it holds a second charging pillow, purple where the first is red. The same ten-hour drain, and the same ruin after one hour. The difference is at the end of the description: this one drains any magical item, but transfers only to an absorption crystal on a like item. A ring's buff goes to a ring; sent to the wrong kind of item, the buff is lost. With two pillows, the tiara fills twice as fast."
         },
         {
           "kind": "arc",
@@ -1282,6 +1607,36 @@
           "confidence": "verified",
           "headline": "The Hive is hunting you",
           "text": "A hunting party on the Hunting Grounds, and the message it sends Carl is a note knifed to the saferoom door and signed by Vrah: the Hive is hunting him, there will be nowhere to hide, and his death will not be quick."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 33,
+          "floor": 6,
+          "at": "5:33",
+          "confidence": "verified",
+          "headline": "Circe Took's daughters",
+          "text": "The Dark Hive's party in the Hunting Grounds is a family concern. A CrawlCon audience that knows it well counts eight mantids left on the floor: seven warriors, all daughters of Circe Took, Vrah among them, and one male who stays in Zockau trading with the other representatives. Circe chairs Carl's panel herself, carves a chunk out of the table beside him, and on her way out promises to hunt down whoever harms her other daughters. Carl calls after her that it will be him."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 35,
+          "floor": 6,
+          "at": "5:35",
+          "confidence": "verified",
+          "headline": "Seven warriors down to one",
+          "text": "Carl kicks a wheeled bomb the system has named Just Wait Until Your Daddy Gets Home out of the saferoom door and slams it. It kills the three remaining mantises, explosive protection and all. With the berserker and the sisters who went down with her, the seven warrior daughters are now one: Vrah, infected and airborne. The only other mantis on the floor is the male merchant holed up in Zockau, and Carl is already writing him a note offering protection in exchange for the gear."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 38,
+          "floor": 6,
+          "at": "5:38",
+          "confidence": "verified",
+          "headline": "A corporation that sells upward",
+          "text": "Edict explains the arrangement. The Dark Hive is a private corporation, and it sells everything it loots to the Burrowers, the royal family and government of the mantis system, who have paid in advance and expect delivery on the ninth floor. Edict's own family is of Deep Mind and employed by that government. Every mantis coupling must be registered ahead of time, with a trial and counseling for the male, and a government family may not couple with a for-profit one without a bond and a license."
         }
       ],
       "relations": [
@@ -1323,6 +1678,55 @@
           "confidence": "verified",
           "headline": "A creditor with a seat at the table",
           "text": "A corporate system government inside the Syndicate, which is to say a company that is also a country and answers to neither description when it is inconvenient. Its people are parasites in the literal sense, riding the bodies of other races. It holds the Borant Corporation’s debt, and it sends a crawler a neural enhancer, which is the sort of gift that is also a note."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 19,
+          "floor": 6,
+          "at": "5:19",
+          "confidence": "verified",
+          "headline": "Regency to the worms",
+          "text": "Two messages land the moment the interview ends. The first: a regency change has created a conflict of interest, so the Valtay Corporation is removed as one of Carl's sponsors, effective immediately, and an auction will fill the slot. The second goes to the whole planet. A Syndicate court has declared the Borant Corporation independent of the Borant System Government, which automatically executes an earlier ruling handing the Valtay 51% of the corporation. Borant still runs the crawl, and contracts stand, indentures included. Odette thanks the gods, then tells Carl: too bad it's the Valtay."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 56,
+          "floor": 6,
+          "at": "5:56",
+          "confidence": "verified",
+          "headline": "Borant's newest partners",
+          "text": "Seventy hours before the Masquerade, the daily announcement thanks Borant's newest partners, the Valtay Corporation, for the capital and help that let the next floor be finished just in time. That floor was not supposed to exist yet: what was going to be the seventh is now the eighth, with its difficulty raised to match. The Valtay have bought themselves a floor, and the crawlers are advised to stay as long as they can rather than go down early."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 2,
+          "floor": 8,
+          "at": "6:2",
+          "confidence": "verified",
+          "headline": "The floor that broke",
+          "text": "Mordecai has the story of the broken seventh floor from Mistress Tiatha, and he puts it on the engineers: they built the level just like the fairytale, and the goat did what the kid in the story took thousands of years to figure out. The Valtay are likely irritated with the Borant designers. The Apothecary and the Plenty probably did well out of providing the means, at the cost of the Valtay and the Syndicate, because the Syndicate pays in advance for the tunnels that carry the livestream, and a skipped floor is not refunded."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6:end",
+          "confidence": "verified",
+          "headline": "The Valtay solution",
+          "text": "The Valtay representative, a worm in the body that once belonged to the Syndicate Prime Minister's mother, assures the council all is perfectly normal. The solution the council backs is theirs: an extinction event, as fast as possible, because the quarantine lifts when the last crawler dies. Their mercenary guilds are recalled off Earth's surface, and the AI has agreed to let tens of thousands of fully armed mercenaries and the sponsors' private armies into the coming war, spread equally among the eight sponsored teams. Well over 150,000. The goal is every crawler, Carl and the cat first."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 30,
+          "floor": 9,
+          "at": "7:30",
+          "confidence": "verified",
+          "headline": "How a gondii takes a body",
+          "text": "Tipid, hit in the shoulder and talking too fast, explains what is inside the mages. A gondii worm can move into any dead form and take it over, memories included, though it takes time to learn what to look for and leaves big gaps at first. The Valtay charter says only the willing, and not every gondii lives on the right side of that law. Tipid has heard rumours of outlaw crews, and in a popular tunnel drama about one they are some of the most expensive mercs in the galaxy, at least on the show. A worm that does not care about its host can hop bodies and overclock them. Tipid rates them above the scree."
         },
         {
           "kind": "arc",
@@ -1379,6 +1783,36 @@
           "confidence": "verified",
           "headline": "Membership arrives with the tattoo",
           "text": "The guild worships a demigod, and access is granted by a tattoo that anyone who uses one of its artefacts receives whether or not they went looking for a guild. Mordecai notes, in the tone of a man reading a pamphlet he did not ask for, that it also runs outreach centres."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 24,
+          "floor": 8,
+          "at": "6:24",
+          "confidence": "verified",
+          "headline": "A map of the secret passages",
+          "text": "Past the carved door there is only a dark room and a voice like a naga's. It asks Carl whether he wants a job helping the family, and whether he means to kill Katia for the prize. No to both. He wants a map of the Desperado Club's secret passageways. A swarm of spiders runs up his arm, and his map fills: passages and tunnels, some with monsters in them, a hidden potion market on the middle floor, and a scattering of drug dens behind panels in the hallways."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 33,
+          "floor": 8,
+          "at": "6:33",
+          "confidence": "verified",
+          "headline": "She who brings the body",
+          "text": "The Night Wyrm's messages arrive as a job board would, in his hissing voice. The mark is dead, little sweets; bring her filthy body to the guild, because she who brings the body is she who gets paid. Katia brings it. Job Complete. And then the next line, in the same breath: I have more work for you. Yes, yes, there is always more. Come to me, and we will spread our family's power."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 10,
+          "floor": 9,
+          "at": "7:10",
+          "confidence": "verified",
+          "headline": "Hamed takes the club",
+          "text": "Clarabelle, alive and in her chair, tells Carl and Donut they are banned from the Desperado Club by the new management, who has banned all crawlers for his first few days. He keeps bodyguards with him at all times, not exactly NPCs and not exactly former crawlers, and more security than she has ever seen. The surviving cretins and sai were airlocked off to the mercenary markets. His name is Hamed: the Night Wyrm, leader of the Guild of Suffering, husband of the late Astrid, and father of Damascus Steel and Anaconda, who are supposedly in the club hunting him."
         }
       ],
       "relations": [

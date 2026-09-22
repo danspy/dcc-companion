@@ -1731,13 +1731,22 @@ currently has a dev server running. It is not this deployment, and only one proj
   detail from nowhere (a family shop, a vote that widens the
   field), and floor 9's recap carrying three book-4 events. **Taglines have not had this pass yet**,
   and they are summaries, so they will be worse.
-- **Book 8 is filled chapter by chapter; books 1–7 are not.** Content grew by adding entities, so
-  each got a few beats at its introduction and the main cast was never followed: Carl had no beat in
-  book 8, Donut none in books 3–5 or 8, Mordecai none after 6:1, while every check stayed green.
-  `npm run content:gaps` now shows it. Book 8 went from 111 beats and 40 empty chapters to 460 and
-  none, written from the text with the main cast first and then read again by a second pass, which
-  changed about one in four — nearly all a closing line the book does not have. Do books 5–7 next
-  (30, 20 and 32 empty chapters), then book 1.
+- **Books 5–8 are filled chapter by chapter; books 1–4 are not.** Content grew by adding entities,
+  so each got a few beats at its introduction and the main cast was never followed: Carl had no beat
+  in book 8, Donut none in books 3–5 or 8, Mordecai none after 6:1, while every check stayed green.
+  `npm run content:gaps` now shows it. Books 5–8 went from 444 beats with 122 empty chapters to 1,822
+  with none, written from the text with the main cast first and then read again by a second pass —
+  about one in six changed, and it is always the same five mistakes: an invented closing line, the
+  wrong speaker, events out of order within the chapter, a rounded-up number, an inference stated as
+  fact. The writer brief names them and the rate fell from one in four to one in six once it did.
+  Books 1–4 are next (17, 7, 9 and 5 empty chapters), book 1 first.
+- **Tags the fill kept walking round** — every writer hit them, and each costs contortions in the prose:
+  Ping is Carl's own spell from 4:32 but tagged 7:79; the Princess Posse is named from 5:41 but tagged
+  7:11; floor 9's name "Faction Wars" is printed from 5:1 and gated at 7:1, which makes the phrase
+  unusable in five books of text; Dong Quixote and Splash Zone are named from 6:6 and tagged 7:63;
+  Bucket Boy from 6:23 and tagged 8:17; Jurgen from 6:62 and tagged 8:14; Epitome Tagg from 5:22 and
+  tagged 7:80. And the lint matches single-word entity names case-insensitively, so "justice" and
+  "protections" fail as ordinary words.
 - Entities book 8 needs and does not have, each flagged by more than one reader: the Pineapple
   Cabaret, Chris (Imani's teammate, on nearly every page of 8:79–85), Princess Chandra, Grigori the
   Placid, Chalchiuhtlicue, Hamed, the Midnight Epicure, Minus (the tourist filed as Linus), Lamashtu,

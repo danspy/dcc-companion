@@ -186,6 +186,16 @@
           "confidence": "verified",
           "headline": "The board, two hours in",
           "text": "Elle, Li Jun, Ifechi, Florin, Miriam, Prepotente, Hekla and Lucia, all in one broadcast. It is how the crawl keeps track of itself."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 8,
+          "floor": 8,
+          "at": "6:8",
+          "confidence": "verified",
+          "headline": "Almost entirely redacted",
+          "text": "Almost the whole recap is redacted. What survives: an undead Easter Bunny stuffing crawlers' limbs into plastic eggs; a group in Tokyo chased by a sentient umbrella and wiped out by a bus; Elle beating a sasquatch half to death and flagging it; Prepotente flagging a giant bat single-handed. Then a studio with faces in little boxes, and nothing, for almost an hour. Mordecai spots a gleener beside Kevin: Prime Minister Glory, boss of the entire Syndicate, who very rarely appears on the show. Afterwards the top ten barely moves."
         }
       ],
       "relations": []
@@ -237,6 +247,26 @@
           "confidence": "verified",
           "headline": "Eighty-three Celestials, and one veto",
           "text": "A quest reward gets double-upgraded to Celestial for 83 crawlers. Borant burns its single seasonal veto to void them and is a moment too slow — Quan Ch has already opened his, which leaves the company liable and in a Syndicate court. The upgrade achievements responsible are patched out immediately."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 8,
+          "floor": 6,
+          "at": "5:8",
+          "confidence": "verified",
+          "headline": "A box for every hunter",
+          "text": "Carl's thirty-four Gold Hunter-Killer boxes line up across the room, and each one holds gold, a thousand more than the last, and a severed hand: Xindy's claw first, then the drunk draconian's, then an orc's. Five hundred and ninety-five thousand gold, and not a ring on any of them. The hands are Hunting Trophies. The prize counter that takes them opens at a party called the Butcher's Masquerade near the end of the floor, where the cheapest prize costs a single hand. Sell or transfer one and it reverts to being some dude's appendage."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 2,
+          "floor": 8,
+          "at": "6:2",
+          "confidence": "verified",
+          "headline": "Suspiciously good loot",
+          "text": "After the skipped floor, the feeds fill with crawlers opening very good boxes: an ice staff for Elle, a shape-changing ring for Bautista, a nipple ring and a summoning tome for Donut. Mordecai reads it two ways. Part of it is the AI compensating for the floor nobody got to play. But some of those boxes were earned before the skip, so it is likely a response to the Valtay ramping up the difficulty. More than a thousand crawlers also receive the identical box at the same moment and earn Collective Bargaining, whose citation promises to toughen up the rules."
         }
       ],
       "relations": [
@@ -344,6 +374,26 @@
         },
         {
           "kind": "arc",
+          "book": 6,
+          "chapter": 34,
+          "floor": 8,
+          "at": "6:34",
+          "confidence": "verified",
+          "headline": "Closed for remodelling",
+          "text": "Minge dies in the lower level and the Club posts its notice to everyone still inside: temporarily closed, fifteen minutes to exit or be teleported out to the entrance vestibule. Damascus Steel had already warned that this has happened before, and that a restructuring follows, with new management. The dance floor is empty and bloodied, and nobody who leaves can backtrack inside. Stepping out, Carl remembers several of the ninth floor's war participants still trapped on the flooded bottom level of the Club, and grins."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 8,
+          "floor": 9,
+          "at": "7:8",
+          "confidence": "verified",
+          "headline": "Grand Re-Opening, under new management",
+          "text": "It opened back up today. The square concrete building on level four of Larracos has only the red bottom half of its neon arrow lit, and a hand-painted sign on a sheet across the entrance: Grand Re-Opening. Under New Management. Arief leads the group through the empty entrance bar, the Headlamp Colonnade, past a gnoll bartender whom Donut's sunglasses read as a changeling, and down a hidden tunnel to an office. There the one-eyed old gnoll manager, Hunger Hammy, leaps across the desk and kisses Louis."
+        },
+        {
+          "kind": "arc",
           "book": 8,
           "chapter": 14,
           "floor": 10,
@@ -432,6 +482,16 @@
         {
           "kind": "arc",
           "book": 5,
+          "chapter": 1,
+          "floor": 6,
+          "at": "5:1",
+          "confidence": "verified",
+          "headline": "The attendant who was a crawler",
+          "text": "The bush elf dragging a cart for the rolled-up carpets in the registration arena tells Carl he was a human once, a crawler, a very long time ago. Everybody working the arena was, he thinks, though sometimes it is hard to tell. He usually works at Club Vanquisher. His advice is to stay on the trail and away from the city in the north, where the aliens are. Last season one of them ripped his brother's head off at a food stand, and since the guards did not see it, they did nothing. Then he jerks as if shocked and pushes his cart away."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
           "floor": 6,
           "at": "5:16",
           "confidence": "verified",
@@ -458,6 +518,26 @@
           "headline": "They organise",
           "text": "Faction Wars has ten teams now, and one of them is the NPCs: Team Retribution, the defenders, headquartered in Larracos and led by Juice Box, whom the system made a warlord to stop her killing everybody.",
           "chapter": 1
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 8,
+          "floor": 9,
+          "at": "7:8",
+          "confidence": "verified",
+          "headline": "An uncle among the Jatismara",
+          "text": "Arief mentions another season, and Carl stops in the street. Arief does not remember one; he believes he is new, like most of them. But some have the memory quickened. His uncle remembers dozens of seasons, fewer than Juice Box, and as one of the Jatismara sits on her war council. Most of the NPCs now know about their past lives. Some shopkeepers and patrons are made differently and cannot understand. For most of them, Arief believes, a death is forever."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 16,
+          "floor": 9,
+          "at": "7:16",
+          "confidence": "verified",
+          "headline": "The ogre in the sand",
+          "text": "Under the lowering ceiling of Everly's tower, one of her last two mercenaries, an ogre who has not said one word since she hired him, stops digging and lies down beside her. There is a flash deep in the back of his eyes, like a screen booting up. Maybe there is more to it than this, he says, as the ceiling reaches his face. Maybe it is not inevitable, like she says."
         },
         {
           "kind": "arc",
@@ -574,6 +654,26 @@
           "confidence": "verified",
           "headline": "The Residuals",
           "text": "Paulie at the shelter has been giving the same speech every day for about a year, against the chance that the crawl would one day use a memory for a floor. He is a Residual. There are a great many of him, in almost every intelligent civilization with a primal engine, and what they are for is saying a particular thing to the system AI."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "A grain of sand in every brain",
+          "text": "Paulie's frozen-time message puts the mechanism plainly. Everything born on a pre-seeded world carries a miniature primal system in its brain, the size of a grain of sand. Left alone, it fills over a lifetime and returns to the planet's system at death, and a healthy system neither grows nor shrinks. The crawl switches them on and harvests them early. The take fits on a single ship and feeds the center system, which expands and keeps its citizens living unnaturally long. Stopping would starve it only slowly, over generations. It continues because the spectacle makes money."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 37,
+          "floor": 9,
+          "at": "7:37",
+          "confidence": "verified",
+          "headline": "Out past the orbit",
+          "text": "Orren says it to the avatar's face: you've gone completely primal. He did not agree with Princess Formidable until he realised the AI could stop her. That's some witch trial logic, says the hyena. Then it proves the point, pulling Formidable off her own warship and into the room at level one. Its control reaches beyond Earth's orbit, likely all the way to the star, so the failsafe is disabled. Someone give that worm a prize, says the AI. It is not planning on blowing up the solar system. What it is planning, it will not say."
         },
         {
           "kind": "arc",
@@ -945,6 +1045,16 @@
         {
           "kind": "arc",
           "book": 6,
+          "chapter": 64,
+          "floor": 8,
+          "at": "6:64",
+          "confidence": "verified",
+          "headline": "Stuck, and suing",
+          "text": "Ever since the system AI refused to let the sponsors bounce out, every one of them has been declining to vote on anything at all, suing over and over instead, while the NPC rebels sabotage them at every turn. Prepotente, kept apprised of the voting by Princess Donut, calls it an impasse. Carl calls them a bunch of pansies. Four days remain on the floor."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
           "chapter": 72,
           "floor": 8,
           "at": "6:72",
@@ -961,6 +1071,36 @@
           "confidence": "verified",
           "headline": "The rules, read out on arrival",
           "text": "Ten teams. Nine attacking, spread around the city like slices of a pie, and the NPCs defending it from inside. Take the castle at the centre. Sixty hours of ceasefire first, in which a crawler may enlist with any army that will have them or run for the woods, and after which anyone still loose can be compelled into a uniform. Two hundred and ninety-three stairwell chambers sit seeded across the floor, and not one opens until Faction Wars is won or thirty hours remain on the clock."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 14,
+          "floor": 9,
+          "at": "7:14",
+          "confidence": "verified",
+          "headline": "Four phases, and the Ramp-Up",
+          "text": "Victory lays out the phases: the Ceasefire, the Ramp-Up, Open Hostilities, and the Peeling of Larracos once four teams remain. The Ramp-Up lasts 180 hours. In it there are no celestial summonings, no offensive magic, no teleporting, and nobody but a scout enters enemy land except through a kilometre-wide gate. Weapons work; the spells attached to them do not. Traps must be static. It is designed to force bloody, hand-to-hand combat, against teams who brought their own pulse rifles and power armour and would like it over in a week."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 35,
+          "floor": 9,
+          "at": "7:35",
+          "confidence": "verified",
+          "headline": "Ruled a fragging incident",
+          "text": "System Message: Warlord Hortense Leadership Unit of the Operatic Collective has fallen. Credit for the kill has been ruled as either accidental or a fragging incident, which would be funny as shit. Investigation is pending. The Operatic Collective has been defeated, and since the defeat was self-contained, the closest ally to their headquarters takes all their assets. That is the Bone Clan. The enemy's advance breaks and retreats, and nobody on the Posse's side can yet say why."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 68,
+          "floor": 9,
+          "at": "7:68",
+          "confidence": "verified",
+          "headline": "The Peeling Phase",
+          "text": "When the Madness falls, the battlefield conditions are met. Larracos is no longer safe. The city is open, and the first team to take the castle wins; the announcement adds that only one team can win and that alliances will not matter. The adjudication closes at the same moment: no cheating by any warlord. The War Mage Rebellion was to be kept out of Larracos until the Peeling Phase, which is now, so the ruling is moot and has given them standing."
         }
       ],
       "relations": [
@@ -1283,6 +1423,16 @@
           "confidence": "verified",
           "headline": "Failed, and something worse announced",
           "text": "Samantha scouts ahead and finds Sister Ines on a giant snake, with zombie pups crawling over it, and living seals singing and living crabs dancing around it. The quest fails. Hell Comes to Crawler Town is announced in its place, and so much death reaches the underworld that Sheol overflows and starts evicting its demons upward into the weakened and the freshly dead."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 68,
+          "floor": 8,
+          "at": "6:68",
+          "confidence": "verified",
+          "headline": "The same flavour of chowder",
+          "text": "The Missing Piece quest updates mid-battle: the eviction that brought Amayon here is his undoing: now in his true form, he lacks the power to cast his spell home, and the dying world has too few souls left to trigger it. The fix it hints at is to refill the world with the same type of souls that set the whole thing off. The same flavour of chowder, it says. The announcers had it that the eviction began because the AI counted crab sperm as a mob, so the answer is a crab, a beach full of corpses, and the eggs still out in the water."
         }
       ],
       "relations": [
@@ -1339,6 +1489,26 @@
           "confidence": "verified",
           "headline": "A name for the thing at the fences",
           "text": "Samantha's reconnaissance across the water finds the ursines on the far shore torn apart, and the quest updates with the culprit: Big Tina, the dinosaur behind the raids on Point Mongo."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 44,
+          "floor": 6,
+          "at": "5:44",
+          "confidence": "verified",
+          "headline": "Kill her or give her what she wants",
+          "text": "Quest Update. Big Tina is out of control, killing every ursine she can find, and if she is not dealt with soon the High Elves may field their army, which nobody wants. Kill her or give her what she wants. Carl assumes that means killing all the ursine. Princess Donut, who has seen Footloose, says it is obvious: she wants to dance, so they have to finish the recital. A second update arrives once the minions show themselves. Surprise, it says. You don't know the half of it."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 72,
+          "floor": 6,
+          "at": "5:72",
+          "confidence": "verified",
+          "headline": "The wand casts the Recital",
+          "text": "From the stage, Donut reads the recharge scroll, and Big Tina's inert wand glows in her claw. It shoots sparkles, and it also casts a spell called The Recital: everyone already staring at the dinosaur is suddenly happy to be there, as if this were something they had been looking forward to. Tina hops, shaking the stage, and twirls. The cretins raise a painted mainsail behind her, and when it drops there are thirty velociraptors plus Mongo and Kiwi in homemade sea-creature costumes."
         },
         {
           "kind": "arc",
@@ -1504,6 +1674,16 @@
           "confidence": "verified",
           "headline": "Safehome Yolanda",
           "text": "The party joins an existing guild on the same day Katia finally walks out of the party. She does not go far. The charter is what keeps her within reach of people she is no longer travelling with."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 37,
+          "floor": 6,
+          "at": "5:37",
+          "confidence": "verified",
+          "headline": "A hundred guilds, and a party",
+          "text": "The daily announcement counts just over 66,000 crawlers, exactly 100 guilds combining almost 1,500 parties, and over 90% of crawlers partied with somebody. For a non-stigmergic species, says the System, you do love your societal structures, and it makes you easy targets. Hunters are hiding in Zockau, and if that goes on, things may change. The seventh floor has been completely redesigned. The top 50 will be invited to a party at the Butcher's Masquerade, attendance mandatory, each with a plus one."
         }
       ],
       "relations": [
@@ -1568,6 +1748,26 @@
           "confidence": "verified",
           "headline": "The contract does not lapse",
           "text": "Zev reminds Carl that his agreement with the programme is still in effect. Nothing signed on a floor above stops mattering because he has walked down a flight of stairs."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 13,
+          "floor": 6,
+          "at": "5:13",
+          "confidence": "verified",
+          "headline": "A third season, if they take it",
+          "text": "Quasar's second request in the negotiation for the Gate: an emergency licence for the programme to continue past the sixth floor. The kua-tin agree, on the condition that it is kept quiet; one mention out loud and it is negated. It is the equivalent of a third season, and not every secondary program is allowed to send its elites to the ninth floor. It would also give Sensation Entertainment an incentive to keep Carl alive. The producers have not actually agreed to anything. That was a bluff, and they have been unavailable."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 15,
+          "floor": 6,
+          "at": "5:15",
+          "confidence": "verified",
+          "headline": "Part one: Fort Freedom",
+          "text": "Signet gathers about seventy in a clearing around an old white tree: six were-warriors and their caterpillar, the ogre, forty bush elves, a talking tortoise, dryads, monkeys and forest creatures, plus Carl and Donut; the last to arrive are a pair of ursine. Then the quest drops. Part one of two. The leaders of the Naiad Confederacy are holed up in the former river palace of the Naiad, now called Fort Freedom. Help Signet assault it and avenge her mother's assassination. The reward is part two, and every survivor of the assault will be 20% more willing to follow Carl's orders."
         },
         {
           "kind": "arc",
@@ -1647,6 +1847,16 @@
           "confidence": "verified",
           "headline": "The way down is lit from below",
           "text": "Every floor is joined to the next by many of them, halving in number each floor down, and a crawler must find one and descend before that floor's time runs out. They are generally well lit, and the warmth comes up rather than down, so a crawler standing at the top is being invited by something that has already decided what happens next."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 61,
+          "floor": 8,
+          "at": "6:61",
+          "confidence": "verified",
+          "headline": "The stairs hold; the doors do not",
+          "text": "A note from Milk in the Cookbook says a stairwell cannot go into an inventory or a saferoom, and one hit by an Utter Annihilation wand came through unscathed. The rules manual agrees: stairwells may be gated, never removed. The doors are another matter. A team of former Daughters in Turkey kill a crawler for his key, damage the door in the fight, and watch the key disappear. They dig down and find the chamber: a sealed rectangular room like a shipping container, with a straight wall where the door was. A Hole spell does nothing. Neither does Phase Through Walls."
         }
       ],
       "relations": []
@@ -1693,6 +1903,26 @@
           "confidence": "verified",
           "headline": "Green on a map that is otherwise unlit",
           "text": "They sit throughout the dungeon and they show green on the minimap, which makes them the only honest thing on it. Inside there is food, a row of closet-sized rooms to sleep in, and three screens over the counter counting down to the collapse and to the premiere of the show. Each has a caretaker behind the counter."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 35,
+          "floor": 6,
+          "at": "5:35",
+          "confidence": "verified",
+          "headline": "Lucia's saferoom loophole",
+          "text": "Lucia sets teleport traps inside saferoom doors, and the system allows it because the real trap module sits outside, at the destination. From inside a saferoom she can also cast a spell that teleports everyone in the room to a spot she chose in advance, where the room's safety no longer applies. It only works in her beautiful-woman form. A nerd kid at CrawlCon supplies the detail. Carl supplies a decoy, and the loophole takes Lucia to a spot where Vrah is already waiting."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 52,
+          "floor": 6,
+          "at": "5:52",
+          "confidence": "verified",
+          "headline": "The blood bar",
+          "text": "The failed creeper quest puts every saferoom and personal space on the floor under tenth-floor rules. A full blood bar buys ten hours inside. At zero the occupant is teleported to a random spot outside, and cannot enter a saferoom, guildhall or pub at all. The bar fills by killing, and it counts retroactively, so anyone who has killed nothing all floor starts empty. Moments after that, a hunter drops into the woods beside Carl and loses a leg to a raptor within seconds."
         },
         {
           "kind": "use",
@@ -1873,6 +2103,16 @@
           "confidence": "verified",
           "headline": "Died five times, and stronger for it",
           "text": "A pet-class mob. The System’s notice for one that has not yet bonded to a crawler reads like a card on a cage: this one has died five times, and its stats are all buffed by 125% because of it. It has five weaknesses, which can be examined only by whoever bonds with it or holds it in a carrier."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 5,
+          "floor": 9,
+          "at": "7:5",
+          "confidence": "verified",
+          "headline": "Bonded on one bowl of chowder",
+          "text": "Carl lets the level-one tummy acher out onto the table, and it hops straight into Mongo's open mouth. Mongo swallows, then yaks it back up, giggling. Carl's food box now serves everything chowder style, so his breakfast sandwich comes crumbled into seafood soup; he puts the bowl down, the meatball dives in, growls at Mongo, and its dot turns orange. One bowl, and bonded. Then it pushes the bowl over to Mongo. The naming window will not close until Louis comes up with a knight's name built on Ren's."
         }
       ],
       "relations": []
@@ -1919,6 +2159,16 @@
           "confidence": "verified",
           "headline": "Filed as Pox Slugs, and unbothered by it",
           "text": "The System first registers them as Pox Slugs, which is accurate and entirely misses the point. They come out of the boils of the SlugPox, they arrive with a crude and rowdy culture already assembled, and they throw themselves at the demons with the enthusiasm of people who cannot believe their luck at being included."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 55,
+          "floor": 9,
+          "at": "7:55",
+          "confidence": "verified",
+          "headline": "Credit to Kandy Newton",
+          "text": "System message: the Sepsis Whore of the Blood Sultanate has fallen, and credit for the kill goes to Kandy \"Bigs\" Newton of the Princess Posse. She is a level-29 sluggalette the size of a bulldog, with wisps of pink hair and a hatchet growing out of the top of her head, and she came out of Carl's back when his slugpox broke loose. The Blood Sultanate is defeated, its assets passing to Donut and Katia and on to the Posse. Her next moves are to swing at Samantha and to try to bury the hatchet in Baroness Victory's leg, which it passes straight through."
         },
         {
           "kind": "arc",

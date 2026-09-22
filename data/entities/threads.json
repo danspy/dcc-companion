@@ -33,6 +33,35 @@
         },
         {
           "kind": "arc",
+          "book": 5,
+          "chapter": 12,
+          "floor": 6,
+          "at": "5:12",
+          "confidence": "verified",
+          "headline": "We'll deal with it when we get there",
+          "text": "Donut asks about the ninth floor. The crown she no longer even wears put her permanently in the Blood Sultanate's line of succession, removing it removed nothing, and she cannot go down to the tenth until the Sultan and every other royal is dead. That means killing the nagas, which is harder than it sounds. They have had this conversation before, and it always stops at the same place: we'll deal with it when we get there. This time Carl says instead that he will not leave her behind."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "floor": 6,
+          "at": "5:end",
+          "confidence": "verified",
+          "headline": "Only one of them",
+          "text": "Eva's last act puts the crown on Katia's head, and that means one thing. Only one of them, Donut or Katia, will be allowed to take the stairs from the ninth floor to the tenth. Katia touches her head, looks at Li Jun and Li Na, and says shit, several times."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 19,
+          "floor": 8,
+          "at": "6:19",
+          "confidence": "verified",
+          "headline": "Eva's last act",
+          "text": "The crown is back, on Katia's head this time. Eva put it there in the last moments before she died. Katia now carries what Donut carries, and the two of them know what it means: only one of them can leave the next floor. Carl counts two ways out inside Katia's locked box. The pregnancy boon would eject her from the game altogether. The Celestial Attendant boon would send her straight to the twelfth floor, to serve as an NPC until the games there begin. Katia wants the second. The box still has one seal left."
+        },
+        {
+          "kind": "arc",
           "book": 7,
           "floor": 9,
           "at": "7:1",
@@ -244,6 +273,66 @@
           "confidence": "verified",
           "headline": "Tish's note",
           "text": "According to the note Tish left for Ghazi, the Gate of the Feral Gods was the artifact needed to defeat Scolopendra."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 16,
+          "floor": 6,
+          "at": "5:16",
+          "confidence": "verified",
+          "headline": "What the were-castors remember",
+          "text": "Holger's village came through the demon's cloud better than the city across the river, and he wonders if it was because one of the attacks in it was a transfiguration spell they had already been hit with. He got sick that day, and then was fine. Clint has it from the poem: the high elves cowered in their castle, protected by something they took. Rumour says they went down while she slept, collected their soul gems, and stole an item that shielded everyone in the castle. Holger thinks her nine-tier attack was a slow damage reflect. They settle it with their fists."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 64,
+          "floor": 6,
+          "at": "5:64",
+          "confidence": "verified",
+          "headline": "Dreaming on the ballroom ceiling",
+          "text": "The ballroom's domed ceiling is a moving mosaic: a black-and-gold cave glittering with crystals, like the inside of a geode, and curled in it a black centipede that twists like a hypnotist's spiral. The note says this is Scolopendra, dreaming, and that when she finally awakens she will destroy everything and free us all. From the middle of the mosaic a living white tree hangs upside down, and the centipede never stops twisting around it, as if to strangle it."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 46,
+          "floor": 8,
+          "at": "6:46",
+          "confidence": "verified",
+          "headline": "The hydra's old name",
+          "text": "The AI introduces the Reminiscence Hydra as a classic monster from the very early days of the show: in the third and fourth seasons, a bigger version was built as the final boss of the whole dungeon, and everybody died before getting close. In the old days these things were called Scolopendra Nymphs. That is not entirely accurate, the AI says, so this one goes by a different name. It is a level 125 City Boss with nine heads, each the likeness of somebody the crawlers know."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 7,
+          "floor": 9,
+          "at": "7:7",
+          "confidence": "verified",
+          "headline": "What the Semeru dug into",
+          "text": "Carl examines War Leader Arief, a young Semeru dwarf in feathered, parade-ready armour, and the System tells his people's story. They farmed and mined a paradise inside the volcano and dug toward the goddess below them, Ysalte, until they struck the roots of the All Tree and stopped. They built their castle along those roots, a monument and an apology. Scolopendra's nine-tier attack hit them hardest of all: millions before that day, fewer than 10,000 now. Arief is Despondent, because his goddess is dead."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 42,
+          "floor": 9,
+          "at": "7:42",
+          "confidence": "verified",
+          "headline": "Scolopendra Stirs, mid-council",
+          "text": "The warlord council has barely got going, just after the new king has punched the host, when a System Message cuts across the table: Warning: Scolopendra Stirs. Everyone goes quiet, even Ferdinand. Has that ever happened before, Carl asks. No, the Dream's warlord answers. Cascadia laughs with a hint of madness to it. Well, why not? Why the fuck not?"
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 87,
+          "floor": 9,
+          "at": "7:87",
+          "confidence": "verified",
+          "headline": "Scolopendra has awakened",
+          "text": "The Nothing drains into the Halls of the Ascendency, into Sheol, and into Scolopendra's lair, and Scolopendra stirs. A planetwide message follows: guests of the Scolopendra Club should evacuate. Nowhere to go? The 16th floor, supposedly Agony of Mirrors, is an empty room with one non-magical mirror from a Motel 6 in Boise, Idaho, and it lies outside the Scolopendra layers. To reach it, guests must get through the 17th, the Backstage Death Maze, which is built and running. Good luck. Then: Scolopendra has awakened."
         },
         {
           "kind": "arc",
