@@ -33,12 +33,52 @@
         },
         {
           "kind": "arc",
+          "book": 1,
+          "chapter": 4,
+          "floor": 1,
+          "at": "1:4",
+          "confidence": "verified",
+          "headline": "Say the name and it is recorded",
+          "text": "The mining is almost incidental; what Borant takes fits on a single transport. The money is the show: advertising, a stipend from the Syndicate government, and a commission on every credit a patron spends. When Carl asks, Mordecai's voice turns formal. Any crawler who names the government or the sponsoring corporation is recorded for review, and one found disparaging them, especially on camera, may have the experience \"accelerated\". NPCs are required to say the name repeatedly during training, so they are mostly ignored. The company, he adds, takes its image quite seriously."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 29,
+          "floor": 1,
+          "at": "1:29",
+          "confidence": "verified",
+          "headline": "Never say mud skipper",
+          "text": "Odette's advice, in a room Borant cannot hear: never say mud skipper in the dungeon. The kua-tin tried to have the word listed as hate speech with the Syndicate, and hardly anyone used it until they did. Nobody likes the kua-tin government. Borant is a different story; some of them only want to put on a good show, and they were incensed to be forced into this early release. And all indentureship contracts freeze during a bankruptcy seizure action, which, she says, is nothing the crawlers need to worry about."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 7,
+          "floor": 3,
+          "at": "2:7",
+          "confidence": "verified",
+          "headline": "Citizens worth zero experience",
+          "text": "The announcement after the recap: nearly 40,000 different classes among just under 700,000 crawlers, a record. Potential sponsors may now put in early bids. And a general warning against violence toward non-combatant NPCs. It is not technically against the rules, but Borant wishes to keep the citizenry as safe as possible, so the experience counter for citizens is now zero and city guards get a slight boost in stats. Carl asks what that is about. Mordecai does not know."
+        },
+        {
+          "kind": "arc",
           "book": 2,
           "floor": 3,
           "at": "2:end",
           "confidence": "verified",
           "headline": "It burns a veto rather than pay",
           "text": "Eighty-three Celestial boxes are owed. Borant appeals, a Syndicate court overrules it, and it burns its one seasonal veto to void the prizes anyway, which has never been done this early. It is still liable for the one box that was opened before the appeal. A production company that cheap has seams worth looking for."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 33,
+          "floor": 5,
+          "at": "4:33",
+          "confidence": "verified",
+          "headline": "The bubble escape stays legal",
+          "text": "The day's announcement. After careful discussion, litigation Borant won, and input from the Syndicate, the bubble-escape method may continue. Some secondary summonings are now blocked: each escaping feral had a 66 percent chance of calling a matching deity, and one of the gods summoned would have been an extinction-level event for this floor and the next. Sponsorship bidding for the sixth floor stands at 33 percent of projections, and nobody wants it lower. Then some sixth-floor notes: specialisation on descent, and third-party tourists who will be hunting crawlers, their entry fees paid by an anonymous sponsor."
         },
         {
           "kind": "arc",
@@ -90,6 +130,45 @@
         },
         {
           "kind": "arc",
+          "book": 1,
+          "chapter": 4,
+          "floor": 1,
+          "at": "1:4",
+          "confidence": "verified",
+          "headline": "Seeded, then harvested",
+          "text": "There are six starter species the Syndicate uses to seed worlds, and humans are one of them. Find a compatible planet, sprinkle them on, wait a couple of thousand years, then reveal yourself to the largest settlement once there is a working government. That counts as first contact in the legal sense. Earth then had fifty years to claim itself as a sovereign entity, and first contact was several thousand years ago, around the time the pyramids went up. Earth defaulted. Borant has a backlog of worlds to mine, and this one's time has come."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 27,
+          "floor": 1,
+          "at": "1:27",
+          "confidence": "verified",
+          "headline": "Culture, planted in advance",
+          "text": "Carl wonders why alien pigs wear tuxedos. Brandon has already asked Mistress Tiatha about the fire-breathing monkeys in lederhosen, and passes on her answer, stopping halfway through the name with a glance at the ceiling: the Syndicate not only seeded Earth with people millions of years ago but kept people here the whole time, some of them humans from other worlds, steering culture, inventing things, writing books and songs that already existed elsewhere. Why, Brandon cannot say. They only see what they are shown."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 5,
+          "floor": 3,
+          "at": "2:5",
+          "confidence": "verified",
+          "headline": "The Indigenous Species Protection Act",
+          "text": "Both Earth boxes come with an Earth Hobby Potion, which, per subsection 1256-C of the Indigenous Species Protection Act, the Syndicate Government requires be awarded to all crawlers who have chosen a domestic class. It is optional, cannot be sold or transferred, and grants a random level-three Earth hobby. The AI's own description complains about the lawyers making it put their crap in. Carl wonders whether it is a bureaucratic attempt at preserving Earth culture, and is reminded of the military."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
+          "confidence": "verified",
+          "headline": "One veto a season",
+          "text": "The AI rules that Carl's detonator came through both precursor bursts; Borant appeals, and a Syndicate court overrules it, adding that the achievements from the explosion are just and must be paid. But Syndicate rules give every host a single veto each season, almost always saved for the tenth floor or deeper. Borant spends it on the third. The Syndicate also taxes every non-sponsored box, allowing only a handful of free Celestials a season, and an emergency session is now deciding whether Borant pays for the other eighty-two."
+        },
+        {
+          "kind": "arc",
           "book": 4,
           "chapter": 28,
           "floor": 5,
@@ -97,6 +176,15 @@
           "confidence": "verified",
           "headline": "Seven factions lose in court",
           "text": "Seven factions sue to take the Gate of the Feral Gods from Carl, naming him and the AI as co-defendants, and the Syndicate Court finds for the defence. He collects seven Fight the Power achievements, stock certificates, and photographs of the plaintiffs' mothers."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "floor": 5,
+          "at": "4:end",
+          "confidence": "verified",
+          "headline": "The Walk-On list",
+          "text": "Survivors on the surface are natives, and by the rules untouchable; their implants are scrambled once the crawl starts. So when producers want a particular native, a Walk-On list goes out, and bounty crews sneak onto a planet closed to non-natives to take them. It is not remotely legal. The Syndicate knows, rights groups complain, and nothing happens, though its security still patrols and still catches trespassers. This season's list includes a woman in the tropics, a little girl's father, a goat, a dead crawler's twin and a cat."
         },
         {
           "kind": "arc",
@@ -142,6 +230,15 @@
           "confidence": "verified",
           "headline": "Formally inaugurated",
           "text": "Party leadership goes to the highest stat total. Her first act with it is to rename the party after herself. On a show, a name the audience will repeat is not a joke — it is an asset."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
+          "confidence": "verified",
+          "headline": "Katia joins on air",
+          "text": "Odette brings the newest member of the Royal Court of Princess Donut out in front of the virtual crowd: Katia, who answers the first few questions in single words. Mongo gets a welcome back, squawks at the audience and curls up at Donut's feet. Behind them the court's levels go up on screen, all earned from an explosion that paid no prizes: Donut nineteen to twenty-six, Carl twenty-one to twenty-seven, Katia nine to twenty-one."
         },
         {
           "kind": "arc",
@@ -237,6 +334,66 @@
           "confidence": "verified",
           "headline": "The Ball of Swine",
           "text": "Brandon, Chris, Yolanda, Imani, Carl and Donut take it down out of the redoubt. Agatha is in the room for it, bleeding from the head and doing nothing, which still counts for experience."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 31,
+          "floor": 2,
+          "at": "1:31",
+          "confidence": "verified",
+          "headline": "Twenty-four stayed to sing",
+          "text": "Only six more residents come down from the Waffle House; twenty-four vote to stay and were singing when Brandon last saw them. The rest fill the French storm shelter. The plan is to send every resident down to the third floor early, since they cannot train, and the four staff are going with them rather than risk being split up. Brandon's boss box gives him a magic boomerang; Imani does not say what she gets. Then Chris, speaking for the second time, notices Agatha was edited out of their recap."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 38,
+          "floor": 2,
+          "at": "1:38",
+          "confidence": "verified",
+          "headline": "Jack, Yolanda, Randall",
+          "text": "One resident, who had had the rule explained to him, stands up on the train and relieves himself on the dungeon wall. Yolanda Martinez puts an arrow in his temple, too late to matter, and the rage elemental that rises out of the stain cuts through her and through Randall, thrown off the last car. A hundred feet away, Chris and Imani pull the others off their seats and throw them through a safe room door. Three are dead, and the train stays outside."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 41,
+          "floor": 2,
+          "at": "1:41",
+          "confidence": "verified",
+          "headline": "Thirty-six go down",
+          "text": "Forty minutes after the elemental dies, what is left of Meadow Lark follows the scorched trail to the stairwell: thirty-six residents in three shopping-cart contraptions built from Chopper wheels and hunks of wood. Chris and Imani push the two big people buckets; Brandon pushes six. Brandon hugs Carl goodbye. Imani is the last one down the ramp, and she waves, unsmiling. Donut asks whether they will see them again. Carl does not know."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 8,
+          "floor": 3,
+          "at": "2:8",
+          "confidence": "verified",
+          "headline": "Selection is slow going",
+          "text": "Brandon's message: selection is slow going. None of the residents can choose human without staying in their current condition, and there is pushback; those with cognitive issues have to pick some really weird races to stay viable. Brandon stayed human. Chris and Imani did not. Most residents are still level one, and for reaching the third floor without killing anything or dealing damage they are getting Legendary Pacifist Boxes, among a ton of others. Some may soon be more powerful than Imani. Mistress Tiatha thinks they are far from Carl."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 19,
+          "floor": 4,
+          "at": "3:19",
+          "confidence": "verified",
+          "headline": "Down the ghoul coaster to Trainyard D",
+          "text": "They ride the conveyor all the way to Trainyard D, where the gate is breached, and land in a yard full of ghouls. A running fight carries them to the Iron Tangle's administrative building outside the yard. Elle floats above the horde and freezes them by the hundreds until everything around the building is dead, then complains to Carl for five minutes about how little experience it paid. The ghouls that arrive afterwards ignore the building and walk straight back into the tunnels. Carl suggests the employee tunnel, on foot, to the nearest transfer station."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 20,
+          "floor": 5,
+          "at": "4:20",
+          "confidence": "verified",
+          "headline": "A cannon full of oil",
+          "text": "Word reaches Carl through the chat. Meadow Lark are down to the last castle in their bubble, and it is an air castle. The plan is a cannon that shoots oil into the sky, which will hopefully bring it down. If that does not work, Elle is going to use her new Graupel spell to crash the thing. Elsewhere Li Jun and Li Na's team are about to storm an underwater castle, the last in theirs."
         }
       ],
       "relations": []
@@ -264,6 +421,16 @@
       "beats": [
         {
           "kind": "origin",
+          "book": 1,
+          "chapter": 39,
+          "floor": 2,
+          "at": "1:39",
+          "confidence": "verified",
+          "headline": "Named on the recap",
+          "text": "A woman with a crossbow and an ever-growing crowd of female warriors, killing their way through the dungeon. They have named themselves Brynhild's Daughters. The leader is Hekla, and the announcer gives a short history of her home country, Iceland. The AI is throwing loot at her to fit the shieldmaiden persona, including a glittering breastplate better suited to the cover of a harem fantasy novel than to a dungeon. Donut thinks they should join up. Carl suspects he would not be welcome."
+        },
+        {
+          "kind": "origin",
           "book": 2,
           "chapter": 21,
           "floor": 3,
@@ -271,6 +438,26 @@
           "confidence": "verified",
           "headline": "They carry her as far as they can",
           "text": "A neighbourhood boss and a borough boss with Katia in tow, until the third floor scatters everyone on arrival and she is too far from the rest of them to share in the experience."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 21,
+          "floor": 4,
+          "at": "3:21",
+          "confidence": "verified",
+          "headline": "Thirty in the Royal Court's space",
+          "text": "Thirty of them, most around level twenty-five with Hekla at thirty-three, get through the employee portal at substation H after Sadie casts Glass Prison on its Kravyad. They hike to station sixty, find a switch there onto any of twelve Homeward Bound platforms, and turn up inside the Royal Court's personal space, because Katia holds a space attached to it and has whitelisted every one of them. Their own two combined spaces cannot take visitors until they buy a third. They ride to station sixty clinging to the outside of Carl's train."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 24,
+          "floor": 4,
+          "at": "3:24",
+          "confidence": "verified",
+          "headline": "Leaderless on a train",
+          "text": "With Hekla dead, party leadership passes automatically to Eva. People do not like Eva, and they start leaving. The Daughters have hardly any equipment and no personal space any more. Most of them share Hekla's sponsor, a crab ranch, which has never sent them anything. The healer Silfa came in with her own two daughters, the mages at the engine door, who had Hekla's orders to kill Carl first if anything went wrong. Brynhild's Daughters, as Silfa puts it, is no more."
         }
       ],
       "relations": []
@@ -294,6 +481,16 @@
           "confidence": "verified",
           "headline": "Named in the crown's warning",
           "text": "Every royal in the line must kill the Sultan and every other member of the family before descending to the tenth floor."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 43,
+          "floor": 2,
+          "at": "1:43",
+          "confidence": "verified",
+          "headline": "Usually the first of nine out",
+          "text": "A talk-show host with a family stake in the matter laughs at the idea that he is one of them. Do I look like a Naga to you? By his account the Blood Sultanate is almost always the first of the nine to be eliminated, and the cat wearing its crown has been dead since the moment she put it on. He means to be on the ninth floor this season himself, as War Leader of his own family's clan."
         },
         {
           "kind": "arc",
@@ -704,6 +901,16 @@
         },
         {
           "kind": "arc",
+          "book": 4,
+          "chapter": 14,
+          "floor": 5,
+          "at": "4:14",
+          "confidence": "verified",
+          "headline": "Algos, by celestial grenade",
+          "text": "The ball in Maggie My's hand is a celestial grenade: it summons the holder's god for sixty seconds and wraps the holder in Divine Intervention. Through Chris, relayed by Elle, comes where it came from. Maggie's sponsors are Prince Maestro and Crown Prince Stalwart, and so are Chris's. They sent her a scroll to choose a god, and Chris a box with a picture of Algos on it, so she knew which. Mordecai reads it as unofficial, a bribed one-on-one in a saferoom, and Algos as the god of pain: he would kill everyone in town in seconds."
+        },
+        {
+          "kind": "arc",
           "book": 5,
           "chapter": 15,
           "floor": 6,
@@ -836,6 +1043,25 @@
           "confidence": "verified",
           "headline": "One root vegetable",
           "text": "The Valtay Corporation sends a neural enhancer, which is exactly the sort of thing a corporation sends. The Network sends a single Toraline root vegetable. Mordecai has never seen the plant, and can only guess at what it is for: a potion, an explosive, an inside joke. It is listed as very rare and worth about as much as an old shirt."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 34,
+          "floor": 5,
+          "at": "4:34",
+          "confidence": "verified",
+          "headline": "The emergency platinum box",
+          "text": "An Emergency Platinum Benefactor Box from the Open Intellect Pacifist Action Network lands as a feral demon closes on the bowl. Mordecai reckons it cost more than the GDP of some star systems. Inside is one piece of glowing wicker: a head-throwing attachment made for Crawler Carl alone, inscribed with design approval from the Network's CEO. Carl's reading of it: a prize built for a coming floor, sent now because keeping him alive mattered more. He wonders aloud whether they sponsored a deity as well."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "floor": 5,
+          "at": "4:end",
+          "confidence": "verified",
+          "headline": "All in on him",
+          "text": "Behind the Network's money, a conversation. A woman asks how much they have spent, and Dr. Hu says it is best she does not know. They are going all in on Carl. She lists the risks: he is unstable, the Valtay are into everything, a civil war is coming. They should have sent instructions with the yam; half of it went on saving another crawler. He knows what it is really for, Hu says. Every time Carl goes on Odette's show, more people sign up. For his cause, she says. It is the same cause, Hu says. She calls him Porthus."
         },
         {
           "kind": "use",
@@ -1148,6 +1374,15 @@
         }
       ],
       "beats": [
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
+          "confidence": "verified",
+          "headline": "The season that lost money",
+          "text": "By Odette's account, more than 250 cycles ago the Blood Sultanate of the Naga ran the first crawl ever to lose money, and they are still recovering. That season also handed out eighteen Celestial boxes, the most in any one season before this crawl, and was cursed for other reasons she declines to get into. The Nagas have not run a season since. They keep a standing place only because they bought a permanent spot early on."
+        },
         {
           "kind": "origin",
           "book": 7,
@@ -1670,6 +1905,36 @@
       ],
       "beats": [
         {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 19,
+          "floor": 3,
+          "at": "2:19",
+          "confidence": "verified",
+          "headline": "A singer with a worm in her head",
+          "text": "Manasa, the cobra-headed pop star with the eighth-ranked single in the universe, died long ago; she contracted with the Valtay so that one of their parasites could keep her career going, and it is hotter than ever. On the panel she backs the Valtay's attempt to collect their debt from Borant. Then a pulse meant for Carl and Donut hits the trailer she swapped into, and she is gone. Their entertainment assets bring in more than their technology, Ripper says. Then the Valtay claim a dreadnought has destroyed Prince Stalwart's yacht."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 12,
+          "floor": 4,
+          "at": "3:12",
+          "confidence": "verified",
+          "headline": "A sponsor Borant cannot refuse",
+          "text": "The Admin notice arrives while Carl is still picking himself up beside the track: he has been sponsored, and viewers of his feed will now see his sponsor's advertisements. The sponsor is the Valtay Corporation. He answers Donut's question out loud with the name, then switches to chat: not a word about them out loud. Borant hates them; they are the ones trying to invade the Borant system, and they are the reason the show started when it did. Borant probably had no choice. It could mean good loot. It could mean Borant tries harder to get him killed."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 5,
+          "floor": 5,
+          "at": "4:5",
+          "confidence": "verified",
+          "headline": "Not shapeshifters at all",
+          "text": "Carl asks about the Valtay while Mordecai is explaining the local shapeshifters, and the answer is that they are not shapeshifters. They are a kind of creature called a Gondii. A Gondii enters a dead body within hours of death and reactivates it, reads its old memories, and can keep it running for centuries. Intellect Hunters do something similar, but their bodies begin to rot almost at once, so they are forever hopping. There is also something called an Infiltrator, which Mordecai calls much more insidious, and does not explain."
+        },
+        {
           "kind": "origin",
           "book": 4,
           "chapter": 8,
@@ -1678,6 +1943,26 @@
           "confidence": "verified",
           "headline": "A creditor with a seat at the table",
           "text": "A corporate system government inside the Syndicate, which is to say a company that is also a country and answers to neither description when it is inconvenient. Its people are parasites in the literal sense, riding the bodies of other races. It holds the Borant Corporation’s debt, and it sends a crawler a neural enhancer, which is the sort of gift that is also a note."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 19,
+          "floor": 5,
+          "at": "4:19",
+          "confidence": "verified",
+          "headline": "The liaison under the hood",
+          "text": "Orren, the Syndicate liaison who questions Carl over Loita's death, lets slip that the kua-tin intervened on the crawler's behalf and overruled his recommendation to remove him, and that the mudskippers are not known for recognising threats. If the rumors are correct and his own people take over after the next floor, he hopes they will listen to him. Then his hood slips. The swirling darkness is a face-shaped bowl of liquid, and in it Carl glimpses a worm. A Valtay worm."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 34,
+          "floor": 5,
+          "at": "4:34",
+          "confidence": "verified",
+          "headline": "An attorney for Borant",
+          "text": "A last-minute lawsuit tries to stop Carl's portal to the ninth floor, and its sole plaintiff is the Skull Empire. The Valtay, currently at odds with Borant, send an attorney to help Borant anyway, with an argument about Carl himself: he now owns stock in a company based in the Skull Empire, and a taxpayer not in arrears is treated differently, so the case belonged in a different court. It is dismissed. Neither the Valtay nor Borant is fond of the orcs."
         },
         {
           "kind": "arc",

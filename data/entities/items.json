@@ -71,6 +71,16 @@
           "text": "The mage's notes list times standing for places, all of them around the city of Larracos. Katia works out it could open onto the ninth floor — and Mordecai points out that crawlers cannot hop floors, so all that would accomplish is releasing whatever awful thing comes through when it shuts."
         },
         {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 26,
+          "floor": 5,
+          "at": "4:26",
+          "confidence": "verified",
+          "headline": "Locked, then released",
+          "text": "The moment Carl takes Henrik's body into his inventory, and the watch with it, the world freezes. An admin notice flashes past: three items are under an administrative lock while an appeal in the Syndicate court decides whether they are eligible. A second notice follows before the first has finished: lack of standing for all plaintiffs, lock removed, apologies for the inconvenience. Several someones would like the three pieces out of his hands. For now, they have lost."
+        },
+        {
           "kind": "use",
           "book": 4,
           "chapter": 28,
@@ -83,12 +93,32 @@
         {
           "kind": "use",
           "book": 4,
+          "chapter": 32,
+          "floor": 5,
+          "at": "4:32",
+          "confidence": "verified",
+          "headline": "Phase one, one bubble at a time",
+          "text": "The procedure. A bubble's survivors gather outside their own Desperado Club entrance. One of them goes in, takes the three pieces, comes out and dials the coordinates Katia has worked out; at these distances the portal opens in under a minute. Everyone steps through to Hump Town. The gatekeeper goes last, the gate closes, and a feral god appears in the bubble they have left. The gatekeeper goes back into the club and hands the pieces to the next in line. The first group comes through crying, they are so happy."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 33,
+          "floor": 5,
+          "at": "4:33",
+          "confidence": "verified",
+          "headline": "Phase two, and what got out",
+          "text": "Phase two runs the same way, on worlds less sure their other quadrants are empty, plus a few added late. By the end of it, about 1,500 crawlers are out. One feral too big for its bubble simply burst, and the bubble opened and poured the gore into the lacuna. Only two got loose out there: a turkey the size of Orthrus and a city-sized swarm of insects. Phase one called three deities and phase two five more; they did damage and went away. The gate comes back to Katia. Nobody tries to steal it."
+        },
+        {
+          "kind": "use",
+          "book": 4,
           "chapter": 34,
           "floor": 5,
           "at": "4:34",
           "confidence": "verified",
           "headline": "Larracos: water, charges and sharks",
-          "text": "The plan had been to open onto the Skull Empire army and put a feral god in the middle of it — the exact outcome the lawsuit was meant to prevent. He changes it at the last moment, keeps the artifact rather than spending it, and floods the faction market instead: ocean water, timed explosives and a frenzy of sharks, cutting the factions off from resupply. Juice Box goes through with the water."
+          "text": "The announced plan was to open onto the Skull Empire army and put a feral god in the middle of it — the exact outcome the lawsuit was meant to prevent. It was cover, planned for days. The winding box Chris throws is a fake; the real gate is with Katia in the water quadrant, and it floods the faction market instead: ocean water, timed explosives and a frenzy of sharks, cutting the factions off from resupply. Carl keeps the artifact rather than spending it. Juice Box goes through with the water."
         },
         {
           "kind": "use",
@@ -227,6 +257,16 @@
         },
         {
           "kind": "use",
+          "book": 1,
+          "chapter": 10,
+          "floor": 1,
+          "at": "1:10",
+          "confidence": "verified",
+          "headline": "Thirty steps",
+          "text": "The crown's fifteen per cent rides on every missile the cat fires. Every so often a Scatterer takes one to the face and comes away with Sepsis, and when that happens it turns and runs. It usually gets about thirty steps before it collapses, dead. The bad llama wore a debuff called Septic, pulsing over its ruined face: quicker than poison, unstackable, and cured by a simple healing spell or potion."
+        },
+        {
+          "kind": "use",
           "book": 2,
           "chapter": 25,
           "floor": 3,
@@ -299,6 +339,66 @@
           "confidence": "verified",
           "headline": "Introduced in the Iron Tangle",
           "text": "Carl picks it off Chaco's prize carousel as a joke book of chicken and goblin recipes, and it is not new: this is the twenty-fourth edition, first generated in the fifteenth season, and it has been passed from crawl to crawl, each owner adding a page for the next."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 13,
+          "floor": 4,
+          "at": "3:13",
+          "confidence": "verified",
+          "headline": "Forkith, for Barkith",
+          "text": "The bomb-making chapter keeps a thread of notes on madness satchels. Rosetta, ninth edition, found that an equipped backpack stopped them destabilising. Allister, thirteenth, notes the inventory delay she was working around is gone, though backpacks still hold. Forkith, twentieth edition, writes that they only slow it now; he found that out the hard way, and he asks whoever reads it to kill an enemy today in honor of his sister, Barkith, who was all he had left. What Carl takes from all of it is that backpacks are a thing."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 26,
+          "floor": 4,
+          "at": "3:26",
+          "confidence": "verified",
+          "headline": "Some NPCs come back",
+          "text": "A passage in the NPC chapter, from Crawler Azin of the seventeenth edition: some NPCs are indestructible and regenerate minutes after they are killed, which means they carry or know something big. A note from the twenty-second edition adds a story of tying one to the front of a shield, which the Nagas quietly patched the next day, and of a man who exploded and was reborn each time he was dragged out of his church. He knew the password to the safe holding the stairwell key. Carl remembers it at the Downward Dog, listening to a gnoll whose throat was ripped out."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 32,
+          "floor": 4,
+          "at": "3:32",
+          "confidence": "verified",
+          "headline": "Three kinds of summoning",
+          "text": "Deities get no chapter of their own, only notes in the miscellaneous one. Coolie, nineteenth edition: there are three kinds of summoning, the celestial boon, the indentured and the involuntary, which arrives untethered and smashes everything, and in Coolie's experience all three end with the summoner dead. Gods are invulnerable below the twelfth floor. Forkith, twentieth, adds that they still bleed, and prays to reach the twelfth to kill one for a sister, Barkith. Tin, twenty-first: gods are Soul Armor, worn by aliens like clothes, so a spell that strips biological armour could in theory strip the driver."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 3,
+          "floor": 5,
+          "at": "4:3",
+          "confidence": "verified",
+          "headline": "Keep it away from the market",
+          "text": "The new marketplace interface would finally put a price on everything in Carl's inventory, and the Cookbook warns against using it while carrying the Cookbook. Batbilge, twelfth edition, found the market values the tome as a unique heirloom at something like fifty million gold, and did not like giving a third party that kind of look into his inventory. Allister, thirteenth edition, added that this appears to be Batbilge's last entry, and that he leaves his cards on his bed whenever he trades. For Allister it took the form of a deck of cards. Carl plans to use his bedside table."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 18,
+          "floor": 5,
+          "at": "4:18",
+          "confidence": "verified",
+          "headline": "Coolie's last notes, and Carl's first",
+          "text": "Three notes by Crawler Coolie, nineteenth edition, run through the pages: a program on a ship in low orbit, its open window held by a forcefield; bugbear paste in his boots for the two admins on his next show; then failure. The admins were holos, the forcefield kept the ship whole, and he wrote as the air thinned, looking down at his planet, Qurux. Beneath them now sits a note from Crawler Carl, twenty-fifth edition: Coolie's passage helped plan the first step, and it was done for him and for a little girl named Bonnie. Then a second note, one word long. One."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 30,
+          "floor": 5,
+          "at": "4:30",
+          "confidence": "verified",
+          "headline": "Sinjin on worshipping a god",
+          "text": "Sinjin, fifteenth edition, worshipped the goddess Kuraokami and called it the worst decision ever. The rules: touch every kill with ice once a day. Five days running earns a boon. Miss one and she turns her back; miss two, a debuff; miss three and you fall from grace, with a fifty-fifty chance of being smote. Leaving voluntarily is an automatic smite. Her sponsor messaged him constantly. Then a note from Azin, seventeenth edition: that was Sinjin's last entry, a man in Azin's party had a blindness debuff made permanent by his god, and the advice is to stay away from gods."
         },
         {
           "kind": "use",
@@ -458,6 +558,26 @@
           "confidence": "verified",
           "headline": "She takes it out of his hand",
           "text": "It comes out of the Legendary Pet Box awarded for being the first crawler to bring a cat down the stairs. She snatches it, melts into a heap of furry goo, and gets up talking."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 45,
+          "floor": 2,
+          "at": "1:45",
+          "confidence": "verified",
+          "headline": "A biscuit per cage",
+          "text": "In the kobold fighting pits, a single biscuit tossed into a beaten danger dingo's cage turns its dot from red to white. Carl does it for all fourteen, over the cat's objection that it is her food. When a dying kobold opens the cages, the dingoes turn on their masters instead of on the crawlers, and the first one fed swallows the neighbourhood boss whole. That was the trick of the room."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 14,
+          "floor": 3,
+          "at": "2:14",
+          "confidence": "verified",
+          "headline": "Three biscuits, one herd",
+          "text": "The recap follows a crawler who entered with fifteen goats and has five left. She fed them three pet biscuits, and the third one went badly for several of the goats. Of the two that changed, one now walks upright in armor with a double-headed axe, screaming occasionally for no reason. The other is a hellspawn familiar: a horse-sized, pitch-black goat with glowing red eyes and six breasts. Mordecai rates hellspawn among the most powerful pets in the game, likely to sprout wings and grow to dragon size if kept alive."
         },
         {
           "kind": "use",
@@ -1188,6 +1308,16 @@
         },
         {
           "kind": "use",
+          "book": 3,
+          "chapter": 16,
+          "floor": 4,
+          "at": "3:16",
+          "confidence": "verified",
+          "headline": "Banger Spheres",
+          "text": "The close fighting on the trains has kept it mostly idle this floor. On the platform at 283, Carl loads a Banger Sphere, one of a few hundred baseball-sized balls of dwarven robot scrap he made at the engineering table; the system names only that size. The first catches a babababoon in the neck when he was aiming between the eyes. It dies anyway. He throws two more at the two mobs on the other side of the platform, and they die too."
+        },
+        {
+          "kind": "use",
           "book": 4,
           "chapter": 34,
           "floor": 5,
@@ -1430,6 +1560,16 @@
       "tagline": "A box bought for you by somebody who wants you to keep going, and rank for rank it beats anything the dungeon hands out on merit.",
       "beats": [
         {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 31,
+          "floor": 2,
+          "at": "1:31",
+          "confidence": "verified",
+          "headline": "Three patron spots, at auction",
+          "text": "Patronage changes this season. Every crawler is limited to three patrons, the spots auctioned for one day each at the start of the fourth, fifth and sixth floors, opening at one credit, so virtually every living crawler will have one. What a patron bids above the standard fee comes back as discounts on the boxes they send; bid below it and their boxes cost more. The more a patron pays, the more and better the Benefactor Boxes, and the higher a crawler's social numbers, the better the loot. Patrons may transfer from the seventh floor."
+        },
+        {
           "kind": "use",
           "book": 4,
           "chapter": 14,
@@ -1595,6 +1735,26 @@
           "confidence": "verified",
           "headline": "Steam, two wheels and a seat for royalty",
           "text": "Goblin-made, steam-driven, and assembled with an optimism the materials do not support. The sidecar is a bar, a single wheel on a colossal spring and a fur-lined orc skull for a seat, and Donut starts demanding changes to it the moment she has sat in it."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 21,
+          "floor": 1,
+          "at": "1:21",
+          "confidence": "verified",
+          "headline": "Three miles to a lump of coal",
+          "text": "Its first real run: east out of Seattle for hours, three or four miles to a lump of coal and perhaps twenty miles an hour. It has pedals and a throttle; the rider pumps up to speed and the throttle locks it there. The engine in the chassis runs hot enough that a man without pants rides with his legs held out. At Chopper Pilot five the throttle will go faster. The faster it goes, the tighter the fog of war closes in, and mobs twenty feet off the artery do not show until it stops."
+        },
+        {
+          "kind": "fate",
+          "book": 1,
+          "chapter": 40,
+          "floor": 2,
+          "at": "1:40",
+          "confidence": "verified",
+          "headline": "Into the stairwell",
+          "text": "Boiler breach imminent: fifteen seconds. The pilot cannot remember which valve releases the pressure, so he opens the throttle instead. The Goblin Copper Chopper hauls the Mother of All Bombs into the stairwell chamber, its trailer spraying oil across the floor, and goes over the edge of the hole without its riders, who jump. A crunch. A relatively small explosion. Black smoke billows out of the stairwell."
         }
       ],
       "relations": []

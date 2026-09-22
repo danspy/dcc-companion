@@ -84,6 +84,56 @@
         },
         {
           "kind": "arc",
+          "book": 1,
+          "chapter": 15,
+          "floor": 1,
+          "at": "1:15",
+          "confidence": "verified",
+          "headline": "The clock, from the other side",
+          "text": "The goblin shamanka Rory explains how a collapse looks to a mob. Mobs cannot leave their floor: start down the stairs and the body dissolves halfway, she has seen it. When the floor goes, only crawlers die. Mobs sleep until the next dungeon opens and wake to the same day. The promise is that one day they will wake deeper, and one day deep enough that crawlers never come, with peace and a place to raise their little ones. Kill the crawlers, get better at killing, and you get to go deeper. That is what they are told."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 26,
+          "floor": 1,
+          "at": "1:26",
+          "confidence": "verified",
+          "headline": "Two million, five hundred and fifty-two thousand",
+          "text": "The number on the screen reads 2,552,085. From thirteen million to this, in just under four days. Every one of those digits was somebody. The third episode spends its second half on five groups, among them Lucia Mar and a woman with a magical crossbow, who have found their stairwells already and are camping beside them, waiting for the clock to reach exactly six hours."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 31,
+          "floor": 2,
+          "at": "1:31",
+          "confidence": "verified",
+          "headline": "A third of the crawlers, in one rumble",
+          "text": "The first-floor timer runs out as the episode starts. The ground shakes for a second and the count drops from just over two million to 1,292,526: more than seven hundred thousand dead at once, a third of those left. The first floor took a little more than ten million. The second floor's clock resets to six days, because the count is below projections and six is the minimum the rules allow. Borant urges everyone to wait until the last possible moment to descend."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 2,
+          "floor": 3,
+          "at": "2:2",
+          "confidence": "verified",
+          "headline": "Eight days for the third",
+          "text": "Halfway through Carl's class selection the world rumbles: the second floor has collapsed. Just over 700,000 crawlers remain, and the third floor gets eight full days. Mordecai does the arithmetic out loud. If they keep this up, the sixth floor will be open only eleven or twelve days, where it is usually open for thirty, and the factions are going to be pissed."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 3,
+          "floor": 3,
+          "at": "2:3",
+          "confidence": "verified",
+          "headline": "Where the tourists are",
+          "text": "No tourists on the third floor, Mordecai says. Most of them are on the eighteenth, a billionaire's luxury retreat where the galaxy's rich and elite party, gamble and satiate their most base desires, and the one place where printed people may legally be used for the rest. Carl asks what happens if a crawler gets there. Nobody ever has, so nobody knows; the same goes for the fifteenth. Borant and the AI are required to have a plan."
+        },
+        {
+          "kind": "arc",
           "book": 8,
           "chapter": 98,
           "floor": 11,
@@ -140,6 +190,25 @@
         },
         {
           "kind": "arc",
+          "book": 3,
+          "chapter": 29,
+          "floor": 4,
+          "at": "3:29",
+          "confidence": "verified",
+          "headline": "Viewers may now read the chat",
+          "text": "The second-to-last message of the floor opens with pride in human tenacity: fewer deaths than expected, which has them rethinking how easy the next floor was going to be. Crawlers on the next floor will be scattered further apart, and only parties formed before the message began will travel together, so goodbyes are best said now. For a small fee, viewers may now subscribe to the private messages between crawlers, live the moment the message ends. And liquids may no longer be stored in an inventory unless they are in a container."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "floor": 4,
+          "at": "3:end",
+          "confidence": "verified",
+          "headline": "Fifty to one",
+          "text": "A Death Challenge is not a boss battle but a pop-up gambling event: viewers where betting is legal wager on outcomes general and specific, at odds the AI sets. It put Carl's survival at fifty to one, and plenty of viewers took the bet. Borant has filed an appeal against the odds, citing the AI's sluggishness in moving the spread; nobody yet knows how much it lost. Minutes after, a new snick, Carl's Naughty Little Piggie Goes to Market, is doing the rounds. The showrunners will not let it be shown."
+        },
+        {
+          "kind": "arc",
           "book": 8,
           "chapter": 89,
           "floor": 11,
@@ -178,6 +247,26 @@
           "text": "The third recap brings in a hundred and fifty armed men from Africa, and then a boss battle. Whole factions arrive in the story as segments."
         },
         {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 7,
+          "floor": 3,
+          "at": "2:7",
+          "confidence": "verified",
+          "headline": "Special Edition: the races",
+          "text": "A special edition shows what the favourite crawlers chose. First a demon-like city boss with crab pincers kills about forty crawlers in seconds. Then Hekla, a man who became a massive slug, a four-armed Kabaddi Raider, Carl, Donut, and Lucia Mar to close. Just about 80 per cent of crawlers have stayed human. A clip of an old Primal with wispy angel wings and a lightning sword, charging a twelfth-floor Divine Guardian, fades before the fight. Mordecai says he died a minute afterwards."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 14,
+          "floor": 3,
+          "at": "2:14",
+          "confidence": "verified",
+          "headline": "Fifteen seconds of Mongo",
+          "text": "The recap airs a fifteen-second montage of Mongo guarding a sleeping Donut, killing dozens of street urchins. Carl gets a few seconds and no explanation of how he got out of the circus: that scene belongs to the Vengeance of the Daughter production, Mordecai says, and anyone looking at Carl's numbers already knows. The same episode is following a crawler with an alligator head and a mag-fed shotgun that never seems to need reloading. Donut wants to know how he gets a T-shirt over that head."
+        },
+        {
           "kind": "use",
           "book": 3,
           "chapter": 3,
@@ -186,6 +275,26 @@
           "confidence": "verified",
           "headline": "The board, two hours in",
           "text": "Elle, Li Jun, Ifechi, Florin, Miriam, Prepotente, Hekla and Lucia, all in one broadcast. It is how the crawl keeps track of itself."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 25,
+          "floor": 4,
+          "at": "3:25",
+          "confidence": "verified",
+          "headline": "A tribute to Hekla",
+          "text": "The whole recap is a tribute to the death of Hekla. It opens on her walking in, in street clothes, fighting with a husband who looks twenty years older; she leaves him poisoned by a cactus and comes back to find rats eating him, and kills one with his rib for a Legendary Grrl Power box. It shows Eva killing the man who grabbed Katia, and Eva leaving character creation on the third floor while Katia was still transforming. Then the plough, and Katia killing Hekla, cut as rage at being used rather than an accident."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 17,
+          "floor": 5,
+          "at": "4:17",
+          "confidence": "verified",
+          "headline": "Wall climbers and an absence",
+          "text": "The recap features the fight on the falling house. Prepotente and Miriam Dom are as far along as Carl's party: they scaled their bubble's inner wall, sent every spider plummeting in its sleep, finished the subterranean zone with it, and are preparing to go underwater. Lucia Mar shatters a multi-limbed ice mummy and is working with a group. Quan Ch has already popped his bubble and is flying around farming every mob he can find. The top ten: Lucia Mar first, Carl second, Prepotente third, Donut fourth. Florin the crocodilian has dropped off it."
         },
         {
           "kind": "arc",
@@ -238,6 +347,26 @@
           "confidence": "verified",
           "headline": "Benefactor Boxes ignore the theme",
           "text": "Only patrons can send them, and they are the one kind that will produce a pulse rifle or powered armour in a fantasy dungeon. A Bronze Benefactor Box beats a plain Gold Adventurer Box."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 30,
+          "floor": 2,
+          "at": "1:30",
+          "confidence": "verified",
+          "headline": "Bully and a Thief",
+          "text": "The first-floor accounts settle in a French storm shelter. Borough Boss: top five per cent of crawlers, reward \"Yeah, no.\" Bully and a Thief, for taking the old woman's shopping cart: a Bronze Asshole's Box with five gold and three Desperado Club drink tickets, \"drink\" in quotation marks. Battlefield Construction: a Silver Mechanic's Box and a Goo-Inator 3000 that needs a workbench. You found stairs: the reward is being alive to read it. And for more than five kills in boss fights with bare feet, in the AI's sexy voice, a Platinum Shoe Box."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 13,
+          "floor": 3,
+          "at": "2:13",
+          "confidence": "verified",
+          "headline": "Hadji, and a casino chip",
+          "text": "Carl and Donut hit a quadrillion views among the first ten crawlers to do it, and each gets a Gold box whose contents the followers vote on, locked for thirty hours. The Hadji achievement, for finishing a quest an unusual way, lifts both their Gold Quest Boxes to Platinum: 5,000 gold each, a skill potion and fang caps for Donut, a Scroll of Upgrade for Carl. His Lucky Bastard box holds a 100,000 gold casino chip, playable only at the Desperado Club's tables. Donut earned the same survival achievement and got no box at all. Nobody knows why."
         },
         {
           "kind": "use",
@@ -351,6 +480,26 @@
           "confidence": "verified",
           "headline": "Entry is a tattoo",
           "text": "Carl and Donut are both branded with the Desperado Pass out of their Asshole Boxes in a first-floor safe room — his on the neck, hers on the right shoulder blade, glowing gold through the fur. Donut is appalled."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 15,
+          "floor": 3,
+          "at": "2:15",
+          "confidence": "verified",
+          "headline": "The members-only room",
+          "text": "The front room is for locals and crawlers still earning a pass. Past Clarabelle is the members' floor, and it sits on its own plane: every club location on the level opens into the same room, and a member leaves through the door they came in by. Most of the crowd are bots, one vanishing whenever a real visitor arrives. A drawn halo gives a privacy bubble. Doors lead to two brothels, a jobs room, the Silk Road market, and three unlit signs, one of them a casino that is not open yet."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 22,
+          "floor": 3,
+          "at": "2:22",
+          "confidence": "verified",
+          "headline": "The bait is a job at the club",
+          "text": "Burgundy worked in another settlement until city elves told her she could get a job at the Desperado Club, which had an entrance in this town. Everyone knows, she says, that working at the club brings a chance to descend, and maybe deeper, where it's safe. It was all a lie. Women who come to work at the club are the ones brought to Remex."
         },
         {
           "kind": "use",
@@ -478,6 +627,26 @@
           "confidence": "verified",
           "headline": "The bubbles are inhabited",
           "text": "The pocket worlds are not stage sets. A bubble holds Hump Town and its dromedarians on the sand, a castle of dirigible gnomes in the air, the Necropolis of Anser underneath, and every one of them was there and running before a crawler arrived."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 28,
+          "floor": 5,
+          "at": "4:28",
+          "confidence": "verified",
+          "headline": "A teacher who does not remember teaching",
+          "text": "Juice Box takes the news of Henrik's death sadly and then, strangely, happily. She tells Donut she has been dreaming of being a school teacher, and of people who came in and had to kill all of her students because the children were spreading a disease. In it she touched one of the killers, a dragon-headed man, and she can turn into one of his kind though she has never touched one awake. Louis tells her she might be remembering her last time in the dungeon. Donut has seen this before, with Fire Brandy and Tizquick."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 34,
+          "floor": 5,
+          "at": "4:34",
+          "confidence": "verified",
+          "headline": "Only NPCs",
+          "text": "Carl's accounting of the flood: innocent people killed today, a lot of them, but NPCs, and none of them former crawlers, who are too valuable to waste in a city razed every season. He tells himself he has spared them a bloody conflict that would have ended in their deaths anyway. The rule Zev quotes is what gives the flood its weight: new worker NPCs cannot be added once a level is created, so a drowned shopkeeper stays drowned. A distant part of him is alarmed at the attitude."
         },
         {
           "kind": "arc",
@@ -1307,6 +1476,16 @@
         {
           "kind": "origin",
           "book": 4,
+          "chapter": 9,
+          "floor": 5,
+          "at": "4:9",
+          "confidence": "verified",
+          "headline": "Anything marked with the word",
+          "text": "The word turns up on a dead goose, a neighborhood boss dropped out of a gnome plane in a broken egg, dead from the landing. Asked what it means, Mordecai does not know that creature specifically, but anything with feral in the name is usually bad news. Then it turns up again, in the description of a borough boss, as the name of an artifact buried in the necropolis under the bowl. Mordecai's advice holds: stay away from anything marked that. It is always bad news."
+        },
+        {
+          "kind": "origin",
+          "book": 4,
           "floor": 5,
           "at": "4:27",
           "confidence": "verified",
@@ -1730,6 +1909,16 @@
       ],
       "beats": [
         {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 9,
+          "floor": 3,
+          "at": "2:9",
+          "confidence": "verified",
+          "headline": "The programme has a name",
+          "text": "Carl has a hunch that Signet's storyline is a programme of its own. Mordecai's old friend Eklund, a game guide in the nearby town, supplies the name: Vengeance of the Daughter. Its producer is not yet taking Zev's calls. Mordecai's view of such things stands: a team of writers, very protective of their show, and an elite with thick plot armour at the centre of it."
+        },
+        {
           "kind": "origin",
           "book": 2,
           "chapter": 11,
@@ -1850,6 +2039,66 @@
         },
         {
           "kind": "arc",
+          "book": 1,
+          "chapter": 14,
+          "floor": 1,
+          "at": "1:14",
+          "confidence": "verified",
+          "headline": "Don't go down early",
+          "text": "After the premiere the staircases down to the next level begin to populate, with a warning attached. Once down, a crawler cannot come back up, and this season anyone who descends early is held in stasis until the collapse, out of sight while viewers lose interest and favorites drain away. The recommendation is to go down no earlier than six hours before the floor collapses; inside that window there is no stasis, and a head start over everyone already frozen at the bottom."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 21,
+          "floor": 1,
+          "at": "1:21",
+          "confidence": "verified",
+          "headline": "At the centre of a spiral",
+          "text": "The first stairwell down after a day's drive sits at the heart of a great round maze, and something rolls around its rings fast enough to shake the walls: pink, fleshy, as tall as the hallway, stinking of sewage. Mordecai had said the bosses would not guard stairwells until the fourth floor. The graffiti left by whoever got here first says otherwise: this road is safe, do not go deeper, or you activate the borough boss."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 40,
+          "floor": 2,
+          "at": "1:40",
+          "confidence": "verified",
+          "headline": "Mobs do not go down",
+          "text": "A goblin shamanka told them once: mobs that climb down the stairs dissolve halfway. The guide said the same. So a level-93 rage elemental, which nobody here can kill, is lured across an oil slick into a stairwell hole, and the dungeon follows its own rules. The elemental dissolves with its health already in the red and a bomb going off beside it. Nobody is credited with the kill, and nobody gets the experience."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 44,
+          "floor": 2,
+          "at": "1:44",
+          "confidence": "verified",
+          "headline": "The stairwell rule is patched",
+          "text": "The exploit gets its own paragraph in the next announcement. Yes, everyone just watched that rule get exploited on the recap. It was very clever and very exciting. It is not going to happen again. Effective immediately, any non-sapient mob that happens upon a stairwell will not be disintegrated. The same message says game guides may now explain the third floor's race and class selection."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 12,
+          "floor": 3,
+          "at": "2:12",
+          "confidence": "verified",
+          "headline": "Under the circus",
+          "text": "By morning the circus tents are gone, and so are the corpses and whatever a city boss might have dropped. In their place, in the middle of the park, is a staircase down to the fourth floor. It never showed on the map before, not even as one they could not reach, the way the Ball of Swine's did. Mordecai says many stairwells from here down only become visible once a quest is completed. This one had probably been sitting under Grimaldi the whole time."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 25,
+          "floor": 3,
+          "at": "2:25",
+          "confidence": "verified",
+          "headline": "Mind the gap",
+          "text": "This one sits three kilometres east of the settlement in a small, decrepit building, and with the saferooms shut and the Desperado Club's back room sealed, it is the only way out of the blast. Crawlers have been leaving notes in the bars with stairwell locations. A floor ends for whoever goes down the moment they pull the handle at the bottom. The door there carries the usual oversized carving, and its properties read: Entrance to the fourth floor. This is where the real fun begins. Mind the gap."
+        },
+        {
+          "kind": "arc",
           "book": 6,
           "chapter": 61,
           "floor": 8,
@@ -1880,6 +2129,16 @@
           "confidence": "verified",
           "headline": "Bolts from the eyes of a Persian",
           "text": "Bolts of energy leave the caster’s eyes one after another, and the resemblance to a film about spaceships is close enough that nobody bothers to pretend otherwise. Princess Donut works it out for herself once Mordecai has switched her menus on, and from that point the question is never whether she will fire, only at what."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 23,
+          "floor": 1,
+          "at": "1:23",
+          "confidence": "verified",
+          "headline": "Three to six",
+          "text": "At level five the spell lets the caster choose how much mana goes into each bolt, from three to six. At an intelligence of twenty-four that is eight missiles at three a piece, or a smaller number of bigger ones. A six leaves a level-two troglodyte a burnt-out husk. The man points out that a three would have done it. The cat's position is that anything about to bite her face off is getting a six."
         }
       ],
       "relations": []
@@ -1903,6 +2162,36 @@
           "confidence": "verified",
           "headline": "Green on a map that is otherwise unlit",
           "text": "They sit throughout the dungeon and they show green on the minimap, which makes them the only honest thing on it. Inside there is food, a row of closet-sized rooms to sleep in, and three screens over the counter counting down to the collapse and to the premiere of the show. Each has a caretaker behind the counter."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 30,
+          "floor": 2,
+          "at": "1:30",
+          "confidence": "verified",
+          "headline": "A storm shelter with a mailbox",
+          "text": "Not every one is a restaurant. The first safe room on the second floor is a cavernous storm shelter with French signs on the restrooms, about fifty dusty cots and no Bopca: no food, no cookies, no vending machine, only bathrooms, showers and sinks, and screens on the far wall. By the screens is a black suburban mailbox on a pole, red flag and all. Carl tries the door and gets an error: Why would someone send you mail? It opens for the cat."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 39,
+          "floor": 2,
+          "at": "1:39",
+          "confidence": "verified",
+          "headline": "Closed an hour early",
+          "text": "Too many crawlers camped in safe rooms when the first floor collapsed, so the rule changes. All safe rooms and safe areas now close one hour before a floor collapses, and any crawler inside is teleported to just outside. A new timer appears under the collapse countdown, one hour faster. In a chicken restaurant full of the elderly, with a rage elemental hammering at the door, Carl and Brandon look at each other and think the same thing: it is time to give it up."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 4,
+          "floor": 3,
+          "at": "2:4",
+          "confidence": "verified",
+          "headline": "The Belly-Rubbed Pug",
+          "text": "On the third floor the saferooms are inns. This one is a renaissance-fair pub at the end of a dead-end alley, a pug in a top hat on the sign, the three screens as before and a Bopca called Gordo behind the counter. The sleeping rooms, only five of them, now cost ten gold a night, and the food costs money too. Mordecai teleports in with his trousers round his knees, addressing two girls and a grandma who are not there, vomits, sits in it, and passes out. Gordo's verdict: \"You two are so dead.\""
         },
         {
           "kind": "arc",
@@ -1965,6 +2254,26 @@
           "confidence": "verified",
           "headline": "The protector behind the counter",
           "text": "Magical, gnome-like, hairy, and posted to watch over safe rooms. They do everything from scrubbing the toilets to cooking the food; they are surly, they are smelly, and they never wash their hands. The first one they meet is called Tally."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 14,
+          "floor": 1,
+          "at": "1:14",
+          "confidence": "verified",
+          "headline": "They came, and Tally went",
+          "text": "Tally comes out from behind the counter to watch the premiere at the booth, and he does not like last season. The other corporation broke people into groups and told them their loved ones would be safe if they killed the others. The loved ones were safe, he says, and not safe; that company saps a planet dry and leaves it without air. Borant at least gives people a chance. He was never a crawler. Sometimes they offer to take people instead of mining a world. They came, and he went. Very long ago."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 26,
+          "floor": 1,
+          "at": "1:26",
+          "confidence": "verified",
+          "headline": "Sebastian and the hairbrush",
+          "text": "The Peruvian Taco Bell has a Protector named Sebastian, level twenty-one, and a cat with a charisma of forty-one walks in and he is lost. The man gets a Peruvian beer and a T-bone steak. The cat gets the Protector: he sits beside her through the third episode brushing her hair with one of his own brushes, which he gave her after her third shower."
         }
       ],
       "relations": []
@@ -1988,6 +2297,26 @@
           "confidence": "verified",
           "headline": "Janitor duty",
           "text": "On the second floor the rats are yesterday’s news and the grubs are the janitors. The more monsters killed in an area, the more the grubs eat; the more they eat, the bigger they get. Grubs are easy to kill. Once they turn up in the pupa stage, move on, because their older siblings are not."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 37,
+          "floor": 2,
+          "at": "1:37",
+          "confidence": "verified",
+          "headline": "Five thousand to a quadrant",
+          "text": "A guildmaster checks his menu and confirms it: they are being spawned. The system is making anywhere from one to fifteen grubs whenever a corpse is created, with no janitor mobs nearby, and with no corpses about they hunt crawlers instead. The seven hundred and fifty fried in a boss's cage count. Dead grubs make more grubs. There is a cap of five thousand per quadrant, and Carl and Donut have already hit it. The level twos neither bite nor give experience. They squeak, they wriggle, and they eat their own dead."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 44,
+          "floor": 2,
+          "at": "1:44",
+          "confidence": "verified",
+          "headline": "Half as many hornets",
+          "text": "The System AI decides the Brindled Vespas are proliferating too aggressively and halves the number in the dungeon. Their spitting acid is adjusted down. Slightly. New grubs keep generating whenever a corpse is created, but each now has only a fifty percent chance of reaching the pupa stage. On the same recap, Lucia Mar smashes a vespa to pieces with her mace while its acid sizzles two inches from her head, on a personal shield."
         }
       ],
       "relations": []
@@ -2011,6 +2340,16 @@
           "confidence": "verified",
           "headline": "Three of something there was one of",
           "text": "Cast on a pet or a minion, the target splits into three. The copies are real, look right and act with minds of their own, and after a minute they fall apart into gears and servos and go up in smoke. Donut learns it from a spellbook the same evening her Earth box turns up a cat tree and a scented candle, which is roughly the level of seriousness the dungeon brings to its gifts."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 21,
+          "floor": 3,
+          "at": "2:21",
+          "confidence": "verified",
+          "headline": "Two Mongos and a bloody letter",
+          "text": "On a roof across the alley from the magistrate's building, Donut casts it on Mongo and pulls the original back into his carrier. The two copies squeak their disappointment and then do the work. One swallows the Mysterious Letter, which carries a lich's eavesdropping spell, and the pair leap across the alley and up a full story to the magistrate's roof, howling. Anyone listening through the letter should now place the crawlers overhead. Carl had not believed they could jump that far. The real party is crouched a building away when he presses the detonator."
         }
       ],
       "relations": []
@@ -2034,6 +2373,16 @@
           "confidence": "verified",
           "headline": "They are waiting when the doors open",
           "text": "The commonest ghoul on the line, and by the System’s own account the most tractable of them, which says more about the others than it does about these. The court meets its first pair in the first minutes on the new floor, by diving into their train car to escape a flood of Drek babies, before anyone has established what the rules of the place are."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 15,
+          "floor": 4,
+          "at": "3:15",
+          "confidence": "verified",
+          "headline": "Swarming the wreckage",
+          "text": "At the bottom of the pit above Abyss Station lie thousands of crashed train cars and hundreds of fires, and the janitor ghouls are down there, swarming the debris like ants. Train after train bursts from the portals in the walls and tumbles in on top of them. None of them has an engine car."
         }
       ],
       "relations": []

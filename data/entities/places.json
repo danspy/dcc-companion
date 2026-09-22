@@ -42,7 +42,7 @@
           "at": "4:34",
           "confidence": "verified",
           "headline": "The water goes down the hole",
-          "text": "The plan was never a feral god. The Gate opens in the water quadrant, and a bubble's ocean, a load of timed charges and a feeding frenzy of sharks pour through it into Larracos's faction market. The merchants and mercenaries below the NPC residences go under, the Desperado Club's entrance bar with them, and Juice Box flies for the city ahead of the flood."
+          "text": "The plan was never a feral god. The Gate opens in the water quadrant, and a bubble's ocean, a load of timed charges and a feeding frenzy of sharks pour through it into Larracos's faction market. By Katia's math more than half of the inverted city is under water by the time the gate closes; only the upper levels, the NPC residences, are spared. Zev warns that the markets, the mercenaries and the Desperado Club's entrance bar are all down there. Juice Box flies for the gate and goes through with the water."
         },
         {
           "kind": "arc",
@@ -563,6 +563,16 @@
           "text": "The word arrives the way most of the dungeon's cosmology does: buried in an item description. A Sheol Glass Reaper Case is half of what makes an explosion large enough to rattle the teeth of a god. The case's own description says it was forged in the fires of Sheol, the mysterious fifteenth level of the World Dungeon, and nobody asks what that means."
         },
         {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 14,
+          "floor": 4,
+          "at": "3:14",
+          "confidence": "verified",
+          "headline": "Bricks in the cab",
+          "text": "The box at the back of the Nightmare Express's cab holds about fifty Sheol Bricks. The item description promises not to say where they come from, then admits it: it is a baby corpse. The stoker's own description has the arithmetic. A Lesser Demon's labour runs about sixty days and delivers fifteen to eighteen thousand young, one in ten thousand viable; the rest harden into fuel that burns long and hot. Carl drops the first brick and wipes his hand on his cloak. Then he takes the whole box into his inventory."
+        },
+        {
           "kind": "use",
           "book": 6,
           "chapter": 54,
@@ -649,6 +659,16 @@
           "confidence": "verified",
           "headline": "The switch nobody is meant to take",
           "text": "The named trains run their loops until they reach a set of three switches, and only one of them leads here. Getting to it means reading the network, or else noticing that the souvenir conductor hat handed out at the start of the floor is one of the keys, which is the sort of joke the fourth floor keeps making."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 17,
+          "floor": 4,
+          "at": "3:17",
+          "confidence": "verified",
+          "headline": "A yard given up to ghouls",
+          "text": "Station and Repair Hub E is not coping. The DTs have been turning mobs into Festering Ghouls born knowing how to get here, and thousands have arrived, pushing the fence back and forth. According to Widget, someone cheaped out combining two systems: the ghouls were meant to be caged and conveyed onward, the cages broke, and too many came at once. The staff are about to abandon the yard for Yard A. Then a section of the great wall collapses, and the ghouls surge out of the enclosure toward the conductor staging area beyond it."
         }
       ],
       "relations": []
@@ -675,6 +695,26 @@
           "confidence": "verified",
           "headline": "The castle is the aircraft",
           "text": "The flying home of the dirigible gnomes and a heavily armed military platform, and there is no seam between the two. It holds the air quadrant of the bubble, and the stairs down sit inside it, which settles what anyone wanting to leave the floor is going to have to do about it."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 11,
+          "floor": 5,
+          "at": "4:11",
+          "confidence": "verified",
+          "headline": "Sky garden, renamed dreadnaught",
+          "text": "The Vahana, the black-and-gold striped Gnomish Legate Balloon that comes down to parley, is perhaps the oldest vehicle left aboard the Wasteland, and its description tells the gnomes' side. They once took to the skies hoping to stay out of this world's wars as neutral peacekeepers, and a Legate balloon on the horizon meant ambassadors and perhaps peace. Then winged predators came through a mysterious portal and would share the sky with nobody. The balloons were mostly dismantled and sewn into the settlements' defences, and the flying communities changed their name from sky garden to dreadnaught."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 16,
+          "floor": 5,
+          "at": "4:16",
+          "confidence": "verified",
+          "headline": "The air quadrant liberated",
+          "text": "The last piece of the Wasteland comes down in a hurry and stops just short. With Denise dead in the kitchen's garbage disposal, the Commandant's quarters count as occupied, and a bubble notification congratulates crawlers Princess Donut and Carl on taking the throne room. The Air Quadrant is liberated, and every crawler who started there may now travel freely into the other quadrants. Then the house bumps gently onto the ground."
         }
       ],
       "relations": []
