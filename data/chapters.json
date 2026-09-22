@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2026-09-07T14:07:04.187Z",
+  "generatedAt": "2026-09-22T17:57:26.479Z",
   "source": "https://dungeon-crawler-carl.fandom.com/wiki/Chapters",
+  "numbering": "Ace/Penguin edition — see scripts/lib/edition.mjs",
   "books": [
     {
       "book": 1,
@@ -177,7 +178,7 @@
     },
     {
       "book": 5,
-      "count": 77,
+      "count": 75,
       "gaps": [],
       "divisions": [
         "Epilogue"

@@ -24,6 +24,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { parseAt } from './lib/gate.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { toEdition } from './lib/edition.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://dungeon-crawler-carl.fandom.com/api.php';
@@ -72,8 +73,9 @@ async function wikitexts(titles) {
 
 /* Markup down to prose. Citations are pulled out before the strip, because they
    are the only thing on the page that says when an award may be shown. */
+/* The wiki cites its own chapter numbers; this site counts in the edition's. */
 const cites = t => [...t.matchAll(/\{\{(?:cite|ref)\|(\d+)\|(\d+)\}\}/g)]
-  .map(m => ({ book: +m[1], chapter: +m[2] }));
+  .map(m => ({ book: +m[1], chapter: toEdition(+m[1], +m[2]) }));
 
 function clean(t) {
   let s = t;

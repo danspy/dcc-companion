@@ -151,16 +151,16 @@
       "name": "A hundred and twenty thousand children",
       "aka": [],
       "role": "Opened on floor 6",
-      "revealedAt": "5:71",
+      "revealedAt": "5:69",
       "sort": 5,
       "tagline": "Lucia Mar is carrying them. Nobody has said what for.",
       "beats": [
         {
           "kind": "origin",
           "book": 5,
-          "chapter": 71,
+          "chapter": 69,
           "floor": 6,
-          "at": "5:71",
+          "at": "5:69",
           "confidence": "verified",
           "headline": "More than one voice in there",
           "text": "Florin says there are several presences in her head, other children among them, and that the dog is the key to it."

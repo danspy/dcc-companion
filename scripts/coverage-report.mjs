@@ -3,7 +3,7 @@
    
    Counts every name in the Fandom wiki categories you name (--cat=, default
    Characters) against
-   the 474 chapter summaries in data/index/summaries.json, then reports the ones
+   the chapter summaries in data/index/summaries.json, then reports the ones
    that come up often and have no entity yet. Frequency is a proxy for weight, so
    this is the queue: work down it, don't guess.
    

@@ -19,6 +19,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { toEdition, editionCount, unsummarised } from './lib/edition.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://dungeon-crawler-carl.fandom.com/api.php';
@@ -85,15 +86,18 @@ const chapters = [];
 const summaries = [];
 
 for (let book = 1; book <= BOOKS; book++) {
-  const rows = parseChapters(await wikitext(`Book ${book} Chapter Summaries`));
+  /* Renumbered into the edition's chapters on the way in; the wiki's own number
+     is kept on each summary row so a merged chapter still shows both halves. */
+  const rows = parseChapters(await wikitext(`Book ${book} Chapter Summaries`))
+    .map(r => r.kind === 'chapter' ? { ...r, wikiChapter: r.chapter, chapter: toEdition(book, r.chapter) } : r);
   const numbered = rows.filter(r => r.kind === 'chapter');
   const divisions = rows.filter(r => r.kind === 'division');
   if (!numbered.length) throw new Error(`book ${book}: parsed no chapters — the table format changed`);
 
   const nums = numbered.map(r => r.chapter);
-  const count = Math.max(...nums);
+  const count = editionCount(book, Math.max(...nums));
   const gaps = [];
-  for (let c = 1; c <= count; c++) if (!nums.includes(c)) gaps.push(c);
+  for (let c = 1; c <= count; c++) if (!nums.includes(c) && !unsummarised(book).includes(c)) gaps.push(c);
 
   chapters.push({
     book,
@@ -116,7 +120,8 @@ for (let book = 1; book <= BOOKS; book++) {
 mkdirSync(join(root, 'data/index'), { recursive: true });
 writeFileSync(join(root, 'data/chapters.json'),
   JSON.stringify({ generatedAt: new Date().toISOString(), source:
-    'https://dungeon-crawler-carl.fandom.com/wiki/Chapters', books: chapters }, null, 2) + '\n');
+    'https://dungeon-crawler-carl.fandom.com/wiki/Chapters',
+    numbering: 'Ace/Penguin edition — see scripts/lib/edition.mjs', books: chapters }, null, 2) + '\n');
 writeFileSync(join(root, 'data/index/summaries.json'),
   JSON.stringify({ generatedAt: new Date().toISOString(), books: summaries }, null, 2) + '\n');
 

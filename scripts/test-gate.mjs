@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { parseAt, describeAt, bookOf, END_OF_BOOK, CHAPTER_STRIDE } from './lib/gate.mjs';
 import { lint } from './lib/lint.mjs';
 import { entityVoice, beatVoice, VOICES } from './lib/voice.mjs';
+import { toEdition, editionCount, unsummarised, tagToEdition } from './lib/edition.mjs';
 
 test('reveal tags parse to a total order', () => {
   assert.equal(parseAt('4'), 4000);
@@ -729,4 +730,23 @@ test('the award filter matches at word starts, and the chips are a tier ladder',
   assert.equal(tierOf(null), null);
   assert.deepEqual([...BOX_TIERS], ['Bronze','Silver','Gold','Platinum','Legendary','Celestial'],
     'rarest last, the ladder the books use');
+});
+
+test('book 5 counts in the edition\'s chapters, and the map never runs backwards', () => {
+  assert.equal(editionCount(5, 77), 75);
+  assert.equal(editionCount(4, 34), 34);
+  let prev = 0;
+  const hit = new Set();
+  for (let c = 1; c <= 77; c++) {
+    const e = toEdition(5, c);
+    assert.ok(e >= prev, `wiki 5:${c} maps to ${e}, before ${prev}`);
+    assert.ok(e >= 1 && e <= 75);
+    prev = e; hit.add(e);
+  }
+  // every edition chapter is either reached or declared as having no summary
+  for (let c = 1; c <= 75; c++) assert.ok(hit.has(c) || unsummarised(5).includes(c), `5:${c} unreachable`);
+  assert.equal(tagToEdition('5:77'), '5:75');
+  assert.equal(tagToEdition('5:end'), '5:end');
+  assert.equal(tagToEdition('5'), '5');
+  assert.equal(tagToEdition('6:77'), '6:77');
 });

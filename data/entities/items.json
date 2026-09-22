@@ -413,7 +413,7 @@
       "name": "Memorial Crystal",
       "aka": [],
       "role": "Remains",
-      "revealedAt": "5:69",
+      "revealedAt": "5:67",
       "sort": 8,
       "tagline": "What is left of someone when the dungeon is finished with them, and worth stealing.",
       "description": [
@@ -432,9 +432,9 @@
         {
           "kind": "use",
           "book": 5,
-          "chapter": 77,
+          "chapter": 75,
           "floor": 6,
-          "at": "5:77",
+          "at": "5:75",
           "confidence": "verified",
           "headline": "Taken off Imogen",
           "text": "Someone named Osvaldo takes hers, and Prepotente goes after him for it."

@@ -778,7 +778,7 @@
         {
           "to": "signet",
           "kind": "race-of",
-          "at": "5:66"
+          "at": "5:64"
         }
       ]
     },
@@ -788,11 +788,11 @@
       "name": "Faction Wars",
       "aka": [],
       "role": "Floor event · ninth floor",
-      "revealedAt": "5:77",
+      "revealedAt": "5:75",
       "sort": 40,
       "tagline": [
         {
-          "at": "5:77",
+          "at": "5:75",
           "text": "Nine armies, bought and paid for by people who will never stand in one of them, fight for the castle at the bottom of the ninth floor's funnel city. Crawlers are meant to keep their heads down and let it pass over."
         },
         {
@@ -804,9 +804,9 @@
         {
           "kind": "origin",
           "book": 5,
-          "chapter": 77,
+          "chapter": 75,
           "floor": 6,
-          "at": "5:77",
+          "at": "5:75",
           "confidence": "verified",
           "headline": "Two of the slots change hands",
           "text": "Carl and Donut are notified that their team is in. Donut's fan club and Princess D'Nadia between them secured two of the nine spots, and no crawler team has ever held one. Carl spends his airtime telling the watching galaxy that the teams can vote the ninth floor's safety protocols off, and telling anyone out there with a say in what their own government does to use it. The feed is cut."
@@ -856,17 +856,17 @@
         {
           "to": "the-syndicate",
           "kind": "owned-by",
-          "at": "5:77"
+          "at": "5:75"
         },
         {
           "to": "dungeon-crawler-world",
           "kind": "subject-of",
-          "at": "5:77"
+          "at": "5:75"
         },
         {
           "to": "blood-sultanate",
           "kind": "member",
-          "at": "5:77"
+          "at": "5:75"
         },
         {
           "to": "juice-box",
@@ -886,7 +886,7 @@
       "name": "Protections",
       "aka": [],
       "role": "Rules",
-      "revealedAt": "5:77",
+      "revealedAt": "5:75",
       "sort": 41,
       "tagline": "The System keeps part of a covered person's health in reserve and lifts them out of the world before it runs out. They feel every bit of the pain and none of the consequence.",
       "beats": [
@@ -894,7 +894,7 @@
           "kind": "origin",
           "book": 5,
           "floor": 6,
-          "at": "5:77",
+          "at": "5:75",
           "confidence": "verified",
           "headline": "Who is covered",
           "text": "The show's employees, its tourists and a certain grade of NPC. Being cut down while covered is not dying; it is being lifted off the board and set down somewhere expensive. Borant declines to switch the coverage on for the earliest floors as a saving, which is why a liaison walks those floors in a padded suit."
@@ -902,9 +902,9 @@
         {
           "kind": "arc",
           "book": 5,
-          "chapter": 77,
+          "chapter": 75,
           "floor": 6,
-          "at": "5:77",
+          "at": "5:75",
           "confidence": "verified",
           "headline": "Carl puts it to the audience",
           "text": "On air, in the last minutes before production cuts the feed, he tells the watching galaxy that the teams on the ninth floor can vote the safety protocols off, and that anyone with a say in what their government does should go and use it."
@@ -944,12 +944,12 @@
         {
           "to": "borant-corporation",
           "kind": "owned-by",
-          "at": "5:77"
+          "at": "5:75"
         },
         {
           "to": "system-ai",
           "kind": "administered-by",
-          "at": "5:77"
+          "at": "5:75"
         },
         {
           "to": "no-respawns",
@@ -1232,9 +1232,9 @@
         {
           "kind": "arc",
           "book": 5,
-          "chapter": 75,
+          "chapter": 73,
           "floor": 6,
-          "at": "5:75",
+          "at": "5:73",
           "confidence": "verified",
           "headline": "It was never about the town",
           "text": "Donut spends an I Take It All Back potion on Kiwi and turns her back into an Ursine, and Tina recognises her mother. The raids were a daughter looking for a parent the ursines lost when Scolopendra came through. The quest closes on that."
@@ -1249,12 +1249,12 @@
         {
           "to": "princess-donut",
           "kind": "resolves",
-          "at": "5:75"
+          "at": "5:73"
         },
         {
           "to": "scolopendra",
           "kind": "concerns",
-          "at": "5:75"
+          "at": "5:73"
         }
       ]
     },
@@ -1427,7 +1427,7 @@
           "text": "A Syndicate drama serial shot inside the dungeon. A circus, a murdered mother, an exiled tsarina, and a guest slot with Carl's name on it."
         },
         {
-          "at": "5:73",
+          "at": "5:71",
           "text": "The grief is real and the schedule is not. Someone outside the floor decides when she mourns, and whether it rates."
         },
         {
@@ -1469,9 +1469,9 @@
         {
           "kind": "arc",
           "book": 5,
-          "chapter": 76,
+          "chapter": 74,
           "floor": 6,
-          "at": "5:76",
+          "at": "5:74",
           "confidence": "verified",
           "headline": "The second act closes",
           "text": "A boss battle with crawlers, hunters, the queen and a goddess all in the same room. The high elves do not survive it. Imogen goes down, and the second season is complete."

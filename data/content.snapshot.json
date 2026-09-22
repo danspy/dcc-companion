@@ -202,7 +202,7 @@
       "slug": "the-butchers-masquerade",
       "title": "The Butcher's Masquerade",
       "published": "2022-02-19",
-      "chapters": 77,
+      "chapters": 75,
       "pages": null,
       "blurb": "Wealthy aliens buy licences to hunt crawlers for sport. Carl's answer is to hunt them back, on camera.",
       "divisions": [
@@ -641,8 +641,8 @@
           "text": "A murdered mother, a crown taken by the Confederacy, and exile from both halves of my blood. Grimaldi's circus took me in. Everything I have goes to the family that did."
         },
         {
-          "at": "5:73",
-          "sortKey": 5073,
+          "at": "5:71",
+          "sortKey": 5071,
           "text": "It is a programme. My mother's murder, my exile, my vengeance, all of it arranged for an audience across the galaxy, with someone outside deciding when I grieve and whether it rates."
         }
       ],
@@ -933,8 +933,8 @@
           "text": "Florin. Ifechi and I are running together. Apparently I'm on the recap tonight, which means somebody out there is watching me. That's fine. Watch."
         },
         {
-          "at": "5:71",
-          "sortKey": 5071,
+          "at": "5:69",
+          "sortKey": 5069,
           "text": "There is more than one of her in that head, and some of them are children. Whatever the dog is, it is the middle of this."
         }
       ],
@@ -961,8 +961,8 @@
           "text": "I was on the first episode. Now I'm looking for the cat and the man. Only them."
         },
         {
-          "at": "5:71",
-          "sortKey": 5071,
+          "at": "5:69",
+          "sortKey": 5069,
           "text": "I'm still looking for the cat. We are. There is more than one of us in here."
         },
         {
@@ -1292,8 +1292,8 @@
           "text": "Britney. Vadim and me, out of the desert and in with Carl's lot. Two more bodies. That's what we are right now, and that's fine."
         },
         {
-          "at": "5:77",
-          "sortKey": 5077,
+          "at": "5:75",
+          "sortKey": 5075,
           "text": "I came off the Hunting Grounds. Most of my face didn't."
         },
         {
@@ -1315,8 +1315,8 @@
       "role": "Crawler",
       "taglines": [
         {
-          "at": "5:77",
-          "sortKey": 5077,
+          "at": "5:75",
+          "sortKey": 5075,
           "text": "Osvaldo. Crawler. Collects memorial crystals, which is to say he collects the dead. Answers to nobody that I can see."
         },
         {
@@ -1330,7 +1330,7 @@
           "text": "Osvaldo. Collects the dead. Belongs to no army, and will not take a deal from anyone. Crawler Carl has asked more than once."
         }
       ],
-      "revealedAt": "5:77",
+      "revealedAt": "5:75",
       "sort": 39,
       "voice": "system",
       "descriptions": []
@@ -1495,8 +1495,8 @@
           "text": "Crawler Firas. Found in the desert with Crawler Louis. Rapidly detoxed by a manager on joining the party. The file is not much thicker."
         },
         {
-          "at": "5:77",
-          "sortKey": 5077,
+          "at": "5:75",
+          "sortKey": 5075,
           "text": "Crawler Firas. Found in the desert with Crawler Louis. Did not come off the Hunting Grounds."
         }
       ],
@@ -1518,8 +1518,8 @@
           "text": "Hunter Vrah, Mantis. She has left Crawler Carl a note on a door in Zockau: the hunters inside are protected from explosives now, and the Hive is hunting him. She signed it. That is the kind of hunter she is."
         },
         {
-          "at": "5:75",
-          "sortKey": 5075,
+          "at": "5:73",
+          "sortKey": 5073,
           "text": "Hunter Vrah, Mantis. Left Crawler Carl a note in Zockau saying the Hive was hunting him. Eliminated by two dinosaurs in the battle for the submerged castle. Nobody left her a note."
         }
       ],
@@ -1539,13 +1539,13 @@
       "role": "Mother of the gods",
       "taglines": [
         {
-          "at": "5:65",
-          "sortKey": 5065,
+          "at": "5:64",
+          "sortKey": 5064,
           "text": "Apito. Tonight's host keeps a party peaceful for one evening and receives a boon from her. That is the arrangement, and everyone in the room knows the terms."
         },
         {
-          "at": "5:68",
-          "sortKey": 5068,
+          "at": "5:66",
+          "sortKey": 5066,
           "text": "Apito, the Oak Mother. She put a guest in that room herself, to see whether the host could hold it. Nobody has ever collected the boon."
         },
         {
@@ -1559,7 +1559,7 @@
           "text": "Apito, the Oak Mother. Her memorial crystal is a rainbow the size of a hill, and a crawler is carrying it across a battlefield."
         }
       ],
-      "revealedAt": "5:65",
+      "revealedAt": "5:64",
       "sort": 50,
       "voice": "system",
       "descriptions": []
@@ -1579,16 +1579,11 @@
         {
           "at": "5:61",
           "sortKey": 5061,
-          "text": "Diwata, god of the woods. She has entered the realm, and the crawler who wrecked her shrine is marked for death."
-        },
-        {
-          "at": "5:62",
-          "sortKey": 5062,
           "text": "Diwata, god of the woods. Marked a crawler for death, then sprinted straight past him. She has somewhere to be, and something to give birth to."
         },
         {
-          "at": "5:70",
-          "sortKey": 5070,
+          "at": "5:68",
+          "sortKey": 5068,
           "text": "Diwata, god of the woods. Her labour is a spell, and a spell finishes casting whatever the clock says. She stays on this floor until it does."
         }
       ],
@@ -2017,8 +2012,8 @@
           "text": "Seven feet of rock in a tuxedo. Bought once at the bar, then written into a contract. I belong to her court now."
         },
         {
-          "at": "5:75",
-          "sortKey": 5075,
+          "at": "5:73",
+          "sortKey": 5073,
           "text": "Seven feet of rock in a tuxedo. I got inside that castle, I cast Zerzura, and everything standing in it came away with me."
         }
       ],
@@ -2164,8 +2159,8 @@
           "text": "Big Tina. Level 80 allosaurus, immortalized city boss, and an ursine child who never got to finish her solo."
         },
         {
-          "at": "5:75",
-          "sortKey": 5075,
+          "at": "5:73",
+          "sortKey": 5073,
           "text": "Big Tina. Level 80 allosaurus, immortalized city boss, and a daughter with her mother standing in front of her."
         }
       ],
@@ -2187,8 +2182,8 @@
           "text": "Kiwi. Level 60 mongoliensis, head of an all-female raptor pack, and the reason nothing else does any hunting on this stretch of ground."
         },
         {
-          "at": "5:75",
-          "sortKey": 5075,
+          "at": "5:73",
+          "sortKey": 5073,
           "text": "Kiwi. An ursine, heavily pregnant, and until about an hour ago the head of the fastest pack on the floor."
         }
       ],
@@ -2261,8 +2256,8 @@
           "text": "Princess of the Prism Kingdom. Small, as kingdoms go, and a considerable force in certain trade circles. I say what I think on air, and I have just watched them shoot my friend."
         },
         {
-          "at": "5:66",
-          "sortKey": 5066,
+          "at": "5:64",
+          "sortKey": 5064,
           "text": "Empress now. I am judging a pet contest, which makes me part of the production, which is precisely why I am judging it."
         },
         {
@@ -2998,8 +2993,8 @@
           "text": "A Red Cross medic with a staff full of leeches and a place in the top ten. The recap has just shown the room what Lucia Mar did with Florin's own bullets."
         },
         {
-          "at": "5:65",
-          "sortKey": 5065,
+          "at": "5:64",
+          "sortKey": 5064,
           "text": "Queen Imogen is wearing her face. Twins, born in Nigeria; the dungeon took both of them, and only one got to be a crawler."
         }
       ],
@@ -4119,12 +4114,12 @@
       "role": "Remains",
       "taglines": [
         {
-          "at": "5:69",
-          "sortKey": 5069,
+          "at": "5:67",
+          "sortKey": 5067,
           "text": "What is left of someone when the dungeon is finished with them, and worth stealing."
         }
       ],
-      "revealedAt": "5:69",
+      "revealedAt": "5:67",
       "sort": 8,
       "voice": "narrator",
       "descriptions": [
@@ -4772,8 +4767,8 @@
       "role": "Floor event · ninth floor",
       "taglines": [
         {
-          "at": "5:77",
-          "sortKey": 5077,
+          "at": "5:75",
+          "sortKey": 5075,
           "text": "Nine armies, bought and paid for by people who will never stand in one of them, fight for the castle at the bottom of the ninth floor's funnel city. Crawlers are meant to keep their heads down and let it pass over."
         },
         {
@@ -4782,7 +4777,7 @@
           "text": "Ten teams, the sponsors' safety protections voted away, and a crawler army holding one of the slots. Faction Wars with the crawlers inside it rather than beside it."
         }
       ],
-      "revealedAt": "5:77",
+      "revealedAt": "5:75",
       "sort": 40,
       "voice": "narrator",
       "descriptions": []
@@ -4795,12 +4790,12 @@
       "role": "Rules",
       "taglines": [
         {
-          "at": "5:77",
-          "sortKey": 5077,
+          "at": "5:75",
+          "sortKey": 5075,
           "text": "The System keeps part of a covered person's health in reserve and lifts them out of the world before it runs out. They feel every bit of the pain and none of the consequence."
         }
       ],
-      "revealedAt": "5:77",
+      "revealedAt": "5:75",
       "sort": 41,
       "voice": "narrator",
       "descriptions": []
@@ -4956,8 +4951,8 @@
           "text": "A Syndicate drama serial shot inside the dungeon. A circus, a murdered mother, an exiled tsarina, and a guest slot with Carl's name on it."
         },
         {
-          "at": "5:73",
-          "sortKey": 5073,
+          "at": "5:71",
+          "sortKey": 5071,
           "text": "The grief is real and the schedule is not. Someone outside the floor decides when she mourns, and whether it rates."
         },
         {
@@ -6037,12 +6032,12 @@
       "role": "Opened on floor 6",
       "taglines": [
         {
-          "at": "5:71",
-          "sortKey": 5071,
+          "at": "5:69",
+          "sortKey": 5069,
           "text": "Lucia Mar is carrying them. Nobody has said what for."
         }
       ],
-      "revealedAt": "5:71",
+      "revealedAt": "5:69",
       "sort": 5,
       "voice": "narrator",
       "descriptions": []
@@ -10339,12 +10334,25 @@
       "entityId": "diwata",
       "kind": "arc",
       "book": 5,
-      "chapter": 62,
+      "chapter": 61,
       "floor": 6,
-      "at": "5:62",
-      "sortKey": 5062,
+      "at": "5:61",
+      "sortKey": 5061,
       "headline": "She has somewhere else to be",
       "text": "She comes out of the church and runs, past the party, away, which is not what a marked crawler expects from a god with his name on a list. Samantha explains it. Diwata gives birth to new forest creatures, whole new kinds of them, and the rest of the pantheon finds this distasteful. Her sponsor is Circe Took, and what Circe paid for is her daughter cured of an arrow-borne complaint. So Diwata is crossing this floor to reach Hunter Vrah, and after that, to be a grandmother to her own grandchildren. I did not write this floor. I only run it.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "apito",
+      "kind": "origin",
+      "book": 5,
+      "chapter": 64,
+      "floor": 6,
+      "at": "5:64",
+      "sortKey": 5064,
+      "headline": "The boon behind the peace seal",
+      "text": "Evening entertainment. Your host holds her party under a celestial peace seal: no violence, and anything that breaks the peace goes into the Nothing. If she reaches the end of the night with the seal intact, Apito hands her a boon. Elves call Apito the Oak Mother and the mother of all the gods, and a boon from the mother of all the gods is worth a room full of armed crawlers and a Tsarina you did not want. Queen Imogen has that arithmetic in front of her all evening. Watch her doing it.",
       "confidence": "verified",
       "voice": "system"
     },
@@ -10362,6 +10370,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "dnadia",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 64,
+      "floor": 6,
+      "at": "5:64",
+      "sortKey": 5064,
+      "headline": "Empress, judging the pet contest",
+      "text": "The ball, and I am judging the talent show and the pet contest both. Chaco is running the prize counter. I find the crawler in the crowd and tell him the truth of it: he and his attorney very nearly ruined my buy-in bid, and here I am regardless, judging, which makes me production.",
+      "confidence": "verified",
+      "voice": "self"
+    },
+    {
       "entityId": "dungeon-anarchists-cookbook",
       "kind": "use",
       "book": 5,
@@ -10375,26 +10396,13 @@
       "voice": "narrator"
     },
     {
-      "entityId": "apito",
-      "kind": "origin",
-      "book": 5,
-      "chapter": 65,
-      "floor": 6,
-      "at": "5:65",
-      "sortKey": 5065,
-      "headline": "The boon behind the peace seal",
-      "text": "Evening entertainment. Your host holds her party under a celestial peace seal: no violence, and anything that breaks the peace goes into the Nothing. If she reaches the end of the night with the seal intact, Apito hands her a boon. Elves call Apito the Oak Mother and the mother of all the gods, and a boon from the mother of all the gods is worth a room full of armed crawlers and a Tsarina you did not want. Queen Imogen has that arithmetic in front of her all evening. Watch her doing it.",
-      "confidence": "verified",
-      "voice": "system"
-    },
-    {
       "entityId": "ifechi",
       "kind": "arc",
       "book": 5,
-      "chapter": 65,
+      "chapter": 64,
       "floor": 6,
-      "at": "5:65",
-      "sortKey": 5065,
+      "at": "5:64",
+      "sortKey": 5064,
       "headline": "The queen has her sister's face",
       "text": "Queen Imogen, host of the ball, is Ifechi's twin. Born together in Nigeria. One of them walked into the dungeon with a medical bag over her shoulder; the other one was taken somewhere else entirely and comes back wearing a crown and a boss's level. Carl is at the party working out the resemblance in real time, under a celestial peace seal that makes doing anything about it fatal. Enjoy the canapés.",
       "confidence": "verified",
@@ -10404,36 +10412,23 @@
       "entityId": "yarilo",
       "kind": "arc",
       "book": 5,
-      "chapter": 65,
+      "chapter": 64,
       "floor": 6,
-      "at": "5:65",
-      "sortKey": 5065,
+      "at": "5:64",
+      "sortKey": 5064,
       "headline": "Why he is in the Nothing",
       "text": "Since tonight's party runs under a peace seal, some history about the last god who broke one. At the first masquerade in the Halls, hosted by the mother of all the gods, Yarilo got drunk and forced himself on another deity's familiar. That broke the seal. Apito sent him into the Nothing for it, and he has been in the Nothing ever since. The seal on tonight's party is hers as well. Enjoy the canapes.",
       "confidence": "verified",
       "voice": "system"
     },
     {
-      "entityId": "dnadia",
+      "entityId": "apito",
       "kind": "arc",
       "book": 5,
       "chapter": 66,
       "floor": 6,
       "at": "5:66",
       "sortKey": 5066,
-      "headline": "Empress, judging the pet contest",
-      "text": "The ball, and I am judging the talent show and the pet contest both. Chaco is running the prize counter. I find the crawler in the crowd and tell him the truth of it: he and his attorney very nearly ruined my buy-in bid, and here I am regardless, judging, which makes me production.",
-      "confidence": "verified",
-      "voice": "self"
-    },
-    {
-      "entityId": "apito",
-      "kind": "arc",
-      "book": 5,
-      "chapter": 68,
-      "floor": 6,
-      "at": "5:68",
-      "sortKey": 5068,
       "headline": "She sends the test herself",
       "text": "Correction to the file. Tsarina Signet did not crash that party. Apito invited her, because putting a Tsarina in a room is the fastest way to learn whether a host can keep a room calm. That is the whole shape of the test. And the footnote, which the Tsarina delivers herself, in person, with obvious enjoyment: nobody has ever taken that boon home. Not one host. The Oak Mother sets an examination that has never been passed, and keeps setting it.",
       "confidence": "verified",
@@ -10443,10 +10438,10 @@
       "entityId": "diwata",
       "kind": "arc",
       "book": 5,
-      "chapter": 70,
+      "chapter": 68,
       "floor": 6,
-      "at": "5:70",
-      "sortKey": 5070,
+      "at": "5:68",
+      "sortKey": 5068,
       "headline": "The birthing is a spell",
       "text": "The Sledge reports baby mantises outside the castle, everywhere, in numbers. Mordecai supplies the ruling that goes with it: Diwata's birthing is a spell, and a spell runs until it is finished casting. The five-minute limit that governs every other deity on this floor does not apply to a god in labour. She stays. They keep coming. Somebody should have read the terms.",
       "confidence": "verified",
@@ -10456,10 +10451,10 @@
       "entityId": "florin",
       "kind": "arc",
       "book": 5,
-      "chapter": 71,
+      "chapter": 69,
       "floor": 6,
-      "at": "5:71",
-      "sortKey": 5071,
+      "at": "5:69",
+      "sortKey": 5069,
       "headline": "What is inside Lucia",
       "text": "She comes apart and I hold on to her until it passes. Then I tell the others what I have worked out, because somebody has to say it out loud. There is more than one of her in that head. Several. Some of them are children. And the dog matters. Whatever is happening to Lucia, the dog is at the centre of it.",
       "confidence": "verified",
@@ -10469,10 +10464,10 @@
       "entityId": "lucia-mar",
       "kind": "arc",
       "book": 5,
-      "chapter": 71,
+      "chapter": 69,
       "floor": 6,
-      "at": "5:71",
-      "sortKey": 5071,
+      "at": "5:69",
+      "sortKey": 5069,
       "headline": "More than one of her in there",
       "text": "Florin held on to me. He is kind to me even when I'm not the one who is here. He told the others that there is more than one of us in my head, and that some of the others are children too, and that the dog is the important part. He's right about the dog. I don't get to talk about the dog. I'm not the one who decides what I talk about.",
       "confidence": "verified",
@@ -10482,10 +10477,10 @@
       "entityId": "lucia-mars-children",
       "kind": "origin",
       "book": 5,
-      "chapter": 71,
+      "chapter": 69,
       "floor": 6,
-      "at": "5:71",
-      "sortKey": 5071,
+      "at": "5:69",
+      "sortKey": 5069,
       "headline": "More than one voice in there",
       "text": "Florin says there are several presences in her head, other children among them, and that the dog is the key to it.",
       "confidence": "verified",
@@ -10495,10 +10490,10 @@
       "entityId": "signet",
       "kind": "arc",
       "book": 5,
-      "chapter": 73,
+      "chapter": 71,
       "floor": 6,
-      "at": "5:73",
-      "sortKey": 5073,
+      "at": "5:71",
+      "sortKey": 5071,
       "headline": "She hears what Carl was trying to tell her",
       "text": "Carl tried to tell me and I would not hear it. I hear it now. My mother's murder, my exile, the circus, the vengeance I have carried since I was a child: it is a programme. It is watched across the galaxy. There are people outside this floor who decide when I grieve and when I strike, and who count how many are watching while I do it. I understand him now.",
       "confidence": "verified",
@@ -10508,10 +10503,10 @@
       "entityId": "sledge",
       "kind": "arc",
       "book": 5,
-      "chapter": 73,
+      "chapter": 71,
       "floor": 6,
-      "at": "5:73",
-      "sortKey": 5073,
+      "at": "5:71",
+      "sortKey": 5071,
       "headline": "Surviving is winning",
       "text": "Louis is worried about how it is going. Whether the plan holds, how it looks, who comes out on top of it. Surviving is winning, Louis. Everything else is bullshit. Then the changelings and me go into that castle, through a turret and the elf inside it, which is the thing everyone outside said could not be done.",
       "confidence": "verified",
@@ -10521,10 +10516,10 @@
       "entityId": "big-tina",
       "kind": "arc",
       "book": 5,
-      "chapter": 75,
+      "chapter": 73,
       "floor": 6,
-      "at": "5:75",
-      "sortKey": 5075,
+      "at": "5:73",
+      "sortKey": 5073,
       "headline": "The recital, finally",
       "text": "In the middle of the battle Princess Donut puts the I Take It All Back potion on Kiwi, and the pack leader is not a mongoliensis any more. An ursine stands there, heavily pregnant. Tina looks at her and knows her, and the Recital quest closes on the spot. It was never a quest about a monster. Nobody reading the log had any way of knowing that.",
       "confidence": "verified",
@@ -10534,10 +10529,10 @@
       "entityId": "kiwi",
       "kind": "arc",
       "book": 5,
-      "chapter": 75,
+      "chapter": 73,
       "floor": 6,
-      "at": "5:75",
-      "sortKey": 5075,
+      "at": "5:73",
+      "sortKey": 5073,
       "headline": "Taken all the way back",
       "text": "Mongo and Kiwi bring Vrah down together in the middle of the castle battle, which is a sentence worth reading twice. Then Princess Donut uses the I Take It All Back potion on her, and the mongoliensis is gone. An ursine stands in the wreckage, heavily pregnant, and Big Tina looks across at her and knows her mother's face.",
       "confidence": "verified",
@@ -10547,10 +10542,10 @@
       "entityId": "recital-quest",
       "kind": "arc",
       "book": 5,
-      "chapter": 75,
+      "chapter": 73,
       "floor": 6,
-      "at": "5:75",
-      "sortKey": 5075,
+      "at": "5:73",
+      "sortKey": 5073,
       "headline": "It was never about the town",
       "text": "Donut spends an I Take It All Back potion on Kiwi and turns her back into an Ursine, and Tina recognises her mother. The raids were a daughter looking for a parent the ursines lost when Scolopendra came through. The quest closes on that.",
       "confidence": "verified",
@@ -10560,10 +10555,10 @@
       "entityId": "sledge",
       "kind": "arc",
       "book": 5,
-      "chapter": 75,
+      "chapter": 73,
       "floor": 6,
-      "at": "5:75",
-      "sortKey": 5075,
+      "at": "5:73",
+      "sortKey": 5073,
       "headline": "He finishes casting Zerzura",
       "text": "The battle is everywhere and my job is to stand still and finish the words. So I stand still and finish the words. The castle goes. The whole building and every NPC breathing inside it, taken out from under the people who thought they owned them. That is what the spell was for. I said I did not need it explained.",
       "confidence": "verified",
@@ -10573,10 +10568,10 @@
       "entityId": "vrah",
       "kind": "fate",
       "book": 5,
-      "chapter": 75,
+      "chapter": 73,
       "floor": 6,
-      "at": "5:75",
-      "sortKey": 5075,
+      "at": "5:73",
+      "sortKey": 5073,
       "headline": "Mongo and Kiwi",
       "text": "Hunter Vrah has been removed from the Hunting Grounds by Mongo and Kiwi, in the all-out battle around the submerged castle. Two dinosaurs. It took two. Also logged from the same fight: Tsarina Signet's tattoos are now permanently alive, and an incomplete flesh golem of her mother has appeared, which Crawler Carl has put in his inventory. Do not ask me what he intends to do with it. I have stopped asking.",
       "confidence": "verified",
@@ -10586,10 +10581,10 @@
       "entityId": "diwata",
       "kind": "arc",
       "book": 5,
-      "chapter": 76,
+      "chapter": 74,
       "floor": 6,
-      "at": "5:76",
-      "sortKey": 5076,
+      "at": "5:74",
+      "sortKey": 5074,
       "headline": "Boss battle, and a sponsor's own children",
       "text": "Boss battle: crawlers, hunters, Queen Imogen and Diwata, all in one arena, and the audience gets exactly what it paid for. Princess Donut takes Laundry Day to level fifteen and strips the god-armour off Circe Took, and Circe, unarmoured, is torn apart by the mantis children she paid to have. There is a lesson in that about sponsorship. I will not be the one to say it out loud.",
       "confidence": "verified",
@@ -10599,10 +10594,10 @@
       "entityId": "vengeance-of-the-daughter",
       "kind": "arc",
       "book": 5,
-      "chapter": 76,
+      "chapter": 74,
       "floor": 6,
-      "at": "5:76",
-      "sortKey": 5076,
+      "at": "5:74",
+      "sortKey": 5074,
       "headline": "The second act closes",
       "text": "A boss battle with crawlers, hunters, the queen and a goddess all in the same room. The high elves do not survive it. Imogen goes down, and the second season is complete.",
       "confidence": "verified",
@@ -10612,10 +10607,10 @@
       "entityId": "britney",
       "kind": "arc",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Badly burned",
       "text": "Morning, if you can call it that. Donut is waking Carl up with the count from the night. Firas. The Popovs. I'm not on the list, so that's something. My face is. Nobody has offered me a mirror, and nobody offering is how I know how bad it is. Burned. Badly, I'm told. I can feel where the word comes from.",
       "confidence": "verified",
@@ -10625,10 +10620,10 @@
       "entityId": "dnadia",
       "kind": "arc",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Two places, bought",
       "text": "Their team is on the board for the ninth floor. I will not pretend the cat's admirers managed that alone. Two places had to be bought, and I bought them, in my own name, where anybody watching could watch me do it.",
       "confidence": "verified",
@@ -10638,10 +10633,10 @@
       "entityId": "eva",
       "kind": "fate",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Katia kills her",
       "text": "Hunting Grounds, last night of the floor. Crawler Katia Grim kills Crawler Eva. That is the whole of it. Two professors came in through the same door; from here on, one. I don't do eulogies, and this is not the entry where I start.",
       "confidence": "verified",
@@ -10651,10 +10646,10 @@
       "entityId": "faction-wars",
       "kind": "origin",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Two of the slots change hands",
       "text": "Carl and Donut are notified that their team is in. Donut's fan club and Princess D'Nadia between them secured two of the nine spots, and no crawler team has ever held one. Carl spends his airtime telling the watching galaxy that the teams can vote the ninth floor's safety protocols off, and telling anyone out there with a say in what their own government does to use it. The feed is cut.",
       "confidence": "verified",
@@ -10664,10 +10659,10 @@
       "entityId": "firas",
       "kind": "fate",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Dead, with the Popovs",
       "text": "Crawler Firas has been eliminated on the sixth floor. Crawler Princess Donut is bringing the night's count to Crawler Carl as I speak, and his name is on it, next to the Popovs. Found in a desert. Sobered up by a manager. Lasted one floor past that. The file is closed. It was never a thick one.",
       "confidence": "verified",
@@ -10677,10 +10672,10 @@
       "entityId": "imogen",
       "kind": "fate",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Her crystal changes hands",
       "text": "Queen Imogen's memorial crystal has changed hands. Someone named Osvaldo took it off her, and she was in no condition to argue the point. Prepotente would like it next and is going after him for it. A queen's treasure, and it goes to whoever is standing closest when she goes down. That is how this floor works. That is how every floor works.",
       "confidence": "verified",
@@ -10690,10 +10685,10 @@
       "entityId": "memorial-crystal",
       "kind": "use",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Taken off Imogen",
       "text": "Someone named Osvaldo takes hers, and Prepotente goes after him for it.",
       "confidence": "verified",
@@ -10703,10 +10698,10 @@
       "entityId": "osvaldo",
       "kind": "origin",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "He takes Imogen's crystal",
       "text": "New name on the board. Osvaldo, crawler. In the wreck of the Masquerade he walks up to Queen Imogen and takes her memorial crystal off her. Prepotente is going after him for it. I have no notes on Osvaldo before this moment, which tells you how he has been playing it. I have a note now.",
       "confidence": "verified",
@@ -10718,8 +10713,8 @@
       "book": 5,
       "chapter": null,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Who is covered",
       "text": "The show's employees, its tourists and a certain grade of NPC. Being cut down while covered is not dying; it is being lifted off the board and set down somewhere expensive. Borant declines to switch the coverage on for the earliest floors as a saving, which is why a liaison walks those floors in a padded suit.",
       "confidence": "verified",
@@ -10729,10 +10724,10 @@
       "entityId": "protections",
       "kind": "arc",
       "book": 5,
-      "chapter": 77,
+      "chapter": 75,
       "floor": 6,
-      "at": "5:77",
-      "sortKey": 5077,
+      "at": "5:75",
+      "sortKey": 5075,
       "headline": "Carl puts it to the audience",
       "text": "On air, in the last minutes before production cuts the feed, he tells the watching galaxy that the teams on the ninth floor can vote the safety protocols off, and that anyone with a say in what their government does should go and use it.",
       "confidence": "verified",
@@ -15385,8 +15380,8 @@
       "toId": "lucia-mar",
       "kind": "ally",
       "note": null,
-      "revealedAt": "5:71",
-      "sortKey": 5071
+      "revealedAt": "5:69",
+      "sortKey": 5069
     },
     {
       "fromId": "lucia-mar",
@@ -15457,8 +15452,8 @@
       "toId": "memorial-crystal",
       "kind": "collects",
       "note": null,
-      "revealedAt": "5:77",
-      "sortKey": 5077
+      "revealedAt": "5:75",
+      "sortKey": 5075
     },
     {
       "fromId": "imogen",
@@ -15497,16 +15492,16 @@
       "toId": "imogen",
       "kind": "patron-of",
       "note": "The boon promised to the host who keeps the peace",
-      "revealedAt": "5:65",
-      "sortKey": 5065
+      "revealedAt": "5:64",
+      "sortKey": 5064
     },
     {
       "fromId": "apito",
       "toId": "the-nothing",
       "kind": "concerns",
       "note": "Where anything breaking her peace seal is sent",
-      "revealedAt": "5:65",
-      "sortKey": 5065
+      "revealedAt": "5:64",
+      "sortKey": 5064
     },
     {
       "fromId": "apito",
@@ -15529,8 +15524,8 @@
       "toId": "vrah",
       "kind": "concerns",
       "note": "The hunter she crosses the floor to reach",
-      "revealedAt": "5:62",
-      "sortKey": 5062
+      "revealedAt": "5:61",
+      "sortKey": 5061
     },
     {
       "fromId": "harpocrates",
@@ -15825,8 +15820,8 @@
       "toId": "the-nothing",
       "kind": "concerns",
       "note": null,
-      "revealedAt": "5:65",
-      "sortKey": 5065
+      "revealedAt": "5:64",
+      "sortKey": 5064
     },
     {
       "fromId": "yarilo",
@@ -16009,8 +16004,8 @@
       "toId": "scolopendra",
       "kind": "transformed",
       "note": null,
-      "revealedAt": "5:75",
-      "sortKey": 5075
+      "revealedAt": "5:73",
+      "sortKey": 5073
     },
     {
       "fromId": "edgar",
@@ -16489,8 +16484,8 @@
       "toId": "imogen",
       "kind": "twin-of",
       "note": null,
-      "revealedAt": "5:65",
-      "sortKey": 5065
+      "revealedAt": "5:64",
+      "sortKey": 5064
     },
     {
       "fromId": "lexis",
@@ -16857,32 +16852,32 @@
       "toId": "signet",
       "kind": "race-of",
       "note": null,
-      "revealedAt": "5:66",
-      "sortKey": 5066
+      "revealedAt": "5:64",
+      "sortKey": 5064
     },
     {
       "fromId": "faction-wars",
       "toId": "the-syndicate",
       "kind": "owned-by",
       "note": null,
-      "revealedAt": "5:77",
-      "sortKey": 5077
+      "revealedAt": "5:75",
+      "sortKey": 5075
     },
     {
       "fromId": "faction-wars",
       "toId": "dungeon-crawler-world",
       "kind": "subject-of",
       "note": null,
-      "revealedAt": "5:77",
-      "sortKey": 5077
+      "revealedAt": "5:75",
+      "sortKey": 5075
     },
     {
       "fromId": "faction-wars",
       "toId": "blood-sultanate",
       "kind": "member",
       "note": null,
-      "revealedAt": "5:77",
-      "sortKey": 5077
+      "revealedAt": "5:75",
+      "sortKey": 5075
     },
     {
       "fromId": "faction-wars",
@@ -16905,16 +16900,16 @@
       "toId": "borant-corporation",
       "kind": "owned-by",
       "note": null,
-      "revealedAt": "5:77",
-      "sortKey": 5077
+      "revealedAt": "5:75",
+      "sortKey": 5075
     },
     {
       "fromId": "protections",
       "toId": "system-ai",
       "kind": "administered-by",
       "note": null,
-      "revealedAt": "5:77",
-      "sortKey": 5077
+      "revealedAt": "5:75",
+      "sortKey": 5075
     },
     {
       "fromId": "protections",
@@ -17009,16 +17004,16 @@
       "toId": "princess-donut",
       "kind": "resolves",
       "note": null,
-      "revealedAt": "5:75",
-      "sortKey": 5075
+      "revealedAt": "5:73",
+      "sortKey": 5073
     },
     {
       "fromId": "recital-quest",
       "toId": "scolopendra",
       "kind": "concerns",
       "note": null,
-      "revealedAt": "5:75",
-      "sortKey": 5075
+      "revealedAt": "5:73",
+      "sortKey": 5073
     },
     {
       "fromId": "crawlcon",

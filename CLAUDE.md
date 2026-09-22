@@ -1381,7 +1381,7 @@ data/content.snapshot.json   reveal tags resolved to integers, committed
 data/dcc.db
 ```
 
-`chapters.json` is the chapter spine — **474 chapters across the eight books, no gaps** — pulled
+`chapters.json` is the chapter spine — **472 chapters across the eight books, no gaps** — pulled
 by `npm run chapters:refresh` from the Fandom wiki's per-book chapter tables. `books.json` does
 not carry counts; `build-content.mjs` merges them in, so there is one source. A book missing from
 `chapters.json` keeps a null count, which switches the chapter dial off for it.
@@ -1462,6 +1462,23 @@ not 6), and the floor on which Carl and Donut pick classes (**3**, not 1).
 the Larracos flood, the Syndicate lawsuit and Juice Box — all book 7 — under a "Book 4" heading.
 Copying a wiki section's heading as a reveal tag would have leaked three books early. Read what the
 prose actually describes, not the heading above it.
+
+### Chapters are the edition's, not the wiki's
+
+Chapter numbers follow the **Ace/Penguin edition** — the print and ebook most readers hold —
+and the full text of all eight books sits in `data/index/books/` (gitignored, one plain-text file
+per chapter, extracted from the owner's own library). It is a curation source, exactly like the
+wiki summaries: **never committed, never deployed, never quoted beyond the short-quotation rule.**
+
+The edition and the wiki agree everywhere but the end of book 5: the wiki numbers *The Butcher's
+Masquerade* to 77, the edition to 75, because twice it runs as one chapter what the wiki splits in
+two. `scripts/lib/edition.mjs` holds the map, found by reading the text against the summaries
+event by event, and both wiki pulls (`chapters:refresh`, `achievements:refresh`) renumber through
+it on the way in. A wiki chapter straddling two edition chapters maps to the **later** one. Edition
+chapter 63 has no summary row of its own on the wiki, which the map declares rather than hides.
+
+So a `5:NN` anywhere in `data/` is an edition chapter. A reveal point read off a wiki page for late
+book 5 must be converted before it is written down.
 
 The wiki's **per-book chapter summary tables** are the most valuable thing on it: they gave exact
 chapter counts for all eight books and the anchors that turned book-level reveals into
@@ -1599,7 +1616,7 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `src/lib/content.ts` | DB reads; relations mirrored at read time |
 | `db/config.ts` | `Book`, `Floor`, `Entity`, `Beat`, `Relation` |
 | `data/books.json` | Books, floors, the book↔floor map |
-| `data/chapters.json` | The chapter spine: 474 chapters, counts and titles |
+| `data/chapters.json` | The chapter spine: 472 chapters, counts and titles |
 | `data/book-colors.json` | Each book's official colour and its readable ink |
 | `scripts/fetch-book-colors.mjs` | `npm run colors:refresh` — scrapes those colours |
 | `scripts/fetch-chapters.mjs` | `npm run chapters:refresh` — pulls the chapter tables |
