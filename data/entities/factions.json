@@ -10,7 +10,16 @@
       "role": "Producer",
       "revealedAt": "1:1",
       "sort": 1,
-      "tagline": "Runs the show on the cheap, holds the foreclosure on Earth, and gets one veto a season.",
+      "tagline": [
+        {
+          "at": "1:1",
+          "text": "Regent of the solar system, owner of the broadcast, and the company that chose a dungeon as the way Earth gets its matter back."
+        },
+        {
+          "at": "2:end",
+          "text": "Runs the show on the cheap, holds the foreclosure on Earth, and gets one veto a season."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -20,7 +29,7 @@
           "at": "1:2",
           "confidence": "verified",
           "headline": "The foreclosure",
-          "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once. Its guides work on indenture — Mordecai among them."
+          "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once."
         },
         {
           "kind": "arc",
@@ -48,7 +57,7 @@
       "role": "Galactic order",
       "revealedAt": "1:4",
       "sort": 2,
-      "tagline": "Makes all of this legal — and, now and then, is where it can be fought.",
+      "tagline": "Three billion star systems, the rules Earth was seized under, and the audience for all of this.",
       "beats": [
         {
           "kind": "origin",
@@ -57,8 +66,8 @@
           "floor": 1,
           "at": "1:4",
           "confidence": "verified",
-          "headline": "Law, tax and standing",
-          "text": "It licenses the crawl, taxes Borant per box tier and runs the courts. Which makes it the one institution here that can be argued with."
+          "headline": "Three billion star systems",
+          "text": "Over three billion independent star systems. Its rules are the ones Earth was seized under, and every season a new Dungeon Crawler World debuts across its net for quintillions of citizens to become obsessed with. It is the law and the audience at once."
         },
         {
           "kind": "arc",
@@ -1154,7 +1163,7 @@
       "role": "Hunting party",
       "revealedAt": "5:10",
       "sort": 50,
-      "tagline": "A mantis hunting party carrying a standing legal argument: what happens on the hunting floor is not covered by the rules that hold anywhere else.",
+      "tagline": "A mantis hunting party on the Hunting Grounds, and Carl is on its list.",
       "beats": [
         {
           "kind": "origin",
@@ -1162,9 +1171,9 @@
           "chapter": 10,
           "floor": 6,
           "at": "5:10",
-          "confidence": "draft",
-          "headline": "A group with a position on what counts as murder",
-          "text": "A mantis outfit that comes to the hunting floor as a matter of routine. Their position, argued and so far sustained, is that a killing done on that ground is outside the rules that would make it a killing anywhere else, and they have had cause to argue it about one of their own."
+          "confidence": "verified",
+          "headline": "The Hive is hunting you",
+          "text": "A hunting party on the Hunting Grounds, and the message it sends Carl is delivered in person: the Hive is hunting him, there will be nowhere to hide, and his death will not be quick."
         }
       ],
       "relations": [

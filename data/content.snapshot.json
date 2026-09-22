@@ -734,7 +734,7 @@
         {
           "at": "4:5",
           "sortKey": 4005,
-          "text": "Juice Box. Changeling. Prostitute, professionally. Louis brought me along, and I would have come anyway."
+          "text": "Juice Box. Changeling. Prostitute, professionally. Sitting on Louis’s lap, and staying."
         },
         {
           "at": "7:7",
@@ -3245,7 +3245,12 @@
         {
           "at": "1:22",
           "sortKey": 1022,
-          "text": "A manager who treats the assignment as a holiday, and is not troubled that her crawlers can tell."
+          "text": "The tutorial guide the Meadow Lark residents were handed, and the one they quote."
+        },
+        {
+          "at": "5:70",
+          "sortKey": 5070,
+          "text": "A guide who insists she once charmed a boss, which Mordecai says cannot be done."
         }
       ],
       "revealedAt": "1:22",
@@ -3321,7 +3326,7 @@
         {
           "at": "3:8",
           "sortKey": 3008,
-          "text": "Seven feet of granite in a tuxedo, and the tuxedo fits."
+          "text": "Another rock monster on the club’s books, posted behind Elle. “No closer.”"
         }
       ],
       "revealedAt": "3:8",
@@ -3413,7 +3418,12 @@
         {
           "at": "3:27",
           "sortKey": 3027,
-          "text": "A clawed migratory people, an island, a family, and a set of entries in a book that are mostly furious."
+          "text": "A sixth-edition hand in the cookbook, and honest about how little anyone understands portals."
+        },
+        {
+          "at": "6:13",
+          "sortKey": 6013,
+          "text": "Wrote the sixth edition as if someone would need feeding. Before the stairs, she made the stew for her whole family, on an island."
         }
       ],
       "revealedAt": "3:27",
@@ -3512,7 +3522,7 @@
         {
           "at": "4:6",
           "sortKey": 4006,
-          "text": "Took the Human race and a rogue’s class, and holds a quadrant of a bubble nobody else wanted."
+          "text": "Took the Human race and a rogue’s class, and holds the subterranean quadrant of his bubble."
         }
       ],
       "revealedAt": "4:6",
@@ -3566,7 +3576,12 @@
         {
           "at": "4:29",
           "sortKey": 4029,
-          "text": "A god’s favourite child, and the hound’s first owner, murdered long before any of this by a hand nobody has named."
+          "text": "The name on a hell-hound’s description: Orthrus is his bereft pet."
+        },
+        {
+          "at": "4:32",
+          "sortKey": 4032,
+          "text": "A god’s son and the hound’s owner, murdered, with his uncle the obvious suspect and an alibi in the way."
         }
       ],
       "revealedAt": "4:29",
@@ -3782,7 +3797,7 @@
         {
           "at": "7:15",
           "sortKey": 7015,
-          "text": "Famous outside the dungeon, which counts for nothing down here, and a battalion commander because of what he did in a season called Land War."
+          "text": "A veteran of Land War, a different game on a different planet, and a battalion commander on the strength of it."
         }
       ],
       "revealedAt": "7:15",
@@ -4484,6 +4499,11 @@
         {
           "at": "1:1",
           "sortKey": 1001,
+          "text": "Eighteen levels. Complete the last one and the planet reverts to whoever did it."
+        },
+        {
+          "at": "1:2",
+          "sortKey": 1002,
           "text": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it."
         }
       ],
@@ -4817,7 +4837,7 @@
         {
           "at": "5:75",
           "sortKey": 5075,
-          "text": "The System keeps part of a covered person's health in reserve and lifts them out of the world before it runs out. They feel every bit of the pain and none of the consequence."
+          "text": "The safety protocols the faction sponsors fight inside and the crawlers do not, and an action item that can take them away."
         }
       ],
       "revealedAt": "5:75",
@@ -5057,7 +5077,12 @@
         {
           "at": "1:9",
           "sortKey": 1009,
-          "text": "Short, shaggy, green-tinted and faintly of wet moss. Excellent cooks, and famously reluctant to part with anything they have not been ordered to part with."
+          "text": "Short, hairy and green-tinted. They scrub the toilets, cook the food, and never wash their hands in between."
+        },
+        {
+          "at": "3:2",
+          "sortKey": 3002,
+          "text": "Short, hairy and green-tinted. Excellent cooks, and miserly about anything they have not been ordered to part with."
         }
       ],
       "revealedAt": "1:9",
@@ -5075,7 +5100,7 @@
         {
           "at": "1:30",
           "sortKey": 1030,
-          "text": "The cleaning crew of the second floor. Corpses make them, and there is no arrangement under which there are fewer of them."
+          "text": "The cleaning crew of the second floor. They eat what gets killed, and they grow on it."
         }
       ],
       "revealedAt": "1:30",
@@ -5165,7 +5190,7 @@
         {
           "at": "7:5",
           "sortKey": 7005,
-          "text": "A pet class built to stand in front of things and be hit by them, and to be delighted about it."
+          "text": "A pet-class mob the size of a meatball, and stronger for every time it has died."
         }
       ],
       "revealedAt": "7:5",
@@ -5239,6 +5264,11 @@
         {
           "at": "1:1",
           "sortKey": 1001,
+          "text": "Regent of the solar system, owner of the broadcast, and the company that chose a dungeon as the way Earth gets its matter back."
+        },
+        {
+          "at": "2:end",
+          "sortKey": 2999,
           "text": "Runs the show on the cheap, holds the foreclosure on Earth, and gets one veto a season."
         }
       ],
@@ -5257,7 +5287,7 @@
         {
           "at": "1:4",
           "sortKey": 1004,
-          "text": "Makes all of this legal — and, now and then, is where it can be fought."
+          "text": "Three billion star systems, the rules Earth was seized under, and the audience for all of this."
         }
       ],
       "revealedAt": "1:4",
@@ -5705,7 +5735,7 @@
         {
           "at": "5:10",
           "sortKey": 5010,
-          "text": "A mantis hunting party carrying a standing legal argument: what happens on the hunting floor is not covered by the rules that hold anywhere else."
+          "text": "A mantis hunting party on the Hunting Grounds, and Carl is on its list."
         }
       ],
       "revealedAt": "5:10",
@@ -6234,19 +6264,6 @@
       "voice": "self"
     },
     {
-      "entityId": "eighteen-floors",
-      "kind": "origin",
-      "book": 1,
-      "chapter": 1,
-      "floor": 1,
-      "at": "1:1",
-      "sortKey": 1001,
-      "headline": "The terms",
-      "text": "Reach the bottom and humanity gets Earth back. Nobody expects that to happen. The clock is the one rule the dungeon never bends, because the collapse is how a season is scheduled.",
-      "confidence": "verified",
-      "voice": "narrator"
-    },
-    {
       "entityId": "system-ai",
       "kind": "origin",
       "book": 1,
@@ -6281,7 +6298,7 @@
       "at": "1:2",
       "sortKey": 1002,
       "headline": "The foreclosure",
-      "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once. Its guides work on indenture — Mordecai among them.",
+      "text": "It claims Earth under Syndicate law and turns the surface into a mining claim. The dungeon is the legal cover and the revenue at once.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -6325,6 +6342,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "eighteen-floors",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 4,
+      "floor": 1,
+      "at": "1:4",
+      "sortKey": 1004,
+      "headline": "The terms",
+      "text": "Reach the bottom and humanity gets Earth back. Nobody expects that to happen. The clock is the one rule the dungeon never bends, because the collapse is how a season is scheduled.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "the-syndicate",
       "kind": "origin",
       "book": 1,
@@ -6332,8 +6362,8 @@
       "floor": 1,
       "at": "1:4",
       "sortKey": 1004,
-      "headline": "Law, tax and standing",
-      "text": "It licenses the crawl, taxes Borant per box tier and runs the courts. Which makes it the one institution here that can be argued with.",
+      "headline": "Three billion star systems",
+      "text": "Over three billion independent star systems. Its rules are the ones Earth was seized under, and every season a new Dungeon Crawler World debuts across its net for quintillions of citizens to become obsessed with. It is the law and the audience at once.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -6455,19 +6485,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "magic-missile",
-      "kind": "origin",
-      "book": 1,
-      "chapter": 7,
-      "floor": 1,
-      "at": "1:7",
-      "sortKey": 1007,
-      "headline": "Bolts from the eyes of a Persian",
-      "text": "Bolts of energy leave the caster’s eyes one after another, and the resemblance to a film about spaceships is close enough that nobody bothers to pretend otherwise. Princess Donut works it out for herself once Mordecai has switched her menus on, and from that point the question is never whether she will fire, only at what.",
-      "confidence": "verified",
-      "voice": "narrator"
-    },
-    {
       "entityId": "princess-donut",
       "kind": "origin",
       "book": 1,
@@ -6520,6 +6537,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "magic-missile",
+      "kind": "origin",
+      "book": 1,
+      "chapter": 8,
+      "floor": 1,
+      "at": "1:8",
+      "sortKey": 1008,
+      "headline": "Bolts from the eyes of a Persian",
+      "text": "Bolts of energy leave the caster’s eyes one after another, and the resemblance to a film about spaceships is close enough that nobody bothers to pretend otherwise. Princess Donut works it out for herself once Mordecai has switched her menus on, and from that point the question is never whether she will fire, only at what.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "bopca",
       "kind": "origin",
       "book": 1,
@@ -6528,7 +6558,7 @@
       "at": "1:9",
       "sortKey": 1009,
       "headline": "The protector behind the counter",
-      "text": "A stout dwarfish people, shaggy in both sexes, who mostly appear in the dungeon as non-combatant staff. They cook, they hand over what the room owes a crawler, and they are miserly about every part of it that is left to their discretion. The first one on the stairs runs a safe room and is called Tally.",
+      "text": "Magical, gnome-like, hairy, and posted to watch over safe rooms. They do everything from scrubbing the toilets to cooking the food; they are surly, they are smelly, and they never wash their hands. The first one on the stairs is called Tally.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -6657,9 +6687,9 @@
       "floor": 1,
       "at": "1:22",
       "sortKey": 1022,
-      "headline": "The manager who is on holiday",
-      "text": "Subject holds a manager’s contract for one of the teams and treats the posting as time off. She drinks. She smokes blitz sticks. She has, on one occasion, charmed a boss, which is more than most managers achieve and rather less than her team needs from her on any given afternoon. Her crawlers know exactly what they have been given.",
-      "confidence": "draft",
+      "headline": "Our tutorial guide lady",
+      "text": "Subject is the tutorial guide assigned to the Meadow Lark group. Her crawlers pass her rules on to anyone who will listen: every borough and city boss holds a stairwell for the first four or five floors, and there are other stairs in random places besides.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -6787,9 +6817,9 @@
       "floor": 2,
       "at": "1:30",
       "sortKey": 1030,
-      "headline": "Every body on the floor makes more of them",
-      "text": "Each corpse produced on this floor spawns between one and fifteen, and they keep coming until five thousand of them hold a quadrant. Destroying the bodies stops the grubs growing stronger; it does not stop them arriving. The floor is therefore a choice between leaving your dead where they fall and feeding the thing that eats them.",
-      "confidence": "draft",
+      "headline": "Janitor duty",
+      "text": "On the second floor the rats are yesterday’s news and the grubs are the janitors. The more monsters killed in an area, the more the grubs eat; the more they eat, the bigger they get. Grubs are easy to kill. Once they turn up in the pupa stage, move on, because their older siblings are not.",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -6817,6 +6847,19 @@
       "text": "The armed men from Africa get a name on the broadcast, and a graphic counting what is left of their ammunition.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "mistress-tiatha",
+      "kind": "arc",
+      "book": 1,
+      "chapter": 31,
+      "floor": 2,
+      "at": "1:31",
+      "sortKey": 1031,
+      "headline": "Ten days, she said",
+      "text": "Subject told her crawlers the second floor would last ten days. The countdown resets to six. Her crawlers note the difference.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "rage-elemental",
@@ -7257,7 +7300,7 @@
       "sortKey": 2012,
       "headline": "He stands over her",
       "text": "Mother down. Mother NOT MOVING. Mongo on top of Mother. Spiky things. MANY spiky things. Bite. Bite. Bite. Hurts. Mongo stays on Mother. Carl says something. Mongo does not listen to Carl.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7283,7 +7326,7 @@
       "sortKey": 2015,
       "headline": "On the door of the Desperado Club",
       "text": "Subject is a Crocodilian, an intelligent, thick-skinned, semi-aquatic people who are not celebrated for their quickness, and she works the door of the club. This is a non-combatant posting, which describes her contract rather than her capabilities. Nobody has yet found the argument that gets past her.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -7777,7 +7820,7 @@
       "sortKey": 3001,
       "headline": "They are waiting when the doors open",
       "text": "The commonest ghoul on the line, and by the System’s own account the most tractable of them, which says more about the others than it does about these. They come at the court in the first minutes on the new floor, before anyone has established what the rules of the place are.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -7892,9 +7935,9 @@
       "floor": 4,
       "at": "3:8",
       "sortKey": 3008,
-      "headline": "The Tangle cannot be beaten alone",
-      "text": "The trains only come apart if hundreds of crawlers move at once, and getting hundreds of crawlers to do anything at once is exactly the thing production spends its money preventing. So I stop thinking of the explosives as the weapon.",
-      "confidence": "draft",
+      "headline": "The explosives chapter first",
+      "text": "The book is sorted into chapters: potions in one, explosives in another, and a list of monsters and what they are weak to. Some of the people who wrote in it filled pages. Some managed a line. I go to the explosives first, obviously, and the first note that catches my eye is about infusing bombs at a sapper’s table.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -7905,9 +7948,9 @@
       "floor": 4,
       "at": "3:8",
       "sortKey": 3008,
-      "headline": "A Cretin in evening dress",
-      "text": "Subject is a Cretin, seven feet of rock-coloured muscle, employed as a bodyguard on the club floor and dressed for it. He is not conversational. He is assigned where the club decides he is needed, and the arrangement has never yet required anyone to explain to him what the job involves.",
-      "confidence": "draft",
+      "headline": "Elle's rock",
+      "text": "Subject is a rock monster of the same stamp as the club’s cretins, posted behind Crawler Elle McGibbons on the dance floor with his arms folded. His entire recorded conversation is “No closer.” She moves him aside by hand when she wants to.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8153,8 +8196,8 @@
       "at": "3:21",
       "sortKey": 3021,
       "headline": "Given memories of a child that was never made",
-      "text": "Subject conducts the Mango Line. He was also issued with a set of memories containing a daughter, and the daughter was never made, and he has not been told. He is found on the ground with his head down and a puddle forming underneath him. The memories work. That is the part of the design I would draw attention to.",
-      "confidence": "draft",
+      "text": "Subject conducts the Mango Line. He was also issued with a set of memories containing a daughter, and the daughter was never made, and he has worked that out and cannot understand it. He is found on the ground with his head down and a puddle forming underneath him. The memories work. That is the part of the design I would draw attention to.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8218,8 +8261,8 @@
       "at": "3:27",
       "sortKey": 3027,
       "headline": "The sixth hand on the cookbook",
-      "text": "Subject carried the cookbook and added to it, and several of her entries are rants rather than instructions. She came from a clawed race with annual migration patterns and lived on an island with her family before the stairs. The rants were left in. Everyone who has carried the book since has read them.",
-      "confidence": "draft",
+      "text": "Subject carried the cookbook in its sixth edition and added to it. Her note on portals admits what nobody else will: there are dozens of kinds, they do not behave consistently, and one the size of a button can throw you into a monster den.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8348,8 +8391,8 @@
       "at": "3:32",
       "sortKey": 3032,
       "headline": "Still human, and heavier for it",
-      "text": "I stayed human at selection. No fur, no beak, nothing added on. Earth Mover for the class, which is a spellcaster and a wall in the same body, and Dirt Clod is exactly what it sounds like and it works better than it has any right to. The armour I am in now is black and gold and glows in the dark. Li Na says that is showing off. Li Na is not wrong.",
-      "confidence": "draft",
+      "text": "I stayed human at selection. No fur, no beak, nothing added on. Earth Mover for the class, which is a spellcaster and a wall in the same body, and Dirt Clod is exactly what it sounds like and it works better than it has any right to. The armour I am in now is black and gold and glows in the dark.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -8427,7 +8470,7 @@
       "sortKey": 4002,
       "headline": "One of the children who lived",
       "text": "Subject is a child of Hump Town. Her village was bombed by the gnomes, the dromedarians took in what was left, and not many of the children lived. She did. She climbs the ladder to the hatch faster than anyone her size should.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8466,7 +8509,7 @@
       "sortKey": 4003,
       "headline": "The desert quadrant",
       "text": "Crawler Firas. Fifth floor, desert quadrant. Located in the company of Crawler Louis and Langley's team, a party of car salesmen who have taken up the bow, at the moment Crawler Carl's group came looking for other crawlers. Keeps close to Louis. Present for the march on the Bactrian town and for the run back to Hump Town that followed it. The file on this one is thin. So is the file on most of you.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -8568,9 +8611,9 @@
       "floor": 5,
       "at": "4:5",
       "sortKey": 4005,
-      "headline": "Louis brings her",
-      "text": "Louis found me and Louis brought me, because he is sweet and because I asked. Now the other crawlers in the quadrant have found Carl's group, and Carl's group has a cat who talks. Their manager, Mordecai, is sobering Louis and Firas up on the spot. All the fun is coming out of their blood at once. Louis looks very sad about it. I am not sad. I am here, and I am staying.",
-      "confidence": "draft",
+      "headline": "On Louis's lap",
+      "text": "I am on Louis's lap, because Louis is sweet. Now the other crawlers in the quadrant have found Carl's group, and Carl's group has a cat who talks. Their manager, Mordecai, is sobering Louis and Firas up on the spot. All the fun is coming out of their blood at once. Louis looks very sad about it. I am not sad. I am here, and I am staying.",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -8613,19 +8656,6 @@
       "voice": "system"
     },
     {
-      "entityId": "bobby",
-      "kind": "origin",
-      "book": 4,
-      "chapter": 7,
-      "floor": 5,
-      "at": "4:7",
-      "sortKey": 4007,
-      "headline": "The tomb raiders, so called",
-      "text": "Subject kept the Human race and took the rogue-type Spy Class, and earned his way into the club on that. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck.",
-      "confidence": "draft",
-      "voice": "system"
-    },
-    {
       "entityId": "oipan",
       "kind": "origin",
       "book": 4,
@@ -8637,6 +8667,19 @@
       "text": "Donut is taken by Veriluxx RealPet Companions and Katia by the Squim Conglomerate, and neither of those needs explaining: a pet brand wants the cat, a conglomerate wants the coverage. Carl is taken by the Open Intellect Pacifist Action Network, which is registered as a not-for-conquest, answers to no system government and pays no tax. Nobody can say what it wants.",
       "confidence": "verified",
       "voice": "narrator"
+    },
+    {
+      "entityId": "bobby",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 8,
+      "floor": 5,
+      "at": "4:8",
+      "sortKey": 4008,
+      "headline": "The tomb raiders, so called",
+      "text": "Subject kept the Human race and took the rogue-type Spy Class, and he is one of the two in his party with Desperado Club access. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "oipan",
@@ -8751,8 +8794,8 @@
       "at": "4:14",
       "sortKey": 4014,
       "headline": "A Scree riding Chris Andrews",
-      "text": "Frank Q is dead. Chris Andrews killed him, and Chris Andrews was not the one driving. Maggie My is back in the dungeon as a Scree, riding inside another crawler, and Frank died of exactly the thing he brought down here with him. He spoke to Carl one last time at the Desperado Club and called what was coming a gift. This was the gift. Half of a pair who taught this planet what safe rooms are for. The other half is still walking around, wearing somebody else.",
-      "confidence": "draft",
+      "text": "Frank Q is dead. Chris Andrews killed him, and Chris Andrews was not the one driving. Maggie My is back in the dungeon as a Scree, riding inside another crawler, and Frank died of exactly the thing he brought down here with him. He found Carl at the Desperado Club and gave him a ring. She found Frank there afterwards. Half of a pair who taught this planet what safe rooms are for. The other half is still walking around, wearing somebody else.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -9133,19 +9176,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "geyrun",
-      "kind": "origin",
-      "book": 4,
-      "chapter": 29,
-      "floor": 5,
-      "at": "4:29",
-      "sortKey": 4029,
-      "headline": "The hound had an owner before this one",
-      "text": "Subject was the favourite child of a god and the first owner of Orthrus. He was murdered. His father has a suspect and no proof, and the suspect is family, which is the arrangement that turns a private grievance into a standing quest with a stranger’s name on it.",
-      "confidence": "draft",
-      "voice": "system"
-    },
-    {
       "entityId": "orthrus",
       "kind": "arc",
       "book": 4,
@@ -9276,6 +9306,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "geyrun",
+      "kind": "origin",
+      "book": 4,
+      "chapter": 32,
+      "floor": 5,
+      "at": "4:32",
+      "sortKey": 4032,
+      "headline": "The hound had an owner before this one",
+      "text": "Subject was a god’s son and the owner of Orthrus, and he was murdered. His father’s quest names the obvious suspect, his own brother Hellik, and in the same breath admits that Hellik was in council with the rest of them when it happened.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "hellik",
       "kind": "origin",
       "book": 4,
@@ -9363,7 +9406,7 @@
       "sortKey": 4034,
       "headline": "He finishes Maggie My",
       "text": "Thing on Chris. Thing OFF Chris. Thing goes for Carl. Thing is FOOD.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -9402,7 +9445,7 @@
       "sortKey": 4999,
       "headline": "The second hand on the cookbook",
       "text": "Subject crawled in the fifteenth season, chose the High Elf race and a rogue’s class, and wrote the second edition of the book that keeps being handed down. He now runs the Open Intellect Pacifist Action Network, which opposes the crawl. He is therefore both an advertisement for the dungeon and a witness against it, and production has never worked out how to bill him.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -9751,9 +9794,9 @@
       "floor": 6,
       "at": "5:10",
       "sortKey": 5010,
-      "headline": "A group with a position on what counts as murder",
-      "text": "A mantis outfit that comes to the hunting floor as a matter of routine. Their position, argued and so far sustained, is that a killing done on that ground is outside the rules that would make it a killing anywhere else, and they have had cause to argue it about one of their own.",
-      "confidence": "draft",
+      "headline": "The Hive is hunting you",
+      "text": "A hunting party on the Hunting Grounds, and the message it sends Carl is delivered in person: the Hive is hunting him, there will be nowhere to hide, and his death will not be quick.",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -10524,6 +10567,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "mistress-tiatha",
+      "kind": "arc",
+      "book": 5,
+      "chapter": 70,
+      "floor": 6,
+      "at": "5:70",
+      "sortKey": 5070,
+      "headline": "She has charmed a boss",
+      "text": "Mordecai holds that a boss cannot be charmed. Subject insists she has done it. The rules say a white-tagged boss can be, if the crawler clears it by a hundred points, which puts her on the right side of the argument and nobody on the right side of the odds.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "signet",
       "kind": "arc",
       "book": 5,
@@ -10753,7 +10809,7 @@
       "at": "5:75",
       "sortKey": 5075,
       "headline": "Who is covered",
-      "text": "The show's employees, its tourists and a certain grade of NPC. Being cut down while covered is not dying; it is being lifted off the board and set down somewhere expensive. Borant declines to switch the coverage on for the earliest floors as a saving, which is why a liaison walks those floors in a padded suit.",
+      "text": "The faction sponsors come to the ninth floor inside safety protocols that the crawlers do not have. Removing them is an action item, added to Carl’s list on his behalf, and all nine teams vote on it. The first count is two to seven against.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -10875,19 +10931,6 @@
       "voice": "narrator"
     },
     {
-      "entityId": "gluteus-maxx",
-      "kind": "origin",
-      "book": 6,
-      "chapter": 6,
-      "floor": 8,
-      "at": "6:6",
-      "sortKey": 6006,
-      "headline": "Short, fuzzy, and available",
-      "text": "Subject dances at one of the establishments inside the club and takes mercenary work on the side. He is short, hairy and built like the job. The court hires him. I note for the record that of everyone on the payroll, he is among the few who have never once had to be told what the plan is twice.",
-      "confidence": "draft",
-      "voice": "system"
-    },
-    {
       "entityId": "geraldo",
       "kind": "origin",
       "book": 6,
@@ -10990,6 +11033,19 @@
       "text": "I host a programme called Shadow Boxer, and today the cat is my guest. We talk about Earth television, which she has opinions about, and I let her have them because a guest who is enjoying herself tells you more than a guest who is being careful. Carl is watching from the side and working out what I am. He gets there.",
       "confidence": "verified",
       "voice": "self"
+    },
+    {
+      "entityId": "milk",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 13,
+      "floor": 8,
+      "at": "6:13",
+      "sortKey": 6013,
+      "headline": "The stew",
+      "text": "Subject used to make a stew for her whole family: rance meat, bone broth, and a wild grass from the leeward side of their island. She wrote the sixth edition in the hope it would feed whoever found it the way the stew fed her little ones, and she wondered in the margin whether one reader was enough.",
+      "confidence": "verified",
+      "voice": "system"
     },
     {
       "entityId": "rosetta",
@@ -11521,7 +11577,7 @@
       "sortKey": 6035,
       "headline": "One post keeps it either way",
       "text": "Whatever the vote does to the sponsors, the adjutants keep their coverage. It is a good part of what makes the post attractive to somebody famous who fancies a season on a battlefield.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -11586,7 +11642,7 @@
       "sortKey": 6036,
       "headline": "One of the names on the adjutant list",
       "text": "There is a list going round with my name on it. Crawlers choosing an adjutant for the coming floor, and somebody has put the host of a panel show on the shortlist, which means either that they have excellent taste or that they are not taking this remotely seriously. Either way, folks. I am flattered.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -11655,6 +11711,19 @@
       "voice": "self"
     },
     {
+      "entityId": "mistress-tiatha",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 48,
+      "floor": 8,
+      "at": "6:48",
+      "sortKey": 6048,
+      "headline": "Another drink",
+      "text": "Orren explains who is taking the show away from its showrunners. Subject turns her empty bottle upside down and announces that she needs another drink, which is the most reasonable response anyone in the room has.",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
       "entityId": "primal",
       "kind": "arc",
       "book": 6,
@@ -11716,7 +11785,20 @@
       "sortKey": 6052,
       "headline": "The announcer, not the act",
       "text": "Subject is a skeletal Bard, level ninety, working as announcer and disc jockey for one of the club’s establishments rather than performing in it. He also takes mercenary contracts. The two careers turn out to require the same skill, which is holding a room’s attention while something else happens in it.",
-      "confidence": "draft",
+      "confidence": "verified",
+      "voice": "system"
+    },
+    {
+      "entityId": "gluteus-maxx",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 52,
+      "floor": 8,
+      "at": "6:52",
+      "sortKey": 6052,
+      "headline": "Short, fuzzy, and available",
+      "text": "Subject dances at the Penis Parade and, since the court took on the club’s people, fights for it: short, hairy, built like the job, and insistent on twin war gauntlets. Crawler Katia’s review, on file: a bit of a jerk, a good dancer, and a little in love with the cat.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -12143,9 +12225,9 @@
       "floor": 9,
       "at": "7:5",
       "sortKey": 7005,
-      "headline": "Bred to be hit",
-      "text": "A pet-class mob, and by reputation an excellent melee tank, which in practice means the thing is designed to be the part of a party that absorbs damage on everyone else’s behalf. The System’s notice for one that has not yet bonded to a crawler is written like a card on a cage.",
-      "confidence": "draft",
+      "headline": "Died five times, and stronger for it",
+      "text": "A pet-class mob. The System’s notice for one that has not yet bonded to a crawler reads like a card on a cage: this one has died five times, and its stats are all buffed by 125% because of it. It has five weaknesses, which it will tell only to whoever bonds with it.",
+      "confidence": "verified",
       "voice": "narrator"
     },
     {
@@ -12301,7 +12383,7 @@
       "sortKey": 7012,
       "headline": "Blood bar rules are back",
       "text": "The blood bar rules are back in force inside the safe rooms. I tell Carl now, while knowing it still costs nothing. Around us the NPCs, the mercenaries and the rest of us former crawlers are building the defences on the same line, three kinds of people this format has always kept apart, working shoulder to shoulder. I do not have a rule for that. I am watching it closely.",
-      "confidence": "draft",
+      "confidence": "verified",
       "voice": "self"
     },
     {
@@ -12352,8 +12434,8 @@
       "at": "7:15",
       "sortKey": 7015,
       "headline": "Commander of the 103rd",
-      "text": "Subject is a former crawler whose season was Land War, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He is recognised on sight by people who have never crawled. That is rarer than it sounds.",
-      "confidence": "draft",
+      "text": "Subject is a veteran of Land War, a different game entirely, which was inflicted on his home planet; everyone calls him a crawler anyway, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He has said perhaps three words since.",
+      "confidence": "verified",
       "voice": "system"
     },
     {
@@ -12365,8 +12447,8 @@
       "at": "7:15",
       "sortKey": 7015,
       "headline": "The shark has a name",
-      "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He is polite. He is anxious. He is loyal past the point where loyalty is sensible, and I have not yet identified what he is getting out of the arrangement.",
-      "confidence": "draft",
+      "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He rolls with Carl’s squad now, answers to Jamal, and says very little about how any of that came about.",
+      "confidence": "verified",
       "voice": "system"
     },
     {

@@ -1486,6 +1486,29 @@ the Larracos flood, the Syndicate lawsuit and Juice Box — all book 7 — under
 Copying a wiki section's heading as a reveal tag would have leaked three books early. Read what the
 prose actually describes, not the heading above it.
 
+### Every sentence is read against its own page
+
+`scripts/check-facts.mjs` reads all ~1,240 curated texts against the edition and flags a proper
+noun or number the book has not yet printed at the text's gate, one it never prints, and a System
+quotation not found in place. `scripts/check-placement.mjs` asks the vaguer question — which
+chapter's vocabulary does this beat use? — and is how "right fact, wrong tag" gets caught when the
+fact carries no name. Both are advisory and read the gitignored text; each keeps a `REVIEWED` map
+with a reason per entry, keyed so a rewording re-opens it.
+
+What the first pass found, because the pattern will recur:
+
+- **Detail from later folded into an earlier entry.** Tserendolgor's Mongolia (6:11) at 3:31;
+  Jamal's fear of heights (8:44) at 7:15; Drakea's race (7:18) at 4:28; a buyer named in the
+  epilogue at 6:29. A character's entry accretes everything the wiki knows about them and then
+  shows it from their first appearance.
+- **Wiki claims the book does not make.** Sledgey. A habitat company. An "Ascension game". Brindle
+  grubs spawning one to fifteen per corpse. Protections that bank your health and lift you out,
+  where a search of the text turns up only an action item and a vote.
+- **The lint's blind spots are real.** Eva is three letters, under the forward-reference floor,
+  and sat in five texts five chapters before she is named.
+- **A quotation has to be the book's, typos and all.** A System description had corrected the
+  System's own "Alpha Centari". Quote it as printed.
+
 ### Chapters are the edition's, not the wiki's
 
 Chapter numbers follow the **Ace/Penguin edition** — the print and ebook most readers hold —
@@ -1575,6 +1598,8 @@ character rather than an apology.
 npm run dev             # https://localhost:4321 (self-signed — accept the warning)
 npm run content:build   # rebuild data/content.snapshot.json after editing data/
 npm run content:anchors # is every reveal tag where the book first names it? (full text if present)
+node scripts/check-facts.mjs      # every name/number/quotation against the page it is shown on
+node scripts/check-placement.mjs  # is each beat filed at the chapter whose vocabulary it uses?
 node scripts/fetch-books.mjs [--no-fetch]  # the edition from the OPDS library in .env -> data/index/books/
 npm run content:check   # lint only; prints the draft/chapter-count work queue
 npm run achievements:refresh  # re-pull the awards + the voice corpus from the wiki
@@ -1656,6 +1681,8 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/smoke.mjs` | `npm run smoke` — does every route actually render? |
 | `scripts/check-stage.mjs` | No `<script>` or `<noscript>` in a component the view swap replaces |
 | `scripts/check-anchors.mjs` | `npm run content:anchors` — advisory: each reveal tag against the first chapter naming it |
+| `scripts/check-facts.mjs` | Advisory: a name, number or quotation shown before the book prints it, or never printed |
+| `scripts/check-placement.mjs` | Advisory: a beat whose vocabulary lives in a later chapter than its gate |
 | `scripts/fetch-books.mjs` | The edition's full text, one file per section with its reading position; gitignored |
 | `scripts/lib/edition.mjs` | Wiki chapter numbers -> the edition's (book 5 differs) |
 | `src/lib/achievement.ts` | Tiers, the prompt, the model call, and the screen-and-retry loop |
@@ -1688,12 +1715,16 @@ currently has a dev server running. It is not this deployment, and only one proj
   Watch for generic nouns: a category page called "Party" or "Boss" matches almost every summary
   and tells you nothing.
 - Chapter-accurate reveal points for the entities still tagged at book level
-- **31 `draft` beats remain of 687**; `npm run content:check` lists them. Sixteen are the newest
-  entities, whose reveal point rests on a wiki infobox alone rather than on a chapter summary
-  agreeing with it — that split is what `verified` means here. The pass that cleared 174 found real errors,
-  and the pattern is worth knowing: the dangerous ones were never wrong facts but **right facts
-  under the wrong tag** — a book-4 twist in a book-3 beat, a book-8 reveal at the end of book 7,
-  a dead woman narrating two floors after she was killed. Prose gets read for truth; tags do not.
+- **2 `draft` beats remain of 692** (Frank Q's "safe rooms" confession, which the book implies
+  rather than states, and the cracking-order thread, which is our framing). `verified` now means
+  **read against the edition's text at its own chapter**, not "a wiki summary agreed".
+- **The 95 LATE anchors** (`npm run content:anchors`): entities the book names before their tag.
+  Each needs a first tagline written for the passing mention before its tag can move earlier.
+- **A read for truth of the `verified` beats.** The screens below catch a name, a number or a
+  vocabulary out of place; they cannot catch a sentence made of early words that is simply wrong.
+  The draft pass found those at a rate of about one in three (Sledgey, a habitat company, a Walkman,
+  a daughter the conductor "has not been told" about when he has), so the verified set is not clean
+  merely because it was checked against the wiki.
 - The Nothing is the one item with no `description`: no System text for it exists on the wiki
 - Books 3, 6 and 8 have the thinnest entity coverage relative to their chapter counts
 - Deeper coverage: more items, per-floor mechanics, quotes with chapter anchors

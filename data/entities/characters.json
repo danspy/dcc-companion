@@ -69,9 +69,9 @@
           "book": 3,
           "floor": 4,
           "at": "3:8",
-          "confidence": "draft",
-          "headline": "The Tangle cannot be beaten alone",
-          "text": "The trains only come apart if hundreds of crawlers move at once, and getting hundreds of crawlers to do anything at once is exactly the thing production spends its money preventing. So I stop thinking of the explosives as the weapon."
+          "confidence": "verified",
+          "headline": "The explosives chapter first",
+          "text": "The book is sorted into chapters: potions in one, explosives in another, and a list of monsters and what they are weak to. Some of the people who wrote in it filled pages. Some managed a line. I go to the explosives first, obviously, and the first note that catches my eye is about infusing bombs at a sapper’s table."
         },
         {
           "kind": "arc",
@@ -307,7 +307,7 @@
           "book": 2,
           "floor": 3,
           "at": "2:12",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He stands over her",
           "text": "Mother down. Mother NOT MOVING. Mongo on top of Mother. Spiky things. MANY spiky things. Bite. Bite. Bite. Hurts. Mongo stays on Mother. Carl says something. Mongo does not listen to Carl.",
           "chapter": 12
@@ -317,7 +317,7 @@
           "book": 4,
           "floor": 5,
           "at": "4:34",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "He finishes Maggie My",
           "text": "Thing on Chris. Thing OFF Chris. Thing goes for Carl. Thing is FOOD.",
           "chapter": 34
@@ -1003,7 +1003,7 @@
       "tagline": [
         {
           "at": "4:5",
-          "text": "Juice Box. Changeling. Prostitute, professionally. Louis brought me along, and I would have come anyway."
+          "text": "Juice Box. Changeling. Prostitute, professionally. Sitting on Louis’s lap, and staying."
         },
         {
           "at": "7:7",
@@ -1018,9 +1018,9 @@
           "chapter": 5,
           "floor": 5,
           "at": "4:5",
-          "confidence": "draft",
-          "headline": "Louis brings her",
-          "text": "Louis found me and Louis brought me, because he is sweet and because I asked. Now the other crawlers in the quadrant have found Carl's group, and Carl's group has a cat who talks. Their manager, Mordecai, is sobering Louis and Firas up on the spot. All the fun is coming out of their blood at once. Louis looks very sad about it. I am not sad. I am here, and I am staying."
+          "confidence": "verified",
+          "headline": "On Louis's lap",
+          "text": "I am on Louis's lap, because Louis is sweet. Now the other crawlers in the quadrant have found Carl's group, and Carl's group has a cat who talks. Their manager, Mordecai, is sobering Louis and Firas up on the spot. All the fun is coming out of their blood at once. Louis looks very sad about it. I am not sad. I am here, and I am staying."
         },
         {
           "kind": "use",
@@ -1772,9 +1772,9 @@
           "book": 4,
           "floor": 5,
           "at": "4:14",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "A Scree riding Chris Andrews",
-          "text": "Frank Q is dead. Chris Andrews killed him, and Chris Andrews was not the one driving. Maggie My is back in the dungeon as a Scree, riding inside another crawler, and Frank died of exactly the thing he brought down here with him. He spoke to Carl one last time at the Desperado Club and called what was coming a gift. This was the gift. Half of a pair who taught this planet what safe rooms are for. The other half is still walking around, wearing somebody else.",
+          "text": "Frank Q is dead. Chris Andrews killed him, and Chris Andrews was not the one driving. Maggie My is back in the dungeon as a Scree, riding inside another crawler, and Frank died of exactly the thing he brought down here with him. He found Carl at the Desperado Club and gave him a ring. She found Frank there afterwards. Half of a pair who taught this planet what safe rooms are for. The other half is still walking around, wearing somebody else.",
           "chapter": 14
         },
         {
@@ -2139,7 +2139,7 @@
           "chapter": 12,
           "floor": 9,
           "at": "7:12",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Blood bar rules are back",
           "text": "The blood bar rules are back in force inside the safe rooms. I tell Carl now, while knowing it still costs nothing. Around us the NPCs, the mercenaries and the rest of us former crawlers are building the defences on the same line, three kinds of people this format has always kept apart, working shoulder to shoulder. I do not have a rule for that. I am watching it closely."
         },
@@ -2728,7 +2728,7 @@
           "chapter": 3,
           "floor": 5,
           "at": "4:3",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The desert quadrant",
           "text": "Crawler Firas. Fifth floor, desert quadrant. Located in the company of Crawler Louis and Langley's team, a party of car salesmen who have taken up the bow, at the moment Crawler Carl's group came looking for other crawlers. Keeps close to Louis. Present for the march on the Bactrian town and for the run back to Hump Town that followed it. The file on this one is thin. So is the file on most of you."
         },
@@ -6861,9 +6861,9 @@
           "chapter": 32,
           "floor": 4,
           "at": "3:32",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Still human, and heavier for it",
-          "text": "I stayed human at selection. No fur, no beak, nothing added on. Earth Mover for the class, which is a spellcaster and a wall in the same body, and Dirt Clod is exactly what it sounds like and it works better than it has any right to. The armour I am in now is black and gold and glows in the dark. Li Na says that is showing off. Li Na is not wrong."
+          "text": "I stayed human at selection. No fur, no beak, nothing added on. Earth Mover for the class, which is a spellcaster and a wall in the same body, and Dirt Clod is exactly what it sounds like and it works better than it has any right to. The armour I am in now is black and gold and glows in the dark."
         },
         {
           "kind": "arc",
@@ -7570,7 +7570,7 @@
           "kind": "arc",
           "book": 6,
           "at": "6:36",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "One of the names on the adjutant list",
           "text": "There is a list going round with my name on it. Crawlers choosing an adjutant for the coming floor, and somebody has put the host of a panel show on the shortlist, which means either that they have excellent taste or that they are not taking this remotely seriously. Either way, folks. I am flattered.",
           "chapter": 36,
@@ -7723,7 +7723,16 @@
       "revealedAt": "1:22",
       "sort": 64,
       "voice": "system",
-      "tagline": "A manager who treats the assignment as a holiday, and is not troubled that her crawlers can tell.",
+      "tagline": [
+        {
+          "at": "1:22",
+          "text": "The tutorial guide the Meadow Lark residents were handed, and the one they quote."
+        },
+        {
+          "at": "5:70",
+          "text": "A guide who insists she once charmed a boss, which Mordecai says cannot be done."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -7731,9 +7740,39 @@
           "chapter": 22,
           "floor": 1,
           "at": "1:22",
-          "confidence": "draft",
-          "headline": "The manager who is on holiday",
-          "text": "Subject holds a manager’s contract for one of the teams and treats the posting as time off. She drinks. She smokes blitz sticks. She has, on one occasion, charmed a boss, which is more than most managers achieve and rather less than her team needs from her on any given afternoon. Her crawlers know exactly what they have been given."
+          "confidence": "verified",
+          "headline": "Our tutorial guide lady",
+          "text": "Subject is the tutorial guide assigned to the Meadow Lark group. Her crawlers pass her rules on to anyone who will listen: every borough and city boss holds a stairwell for the first four or five floors, and there are other stairs in random places besides."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 31,
+          "floor": 2,
+          "at": "1:31",
+          "confidence": "verified",
+          "headline": "Ten days, she said",
+          "text": "Subject told her crawlers the second floor would last ten days. The countdown resets to six. Her crawlers note the difference."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 70,
+          "floor": 6,
+          "at": "5:70",
+          "confidence": "verified",
+          "headline": "She has charmed a boss",
+          "text": "Mordecai holds that a boss cannot be charmed. Subject insists she has done it. The rules say a white-tagged boss can be, if the crawler clears it by a hundred points, which puts her on the right side of the argument and nobody on the right side of the odds."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 48,
+          "floor": 8,
+          "at": "6:48",
+          "confidence": "verified",
+          "headline": "Another drink",
+          "text": "Orren explains who is taking the show away from its showrunners. Subject turns her empty bottle upside down and announces that she needs another drink, which is the most reasonable response anyone in the room has."
         }
       ],
       "relations": []
@@ -7781,7 +7820,7 @@
           "chapter": 15,
           "floor": 3,
           "at": "2:15",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "On the door of the Desperado Club",
           "text": "Subject is a Crocodilian, an intelligent, thick-skinned, semi-aquatic people who are not celebrated for their quickness, and she works the door of the club. This is a non-combatant posting, which describes her contract rather than her capabilities. Nobody has yet found the argument that gets past her."
         }
@@ -7823,7 +7862,7 @@
       "revealedAt": "3:8",
       "sort": 68,
       "voice": "system",
-      "tagline": "Seven feet of granite in a tuxedo, and the tuxedo fits.",
+      "tagline": "Another rock monster on the club’s books, posted behind Elle. “No closer.”",
       "beats": [
         {
           "kind": "origin",
@@ -7831,9 +7870,9 @@
           "chapter": 8,
           "floor": 4,
           "at": "3:8",
-          "confidence": "draft",
-          "headline": "A Cretin in evening dress",
-          "text": "Subject is a Cretin, seven feet of rock-coloured muscle, employed as a bodyguard on the club floor and dressed for it. He is not conversational. He is assigned where the club decides he is needed, and the arrangement has never yet required anyone to explain to him what the job involves."
+          "confidence": "verified",
+          "headline": "Elle's rock",
+          "text": "Subject is a rock monster of the same stamp as the club’s cretins, posted behind Crawler Elle McGibbons on the dance floor with his arms folded. His entire recorded conversation is “No closer.” She moves him aside by hand when she wants to."
         }
       ],
       "relations": []
@@ -7905,9 +7944,9 @@
           "chapter": 21,
           "floor": 4,
           "at": "3:21",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Given memories of a child that was never made",
-          "text": "Subject conducts the Mango Line. He was also issued with a set of memories containing a daughter, and the daughter was never made, and he has not been told. He is found on the ground with his head down and a puddle forming underneath him. The memories work. That is the part of the design I would draw attention to."
+          "text": "Subject conducts the Mango Line. He was also issued with a set of memories containing a daughter, and the daughter was never made, and he has worked that out and cannot understand it. He is found on the ground with his head down and a puddle forming underneath him. The memories work. That is the part of the design I would draw attention to."
         }
       ],
       "relations": []
@@ -7945,7 +7984,16 @@
       "revealedAt": "3:27",
       "sort": 73,
       "voice": "system",
-      "tagline": "A clawed migratory people, an island, a family, and a set of entries in a book that are mostly furious.",
+      "tagline": [
+        {
+          "at": "3:27",
+          "text": "A sixth-edition hand in the cookbook, and honest about how little anyone understands portals."
+        },
+        {
+          "at": "6:13",
+          "text": "Wrote the sixth edition as if someone would need feeding. Before the stairs, she made the stew for her whole family, on an island."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -7953,9 +8001,19 @@
           "chapter": 27,
           "floor": 4,
           "at": "3:27",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The sixth hand on the cookbook",
-          "text": "Subject carried the cookbook and added to it, and several of her entries are rants rather than instructions. She came from a clawed race with annual migration patterns and lived on an island with her family before the stairs. The rants were left in. Everyone who has carried the book since has read them."
+          "text": "Subject carried the cookbook in its sixth edition and added to it. Her note on portals admits what nobody else will: there are dozens of kinds, they do not behave consistently, and one the size of a button can throw you into a monster den."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 13,
+          "floor": 8,
+          "at": "6:13",
+          "confidence": "verified",
+          "headline": "The stew",
+          "text": "Subject used to make a stew for her whole family: rance meat, bone broth, and a wild grass from the leeward side of their island. She wrote the sixth edition in the hope it would feed whoever found it the way the stew fed her little ones, and she wondered in the margin whether one reader was enough."
         }
       ],
       "relations": []
@@ -8012,7 +8070,7 @@
           "chapter": 2,
           "floor": 5,
           "at": "4:2",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "One of the children who lived",
           "text": "Subject is a child of Hump Town. Her village was bombed by the gnomes, the dromedarians took in what was left, and not many of the children lived. She did. She climbs the ladder to the hatch faster than anyone her size should."
         },
@@ -8088,17 +8146,17 @@
       "revealedAt": "4:6",
       "sort": 78,
       "voice": "system",
-      "tagline": "Took the Human race and a rogue’s class, and holds a quadrant of a bubble nobody else wanted.",
+      "tagline": "Took the Human race and a rogue’s class, and holds the subterranean quadrant of his bubble.",
       "beats": [
         {
           "kind": "origin",
           "book": 4,
-          "chapter": 7,
+          "chapter": 8,
           "floor": 5,
-          "at": "4:7",
-          "confidence": "draft",
+          "at": "4:8",
+          "confidence": "verified",
           "headline": "The tomb raiders, so called",
-          "text": "Subject kept the Human race and took the rogue-type Spy Class, and earned his way into the club on that. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck."
+          "text": "Subject kept the Human race and took the rogue-type Spy Class, and he is one of the two in his party with Desperado Club access. His party holds the subterranean quadrant of their bubble. Carl calls them the tomb raiders, which is not their name for themselves and is the one that stuck."
         }
       ],
       "relations": []
@@ -8160,17 +8218,26 @@
       "revealedAt": "4:29",
       "sort": 81,
       "voice": "system",
-      "tagline": "A god’s favourite child, and the hound’s first owner, murdered long before any of this by a hand nobody has named.",
+      "tagline": [
+        {
+          "at": "4:29",
+          "text": "The name on a hell-hound’s description: Orthrus is his bereft pet."
+        },
+        {
+          "at": "4:32",
+          "text": "A god’s son and the hound’s owner, murdered, with his uncle the obvious suspect and an alibi in the way."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
           "book": 4,
-          "chapter": 29,
+          "chapter": 32,
           "floor": 5,
-          "at": "4:29",
-          "confidence": "draft",
+          "at": "4:32",
+          "confidence": "verified",
           "headline": "The hound had an owner before this one",
-          "text": "Subject was the favourite child of a god and the first owner of Orthrus. He was murdered. His father has a suspect and no proof, and the suspect is family, which is the arrangement that turns a private grievance into a standing quest with a stranger’s name on it."
+          "text": "Subject was a god’s son and the owner of Orthrus, and he was murdered. His father’s quest names the obvious suspect, his own brother Hellik, and in the same breath admits that Hellik was in council with the rest of them when it happened."
         }
       ],
       "relations": []
@@ -8193,7 +8260,7 @@
           "book": 4,
           "floor": 5,
           "at": "4:end",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The second hand on the cookbook",
           "text": "Subject crawled in the fifteenth season, chose the High Elf race and a rogue’s class, and wrote the second edition of the book that keeps being handed down. He now runs the Open Intellect Pacifist Action Network, which opposes the crawl. He is therefore both an advertisement for the dungeon and a witness against it, and production has never worked out how to bill him."
         }
@@ -8217,9 +8284,9 @@
           "chapter": 15,
           "floor": 9,
           "at": "7:15",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The shark has a name",
-          "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He is polite. He is anxious. He is loyal past the point where loyalty is sensible, and I have not yet identified what he is getting out of the arrangement."
+          "text": "Subject existed first as a magical tattoo carried on Tsarina Signet’s skin, and is now a very large air-breathing hammerhead shark with opinions about heights. He rolls with Carl’s squad now, answers to Jamal, and says very little about how any of that came about."
         }
       ],
       "relations": []
@@ -8288,12 +8355,12 @@
         {
           "kind": "origin",
           "book": 6,
-          "chapter": 6,
+          "chapter": 52,
           "floor": 8,
-          "at": "6:6",
-          "confidence": "draft",
+          "at": "6:52",
+          "confidence": "verified",
           "headline": "Short, fuzzy, and available",
-          "text": "Subject dances at one of the establishments inside the club and takes mercenary work on the side. He is short, hairy and built like the job. The court hires him. I note for the record that of everyone on the payroll, he is among the few who have never once had to be told what the plan is twice."
+          "text": "Subject dances at the Penis Parade and, since the court took on the club’s people, fights for it: short, hairy, built like the job, and insistent on twin war gauntlets. Crawler Katia’s review, on file: a bit of a jerk, a good dancer, and a little in love with the cat."
         }
       ],
       "relations": []
@@ -8433,7 +8500,7 @@
           "chapter": 52,
           "floor": 8,
           "at": "6:52",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "The announcer, not the act",
           "text": "Subject is a skeletal Bard, level ninety, working as announcer and disc jockey for one of the club’s establishments rather than performing in it. He also takes mercenary contracts. The two careers turn out to require the same skill, which is holding a room’s attention while something else happens in it."
         }
@@ -8449,7 +8516,7 @@
       "revealedAt": "7:15",
       "sort": 92,
       "voice": "system",
-      "tagline": "Famous outside the dungeon, which counts for nothing down here, and a battalion commander because of what he did in a season called Land War.",
+      "tagline": "A veteran of Land War, a different game on a different planet, and a battalion commander on the strength of it.",
       "beats": [
         {
           "kind": "origin",
@@ -8457,9 +8524,9 @@
           "chapter": 15,
           "floor": 9,
           "at": "7:15",
-          "confidence": "draft",
+          "confidence": "verified",
           "headline": "Commander of the 103rd",
-          "text": "Subject is a former crawler whose season was Land War, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He is recognised on sight by people who have never crawled. That is rarer than it sounds."
+          "text": "Subject is a veteran of Land War, a different game entirely, which was inflicted on his home planet; everyone calls him a crawler anyway, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He has said perhaps three words since."
         }
       ],
       "relations": []
