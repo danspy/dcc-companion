@@ -175,6 +175,44 @@ test('a floor with no premise fails the build', () => {
   assert.ok(errors.some(e => e.includes('no premise')));
 });
 
+test("a floor's name may open before the floor, never after it", () => {
+  const { errors } = lint({
+    books: [{ id: 1, title: 'One', chapters: 47 }, { id: 7, title: 'Seven', chapters: 87 }],
+    floors: [{ id: 9, name: 'Faction Wars', revealedAt: '7:1', nameAt: '1:43', recapAt: '7:end', premise: 'p' },
+             { id: 10, name: 'Some Floor', revealedAt: '7:1', nameAt: '7:5', recapAt: '7:end', premise: 'p' }],
+    entities: [],
+  });
+  assert.equal(errors.filter(e => e.includes('floor 9: name')).length, 0);
+  assert.ok(errors.some(e => e.includes('floor 10: name unseals')));
+});
+
+test("a floor's name is gated at nameAt, not at arrival", () => {
+  const { errors } = lint({
+    books: [{ id: 2, title: 'Two', chapters: 25 }, { id: 7, title: 'Seven', chapters: 87 }],
+    floors: [{ id: 9, name: 'Faction Wars', revealedAt: '7:1', nameAt: '2:2', recapAt: '7:end', premise: 'p' }],
+    entities: [{ id: 'x', kind: 'character', name: 'Someone', revealedAt: '2:1', confidence: 'verified',
+      beats: [{ kind: 'arc', book: 2, chapter: 5, at: '2:5', confidence: 'verified', headline: 'h', text: 'The Faction Wars come up at the bar.' }] }],
+  });
+  assert.equal(errors.filter(e => e.includes('Faction Wars')).length, 0);
+});
+
+test('a one-word name is matched as written; a multi-word name is not', () => {
+  const beat = text => ({ kind: 'arc', book: 1, chapter: 5, at: '1:5', confidence: 'verified', headline: 'h', text });
+  const run = texts => lint({
+    books: [{ id: 1, title: 'One', chapters: 47 }, { id: 5, title: 'Five', chapters: 75 }],
+    floors: [{ id: 7, name: 'The Great Race', revealedAt: '5:end', recapAt: '5:end', premise: 'p' }],
+    entities: [
+      { id: 'j', kind: 'character', name: 'Justice', revealedAt: '5:1', tagline: 't', confidence: 'verified', beats: [] },
+      { id: 'x', kind: 'character', name: 'Someone', revealedAt: '1:1', tagline: 't', confidence: 'verified', beats: texts.map(beat) },
+    ],
+  }).errors;
+  // "justice" in a sentence is English, not a reveal of Justice
+  assert.equal(run(['He wants justice for the dead.']).length, 0);
+  assert.ok(run(['Justice is waiting outside.']).some(e => e.includes('"Justice"')));
+  // multi-word names stay case-blind: "the great race" still leaks The Great Race
+  assert.ok(run(['Nobody mentions the great race yet.']).some(e => e.includes('Great Race')));
+});
+
 test('an unset position reveals nothing at all', () => {
   const f = frontierOf({ book: 0, chapter: 0 }, null);
   assert.equal(f, 0);

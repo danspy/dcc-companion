@@ -315,9 +315,18 @@
       "name": "Loot Boxes",
       "aka": [],
       "role": "Economy",
-      "revealedAt": "1:5",
+      "revealedAt": "1:2",
       "sort": 5,
-      "tagline": "Six tiers — Bronze, Silver, Gold, Platinum, Legendary, Celestial — each dramatically rarer than the last.",
+      "tagline": [
+        {
+          "at": "1:2",
+          "text": "Carl has received several of something, and it sounds a lot like loot boxes. The rat man says where they live, then says Carl cannot get at them yet."
+        },
+        {
+          "at": "1:5",
+          "text": "Six tiers — Bronze, Silver, Gold, Platinum, Legendary, Celestial — each dramatically rarer than the last."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -582,9 +591,18 @@
         "the Doggy Door"
       ],
       "role": "Rules",
-      "revealedAt": "3:2",
+      "revealedAt": "1:9",
       "sort": 9,
-      "tagline": "A pocket room you carry with you. Upgrade it far enough and other people can walk into yours.",
+      "tagline": [
+        {
+          "at": "1:9",
+          "text": "A door in the safe room with an X over it. Personal Spaces are not yet available, the box says; they go on sale on the fourth level."
+        },
+        {
+          "at": "3:2",
+          "text": "A pocket room you carry with you. Upgrade it far enough and other people can walk into yours."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1080,9 +1098,13 @@
       "name": "Changeling",
       "aka": [],
       "role": "Crawler race",
-      "revealedAt": "1:29",
+      "revealedAt": "1:3",
       "sort": 50,
       "tagline": [
+        {
+          "at": "1:3",
+          "text": "What Mordecai became on the third floor: a shapeshifter who takes a new form every time his guildhall is moved."
+        },
         {
           "at": "1:29",
           "text": "Take any shape you like. The catch is what happens when the dungeon takes the choosing away from you."
@@ -1168,9 +1190,13 @@
       "name": "Faction Wars",
       "aka": [],
       "role": "Floor event · ninth floor",
-      "revealedAt": "5:75",
+      "revealedAt": "1:43",
       "sort": 40,
       "tagline": [
+        {
+          "at": "1:43",
+          "text": "Nine families fight it on the ninth floor. A boastful heir says his has won six of the last ten, and the Naga always go out first."
+        },
         {
           "at": "5:75",
           "text": "Nine armies, bought and paid for by people who will never stand in one of them, fight for the castle at the bottom of the ninth floor's funnel city. Crawlers are meant to keep their heads down and let it pass over."
@@ -1386,9 +1412,18 @@
         "adjutant"
       ],
       "role": "Referee · faction teams",
-      "revealedAt": "6:17",
+      "revealedAt": "6:2",
       "sort": 42,
-      "tagline": "A neutral referee attached to each team on the ninth floor. Invulnerable, usually famous, and mostly there to talk to camera.",
+      "tagline": [
+        {
+          "at": "6:2",
+          "text": "Something a warlord is apparently assigned. Mordecai asks who theirs is, gets a blank look, and puts off explaining."
+        },
+        {
+          "at": "6:17",
+          "text": "A neutral referee attached to each team on the ninth floor. Invulnerable, usually famous, and mostly there to talk to camera."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1460,9 +1495,13 @@
       "name": "Feral",
       "aka": [],
       "role": "Status effect",
-      "revealedAt": "4:9",
+      "revealedAt": "4:3",
       "sort": 43,
       "tagline": [
+        {
+          "at": "4:3",
+          "text": "Mordecai's rule of thumb, offered over a dead goose: anything with feral in the name is usually bad news."
+        },
         {
           "at": "4:9",
           "text": "A word the System puts in front of a name when whatever it is has been somewhere it should not have been, and came back."
@@ -1811,9 +1850,18 @@
         "Guilds"
       ],
       "role": "Rules",
-      "revealedAt": "5:8",
+      "revealedAt": "3:32",
       "sort": 47,
-      "tagline": "Buy a charter and five parties can share one room, one set of upgrades and, for a fee, their experience. Allies stop having to be party members.",
+      "tagline": [
+        {
+          "at": "3:32",
+          "text": "A formal way to attach separate parties to each other, mentioned only in the cookbook's twenty-second edition, switched on from the sixth floor, if it still exists."
+        },
+        {
+          "at": "5:8",
+          "text": "Buy a charter and five parties can share one room, one set of upgrades and, for a fee, their experience. Allies stop having to be party members."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2393,9 +2441,18 @@
       "name": "Kravyad",
       "aka": [],
       "role": "Rail management",
-      "revealedAt": "3:18",
+      "revealedAt": "3:11",
       "sort": 58,
-      "tagline": "Employee management for the tangle, waiting at the station where the staff get off, and nobody can agree whether they are a boss or a fixture.",
+      "tagline": [
+        {
+          "at": "3:11",
+          "text": "Whoever handles employee return on the line, according to a train engineer: they prepare the staff with dark magic before the portal, and the portal does something to memory."
+        },
+        {
+          "at": "3:18",
+          "text": "Employee management for the tangle, waiting at the station where the staff get off, and nobody can agree whether they are a boss or a fixture."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2416,9 +2473,18 @@
       "name": "Skyfowl",
       "aka": [],
       "role": "Dungeon race",
-      "revealedAt": "4:1",
+      "revealedAt": "1:3",
       "sort": 59,
-      "tagline": "One of six species the Syndicate scatters over candidate worlds, and a people who mostly decline the offer to stop being one.",
+      "tagline": [
+        {
+          "at": "1:3",
+          "text": "What Mordecai was born as, going by the framed photo of his brother. His people, he says, outlast humans because they roll with it."
+        },
+        {
+          "at": "4:1",
+          "text": "One of six species the Syndicate scatters over candidate worlds, and a people who mostly decline the offer to stop being one."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2439,9 +2505,18 @@
       "name": "Tummy Acher",
       "aka": [],
       "role": "Pet-class mob",
-      "revealedAt": "7:5",
+      "revealedAt": "1:46",
       "sort": 60,
-      "tagline": "A pet-class mob the size of a meatball, and stronger for every time it has died.",
+      "tagline": [
+        {
+          "at": "1:46",
+          "text": "One of the caged pets on offer: a meatball with two legs and a mohawk."
+        },
+        {
+          "at": "7:5",
+          "text": "A pet-class mob the size of a meatball, and stronger for every time it has died."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2472,9 +2547,18 @@
       "name": "Ping",
       "aka": [],
       "role": "Spell",
-      "revealedAt": "7:79",
+      "revealedAt": "4:32",
       "sort": 61,
-      "tagline": "A hunting call for people who do not mind whether the thing being hunted hears it coming.",
+      "tagline": [
+        {
+          "at": "4:32",
+          "text": "A five-mana spell: an audible ping that marks everything neither a crawler nor red-tagged, for those who do not care if their quarry knows they are coming."
+        },
+        {
+          "at": "7:79",
+          "text": "A hunting call for people who do not mind whether the thing being hunted hears it coming."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2495,9 +2579,18 @@
       "name": "Sluggalos",
       "aka": [],
       "role": "Mob",
-      "revealedAt": "6:65",
+      "revealedAt": "6:61",
       "sort": 62,
-      "tagline": "Slugs born out of the boils of a disease, painted like a touring band, and enormously pleased to have been asked along.",
+      "tagline": [
+        {
+          "at": "6:61",
+          "text": "Slugs leaking out of infected mercenaries every few minutes, hundreds of them in a room full of blood. Imani calls them punk rock. Carl corrects her."
+        },
+        {
+          "at": "6:65",
+          "text": "Slugs born out of the boils of a disease, painted like a touring band, and enormously pleased to have been asked along."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -2558,9 +2651,18 @@
       "name": "Mantaur",
       "aka": [],
       "role": "’Taur mob",
-      "revealedAt": "8:13",
+      "revealedAt": "3:11",
       "sort": 63,
-      "tagline": "Half human, and, where the horse ought to be, also half human. The System calls it the strangest of the ’taurs and offers no defence of the design.",
+      "tagline": [
+        {
+          "at": "3:11",
+          "text": "Half human and, the System says, half human. Bred for strength and dexterity, which is to say for driving trains."
+        },
+        {
+          "at": "8:13",
+          "text": "Half human, and, where the horse ought to be, also half human. The System calls it the strangest of the ’taurs and offers no defence of the design."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",

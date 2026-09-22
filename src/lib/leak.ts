@@ -42,6 +42,8 @@ export interface Nameable {
      is whatever the snapshot put there. Narrowed where it is read. */
   aka?: unknown;
   revealedAt: string | number;
+  /* Floors only: the name can open before the floor does. */
+  nameAt?: string | number | null;
 }
 
 export interface ScreenEntry {
@@ -102,7 +104,7 @@ export function buildScreen(
       }
     }
   }
-  for (const f of floors) add(`floor ${f.id}`, f.name, f.revealedAt);
+  for (const f of floors) add(`floor ${f.id}`, f.name, f.nameAt ?? f.revealedAt);
 
   return out;
 }

@@ -11571,9 +11571,18 @@
         "Grimaldi"
       ],
       "role": "NPC · ringmaster",
-      "revealedAt": "2:6",
+      "revealedAt": "2:4",
       "sort": 11,
-      "tagline": "Redstone Grimaldi, ringmaster of Grimaldi's Traveling Circus. Also the man who took Signet in, which is the only line of his file anyone ever asks about.",
+      "tagline": [
+        {
+          "at": "2:4",
+          "text": "Grimaldi. The name is on a monster's description: Grimaldi's Traveling Circus, once one of the Over City's favourite attractions. What is left of it wears skulls."
+        },
+        {
+          "at": "2:6",
+          "text": "Redstone Grimaldi, ringmaster of Grimaldi's Traveling Circus. Also the man who took Signet in, which is the only line of his file anyone ever asks about."
+        }
+      ],
       "voice": "system",
       "beats": [
         {
@@ -11646,9 +11655,18 @@
         "Psamathe"
       ],
       "role": "Withering spirit",
-      "revealedAt": "4:24",
+      "revealedAt": "4:21",
       "sort": 12,
-      "tagline": "I am a GODDESS. Half of one. In the head of a sex doll. You are going to hear about it.",
+      "tagline": [
+        {
+          "at": "4:21",
+          "text": "Psamathe. A council of scholars writes to the mage who botched summoning me that I am a banished LESSER deity who duped him. Lesser. I would like that word back."
+        },
+        {
+          "at": "4:24",
+          "text": "I am a GODDESS. Half of one. In the head of a sex doll. You are going to hear about it."
+        }
+      ],
       "voiceNote": "Loud. Capitals for the loud parts. Filthy-minded, self-obsessed, theatrical; wounded by being ignored and never quiet about a grievance. Carl, Donut, Mother. Talks about her missing body the way other people talk about a stolen car. Never humble, never grateful for longer than one sentence.",
       "beats": [
         {
@@ -12325,9 +12343,13 @@
       "name": "Shi Maria",
       "aka": [],
       "role": "Crawler · card",
-      "revealedAt": "6:25",
+      "revealedAt": "6:8",
       "sort": 13,
       "tagline": [
+        {
+          "at": "6:8",
+          "text": "Samantha has found me in my swamp, and we have so much in common. My web is over the whole area. I am only looking for my husband."
+        },
         {
           "at": "6:25",
           "text": "I am Samantha's new friend. She has been without a body for so long, poor thing, and I can give her one. Ask her. She will tell you how kind I am."
@@ -12458,9 +12480,13 @@
       "name": "Juice Box",
       "aka": [],
       "role": "Ally",
-      "revealedAt": "4:5",
+      "revealedAt": "4:1",
       "sort": 14,
       "tagline": [
+        {
+          "at": "4:1",
+          "text": "Juice Box. Changeling. The only working girl at the Toe, and this lot all just said no. Their loss."
+        },
         {
           "at": "4:5",
           "text": "Juice Box. Changeling. Prostitute, professionally. Sitting on Louis’s lap, and staying."
@@ -13125,9 +13151,13 @@
       "name": "Tran",
       "aka": [],
       "role": "Crawler",
-      "revealedAt": "4:22",
+      "revealedAt": "4:20",
       "sort": 16,
       "tagline": [
+        {
+          "at": "4:20",
+          "text": "Tran. Swashbuckler. I have a metal-detecting ability. There is a ring under the wheel that opens the drainage pipe. I thought it was a handhold."
+        },
         {
           "at": "4:22",
           "text": "Tran. Gwen found the valve. I opened it. There was a necropolis to flood and two crawlers under it."
@@ -13258,9 +13288,13 @@
       "name": "Ferdinand",
       "aka": [],
       "role": "Cat",
-      "revealedAt": "1:34",
+      "revealedAt": "1:23",
       "sort": 17,
       "tagline": [
+        {
+          "at": "1:23",
+          "text": "Ferdinand. A name Princess Donut drops when she pictures herself matted and filthy. Asked who he is, she says nobody you would know."
+        },
         {
           "at": "1:34",
           "text": "Ferdinand. Bea's other cat. Loved, apparently: a tortoiseshell Persian said so with a Buzzed debuff on, and ranked him ahead of the man who carries her. I keep a file on everything. This one is thin."
@@ -13436,9 +13470,13 @@
       "name": "Emberus",
       "aka": [],
       "role": "God",
-      "revealedAt": "4:30",
+      "revealedAt": "4:28",
       "sort": 18,
       "tagline": [
+        {
+          "at": "4:28",
+          "text": "I am Emberus. Someone has let my hound loose. I burn every bubble on this floor until he is returned to me."
+        },
         {
           "at": "4:30",
           "text": "I am Emberus. My hound is loose on this floor, and a great many small things would like to be the one that brought him down. They are welcome to try."
@@ -13575,9 +13613,13 @@
       "name": "Miriam Dom",
       "aka": [],
       "role": "Crawler",
-      "revealedAt": "3:32",
+      "revealedAt": "2:end",
       "sort": 19,
       "tagline": [
+        {
+          "at": "2:end",
+          "text": "Fifth on the board, two hundred thousand on my head. Human, Shepherd, level twenty-seven. I do not travel alone."
+        },
         {
           "at": "3:32",
           "text": "We are working the Iron Tangle from the far side of the knot, Prepotente and I. He is a goat, and he would like you to know he is the clever one."
@@ -13709,9 +13751,13 @@
       "name": "Prepotente",
       "aka": [],
       "role": "Crawler · goat",
-      "revealedAt": "3:3",
+      "revealedAt": "2:end",
       "sort": 20,
       "tagline": [
+        {
+          "at": "2:end",
+          "text": "Prepotente. Caprid. Forsaken Aerialist. Third on their leaderboard, and a human six places below me has the gall to ask who I am."
+        },
         {
           "at": "3:3",
           "text": "Yes, I am a goat. A Boer goat. I sing opera, I swear, and I am cleverer than you. Move along."
@@ -14976,9 +15022,13 @@
       "name": "Quan Ch",
       "aka": [],
       "role": "Crawler",
-      "revealedAt": "2:end",
+      "revealedAt": "2:24",
       "sort": 24,
       "tagline": [
+        {
+          "at": "2:24",
+          "text": "Crawler Quan Ch. One of about eighty names in a quest chat, and author of its only message, which is addressed to Carl and Donut and is not a thank-you."
+        },
         {
           "at": "2:end",
           "text": "Crawler Quan Ch. Opened his Celestial box a fraction before Borant burned its veto, and a Celestial box does not un-open. Eighty-three crawlers were owed one. The count came to him."
@@ -15709,9 +15759,13 @@
       "name": "Odette",
       "aka": [],
       "role": "Advisor",
-      "revealedAt": "1:28",
+      "revealedAt": "1:27",
       "sort": 31,
       "tagline": [
+        {
+          "at": "1:27",
+          "text": "Carl and the Princess have just won a very public battle, and I would very much like them on my couch. My producer is carrying the invitation."
+        },
         {
           "at": "1:28",
           "text": "Welcome to Dungeon Crawler After Hours. I have had a great many crawlers in that chair, and not one of them has worked my crowd the way that cat is working it right now. Sit down, both of you. We are going to get along."
@@ -16323,9 +16377,13 @@
         "Justice"
       ],
       "role": "Former crawler",
-      "revealedAt": "7:11",
+      "revealedAt": "4:32",
       "sort": 34,
       "tagline": [
+        {
+          "at": "4:32",
+          "text": "Eighth edition. I killed a shopkeeper for an insult, and the only trap shop on the floor went with him. Do not make the same mistake as me."
+        },
         {
           "at": "7:11",
           "text": "I got out of a crawl once. Fifty thousand of us did, and we came back in under a cat's banner. We knew what we were signing. That is rather the point."
@@ -16456,9 +16514,18 @@
       "name": "Tipid",
       "aka": [],
       "role": "Former crawler",
-      "revealedAt": "7:11",
+      "revealedAt": "6:16",
       "sort": 35,
-      "tagline": "I got out once. I came back in on purpose, and I brought the institutional memory with me, because nobody hands it to the ones still inside.",
+      "tagline": [
+        {
+          "at": "6:16",
+          "text": "A note in the cookbook, fourth edition. I killed my best friend today. I wish I had never made it this far."
+        },
+        {
+          "at": "7:11",
+          "text": "I got out once. I came back in on purpose, and I brought the institutional memory with me, because nobody hands it to the ones still inside."
+        }
+      ],
       "voiceNote": "Measured, exact, a briefer. Short declaratives in order; repeats an instruction rather than raising his voice. Carl and Donut by name; the retired crawlers are 'us' or 'the ones who got out'. Never speculates, never dramatises, never talks about himself.",
       "beats": [
         {
@@ -16760,9 +16827,13 @@
       "name": "Britney",
       "aka": [],
       "role": "Crawler",
-      "revealedAt": "4:25",
+      "revealedAt": "4:20",
       "sort": 38,
       "tagline": [
+        {
+          "at": "4:20",
+          "text": "Vadim and me. Last two out of the water quadrant. We are not going back down there."
+        },
         {
           "at": "4:25",
           "text": "Britney. Vadim and me, out of the desert and in with Carl's lot. Two more bodies. That's what we are right now, and that's fine."
@@ -17081,9 +17152,13 @@
         "Imogen"
       ],
       "role": "High Elf queen",
-      "revealedAt": "5:20",
+      "revealedAt": "5:14",
       "sort": 40,
       "tagline": [
+        {
+          "at": "5:14",
+          "text": "The throne was my father's, and it is mine now. My half-sister has come home telling old stories about me. I do not answer stories."
+        },
         {
           "at": "5:20",
           "text": "They are saying the Queen of the High Elves will prove to be one of your repurposed humans. They cannot even agree which one. I am Imogen. I am hosting a masquerade, and the best of you are invited."
@@ -17271,9 +17346,13 @@
       "name": "Eris",
       "aka": [],
       "role": "Summoned power",
-      "revealedAt": "7:61",
+      "revealedAt": "1:34",
       "sort": 42,
       "tagline": [
+        {
+          "at": "1:34",
+          "text": "A monster's description says even Eris, Goddess of Chaos, wants nothing to do with these people. It is quoting me correctly."
+        },
         {
           "at": "7:61",
           "text": "Somebody summoned me into the middle of a war. I do hope they meant to."
@@ -17555,9 +17634,18 @@
       "name": "The Maestro",
       "aka": [],
       "role": "Presenter",
-      "revealedAt": "1:42",
+      "revealedAt": "1:41",
       "sort": 45,
-      "tagline": "Glurp, glurp. This is Death Watch Extreme Dungeon Mayhem. I run it, I host it, and I choose my guests for one quality above all others: they cannot answer back.",
+      "tagline": [
+        {
+          "at": "1:41",
+          "text": "The Maestro. I host the show you are about to sit down on, and even the robot who seats my guests says my name with a little distaste. I take it as applause."
+        },
+        {
+          "at": "1:42",
+          "text": "Glurp, glurp. This is Death Watch Extreme Dungeon Mayhem. I run it, I host it, and I choose my guests for one quality above all others: they cannot answer back."
+        }
+      ],
       "voiceNote": "Ringmaster with a microphone and no conscience. Booming showman's patter, his own catchphrase used as punctuation: Glurp, glurp. Calls crawlers by their first names, like pets, and the audience by its appetite. Never admits he has lost the room, even while losing it; never says please.",
       "beats": [
         {
@@ -17697,9 +17785,13 @@
       "name": "Vrah",
       "aka": [],
       "role": "Antagonist",
-      "revealedAt": "5:10",
+      "revealedAt": "5:1",
       "sort": 47,
       "tagline": [
+        {
+          "at": "5:1",
+          "text": "Hunter Vrah, Mantis. Wears the heads of what she kills. Her count is in the thousands, according to a man who shudders at the name."
+        },
         {
           "at": "5:10",
           "text": "Hunter Vrah, Mantis. She has left Crawler Carl a note on a door in Zockau: the hunters inside are protected from explosives now, and the Hive is hunting him. She signed it. That is the kind of hunter she is."
@@ -17823,10 +17915,14 @@
         "Oak Goddess"
       ],
       "role": "Mother of the gods",
-      "revealedAt": "5:64",
+      "revealedAt": "2:17",
       "sort": 50,
       "voice": "system",
       "tagline": [
+        {
+          "at": "2:17",
+          "text": "Apito, the Oak Mother, mother of all gods, worshipped by the elves. Her stories disagree with one another about who is blessed."
+        },
         {
           "at": "5:64",
           "text": "Apito. Tonight's host keeps a party peaceful for one evening and receives a boon from her. That is the arrangement, and everyone in the room knows the terms."
@@ -17922,10 +18018,14 @@
       "name": "Diwata",
       "aka": [],
       "role": "God of nature",
-      "revealedAt": "5:36",
+      "revealedAt": "5:35",
       "sort": 51,
       "voice": "system",
       "tagline": [
+        {
+          "at": "5:35",
+          "text": "Diwata. The name on a temple a crawler has just come through the roof of. The temple was already desecrated. The shrine he landed on is newly so."
+        },
         {
           "at": "5:36",
           "text": "Diwata. Somebody defiled her shrine, and the tattoo saying so is on a crawler's arm. The advice from the desk is to avoid dryads, and to avoid her."
@@ -18258,7 +18358,7 @@
         "The Downward Spiral"
       ],
       "role": "Goddess of hopelessness",
-      "revealedAt": "6:64",
+      "revealedAt": "4:33",
       "sort": 54,
       "voice": "system",
       "description": [
@@ -18269,6 +18369,10 @@
         }
       ],
       "tagline": [
+        {
+          "at": "4:33",
+          "text": "Ysalte, the Vinegar Bitch. A god a feral summoning very nearly brought through: an extinction-level event for this floor and the next, blocked because the sponsorship bidding is not finished."
+        },
         {
           "at": "6:64",
           "text": "Ysalte. A demon says the name out loud, and the professional opinion is that she belongs to somebody else's team and is nowhere near this floor."
@@ -18382,10 +18486,14 @@
       "name": "Taranis",
       "aka": [],
       "role": "God of thunder",
-      "revealedAt": "8:19",
+      "revealedAt": "3:33",
       "sort": 55,
       "voice": "system",
       "tagline": [
+        {
+          "at": "3:33",
+          "text": "Taranis. Named in War God Grull's description as a parent of the god of war, and worried the boy's temper is not fit to rule the heavens."
+        },
         {
           "at": "8:19",
           "text": "Taranis. A pig on a rival team is under his protection, which is a strange thing for a god of thunder to bother with."
@@ -18489,10 +18597,14 @@
         "The Scavenger Mother of Mothers"
       ],
       "role": "Vulture goddess",
-      "revealedAt": "6:36",
+      "revealedAt": "3:24",
       "sort": 56,
       "voice": "system",
       "tagline": [
+        {
+          "at": "3:24",
+          "text": "Nekhebit, a long-forgotten vulture goddess, jealous and terrible, abandoned by the elf mothers. So says the description of a crossbow."
+        },
         {
           "at": "6:36",
           "text": "Nekhebit. A crawler with a talk show has announced which deity she is sponsoring this season, and it is a name almost nobody in the audience recognised."
@@ -18593,7 +18705,7 @@
       "name": "Eileithyia",
       "aka": [],
       "role": "Goddess of childbirth",
-      "revealedAt": "6:17",
+      "revealedAt": "5:61",
       "sort": 57,
       "description": [
         {
@@ -18604,6 +18716,10 @@
       ],
       "voiceNote": "A goddess who is genuinely kind, which makes her the strangest thing in this pantheon. Warm, plain, unhurried; she speaks to a crawler the way a midwife speaks to a frightened mother, practical and quiet, telling him exactly what to do next. Calls Carl by name. Talks about pain as something to be eased rather than paid for. Never threatens, never bargains upward, never raises her voice, and never says a word about what her sponsor wants.",
       "tagline": [
+        {
+          "at": "5:61",
+          "text": "Samantha drops my name into a story about where Diwata came from, and cannot remember the rest of it. That is all right. It was never her story."
+        },
         {
           "at": "6:17",
           "text": "I have walked into a realm where everyone assumes a god wants something. I do want something. I want a young woman and a cat to come out of this alive."
@@ -18698,7 +18814,7 @@
         "The Exalted Grull"
       ],
       "role": "God of war",
-      "revealedAt": "3:11",
+      "revealedAt": "1:25",
       "sort": 58,
       "voice": "system",
       "description": [
@@ -18709,6 +18825,10 @@
         }
       ],
       "tagline": [
+        {
+          "at": "1:25",
+          "text": "Grull, war god. The name on Carl's new gauntlet, which warns that striking his worshippers with it may turn them into the deity himself. Horses and centaurs, says Mordecai."
+        },
         {
           "at": "3:11",
           "text": "Grull. A train engineer very nearly got his god into the room with a crawler party. Very nearly."
@@ -19110,7 +19230,7 @@
       "name": "Ogun",
       "aka": [],
       "role": "God of blacksmiths",
-      "revealedAt": "6:14",
+      "revealedAt": "6:5",
       "sort": 62,
       "voice": "system",
       "description": [
@@ -19121,6 +19241,10 @@
         }
       ],
       "tagline": [
+        {
+          "at": "6:5",
+          "text": "Ogun. Two crawlers here carry his symbol. A big god and a common one to worship, the god of blacksmiths."
+        },
         {
           "at": "6:14",
           "text": "Ogun. Two crawlers get a quest from their own god, and it is not phrased as a request: fix my shrine, not theirs."
@@ -19622,9 +19746,13 @@
       "name": "Hellik",
       "aka": [],
       "role": "God of sun and life",
-      "revealedAt": "4:32",
+      "revealedAt": "4:3",
       "sort": 44,
       "tagline": [
+        {
+          "at": "4:3",
+          "text": "Hellik, the red one in the sky. Local lore has him chasing his brother across it and catching him four hours before dark."
+        },
         {
           "at": "4:32",
           "text": "Hellik. God of sun and life, twin brother of Emberus, level 250, and the second half of what Carl signed for: a standing order to kill him."
@@ -20097,9 +20225,13 @@
       "name": "Edgar",
       "aka": [],
       "role": "NPC · tattooist",
-      "revealedAt": "5:29",
+      "revealedAt": "5:15",
       "sort": 48,
       "tagline": [
+        {
+          "at": "5:15",
+          "text": "Edgar. A talking tortoise in Signet's company of seventy. The cat has already found him and is chatting."
+        },
         {
           "at": "5:29",
           "text": "Edgar. A giant tortoise who talks, and who puts the dead onto Signet's skin where they go on being useful."
@@ -20178,9 +20310,13 @@
         "Rust"
       ],
       "role": "King of the Skull Empire",
-      "revealedAt": "7:32",
+      "revealedAt": "1:end",
       "sort": 49,
       "tagline": [
+        {
+          "at": "1:end",
+          "text": "I am newly arrived in this planet's orbit, and I have nothing to say about my son's show. My spokesman asks the galaxy to stop calling the prince names. The galaxy has not stopped."
+        },
         {
           "at": "7:32",
           "text": "King of the Skull Empire. My army is drawn up outside your walls and I have asked for a formal parlay. Do not read anything into that yet."
@@ -20376,9 +20512,13 @@
         "The kill, kill, kill lady"
       ],
       "role": "Announcer · Borant",
-      "revealedAt": "6:8",
+      "revealedAt": "5:62",
       "sort": 49,
       "tagline": [
+        {
+          "at": "5:62",
+          "text": "Enchanted Stick of Cascadia's Screams. My name, on a stick, in a crawler's hands, and nobody in the room can place it. Twits."
+        },
         {
           "at": "6:8",
           "text": "You have been hearing me since the first floor. Now get out there and kill, kill, kill. Yes. That voice. It is mine, and so is the show."
@@ -20597,9 +20737,13 @@
         "Sultan Rishi the Usurper"
       ],
       "role": "Naga · Blood Sultanate",
-      "revealedAt": "6:22",
+      "revealedAt": "6:21",
       "sort": 51,
       "tagline": [
+        {
+          "at": "6:21",
+          "text": "I represent the Blood Sultanate at this table, crawler, and not its royal family. A cousin, by marriage. I am called Rishi."
+        },
         {
           "at": "6:22",
           "text": "I speak for the Blood Sultanate at these meetings. Not royalty, whatever the cat has assumed. A cousin. By marriage."
@@ -20677,9 +20821,13 @@
       "name": "Damascus Steel",
       "aka": [],
       "role": "NPC · Desperado Club",
-      "revealedAt": "6:23",
+      "revealedAt": "6:5",
       "sort": 52,
       "tagline": [
+        {
+          "at": "6:5",
+          "text": "Damascus Steel. I dance. The cat told me I was Mongo's new daddy. I did not argue with her."
+        },
         {
           "at": "6:23",
           "text": "Assistant lead at the Penis Parade, and the one who can get you through the door you are actually looking for. Look at your elbow, crawler. Now look at mine."
@@ -20741,10 +20889,19 @@
       "name": "Anaconda",
       "aka": [],
       "role": "NPC · Desperado Club",
-      "revealedAt": "6:33",
+      "revealedAt": "4:8",
       "sort": 53,
       "voice": "system",
-      "tagline": "Level 75, quarter naga, lead dancer of the club's ground floor and the cat's declared favourite of the entire roster. Currently face down on his own workplace floor, weeping, which is not in the routine.",
+      "tagline": [
+        {
+          "at": "4:8",
+          "text": "Anaconda. The prize on Princess Donut's club loyalty scheme: eight more visits and she gets a free dance."
+        },
+        {
+          "at": "6:33",
+          "text": "Level 75, quarter naga, lead dancer of the club's ground floor and the cat's declared favourite of the entire roster. Currently face down on his own workplace floor, weeping, which is not in the routine."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -20987,9 +21144,13 @@
         "Warlord Vinata"
       ],
       "role": "Warlord · Blood Sultanate",
-      "revealedAt": "7:43",
+      "revealedAt": "7:42",
       "sort": 55,
       "tagline": [
+        {
+          "at": "7:42",
+          "text": "My name is Princess Vinata. For these games you are welcome to call me the Whore, and the crawler is welcome to take my hand. If he can."
+        },
         {
           "at": "7:43",
           "text": "Princess of the Naga and warlord of the Blood Sultanate. For these games you are welcome to call me the Whore. It saves everybody a great deal of time."
@@ -21073,9 +21234,13 @@
         "Dong"
       ],
       "role": "NPC · mercenary",
-      "revealedAt": "7:63",
+      "revealedAt": "6:6",
       "sort": 56,
       "tagline": [
+        {
+          "at": "6:6",
+          "text": "The cat names her favourites among those who dance for coin, and my name is in the list. I accept the honour with a bow."
+        },
         {
           "at": "7:63",
           "text": "Seventy years of age, a lance built for a mounted man, and at long last a mount to put beneath it. I dance for my living. I adventured for it first."
@@ -21228,10 +21393,14 @@
         "Splashy"
       ],
       "role": "NPC · mercenary",
-      "revealedAt": "7:63",
+      "revealedAt": "6:23",
       "sort": 57,
       "voice": "system",
       "tagline": [
+        {
+          "at": "6:23",
+          "text": "Splash Zone. Next on stage, by the DJ's announcement, with a warning to the ladies that they are going to get wet. The crowd approves."
+        },
         {
           "at": "7:63",
           "text": "Otter. Water mage. Formerly of the Penis Parade, presently under a mercenary contract with a crawler faction, carrying a crossbow built for something smaller than an otter."
@@ -21646,10 +21815,14 @@
         "Corky"
       ],
       "role": "NPC",
-      "revealedAt": "8:13",
+      "revealedAt": "6:64",
       "sort": 52,
       "voice": "system",
       "tagline": [
+        {
+          "at": "6:64",
+          "text": "Corcunda. The mount an elderly stripper rode on stage, and not a horse: by his rider's account, the most beautiful man, despite his physical flaws."
+        },
         {
           "at": "8:13",
           "text": "Corcunda. Half a mantaur, riding with the Lady Dominators, and the reason Dong Quixote has not drawn a steady breath since he laid eyes on this garage."
@@ -21750,9 +21923,13 @@
       "name": "Jurgen",
       "aka": [],
       "role": "Crawler",
-      "revealedAt": "8:14",
+      "revealedAt": "6:62",
       "sort": 53,
       "tagline": [
+        {
+          "at": "6:62",
+          "text": "Jurgen. I am breaking the door now. If we have to clear all this away, we need hands, so come and help us dig."
+        },
         {
           "at": "8:14",
           "text": "My wife is Heidi. She is outside this place and she is carrying our child, and everything I do down here is arithmetic about that."
@@ -21848,9 +22025,13 @@
       "name": "Bucket Boy",
       "aka": [],
       "role": "NPC",
-      "revealedAt": "8:17",
+      "revealedAt": "6:23",
       "sort": 54,
       "tagline": [
+        {
+          "at": "6:23",
+          "text": "I pick up the coins. Somebody dances, the crowd throws gold, and I am down there with the bucket before it rolls away. Sorry. Excuse me."
+        },
         {
           "at": "8:17",
           "text": "I collect the coins at the club. Now I am being taught to drive, at speed, by a man who does not have time to teach me."
@@ -22269,10 +22450,14 @@
       "name": "Herot",
       "aka": [],
       "role": "Former crawler",
-      "revealedAt": "8:38",
+      "revealedAt": "3:17",
       "sort": 58,
       "voice": "system",
       "tagline": [
+        {
+          "at": "3:17",
+          "text": "Herot. Former crawler, author of the sixteenth edition of the cookbook, and of a long essay in the back of it about the nature of NPCs."
+        },
         {
           "at": "8:38",
           "text": "Herot. Former crawler, sixteenth-edition author, and by Warlord Akuma's account the architect of a pocket dimension he can no longer walk out of."
@@ -22358,10 +22543,14 @@
       "name": "Menerva",
       "aka": [],
       "role": "Former crawler",
-      "revealedAt": "8:38",
+      "revealedAt": "7:1",
       "sort": 59,
       "voice": "system",
       "tagline": [
+        {
+          "at": "7:1",
+          "text": "Menerva. A schoolteacher close to retiring, who crawled beside Porthus and screamed at him to run on their tenth floor. He does not know whether she made it."
+        },
         {
           "at": "8:38",
           "text": "Menerva. Former crawler, half the authorship of a hiding place for NPCs, and by Warlord Akuma's account still shut inside it."
@@ -22407,9 +22596,13 @@
       "name": "Porky",
       "aka": [],
       "role": "NPC",
-      "revealedAt": "8:58",
+      "revealedAt": "8:13",
       "sort": 60,
       "tagline": [
+        {
+          "at": "8:13",
+          "text": "Porky. Corcunda's second half, somewhere on this floor. Corky is the other one. Do not expect me to be delighted about it."
+        },
         {
           "at": "8:58",
           "text": "The left half. I keep the stage performance guild and I hop everywhere I go, and I have had a very long time to think about whose fault that is."
@@ -22875,10 +23068,14 @@
         "Krakaren Prime"
       ],
       "role": "Hive mind",
-      "revealedAt": "1:34",
+      "revealedAt": "1:32",
       "sort": 50,
       "voice": "system",
       "tagline": [
+        {
+          "at": "1:32",
+          "text": "Krakaren. The name at the bottom of a moonshine brochure: see her, or one of her downline consultants. It is not a pyramid. It says so on the pyramid."
+        },
         {
           "at": "1:34",
           "text": "Not the Krakaren. A Krakaren. There is a difference and it is not in your favour."
@@ -23536,9 +23733,18 @@
         "Ripper"
       ],
       "role": "Host · Danger Zone",
-      "revealedAt": "2:19",
+      "revealedAt": "2:12",
       "sort": 59,
-      "tagline": "Four foot of brown fuzz in an orange ascot, and the fairest panel in the dungeon. I will let you finish, folks. Then I will disagree with you.",
+      "tagline": [
+        {
+          "at": "2:12",
+          "text": "Danger Zone with Ripper Wonton. A round table, a real one: crawlers, a few intergalactic celebrities, maybe a politician. You are booked for the day after tomorrow, friends."
+        },
+        {
+          "at": "2:19",
+          "text": "Four foot of brown fuzz in an orange ascot, and the fairest panel in the dungeon. I will let you finish, folks. Then I will disagree with you."
+        }
+      ],
       "voiceNote": "A broadcaster's warmth: welcoming, unhurried, genuinely delighted by his guests. Lets other people carry the questions and steps in when the room needs steering. Disagrees openly and without heat. Calls everyone friend and the audience folks. Never sneers, never cuts a guest off, and never pretends a segment went well when it did not.",
       "beats": [
         {
@@ -24048,10 +24254,19 @@
         "Stalwart"
       ],
       "role": "Crown prince · the Skull Empire",
-      "revealedAt": "2:19",
+      "revealedAt": "1:44",
       "sort": 67,
       "voice": "system",
-      "tagline": "Crown prince of an empire that answers two sentences of provocation with artillery, and brother to the Maestro.",
+      "tagline": [
+        {
+          "at": "1:44",
+          "text": "Crown Prince Stalwart, the Maestro's older brother, and the owner of the production his little brother makes."
+        },
+        {
+          "at": "2:19",
+          "text": "Crown prince of an empire that answers two sentences of provocation with artillery, and brother to the Maestro."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -24270,10 +24485,19 @@
       "name": "Loita",
       "aka": [],
       "role": "Communications · the Borant Corporation",
-      "revealedAt": "3:25",
+      "revealedAt": "3:21",
       "sort": 72,
       "voice": "system",
-      "tagline": "Kua-Tin, party member, and she gets her pick of crawlers. Hekla’s people were her main account.",
+      "tagline": [
+        {
+          "at": "3:21",
+          "text": "Loita. Hekla hears Zev scolding from the ceiling and says he sounds like their Loita. That is all she says."
+        },
+        {
+          "at": "3:25",
+          "text": "Kua-Tin, party member, and she gets her pick of crawlers. Hekla’s people were her main account."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -24853,10 +25077,19 @@
       "name": "Drakea",
       "aka": [],
       "role": "Former crawler · twenty-second edition",
-      "revealedAt": "4:28",
+      "revealedAt": "3:8",
       "sort": 80,
       "voice": "system",
-      "tagline": "Wrote the twenty-second edition of the cookbook, in the last season the Nagas ran, the one that ended in some sort of cataclysm.",
+      "tagline": [
+        {
+          "at": "3:8",
+          "text": "Drakea, twenty-second edition. A note in the cookbook: the saferoom toilets are a good place to read it, and the writer fears being discovered."
+        },
+        {
+          "at": "4:28",
+          "text": "Wrote the twenty-second edition of the cookbook, in the last season the Nagas ran, the one that ended in some sort of cataclysm."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -24962,10 +25195,19 @@
         "Dr. Porthus Hu"
       ],
       "role": "Former crawler · second edition",
-      "revealedAt": "4:end",
+      "revealedAt": "3:8",
       "sort": 82,
       "voice": "system",
-      "tagline": "High Elf, rogue, second hand on the cookbook, and now the chief executive of an organisation that campaigns against the thing that made him.",
+      "tagline": [
+        {
+          "at": "3:8",
+          "text": "Porthus the Rogue. A High Elf crawler of the fifteenth season, and the first to be handed the cookbook: on his ninth floor, disguised as a blank sketchbook."
+        },
+        {
+          "at": "4:end",
+          "text": "High Elf, rogue, second hand on the cookbook, and now the chief executive of an organisation that campaigns against the thing that made him."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -25232,10 +25474,19 @@
       "name": "Geraldo",
       "aka": [],
       "role": "Monk Seal Picket Sentry",
-      "revealedAt": "6:7",
+      "revealedAt": "6:6",
       "sort": 87,
       "voice": "system",
-      "tagline": "An aquatic melee tank who was not wearing the headband before he was captured, and has not taken it off since.",
+      "tagline": [
+        {
+          "at": "6:6",
+          "text": "Geraldo, monk seal. The same level as the last one, and coming across the beach straight at the crawlers, shouting."
+        },
+        {
+          "at": "6:7",
+          "text": "An aquatic melee tank who was not wearing the headband before he was captured, and has not taken it off since."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -25530,10 +25781,19 @@
         "Garret"
       ],
       "role": "Pet · Tummy Acher",
-      "revealedAt": "7:15",
+      "revealedAt": "5:63",
       "sort": 93,
       "voice": "system",
-      "tagline": "A Tummy Acher handed over as a door prize for turning up to a convention, and now levelling in a war.",
+      "tagline": [
+        {
+          "at": "5:63",
+          "text": "Garret, a tummy acher. A level-20 pet show entry as tall as a man, received on this floor as a gift for going to Crawl Con."
+        },
+        {
+          "at": "7:15",
+          "text": "A Tummy Acher handed over as a door prize for turning up to a convention, and now levelling in a war."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -25616,10 +25876,19 @@
         "Tagg"
       ],
       "role": "Leader of the Dream",
-      "revealedAt": "7:80",
+      "revealedAt": "5:22",
       "sort": 94,
       "voice": "system",
-      "tagline": "Son of Epitome Noflex, leader of the Dream, and dressed like any other elf in the room.",
+      "tagline": [
+        {
+          "at": "5:22",
+          "text": "Epitome Tagg. The name a captured hunter gives for the man who sent him: not after the gear, only after Louis, who besmirched his mother's honour."
+        },
+        {
+          "at": "7:80",
+          "text": "Son of Epitome Noflex, leader of the Dream, and dressed like any other elf in the room."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",

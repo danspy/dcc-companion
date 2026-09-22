@@ -46,13 +46,21 @@ export function lint({ books, floors, entities, achievements = [] }) {
       errors.push(`floor ${floor.id}: recap unseals at "${floor.recapAt}", before the floor itself ("${floor.revealedAt}")`);
     }
     if (!floor.premise) errors.push(`floor ${floor.id}: no premise — nothing safe to show on arrival`);
+    /* A name printed before arrival opens early; a name that opens after the
+       floor would leave the reader standing on a floor with no name. */
+    if (floor.nameAt != null) {
+      const n = at(floor.nameAt, `floor ${floor.id} name`);
+      if (n !== null && f !== null && n > f) {
+        errors.push(`floor ${floor.id}: name unseals at "${floor.nameAt}", after the floor itself ("${floor.revealedAt}")`);
+      }
+    }
   }
 
   /* Names that are not safe from the very beginning, for the forward-reference
      check below. Short names are skipped — too many false hits.
 
      Floors are in here alongside entities because a floor's *name* is gated
-     too — floor 11 stays redacted for the first 87 chapters of book 8 — and
+     too — at its own `nameAt` when the book prints it before arrival — and
      "the Great Race" dropped into a book-4 beat leaks it just as surely as a
      character's name would. Prose written in a character's voice is where this
      nearly happened: a speaker naturally names the ground they are standing on. */
@@ -68,10 +76,15 @@ export function lint({ books, floors, entities, achievements = [] }) {
       const aliases = (e.aka ?? []).filter(a => /^[A-Z]/.test(a));
       return [e.name, ...aliases].map(name => ({ name, at: eAt }));
     }),
-    ...floors.map(f => ({ name: f.name, at: at(f.revealedAt, `floor ${f.id}`) ?? 0 })),
+    ...floors.map(f => ({ name: f.name, at: at(f.nameAt ?? f.revealedAt, `floor ${f.id}`) ?? 0 })),
   ]
     .filter(n => n.name && n.name.length >= 4)
-    .map(n => ({ ...n, re: new RegExp(`\\b${escapeRe(n.name)}\\b`, 'i') }));
+    /* Multi-word names match regardless of case ("the Great Race" against "The
+       Great Race" is the leak check-pages was written for). A single word
+       matches only as written, the rule src/lib/leak.ts already follows: Justice,
+       Protections, Milk and Ping are names, and justice, protections, milk and a
+       ping are English. Matching those case-blind made ordinary sentences fail. */
+    .map(n => ({ ...n, re: new RegExp(`\\b${escapeRe(n.name)}\\b`, /\s/.test(n.name) ? 'i' : '') }));
 
   /* One text, one reveal point: does it point past itself? A verbatim quotation
      of something the reader has already seen in the book cannot point forward

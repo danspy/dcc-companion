@@ -325,9 +325,18 @@
         "the Cookbook"
       ],
       "role": "Document",
-      "revealedAt": "3:8",
+      "revealedAt": "3:7",
       "sort": 4,
-      "tagline": "Passed hand to hand by the crawlers of earlier seasons. Carl is its twenty-fifth holder.",
+      "tagline": [
+        {
+          "at": "3:7",
+          "text": "A unique book off a prize carousel: chicken and goblin recipes galore, each with a tale from its anonymous author."
+        },
+        {
+          "at": "3:8",
+          "text": "Passed hand to hand by the crawlers of earlier seasons. Carl is its twenty-fifth holder."
+        }
+      ],
       "description": "Book. The Dungeon Anarchist's Cookbook by Anonymous. This is a unique item. Chicken and Goblin recipes galore! But it's more than that, too. Each recipe is accompanied by a hilarious tale by the anonymous author, recounting some of the zany and madcap misadventures they experienced gathering these mouth-watering recipes. Fun for the whole family! This book is a real hoot.",
       "beats": [
         {
@@ -813,9 +822,18 @@
       "name": "Memorial Crystal",
       "aka": [],
       "role": "Remains",
-      "revealedAt": "5:67",
+      "revealedAt": "5:8",
       "sort": 8,
-      "tagline": "What is left of someone when the dungeon is finished with them, and worth stealing.",
+      "tagline": [
+        {
+          "at": "5:8",
+          "text": "Something a cult keeps, by Mordecai's account: a crystal like a soul crystal, except nobody has ever established what it does."
+        },
+        {
+          "at": "5:67",
+          "text": "What is left of someone when the dungeon is finished with them, and worth stealing."
+        }
+      ],
       "description": [
         {
           "at": "8:70",
@@ -1193,9 +1211,18 @@
       "name": "The Nothing",
       "aka": [],
       "role": "Prison dimension",
-      "revealedAt": "4:24",
+      "revealedAt": "3:9",
       "sort": 11,
-      "tagline": "Where the pantheon put the old gods and demons. Every shortcut the Gate takes goes through it.",
+      "tagline": [
+        {
+          "at": "3:9",
+          "text": "A double-width spot on a casino wheel, marked Nothing! Hit its twin on the roulette table and the floor opens, something with claws reaches up, and the player is gone."
+        },
+        {
+          "at": "4:24",
+          "text": "Where the pantheon put the old gods and demons. Every shortcut the Gate takes goes through it."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1366,9 +1393,18 @@
       "name": "Skill Potion",
       "aka": [],
       "role": "Consumable",
-      "revealedAt": "1:43",
+      "revealedAt": "1:19",
       "sort": 41,
-      "tagline": "One level in one named skill, and the System has opinions about how you have been spending your money.",
+      "tagline": [
+        {
+          "at": "1:19",
+          "text": "A potion from a gold Looter Box: one level in one named skill, and a remark about your card collection thrown in."
+        },
+        {
+          "at": "1:43",
+          "text": "One level in one named skill, and the System has opinions about how you have been spending your money."
+        }
+      ],
       "description": [
         {
           "at": "1:43",
@@ -1520,9 +1556,18 @@
       "name": "Fan Box",
       "aka": [],
       "role": "Loot box",
-      "revealedAt": "3:7",
+      "revealedAt": "2:13",
       "sort": 43,
-      "tagline": "The audience chooses what is inside, and the audience is made to wait thirty hours before you may open it.",
+      "tagline": [
+        {
+          "at": "2:13",
+          "text": "A reward the audience fills by vote. Receive one and you wait thirty hours to open it while the followers decide."
+        },
+        {
+          "at": "3:7",
+          "text": "The audience chooses what is inside, and the audience is made to wait thirty hours before you may open it."
+        }
+      ],
       "beats": [
         {
           "kind": "use",
@@ -1555,9 +1600,18 @@
         "Sponsor Box"
       ],
       "role": "Loot box",
-      "revealedAt": "1:5",
+      "revealedAt": "1:4",
       "sort": 44,
-      "tagline": "A box bought for you by somebody who wants you to keep going, and rank for rank it beats anything the dungeon hands out on merit.",
+      "tagline": [
+        {
+          "at": "1:4",
+          "text": "The one box only a patron can send, and by Mordecai's reckoning even a bronze one beats a plain gold box."
+        },
+        {
+          "at": "1:5",
+          "text": "A box bought for you by somebody who wants you to keep going, and rank for rank it beats anything the dungeon hands out on merit."
+        }
+      ],
       "beats": [
         {
           "kind": "arc",

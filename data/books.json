@@ -98,6 +98,7 @@
       "name": "The Over City",
       "book": 2,
       "revealedAt": "2:2",
+      "nameAt": "1:44",
       "recapAt": "2:25",
       "premise": "The Over City: a colossal ruin built on top of itself, cut into themed districts and run by NPC factions. The first floor that behaves like a place rather than a level.",
       "recap": "A colossal ruin built on top of itself, cut into themed districts and run by NPC factions. Class selection happens here: Carl takes Primal and the unique Compensated Anarchist, Donut takes Cat and Former Child Actor, and on Odette's advice they manoeuvre Mordecai into becoming Donut's manager — an appointment that had to look like an accident. Katia, ten levels behind and left behind by the Daughters, is taken into the Royal Court. The Desperado Club opens. During the Fools Who Broke the Glass Quest, Carl builds Carl's Doomsday Scenario by wrapping a Sheol Glass Reaper Case around an exploding Soul Crystal — a 45-kilometre blast he can never put down."
@@ -125,6 +126,7 @@
       "name": "The Hunting Grounds",
       "book": 5,
       "revealedAt": "5:1",
+      "nameAt": "2:3",
       "recapAt": "5:end",
       "premise": "The Hunting Grounds. Wealthy aliens buy licences, walk into the dungeon and kill crawlers for sport, with a full broadcast package.",
       "recap": "Wealthy aliens buy licences and come in to kill crawlers for sport. Carl takes the Agent Provocateur specialisation, marks hunters with the Ring of Divine Suffering and brings Zockau down on the rest of them, trapping a great many inside the Desperado Club. Tsarina Signet turns out to be the star of a scripted Syndicate programme with producers steering her grief, and the contract Carl signed on the third floor is still in force. Brynhild's Daughters come apart across Hekla, Katia and Eva; Katia kills Eva on the last night. Miriam Dom is a vampire now. Ferdinand turns up as a High Elf queen's familiar and attacks Mongo."
@@ -135,6 +137,7 @@
       "book": 5,
       "bookSpan": "5–6",
       "revealedAt": "5:end",
+      "nameAt": "5:56",
       "recapAt": "6:1",
       "premise": "The Great Race: a sealed circuit of glass tunnels, several hundred kilometres of branching tubes with pitstop safe rooms at the nodes, no dead ends and no backtracking, pulling crawlers toward a stack of exit portals.",
       "recap": "A sealed circuit of glass tunnels — several hundred kilometres of branching tubes with pitstop safe rooms at the nodes, no dead ends and no backtracking, pulling crawlers toward a stack of exit portals. It was a last-minute replacement for whatever had been planned for the slot, funded by the Valtay and structurally compromised from the start. Minutes after it opened, Prepotente shattered the whole thing into fine dust. No crawler ever entered the maze, and no mob, NPC or boss was ever encountered on it. The seventh floor is the only one in the crawl that was destroyed before it could be played."
@@ -153,6 +156,7 @@
       "name": "Faction Wars",
       "book": 7,
       "revealedAt": "7:1",
+      "nameAt": "1:43",
       "recapAt": "7:end",
       "premise": "Nine armies, thirty days, and one castle at the centre of the map. No respawns and no loopholes: death on the ninth floor is final.",
       "recap": "A war. Nine armies fight for thirty days over the castle at Larracos — roughly 32,000 conscripted crawlers and 50,000 retired ones against some 100,000 armed enemies, with no respawns and no loopholes. Donut's crown comes due against the Blood Sultanate. Katia takes the Orchid boon and leaves the dungeon. Then floor 9's NPCs form their own independent tenth faction, live, in front of the galaxy."
@@ -162,6 +166,7 @@
       "name": "Don't Come in Last",
       "book": 8,
       "revealedAt": "8:1",
+      "nameAt": "7:end",
       "recapAt": "8:87",
       "premise": "A racing floor. Get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile.",
       "recap": "A racing floor: get from A to B, don't finish last, and pick a vehicle upgrade after every race while the track gets steadily more hostile. Underneath the format, glitches in the system start appearing more and more often — whatever is running the dungeon is no longer running it cleanly."
@@ -171,6 +176,7 @@
       "name": "The Parade of Horribles",
       "book": 8,
       "revealedAt": "8:88",
+      "nameAt": "8:23",
       "recapAt": "8:end",
       "premise": "Billed in-universe as a coming-out party for the ages.",
       "recap": "Billed in-universe as a coming-out party for the ages. The scale of the story has changed underneath the characters: Carl and Donut are not a two-person party any more, they are the centre of a movement, and the question has stopped being how do we reach the stairs and become which of these institutions do we use, expose, or destroy."

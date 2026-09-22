@@ -34,6 +34,11 @@ const Floor = defineTable({
        they leave it, and unseals the `recap` — the account of what actually
        happened, which is a whole-book spoiler if shown on arrival. */
     revealedAt: column.text(),
+    /* The name can reach the reader before the floor does: the Maestro says
+       "Faction Wars" at 1:43, six books before anyone sets foot on the ninth
+       floor. `nameAt` unseals the name alone; the premise still waits for
+       `revealedAt`. Absent means the name arrives with the floor. */
+    nameAt: column.text({ optional: true }),
     recapAt: column.text(),
     recapSortKey: column.number(),
     premise: column.text(),

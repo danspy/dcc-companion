@@ -114,9 +114,18 @@
       "name": "The Syndicate",
       "aka": [],
       "role": "Galactic order",
-      "revealedAt": "1:4",
+      "revealedAt": "1:1",
       "sort": 2,
-      "tagline": "Three billion star systems, the rules Earth was seized under, and the audience for all of this.",
+      "tagline": [
+        {
+          "at": "1:1",
+          "text": "The body whose rules Earth was seized under, subsection 543, and whose neutral AI has arrived to see those rules followed."
+        },
+        {
+          "at": "1:4",
+          "text": "Three billion star systems, the rules Earth was seized under, and the audience for all of this."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -613,9 +622,18 @@
       "name": "The Princess Posse",
       "aka": [],
       "role": "Crawler army",
-      "revealedAt": "7:11",
+      "revealedAt": "3:20",
       "sort": 8,
-      "tagline": "Fifty thousand retired crawlers who came back in, under the banner of a cat.",
+      "tagline": [
+        {
+          "at": "3:20",
+          "text": "What Donut's fans are calling themselves, according to Zev. The rival name, the Donut Holes, does not have her approval."
+        },
+        {
+          "at": "7:11",
+          "text": "Fifty thousand retired crawlers who came back in, under the banner of a cat."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -656,9 +674,13 @@
       "name": "The Dream",
       "aka": [],
       "role": "Syndicate power",
-      "revealedAt": "5:15",
+      "revealedAt": "4:28",
       "sort": 40,
       "tagline": [
+        {
+          "at": "4:28",
+          "text": "Zebra-riding elves who favour poison, druid magic and long-range artillery. Outside the dungeon they are as humourless as the Skull Empire, and control half the universe's food."
+        },
         {
           "at": "5:15",
           "text": "Bald, pale elves with a territory of their own marked on the hunters' map of the grounds."
@@ -872,9 +894,13 @@
         "Skull Empire"
       ],
       "role": "System government",
-      "revealedAt": "2:19",
+      "revealedAt": "1:44",
       "sort": 42,
       "tagline": [
+        {
+          "at": "1:44",
+          "text": "The system the Maestro and his brother are princes of. If the orcs' other system is a lemonade stand, Zev says, this one is Wal-Mart."
+        },
         {
           "at": "2:19",
           "text": "One of the oldest and largest of the system governments, orcish, rich on weapons, and famously bad at letting an insult go."
@@ -1260,9 +1286,13 @@
         "Reavers"
       ],
       "role": "System government",
-      "revealedAt": "7:21",
+      "revealedAt": "6:21",
       "sort": 45,
       "tagline": [
+        {
+          "at": "6:21",
+          "text": "A megacorporation that is also a system government, living around its own star. An occasional entrant in this war, and a frequent winner of it."
+        },
         {
           "at": "7:21",
           "text": "Their pets arrive before they do: a swarm of Dumplins, every one of them carrying the Gurgles."
@@ -1829,9 +1859,18 @@
         "Dark Hive"
       ],
       "role": "Hunting party",
-      "revealedAt": "5:10",
+      "revealedAt": "5:5",
       "sort": 50,
-      "tagline": "A mantis hunting party on the Hunting Grounds, and Carl is on its list.",
+      "tagline": [
+        {
+          "at": "5:5",
+          "text": "The affiliation on a flying mantis hunter's tag, level 61, blood tracker: the Dark Hive."
+        },
+        {
+          "at": "5:10",
+          "text": "A mantis hunting party on the Hunting Grounds, and Carl is on its list."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -1891,9 +1930,13 @@
         "Valtay"
       ],
       "role": "Corporate system government",
-      "revealedAt": "2:19",
+      "revealedAt": "1:47",
       "sort": 51,
       "tagline": [
+        {
+          "at": "1:47",
+          "text": "A maker's name on a relay, a personal shield and a pulse pistol found in Agatha's shopping cart. None of it belongs down here."
+        },
         {
           "at": "2:19",
           "text": "A power outside Borant that answers an insult by taking a prince’s yacht apart with his family aboard, and does not explain itself afterwards."
@@ -2055,9 +2098,18 @@
         "Guild of Suffering"
       ],
       "role": "Cult",
-      "revealedAt": "6:19",
+      "revealedAt": "5:8",
       "sort": 52,
-      "tagline": "A cult you join by accident, the moment you accept a gift from something that would prefer to be worshipped.",
+      "tagline": [
+        {
+          "at": "5:8",
+          "text": "Carl's spiderweb tattoo grants access to it. Mordecai's word for it is a cult."
+        },
+        {
+          "at": "6:19",
+          "text": "A cult you join by accident, the moment you accept a gift from something that would prefer to be worshipped."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",

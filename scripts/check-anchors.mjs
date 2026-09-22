@@ -97,6 +97,20 @@ const REVIEWED = {
   'system-ai@1:1': 'introduces itself at 1:1 as "a Syndicate neutral observer AI"; "the AI" comes a chapter later',
   'recap-episodes@1:14': 'the first recap airs at 1:14 ("a recap of last season"); "the recap" as a phrase is 1:20',
   'stairwell@1:2': 'the stairs down are on the page at 1:2; the word "stairwell" is 1:14',
+  "louis@4:3": "first hit is Louis L'Amour paperbacks at 2:5 (also 2:17, 3:4, 3:14, 3:15); the crawler Louis Santiago 2 is first named at 4:3",
+  "bautista@2:18": "first hit is the corpse of Grace Bautista 3 at 2:6, a different crawler; Daniel Bautista 2 is first named at 2:18 on The Divider's corpse",
+  "apothecary@3:30": "first hit is \"collective\" the pooled personal space at 3:2; 3:27 calls her \"an apothecary\" as a common noun; Mordecai first gives the name \"the Apothecary\" at 3:30",
+  "linus@8:15": "first hit at 7:5 is Linus from the Peanuts comic, a simile for a goblin; the soother tourist Linus is named at 8:15",
+  "protections@5:75": "'protections' before 5:75 is the ordinary noun (Mordecai on Borant at 1:36, gear, saferooms, the goodwill ballrooms); the Safety Protections for Faction Sponsors are named by the action item at 5:75",
+  "frank-and-maggie@1:20": "Frank Q is a kill credit on a corpse at 1:13, but the page is titled 'Frank Q & Maggie My' and Maggie is first named at 1:20; moving would leak her name",
+  "gate-of-the-feral-gods@4:9": "first hit is the idiom 'right out the gate' at 1:4; 'The Gate of the Feral Gods' is first printed in Chaindrive's text at 4:9",
+  "cascadia@5:62": "4:34 is Donut's nickname 'the kill, kill, kill lady', which never gives the name; the name first reaches the reader in the item 'Enchanted Stick of Cascadia's Screams' at 5:62",
+  "geraldo@6:6": "the 2:11 hit is Geraldo Rivera and Al Capone's vault; the monk seal is first named at 6:6",
+  "feral@4:3": "the 1:20 hit is the 'Feral Rabies' debuff; the concept arrives at 4:3 with the Feral Goose and Mordecai's 'anything with feral in the name'",
+  "guilds@3:32": "the 1:1 hit is 'tutorial guilds'; the guild system as a thing is first named at 3:32 in the cookbook",
+  "ping@4:32": "the 1:19 hit is an 8-bit 'ping' sound; the spell is learned and named at 4:32",
+  "trainyard@3:5": "at 3:5 the engineer calls station 10 'really just the yard'; the word 'trainyard' is 3:14",
+  "demon-eviction@6:54": "6:54 prints 'Demon Eviction is commencing' without the article the name carries",
 };
 
 const report = [];
@@ -111,7 +125,7 @@ for (const e of entities) {
   else if (declared < hit.value) verdict = 'early';
   else if (declared > hit.value) verdict = 'late';
   else verdict = 'exact';
-  if (verdict === 'early' && REVIEWED[`${e.id}@${e.revealedAt}`]) verdict = 'reviewed';
+  if ((verdict === 'early' || verdict === 'late') && REVIEWED[`${e.id}@${e.revealedAt}`]) verdict = 'reviewed';
   report.push({ id: e.id, kind: e.kind, name: e.name, revealedAt: e.revealedAt, first: hit.at, matched: hit.name, verdict, context: hit.context });
 }
 

@@ -86,9 +86,29 @@ The boundaries come from the chapter summaries and are exact:
 | 5 | 4 | 4:end | | 11 | 8:88 | 8:end |
 | 6 | 5:1 | 5:end | | | | |
 
-Floor 11 starting at **book 8 chapter 88** is why its name stays redacted for the first 87
-chapters of that book. The lint fails the build on a recap gated before its floor, and on a floor
-with no premise at all.
+The lint fails the build on a recap gated before its floor, and on a floor with no premise at all.
+
+### A floor's name can arrive before the floor
+
+The table above is where crawlers **arrive**, and it gates the premise. It used to gate the name as
+well, and that was wrong six times over: the book prints floor names long before anyone stands on
+them. The Maestro boasts about the Skull Clan's record in the **Faction Wars** at 1:43; Mordecai tells
+Carl the next level down "is called the **Hunting Grounds**" at 2:3; the eleventh floor is announced
+as "A Parade of Horribles" at 8:23, not 8:88. Gating those names at arrival retro-sealed words the
+reader had already read and made "Faction Wars" unwritable in five books of prose.
+
+So a floor may carry `nameAt`, which unseals **the name alone**: the front page shows it over a still-
+sealed premise, and the lint and the `/achievement` screen gate the name there. Absent means the name
+arrives with the floor. The lint fails a `nameAt` later than `revealedAt`.
+
+| Floor | name printed | arrive |
+|---|---|---|
+| 3 The Over City | 1:44 | 2:2 |
+| 6 The Hunting Grounds | 2:3 | 5:1 |
+| 7 The Great Race | 5:56 | 5:end |
+| 9 Faction Wars | 1:43 | 7:1 |
+| 10 Don't Come in Last | 7:end | 8:1 |
+| 11 The Parade of Horribles | 8:23 | 8:88 |
 
 **The general rule: any field that summarises a span must be gated at the end of that span, not
 the start.** If you add per-floor bosses, quests or events, they need the same treatment.
@@ -880,8 +900,11 @@ Zev arranges. And a character is spelled **Menerva** in the edition, not Minerva
 
 Moving a tag *earlier* is not free: a plain-string tagline is shown from `revealedAt`, so pulling
 an entity back to its first passing mention needs a first tagline written for that mention. The
-checker's LATE list is that queue. Its `REVIEWED` map holds tags read and settled, each with a
-reason, keyed on the tag so moving it re-opens the question.
+checker's LATE list is that queue, and it is empty: 88 tags moved in one pass, each with a first
+tagline for the passing mention prepended to what was there. Its `REVIEWED` map holds tags read and
+settled in either direction, each with a reason, keyed on the tag so moving it re-opens the question
+— a "late" hit that is really a different thing (the ping of a level-up, Geraldo Rivera) goes there
+rather than dragging the tag back to it.
 
 ### A sentence nobody wrote still has to pass the gate
 
@@ -1722,8 +1745,6 @@ currently has a dev server running. It is not this deployment, and only one proj
 - **2 `draft` beats remain of 692** (Frank Q's "safe rooms" confession, which the book implies
   rather than states, and the cracking-order thread, which is our framing). `verified` now means
   **read against the edition's text at its own chapter**, not "a wiki summary agreed".
-- **The 95 LATE anchors** (`npm run content:anchors`): entities the book names before their tag.
-  Each needs a first tagline written for the passing mention before its tag can move earlier.
 - **Every beat has now been read against its own chapter** — all 692, in two passes. The second
   half changed far more than the first (about 280 of 432, against one in six), and almost none of it
   was catchable by a screen: who did what (Katia opens the Gate, not Carl; Donut picks Hedy, not
@@ -1742,20 +1763,20 @@ currently has a dev server running. It is not this deployment, and only one proj
   chapter, a rounded-up number, an inference stated as fact. It also caught older beats that had been
   wrong since the first curation — Quan Ch's "fate" at 4:31 (he dies at 6:58), Louis on a trip he never
   took, Henrik as the changeling principal (that is Svern), Emberus handing out quests the System gave.
-- **Tags the fill kept walking round** — every writer hit them, and each costs contortions in the prose:
-  Ping is Carl's own spell from 4:32 but tagged 7:79; the Princess Posse is named from 5:41 but tagged
-  7:11; floor 9's name "Faction Wars" is printed from 5:1 and gated at 7:1, which makes the phrase
-  unusable in five books of text; Dong Quixote and Splash Zone are named from 6:6 and tagged 7:63;
-  Bucket Boy from 6:23 and tagged 8:17; Jurgen from 6:62 and tagged 8:14; Epitome Tagg from 5:22 and
-  tagged 7:80; Skyfowl is printed all through book 2 and tagged 4:1; Mantaur from 3:11 and tagged 8:13;
-  Grull from 1:25 and tagged 3:11. And the lint matches single-word entity names case-insensitively, so
-  "justice" and "protections" fail as ordinary words.
+- **Every reveal tag now sits where the book first prints the name** — `content:anchors` reads 214
+  exact, 17 reviewed, none early and none late. 88 entities moved earlier, each with a new first
+  tagline that says only what the passing mention gives (Faction Wars at 1:43, Grull at 1:25, Eris at
+  1:34, Skyfowl at 1:3, Mantaur at 3:11, Ping at 4:32, the Princess Posse at 3:20). The `REVIEWED`
+  map covers both directions now, and seven of its entries are false first hits: "ping" the sound,
+  "tutorial guilds", Geraldo Rivera, the Feral Rabies debuff. Floors got `nameAt` for the same reason.
+  The lint matches a one-word name only as written, as `leak.ts` always did, so "justice" is English
+  again. What moving tags earlier did *not* do is revisit the second tagline: the old one now reads
+  from its old tag, which is correct, but it was written as a whole-life summary and has not had the
+  read against the book either.
 - Entities book 8 needs and does not have, each flagged by more than one reader: the Pineapple
   Cabaret, Chris (Imani's teammate, on nearly every page of 8:79–85), Princess Chandra, Grigori the
   Placid, Chalchiuhtlicue, Hamed, the Midnight Epicure, Minus (the tourist filed as Linus), Lamashtu,
   the Ascendency, and Scolopendra as a crawler from 8:98.
-- Anchors the read turned up, for the LATE queue: Larracos (named 3:9), Sheol (2:24), Scolopendra and
-  Tish (4:21), Ping (4:32), Changeling (1:3), Miriam Dom (3:3), Epitome Tagg (6:21), Team Retribution (7:1).
 - Coverage gaps it noticed: the Gate in book 7 (waiting in a mailbox at 7:1, taken from Elle by Akuma
   at 7:61); `no-respawns` as a name, which 7:8 contradicts for outworlders; Rishi's death is only
   confirmed at 8:10 while his fate beat sits at 7:58.

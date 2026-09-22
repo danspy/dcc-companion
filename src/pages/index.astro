@@ -48,6 +48,8 @@ const bookById = new Map(books.map(b => [b.id, b]));
 
     {floors.map(floor => {
       const open = reveals(gate, floor.revealedAt);
+      // The name can arrive first: the book prints some floors' names chapters ahead.
+      const nameOpen = open || (floor.nameAt != null && reveals(gate, floor.nameAt));
       const recapOpen = gate.frontier >= floor.recapSortKey;
       const book = bookById.get(floor.book);
       return (
@@ -58,7 +60,7 @@ const bookById = new Map(books.map(b => [b.id, b]));
             </div>
             <div class="floor-titles">
               <span class="eyebrow">Book <b>{floor.bookSpan ?? floor.book}</b> · {book?.title}</span>
-              {open
+              {nameOpen
                 ? <h3>{floor.name}</h3>
                 : <h3 class="redact" style="font-size:17px;font-weight:400">▓▓▓▓▓▓▓▓▓</h3>}
             </div>

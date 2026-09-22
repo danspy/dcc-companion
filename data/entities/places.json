@@ -7,9 +7,13 @@
       "name": "Larracos",
       "aka": [],
       "role": "City · ninth floor",
-      "revealedAt": "4:23",
+      "revealedAt": "3:9",
       "sort": 40,
       "tagline": [
+        {
+          "at": "3:9",
+          "text": "A name on a guarded casino stairwell, with cheering coming up it. The capital of the disputed lands, says a crocodilian guard, and the prize the factions fight over."
+        },
         {
           "at": "4:23",
           "text": "The capital of the disputed lands, dug straight down into the ninth floor. The factions camped around it are forbidden to fight over it until crawlers arrive."
@@ -130,9 +134,13 @@
       "name": "Zockau",
       "aka": [],
       "role": "City · sixth floor",
-      "revealedAt": "5:4",
+      "revealedAt": "5:1",
       "sort": 41,
       "tagline": [
+        {
+          "at": "5:1",
+          "text": "The city every hunter on this floor is sent to for thirty hours of grace before release, with at least one unguarded exit somewhere in it."
+        },
         {
           "at": "5:4",
           "text": "The capital of the sixth floor and the door the hunters come in through: a 1950s main street with the stairwell down sitting in a park at the end of it."
@@ -349,9 +357,13 @@
       "name": "Club Vanquisher",
       "aka": [],
       "role": "Club · every floor",
-      "revealedAt": "4:32",
+      "revealedAt": "2:15",
       "sort": 44,
       "tagline": [
+        {
+          "at": "2:15",
+          "text": "The Desperado Club's rival in the Over City: leather chairs, pipe smoke, old clerics, and no entry for anyone who drinks in the other place."
+        },
         {
           "at": "4:32",
           "text": "The Desperado Club's opposite number: leather chairs, pipe smoke, clerics, and a door that does not normally open for anyone who drinks in the other place."
@@ -432,9 +444,13 @@
       "name": "High Elf Castle",
       "aka": [],
       "role": "Castle · sixth floor",
-      "revealedAt": "5:28",
+      "revealedAt": "5:20",
       "sort": 45,
       "tagline": [
+        {
+          "at": "5:20",
+          "text": "Where the top fifty crawlers are due to be sent for the high elves' party: contests, prizes, and a battle to finish it."
+        },
         {
           "at": "5:28",
           "text": "Queen Imogen's seat, the venue for the Butcher's Masquerade, and the prize written into the back half of a quest."
@@ -535,9 +551,13 @@
       "name": "Sheol",
       "aka": [],
       "role": "Demon realm",
-      "revealedAt": "2:25",
+      "revealedAt": "2:24",
       "sort": 50,
       "tagline": [
+        {
+          "at": "2:24",
+          "text": "Where a glass case in the inventory was forged, by its own description: the mysterious fifteenth level of the dungeon."
+        },
         {
           "at": "2:25",
           "text": "A name on a component list, attached to nothing a crawler has had to think about."
@@ -646,9 +666,18 @@
       "name": "Trainyard",
       "aka": [],
       "role": "Station · fourth floor",
-      "revealedAt": "3:15",
+      "revealedAt": "3:5",
       "sort": 51,
-      "tagline": "Station ten on the tangle, reachable only by taking the switch that everything sensible avoids.",
+      "tagline": [
+        {
+          "at": "3:5",
+          "text": "Station 10, which the engineer says is really just the yard: where he finds himself back on the platform with no memory of the trip."
+        },
+        {
+          "at": "3:15",
+          "text": "Station ten on the tangle, reachable only by taking the switch that everything sensible avoids."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -682,9 +711,18 @@
         "Wasteland Fortress"
       ],
       "role": "Fortress · fifth floor",
-      "revealedAt": "4:2",
+      "revealedAt": "3:end",
       "sort": 52,
-      "tagline": "A gnomish dreadnought that is also a castle and also somebody’s home, floating over the air quadrant with the way down sitting inside it.",
+      "tagline": [
+        {
+          "at": "3:end",
+          "text": "The Dirigible Gnomes' castle in the sky, as the wheel names it: the Wasteland Fortress. Storm it, and the level is passed."
+        },
+        {
+          "at": "4:2",
+          "text": "A gnomish dreadnought that is also a castle and also somebody’s home, floating over the air quadrant with the way down sitting inside it."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -727,9 +765,18 @@
         "Penis Parade"
       ],
       "role": "Club · the Desperado Club",
-      "revealedAt": "6:23",
+      "revealedAt": "2:15",
       "sort": 53,
-      "tagline": "The ground-floor strip club of the Desperado Club, and by some distance the least exclusive of the three.",
+      "tagline": [
+        {
+          "at": "2:15",
+          "text": "One of the lit doors in the club: the strip club and brothel for those who prefer dudes. Mordecai's advice is not to go in."
+        },
+        {
+          "at": "6:23",
+          "text": "The ground-floor strip club of the Desperado Club, and by some distance the least exclusive of the three."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",

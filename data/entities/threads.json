@@ -261,9 +261,18 @@
       "name": "Scolopendra",
       "aka": [],
       "role": "Unresolved",
-      "revealedAt": "5:1",
+      "revealedAt": "2:7",
       "sort": 7,
-      "tagline": "A Nine-Tier Attack poison, and a note saying the Gate was essential to beating whatever carries it.",
+      "tagline": [
+        {
+          "at": "2:7",
+          "text": "A name in a mold lion's description: the spores of Scolopendra took root in the circus lions on the day of the cataclysm."
+        },
+        {
+          "at": "5:1",
+          "text": "A Nine-Tier Attack poison, and a note saying the Gate was essential to beating whatever carries it."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -554,9 +563,18 @@
       "name": "The Demon Eviction",
       "aka": [],
       "role": "Unresolved",
-      "revealedAt": "6:61",
+      "revealedAt": "6:54",
       "sort": 12,
-      "tagline": "Every exit failing at once, worldwide, while a demon prince tries to cast his way home.",
+      "tagline": [
+        {
+          "at": "6:54",
+          "text": "A System warning over the island: souls rain, Sheol overflows, and demons are being thrown up out of the underworld into the recently fallen."
+        },
+        {
+          "at": "6:61",
+          "text": "Every exit failing at once, worldwide, while a demon prince tries to cast his way home."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
