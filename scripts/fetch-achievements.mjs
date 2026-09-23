@@ -25,6 +25,7 @@ import { parseAt } from './lib/gate.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { toEdition } from './lib/edition.mjs';
+import { aliasNames } from './lib/aliases.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://dungeon-crawler-carl.fandom.com/api.php';
@@ -155,7 +156,7 @@ const cast = ['characters']
   /* Each curation file is `{ $comment, entities: [...] }`, not a bare array. */
   .flatMap(f => JSON.parse(readFileSync(join(root, `data/entities/${f}.json`), 'utf8')).entities)
   .filter(e => e.kind === 'character')
-  .flatMap(e => [e.name, ...(e.aka ?? []).filter(a => /^[A-Z]/.test(a))]
+  .flatMap(e => [e.name, ...aliasNames(e).filter(a => /^[A-Z]/.test(a))]
     .filter(n => n.length >= 4)
     .map(name => ({ id: e.id, name, re: new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`) })));
 

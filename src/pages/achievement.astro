@@ -15,6 +15,7 @@ import Layout from '../layouts/Layout.astro';
 import AchievementCard from '../components/AchievementCard.astro';
 import { readGate, getEntities, getFloors, getAchievements, taglineFor } from '../lib/content';
 import { reveals, describeAt, parseAt } from '../lib/spoiler';
+import { aliasesSeen } from '../lib/aliases';
 import {
   grantAchievement, SystemOffline, MAX_DEED,
   type Grant, type LoreEntry,
@@ -83,7 +84,7 @@ if (Astro.request.method === 'POST') {
       .sort((a, b) => a.r - b.r)
       .slice(0, 45)
       .map(({ e }) => ({
-        id: e.id, name: e.name, aka: e.aka,
+        id: e.id, name: e.name, aka: aliasesSeen(e, gate),
         revealedAt: e.revealedAt, role: e.role, kind: e.kind,
         tagline: taglineFor(e, gate),
       }));

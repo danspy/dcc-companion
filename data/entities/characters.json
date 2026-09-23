@@ -17254,7 +17254,10 @@
       "kind": "character",
       "name": "Akuma",
       "aka": [
-        "Warlord Akuma"
+        {
+          "name": "Warlord Akuma",
+          "at": "7:73"
+        }
       ],
       "role": "Warlord",
       "revealedAt": "7:61",
@@ -17912,7 +17915,10 @@
       "name": "Apito",
       "aka": [
         "The Oak Mother",
-        "Oak Goddess"
+        {
+          "name": "Oak Goddess",
+          "at": "3:24"
+        }
       ],
       "role": "Mother of the gods",
       "revealedAt": "2:17",
@@ -18355,7 +18361,10 @@
       "name": "Ysalte",
       "aka": [
         "The Vinegar Bitch",
-        "The Downward Spiral"
+        {
+          "name": "The Downward Spiral",
+          "at": "6:64"
+        }
       ],
       "role": "Goddess of hopelessness",
       "revealedAt": "4:33",
@@ -19036,7 +19045,10 @@
       "kind": "character",
       "name": "Yarilo",
       "aka": [
-        "Feral God Yarilo"
+        {
+          "name": "Feral God Yarilo",
+          "at": "7:63"
+        }
       ],
       "role": "God of lust",
       "revealedAt": "4:21",
@@ -19323,9 +19335,7 @@
       "id": "sledge",
       "kind": "character",
       "name": "The Sledge",
-      "aka": [
-        "Sledgey"
-      ],
+      "aka": [],
       "role": "Mercenary",
       "revealedAt": "3:8",
       "sort": 40,
@@ -20383,7 +20393,10 @@
       "name": "D'nadia",
       "aka": [
         "Princess D'nadia",
-        "Empress D'nadia"
+        {
+          "name": "Empress D'nadia",
+          "at": "5:64"
+        }
       ],
       "role": "Syndicate royalty",
       "revealedAt": "2:19",
@@ -20734,7 +20747,10 @@
       "kind": "character",
       "name": "Rishi",
       "aka": [
-        "Sultan Rishi the Usurper"
+        {
+          "name": "Sultan Rishi the Usurper",
+          "at": "7:58"
+        }
       ],
       "role": "Naga · Blood Sultanate",
       "revealedAt": "6:21",
@@ -21390,7 +21406,10 @@
       "kind": "character",
       "name": "Splash Zone",
       "aka": [
-        "Splashy"
+        {
+          "name": "Splashy",
+          "at": "7:5"
+        }
       ],
       "role": "NPC · mercenary",
       "revealedAt": "6:23",
@@ -21812,7 +21831,10 @@
       "kind": "character",
       "name": "Corcunda",
       "aka": [
-        "Corky"
+        {
+          "name": "Corky",
+          "at": "8:13"
+        }
       ],
       "role": "NPC",
       "revealedAt": "6:64",
@@ -23065,7 +23087,10 @@
       "name": "The Krakaren",
       "aka": [
         "Krakaren",
-        "Krakaren Prime"
+        {
+          "name": "Krakaren Prime",
+          "at": "1:34"
+        }
       ],
       "role": "Hive mind",
       "revealedAt": "1:32",
@@ -23367,7 +23392,10 @@
       "kind": "character",
       "name": "Remex",
       "aka": [
-        "Remex the Grand"
+        {
+          "name": "Remex the Grand",
+          "at": "2:end"
+        }
       ],
       "role": "NPC · the previous magistrate",
       "revealedAt": "2:22",
@@ -27345,7 +27373,10 @@
       "kind": "character",
       "name": "Gwendolyn Duet",
       "aka": [
-        "Gwen"
+        {
+          "name": "Gwen",
+          "at": "4:2"
+        }
       ],
       "role": "Crawler · Boring Ol' Fighter",
       "revealedAt": "3:31",
@@ -29691,7 +29722,12 @@
       "id": "hamed",
       "kind": "character",
       "name": "The Night Wyrm",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Hamed",
+          "at": "6:32"
+        }
+      ],
       "role": "Demigod",
       "revealedAt": "3:19",
       "sort": 128,
@@ -30345,7 +30381,10 @@
       "kind": "character",
       "name": "Kimaris",
       "aka": [
-        "Kimmy"
+        {
+          "name": "Kimmy",
+          "at": "7:87"
+        }
       ],
       "role": "A demon, stuffed · Carl's most valuable item",
       "revealedAt": "2:23",
@@ -31011,7 +31050,10 @@
       "kind": "character",
       "name": "Chalchiuhtlicue",
       "aka": [
-        "Chachi"
+        {
+          "name": "Chachi",
+          "at": "8:52"
+        }
       ],
       "role": "Goddess · among the children in Lucia Mar",
       "revealedAt": "8:51",
@@ -31102,7 +31144,10 @@
       "kind": "character",
       "name": "Lamashtu",
       "aka": [
-        "Lamashtu the Donkey"
+        {
+          "name": "Lamashtu the Donkey",
+          "at": "8:92"
+        }
       ],
       "role": "Subjugated god · the AI's mount",
       "revealedAt": "5:67",
@@ -34175,7 +34220,10 @@
       "kind": "character",
       "name": "Jola",
       "aka": [
-        "Jola the Yule Cat",
+        {
+          "name": "Jola the Yule Cat",
+          "at": "6:41"
+        },
         "the Yule Cat"
       ],
       "role": "Donut's totem · from Katia's deck",

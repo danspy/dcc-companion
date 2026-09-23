@@ -1029,7 +1029,10 @@
       "aka": [
         "OIPAN",
         "Open Intellect Pacifist Network",
-        "Open Intellect Action Network",
+        {
+          "name": "Open Intellect Action Network",
+          "at": "7:end"
+        },
         "The Pacifist Network"
       ],
       "role": "Not-for-conquest",
@@ -2167,7 +2170,14 @@
       "name": "The Nebular Sin Patrol",
       "aka": [
         "Nebular Sin Patrol",
-        "Nebulars"
+        {
+          "name": "Nebulars",
+          "at": "5:33"
+        },
+        {
+          "name": "The Nebular Balance",
+          "at": "6:66"
+        }
       ],
       "role": "Hunting team of a nomadic cult",
       "revealedAt": "5:15",
@@ -2476,7 +2486,10 @@
       "kind": "faction",
       "name": "The Operatic Collective",
       "aka": [
-        "Operatics"
+        {
+          "name": "Operatics",
+          "at": "7:12"
+        }
       ],
       "role": "Faction Wars team · slime bankers",
       "revealedAt": "5:75",
@@ -2504,7 +2517,7 @@
           "at": "5:75",
           "confidence": "verified",
           "headline": "The photo that is missing",
-          "text": "Crawler Carl holds up his photos of the faction teams like a hand of cards. He is missing two: a naga photo, and one from a group called the Operatic Collective, because they did not file a lawsuit against him on the previous floor. Three of the teams, the Operatic Collective among them, have local populations allowed to vote on all government expenditures, which means those citizens can change the vote here. Quasar is certain the Operatics are going to be forced to vote yes. The people hate the family."
+          "text": "Crawler Carl holds up his photos of the faction teams like a hand of cards. He is missing two: a naga photo, and one from a group called the Operatic Collective, because they did not file a lawsuit against him on the previous floor. Three of the teams, the Operatic Collective among them, have local populations allowed to vote on all government expenditures, which means those citizens can change the vote here. Quasar is certain the Operatic Collective will be forced to vote yes. The people hate the family."
         },
         {
           "kind": "arc",

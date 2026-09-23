@@ -16,6 +16,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { parseAt } from './lib/gate.mjs';
+import { aliasesOf } from './lib/aliases.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const snap = JSON.parse(readFileSync(join(root, 'data/content.snapshot.json'), 'utf8'));
@@ -34,9 +35,10 @@ const matcher = name => new RegExp(`\\b${escape(name)}\\b`, /\s/.test(name) ? 'i
 
 const gated = [];
 for (const e of snap.entities) {
-  if (parseAt(e.revealedAt) <= START) continue;
-  for (const n of [e.name, ...(e.aka ?? [])]) {
-    if (n.length >= 4) gated.push({ name: n, re: matcher(n), at: e.revealedAt, id: e.id });
+  // Each name at its own point: an alias can open chapters after its entity.
+  for (const { name: n, at } of [{ name: e.name, at: e.revealedAt }, ...aliasesOf(e)]) {
+    if (parseAt(at) <= START) continue;
+    if (n.length >= 4) gated.push({ name: n, re: matcher(n), at, id: e.id });
   }
 }
 for (const f of snap.floors) {

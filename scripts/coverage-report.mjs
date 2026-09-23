@@ -15,6 +15,7 @@
 import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { aliasNames } from './lib/aliases.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const API = 'https://dungeon-crawler-carl.fandom.com/api.php';
@@ -62,7 +63,7 @@ const normalise = n => n.toLowerCase()
 const existing = new Set(
   ['characters', 'items', 'mechanics', 'factions', 'places', 'threads'].flatMap(f => {
     const d = JSON.parse(readFileSync(join(root, `data/entities/${f}.json`), 'utf8'));
-    return d.entities.flatMap(e => [e.name, ...(e.aka ?? [])].map(normalise));
+    return d.entities.flatMap(e => [e.name, ...aliasNames(e)].map(normalise));
   }),
 );
 

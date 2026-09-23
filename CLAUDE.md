@@ -883,6 +883,25 @@ about what it *is* sits in beats at its own later tag. Tagging the entity at its
 would retro-seal text the reader has already read, and the forward-reference check would fail the
 build on the older entry — which is how each of these was found.
 
+### An alias can have its own reveal point
+
+Most aliases arrive with their entity: "Katia" and "Katia Grim" are one first mention. Some do not.
+The Night Wyrm is on a ring at 3:19 and his own name, **Hamed**, is not printed until 6:32; D'nadia is
+a princess until her father retires at 5:64; Yarilo is not a *feral* god until 7:63. An alias that
+revealed with its entity put those on pages chapters early — "Also known as" on the entity page, and
+worse, the hidden `data-find` search text on `/who` and `/when`.
+
+So `aka` takes either a plain string, which reveals with the entity, or `{ "name", "at" }`, which
+reveals at its own tag. `src/lib/aliases.ts` (and its script copy `scripts/lib/aliases.mjs`) is the one
+reader of both shapes: `aliasesSeen(e, gate)` is what a view shows and searches; the lint,
+`leak.ts` and `check-pages` gate each alias at its own point; the lint fails an alias that opens
+before its entity; `check-anchors` reads a timed alias as its own row, `id~alias`. Twenty-one aliases
+carry their own point now. The first build with them caught a 5:75 beat calling the Operatic
+Collective "the Operatics", a nickname the book first prints at 7:12.
+
+A title that only adds a rank to a name already open ("Crawler Carl", "Sergeant Toyotomi") stays a
+plain string. Timing an alias is for a name, or a fact, the reader has not been given.
+
 ### The first mention is read off the book, not the wiki
 
 `npm run content:anchors` reads the edition's full text when `data/index/books/` is on disk
@@ -1800,9 +1819,8 @@ currently has a dev server running. It is not this deployment, and only one proj
   reader meeting the name has somewhere to look. **Name an entity so it does not swallow ordinary
   words**: "The Arena" would have gated every "the arena" in the text, so the eleventh floor's is
   "The 11th Floor Arena", the book's own phrase at 8:67. Scolopendra as a crawler from 8:98 lives in
-  the existing Scolopendra entry rather than a second one. The Night Wyrm's own name "Hamed" is still
-  not an alias: it is printed at 6:32 and an alias reveals with the entity (3:19). An alias with its
-  own reveal point would fix that; the schema has none.
+  the existing Scolopendra entry rather than a second one. The Night Wyrm's own name "Hamed" is an alias
+  with its own reveal point at 6:32; see *An alias can have its own reveal point*.
 - Coverage gaps it noticed: the Gate in book 7 (waiting in a mailbox at 7:1, taken from Elle by Akuma
   at 7:61); `no-respawns` as a name, which 7:8 contradicts for outworlders; Rishi's death is only
   confirmed at 8:10 while his fate beat sits at 7:58.

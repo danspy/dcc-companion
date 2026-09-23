@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
 import { reveals, UNSET_COPY } from '../lib/spoiler';
+import { aliasesSeen } from '../lib/aliases';
 import { getEntities, getAllBeats, coverage, readGate, taglineFor, KIND_LABELS, KIND_ORDER } from '../lib/content';
 
 const { gate } = await readGate(Astro.cookies);
@@ -41,7 +42,7 @@ const metTotal = groups.reduce((n, g) => n + g.met, 0);
    by construction rather than by rule: there is no name in the document to
    match, so no query can surface one. */
 const findable = (e: (typeof entities)[number]) =>
-  [e.name, ...((e.aka ?? []) as string[]), e.role, taglineFor(e, gate)]
+  [e.name, ...aliasesSeen(e, gate), e.role, taglineFor(e, gate)]
     .join(' ')
     .toLowerCase();
 ---

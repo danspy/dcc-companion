@@ -21,7 +21,7 @@ const attrs = {
   'data-lane': lane.entity.id,
   'data-kind': lane.entity.kind,
   'data-met': '1',
-  'data-find': findableOf(lane.entity, taglineFor(lane.entity, gate)),
+  'data-find': findableOf(lane.entity, taglineFor(lane.entity, gate), gate),
   title: `${lane.entity.name} — ${lane.entity.role}`,
 };
 ---

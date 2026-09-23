@@ -34,6 +34,7 @@
    --------------------------------------------------------------------------- */
 
 import { parseAt } from './progress.ts';
+import { aliasesOf } from './aliases.ts';
 
 export interface Nameable {
   id: string | number;
@@ -98,9 +99,11 @@ export function buildScreen(
     add(String(e.id), e.name, e.revealedAt);
     /* Only capitalised aliases. "Katia" sitting in a tagline three chapters
        before the reader meets her is a leak; "the show" is not a name. */
-    for (const a of Array.isArray(e.aka) ? e.aka : []) {
-      if (typeof a === 'string' && a && a[0] === a[0].toUpperCase() && a[0] !== a[0].toLowerCase()) {
-        add(String(e.id), a, e.revealedAt);
+    /* Each at its own reveal point: "Hamed" is screened until 6:32 even though
+       the Night Wyrm is met at 3:19. */
+    for (const a of aliasesOf({ aka: e.aka, revealedAt: String(e.revealedAt) })) {
+      if (a.name[0] === a.name[0].toUpperCase() && a.name[0] !== a.name[0].toLowerCase()) {
+        add(String(e.id), a.name, a.at);
       }
     }
   }

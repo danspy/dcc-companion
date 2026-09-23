@@ -494,6 +494,32 @@ test('a lower-case alias is a phrase, not a name', () => {
     'name and capitalised alias both catch it');
 });
 
+test('an alias with its own reveal point is screened until then, not until the entity', () => {
+  // The Night Wyrm is on a ring at 3:19; his name, Hamed, is printed at 6:32.
+  const wyrm = [{ id: 'hamed', name: 'The Night Wyrm', aka: [{ name: 'Hamed', at: '6:32' }], revealedAt: '3:19' }];
+  const leaks = (text, at) => findLeaks(text, buildScreen(wyrm, [], parseAt(at))).map(l => l.name);
+  assert.deepEqual(leaks('Hamed wants a word.', '4:1'), ['Hamed'], 'met the Night Wyrm, not yet his name');
+  assert.deepEqual(leaks('Hamed wants a word.', '6:32'), [], 'the name is printed now');
+  assert.deepEqual(leaks('The Night Wyrm wants a word.', '4:1'), [], 'the entity itself is open');
+});
+
+test('the lint gates an alias at its own point, and never before its entity', () => {
+  const run = (aka, text) => lint({
+    books: [{ id: 3, title: 'Three', chapters: 34 }, { id: 6, title: 'Six', chapters: 72 }],
+    floors: [],
+    entities: [
+      { id: 'hamed', kind: 'character', name: 'The Night Wyrm', aka, revealedAt: '3:19', tagline: 't', beats: [] },
+      { id: 'x', kind: 'character', name: 'Someone', revealedAt: '3:1', tagline: 't',
+        beats: [{ kind: 'arc', book: 3, chapter: 20, at: '3:20', confidence: 'verified', headline: 'h', text }] },
+    ],
+  }).errors;
+  assert.ok(run([{ name: 'Hamed', at: '6:32' }], 'Hamed sends a ring.').some(e => e.includes('"Hamed"')),
+    'a 3:20 text may not name an alias that opens at 6:32');
+  assert.equal(run([{ name: 'Hamed', at: '6:32' }], 'The Night Wyrm sends a ring.').length, 0);
+  assert.equal(run(['Hamed'], 'Hamed sends a ring.').length, 0, 'a plain alias opens with its entity');
+  assert.ok(run([{ name: 'Hamed', at: '3:1' }], 'x').some(e => e.includes('before the entity itself')));
+});
+
 test('the premise is never a leak, even with no position at all', () => {
   // A reader who has told us nothing has still read the front page.
   assert.deepEqual(leaksAt('Carl is not available for comment.', 0), []);

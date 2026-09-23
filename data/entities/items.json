@@ -2576,7 +2576,10 @@
       "name": "Spunky Jefferson",
       "aka": [
         "Jefferson",
-        "Mr. Jefferson",
+        {
+          "name": "Mr. Jefferson",
+          "at": "7:56"
+        },
         "Spunky Jefferson the Enchanted Nickel Sock of the Elderly Miser"
       ],
       "role": "Sapient nickel-sock flail · Dong Quixote's weapon",

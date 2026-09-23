@@ -1,5 +1,6 @@
 import { parseAt, bookOf } from './gate.mjs';
 import { VOICES, ENTITY_VOICES, entityVoice, beatVoice } from './voice.mjs';
+import { aliasesOf } from './aliases.mjs';
 
 /* ---------------------------------------------------------------------------
    The gate lint. Curated prose is written from knowledge, so this validates
@@ -73,8 +74,9 @@ export function lint({ books, floors, entities, achievements = [] }) {
          a lower-case one is a common noun phrase rather than a name — Dungeon
          Crawler World is also known as "the show", and gating that phrase would
          flag every honest sentence about the broadcast. */
-      const aliases = (e.aka ?? []).filter(a => /^[A-Z]/.test(a));
-      return [e.name, ...aliases].map(name => ({ name, at: eAt }));
+      const aliases = aliasesOf(e).filter(a => /^[A-Z]/.test(a.name))
+        .map(a => ({ name: a.name, at: a.own ? at(a.at, `entity ${e.id} alias "${a.name}"`) ?? eAt : eAt }));
+      return [{ name: e.name, at: eAt }, ...aliases];
     }),
     ...floors.map(f => ({ name: f.name, at: at(f.nameAt ?? f.revealedAt, `floor ${f.id}`) ?? 0 })),
   ]
@@ -139,6 +141,15 @@ export function lint({ books, floors, entities, achievements = [] }) {
         prevD = dAt;
         checkForward(d.text, Math.max(dAt, entityAt), dw, { quotation: true });
       });
+    }
+
+    /* An alias with its own reveal point opens after its entity, never before:
+       an alias that opened first would name the entity ahead of its own tag. */
+    for (const al of aliasesOf(e).filter(x => x.own)) {
+      const aAt = at(al.at, `${where} alias "${al.name}"`);
+      if (aAt !== null && entityAt !== null && aAt < entityAt) {
+        errors.push(`${where}: alias "${al.name}" reveals at "${al.at}", before the entity itself ("${e.revealedAt}")`);
+      }
     }
 
     /* Taglines: a string means "safe from revealedAt"; a list supersedes as the

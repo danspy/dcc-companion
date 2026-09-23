@@ -39,7 +39,7 @@ const re = findRe(query);
 const filtering = query.trim() !== '' || kindFilter.size > 0;
 const shown = new Set(
   lanes
-    .filter(l => keeps(findableOf(l.entity, taglineFor(l.entity, gate)), l.entity.kind, re, kindFilter))
+    .filter(l => keeps(findableOf(l.entity, taglineFor(l.entity, gate), gate), l.entity.kind, re, kindFilter))
     .map(l => l.entity.id),
 );
 

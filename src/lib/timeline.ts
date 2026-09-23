@@ -5,6 +5,7 @@ import type { BookRow, FloorRow, EntityRow, BeatRow } from './content';
 import { KIND_ORDER } from './kinds.ts';
 import { reveals, type Gate } from './spoiler.ts';
 import { BOOK_COUNT, CHAPTER_STRIDE, END_OF_BOOK } from './progress.ts';
+import { aliasesSeen } from './aliases.ts';
 
 /* ---------------------------------------------------------------------------
    The timeline's arithmetic, in one place, for the same reason progress.ts owns
@@ -156,8 +157,10 @@ export const keeps = (
   find: string, kind: string, re: RegExp | null, kinds: Set<string>,
 ) => (kinds.size === 0 || kinds.has(kind)) && (!re || re.test(find));
 
-export const findableOf = (entity: EntityRow, tagline: string) =>
-  [entity.name, ...((entity.aka ?? []) as string[]), entity.role, tagline]
+/* Only the aliases this reader has reached: the search text is in the document,
+   and an alias with a later reveal point would be findable before it is seen. */
+export const findableOf = (entity: EntityRow, tagline: string, gate: Gate) =>
+  [entity.name, ...aliasesSeen(entity, gate), entity.role, tagline]
     .join(' ')
     .toLowerCase();
 

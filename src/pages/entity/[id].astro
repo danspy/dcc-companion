@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Sealed from '../../components/Sealed.astro';
 import BeatEntry from '../../components/BeatEntry.astro';
 import { reveals } from '../../lib/spoiler';
+import { aliasesSeen } from '../../lib/aliases';
 import {
   getEntity, getBeats, getRelations, getEntities, getFloors,
   KIND_LABELS, readGate, taglineFor, descriptionFor,
@@ -21,8 +22,8 @@ if (!reveals(gate, entity.revealedAt)) return Astro.redirect('/who', 302);
 const [beats, relations, all, floors] = await Promise.all([
   getBeats(entity.id), getRelations(entity.id), getEntities(), getFloors(),
 ]);
-// `aka` round-trips through column.json(), so it arrives as unknown.
-const aka = (entity.aka ?? []) as string[];
+// Only the aliases already reached: some are printed chapters after the entity.
+const aka = aliasesSeen(entity, gate);
 const nameById = new Map(all.map(e => [e.id, e]));
 const floorById = new Map(floors.map(f => [f.id, f]));
 

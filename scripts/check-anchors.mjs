@@ -29,6 +29,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { parseAt, bookOf, END_OF_BOOK } from './lib/gate.mjs';
+import { aliasesOf } from './lib/aliases.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = p => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -124,11 +125,23 @@ const REVIEWED = {
   "minus@8:52": "the 1:34 hit is 'Minus 1 Dexterity' on a stat line; the assassin is named in his own 8:52 interlude",
   "war-gauntlet@1:25": "the 1:12 hit is 'war gauntlets' as a class of gear in a skill description; Carl's gauntlet is named at 1:25",
   "meat-shields@6:2": "the 2:20 and 4:5 hits are 'meat shields' as a phrase for raised dead; the mercenary brand is on the 6:2 coupon",
+  "kimaris~Kimmy@7:87": "the 7:5 'Kimmy' is Samantha naming a stripper 'Kimmy the second'; Kimaris is called Kimmy at 7:87",
 };
 
+/* An entity is anchored on its name and the aliases that open with it; an alias
+   with its own reveal point is anchored separately, as `id~alias`, on its own
+   first printing. Folding it into the entity would pull the entity's anchor
+   back to the alias, or the alias's forward to the entity. */
+const subjects = entities.flatMap(e => [
+  { ...e, names: [e.name, ...aliasesOf(e).filter(a => !a.own).map(a => a.name)] },
+  ...aliasesOf(e).filter(a => a.own).map(a => ({
+    ...e, id: `${e.id}~${a.name}`, name: a.name, revealedAt: a.at, names: [a.name],
+  })),
+]);
+
 const report = [];
-for (const e of entities) {
-  const hit = firstMention([e.name, ...(e.aka ?? [])], !['character', 'faction'].includes(e.kind), e.kind !== 'character');
+for (const e of subjects) {
+  const hit = firstMention(e.names, !['character', 'faction'].includes(e.kind), e.kind !== 'character');
   const declared = parseAt(e.revealedAt);
   if (!hit) { report.push({ id: e.id, kind: e.kind, revealedAt: e.revealedAt, verdict: 'unnamed' }); continue; }
   const bookLevel = declared % 1000 === 0;
@@ -160,7 +173,7 @@ for (const [v, title] of Object.entries(groups)) {
 if (args.has('--all')) for (const r of report.filter(r => r.verdict === 'exact')) console.log(`  exact ${r.id} ${r.revealedAt}`);
 
 const n = v => report.filter(r => r.verdict === v).length;
-console.log(`\n${entities.length} entities against ${source}: ${n('exact')} exact · ${n('early')} early · ` +
+console.log(`\n${entities.length} entities and ${subjects.length - entities.length} later aliases against ${source}: ${n('exact')} exact · ${n('early')} early · ` +
   `${n('late')} late · ${n('book-level')} at book level · ${n('unnamed')} never named in the text · ${n('reviewed')} reviewed`);
 if (args.has('--json')) {
   writeFileSync(join(root, 'data/index/anchors.json'), JSON.stringify(report, null, 1) + '\n');
