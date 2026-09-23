@@ -123,6 +123,13 @@ const snapshot = {
     sortKey: parseAt(f.revealedAt),
     // A recap can never surface before its own floor does.
     recapSortKey: Math.max(parseAt(f.recapAt), parseAt(f.revealedAt)),
+    /* Each part of the recap unseals where the stretch it tells ends, and never
+       before the floor itself: the same "a summary of a span is gated at the
+       end of that span" rule, applied a few chapters at a time. */
+    recap: (f.recap ?? []).map(p => ({
+      title: p.title, text: p.text, from: p.from ?? f.revealedAt, at: p.at,
+      sortKey: Math.max(parseAt(p.at), parseAt(f.revealedAt)),
+    })),
   })),
   entities: resolvedEntities,
   beats: resolvedBeats,

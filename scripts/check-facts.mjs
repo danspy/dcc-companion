@@ -156,7 +156,8 @@ for (const e of entities) {
 }
 if (!only) for (const f of read('data/books.json').floors) {
   units.push({ id: `floor-${f.id}`, where: 'premise', gate: parseAt(f.revealedAt), text: f.premise });
-  units.push({ id: `floor-${f.id}`, where: 'recap', gate: parseAt(f.recapAt), text: f.recap });
+  (Array.isArray(f.recap) ? f.recap : []).forEach((p, i) =>
+    units.push({ id: `floor-${f.id}`, where: `recap ${i + 1}`, gate: parseAt(p.at), text: p.text }));
 }
 
 /* ---------- the screen ---------- */

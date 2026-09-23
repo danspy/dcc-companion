@@ -166,6 +166,32 @@ test("a floor's recap may not unseal before the floor is reached", () => {
   assert.equal(errors.filter(e => e.includes('floor 9: recap')).length, 0);
 });
 
+test("a floor's recap is told in parts, each gated where its stretch ends", () => {
+  const part = (at, text, from) => ({ from, at, title: 't', text });
+  const run = recap => lint({
+    books: [{ id: 1, title: 'One', chapters: 47 }, { id: 2, title: 'Two', chapters: 25 }],
+    floors: [{ id: 3, name: 'The Over City', revealedAt: '2:2', recapAt: recap.at(-1)?.at ?? '2:end', premise: 'p', recap }],
+    entities: [{ id: 'k', kind: 'character', name: 'Katia Grim', revealedAt: '2:21', tagline: 't', confidence: 'verified', beats: [] }],
+  });
+  const ok = run([part('2:5', 'Classes are chosen.', '2:1'), part('2:end', 'Katia Grim joins.')]);
+  assert.equal(ok.errors.length, 0, ok.errors.join('\n'));
+  // A part may start before the floor, but it may not unseal before it.
+  assert.ok(run([part('1:end', 'Early.'), part('2:end', 'x')]).errors.some(e => e.includes('before the floor itself')));
+  // Parts run forward.
+  assert.ok(run([part('2:9', 'a'), part('2:5', 'b'), part('2:end', 'c')]).errors.some(e => e.includes('is not after the part before it')));
+  // A part may not name what its own point has not reached: a summary of a
+  // stretch leaks exactly like a tagline.
+  assert.ok(run([part('2:5', 'Katia Grim is coming.'), part('2:end', 'x')]).errors.some(e => e.includes('"Katia Grim"')));
+  assert.ok(run([part('2:5', 'She dies later.'), part('2:end', 'x')]).errors.some(e => e.includes('points past')));
+  // The last part is the whole account, so it sits exactly at recapAt.
+  const off = lint({
+    books: [{ id: 2, title: 'Two', chapters: 25 }],
+    floors: [{ id: 3, name: 'The Over City', revealedAt: '2:2', recapAt: '2:end', premise: 'p', recap: [part('2:20', 'x')] }],
+    entities: [],
+  });
+  assert.ok(off.errors.some(e => e.includes('not at recapAt')));
+});
+
 test('a floor with no premise fails the build', () => {
   const { errors } = lint({
     books: [{ id: 7, title: 'Seven', chapters: 87 }],

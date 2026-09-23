@@ -32,7 +32,11 @@ const Floor = defineTable({
     /* A floor has two reveal points. `revealedAt` is where the crawlers set
        foot on it, and unseals only the blurb-safe `premise`. `recapAt` is where
        they leave it, and unseals the `recap` — the account of what actually
-       happened, which is a whole-book spoiler if shown on arrival. */
+       happened, which is a whole-book spoiler if shown on arrival.
+       The recap is a list of parts, each `{ title, text, from, at, sortKey }`,
+       and each part unseals at the end of the stretch it tells, so a reader
+       halfway down a floor gets the story as far as they have read it.
+       `recapSortKey` is the last part's: the whole account. */
     revealedAt: column.text(),
     /* The name can reach the reader before the floor does: the Maestro says
        "Faction Wars" at 1:43, six books before anyone sets foot on the ninth
@@ -42,7 +46,7 @@ const Floor = defineTable({
     recapAt: column.text(),
     recapSortKey: column.number(),
     premise: column.text(),
-    recap: column.text(),
+    recap: column.json(),
   },
 });
 

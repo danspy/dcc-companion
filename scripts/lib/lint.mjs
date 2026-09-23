@@ -351,5 +351,39 @@ export function lint({ books, floors, entities, achievements = [] }) {
     }
   }
 
+  /* Floors, read as text. The premise is shown on arrival and the recap a part
+     at a time, so each is held to the same two rules as a beat: no phrase that
+     points past its own point, no name the reader has not been given yet. A
+     part may start before the floor (the first floor's story starts at the
+     top of the stairs) but may not unseal before it, and the last part is the
+     whole account, so it has to sit exactly at `recapAt`. */
+  for (const floor of floors) {
+    const where = `floor ${floor.id}`;
+    const f = at(floor.revealedAt, where);
+    if (f === null) continue;
+    if (floor.premise) checkForward(floor.premise, f, `${where} premise`);
+    const parts = Array.isArray(floor.recap) ? floor.recap : [];
+    // A floor with no story yet leaks nothing; it is a gap in the curation, not a hole in the gate.
+    if (!parts.length) { warnings.push(`${where}: no recap yet — a list of { from, at, title, text }`); continue; }
+    let prev = -1;
+    parts.forEach((p, i) => {
+      const pw = `${where} recap part ${i + 1}`;
+      if (!p.title || !p.text) errors.push(`${pw}: needs a title and a text`);
+      const pAt = at(p.at, pw);
+      if (pAt === null) return;
+      if (pAt < f) errors.push(`${pw}: unseals at "${p.at}", before the floor itself ("${floor.revealedAt}")`);
+      if (pAt <= prev) errors.push(`${pw}: "${p.at}" is not after the part before it`);
+      if (p.from != null && at(p.from, `${pw} from`) > pAt) errors.push(`${pw}: starts at "${p.from}", after it ends`);
+      prev = pAt;
+      checkForward(p.text, pAt, pw);
+      checkForward(p.title, pAt, `${pw} title`);
+    });
+    const last = at(parts[parts.length - 1].at, where);
+    const r = at(floor.recapAt, where);
+    if (last !== null && r !== null && last !== r) {
+      errors.push(`${where}: the last recap part ends at "${parts[parts.length - 1].at}", not at recapAt "${floor.recapAt}"`);
+    }
+  }
+
   return { errors, warnings, tightened };
 }

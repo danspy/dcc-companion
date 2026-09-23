@@ -26,7 +26,8 @@ const headers = { cookie: `dcc_pos=${position}` };
 
 /* Each route, and the markers that prove its content rendered. */
 const ROUTES = [
-  ['/', ['class="slab floor"', 'floorno']],
+  // The front page tells each floor in parts: at least one must reach the position.
+  ['/', ['class="slab floor"', 'floorno', 'class="part"', 'Now entering']],
   ['/who', ['class="finder"', 'data-find', 'class="cell']],
   ['/when?view=braid', ['class="stagehead', 'id="braid-svg"', 'class="lane"', 'entryrow']],
   ['/when?view=grid', ['class="stagehead', 'gridrow', 'class="mark', 'entryrow']],

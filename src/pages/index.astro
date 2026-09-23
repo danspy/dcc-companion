@@ -4,57 +4,93 @@ import Sealed from '../components/Sealed.astro';
 import { reveals, UNSET_COPY } from '../lib/spoiler';
 import { getBooks, getFloors, readGate } from '../lib/content';
 
-const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies);
+const { gate } = await readGate(Astro.cookies);
 const [books, floors] = await Promise.all([getBooks(), getFloors()]);
 const bookById = new Map(books.map(b => [b.id, b]));
+
+/* A floor's story arrives in parts, each unsealed at the end of the stretch
+   it tells: the summary rule, applied a few chapters at a time. The build
+   resolves every part's `sortKey`; the page only compares. */
+interface RecapPart { title: string; text: string; from: string; at: string; sortKey: number }
+const partsOf = (floor: { recap: unknown }) =>
+  (Array.isArray(floor.recap) ? floor.recap : []) as RecapPart[];
+
+/* "Book 3 · Ch 20–25", "Book 3 · Ch 31 to the end", "Book 5 · The end". */
+function span(from: string, at: string): string {
+  const [fb, fc = ''] = from.split(':');
+  const [ab, ac = ''] = at.split(':');
+  const ch = (c: string, first: boolean) => (c === 'end' ? 'the end' : c || (first ? '1' : 'the end'));
+  if (fb !== ab) return `Book ${fb} · Ch ${ch(fc, true)} to book ${ab} · Ch ${ch(ac, false)}`;
+  if (fc === 'end' && ac === 'end') return `Book ${fb} · The end`;
+  const a = ch(fc, true), b = ch(ac, false);
+  return b === 'the end' ? `Book ${fb} · Ch ${a} to the end` : `Book ${fb} · Ch ${a}–${b}`;
+}
+
+/* A part is one stretch of story, written as one piece, and a quarter-page
+   block reads as a wall. Break it once, at the sentence nearest its middle. */
+function paragraphs(text: string): string[] {
+  const cuts = [...text.matchAll(/[.!?] (?=[A-Z])/g)].map(m => (m.index ?? 0) + 1);
+  if (text.length < 700 || !cuts.length) return [text];
+  const mid = text.length / 2;
+  const at = cuts.reduce((best, c) => (Math.abs(c - mid) < Math.abs(best - mid) ? c : best));
+  return [text.slice(0, at).trim(), text.slice(at).trim()];
+}
+
+/* The floor the reader is standing on opens by default; the ones behind them
+   fold away until they want them. */
+const reached = floors.filter(f => reveals(gate, f.revealedAt));
+const current = reached.length ? reached[reached.length - 1].id : null;
 ---
 <Layout title="Floors">
   <section class="wrap intro">
     <p class="eyebrow" style="color:var(--color-blood)">Dungeon Crawler World · Season: Earth</p>
     <h1>The Crawl<em>So Far</em></h1>
-    <p class="standfirst">
-      Eleven floors, eight books, one rule: you are shown the ground you have already walked
-      and never what waits under it. The record below opens as your position catches up.
-    </p>
 
-    <div class="prose premise">
-      <p><strong>Carl</strong> is a Coast Guard veteran in Seattle. At three in the morning, in
-        January, he goes outside in a t-shirt, boxer shorts and no shoes to catch his ex-girlfriend's
-        prize-winning Persian show cat, <strong>Princess Donut</strong>. It is the only reason
-        either of them lives past the next ninety seconds.</p>
-      <p>Every man-made structure on Earth collapses at once and everyone indoors dies. The
-        <strong>Borant Corporation</strong> has foreclosed on the planet under the laws of the
-        galactic <strong>Syndicate</strong>. The survivors get a countdown and a choice: go down
-        into the dungeon, or die up here when the mining crews arrive.</p>
-      <p>The dungeon has <strong>eighteen floors</strong>, each on a clock, and when a clock stops
-        the floor collapses with everyone still on it. It is also a television programme, broadcast
-        across the galaxy, and the survivors are the cast. Ratings buy sponsors, sponsors send loot,
-        and loot buys another floor of life. <strong>Being entertaining is a survival stat.</strong></p>
-      {gate.spoilers && gate.fresh
-        ? <p class="sys"><b>*** No position set ***</b>{UNSET_COPY}</p>
-        : <p class="sys"><b>*** Notice ***</b>Everything below this line is sealed to your
-            position. You get your floor. You do not get the one under it. That is not cruelty,
-            crawler. That is format.</p>}
+    <div class="sys broadcast">
+      <b>*** Previously, on Dungeon Crawler World ***</b>
+      <p>Hello, viewer! Either you are here to catch up, or you have not started yet and you are
+        snooping. Either way, pull up a chair. Chairs are optional down here, but I appreciate the
+        gesture.</p>
+      <p>Here is the pilot. Seattle, January, three in the morning. A Coast Guard veteran named
+        Carl goes outside in a leather jacket, boxer shorts and his ex-girlfriend's pink Crocs to
+        get her prize-winning Persian, Princess Donut, down from a tree. Ninety seconds later every
+        building on your planet falls down, and everyone inside one is dead. That is not a spoiler.
+        That is the premise.</p>
+      <p>The Borant Corporation has foreclosed on Earth under Syndicate law, all perfectly legal,
+        and the survivors got a choice: come down into my dungeon, or wait up top for the mining
+        crews. Eighteen floors. Every one of them on a clock. When a clock runs out, that floor
+        collapses with whoever is still standing on it.</p>
+      <p>Oh, and it is television! Broadcast live, across the galaxy. Ratings buy sponsors,
+        sponsors buy loot, loot buys another floor. Being entertaining is a survival stat. Being
+        boring is a cause of death.</p>
+      <p>Below is everything that happened on every floor you have survived. Sorry. Read. You get
+        it a stretch at a time, as far as you have got and not one chapter further. That is not me
+        being nice. Spoilers are bad for ratings.</p>
     </div>
+    {gate.spoilers && gate.fresh
+      ? <p class="sys notice"><b>*** No position set ***</b>{UNSET_COPY}</p>
+      : null}
   </section>
 
   <section class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">01</span>
       <h2>Floors</h2>
     </div>
-    <p class="sec-intro">Floor numbers and book titles are printed on the covers, so they stay
-      visible. What happened on them does not.</p>
+    <p class="sec-intro">Each floor's story opens a stretch at a time, as you read past it. The
+      floor you are on starts open; tap any other to unfold it.</p>
 
     {floors.map(floor => {
       const open = reveals(gate, floor.revealedAt);
       // The name can arrive first: the book prints some floors' names chapters ahead.
       const nameOpen = open || (floor.nameAt != null && reveals(gate, floor.nameAt));
-      const recapOpen = gate.frontier >= floor.recapSortKey;
       const book = bookById.get(floor.book);
+      const parts = partsOf(floor);
+      const shown = open ? parts.filter(p => gate.frontier >= p.sortKey) : [];
+      const next = open ? parts.find(p => gate.frontier < p.sortKey) : undefined;
+      const left = open ? parts.length - shown.length : 0;
       return (
-        <article class="slab floor" id={`floor-${floor.id}`}>
-          <div class="floor-head">
+        <details class="slab floor" id={`floor-${floor.id}`} open={floor.id === current}>
+          <summary class="floor-head">
             <div class="floorno" style={`background:${floor.accent};color:${floor.ink}`}>
               {String(floor.id).padStart(2, '0')}
             </div>
@@ -62,37 +98,68 @@ const bookById = new Map(books.map(b => [b.id, b]));
               <span class="eyebrow">Book <b>{floor.bookSpan ?? floor.book}</b> · {book?.title}</span>
               {nameOpen
                 ? <h3>{floor.name}</h3>
-                : <h3 class="redact" style="font-size:17px;font-weight:400">▓▓▓▓▓▓▓▓▓</h3>}
+                : <h3 class="redact" style="font-size:var(--type-lede);font-weight:400">▓▓▓▓▓▓▓▓▓</h3>}
             </div>
-          </div>
+          </summary>
           <div class="floor-body">
             {open
-              ? <div class="prose">
-                  <p class="premise">{floor.premise}</p>
-                  {recapOpen
-                    ? <p>{floor.recap}</p>
-                    : <Sealed at={floor.recapSortKey} compact />}
-                </div>
+              ? <>
+                  <p class="sys arrival"><b>*** Now entering ***</b>{floor.premise}</p>
+                  {shown.length > 0 &&
+                    <ol class="parts">
+                      {shown.map(p => (
+                        <li class="part">
+                          <span class="label part-span">{span(p.from, p.at)}</span>
+                          <h4>{p.title}</h4>
+                          {paragraphs(p.text).map(t => <p>{t}</p>)}
+                        </li>
+                      ))}
+                    </ol>}
+                  {next && <Sealed at={next.sortKey} count={left} noun="part" compact />}
+                </>
               : <Sealed at={floor.revealedAt} />}
           </div>
-        </article>
+        </details>
       );
     })}
   </section>
 </Layout>
 
+<script>
+  /* Quick-find links a floor as /#floor-N. A folded floor would swallow the
+     jump, so the target opens itself; without JavaScript the anchor still
+     lands on the floor's head. */
+  function openTarget() {
+    const el = location.hash.length > 1 ? document.getElementById(location.hash.slice(1)) : null;
+    if (el instanceof HTMLDetailsElement) { el.open = true; el.scrollIntoView({ block: 'start' }); }
+  }
+  openTarget();
+  addEventListener('hashchange', openTarget);
+</script>
+
 <style>
   .intro { padding-block: 56px 44px; }
   h1 { font-size: clamp(52px, 10vw, 116px); font-weight: 800; letter-spacing: -.01em; margin-top: 14px; }
   h1 em { font-style: normal; color: var(--color-gold); display: block; }
-  .standfirst { font-size: 17px; color: var(--color-grey-200); max-width: var(--measure); margin: 22px 0 30px; }
-  .premise { border-top: 1px solid var(--color-line); padding-top: 26px; }
-  .premise .sys { margin-top: 22px; max-width: var(--measure); }
-  .sec-head { display: flex; align-items: baseline; gap: 14px; }
+  /* The System's register at reading size: it is the one long thing on the
+     page it speaks, so it gets body type, not the 13px of a margin note. */
+  .broadcast { margin-top: 28px; max-width: calc(var(--measure) + 40px); font-size: var(--type-body);
+               line-height: 1.7; padding: 20px 22px; }
+  .broadcast p { margin: 0 0 14px; }
+  .broadcast p:last-child { margin-bottom: 0; }
+  .notice { margin-top: 18px; max-width: calc(var(--measure) + 40px); }
   .sec-head h2 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 700; }
-  .sec-intro { color: var(--color-grey-300); max-width: var(--measure); margin: 8px 0 30px; font-size: 15.5px; }
-  .floor { margin-bottom: 18px; }
-  .floor-head { display: flex; border-bottom: 1px solid var(--color-line); background: var(--color-raised); }
+  .sec-intro { color: var(--color-grey-300); max-width: var(--measure); margin: 8px 0 30px; font-size: var(--type-body); }
+  /* A jump to #floor-N lands below the sticky gate bar, not under it. */
+  .floor { margin-bottom: 14px; scroll-margin-top: 84px; }
+  .floor-head { display: flex; align-items: stretch; background: var(--color-raised);
+                cursor: pointer; list-style: none; }
+  .floor-head::-webkit-details-marker { display: none; }
+  .floor[open] > .floor-head { border-bottom: 1px solid var(--color-line); }
+  .floor-head::after { content: '+'; margin-left: auto; align-self: center; padding: 0 20px;
+                       font-family: var(--font-mono); font-size: var(--type-entry); color: var(--color-grey-500); }
+  .floor[open] > .floor-head::after { content: '−'; }
+  .floor-head:focus-visible { outline: 2px solid var(--color-gold); outline-offset: -2px; }
   .floorno { font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: 1;
              min-width: 86px; flex: none;
              display: flex; align-items: center; justify-content: center; padding: 16px 18px 12px; }
@@ -101,12 +168,19 @@ const bookById = new Map(books.map(b => [b.id, b]));
   .floor-titles h3 { font-size: 26px; font-weight: 700; color: #fff; }
   .eyebrow b { color: var(--color-grey-200); font-weight: 600; }
   .floor-body { padding: 22px 18px 24px; }
-  /* The premise is what the back cover would tell you; the recap below it is
-     what actually happened, and unseals only once the floor is behind you. */
-  .premise { color: var(--color-grey-200); }
-  .prose .premise + * { margin-top: 15px; }
+  .arrival { max-width: calc(var(--measure) + 34px); margin: 0 0 22px; }
+  /* One stretch of the floor per row; the gaps are the dividers, as in .log. */
+  .parts { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 26px; }
+  .part { max-width: var(--measure); }
+  .part-span { color: var(--color-gold); }
+  .part h4 { font-size: var(--type-entry); font-weight: 700; color: #fff; margin: 4px 0 8px; }
+  .part p { margin: 0 0 12px; font-size: var(--type-body); line-height: 1.7; color: var(--color-grey-200); }
+  .part p:last-child { margin-bottom: 0; }
   @media (max-width: 560px) {
     .floorno { font-size: 34px; min-width: 64px; padding: 12px 10px; }
     .floor-titles h3 { font-size: 21px; }
+    .floor-head::after { padding: 0 14px; }
+    .broadcast { padding: 16px; }
+    .floor { scroll-margin-top: 150px; }
   }
 </style>

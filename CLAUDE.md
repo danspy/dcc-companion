@@ -79,14 +79,39 @@ The boundaries come from the chapter summaries and are exact:
 
 | Floor | Arrive | Leave | | Floor | Arrive | Leave |
 |---|---|---|---|---|---|---|
-| 1 | 1:2 | 1:29 | | 7 | 5:end | 6:1 |
+| 1 | 1:2 | 1:29 | | 7 | 5:end | 5:end |
 | 2 | 1:30 | 1:end | | 8 | 6:1 | 6:end |
-| 3 | 2:2 | 2:25 | | 9 | 7:1 | 7:end |
+| 3 | 2:2 | 2:end | | 9 | 7:1 | 7:end |
 | 4 | 3 | 3:end | | 10 | 8:1 | 8:87 |
 | 5 | 4 | 4:end | | 11 | 8:88 | 8:end |
 | 6 | 5:1 | 5:end | | | | |
 
 The lint fails the build on a recap gated before its floor, and on a floor with no premise at all.
+
+### The crawl so far is told a stretch at a time
+
+The recap used to be one paragraph per floor, gated at the floor's end, which gave a reader in the
+middle of a floor nothing, and gave everyone else three sentences where they wanted to relive it.
+It is a list of parts now: `recap: [{ from, at, title, text }]`, four to ten per floor, each a
+couple of hundred words covering a stretch of chapters, and **each gated at `at`, the end of its
+own stretch** — the summary rule, applied a few chapters at a time. The front page shows every part
+the reader has reached, stamped `Book 3 · Ch 8–13`, and one sealed line for the rest. `recapAt` is
+the last part's `at`; the build resolves each part's `sortKey` and the page only compares.
+
+The prose is written from the edition's own beats, in the narrator's present tense, and held to
+the same two lint rules as a beat: **no forward phrase, no name the part's own point has not
+reached**, titles included. That caught "the second floor" in a first-floor part and "Louis" (the
+crawler, 5:11) in a sentence about Louis L'Amour westerns at 2:5. `check-facts.mjs` reads every
+part too. The lint also fails a part that unseals before its floor, parts out of order, and a last
+part that is not at `recapAt`; a floor with no recap at all is only a warning, because it leaks
+nothing.
+
+The **premise** is the System's floor announcement now (`*** Now entering ***`, mono), and the
+page's intro is the System too, a *Previously, on Dungeon Crawler World* that names only what the
+back cover does. Floors are `<details>`: the one the reader stands on opens, the rest fold; a
+quick-find jump to `/#floor-N` opens its target and clears the sticky bar with `scroll-margin-top`.
+Floor 3's story now runs to 2:end (the epilogue's leaderboard and the veto) and floor 7's is told
+entirely at 5:end, where the book tells it.
 
 ### A floor's name can arrive before the floor
 
