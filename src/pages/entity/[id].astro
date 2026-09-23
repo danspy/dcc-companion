@@ -191,6 +191,14 @@ const stampOf = (tag: string) => {
   /* The book filter: one chip per book with an entry the reader has reached.
      `hidden` has to win over the component layer's `display` on a row. */
   .booknav { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 26px; }
+  /* On a phone nine chips wrap into three rows and push the log off the
+     screen; like every other strip here, the row scrolls itself instead. */
+  @media (max-width: 560px) {
+    .booknav { flex-wrap: nowrap; overflow-x: auto; min-width: 0; overscroll-behavior-x: contain;
+               scrollbar-width: none; }
+    .booknav::-webkit-scrollbar { display: none; }
+    .booknav .chip-btn { flex: none; }
+  }
   :global(.log .entry[hidden]), section[hidden] { display: none !important; }
   /* Beat rows, the log and the relation list are in the shared component layer
      (src/styles/global.css), because /when renders the same objects. */
@@ -201,11 +209,17 @@ const stampOf = (tag: string) => {
   /* .btn-go carries the look; only the rhythm is this page's business. */
   .totime { margin: 22px 0 0; }
   .cols { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; padding-top: 34px; align-items: start; }
-  @media (max-width: 820px) { .cols { grid-template-columns: 1fr; gap: 28px; } }
+  @media (max-width: 820px) { .cols { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
   /* Size, weight and colour come from .sect in the component layer, which the
      /when panel and downstream use for the same object. */
   h2 { margin-bottom: 14px; }
-  section + section { margin-top: 38px; }
+  /* One rhythm for the whole column, whatever follows what: a description box
+     directly above the book chips once sat flush against them, because only
+     section-after-section had a gap. The chips keep their own tighter gap to
+     the log they filter. */
+  .main { min-width: 0; }
+  .main > * + * { margin-top: 38px; }
+  .main > .booknav + * { margin-top: 0; }
   .none { color: var(--color-grey-500); font-size: 14px; }
   .back { margin-top: 20px; font-family: var(--font-mono); font-size: 12px; }
 </style>

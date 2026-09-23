@@ -708,6 +708,14 @@ Checked by measuring `document.documentElement.scrollWidth - window.innerWidth`
 on every route at 320, 390 and 768: zero everywhere. Do that after any layout
 change; a 5px overflow is invisible until someone drags the page sideways.
 
+**An entity page's book chips are a strip on a phone too.** Nine of them wrapped into three rows and
+pushed the log off the screen; under 560px they scroll themselves. That only works because `.cols`
+is `minmax(0, 1fr)` in its one-column form as well: a bare `1fr` sizes to the unwrapped strip's
+min-content and pushed the whole document 319px wide.
+
+**A description box sat flush against the chips below it**, because the column's rhythm was
+`section + section` and the chips are a `nav`. `.main > * + *` spaces whatever follows what.
+
 **Two selectors named `.bk`.** The gate bar's book buttons and a beat's book
 stamp. Both are scoped so nothing leaks, but a probe written against `.bk`
 measures the wrong elements and reports a bug that is not there.
