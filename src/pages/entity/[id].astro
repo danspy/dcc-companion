@@ -49,17 +49,21 @@ const split = (rows: typeof beats) => {
 const useLog = split(uses);
 const storyLog = split(story);
 
-/* A long life gets a way in by book. Each book's first shown entry carries the
-   anchor; the jump row only appears once the log is long enough to need it. */
-const bookStarts = new Map<number, number>();
-storyLog.shown.forEach((b, i) => { if (!bookStarts.has(b.book)) bookStarts.set(b.book, i); });
+/* A long life can be read one book at a time. The chips filter rather than
+   jump: `?book=3` is resolved here, so a reload, a shared link and a reader
+   with no JavaScript all land on book 3 alone; the script only saves the page
+   load. Only books with an entry the reader has reached get a chip, and every
+   count is of reached entries — the same rule as /who's counts. */
+const shownAll = [...useLog.shown, ...storyLog.shown];
 const bookCounts = new Map<number, number>();
-for (const b of storyLog.shown) bookCounts.set(b.book, (bookCounts.get(b.book) ?? 0) + 1);
-const jumpable = storyLog.shown.length > 12 && bookStarts.size > 1;
-const anchorOf = (i: number) => {
-  for (const [book, start] of bookStarts) if (start === i) return `book-${book}`;
-  return undefined;
-};
+for (const b of shownAll) bookCounts.set(b.book, (bookCounts.get(b.book) ?? 0) + 1);
+const bookList = [...bookCounts.keys()].sort((a, b) => a - b);
+const filterable = shownAll.length > 12 && bookList.length > 1;
+const asked = Number(Astro.url.searchParams.get('book'));
+const pick = filterable && bookCounts.has(asked) ? asked : 0;
+const off = (b: { book: number }) => pick !== 0 && b.book !== pick;
+const useOn = useLog.shown.some(b => !off(b));
+const storyOn = storyLog.shown.some(b => !off(b));
 
 const visibleRelations = relations.filter(r => gate.frontier >= r.sortKey);
 const hiddenRelations = relations.length - visibleRelations.length;
@@ -105,15 +109,29 @@ const stampOf = (tag: string) => {
           </section>
         )}
 
+        {filterable && (
+          <nav class="booknav" aria-label="Show one book">
+            <a href={Astro.url.pathname} class="chip-btn" data-book="0" aria-pressed={pick === 0 ? 'true' : 'false'}>
+              All books <span class="n">{shownAll.length}</span>
+            </a>
+            {bookList.map(book => (
+              <a href={`${Astro.url.pathname}?book=${book}`} class="chip-btn" data-book={book}
+                 aria-pressed={pick === book ? 'true' : 'false'}>
+                Book {book} <span class="n">{bookCounts.get(book)}</span>
+              </a>
+            ))}
+          </nav>
+        )}
+
         {uses.length > 0 && (
-          <section>
+          <section data-log hidden={pick !== 0 && !useOn}>
             <h2 class="sect">Where it's used</h2>
             <ol class="log">
               {useLog.shown.map(b => (
-                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} />
+                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
               ))}
               {useLog.hidden.length > 0 && (
-                <li class="entry more">
+                <li class="entry more" hidden={pick !== 0}>
                   <Sealed at={useLog.nextAt!} compact
                           count={useLog.hidden.length} noun="use" />
                 </li>
@@ -123,21 +141,14 @@ const stampOf = (tag: string) => {
         )}
 
         {story.length > 0 && (
-          <section>
+          <section data-log hidden={pick !== 0 && !storyOn}>
             <h2 class="sect">{entity.kind === 'character' ? 'Story so far' : 'History'}</h2>
-            {jumpable && (
-              <nav class="booknav" aria-label="Jump to a book">
-                {[...bookStarts.keys()].map(book => (
-                  <a href={`#book-${book}`} class="chip-btn">Book {book} <span class="n">{bookCounts.get(book)}</span></a>
-                ))}
-              </nav>
-            )}
             <ol class="log">
-              {storyLog.shown.map((b, i) => (
-                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} id={anchorOf(i)} />
+              {storyLog.shown.map(b => (
+                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
               ))}
               {storyLog.hidden.length > 0 && (
-                <li class="entry more">
+                <li class="entry more" hidden={pick !== 0}>
                   <Sealed at={storyLog.nextAt!} compact
                           count={storyLog.hidden.length} noun="entry" />
                 </li>
@@ -177,10 +188,10 @@ const stampOf = (tag: string) => {
 </Layout>
 
 <style>
-  /* The jump row: one chip per book with an entry the reader has reached. The
-     anchors land under the sticky gate bar unless they leave room for it. */
-  .booknav { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; }
-  :global(.log .entry[id^="book-"]) { scroll-margin-top: 96px; }
+  /* The book filter: one chip per book with an entry the reader has reached.
+     `hidden` has to win over the component layer's `display` on a row. */
+  .booknav { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 26px; }
+  :global(.log .entry[hidden]), section[hidden] { display: none !important; }
   /* Beat rows, the log and the relation list are in the shared component layer
      (src/styles/global.css), because /when renders the same objects. */
   .hero { padding-block: 44px 26px; border-bottom: 1px solid var(--color-line); }
@@ -198,3 +209,29 @@ const stampOf = (tag: string) => {
   .none { color: var(--color-grey-500); font-size: 14px; }
   .back { margin-top: 20px; font-family: var(--font-mono); font-size: 12px; }
 </style>
+
+<script>
+  /* The chips are real links resolved on the server; this only saves the page
+     load. Only a plain left-click is intercepted, and the address write is a
+     convenience that may fail without consequence. */
+  function show(book: number) {
+    document.querySelectorAll<HTMLElement>('.booknav [data-book]').forEach(a =>
+      a.setAttribute('aria-pressed', String(Number(a.dataset.book) === book)));
+    document.querySelectorAll<HTMLElement>('section[data-log]').forEach(sec => {
+      let any = false;
+      sec.querySelectorAll<HTMLElement>('.log .entry[data-book]').forEach(li => {
+        const on = !book || Number(li.dataset.book) === book;
+        li.hidden = !on; any ||= on;
+      });
+      sec.querySelectorAll<HTMLElement>('.log .entry.more').forEach(li => { li.hidden = book !== 0; });
+      sec.hidden = !any && book !== 0;
+    });
+  }
+  document.addEventListener('click', e => {
+    const a = (e.target as HTMLElement).closest<HTMLAnchorElement>('.booknav a[data-book]');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    show(Number(a.dataset.book));
+    try { history.replaceState(null, '', a.href); } catch { /* the view is already right */ }
+  });
+</script>

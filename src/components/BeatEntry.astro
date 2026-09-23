@@ -5,10 +5,10 @@ import type { BeatRow, FloorRow } from '../lib/content';
    the /when panel both use it, so a System beat is a `*** ... ***` block and a
    character's own line carries the quote mark on both — the alternative was two
    renderings of the same row that quietly drifted apart. */
-interface Props { beat: BeatRow; floor?: FloorRow | null; id?: string }
-const { beat, floor = null, id } = Astro.props;
+interface Props { beat: BeatRow; floor?: FloorRow | null; id?: string; hidden?: boolean }
+const { beat, floor = null, id, hidden = false } = Astro.props;
 ---
-<li class="entry" id={id} data-key={beat.sortKey}>
+<li class="entry" id={id} data-key={beat.sortKey} data-book={beat.book} hidden={hidden}>
   <div class="stamp">
     <span class="bk">Book {beat.book}{beat.chapter ? ` · Ch ${beat.chapter}` : ''}</span>
     {floor && (

@@ -261,7 +261,7 @@
      chips on /who and /when do not. `.switch a` opts out the same way. */
   .chip-btn, .chip-btn:hover { text-decoration: none; }
   .chip-btn:hover:not(:disabled) { border-color: var(--color-grey-700); color: var(--color-grey-100); }
-  .chip-btn[aria-pressed="true"] { border-color: var(--color-gold); color: var(--color-gold); }
+  .chip-btn[aria-pressed="true"], .chip-btn[aria-pressed="true"]:hover:not(:disabled) { border-color: var(--color-gold); color: var(--color-gold); }
   .chip-btn:disabled { color: var(--color-grey-700); cursor: not-allowed; }
   .chip-btn .n { color: var(--color-grey-700); font-variant-numeric: tabular-nums; }
   .chip-btn[aria-pressed="true"] .n { color: var(--color-gold); }

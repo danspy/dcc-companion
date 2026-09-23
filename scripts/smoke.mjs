@@ -45,6 +45,9 @@ const ROUTES = [
   /* Quick-find answers per reader from the cookie; Carl is met at 1:1. */
   ['/find.json?q=car', ['"href":"/entity/carl"']],
   ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"']],
+  /* The book filter is resolved on the server: ?book=3 arrives with the other
+     books' entries already hidden and the Book 3 chip pressed. */
+  ['/entity/carl?book=3', ['data-book="3" aria-pressed="true"', 'data-book="1" hidden']],
   /* The form and the empty state render with no model call; a POST is not
      smoked, because it would spend a real request on a real key. */
   ['/achievement', ['form class="finder deed"', 'id="grant"', 'id="case"', 'name="deed"',

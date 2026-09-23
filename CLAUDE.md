@@ -284,8 +284,16 @@ gated alias in page source, shown to a reader on book 1. It names only premise n
 A reader asked why a character page said **"Where it's used"**. It was the usage-log heading for
 items, shown for any entity with `use` beats — and 109 character beats are the character *using*
 something, so Carl's page opened with a stray block above his own life. Only items and mechanics
-get that section now; everything else is one timeline, **"Story so far"** for a character, with a
-row of book chips once it runs long, each landing on that book's first entry.
+get that section now; everything else is one timeline, **"Story so far"** for a character.
+
+Once a page runs past a dozen reached entries across more than one book it gets a row of **book
+filter chips** above both sections — *All books* and one per book, each with its count of reached
+entries. They filter, they do not jump: a reader asked to see one book, not to scroll to it.
+`?book=3` is resolved on the server (rows arrive `hidden`, the chip pressed, an emptied section
+hidden, the sealed tail hidden too), so a reload, a shared link and a reader with no JavaScript all
+land on book 3; the page script only saves the round trip. `BeatEntry` carries `data-book` for it.
+`hidden` needs `display: none !important` because the component layer sets a row's display. And
+`.chip-btn[aria-pressed="true"]` now wins over hover, or the chosen chip went grey under the mouse.
 
 The same pass renamed chrome that only made sense to whoever built it: *The Descent* is **Floors**,
 *When* is **Timeline**, *Position* is **Progress**, the gate bar reads **"I've read up to —"**, *Spoil
