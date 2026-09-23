@@ -108,7 +108,9 @@ nothing.
 
 The **premise** is the System's floor announcement now (`*** Now entering ***`, mono), and the
 page's intro is the System too, a *Previously, on Dungeon Crawler World* that names only what the
-back cover does. Floors are `<details>`: the one the reader stands on opens, the rest fold. (For
+back cover does. Floors are `<details>`: the one the reader stands on opens, the rest fold. Each head carries a gold
+control that says what a click does (*Read · 4 parts* / *Close*, a chevron alone on a phone); a faint
+`+` at the edge went unnoticed, and a fold nobody sees is a floor nobody opens. (For
 a moment this looked like a page with no information on it, but that was a stale dev server whose
 seed still held string recaps; the page now renders an old string as one part rather than
 nothing.) A quick-find jump to `/#floor-N` opens its target and clears the sticky bar with

@@ -106,6 +106,13 @@ const current = reached.length ? reached[reached.length - 1].id : null;
                 ? <h3>{floor.name}</h3>
                 : <h3 class="redact" style="font-size:var(--type-lede);font-weight:400">▓▓▓▓▓▓▓▓▓</h3>}
             </div>
+            {/* The control says what a click does, so a folded floor reads as one
+                you can open rather than as a finished row. */}
+            <span class="toggle" aria-hidden="true">
+              <span class="when-shut">{open ? `Read · ${shown.length} ${shown.length === 1 ? 'part' : 'parts'}` : 'Sealed'}</span>
+              <span class="when-open">Close</span>
+              <svg viewBox="0 0 12 8" width="12" height="8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
           </summary>
           <div class="floor-body">
             {open
@@ -162,9 +169,17 @@ const current = reached.length ? reached[reached.length - 1].id : null;
                 cursor: pointer; list-style: none; }
   .floor-head::-webkit-details-marker { display: none; }
   .floor[open] > .floor-head { border-bottom: 1px solid var(--color-line); }
-  .floor-head::after { content: '+'; margin-left: auto; align-self: center; padding: 0 20px;
-                       font-family: var(--font-mono); font-size: var(--type-entry); color: var(--color-grey-500); }
-  .floor[open] > .floor-head::after { content: '−'; }
+  .floor-head:hover { background: var(--color-panel); }
+  .toggle { margin: auto 18px auto auto; flex: none; display: inline-flex; align-items: center; gap: 9px;
+            font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label);
+            text-transform: uppercase; color: var(--color-gold);
+            border: 1px solid var(--color-line); padding: 7px 11px; }
+  .floor-head:hover .toggle { border-color: var(--color-gold); }
+  .toggle svg { transition: transform .15s ease; }
+  .floor[open] > .floor-head .toggle svg { transform: rotate(180deg); }
+  .toggle .when-open, .floor[open] > .floor-head .toggle .when-shut { display: none; }
+  .floor[open] > .floor-head .toggle .when-open { display: inline; }
+  @media (prefers-reduced-motion: reduce) { .toggle svg { transition: none; } }
   .floor-head:focus-visible { outline: 2px solid var(--color-gold); outline-offset: -2px; }
   .floorno { font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: 1;
              min-width: 86px; flex: none;
@@ -185,7 +200,8 @@ const current = reached.length ? reached[reached.length - 1].id : null;
   @media (max-width: 560px) {
     .floorno { font-size: 34px; min-width: 64px; padding: 12px 10px; }
     .floor-titles h3 { font-size: 21px; }
-    .floor-head::after { padding: 0 14px; }
+    .toggle { margin-right: 12px; padding: 6px 8px; }
+    .toggle .when-shut, .toggle .when-open { display: none !important; }
     .broadcast { padding: 16px; }
     .floor { scroll-margin-top: 150px; }
   }
