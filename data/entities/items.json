@@ -2193,6 +2193,515 @@
           "at": "4:31"
         }
       ]
+    },
+    {
+      "id": "war-gauntlet",
+      "kind": "item",
+      "name": "Enchanted War Gauntlet of the Exalted Grull",
+      "aka": [
+        "Grull gauntlet",
+        "gauntlet"
+      ],
+      "role": "Carl's fist weapon",
+      "revealedAt": "1:25",
+      "sort": 52,
+      "tagline": [
+        {
+          "at": "1:25",
+          "text": "A charcoal wrist bracer from a brawler box that turns into a spiked black gauntlet of orcish steel when the hand makes a fist. It warns against punching Grull's worshippers, which may include horses."
+        },
+        {
+          "at": "3:11",
+          "text": "Carl's fist since the first floor. The chance it summons Grull when it strikes one of his adherents is 1.5 percent a punch, and nobody said it stacks."
+        },
+        {
+          "at": "4:13",
+          "text": "Carl's fist, sharpened: longer spikes, a point more strength and dexterity when formed, and the same standing warning about Grull's worshippers."
+        }
+      ],
+      "description": "Item is a wrist bracer that transforms into a spiked war gauntlet made of orcish steel when the hand is shaped into a fist or wields a hilted weapon for more than two seconds at a time. This item on its own does not negate the bare knuckle skill bonus. Warning: if you use this weapon to strike adherents of the war god Grull, you have a 1.5% chance to transfigure your target into the deity himself. Trust me on this. You don't want to do that.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 25,
+          "floor": 1,
+          "at": "1:25",
+          "confidence": "verified",
+          "headline": "Best thing in the brawler box",
+          "text": "The brawler box after the gym holds exactly the weapon Carl wanted: plus three Strength in fist mode, plus one Dexterity, two levels of Iron Punch, one of Powerful Strike, a two percent chance to stun. The warning is about striking adherents of Grull. Mordecai: horses, centaurs, tikbalangs; blue makeup, wenches, dying gloriously. Grull isn't a real god, he adds; there are none here, just those who pay. A clenched fist, a two-second buzz, and the hand is a spiked black hunk of metal."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 26,
+          "floor": 1,
+          "at": "1:26",
+          "confidence": "verified",
+          "headline": "Half a snout on the fist",
+          "text": "First blood: a fat, tuxedoed pig knight whose health is already in the red. His face caves in under the spiked gauntlet, half of his snout stays attached to Carl's fist, and he goes down still clutching his glass of wine. Miraculously, Carl feels nothing in his hand, only the impact in his arm. That was the point: no more breaking fingers on the things he punches. The gauntlet is nothing ornate, black and angular with gleaming spikes, a tool, and it vanishes in a puff of smoke that smells of burnt hair when the fist opens."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 32,
+          "floor": 2,
+          "at": "1:32",
+          "confidence": "verified",
+          "headline": "Two seconds is a long time",
+          "text": "A clurichaun comes at Carl impossibly fast and grapples instead of using its slingshot. He forms a fist, but the gauntlet takes two seconds to arrive, which is a long time when something is clawing at you. The first, bare-knuckle hit stuns it. The second, with the gauntlet, sends it flying with its head caved in. When he opens his hand his fingers are covered in lime-green oily residue, and a warning: he has been infected with the Taint."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 45,
+          "floor": 2,
+          "at": "1:45",
+          "confidence": "verified",
+          "headline": "Two percent, finally",
+          "text": "The two percent chance to stun has never once fired. Then, in a room full of cages, a dingo's head explodes and the gerbil that was inside it rockets at Carl's throat. He was ready. One full-strength punch, and the gerbil bounces off the floor with a sickening crunch and slides into the edge of a cage, health deep in the red, Stunned over its head with a fifteen-second timer. Carl takes two steps toward the tiny, unmoving thing, with a baleful glance at the ceiling."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 17,
+          "floor": 3,
+          "at": "2:17",
+          "confidence": "verified",
+          "headline": "It fits over the scoop",
+          "text": "The xistera Carl receives in the pub wraps his right forearm and retracts into a metallic bracer. While the scoop is out he can neither punch nor summon the gauntlet. Retracted, he forms a fist to test it, and the gauntlet not only works but fits snugly over the end of the new bracer, as if it had been made for it. The missing right arm of his jacket no longer looks ridiculous."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 22,
+          "floor": 3,
+          "at": "2:22",
+          "confidence": "verified",
+          "headline": "It hurts ghosts",
+          "text": "The third floor's ghost-class mobs can only be injured by magic or magical items, and the gauntlet counts. Outside the magistrate's building it damages a swarm of stinging, cold-attacking ghosts as easily as if they were flesh; they give off an unusually high amount of experience. Inside the krasue nest, Carl punches a flying head as he rushes past, and the magical gauntlet connects with a wet splat. Mongo's magical teeth caps can hurt them too."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "floor": 3,
+          "at": "2:end",
+          "confidence": "verified",
+          "headline": "A warning from Odette",
+          "text": "At the end of the floor, Odette looks at Carl and tells him to be careful with that gauntlet. It has the power to summon the war god Grull if he uses it against any of Grull's celebrants, and they start appearing on the next floor. King Rust has also just spent a lot of money on a deity sponsorship, which the Skull Empire does not usually buy. She does not know which god. If she were still a gambler, she would bet on Grull."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 6,
+          "floor": 4,
+          "at": "3:6",
+          "confidence": "verified",
+          "headline": "Bang Bro on the fist",
+          "text": "On the fourth floor Carl finds a spellbook for Bang Bro, which lets a weapon inflict Burn and Shock, and asks Mordecai whether it works on the gauntlet. Definitely, says Mordecai; not on the xistera, the way Carl loads it, but probably on his foot while his invulnerability buff is active. So Carl trains it, casting it on the gauntlet while the party grinds low-level mobs. He does not get to use it yet. The description adds that it can also cook hotdogs."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 11,
+          "floor": 4,
+          "at": "3:11",
+          "confidence": "verified",
+          "headline": "Ten point five",
+          "text": "Gore-Gore, train engineer and mantaur, is an adherent of Grull. Carl punches him in the kidney and a number appears on his interface: 1.5. Four quick punches after that: 3.0, 4.5, 6.0, 7.5. The description never said it was cumulative. Two more to get away: 9.0, 10.5. Then 10.5 is blinking and Gore-Gore has a ten-second timer over his head, saying he feels it in his chest. Carl drop-kicks him onto the third rail before the god arrives."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 32,
+          "floor": 4,
+          "at": "3:32",
+          "confidence": "verified",
+          "headline": "Summoning by accident",
+          "text": "The cookbook sorts deity summonings into three kinds, and the kind Carl's gauntlet does is the involuntary one: some poor fool summons a god by accident, through a trap or a spell or bad luck, and the god arrives angry and untethered. A second note calls it common. God-summoning equipment is sprinkled through the dungeon for special guest appearances, the deity spots are often bought by celebrities, and it is a way to collect more sponsorship money."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 13,
+          "floor": 5,
+          "at": "4:13",
+          "confidence": "verified",
+          "headline": "The sharpening stone",
+          "text": "A platinum quest box holds five thousand gold, twenty healing scrolls and a little black rock. Mordecai: this is for your gauntlet, you have to use it now. Platinum Sharpening Stone, short shelf life: rub it on a spiked weapon for bonus damage scaled to level, plus one to every existing stat buff, and a slightly oilier, meaner look. The whole gauntlet glows, the spikes grow a little longer, and the formed fist gains a point each of dexterity and strength."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 32,
+          "floor": 6,
+          "at": "5:32",
+          "confidence": "verified",
+          "headline": "A fist that does not form",
+          "text": "Escorted by two gnoll guards, Carl climbs a ladder into what one of them calls a zero zone, no enhancements at all, and makes a fist. For the very first time the gauntlet does not form. The guard says not to worry: studio three is a class two. The same day brings some arithmetic: past fifteen, armour and weapon enhancements like the gauntlet's plus one to Powerful Strike lose effectiveness. It still counts, with diminishing returns."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 74,
+          "floor": 6,
+          "at": "5:74",
+          "confidence": "verified",
+          "headline": "Surrendered at the door",
+          "text": "At the high elves' party, an elf at the twisting staircase made every guest store their weapons in inventory and then patted them down, including the wrist bracer that forms Carl's Grull gauntlet. In the melee after the queen falls, Carl grabs a mantis by the neck as he re-forms the gauntlet, and its head pops off. Another is already at his neck, then another."
+        },
+        {
+          "kind": "use",
+          "book": 8,
+          "chapter": 32,
+          "floor": 10,
+          "at": "8:32",
+          "confidence": "verified",
+          "headline": "Something riding the fist",
+          "text": "Mid-race, with Donut chaining a tunnel of giant pasta tubes over the road, the sugar hermits surge through the gaps and a skull lands in the cab through the missing windshield. Carl punches it with the gauntlet. The skull explodes, but the purple thing that lived inside it is still attached to the metal fist, slithering octopus-like around it toward his arm. Carl casts Bang Bro and electrifies the weapon, and the creature drops off, dead and sizzling. The spell he trained on the fourth floor still earns its keep."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "wielded-by",
+          "at": "1:25"
+        },
+        {
+          "to": "grull",
+          "kind": "summons",
+          "at": "1:25"
+        },
+        {
+          "to": "gore-gore",
+          "kind": "nearly-summoned-through",
+          "at": "3:11"
+        },
+        {
+          "to": "xistera",
+          "kind": "paired-with",
+          "at": "2:17"
+        }
+      ]
+    },
+    {
+      "id": "hob-lobber",
+      "kind": "item",
+      "name": "Hob-Lobber",
+      "aka": [
+        "Hobgoblin Hob-Lobber",
+        "hob-lobbers"
+      ],
+      "role": "Carl's staple bomb",
+      "revealedAt": "2:16",
+      "sort": 53,
+      "tagline": [
+        {
+          "at": "2:16",
+          "text": "Round hobgoblin bombs, fused or impact-enchanted, at an eighth the yield of a hobgoblin stick. Pustule has one case of the fused ones in tonight."
+        },
+        {
+          "at": "2:18",
+          "text": "A round bomb with a six-second fuse, the perfect size for Carl's xistera, which sends it out like a cannonball."
+        },
+        {
+          "at": "4:7",
+          "text": "Carl's staple ammunition: fused or impact-detonated, bought by the case, and cut down at the bench to half, quarter and eighth strength for close work."
+        },
+        {
+          "at": "6:42",
+          "text": "Carl's staple ammunition, now in sticky and holy-water versions as well as fractions of strength. The dungeon has learned to build rooms that set them off early."
+        }
+      ],
+      "description": [
+        {
+          "at": "2:17",
+          "source": "2:17",
+          "text": "Hobgoblin Hob-Lobber – Fused. Type: Fragmenting Tossable. Effect: It blows shit up. A mainstay of the Hobgoblin Hob-Lobbing Lobbers, the Hob-Lobber is a stable, mostly-predictable, more practical and tactical solution to dynamite. All right? But if you toss it, make sure its wick is lit. While not guaranteed to do a premature blast, it's better than nothing, innit?"
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 16,
+          "floor": 3,
+          "at": "2:16",
+          "confidence": "verified",
+          "headline": "Round bombs, one case left",
+          "text": "Carl asks the hobgoblin at the Silk Road for smaller explosives, preferably ball-shaped. Pustule normally carries round bombs. Hob-lobbers. Impact-enchanted and fused, a yield of one-eighth a hobgoblin stick, or half a goblin stick. The impact ones are dangerous, and the Hob-Lobbing Lobbers use them almost exclusively: don't drop 'em. The fused ones are impact resistant and extra stable; light, then toss. She only has a case of those tonight, twenty-five for five hundred gold. The case plus two cases of goblin dynamite come to fifteen hundred; Donut talks the lot down to a thousand."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 17,
+          "floor": 3,
+          "at": "2:17",
+          "confidence": "verified",
+          "headline": "Tossed in a safe room",
+          "text": "Back at the pub, Carl examines one. Stability 150, fortified, and a description whose rhymes he does not rate. The round bomb is the perfect size for his new xistera. It needs its fuse lit, a minor inconvenience; the impact-triggered kind can be bought from Pustule. Thinking about what Mordecai could do with an alchemy table, Carl tosses the heavy bomb into the air and catches it. Everyone in the room, Mongo included, looks at him in horror. I worry about you sometimes, says Donut."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 18,
+          "floor": 3,
+          "at": "2:18",
+          "confidence": "verified",
+          "headline": "Out of the xistera",
+          "text": "Two dozen hob-lobbers, and a problem: their fuses run six or seven seconds, perfect for tossing like grenades but too long at two hundred and fifty miles an hour. In the dark, with something slow and moaning shuffling toward him, Carl pulls one of ten he pre-lit to shorten the fuse and spins it from the xistera at the dot of the city elf who cast the spell. It flies like a cannonball and sinks into a monster twenty feet short. The second is perfectly timed. There isn't even an X left."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 21,
+          "floor": 3,
+          "at": "2:21",
+          "confidence": "verified",
+          "headline": "Three boxes, impact-detonated",
+          "text": "A stop at the Silk Road with funds running low. Carl picks up three more boxes of hob-lobbers, all of them the impact-detonated version, and Pustule has brought a ten-pack of hobgoblin smoke curtains, round fused bombs that work much better than goblin smoke. Pustule is right about the curtains. That night they fill the air over the rooftops like a heavy fog."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 10,
+          "floor": 4,
+          "at": "3:10",
+          "confidence": "verified",
+          "headline": "The fuse as a tester",
+          "text": "With the bench's bomb-deconstructing skill Carl takes several fused hob-lobbers apart; the fuses themselves could be useful. At the edge of an ochre line platform he has no multimeter, so he improvises: a curved metal rod carrying a wired hob-lobber fuse, tossed onto the tracks. It blows the moment the rod bridges the main rails and the third rail, and nowhere else. The third rail is the hot one, as it should be."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 27,
+          "floor": 4,
+          "at": "3:27",
+          "confidence": "verified",
+          "headline": "A game at the carnival",
+          "text": "A creature with a round mouth full of teeth charges down the rails, shrugging off a storm of crossbow bolts. Carl's metal ball shatters teeth. The next shot is a half-strength, impact-detonated hob-lobber, because the monster is too close for full strength; it goes into the giant mouth and takes out another tooth. There is a muffled thump. A moment after, the monster blows apart from the inside, like a water balloon filled with Beefaroni, and Donut gets no experience for it."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 33,
+          "floor": 4,
+          "at": "3:33",
+          "confidence": "verified",
+          "headline": "Through the mouth, rolling",
+          "text": "Invisible and running out of time between two cold engines in the trainyard, Carl finds the way out blocked by a Jabbering Jibber-Jabber, a minion of the Mimic Rex and nothing more than a giant mouth of needle teeth, a splitter. It doesn't see him. He pulls an impact-detonated hob-lobber and dives through the side of its open mouth like a trick poodle through a hoop, and keeps going. The Jibber-Jabber chomps down. None of the pieces get back up."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 7,
+          "floor": 5,
+          "at": "4:7",
+          "confidence": "verified",
+          "headline": "Quarter strength, then an eighth",
+          "text": "On the fifth floor Carl keeps cutting his bombs down. A quarter-strength hob-lobber lobbed over a hill at a lizard thirty feet off leaves a red geyser, and he decides it is still too strong for close combat: shrapnel. He needs something half that. By the time camels are firing rockets at a door he is holding, he has them, and coughs fire in the hole and hurls one of his new eighth-strength hob-lobbers down the long hall. The secondary explosion is bigger than the first."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 27,
+          "floor": 5,
+          "at": "4:27",
+          "confidence": "verified",
+          "headline": "Seeded into death charges",
+          "text": "Two commentators admire Carl's depth charges on air. Multi-layered, gunpowder-filled barrels, seeded with impact-detonated hob-lobbers that go off the moment the barrel crushes under the pressure, with holes and a manual dial to choose how deep. Donut calls them death charges. While the commentators jabber and the display window is about to break, Carl yanks the fuse out of a hob-lobber and replaces it with a piece of hobgoblin pus, bought from Pustule, and burns through more of his expensive detonator materials."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 38,
+          "floor": 8,
+          "at": "6:38",
+          "confidence": "verified",
+          "headline": "Sticky, against a Santa hat",
+          "text": "Carl has been working on sticky bombs for a while, and took the adhesive problem into the production facility's bomber's studio on the sixth floor. In a card-game combat against a wide-faced man in a Santa hat, Carl pulls a sticky hob-lobber into his xistera and throws it across the way. It splotches against the man's chest and explodes, killing him before he draws his first card. Donut's complaint is that Carl blew up his hat."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 42,
+          "floor": 8,
+          "at": "6:42",
+          "confidence": "verified",
+          "headline": "The heat lamps",
+          "text": "A card duel, two lizard temple guards summoned onto the field, and Carl reaches for a hob-lobber and examines it before he throws, as he should. Warning: the current environment may cause this to explode prematurely. In fact, just holding it could be bad for your health. A five-second timer appears over it, and he puts it away fast. It is the heat lamps. They are there on purpose, designed specifically to fuck with his bombs. His weakest, a sixteenth-strength, had already gone off early."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 71,
+          "floor": 9,
+          "at": "7:71",
+          "confidence": "verified",
+          "headline": "The Shit Just Hit folder",
+          "text": "No time to aim. Carl levitates up out of the funnel of Larracos and, instead of placing the big waffle-maker bombs on the theatre housing the zarogoth generator, drops the entire contents of one inventory folder, labelled Shit Just Hit, in the general direction of the Piccadilly. About twenty waffle makers, two no disassembles, a pair of cheese cutters, more dynamite sticks than he can count, and approximately five hundred impact hob-lobbers, all at once. His Walk on Air runs out three-quarters of the way to safety."
+        },
+        {
+          "kind": "use",
+          "book": 8,
+          "chapter": 10,
+          "floor": 10,
+          "at": "8:10",
+          "confidence": "verified",
+          "headline": "Trollish Boom Boxes",
+          "text": "On the tenth floor Carl finally starts receiving more dynamite and hob-lobbers, some surefires, which is a relief, and a Bomb Blanket potion that stops smaller bombs going off if thrown on them in time. There is also something new, Trollish Boom Boxes, which are upgraded hob-lobbers: they look like shoeboxes on a stick and are meant to be thrown. Carl wants to play with them in his bomber's studio first."
+        }
+      ],
+      "relations": [
+        {
+          "to": "pustule",
+          "kind": "sold-by",
+          "at": "2:16"
+        },
+        {
+          "to": "carl",
+          "kind": "wielded-by",
+          "at": "2:16"
+        },
+        {
+          "to": "xistera",
+          "kind": "fired-from",
+          "at": "2:17"
+        }
+      ]
+    },
+    {
+      "id": "mr-jefferson",
+      "kind": "item",
+      "name": "Spunky Jefferson",
+      "aka": [
+        "Jefferson",
+        "Mr. Jefferson",
+        "Spunky Jefferson the Enchanted Nickel Sock of the Elderly Miser"
+      ],
+      "role": "Sapient nickel-sock flail · Dong Quixote's weapon",
+      "revealedAt": "6:64",
+      "sort": 54,
+      "tagline": [
+        {
+          "at": "6:64",
+          "text": "A crusty tube sock full of nickels with a cursed miser's life force inside it. Sapient, upgraded twice, and now Dong Quixote's flail."
+        },
+        {
+          "at": "8:24",
+          "text": "Dong's sock. Bigger every day, smelling worse, and apparently keeping him alive just by being near him, which Imani does not like the look of."
+        },
+        {
+          "at": "8:60",
+          "text": "Dong's sock, for as long as he was worth something to it. Torn, shrunk, silent, then gone, leaving him cursed with Negative ROI and told he was a bad investment."
+        }
+      ],
+      "description": [
+        {
+          "at": "6:64",
+          "source": "6:64",
+          "text": "Jefferson is the life force of such a miser who pissed off the spirit who'd come to show him the errors of his ways. He was cursed to inhabit a sock once owned by a kid named Tanner. The sock itself holds several USD worth of nickels. You swing it and bonk people with it."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 64,
+          "floor": 8,
+          "at": "6:64",
+          "confidence": "verified",
+          "headline": "Handed over as a flail",
+          "text": "Dong Quixote wants a one-handed flail, and the nearest thing in Carl's inventory, looted from Quan Ch, has a description he has not read yet. Sapient. Incremental damage, currently up 238%. Mobs it kills may burst into gold. It is a white tube sock, red and blue stripes, old, crusty and bloodstained, sagging with coins. Dong takes it reverently and calls it a mythical weapon, then starts talking to it: five gold coins a dance, and no, he does not know what a mutual fund is."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 2,
+          "floor": 9,
+          "at": "7:2",
+          "confidence": "verified",
+          "headline": "Uh oh. It talks.",
+          "text": "An achievement catches up with Carl for looting a sapient weapon. Very few well-known crawlers use them, it notes, though they are usually quite powerful. Good luck with that. The reward is a pair of earplugs. Mordecai has already warned that such things can be both annoying and dangerous. Carl has not yet heard the sock say a word, but he has an uneasy feeling about it now, and makes a note to go back and examine it more closely."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 56,
+          "floor": 9,
+          "at": "7:56",
+          "confidence": "verified",
+          "headline": "Mr. Jefferson says",
+          "text": "Dong keeps the nickel end near his ear, and Carl is fairly sure the thing talks to him in his mind; earlier on this floor he was heard laughing quietly with it about long-term investments and short-term gains. Back from searching the Desperado Club for two missing strippers, Dong starts relaying Mr. Jefferson's view on high-stress environments. Donut forbids him to discuss her with his disgusting sock. He said you would say that, Dong replies."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 66,
+          "floor": 9,
+          "at": "7:66",
+          "confidence": "verified",
+          "headline": "Jefferson is correct",
+          "text": "Dong turns up for Carl's operation on Gonk with the sock over his shoulder, pausing mid-explanation to agree with it: yes, yes, you're right, Jefferson, it is very cost effective. Then, with the enemy army away from its castle, he makes the case: he and Jefferson have been talking, and Jefferson is correct. They should make haste to the Madness castle and proceed with the plan. Carl decides to trust the others and deal with the castle in front of him."
+        },
+        {
+          "kind": "use",
+          "book": 7,
+          "chapter": 68,
+          "floor": 9,
+          "at": "7:68",
+          "confidence": "verified",
+          "headline": "A coin kissed and fed",
+          "text": "Mobs killed by the sock sometimes leave gold coins on the ground. Carl watches Dong dismount, find one still spinning, snatch it up, kiss it, open the bloody sock and drop it in with a clink. I thought they were all nickels in there, Carl says. Dong is muttering to himself and does not answer. Carl turns back to the carnage and loots the bodies."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 24,
+          "floor": 10,
+          "at": "8:24",
+          "confidence": "verified",
+          "headline": "Sustaining, or addicted",
+          "text": "Dong, sitting on his giant stinking nickel sock and muttering about IRAs, is already feeling better. Imani asks whether he had it with him outside. He did not; he left it in the garage. Her read: the other team cast nothing. The sock heals him by proximity without his health going up, which means it is sustaining him, and if he is addicted to it she does not know what to do yet. Donut says it gets bigger every day. Nobody tells Dong. They do not want the sock to panic."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 58,
+          "floor": 10,
+          "at": "8:58",
+          "confidence": "verified",
+          "headline": "Torn open on the dance floor",
+          "text": "In the brawl during Carl and Donut's song, Dong clears the stage swinging his gigantic sock over his head. A mantis-like creature slices at him; he sends her flying, but not before she tears a hole in it. Coins fly everywhere, and every one is a nickel, though he has been putting gold pieces in. Dozens of NPCs grab handfuls and run. The tear mends itself. The sock does not go back to its giant size, however many nickels are put back in."
+        },
+        {
+          "kind": "fate",
+          "book": 8,
+          "chapter": 60,
+          "floor": 10,
+          "at": "8:60",
+          "confidence": "verified",
+          "headline": "A bad investment",
+          "text": "The sock is back to its original size and has stopped talking to Dong. Then his health starts to dip under a debuff reading Negative ROI. Bucket Boy grabs the sock to ask it what is wrong; it attacks him and is teleported away by the safe room rules. Mordecai: it could be anywhere. Sapient weapons use their owners until they can't, then move on. Mistress Tiatha calls the curse Separation Anxiety. Dong's own account: Jefferson said I was a bad investment."
+        }
+      ],
+      "relations": [
+        {
+          "to": "dong-quixote",
+          "kind": "wielded-by",
+          "at": "6:64"
+        },
+        {
+          "to": "quan-ch",
+          "kind": "looted-from",
+          "at": "6:64"
+        },
+        {
+          "to": "carl",
+          "kind": "given-by",
+          "at": "6:64"
+        }
+      ]
     }
   ]
 }

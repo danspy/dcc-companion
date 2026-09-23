@@ -36,7 +36,11 @@ const ROUTES = [
      right in a browser and still hand a reader all 243 rows the moment anything
      stops the script from re-applying. */
   ['/when?view=grid&q=kat&kinds=faction',
-   ['class="pickrow entryrow" hidden', 'class="stagerow gridrow" hidden', '1 of ']],
+   /* ' shown' is only printed while a filter is active. It asserted '1 of ' until
+      the Squim Conglomerate, which sponsors Katia, became a second match: a
+      smoke test checks that the server stamped the filter, not how many
+      entries the data happens to hold. */
+   ['class="pickrow entryrow" hidden', 'class="stagerow gridrow" hidden', ' shown']],
   ['/progress', ['class="stats"', 'tbl-head']],
   ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"']],
   /* The form and the empty state render with no model call; a POST is not

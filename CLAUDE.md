@@ -1792,10 +1792,17 @@ currently has a dev server running. It is not this deployment, and only one proj
   pass changed 77 of their 467 beats and 8 of 187 taglines. **The seed now inserts in batches**: one insert of
   3,159 beats × 11 columns passed SQLite's 32,766-variable limit and failed the build with nothing
   wrong in the content.
-- Still unbuilt, flagged once each: Minus (the tourist filed as Linus), Scolopendra as a crawler from
-  8:98, the Arena and its stand-ins, the Kyryap, Ricky Joe, Silfa, Levi the Seventh, Mukta. And the
-  Night Wyrm's own name "Hamed" is not an alias: it is printed at 6:32, and an alias reveals with the
-  entity (3:19). An alias with its own reveal point would fix that; the schema has none.
+- **A second pass added the rest: 52 more, 355 in all** — everything a reader flagged that plays a
+  part across more than one chapter, from Mukta, Manasa and Heather the Bear to Minus, the Kyryap and
+  Dong's sock. One-line walk-ons stay out (Buster, Samantha's robot dog, has three passing lines). The
+  review changed 52 of their 414 beats and 14 of 149 taglines. A few are honestly thin — Edict, Sierra,
+  Widget, Levi the Seventh and the Big Six live in a single scene — and are built anyway, because a
+  reader meeting the name has somewhere to look. **Name an entity so it does not swallow ordinary
+  words**: "The Arena" would have gated every "the arena" in the text, so the eleventh floor's is
+  "The 11th Floor Arena", the book's own phrase at 8:67. Scolopendra as a crawler from 8:98 lives in
+  the existing Scolopendra entry rather than a second one. The Night Wyrm's own name "Hamed" is still
+  not an alias: it is printed at 6:32 and an alias reveals with the entity (3:19). An alias with its
+  own reveal point would fix that; the schema has none.
 - Coverage gaps it noticed: the Gate in book 7 (waiting in a mailbox at 7:1, taken from Elle by Akuma
   at 7:61); `no-respawns` as a name, which 7:8 contradicts for outworlders; Rishi's death is only
   confirmed at 8:10 while his fate beat sits at 7:58.

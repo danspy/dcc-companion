@@ -119,6 +119,11 @@ const REVIEWED = {
   "containment-interface@7:1": "the 2:16 hit is a dynamite fuse; the Containment Interface is named at 7:1",
   "the-madness@6:21": "the 4:34 hit is 'eons in the madness', a phrase; the team is first named at 6:21",
   "shanty-town@7:1": "the 1:14 hit is 'shanty towns' on Earth; the ring is first named at 7:1",
+  "the-arena@8:5": "8:5 is the first 'stand-in in the arena' on the eleventh floor; the entity's handle 'the 11th floor arena' is the book's own phrase at 8:67",
+  "the-horribles@8:91": "8:91 prints 'A Horrible. Level X.' for the masked memories; the plural with the article follows at 8:92",
+  "minus@8:52": "the 1:34 hit is 'Minus 1 Dexterity' on a stat line; the assassin is named in his own 8:52 interlude",
+  "war-gauntlet@1:25": "the 1:12 hit is 'war gauntlets' as a class of gear in a skill description; Carl's gauntlet is named at 1:25",
+  "meat-shields@6:2": "the 2:20 and 4:5 hits are 'meat shields' as a phrase for raised dead; the mercenary brand is on the 6:2 coupon",
 };
 
 const report = [];

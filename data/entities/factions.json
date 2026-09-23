@@ -2856,6 +2856,605 @@
           "at": "8:32"
         }
       ]
+    },
+    {
+      "id": "sensation-entertainment",
+      "kind": "faction",
+      "name": "Sensation Entertainment",
+      "aka": [
+        "Sensation Entertainment, Incorporated"
+      ],
+      "role": "Producers of Vengeance of the Daughter",
+      "revealedAt": "2:12",
+      "sort": 58,
+      "tagline": [
+        {
+          "at": "2:12",
+          "text": "Sensation Entertainment, Incorporated. The private production company behind Vengeance of the Daughter, from one of the center systems."
+        },
+        {
+          "at": "5:15",
+          "text": "The producers of Vengeance of the Daughter, who have agreed to a ninth-floor extension in principle and are in no hurry to sign it."
+        },
+        {
+          "at": "7:1",
+          "text": "The producers of Vengeance of the Daughter, bought by a subsidiary of the Dream and demanding the third season Carl's contract guarantees."
+        },
+        {
+          "at": "7:13",
+          "text": "Owned by the Dream, and accused by an adjutant of an unlawful assassination attempt: an elite of theirs, wired with explosives and under undue influence."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 12,
+          "floor": 3,
+          "at": "2:12",
+          "confidence": "verified",
+          "headline": "A company from the center",
+          "text": "Carl wants to know who runs Vengeance of the Daughter, the programme he has just contracted with. Not a kua-tin outfit, Zev says: nobody in their system is allowed to run serials while the game runs, and in any case the nuances of scripted drama are lost on the average kua-tin. It is an entity called Sensation Entertainment, Incorporated, from one of the center systems, which tend to be more integrated. The gentleman she dealt with was a Sac. What is a Sac? Carl does not know, so she cannot tell him."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 6,
+          "floor": 6,
+          "at": "5:6",
+          "confidence": "verified",
+          "headline": "The contract outlives the floor",
+          "text": "Before the transfer to Odette's show, Zev passes on a message: the programme is still active, so Carl's contract regarding participation in any other programme is still in effect. If some other elite approaches, he is required to extract himself as best he can. The showrunners of other programmes generally honour the contract with Sensation Entertainment, and try to intervene on their end. A good-faith effort should be enough, though that is a question for his new attorney."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 13,
+          "floor": 6,
+          "at": "5:13",
+          "confidence": "verified",
+          "headline": "A licence they never asked for",
+          "text": "In the negotiation with Borant, Quasar asks for one of the licences that let a secondary programme continue past the sixth floor, for Sensation Entertainment's Vengeance of the Daughter. It is an old rule: a showrunner running below expected profit may grant emergency use to a single programme, for an extra twenty percent to Borant. Borant agrees, provided it stays quiet. Quasar says the producers have already agreed. They have not; that is a bluff, and they have been unavailable. Carl's chaser gets an automated reply."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 15,
+          "floor": 6,
+          "at": "5:15",
+          "confidence": "verified",
+          "headline": "Yes, but not yet",
+          "text": "Zev reports that she is talking to the Sensation people, and that they mean to steer the narrative so the crawlers are back in a saferoom in time for Odette's show. Then Quasar's message, good news and bad: Sensation has agreed to accept Borant's offer of a ninth-floor extension, but they are being little bitches about it and want to wait a few days before signing anything officially. His reading between the lines: make the programme more exciting without throwing the star into the shadow, or they might decide to pull his plug."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "Under new ownership",
+          "text": "Quasar's message on arrival: remember that contract with Sensation Entertainment, Incorporated? The main character is dead and gone, but the guaranteed third season he and Carl negotiated is about to haunt the fuck out of them both. Sensation has just been purchased by a subsidiary of the Dream, and the owners are demanding their third season. Signet is not coming back, so whatever happens is going to be something stupid, and the new showrunners mean to use Carl's contractual obligation against him. Advice: stay away from any elites."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 13,
+          "floor": 9,
+          "at": "7:13",
+          "confidence": "verified",
+          "headline": "Satchels under the shirt",
+          "text": "In a castle antechamber, Elite Herman the Fleet, ogre strongman, fights something inside himself, snaps a desk in half and tells Carl he was supposed to do it already. He is covered in explosive satchels. Donut fires a Magic Missile at his face and Baroness Victory puts an axe through his head; Carl takes the destabilising body into his inventory. Victory calls it an unlawful assassination attempt by Sensation Entertainment: the Dream, which now owns the company, was exerting undue influence on one of its elites. She is filing a grievance."
+        }
+      ],
+      "relations": [
+        {
+          "to": "vengeance-of-the-daughter",
+          "kind": "owns",
+          "at": "2:12"
+        },
+        {
+          "to": "quasar",
+          "kind": "concerns",
+          "at": "5:13"
+        },
+        {
+          "to": "the-dream",
+          "kind": "owned-by",
+          "at": "7:1"
+        },
+        {
+          "to": "baroness-victory",
+          "kind": "concerns",
+          "at": "7:13"
+        }
+      ]
+    },
+    {
+      "id": "squim",
+      "kind": "faction",
+      "name": "The Squim Conglomerate",
+      "aka": [
+        "Squim Conglomerate",
+        "Squim"
+      ],
+      "role": "Showrunner of the previous season",
+      "revealedAt": "1:4",
+      "sort": 59,
+      "tagline": [
+        {
+          "at": "1:4",
+          "text": "Another corporation that runs seasons of the show. Theirs are battle royales: an entire world, down to one champion. Good for ratings, not much money."
+        },
+        {
+          "at": "1:14",
+          "text": "Last season's showrunner. Battle for the Planet Aryl, in a coliseum the size of a city. Squim saps a planet dry, then leaves it."
+        },
+        {
+          "at": "4:7",
+          "text": "A planet-mining company, like Borant, that runs battle royale crawls. It also sponsors Katia, among some five hundred crawlers."
+        },
+        {
+          "at": "7:41",
+          "text": "Ran the Aryl season. The moment the failsafe was pressed on this floor, the whole Aryl system went dark."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 4,
+          "floor": 1,
+          "at": "1:4",
+          "confidence": "verified",
+          "headline": "A different game completely",
+          "text": "Mordecai, in the tutorial, on how the show is run. Different corporations take turns with the seasons, one every two and a quarter years or so, and each one runs its own kind of game. The Squim Conglomerate, for example, chooses a different game completely: a battle royale-style fight. An entire world, and it all comes down to one champion. It is good for ratings, but from what he understands, it does not make them much money. His own company is known for the most elaborate dungeons."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 14,
+          "floor": 1,
+          "at": "1:14",
+          "confidence": "verified",
+          "headline": "Battle for the Planet Aryl",
+          "text": "The premiere opens with a recap of last season. A planet like Earth with the continents jumbled; buildings on stilts swept sideways by the collapse; then a coliseum the size of a city, marked The Squim Conglomerate Presents, Battle for the Planet Aryl. Furry, gorilla-like creatures charge one another. One armoured gorilla spears a smaller gray one riding a huge pig, WINNER appears, and the winner falls to his knees, sobbing. Tally's verdict: they tell people their loved ones are safe if they kill. Squim saps the planet dry and moves on. Better dead."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 43,
+          "floor": 2,
+          "at": "1:43",
+          "confidence": "verified",
+          "headline": "Always plays Battle Royale",
+          "text": "The Maestro, in the interview on the big screen, explains why he missed Faction Wars last time. He was of age last season, but the stupid Squim Conglomerate always plays Battle Royale, which has no Faction Wars or Celestial Ascendancy segment. This year he means to be there. He is on his way to Carl's stupid planet right now, to be War Leader Maestro of the Skull Clan. He pounds his chest like a gorilla while saying so."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 7,
+          "floor": 5,
+          "at": "4:7",
+          "confidence": "verified",
+          "headline": "Katia's new sponsor",
+          "text": "New sponsors arrive for everyone. Donut gets Veriluxx RealPet Companions. Katia gets the Squim Conglomerate, and does not know who that is. Carl does: the corporation that ran the crawl last season, a planet-mining company just like Borant, running battle royale crawls. He does not know what kind of alien they are. Katia finds she can see who else they sponsor. The list has something like five hundred crawlers on it, and she does not recognize any of the names."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 19,
+          "floor": 5,
+          "at": "4:19",
+          "confidence": "verified",
+          "headline": "No admins lost",
+          "text": "Orren the liaison, making Carl sit through a lesson on assassinated admins. Two seasons ago, a crocodilian bit the head off his outreach associate, and the Fortent admins lost two security agents on top of that: three dead, which is a lot. Last season, the Squim Conglomerate had no admin fatalities due to crawler attacks at all. Orren asks Carl to guess this season's number. Zero, says Carl. It stands at fifteen, not counting Admin Loita, and Lucia Mar has killed two."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 41,
+          "floor": 9,
+          "at": "7:41",
+          "confidence": "verified",
+          "headline": "The Aryl system goes dark",
+          "text": "Zev brings the news, a few hours old. After Princess Formidable was teleported away, her ship carried on to its destination and stopped. When she did not return, a few orcs went into the station and triggered the failsafe themselves. Nothing happened here. But the moment they pressed the button, the Aryl system went dark, tunnel node and all, which has never happened before. Aryl was the previous crawl's world. Where did everyone go? That was a Squim season, Zev says. They do things a little differently. There were some survivors. They were relocated."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 58,
+          "floor": 9,
+          "at": "7:58",
+          "confidence": "verified",
+          "headline": "Rishi's question about Aryl",
+          "text": "Rishi, the armless naga, asks Carl from his cell whether Carl knew that the Aryl system went dark the moment Princess Formidable hit the failsafe. Carl corrects him: Formidable never made it to the failsafe. The AI pulled her off her ship and dropped her in the ocean. But yes, he heard, and he knows the last season happened there. Rishi nods, and does not elaborate his point."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 86,
+          "floor": 9,
+          "at": "7:86",
+          "confidence": "verified",
+          "headline": "Another system, a star gone nova",
+          "text": "Victory has news for Huanxin: the newest mantis colony system has just gone dark, at the same moment the other rottweiler died a few hours back. The initial reports are a little more holistic than they were in the Aryl system. This time, the star went nova. Huanxin calls her a lying bitch, and adds that, even if she is not, there is insurance."
+        }
+      ],
+      "relations": [
+        {
+          "to": "katia",
+          "kind": "sponsors",
+          "at": "4:7"
+        },
+        {
+          "to": "borant-corporation",
+          "kind": "concerns",
+          "at": "1:14"
+        }
+      ]
+    },
+    {
+      "id": "meat-shields",
+      "kind": "faction",
+      "name": "Meat Shields",
+      "aka": [
+        "the mercenary market"
+      ],
+      "role": "Mercenary market",
+      "revealedAt": "6:2",
+      "sort": 60,
+      "tagline": [
+        {
+          "at": "6:2",
+          "text": "Meat Shields. Probably, says Mordecai, the name of the mercenary markets on this floor. Somebody has sent a coupon."
+        },
+        {
+          "at": "6:34",
+          "text": "Meat Shields, the mercenary market. Its location on the top floor of the Desperado Club had no sign and no map marker: an elderly dwarf's home office, where the dancers of the Penis Parade kept their memberships."
+        },
+        {
+          "at": "7:10",
+          "text": "The mercenary market. Where a crawler hires help, and where a club's surviving staff get sent when the club is reorganised."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 2,
+          "floor": 8,
+          "at": "6:2",
+          "confidence": "verified",
+          "headline": "A coupon with a flexed arm",
+          "text": "Among the prizes on the table sits a piece of paper printed with a buff, flexed arm: a mercenary coupon, good for 100,000 gold of mercenary services at any participating Meat Shields location. Crawler Carl asks what Meat Shields is. Mordecai shrugs. Probably the name of the mercenary markets on this floor: there is one in the Desperado and one in Club Vanquisher, and there was probably one in Larracos too. Which reminds him that the guildhall needs a mercenary training arcade."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 31,
+          "floor": 8,
+          "at": "6:31",
+          "confidence": "verified",
+          "headline": "Across from the jeweler",
+          "text": "Deep in the club, down a side hallway on the far side of the badger bar, a gnome jeweler and a few odds and ends on one side, and on the other, a Meat Shields location where one can purchase mercenaries. Crawler Carl and Crawler Donut both hold coupons for it. They are saving them. Carl walks past. He is here tonight on other business."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 34,
+          "floor": 8,
+          "at": "6:34",
+          "confidence": "verified",
+          "headline": "The home office",
+          "text": "Damascus has an offer. The whole crew of the Penis Parade still holds Meat Shields memberships, and Crawler Carl holds a coupon: hire them on a two-floor contract, and they can leave with him. He calls over an elderly dwarf with a fuzzy mole named Bernie on her shoulder. Rosemarie manages the top floor's Meat Shields location. Carl did not know there was one; it is not on his map. I work out of my home office, she says, waving at where her table used to be. There is a hole there now."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 34,
+          "floor": 8,
+          "at": "6:34",
+          "confidence": "verified",
+          "headline": "The end of an era",
+          "text": "Rosemarie does not want to lose her dancers. Without them the place fills with dregs, and nobody hires an elderly stripper with one leg and halitosis. Damascus says a restructuring is coming, his mother dead, the crew thrown to the Larracos level Meat Shields otherwise. The price is the coupon, 100,000 gold. Damascus stays behind. Rosemarie calls it the end of an era, opens her shop interface, and asks to see the coupon. Thirteen dancers, a skeleton DJ and Bucket Boy report to Carl's barracks."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 34,
+          "floor": 8,
+          "at": "6:34",
+          "confidence": "verified",
+          "headline": "How the Parade hid",
+          "text": "Crawler Carl's theory, offered to Katia as a theory: when Astrid became assistant manager of the club, she got her two sons a job at the Penis Parade where she could watch over them. They were all Meat Shields members, and they brought their friends. She parked Rosemarie in there, so the dancers were technically still mercenaries, and since nobody knew the club was also a Meat Shields location, they were safe. Only the men of the Penis Parade were eligible to be hired."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 10,
+          "floor": 9,
+          "at": "7:10",
+          "confidence": "verified",
+          "headline": "Airlocked to the markets",
+          "text": "On the way down through Larracos, the city's own mercenary markets are still flooded out and ruined. Further down, the Desperado Club reopens under a new manager who admits no crawlers and wants no visitors. Clarabelle is lucky to have kept her job. Everybody else was not so lucky: the surviving cretins and sai were airlocked out and sent off to the mercenary markets. "
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 28,
+          "floor": 9,
+          "at": "7:28",
+          "confidence": "verified",
+          "headline": "Quickly snatched up",
+          "text": "The System files the career of one of those survivors. A level-70 Sai mercenary leader lost his entire squad in an incident at the Desperado Club for which Crawler Carl may or may not be partially responsible. In the reorganisation the few Sai survivors were relegated to the mercenary markets, where he was quickly snatched up. Crawler Carl inherits the contract by defeating his employer. The System doubts this has done much for his self-esteem."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 85,
+          "floor": 9,
+          "at": "7:85",
+          "confidence": "verified",
+          "headline": "Storage, or back to the market",
+          "text": "Ninth floor, closing arrangements. Nobody is certain what happens to the mercenaries. The hired ones, the Sledge and the other surviving cretins among them, along with the dungeon-born mercenaries for hire on every team, are expected to simply disappear: possibly into storage for the next crawl, possibly tossed back into the mercenary market. They do not go down to the twelfth floor. The strippers are a question mark, and so they stay with the crawlers."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 19,
+          "floor": 10,
+          "at": "8:19",
+          "confidence": "verified",
+          "headline": "Returned for cause",
+          "text": "Bucket Boy sees a Taurin among a group of dancers and knows him at once. His name is Pontiff. He was a dancer, and Damascus sent him back to the mercenary market because he was a dick. Bucket Boy's evidence: Pontiff once slapped him for getting in the way during a routine, in a club with almost nobody in it."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 33,
+          "floor": 10,
+          "at": "8:33",
+          "confidence": "verified",
+          "headline": "Prices are double",
+          "text": "Race preparations. Rosetta sends word that she and Tipid are already in town at the mercenary market, and asks what Crawler Carl needs. A driver and defence, he says, fast reflexes, at least two who can drive, since neither he nor Donut can take the next race. Nobody too crazy. Prices are double, Rosetta warns, because Carl lost the last two mercenaries they hired. Get the best you can, says Carl."
+        }
+      ],
+      "relations": [
+        {
+          "to": "desperado-club",
+          "kind": "based-at",
+          "at": "6:2"
+        },
+        {
+          "to": "penis-parade",
+          "kind": "based-at",
+          "at": "6:34",
+          "note": "Rosemarie's unlisted location"
+        },
+        {
+          "to": "damascus-steel",
+          "kind": "member",
+          "at": "6:34"
+        },
+        {
+          "to": "bucket-boy",
+          "kind": "member",
+          "at": "6:34"
+        },
+        {
+          "to": "doctor-bones",
+          "kind": "member",
+          "at": "6:34"
+        },
+        {
+          "to": "pontiff",
+          "kind": "member",
+          "at": "8:19"
+        }
+      ]
+    },
+    {
+      "id": "semeru",
+      "kind": "faction",
+      "name": "The Semeru",
+      "aka": [
+        "Semeru",
+        "Semeru dwarves",
+        "the Semeru Dwarves"
+      ],
+      "role": "The dwarves of Larracos",
+      "revealedAt": "4:33",
+      "sort": 61,
+      "tagline": [
+        {
+          "at": "4:33",
+          "text": "The Semeru dwarves. Said to have built Larracos, the inverted city on the ninth floor. They no longer control it. They drink in its pubs and keep its castle at the bottom of the well."
+        },
+        {
+          "at": "6:35",
+          "text": "The Semeru. Keepers of a flooded city, who let nobody near its castle and keep it underwater. Those who try get fed to the sharks."
+        },
+        {
+          "at": "7:7",
+          "text": "The Semeru. Dwarves who dug toward their goddess until they struck the roots of the All Tree, and paid for it: millions once, fewer than ten thousand now. Stewards of Larracos, and armed again."
+        },
+        {
+          "at": "7:85",
+          "text": "The Semeru. Defenders of Larracos from the first day of the war, repairing what is left of it at the end, and due to move with the city into the Ascendency."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 33,
+          "floor": 5,
+          "at": "4:33",
+          "confidence": "verified",
+          "headline": "Caretakers of the upside-down castle",
+          "text": "From a crawler's note in the Cookbook, written in awe: Larracos is an inverted funnel of museums, galleries and colleges, too beautiful to be used this way. The Semeru dwarves supposedly built it, but they do not control it any more. They are still around, mostly in the pubs, and they are the non-combatant caretakers of the inverted castle at the bottom of the well. The author reads the city as a tower to the gods turned upside down: the Semeru dug toward the Celestials below them, and something at the base of the volcano woke."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 16,
+          "floor": 6,
+          "at": "5:16",
+          "confidence": "verified",
+          "headline": "Where the idea came from",
+          "text": "Clint has a theory about the nine-tier attack that blames the high elves. Crawler Carl has heard a different one, from the Cookbook: the Semeru dwarves of the ninth floor dug their city too deep, a Tower of Babel run in reverse. It was that story that gave Carl the idea to fill it with water in the first place."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 52,
+          "floor": 6,
+          "at": "5:52",
+          "confidence": "verified",
+          "headline": "Everything they had worked for",
+          "text": "The System, introducing Big Tina, runs down who paid for the nine-tier attack. The Over City was devastated. The residents of the Hunting Grounds were transmuted, all but the high elves. And the Semeru dwarves of Larracos lost everything they had been working for. Even the celestials, and their downstairs neighbours in Sheol, found their destinies altered that day. It is a list. The Semeru get one line of it."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 35,
+          "floor": 8,
+          "at": "6:35",
+          "confidence": "verified",
+          "headline": "Feeding the pit",
+          "text": "On Odette's show, Donut is appalled: Larracos has been flooded since the end of the fifth floor, and the sharks are still there. They get fed, says Odette. The Semeru are not letting anyone near that part of the city, and they are keeping the castle submerged. Mercenaries and players alike are going into that pit daily. The trouble at the Desperado Club ejected several officials and participants into it, all of them devoured or pulling their fail-safes. One of the dead was a warlord."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 64,
+          "floor": 8,
+          "at": "6:64",
+          "confidence": "verified",
+          "headline": "One goddess, one temple",
+          "text": "Another note from the Cookbook, this one by Crawler Allister. The Semeru dwarves of the ninth floor all worship a single goddess, who appears near the end of the battles as the last teams approach the gates of the castle of Larracos. She has one temple in the whole dungeon, and the author has never heard of a crawler worshipping her. The dwarves call her the Downward Spiral. Some say she is behind Scolopendra's nine-tier attack. Outside Larracos she has another name: the Vinegar Bitch."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "The Warden opens the drain",
+          "text": "In a muddy alley of Larracos lies a long, jet-black concierge shark, level 41, not long dead. The System gives the cause: suffocation, when the Semeru Warden finally decided to open the drain. Crawler Carl throws it in the air and punches it with Daughter's Kiss. The shark vaporises, and Carl and Donut both go sliding through the mud."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 7,
+          "floor": 9,
+          "at": "7:7",
+          "confidence": "verified",
+          "headline": "Down to the roots",
+          "text": "The System gives the history. The Semeru once lived in peace in this fertile volcanic level, farming, mining, learning, and loving their goddess, Ysalte. They dug to reach her; a city of scholars grew in the pit. What they found were roots of the All Tree, which connects everything, and there they stopped, and built their castle along the roots as a monument and an apology. The nine-tier attack still hit them hardest. Millions before; fewer than ten thousand after. The city itself was untouched, and the survivors became its stewards."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 7,
+          "floor": 9,
+          "at": "7:7",
+          "confidence": "verified",
+          "headline": "No longer only caretakers",
+          "text": "Everything Crawler Carl had heard made the Semeru a drunk, defeated people who kept the castle clean and rarely fought their invaders. Not now. On a balcony a dwarf is teaching a boy to stab with a sword. Their war leader arrives in parade armour with a sickle, calls the crawlers Honored Warlords, and carries a Despondent debuff for his dead goddess. Donut asks in chat whether they know who flooded the city, and who killed the goddess. Carl tells her not to bring it up."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 8,
+          "floor": 9,
+          "at": "7:8",
+          "confidence": "verified",
+          "headline": "Singing on the down ramps",
+          "text": "The lower the tour goes, the busier Larracos gets. A squad of dwarves jogs past singing a military running cadence, hammers and sickles on their shoulders. The down ramps are mined, the flooded castle kept underwater by choice, and the NPC raids have reached the inner circle of every enemy camp but the nagas'. Most of them know about their past seasons; for most of them, one death is forever."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 60,
+          "floor": 9,
+          "at": "7:60",
+          "confidence": "verified",
+          "headline": "On the lip of the city",
+          "text": "Juice Box, stingy with support until now, lends ground troops to hold Shanty Town: mostly Semeru dwarves and ordinary citizens of Larracos, mixed in with Li Na's 107th White Dragon Urban Defense battalion in a ring around the lip of the city. During a bombing run, Britney's report reaches Louis in his cockpit: the Semeru are on standby, waiting for his bomb run."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 70,
+          "floor": 9,
+          "at": "7:70",
+          "confidence": "verified",
+          "headline": "Holding the college gate",
+          "text": "At the college gate, a line of Semeru dwarves in ornate parade armour holds back a surge of shadowy zarogoths. An orange ray from one of the mobs drops a dwarf onto his back, and the mob laughs. Another Semeru slashes its bulbous stomach open; it deflates in a gush of black liquid, dead, and the fallen dwarf writhes in the oil. A magic missile from Donut's tower lands among the ghouls, and the dwarves press the attack."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 82,
+          "floor": 9,
+          "at": "7:82",
+          "confidence": "verified",
+          "headline": "Putting the statue back",
+          "text": "The castle the Semeru built as a capstone against further intrusion toward the gods is wrecked: the living wood rotted away, the gem-inlaid stone barely holding a shape. A pair of Semeru stand on the shoulder of the idle dwarven digger, working a control panel. Afterwards, while soldiers and former crawlers repair towers and clear streets, a group of Semeru gather the pieces of the statue from the front of the castle and try to fit them back together."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 85,
+          "floor": 9,
+          "at": "7:85",
+          "confidence": "verified",
+          "headline": "With the city, to the Ascendency",
+          "text": "Closing arrangements for the ninth floor. The hired mercenaries are expected to vanish. The changelings, the thousands of NPCs who live in Larracos, and the Semeru dwarves are to move with the city to the Ascendency, where it is meant to land on a green hill above miles of cotton fields. The NPCs are untouchable there until the Ascendency begins. It is not safe. It is life."
+        }
+      ],
+      "relations": [
+        {
+          "to": "larracos",
+          "kind": "based-at",
+          "at": "4:33",
+          "note": "Said to have built it"
+        },
+        {
+          "to": "dungeon-anarchists-cookbook",
+          "kind": "concerns",
+          "at": "4:33"
+        },
+        {
+          "to": "scolopendra",
+          "kind": "concerns",
+          "at": "4:33",
+          "note": "The digging that woke her, in the legend"
+        },
+        {
+          "to": "ysalte",
+          "kind": "worships",
+          "at": "7:7"
+        },
+        {
+          "to": "juice-box",
+          "kind": "ally",
+          "at": "7:7"
+        },
+        {
+          "to": "arief",
+          "kind": "member",
+          "at": "7:7"
+        },
+        {
+          "to": "the-ascendency",
+          "kind": "concerns",
+          "at": "7:85"
+        }
+      ]
     }
   ]
 }
