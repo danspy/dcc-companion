@@ -233,25 +233,65 @@
       "name": "The tenth faction",
       "aka": [],
       "role": "Unresolved",
-      "revealedAt": "7:end",
+      "revealedAt": "6:22",
       "sort": 6,
-      "tagline": "The dungeon's own people, put into the war as a team of their own by a crawler's motion and fifty-two percent of the audience.",
+      "tagline": [
+        {
+          "at": "6:22",
+          "text": "A motion on the war-planning table: a tenth team populated with NPCs, afforded the same protections as the rest, with full voting rights. The sponsors say it is not possible."
+        },
+        {
+          "at": "6:72",
+          "text": "The dungeon's own people, put into the war as a team of their own by a crawler's motion and fifty-two percent of the audience."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
-          "book": 7,
-          "floor": 9,
-          "at": "7:end",
+          "book": 6,
+          "chapter": 22,
+          "floor": 8,
+          "at": "6:22",
           "confidence": "verified",
-          "headline": "Unprecedented",
-          "text": "An action item from the Princess Posse puts a tenth team into Faction Wars, populated with NPCs and afforded the same protections as the rest, and the audience passes it with 52%. The NPCs call themselves Team Retribution, and Juice Box is their warlord."
+          "headline": "A tenth team, proposed",
+          "text": "Juice Box tells the planning meeting the NPCs want a team of their own, afforded the same safeties as everybody else. Tagg says it is not even possible. Crawler Carl proposes it anyway as an action item: a tenth team populated with NPCs, afforded the same protections as the rest, and, on Juice Box's word, with full voting rights. The mexx robot adds it to the queue, and voting opens. Prince Stalwart says nobody is going to vote for it."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "Passed by fifty-two percent",
+          "text": "The pending action item, originally proposed by the Princess Posse, passes on a 52% audience vote. The tenth team is designated Home Team, with the city of Larracos as its base. The dungeon's own people are in the war as a side of their own."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "Team Retribution, defending",
+          "text": "Ten teams remain, and the defenders have a name: Team Retribution, the only team allowed to stay inside Larracos once the ceasefire runs out. Eight of the others form a truce called the Bloc and declare war on it, and on the Princess Posse. Team Retribution sends the Posse a truce offer of its own. Princess Donut asks whether that is the NPC team."
         }
       ],
       "relations": [
         {
           "to": "npcs-are-people",
           "kind": "concerns",
-          "at": "7:end"
+          "at": "6:22"
+        },
+        {
+          "to": "team-retribution",
+          "kind": "becomes",
+          "at": "7:1"
+        },
+        {
+          "to": "juice-box",
+          "kind": "proposed-with",
+          "at": "6:22"
         }
       ]
     },
@@ -421,7 +461,7 @@
       "name": "The system is glitching",
       "aka": [],
       "role": "Unresolved",
-      "revealedAt": "8:1",
+      "revealedAt": "8:6",
       "sort": 8,
       "tagline": "Something is not right with the voice that runs the tenth floor.",
       "beats": [

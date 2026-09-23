@@ -1762,8 +1762,8 @@ currently has a dev server running. It is not this deployment, and only one proj
   Prepotente singing opera (in his voice note, too). Two findings about the book itself: Ferdinand is
   Gravy Boat, Marjory's tomcat, not Bea's; and the edition calls Ifechi "a man… He was a healer" at 3:3
   and 4:4 and Florin's girlfriend with a twin sister from 5:63, so text about Ifechi avoids a pronoun
-  where it can. The reveal tags the pass questioned and left for later: the tenth faction (7:end,
-  though its events are 6:22 and 6:72) and system glitches (8:1; the first remarked on is 8:6).
+  where it can. The two reveal tags it questioned are fixed: the tenth faction opens at 6:22, where
+  Carl proposes it, and system glitches at 8:6, where Donut first remarks on the voice.
 - **Every book is filled chapter by chapter** — the gap between "what is written is right" and "what
   happened is written" is closed for now. Content grew by adding entities, so each got a few beats at its
   introduction and the main cast was never followed: Carl had no beat in book 8, Donut none in books 3–5

@@ -8317,12 +8317,17 @@
       "role": "Unresolved",
       "taglines": [
         {
-          "at": "7:end",
-          "sortKey": 7999,
+          "at": "6:22",
+          "sortKey": 6022,
+          "text": "A motion on the war-planning table: a tenth team populated with NPCs, afforded the same protections as the rest, with full voting rights. The sponsors say it is not possible."
+        },
+        {
+          "at": "6:72",
+          "sortKey": 6072,
           "text": "The dungeon's own people, put into the war as a team of their own by a crawler's motion and fifty-two percent of the audience."
         }
       ],
-      "revealedAt": "7:end",
+      "revealedAt": "6:22",
       "sort": 6,
       "voice": "narrator",
       "descriptions": []
@@ -8358,12 +8363,12 @@
       "role": "Unresolved",
       "taglines": [
         {
-          "at": "8:1",
-          "sortKey": 8001,
+          "at": "8:6",
+          "sortKey": 8006,
           "text": "Something is not right with the voice that runs the tenth floor."
         }
       ],
-      "revealedAt": "8:1",
+      "revealedAt": "8:6",
       "sort": 8,
       "voice": "narrator",
       "descriptions": []
@@ -30832,6 +30837,19 @@
       "voice": "self"
     },
     {
+      "entityId": "tenth-faction",
+      "kind": "origin",
+      "book": 6,
+      "chapter": 22,
+      "floor": 8,
+      "at": "6:22",
+      "sortKey": 6022,
+      "headline": "A tenth team, proposed",
+      "text": "Juice Box tells the planning meeting the NPCs want a team of their own, afforded the same safeties as everybody else. Tagg says it is not even possible. Crawler Carl proposes it anyway as an action item: a tenth team populated with NPCs, afforded the same protections as the rest, and, on Juice Box's word, with full voting rights. The mexx robot adds it to the queue, and voting opens. Prince Stalwart says nobody is going to vote for it.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "uzi-jesus",
       "kind": "origin",
       "book": 6,
@@ -34849,6 +34867,19 @@
       "voice": "narrator"
     },
     {
+      "entityId": "tenth-faction",
+      "kind": "arc",
+      "book": 6,
+      "chapter": 72,
+      "floor": 8,
+      "at": "6:72",
+      "sortKey": 6072,
+      "headline": "Passed by fifty-two percent",
+      "text": "The pending action item, originally proposed by the Princess Posse, passes on a 52% audience vote. The tenth team is designated Home Team, with the city of Larracos as its base. The dungeon's own people are in the war as a side of their own.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
       "entityId": "tghee-cards",
       "kind": "arc",
       "book": 6,
@@ -35287,6 +35318,19 @@
       "sortKey": 7001,
       "headline": "The defending team names itself",
       "text": "Carl and Donut come onto the ninth floor at Larracos, at the start of a sixty-hour ceasefire, and the defending side already has a name it chose for itself. Cascadia runs through the rules. The crawlers ally with it against the Bloc, which is every other faction on the board.",
+      "confidence": "verified",
+      "voice": "narrator"
+    },
+    {
+      "entityId": "tenth-faction",
+      "kind": "arc",
+      "book": 7,
+      "chapter": 1,
+      "floor": 9,
+      "at": "7:1",
+      "sortKey": 7001,
+      "headline": "Team Retribution, defending",
+      "text": "Ten teams remain, and the defenders have a name: Team Retribution, the only team allowed to stay inside Larracos once the ceasefire runs out. Eight of the others form a truce called the Bloc and declare war on it, and on the Princess Posse. Team Retribution sends the Posse a truce offer of its own. Princess Donut asks whether that is the NPC team.",
       "confidence": "verified",
       "voice": "narrator"
     },
@@ -42452,19 +42496,6 @@
       "text": "Formalities. I'm volunteered this season: three exit negotiations, and my client is the last of them. The other two took deals. Neither is his inner circle. His deals are all shit, a side effect of so many survivors: fifty seasons undead; the Desperado Club bomber's guild, with a contingent exit clause. The last isn't bad. Chaco's last season, a replacement wanted, offered jointly to Carl and Donut and still open at the end of the next floor. Telling him about that floor adds a season to any deal. He consents. Vehicles, point A to point B, and last place loses its containment.",
       "confidence": "verified",
       "voice": "self"
-    },
-    {
-      "entityId": "tenth-faction",
-      "kind": "origin",
-      "book": 7,
-      "chapter": null,
-      "floor": 9,
-      "at": "7:end",
-      "sortKey": 7999,
-      "headline": "Unprecedented",
-      "text": "An action item from the Princess Posse puts a tenth team into Faction Wars, populated with NPCs and afforded the same protections as the rest, and the audience passes it with 52%. The NPCs call themselves Team Retribution, and Juice Box is their warlord.",
-      "confidence": "verified",
-      "voice": "narrator"
     },
     {
       "entityId": "york",
@@ -53968,8 +53999,24 @@
       "toId": "npcs-are-people",
       "kind": "concerns",
       "note": null,
-      "revealedAt": "7:end",
-      "sortKey": 7999
+      "revealedAt": "6:22",
+      "sortKey": 6022
+    },
+    {
+      "fromId": "tenth-faction",
+      "toId": "team-retribution",
+      "kind": "becomes",
+      "note": null,
+      "revealedAt": "7:1",
+      "sortKey": 7001
+    },
+    {
+      "fromId": "tenth-faction",
+      "toId": "juice-box",
+      "kind": "proposed-with",
+      "note": null,
+      "revealedAt": "6:22",
+      "sortKey": 6022
     },
     {
       "fromId": "the-ai-is-a-primal",
