@@ -11,7 +11,7 @@
       "role": "Artifact · legendary/celestial",
       "revealedAt": "4:9",
       "sort": 1,
-      "tagline": "A teleport that works by tearing a hole in the prison the old gods were thrown into. Something always comes back through.",
+      "tagline": "An artifact a bugbear treasure hunter spent twenty years chasing, said to be buried in a necropolis under the island. Mordecai has never heard of it, and reminds everyone what the word feral usually means.",
       "description": [
         {
           "at": "4:15",
@@ -334,7 +334,7 @@
         },
         {
           "at": "3:8",
-          "text": "Passed hand to hand by the crawlers of earlier seasons. Carl is its twenty-fifth holder."
+          "text": "Passed from crawl to crawl since the fifteenth season. Carl holds the twenty-fourth edition, and whatever he writes goes into the twenty-fifth."
         }
       ],
       "description": "Book. The Dungeon Anarchist's Cookbook by Anonymous. This is a unique item. Chicken and Goblin recipes galore! But it's more than that, too. Each recipe is accompanied by a hilarious tale by the anonymous author, recounting some of the zany and madcap misadventures they experienced gathering these mouth-watering recipes. Fun for the whole family! This book is a real hoot.",
@@ -555,7 +555,7 @@
       "role": "Consumable",
       "revealedAt": "1:5",
       "sort": 5,
-      "tagline": "Makes an animal sapient. One biscuit, one cat, and the shape of the entire crawl changes.",
+      "tagline": "Over a hundred possible effects, half of them good and the rest neutral or worse. One cat ate it straight out of Carl's hand and turned into a quivering blob.",
       "description": "Enhanced Pet Biscuit. So, it looks like a regular pet biscuit. It's not. Feed to your pet at your own risk. What's the worst that can happen?",
       "beats": [
         {
@@ -630,11 +630,11 @@
       "tagline": [
         {
           "at": "3:19",
-          "text": "A curse from a man who wanted Carl dead, worn anyway for the five percent."
+          "text": "A revenge gift from a man who wanted Carl ruined, worn anyway for the five percent."
         },
         {
           "at": "5:6",
-          "text": "Mark a target, kill it, take its stats. Mordecai says it is addictive, and he is not being figurative."
+          "text": "Mark a target, kill it, keep a point of its best stat. Mordecai says it is addictive, and Donut does not want Carl picking up a new habit."
         }
       ],
       "description": [
@@ -831,7 +831,7 @@
         },
         {
           "at": "5:67",
-          "text": "What is left of someone when the dungeon is finished with them, and worth stealing."
+          "text": "What a fallen god or demigod leaves behind: knowledge, usually god-tier spells, unlocked by wearing it and killing things. This one is the elf queen's prize, at a hundred hands."
         }
       ],
       "description": [
@@ -1041,7 +1041,7 @@
         },
         {
           "at": "7:78",
-          "text": "Worth a war-mage extraction to get hold of, and it swaps every crawler's inventory with the nearest crawler's."
+          "text": "The name is also someone's. The war mages came for the Scavenger's daughter, hidden in the castle, found her, and left with her."
         }
       ],
       "description": [
@@ -1220,7 +1220,7 @@
         },
         {
           "at": "4:24",
-          "text": "Where the pantheon put the old gods and demons. Every shortcut the Gate takes goes through it."
+          "text": "Where the pantheon put the old gods, and minor deities who misbehave. Every shortcut the Gate takes goes through it."
         }
       ],
       "beats": [
@@ -1308,7 +1308,7 @@
       "tagline": [
         {
           "at": "2:17",
-          "text": "A two-foot wicker scoop that clamps to a forearm. The fans picked it, and it throws whatever he summons into it."
+          "text": "A scoop that looks like wicker and is not, strapped to a forearm and reaching two and a half feet past the hand. The fans picked it, and it throws whatever he summons into it."
         },
         {
           "at": "4:34",
@@ -1402,7 +1402,7 @@
         },
         {
           "at": "1:43",
-          "text": "One level in one named skill, and the System has opinions about how you have been spending your money."
+          "text": "Not always one level. The Maestro's legendary one takes Find Crawler straight to fifteen, and higher for the right class."
         }
       ],
       "description": [
@@ -1565,7 +1565,7 @@
         },
         {
           "at": "3:7",
-          "text": "The audience chooses what is inside, and the audience is made to wait thirty hours before you may open it."
+          "text": "The audience chooses what is inside, and on a platinum one every vote costs a credit, which is meant to keep the trolls out."
         }
       ],
       "beats": [
@@ -1670,7 +1670,7 @@
       "role": "Personal space upgrade",
       "revealedAt": "3:30",
       "sort": 46,
-      "tagline": "Twenty-five thousand gold buys a machine to tidy the personal space. Nobody who has looked at one properly is buying it for the tidying.",
+      "tagline": "Twenty-five thousand gold, one of the cheapest upgrades going: a flying Roomba for the personal space, bought by people still dripping blood on the counter.",
       "beats": [
         {
           "kind": "use",
@@ -1743,7 +1743,7 @@
       "role": "Airship",
       "revealedAt": "7:6",
       "sort": 47,
-      "tagline": "A stealth bomber carrying a name from a party-supply catalogue, handed over as the prize for having been marked for death.",
+      "tagline": "A stealth light bomber out of a celestial box, earned by outliving a goddess who had marked Louis for death. The name is the one Firas once wanted for the Twister.",
       "description": "Casket in the Sky. Party Planner. Tilt Rotor Stealth Light Bomber. Vehicle. This vehicle is classed as tier three Armor.",
       "beats": [
         {

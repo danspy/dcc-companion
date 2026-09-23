@@ -44,7 +44,7 @@
       "tagline": [
         {
           "at": "1:1",
-          "text": "Eighteen levels. Complete the last one and the planet reverts to whoever did it."
+          "text": "Eighteen levels. Complete the last one and regency of the planet reverts to the successor."
         },
         {
           "at": "1:2",
@@ -234,7 +234,7 @@
       "role": "Broadcast",
       "revealedAt": "1:14",
       "sort": 4,
-      "tagline": "Between-floor highlight shows. The only reliable way a crawler learns what anyone else is doing.",
+      "tagline": "Highlights on the safe-room screens, narrated by an orange, four-eyed lizard. The premiere is mostly last season, and has no time at all for Donut's boss fight.",
       "beats": [
         {
           "kind": "origin",
@@ -455,7 +455,7 @@
       "role": "Class · Donut",
       "revealedAt": "2:1",
       "sort": 7,
-      "tagline": "A bard/rogue class that lets her choose another class at every single level.",
+      "tagline": "A bard/rogue class that lets her choose another class on every floor.",
       "beats": [
         {
           "kind": "origin",
@@ -478,7 +478,7 @@
       "role": "Institution",
       "revealedAt": "1:19",
       "sort": 8,
-      "tagline": "The crawlers-only bar that persists between floors. Bouncer, house rules, a stage, and a hiring hall.",
+      "tagline": "A pass branded onto Donut's shoulder lets her in. What the club actually is, the description does not say.",
       "beats": [
         {
           "kind": "origin",
@@ -635,7 +635,7 @@
       "role": "Revelation",
       "revealedAt": "4:9",
       "sort": 10,
-      "tagline": "The dungeon's non-player characters have histories, families, and scripts written for them by producers.",
+      "tagline": "The dungeon's non-player characters were here, with histories of their own, long before any crawler arrived.",
       "beats": [
         {
           "kind": "origin",
@@ -757,7 +757,7 @@
       "role": "Rules · Floor 9",
       "revealedAt": "7:1",
       "sort": 11,
-      "tagline": "On the ninth floor there are no respawns and no loopholes.",
+      "tagline": "The rich who fight on the ninth floor can really die now, the same as everybody else.",
       "beats": [
         {
           "kind": "origin",
@@ -787,7 +787,7 @@
         },
         {
           "at": "6:48",
-          "text": "Orren says the word out loud on the recap: Primal Engines, Macro AIs, and a machine that has stopped taking orders."
+          "text": "Orren says the word out loud in place of the recap: Primal Engines, Macro AIs, and a machine that has stopped taking orders."
         },
         {
           "at": "8:92",
@@ -926,7 +926,7 @@
         },
         {
           "at": "7:61",
-          "text": "Sapient magic in a resleeved skeleton, hundreds of spells deep, and cruel. Showrunners rent them by the war and hardly ever recycle them."
+          "text": "Sapient magic in a resleeved skeleton, hundreds of spells deep, and cruel. Showrunners like them for Faction Wars and hardly ever recycle them."
         },
         {
           "at": "7:78",
@@ -1111,7 +1111,7 @@
         },
         {
           "at": "4:6",
-          "text": "A whole population of them down here, wearing whichever face the job requires, and worth torturing for what they can be made to become."
+          "text": "A whole population of them down here, wearing whichever face the job requires, and a sect among them that collects forms the way a widow collects souvenir spoons."
         }
       ],
       "beats": [
@@ -1195,11 +1195,11 @@
       "tagline": [
         {
           "at": "1:43",
-          "text": "Nine families fight it on the ninth floor. A boastful heir says his has won six of the last ten, and the Naga always go out first."
+          "text": "Nine families fight it on the ninth floor. A boastful heir says his has won six of the last ten, and the Blood Sultanate almost always goes out first."
         },
         {
           "at": "5:75",
-          "text": "Nine armies, bought and paid for by people who will never stand in one of them, fight for the castle at the bottom of the ninth floor's funnel city. Crawlers are meant to keep their heads down and let it pass over."
+          "text": "Nine teams fight for the castle at the bottom of the ninth floor's funnel city, and this time one of them belongs to the crawlers. Of the nine, theirs is the only one that can really die."
         },
         {
           "at": "7:1",
@@ -1420,7 +1420,7 @@
           "text": "Something a warlord is apparently assigned. Mordecai asks who theirs is, gets a blank look, and puts off explaining."
         },
         {
-          "at": "6:17",
+          "at": "6:21",
           "text": "A neutral referee attached to each team on the ninth floor. Invulnerable, usually famous, and mostly there to talk to camera."
         }
       ],
@@ -1504,7 +1504,7 @@
         },
         {
           "at": "4:9",
-          "text": "A word the System puts in front of a name when whatever it is has been somewhere it should not have been, and came back."
+          "text": "It turns up again in the name of a buried artifact, and Mordecai repeats himself: stay away from anything marked feral."
         },
         {
           "at": "4:27",
@@ -1944,7 +1944,7 @@
       "tagline": [
         {
           "at": "2:9",
-          "text": "A Syndicate drama serial shot inside the dungeon. A circus, a murdered mother, an exiled tsarina, and a guest slot with Carl's name on it."
+          "text": "A Syndicate drama serial shot inside the dungeon: a circus, a half-naiad who would be tsarina were she full-blooded, and a guest-star slot with Carl's name on it."
         },
         {
           "at": "5:71",
@@ -2073,7 +2073,7 @@
       "role": "Dungeon fixture",
       "revealedAt": "1:2",
       "sort": 51,
-      "tagline": "Warmth and light coming up out of a hole in the floor, which is how the dungeon says the level above has finished with you.",
+      "tagline": "Warmth and light coming up out of a hole in the ground: an iron staircase wide enough for twenty, and the only warm place left in a frozen city.",
       "beats": [
         {
           "kind": "origin",
@@ -2166,7 +2166,7 @@
       "role": "Spell",
       "revealedAt": "1:7",
       "sort": 52,
-      "tagline": "The plainest attack spell in the catalogue, taught to a show cat by a show cat, minutes after anyone thought to open her menus.",
+      "tagline": "Out of a tome in a silver box, and a show cat had taught it to herself before anyone could tell her how.",
       "beats": [
         {
           "kind": "origin",
@@ -2199,7 +2199,7 @@
       "role": "Dungeon fixture",
       "revealedAt": "1:5",
       "sort": 53,
-      "tagline": "Green on the minimap, always, even where the map is dark. Restrooms, somewhere to sleep, three screens, and a cook who would rather you moved along.",
+      "tagline": "Always on the map, even under the fog of war. Restrooms, sleeping cubicles, and in some of them food and fountains of healing potion. No time limit, except the floor's own.",
       "beats": [
         {
           "kind": "origin",
@@ -2377,7 +2377,7 @@
       "role": "Spell",
       "revealedAt": "2:5",
       "sort": 56,
-      "tagline": "Two working copies of a pet, moving on their own, and the dungeon’s own labels decline to say which of the three is real.",
+      "tagline": "Two working copies of a pet, each with a mind of its own, for about a minute. Then they fall apart into gears.",
       "beats": [
         {
           "kind": "origin",
@@ -2450,7 +2450,7 @@
         },
         {
           "at": "3:18",
-          "text": "Employee management for the tangle, waiting at the station where the staff get off, and nobody can agree whether they are a boss or a fixture."
+          "text": "Employee management for the tangle, waiting at the station where the staff get off, and, says the woman they work under, not bosses at all but part of human resources."
         }
       ],
       "beats": [
@@ -2482,7 +2482,7 @@
         },
         {
           "at": "4:1",
-          "text": "One of six species the Syndicate scatters over candidate worlds, and a people who mostly decline the offer to stop being one."
+          "text": "Eagles, to look at: feet and wings and no arms. Mordecai is one again for this floor, a rock edge skyfowl in a clipped cleric body, and says it beats the toad."
         }
       ],
       "beats": [
@@ -2588,7 +2588,7 @@
         },
         {
           "at": "6:65",
-          "text": "Slugs born out of the boils of a disease, painted like a touring band, and enormously pleased to have been asked along."
+          "text": "Slugs born out of the boils of a disease, in clown paint, carrying hatchets, and with no patience at all for the plan."
         }
       ],
       "beats": [
@@ -2660,7 +2660,7 @@
         },
         {
           "at": "8:13",
-          "text": "Half human, and, where the horse ought to be, also half human. The System calls it the strangest of the ’taurs and offers no defence of the design."
+          "text": "Half human, and, where the horse ought to be, also half human. The System calls it one of the weirdest of the ’taurs and offers no defence of the design."
         }
       ],
       "beats": [

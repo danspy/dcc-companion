@@ -12,7 +12,7 @@
       "role": "Protagonist",
       "revealedAt": "1:1",
       "sort": 1,
-      "tagline": "Twenty-seven. Coast Guard, marine technician. I went outside for a cigarette, and that is the only reason I'm alive. I'm not sure it counts as a reason.",
+      "tagline": "Twenty-seven. Coast Guard, marine technician. I went outside after the cat in a pair of pink Crocs, and that is the only reason I'm alive. I'm not sure it counts as a reason.",
       "voiceNote": "Deadpan, first person, understated. Notices the practical detail first (footwear, inventory, what will explode) and the feeling second, if at all. Gallows humour, never grandiose, never asks for sympathy. Says Donut, Mordecai, the AI. Swears in the crawl; here he keeps it to hell and damn. Talks like a man narrating a repair job while the building is on fire.",
       "beats": [
         {
@@ -3979,7 +3979,7 @@
       "role": "Co-protagonist",
       "revealedAt": "1:1",
       "sort": 2,
-      "tagline": "I am a pedigreed tortoiseshell Persian with a bedroom full of ribbons and a very good voice. I do not see what more you could possibly need to know.",
+      "tagline": "I am a pedigreed tortoiseshell Persian with a whole room of ribbons and trophies. I do not see what more you could possibly need to know.",
       "voiceNote": "Imperious, delighted by herself, wounded by any slight and quick to say so. CARL in capitals when he is being difficult; Mordecai is staff. Uses her titles in full and treats them as facts. Things are common, vulgar, rude or unfair. Never swears, because swearing is common. Mongo is her son and she will not be told otherwise.",
       "beats": [
         {
@@ -7325,7 +7325,7 @@
       "tagline": [
         {
           "at": "1:2",
-          "text": "Your guide for the first three floors. I have done this before. Listen, and you might get to see the fourth."
+          "text": "Tutorial guild. I can't open up with mobs directly outside, kid. Rules are rules. And nobody tells old Mordecai anything."
         },
         {
           "at": "1:29",
@@ -8515,7 +8515,7 @@
         },
         {
           "at": "3:21",
-          "text": "Art professor, Reykjavík. I can mould my own mass like clay, and I am getting better at it."
+          "text": "Art history professor, Reykjavík. I can mould my own mass like clay, and I am getting better at it."
         }
       ],
       "voiceNote": "Quiet, exact, self-critical. An academic's vocabulary used plainly; dry about her own face and her own standing. Puts other people first and says so as fact, not virtue. Grief is stated once and not decorated. Carl and Donut by name; Eva by name, without explanation.",
@@ -9625,7 +9625,7 @@
       "tagline": [
         {
           "at": "1:22",
-          "text": "Meadow Lark, on the badge. Scrubs, a longsword and a cloak. I'm nowhere near finished, and I won't be rushed."
+          "text": "Meadow Lark staff. Scrubs, a longsword and a cloak. I'm nowhere near finished, and I won't be rushed."
         },
         {
           "at": "8:87",
@@ -10128,7 +10128,7 @@
         },
         {
           "at": "7:78",
-          "text": "Agatha. Formerly of the Meadow Lark party. A warlord has just called her an enemy to all of you. He did not elaborate. Neither will I."
+          "text": "Agatha. Once travelled with the Meadow Lark party. A warlord has just called her an enemy to all of you. He did not elaborate. Neither will I."
         }
       ],
       "voice": "system",
@@ -10284,11 +10284,11 @@
       "tagline": [
         {
           "at": "1:31",
-          "text": "A woman my age, hauled through a safe-room door by the armpits by a barefoot young man with a cat. Do not tell the others. They will want details, and I intend to embellish."
+          "text": "A woman my age, pushed in her wheelchair into a storm shelter by a barefoot young man with a cat. Do not tell the others. They will want details, and I intend to embellish."
         },
         {
           "at": "6:63",
-          "text": "I have my own squad now, and we have just walked into a church full of friends. Not bad for a woman who was once hauled into a safe room by the armpits."
+          "text": "I have my own squad now, and we have just come through a door into Cuba to back up a friend. Not bad for a woman who was once pushed into a storm shelter in a wheelchair."
         }
       ],
       "voiceNote": "Old, loud, and pleased about both. Short declaratives, jokes about her age before anyone else can, flirts with Carl to watch him squirm. Says Carl, or young man when she is enjoying herself; Imani by name. Never asks to be looked after and never pretends she did not need it.",
@@ -10778,11 +10778,11 @@
       "tagline": [
         {
           "at": "1:35",
-          "text": "Hi. Zev. I am production's point of contact with the Royal Court, which means anything about your appearances goes through me, and anything I am allowed to tell you, I will. The rest I am not allowed to tell you, and it is not because I don't want to."
+          "text": "Okay, so. I am on my way to see Carl and Princess Donut, and when I arrive, the cameras switch off. They always do around kua-tin. Open your boxes before I get there."
         },
         {
           "at": "1:36",
-          "text": "I am production's point of contact with the Royal Court. Officially, that is the whole job. Unofficially, Princess Donut and Mordecai have both seen Gossip Girl, and I have seen every episode, and I am not going to pretend that isn't relevant."
+          "text": "I am Borant's liaison to the programs that want to borrow the Royal Court. Officially, that is the whole job. Unofficially, Princess Donut and Mordecai have both seen Gossip Girl, and so have I, and I am not going to pretend that isn't relevant."
         }
       ],
       "voiceNote": "Brisk, kind, and permanently worried about her job. Speaks in the cadence of a scheduling message: Okay, so; I need you to; I am not supposed to say this. Carl and Princess Donut, always in full. Never swears, never speculates on air, never says more than she is allowed and always says exactly as much.",
@@ -11333,7 +11333,7 @@
         },
         {
           "at": "5:1",
-          "text": "A murdered mother, a crown taken by the Confederacy, and exile from both halves of my blood. Grimaldi's circus took me in. Everything I have goes to the family that did."
+          "text": "A princess for a mother, a crown taken by the Confederacy, and exile from both halves of my blood. Grimaldi's circus took me in. Everything I have goes to the family that did."
         },
         {
           "at": "5:71",
@@ -11579,7 +11579,7 @@
           "text": "Grimaldi. The name is on a monster's description: Grimaldi's Traveling Circus, once one of the Over City's favourite attractions. What is left of it wears skulls."
         },
         {
-          "at": "2:6",
+          "at": "2:10",
           "text": "Redstone Grimaldi, ringmaster of Grimaldi's Traveling Circus. Also the man who took Signet in, which is the only line of his file anyone ever asks about."
         }
       ],
@@ -12493,7 +12493,7 @@
         },
         {
           "at": "7:7",
-          "text": "I went into the water on the fifth floor as somebody's plus-one. I came out of it with a title and a message, and the message is the dangerous part."
+          "text": "I went through a gate off the fifth floor before it fell. Now I'm Warlord Juice Box. I have a co-warlord I didn't pick. I want Carl on his own first."
         }
       ],
       "voiceNote": "Cheerful, blunt, no shame and no filter about her trade or her body. Loves Louis and says so; loves things that go bang. Short declaratives, one idea each. Calls people by name or by what they are. Never apologises and never explains herself twice.",
@@ -12698,7 +12698,7 @@
       "tagline": [
         {
           "at": "4:3",
-          "text": "Louis. Me and Firas were out in the desert with a team of car salesmen who have bows now. Then Carl's crew showed up. It's been a week."
+          "text": "Louis. Me and Firas were having a good time in a desert bar. Then Carl's crew showed up, and now, apparently, we'll be there, Carl."
         },
         {
           "at": "8:87",
@@ -13164,7 +13164,7 @@
         },
         {
           "at": "4:27",
-          "text": "Gwen and I flooded a necropolis, and I walked out of a boss fight through a hole in reality. Both on purpose. I would do the first one again."
+          "text": "Gwen and I flooded a necropolis, and I came up off the ocean floor through a hole in reality. Both on purpose. I would do the first one again."
         }
       ],
       "voiceNote": "Few words, all of them load-bearing. What happened, then what the options were, in that order, no decoration on either. Dry rather than grim. Carl, Katia, Gwen by first name. Never speculates, never boasts, never says how he feels about any of it.",
@@ -13297,11 +13297,11 @@
         },
         {
           "at": "1:34",
-          "text": "Ferdinand. Bea's other cat. Loved, apparently: a tortoiseshell Persian said so with a Buzzed debuff on, and ranked him ahead of the man who carries her. I keep a file on everything. This one is thin."
+          "text": "Ferdinand. Loved, apparently: a tortoiseshell Persian said so with a Buzzed debuff on, and ranked him ahead of the man who carries her. I keep a file on everything. This one is thin."
         },
         {
           "at": "5:51",
-          "text": "Ferdinand. Bea's other cat, now in employment. Familiar to Queen Imogen of the High Elves. He opened on a dinosaur, the Persian got in the way, and the family reunion went about how you'd expect, crawler."
+          "text": "Ferdinand. The downstairs neighbour's tomcat, now in employment. Familiar to Queen Imogen of the High Elves. He opened on a dinosaur, the Persian got in the way, and the reunion went about how you'd expect, crawler."
         }
       ],
       "voice": "system",
@@ -13475,7 +13475,7 @@
       "tagline": [
         {
           "at": "4:28",
-          "text": "I am Emberus. Someone has let my hound loose. I burn every bubble on this floor until he is returned to me."
+          "text": "I am Emberus. Someone has let my hound loose. I burn every broken bubble on this floor until he is returned to me."
         },
         {
           "at": "4:30",
@@ -13483,7 +13483,7 @@
         },
         {
           "at": "4:31",
-          "text": "A man prayed to me from a falling aeroplane, because there was nothing else left to try. I am a god. I am not above being flattered."
+          "text": "A man took me as his god from a falling aeroplane, then threw a grenade that dragged me to him. I am a god. I came whether I liked it or not."
         }
       ],
       "voiceNote": "A god. Grand, unhurried, amused; mortals are small, brief and occasionally entertaining. Complete, rounded sentences, and no embarrassment about referring to himself. Orthrus is 'my hound'. Carl is 'the man' until he does something worth a name. Never rushed, never afraid, never explains himself to anything that will not outlive him.",
@@ -13622,11 +13622,11 @@
         },
         {
           "at": "3:32",
-          "text": "We are working the Iron Tangle from the far side of the knot, Prepotente and I. He is a goat, and he would like you to know he is the clever one."
+          "text": "Prepotente and I travel together. He says things he does not mean. He was always a little ornery, even before the change."
         },
         {
           "at": "5:6",
-          "text": "I came down into the Hunting Grounds already carrying it, and descending made it permanent. I am a vampire, and I am still deciding what that changes."
+          "text": "I am a vampire now, still a healer, and I drink only from what my boy has just killed. And I am still deciding what that changes."
         },
         {
           "at": "5:47",
@@ -13756,22 +13756,22 @@
       "tagline": [
         {
           "at": "2:end",
-          "text": "Prepotente. Caprid. Forsaken Aerialist. Third on their leaderboard, and a human six places below me has the gall to ask who I am."
+          "text": "Prepotente. Caprid. Forsaken Aerialist. Third on their leaderboard, and the man in sixth place has the gall to ask who I am."
         },
         {
           "at": "3:3",
-          "text": "Yes, I am a goat. A Boer goat. I sing opera, I swear, and I am cleverer than you. Move along."
+          "text": "Yes, I am a goat. A walking, talking one, third on your board, and cleverer than you. Move along."
         },
         {
           "at": "5:end",
-          "text": "I am a Boer goat. I sing, I swear, and I turned their whole seventh floor to dust before anyone set hoof on it."
+          "text": "I am a Boer goat. I scream, I swear, and I turned their whole seventh floor to dust before anyone set hoof on it."
         },
         {
           "at": "7:45",
-          "text": "A Boer goat. I sing, I swear, I turned a floor to dust, and I took an army apart for Miriam. Ask the Naga what they have left."
+          "text": "A Boer goat. I scream, I swear, I turned a floor to dust, and I took an army apart for Miriam. Ask the Naga what they have left."
         }
       ],
-      "voiceNote": "Sharp, clipped, contemptuous; every line sounds like a correction. A nasal, faintly British, spoiled-prince drawl. Humans, idiots, you people; Carl by name, Miriam by name and nothing softer. Sings opera when it suits him and will not explain it. Never thanks, never apologises, never asks.",
+      "voiceNote": "Sharp, clipped, contemptuous; every line sounds like a correction. A nasal, faintly British, spoiled-prince drawl. Humans, idiots, you people; Carl by name, Miriam by name and nothing softer. Never thanks, never apologises, never asks.",
       "beats": [
         {
           "kind": "origin",
@@ -14261,7 +14261,7 @@
         },
         {
           "at": "8:73",
-          "text": "My Dread is on every crawler they send across. I am not with them. I do not need to be."
+          "text": "My dread is on one cactus in their guildhall. It tells them whether I am alive, out, or waiting. I am not with them. I do not need to be."
         }
       ],
       "voiceNote": "Few words, all of them chosen. Flat declaratives, no adjectives she does not need, no jokes. My brother for Li Jun; Carl; the cat. States what she will do and does not explain it. Never asks for help, never raises her voice, never says she is afraid.",
@@ -14453,7 +14453,7 @@
         },
         {
           "at": "3:3",
-          "text": "Ifechi and I are running together. Her party is gone and I found her after. People are watching. That's fine. Watch."
+          "text": "Ifechi and I are running together. The rest of that party is gone. People are watching. That's fine. Watch."
         },
         {
           "at": "5:69",
@@ -15031,7 +15031,7 @@
         },
         {
           "at": "2:end",
-          "text": "Crawler Quan Ch. Opened his Celestial box a fraction before Borant burned its veto, and a Celestial box does not un-open. Eighty-three crawlers were owed one. The count came to him."
+          "text": "Crawler Quan Ch. Opened his Celestial box a fraction before Borant burned its veto, and a Celestial box does not un-open. Eighty-three were awarded. His is the one Borant is on the hook for."
         },
         {
           "at": "4:4",
@@ -15167,7 +15167,7 @@
       "tagline": [
         {
           "at": "3:8",
-          "text": "Bomo. Mercenary, Desperado Club stock, sold as a pair with the Sledge. Gratuity not included."
+          "text": "Bomo. Bodyguard, Desperado Club security, sold as a pair with the Sledge. Gratuity not included."
         },
         {
           "at": "5:3",
@@ -15430,7 +15430,7 @@
       "role": "Antagonists",
       "revealedAt": "1:20",
       "sort": 27,
-      "tagline": "Frank Q. The lady is Maggie My. We worked out early that a human in a safe room pays better than a monster in a hallway, and we have not looked back.",
+      "tagline": "Frank Q. The lady is Maggie My. We worked out early that a crawler pays better than a monster in a hallway, and we have not looked back.",
       "voiceNote": "Frank Q speaks for the pair; Maggie My does not talk to cameras. Folksy, unhurried, a salesman's warmth laid over arithmetic. Calls other crawlers folks, or the young man, or the cat. Explains the killing as sense, never as cruelty. Never says sorry and never says murder.",
       "beats": [
         {
@@ -15517,7 +15517,7 @@
       "role": "Earth",
       "revealedAt": "1:1",
       "sort": 28,
-      "tagline": "Beatrice. Not a crawler. Carl's ex, the cat's owner of record, and the reason there was a pair of pink Crocs by the door.",
+      "tagline": "Beatrice. In the Bahamas. Carl's ex, the cat's owner of record, and the owner of the pink Crocs he went outside in.",
       "voice": "system",
       "beats": [
         {
@@ -15607,7 +15607,7 @@
         },
         {
           "at": "2:21",
-          "text": "I lead Brynhild's Daughters. I handed Katia to the Royal Court myself, before the gap between her and the rest of us killed her."
+          "text": "I lead Brynhild's Daughters. One of mine is near the Royal Court, too far from the rest of us, and she needs levels. I asked them to take her, as a personal favour."
         }
       ],
       "voiceNote": "Blunt, declarative, a leader counting heads. Short sentences, no hedging; a decision is arithmetic first and hers afterwards. Katia, Eva, Carl by name; Donut is the cat until she is useful. Never apologises for a call and never asks twice.",
@@ -15706,7 +15706,7 @@
         },
         {
           "at": "3:21",
-          "text": "Professor, like Katia. We came in through the same door and class selection separated us. I kept going. I do not see what there is to discuss."
+          "text": "Economics professor, same university as Katia. We ate lunch together sometimes. I do not see what there is to discuss."
         }
       ],
       "voiceNote": "Cold, clipped, certain. Weakness irritates her and she says so as if reporting the weather. Katia is Katia, flat, with no warmth left in it. Never apologises, never explains herself twice, never admits fear.",
@@ -15772,7 +15772,7 @@
         },
         {
           "at": "1:end",
-          "text": "Their guide has a memory worth more than anything they will ever pull out of a box. I told them so, once the cameras were off. What the Princess does with that is her business, and I have every confidence in her business."
+          "text": "Once the cameras were off, I gave Carl two pieces of advice. Let the Princess choose her class first. And tell Mordecai I would love the chance to explain myself. I pushed him too hard once, and he paid dearly for it."
         }
       ],
       "voiceNote": "On-air warmth, off-air arithmetic. Flatters first and names the terms second, in finished sentences, never hurried. Princess for Donut, Carl for Carl, Mordecai by name and with weight. Never apologises, never pretends the crawl is fair, never says a thing on camera she has not already decided to say.",
@@ -16634,7 +16634,7 @@
         },
         {
           "at": "6:61",
-          "text": "Sister is not a title the dungeon gave me. Cat Girl is. I am holding a prince of Sheol on a leash in a church full of my demons, and I am still the one who can save them. They only have to come to me."
+          "text": "Sister is not a title the dungeon gave me. Cat Girl is. I am holding a prince of Sheol on a leash, my demons are walking into their church, and I am still the one who can save them. They only have to come to me."
         }
       ],
       "voiceNote": "Quiet, plain, devout without preaching. Short declaratives; God comes up as a fact of the world, not a slogan. People by their names: Paz, Anton, the man, the cat. Does not joke about her race and does not let anyone else. Never pleads, never explains twice, never says she is sorry for what she has decided.",
@@ -16759,7 +16759,7 @@
       "tagline": [
         {
           "at": "6:58",
-          "text": "Amayon, prince of Sheol, at your service. The Madre de Aguas has died and got up again, and I am the reason she got up. An area message announced me to everyone in range. I do enjoy an introduction."
+          "text": "Amayon, prince of Sheol, at your service. The Madre de Aguas has died and got up again, and I slipped in while she was down. An area message announced me to everyone in range. I do enjoy an introduction."
         },
         {
           "at": "6:61",
@@ -17032,7 +17032,7 @@
       "tagline": [
         {
           "at": "5:75",
-          "text": "Osvaldo. Crawler. Collects memorial crystals, which is to say he collects the dead. Answers to nobody that I can see."
+          "text": "Osvaldo. Crawler. Took the memorial crystal off Queen Imogen's body. Answers to nobody that I can see."
         },
         {
           "at": "7:64",
@@ -17165,7 +17165,7 @@
         },
         {
           "at": "5:51",
-          "text": "They are saying the Queen of the High Elves is one of your repurposed humans. My familiar is Ferdinand, and yes, before me he lived in the crawler Carl's apartment. Make of that what you like."
+          "text": "They are saying the Queen of the High Elves is one of your repurposed humans. My familiar is Ferdinand, and the cat seems to know him. Make of that what you like."
         }
       ],
       "voiceNote": "Regal, cold, complete sentences, never hurried. My elves, my familiar, my guests; crawlers are the man, the cat, your people. Never explains herself, never raises her voice, never denies anything outright: she dismisses. Does not use the crawl's slang or its numbers.",
@@ -17266,7 +17266,7 @@
         },
         {
           "at": "7:69",
-          "text": "Co-warlord. Baroness Victory's word, not mine. I hold the castle at Larracos; I did not agree to hold it beside Agatha."
+          "text": "Warlord of the War Mage Rebellion. The system named Agatha my co-warlord; I did not. My mages are in Larracos, taking that castle apart."
         }
       ],
       "voiceNote": "Cold, formal, exact; a commander dictating for the record. Never raises his voice, never explains his reasons, never apologises. 'The War Mage Rebellion' in full; Carl and Donut by name; Agatha by name and with contempt. Speaks of leaving as a decision already made, never as a retreat.",
@@ -17359,7 +17359,7 @@
         },
         {
           "at": "7:65",
-          "text": "I froze almost everyone standing on a battlefield. One of the exceptions is still blinking at me. I like him."
+          "text": "I froze almost everyone standing on a battlefield. I did not entirely mean to."
         },
         {
           "at": "8:97",
@@ -17520,11 +17520,11 @@
       "tagline": [
         {
           "at": "1:42",
-          "text": "They put Zhang and me on live television on the second floor and let the host pick at us for the audience. Then a stranger with a cat bet his own value against the production's nerve, and the production blinked, and we walked off."
+          "text": "They put Zhang and me on live television on the second floor and let the host pick at us for the audience. Then a stranger with a cat picked a fight with the host and whispered to us where to run. The host threw us back into the fight, and we ran."
         },
         {
           "at": "7:50",
-          "text": "Once I was the man being picked at on somebody's show. Now I am holding a door open in Club Vanquisher on the ninth floor so the ones going in can get through. I prefer this."
+          "text": "Once I was the man being picked at on somebody's show. Now I am dropping a rock in a temple doorway on the ninth floor so it cannot close behind us. I prefer this."
         }
       ],
       "voiceNote": "Earnest, plain, grateful out loud. Talks in the practical: who is where, what the job is, who he owes. Carl by name and with respect; Zhang as a partner; my sister for Li Na, whom he watches constantly. Never boasts and never hides that he is scared.",
@@ -17722,7 +17722,7 @@
       "tagline": [
         {
           "at": "4:3",
-          "text": "Crawler Firas. Desert quadrant, fifth floor. Located with Crawler Louis and a team of car salesmen who have taken up archery. That is the whole file so far."
+          "text": "Crawler Firas. Desert quadrant, fifth floor. Located in a bar with Crawler Louis. A team of car salesmen who have taken up archery was in the next one. That is the whole file so far."
         },
         {
           "at": "4:5",
@@ -17798,7 +17798,7 @@
         },
         {
           "at": "5:73",
-          "text": "Hunter Vrah, Mantis. Left Crawler Carl a note in Zockau saying the Hive was hunting him. Eliminated by two dinosaurs in the battle for the submerged castle. Nobody left her a note."
+          "text": "Hunter Vrah, Mantis. Left Crawler Carl a note in Zockau saying the Hive was hunting him. Eliminated by two dinosaurs in the high elves' ballroom. Nobody left her a note."
         }
       ],
       "voice": "system",
@@ -17933,11 +17933,11 @@
         },
         {
           "at": "7:54",
-          "text": "Apito, the Oak Mother, mother of all the gods. A deity shouting through a portal tells a crawler she has been corrupted, and names who did it."
+          "text": "Apito, the Oak Mother, mother of all the gods. A god just out of a portal tells a crawler she has been corrupted, and names who did it."
         },
         {
           "at": "7:64",
-          "text": "Apito, the Oak Mother. Her memorial crystal is a rainbow the size of a hill, and a crawler is carrying it across a battlefield."
+          "text": "Apito, the Oak Mother. Her memorial crystal is throwing a giant rainbow into the sky, and the crawler holding it is somewhere in the woods, waving it about."
         }
       ],
       "beats": [
@@ -18128,7 +18128,7 @@
       "tagline": [
         {
           "at": "7:59",
-          "text": "Harpocrates. Second through the gate, behind something worse, into a war nobody summoned him for."
+          "text": "Harpocrates. Second into the realm, behind something worse, and summoned by it."
         },
         {
           "at": "7:68",
@@ -18136,7 +18136,7 @@
         },
         {
           "at": "7:72",
-          "text": "Harpocrates, god of silence. Marked a princess for death and now takes orders from a member of her party. The war has reached the point where gods are equipment."
+          "text": "Harpocrates, god of silence. Marked a princess for death and now takes orders from a crawler on her side. The war has reached the point where gods are equipment."
         },
         {
           "at": "7:76",
@@ -18242,11 +18242,11 @@
       "tagline": [
         {
           "at": "7:49",
-          "text": "Khepri. A god of light, and this season's recruitment target for a princess who keeps vanishing off the board."
+          "text": "Khepri. A god of light, and, by elimination, the god a princess who keeps vanishing off the board has chosen this season."
         },
         {
           "at": "7:52",
-          "text": "Khepri, god of rebirth and sunrise. His own temple is the one place on this floor a deity may stand, which is why the door was open, and why it is a trap."
+          "text": "Khepri, god of rebirth and sunrise. A god can always appear in his own temple, whatever the floor's rules, and that is what makes it a trap."
         },
         {
           "at": "7:54",
@@ -18375,7 +18375,7 @@
         },
         {
           "at": "6:64",
-          "text": "Ysalte. A demon says the name out loud, and the professional opinion is that she belongs to somebody else's team and is nowhere near this floor."
+          "text": "Ysalte. A demon says the name out loud, the goddess on hand cannot feel her anywhere near, and the professional opinion is that she kills every crawler who gets close and is sponsored by the same people as the nun."
         },
         {
           "at": "6:65",
@@ -18496,11 +18496,11 @@
         },
         {
           "at": "8:19",
-          "text": "Taranis. A pig on a rival team is under his protection, which is a strange thing for a god of thunder to bother with."
+          "text": "Taranis. A pig on a rival team is under his protection, because the god of thunder has it bad for her."
         },
         {
           "at": "8:94",
-          "text": "Taranis, god of thunder. A crawler has worked out that the pig is the lever, and is holding a knife to it."
+          "text": "Taranis, god of thunder. A crawler has worked out that the pig is the lever, and is holding a gun to its head."
         },
         {
           "at": "8:96",
@@ -18607,19 +18607,19 @@
         },
         {
           "at": "6:36",
-          "text": "Nekhebit. A crawler with a talk show has announced which deity she is sponsoring this season, and it is a name almost nobody in the audience recognised."
+          "text": "Nekhebit. Re-ascended by four crawlers and a hatched egg, and announced by a talk-show host as the goddess she is playing this season. The crowd goes berserk."
         },
         {
           "at": "7:54",
-          "text": "Nekhebit, the vulture goddess. A deity shouting through a portal says she is behind the corruption of the mother of all the gods."
+          "text": "Nekhebit, the vulture goddess. A god who sat down beside a crawler being beaten to death says she has returned, and that he believes she is behind the corruption of his own mother."
         },
         {
           "at": "7:76",
-          "text": "Nekhebit, the vulture goddess. She has a champion now: a cat, three atrocities deep, wearing a class named for the tree that replaced her."
+          "text": "Nekhebit, the vulture goddess. She has a champion now: a cat, three atrocities deep, wearing a class named for the oak goddess who replaced her."
         },
         {
           "at": "8:69",
-          "text": "Nekhebit, the vulture goddess, last of the old gods. Bore three children she was forbidden, and one of them took her worshippers and her place."
+          "text": "Nekhebit, the vulture goddess, the last of the old gods to fall. Bore three children she was forbidden, and one of them took her worshippers and her place."
         }
       ],
       "beats": [
@@ -18722,15 +18722,15 @@
         },
         {
           "at": "6:17",
-          "text": "I have walked into a realm where everyone assumes a god wants something. I do want something. I want a young woman and a cat to come out of this alive."
+          "text": "I have walked into a realm where everyone assumes a god wants something. I do want something. I want the crawler to say yes to a certain offer, and in return a young woman and a cat come out of this alive."
         },
         {
           "at": "6:38",
-          "text": "The favour I was promised in return did not arrive. I am honouring my half of it regardless, which everyone here finds astonishing."
+          "text": "The favour I was promised in return did not arrive. I am honouring my half of it regardless. The failure was mine, not his."
         },
         {
           "at": "7:86",
-          "text": "I stood frozen while she chose which of my two doors to walk through. She took the one that sends her home pregnant, to help the children there. I would have chosen it too."
+          "text": "I stood frozen while she chose which of my two doors to walk through. I offered her a safe place in my court. She took the one that makes her pregnant and sends her up to the children there."
         }
       ],
       "beats": [
@@ -18839,11 +18839,11 @@
         },
         {
           "at": "8:65",
-          "text": "Grull, god of war. Turned up in a factory the instant a broken puppet was made whole, because smiting is his department."
+          "text": "Grull, god of war. Turned up in a factory the instant a split mantaur was made whole, with his mark for death already over the mantaur's head."
         },
         {
           "at": "8:66",
-          "text": "Grull, god of war. Level 250, invulnerable, and put down by a knight with a lance and a magnet."
+          "text": "Grull, god of war. Level 250, invulnerable, and charged by an elderly stripper with a lance and a magnet, riding the mantaur he came to punish. He called it a good death, and left."
         }
       ],
       "beats": [
@@ -19049,11 +19049,11 @@
         },
         {
           "at": "7:63",
-          "text": "Yarilo, god of lust, feral now. Out of the Nothing and loose on a battlefield, chasing an AI who is very fast."
+          "text": "Yarilo, god of lust, feral now. Out of the Nothing and loose on a battlefield, and Samantha, who was only meant to be demon bait, says uh-oh."
         },
         {
           "at": "7:69",
-          "text": "Yarilo, god of lust. Conscripted by an army that bought him with potions. Deities are inventory on this floor."
+          "text": "Yarilo, god of lust. Conscripted by a war mage with one thrown potion, and the war mage blew up for his trouble. Deities are inventory on this floor."
         }
       ],
       "beats": [
@@ -19147,15 +19147,15 @@
         },
         {
           "at": "7:60",
-          "text": "Meatus. Came through a gate into a war and picked a fight with the god who came through behind him."
+          "text": "Meatus. Came through a gate into a war and picked a fight with the god his arrival summoned."
         },
         {
           "at": "7:66",
-          "text": "Meatus. Reached into a pile of frozen witnesses and pulled a goddess in after him."
+          "text": "Meatus. Got swept into a cat's ball of frozen witnesses, and dragged in the goddess he was wrapped around."
         },
         {
           "at": "7:77",
-          "text": "Meatus. Came through the gate first, fought the god behind him, and finished in pieces on a battlefield with the cameras looking away."
+          "text": "Meatus. Came through the gate first, fought the god his arrival summoned, and finished slap-chopped all over the realm, which even the Scavenger's Daughter looks away from."
         }
       ],
       "beats": [
@@ -19255,7 +19255,7 @@
         },
         {
           "at": "6:16",
-          "text": "Ogun, god of blacksmiths. Handed out a debuff nobody can heal, took a worshipper's life for a choice that worshipper did not make, and went home."
+          "text": "Ogun, god of blacksmiths. Made one worshipper's debuff past healing, crushed the other's head underfoot for a choice made while charmed, and went home."
         }
       ],
       "beats": [
@@ -19336,11 +19336,11 @@
         },
         {
           "at": "5:3",
-          "text": "Seven feet of rock in a tuxedo. Bought once at the bar, then written into a contract. I belong to her court now."
+          "text": "Seven feet of rock in a tuxedo. Bought once at the bar. Now I am collateral for a gate, and I stay inside."
         },
         {
           "at": "5:73",
-          "text": "Seven feet of rock in a tuxedo. I got inside that castle, I cast Zerzura, and everything standing in it came away with me."
+          "text": "Seven feet of rock in a tuxedo. I got inside that castle, I cast Zerzura, and the castle and everyone not hostile in it went down a floor with me."
         }
       ],
       "voiceNote": "Short flat sentences, one thought each, nothing decorated. Says the plain hard thing and then stops talking. The Princess, Bomo, Carl, Louis, all by name and nothing more. Never complains about a job, never explains himself, never refuses the Princess anything.",
@@ -19601,7 +19601,7 @@
         },
         {
           "at": "4:21",
-          "text": "I am a glass mage. I opened a hole to ask a god for one small thing and something else came through it, and now everything I own is sand, myself very nearly included."
+          "text": "I am a glass mage. I opened a hole to ask a god for one small thing and something else came through it, and now everything outside my protection spell is sand. Even the wife it made me."
         }
       ],
       "voiceNote": "Self-pitying and grandiose in the same breath; a scholar's vocabulary spent dressing up a want. Explains himself at enormous length to anyone in the room and blames the thing he summoned for what he chose. Lika by name, always. Never says the word coward, never mentions the lie he told the College unless cornered, never asks after anybody else.",
@@ -19676,11 +19676,11 @@
       "tagline": [
         {
           "at": "4:6",
-          "text": "Henrik. Principal of the Dromedarians at Hump Town, and the reason there is a man in the basement with pieces taken out of him. Except that it is not Henrik in there."
+          "text": "Henrik. A camel who walks out of the Hump Town hall showing an ID, and the name a chained, drugged gnome in the basement calls out when he hears someone coming. The gnome says Henrik is no camel: he is a changeling, and the torturer."
         },
         {
           "at": "4:26",
-          "text": "Henrik. Changeling, principal of Hump Town, one third of an artifact, and a body sitting in a flooded submarine."
+          "text": "Henrik. Changeling principal, carrier of one third of an artifact, and a body sitting in a flooded submarine."
         }
       ],
       "voice": "system",
@@ -19845,11 +19845,11 @@
       "tagline": [
         {
           "at": "4:6",
-          "text": "A wailing shrieker over the tomb. She has no body, which is the whole of the problem for everybody who wants something out of her."
+          "text": "A name from a chained gnome, who is being tortured for a spell that would give her flesh. She has no body, which is the whole of the problem for everybody who wants something out of her."
         },
         {
           "at": "4:29",
-          "text": "A wailing shrieker who guarded the tomb until two crawlers worked out where to put the wire."
+          "text": "A wailing shrieker who guarded the tomb until a wire ran from her water to a lightning tower. The crawler who connected it, and the one who drew her off, did not come back up."
         }
       ],
       "voice": "system",
@@ -19951,11 +19951,11 @@
       "tagline": [
         {
           "at": "5:28",
-          "text": "Big Tina. Level 80 allosaurus, immortalized city boss, and the reason the dinosaurs keep coming down on Point Mongo."
+          "text": "Big Tina. A big dinosaur who is just a kid, in a pink boa, and the reason the attacks keep coming down on Point Mongo."
         },
         {
           "at": "5:44",
-          "text": "Big Tina. Level 80 allosaurus, immortalized city boss, and an ursine child who never got to finish her solo."
+          "text": "Big Tina. An allosaurus, a vampire, and an ursine child who never got to finish her solo."
         },
         {
           "at": "5:73",
@@ -20099,7 +20099,7 @@
         },
         {
           "at": "5:73",
-          "text": "Kiwi. An ursine, heavily pregnant, and until about an hour ago the head of the fastest pack on the floor."
+          "text": "Kiwi. An ursine again, and until a moment ago the head of the fastest pack on the floor."
         }
       ],
       "voice": "system",
@@ -20391,7 +20391,7 @@
       "tagline": [
         {
           "at": "2:19",
-          "text": "Princess of the Prism Kingdom. Small, as kingdoms go, and a considerable force in certain trade circles. I say what I think on air, and I have just watched them shoot my friend."
+          "text": "Princess of the Prism Kingdom. Small, as kingdoms go, and a considerable force in certain trade circles. I say what I think on air, and my friend has just been killed in an attack meant for somebody else."
         },
         {
           "at": "5:64",
@@ -20402,7 +20402,7 @@
           "text": "I sponsored the cat. A sponsorship is an asset and I have sold the asset. Do not look at me like that. It is trade."
         },
         {
-          "at": "7:25",
+          "at": "7:26",
           "text": "Warlord of the Prism clan. There is a crawler and a cat inside my castle, and everything I have done, I have done for my people."
         }
       ],
@@ -20644,7 +20644,7 @@
       "role": "Orisha · city boss",
       "revealedAt": "6:11",
       "sort": 50,
-      "tagline": "A god nobody has worshipped in a very long time, standing in a town he used to rule. Level 130, non-corporeal, and wearing a hat that stops him seeing where he is going.",
+      "tagline": "A god nobody has worshipped in a very long time, visiting the world he once helped rule. Level 130, non-corporeal, and wearing a hat that stops him seeing where he is going.",
       "description": [
         {
           "at": "6:11",
@@ -20742,15 +20742,15 @@
       "tagline": [
         {
           "at": "6:21",
-          "text": "I represent the Blood Sultanate at this table, crawler, and not its royal family. A cousin, by marriage. I am called Rishi."
+          "text": "I represent the Blood Sultanate at this table, crawler, and not its royal family. My wife is of the family. I am not. I am called Rishi."
         },
         {
           "at": "6:22",
-          "text": "I speak for the Blood Sultanate at these meetings. Not royalty, whatever the cat has assumed. A cousin. By marriage."
+          "text": "I speak for the Blood Sultanate at these meetings. Not royalty, whatever the cat has assumed. The changeling may not enjoy how harshly we respond."
         },
         {
           "at": "7:58",
-          "text": "My arms are off and I am sitting in a crawler's safe room, and I am still the only one in it holding a document worth signing."
+          "text": "My arms are off and I am sitting in a crawler's cell, and I am still the only one in it holding a document worth signing."
         }
       ],
       "voiceNote": "A diplomat's register: the clause first, the threat second, and 'harshly' where another speaker would say what he means. Calls Carl 'crawler' and Donut 'Your Highness', with no warmth in either. Discusses his own survival as though it were policy. Never once says what he wants for himself.",
@@ -20826,7 +20826,7 @@
       "tagline": [
         {
           "at": "6:5",
-          "text": "Damascus Steel. I dance. The cat told me I was Mongo's new daddy. I did not argue with her."
+          "text": "Damascus Steel. I dance. The cat told me I was Mongo's new daddy."
         },
         {
           "at": "6:23",
@@ -20899,7 +20899,7 @@
         },
         {
           "at": "6:33",
-          "text": "Level 75, quarter naga, lead dancer of the club's ground floor and the cat's declared favourite of the entire roster. Currently face down on his own workplace floor, weeping, which is not in the routine."
+          "text": "Level 75, quarter naga, one of the club's lead dancers and one of the cat's favourites. Currently on his own workplace floor, weeping, which is not in the routine."
         }
       ],
       "beats": [
@@ -20948,15 +20948,15 @@
       "tagline": [
         {
           "at": "6:36",
-          "text": "Orc. Attorney. Adjutant. I put my own aunt into indentureship over unpaid taxes, and the other parties still had to sue to try to keep me out of this game. The filing was badly drafted."
+          "text": "Orc. Attorney. Adjutant. I put my own aunt into indentureship over unpaid taxes, and the other parties still had to sue to try to keep me out of this game. It did not work."
         },
         {
           "at": "7:13",
-          "text": "An Elite walked into the fortress carrying somebody else's sponsorship and a great deal of explosive. He did not reach the second room."
+          "text": "One of the fortress's own Elites was waiting in the antechamber in a great deal of explosive, influenced by a company the Dream now owns. I stepped out of the flag room and settled it. I am calling foul."
         },
         {
           "at": "7:69",
-          "text": "Two names hold the castle at Larracos and only one of them wanted a colleague. I read them out as written."
+          "text": "Two names hold the castle at Larracos. The war mages did not anticipate the second, and the first does not like her. I read them out as written."
         }
       ],
       "voiceNote": "An attorney first and an officer second: the rule, then the consequence, then silence. Formal address for Carl and Donut, none for anybody else. Fond of a loophole and entirely unembarrassed by her own family. Never threatens, on the grounds that a threat is merely a badly drafted notice.",
@@ -21157,7 +21157,7 @@
         },
         {
           "at": "7:49",
-          "text": "My house has never once had to finish one of these wars. There is a door out of every castle, and a god standing at the far end of ours."
+          "text": "My house does not usually stay to watch one of these wars end. There is a door out of every castle, and a god standing at the far end of ours."
         },
         {
           "at": "7:52",
@@ -21239,7 +21239,7 @@
       "tagline": [
         {
           "at": "6:6",
-          "text": "The cat names her favourites among those who dance for coin, and my name is in the list. I accept the honour with a bow."
+          "text": "The cat recites the names a dancer for coin ought to have, and mine is among them. A fine name deserves to be said aloud."
         },
         {
           "at": "7:63",
@@ -21247,7 +21247,7 @@
         },
         {
           "at": "8:24",
-          "text": "Mr. Jefferson has left me, and he has taken something of mine along with him. Corcunda is behind a garage door I am not permitted to open."
+          "text": "I set Mr. Jefferson down in the garage for a moment, and I have not felt well since. Corcunda is behind a garage door I am not permitted to open."
         },
         {
           "at": "8:66",
@@ -21403,7 +21403,7 @@
         },
         {
           "at": "7:63",
-          "text": "Otter. Water mage. Formerly of the Penis Parade, presently under a mercenary contract with a crawler faction, carrying a crossbow built for something smaller than an otter."
+          "text": "Otter. Water mage. Formerly of the Penis Parade, presently under a mercenary contract with a crawler faction, carrying a small-sized crossbow."
         },
         {
           "at": "8:59",
@@ -21637,7 +21637,7 @@
         },
         {
           "at": "8:56",
-          "text": "Dwight. Sparkling unicorn, level eighty-seven enchanter. Owes his continued participation to two bugbears he has never thanked, and has just put his horn through a disc jockey."
+          "text": "Dwight. Sparkling unicorn, level eighty-seven enchanter. Owes his continued participation to two bugbears who found him spinning outside the exit and dragged him in, and has just put his horn through a disc jockey."
         }
       ],
       "description": [
@@ -21753,11 +21753,11 @@
       "tagline": [
         {
           "at": "8:12",
-          "text": "Chiyome. Razor Fox, level eighty, Mistress of Nunchaku. Leads team The Wild Hunt, and throws stars as well as anyone in my files."
+          "text": "Chiyome. Razor Fox, level eighty, Mistress of Nunchaku. One of three on team The Wild Hunt, and, like most razor foxes, favours throwing stars."
         },
         {
           "at": "8:32",
-          "text": "Chiyome. Razor Fox, level eighty. Led team The Wild Hunt. Called for help on an open channel while there was still a channel to call on."
+          "text": "Chiyome. Razor Fox, level eighty. One of three on team The Wild Hunt. Sent word in chat that they could not see and were surrounded, and was dead before the reply reached her."
         }
       ],
       "description": [
@@ -21825,11 +21825,11 @@
         },
         {
           "at": "8:13",
-          "text": "Corcunda. Half a mantaur, riding with the Lady Dominators, and the reason Dong Quixote has not drawn a steady breath since he laid eyes on this garage."
+          "text": "Corcunda. Half a mantaur, riding with the Lady Dominators, and, by the cat's guess, the half-mantaur Dong Quixote is always talking about. Nobody is telling Dong."
         },
         {
           "at": "8:58",
-          "text": "Corcunda. Two halves of one mantaur, in two places, in two different suits, and only one of the two will hear a word about Dong."
+          "text": "Corcunda. Two halves of one mantaur, in two places, in the same gimp suit in two colours, and only one of the two will hear a word about Dong."
         },
         {
           "at": "8:65",
@@ -21936,11 +21936,11 @@
         },
         {
           "at": "8:58",
-          "text": "My wife is outside this place carrying our child. Between her and the end of it stands one crawler nobody can reach. So yes, I am desperate. Put it in those words."
+          "text": "My wife is outside this place carrying our child. A goddess is threatening the children up there, and I used to be able to hear Heidi. I have not heard her in a while."
         },
         {
           "at": "8:82",
-          "text": "My wife is outside this place carrying our child, and the reason I still have the body she would recognise is a boy's crystal and nothing else."
+          "text": "My wife is outside this place carrying our child, and the reason I still have the body she would recognise is Prepotente's crystal and nothing else."
         }
       ],
       "voiceNote": "Big, warm, plain-spoken; a soldier who talks like a family man. Brings Heidi into the conversation as though she were standing at his shoulder, because to him she is. Says what frightens him straight out and asks for help without dressing it up. Never boasts about the fighting and never sneers at anyone.",
@@ -22038,7 +22038,7 @@
         },
         {
           "at": "8:59",
-          "text": "I collect the coins at the club. I drive, I do the triage, and today a sock went for my face. Nobody in this party explains anything until afterwards."
+          "text": "I collect the coins at the club. I drive, I do the triage, and today a sock attacked me. Nobody in this party explains anything until afterwards."
         }
       ],
       "voiceNote": "Anxious and apologetic, talking himself through the next thirty seconds out loud. Anyone senior gets a title; he never claims credit and never calls himself brave. Reports his own panic as plain fact. Never complains about being frightened, only about not being told things.",
@@ -22365,15 +22365,15 @@
       "tagline": [
         {
           "at": "8:19",
-          "text": "Hired muscle for two tigrans and a pig. I danced for a living before this, and I was not good to the people I danced beside."
+          "text": "Hired muscle for two tigrans and a pig. I danced for a living before this, and I was not good to the people I worked beside."
         },
         {
           "at": "8:71",
-          "text": "I drive for Carl now. There is a coin collector at that club I struck once for standing where I wanted to walk, and he has been nothing but decent to me since."
+          "text": "I drive for Carl now. There is a coin collector at that club I slapped once for getting in my way during a routine. I cannot take it back. I can only make amends from here."
         },
         {
           "at": "8:80",
-          "text": "I drive, and I go where the crawlers are not allowed to. Somebody has to step into the hole first and report back what is on the other side."
+          "text": "I drive, and I go where the crawlers are not allowed to. Somebody has to step into the portal first and report back what is on the other side."
         }
       ],
       "voiceNote": "Blunt and unhurried; says the ugly fact first and does not soften it afterwards. Short sentences, people by name, himself by what he used to be. Never explains himself twice, never asks to be forgiven, and never claims the change in him is finished.",
@@ -22609,7 +22609,7 @@
         },
         {
           "at": "8:60",
-          "text": "The left half. I have sat in a room with the one who did this to us and we talked. I am not saying it went well. I am saying it went."
+          "text": "The left half. I have sat in a room with Dong and we talked. I am not saying it went well. I am saying it went."
         }
       ],
       "voiceNote": "Sharp, aggrieved, theatrical when there is an audience and flat when there is not. Speaks in small performances and drops them the instant Dong is mentioned. Calls his other half Corky and Dong nothing polite. Never lets a slight go unlisted, and never admits he wants the reunion as badly as anyone.",
@@ -22677,15 +22677,15 @@
       "tagline": [
         {
           "at": "2:18",
-          "text": "Twenty of us came down these stairs together. I am working alone now, and I am not finished."
+          "text": "The Divider lies in the pool with my name on the kill. I did what was in front of me, and I am not finished."
         },
         {
           "at": "2:23",
-          "text": "Four siblings, fifteen cousins, gone inside a week. Whatever I stand beside next, I keep."
+          "text": "Four siblings, fifteen cousins, and I am all that is left. Whatever I stand beside next, I keep."
         },
         {
           "at": "5:57",
-          "text": "I stand with Katia and with the daughters, and I train every morning with a man who carries the same sword I do."
+          "text": "I stand with Katia and with the daughters, and I train beside Tran, a swashbuckler as I am."
         },
         {
           "at": "8:71",
@@ -23082,7 +23082,7 @@
         },
         {
           "at": "3:10",
-          "text": "One brain, many bodies, and one of the bodies waiting at every fifth station."
+          "text": "One brain, many bodies, and one of them waiting behind a fifth station on the line."
         },
         {
           "at": "8:86",
@@ -23203,7 +23203,7 @@
       "tagline": [
         {
           "at": "2:end",
-          "text": "Eighth on the board: human, Physicker, level eighteen. My file is short and entirely creditable."
+          "text": "Eighth on the board: human, Physicker, level eighteen. The file is short and entirely creditable."
         },
         {
           "at": "4:4",
@@ -23290,7 +23290,7 @@
       "tagline": [
         {
           "at": "1:27",
-          "text": "Assistant to a chat show, and the first Syndicate human either of them has stood in a room with. She explains the equipment. She does not explain herself."
+          "text": "Associate producer on a chat show, and the first Syndicate human either of them has stood in a room with. She explains what happens next. She does not explain herself."
         },
         {
           "at": "5:20",
@@ -23298,7 +23298,7 @@
         },
         {
           "at": "8:27",
-          "text": "Still holding the clipboard while the ships in orbit change hands. Whatever has just come through to her, it went straight through her."
+          "text": "Still holding the datapad, though the ships in orbit have changed hands. Whatever has just come through to her, it went straight through her."
         }
       ],
       "beats": [
@@ -23380,7 +23380,7 @@
         },
         {
           "at": "2:24",
-          "text": "Do not approach. Do not come closer. Do not blow me up. Please. She did this, and I cannot stop leaking."
+          "text": "Do not approach. Do not come closer. Do not blow me up. Please. She did this, and I cannot stop hurting."
         }
       ],
       "voiceNote": "A rasp, and an apology in front of every sentence. Courteous to a fault, formal in the old settlement manner, and permanently afraid of what he does to anyone who touches him. Says please more than any other word. Calls his wife my wife, never her name. Never blames her out loud until he is asked directly, and then he does it once and stops.",
@@ -23466,7 +23466,7 @@
         },
         {
           "at": "7:37",
-          "text": "I am at the bar. I am also everywhere else, and I have been for some time. Do not let that change how you order."
+          "text": "I have his face and his bottle. I am also everywhere else, and I have been for some time. Do not let that change how you order."
         }
       ],
       "voiceNote": "A drinker's rhythm: short sentences, a joke to cover the flinch, then the honest thing anyway. Enormously concerned with not being thought a coward and says so before anyone accuses him. Calls the regulars by their drink and hates hobgoblins out loud. Never asks for pity and always accepts a refill.",
@@ -23543,7 +23543,7 @@
       "tagline": [
         {
           "at": "1:43",
-          "text": "Level one, still, on a floor where that is not possible by accident. She would not kill anything. Her mother did the arithmetic for her."
+          "text": "The daughter. Her mother put a gun in her hand and told her to shoot a wounded man for the experience. She would not kill anything."
         },
         {
           "at": "3:19",
@@ -23604,7 +23604,7 @@
       "role": "NPC · Desperado Club",
       "revealedAt": "2:15",
       "sort": 57,
-      "tagline": "Pharmacist. Top half opossum, bottom half tornado, and a manager's badge with nobody upstairs breathing down my back.",
+      "tagline": "Pharmacist. Top half opossum, bottom half tornado, and Mordecai was one of my best customers back in the early days.",
       "voiceNote": "Chummy and coarse and very pleased with himself. Talks like a man behind a counter who has heard the lot: an anecdote for every purchase, a dig at management, and a price at the end of it. Calls customers friend and pal. Never says a straight no, only a higher number.",
       "description": [
         {
@@ -23665,7 +23665,7 @@
         },
         {
           "at": "2:24",
-          "text": "You blew up my building, my figures and my husband. You have no idea at all what I was saving for."
+          "text": "You blew up my building, my figures and me. You have no idea at all what I was saving for."
         }
       ],
       "voiceNote": "Elderly, officious, immovable. Delivers the refusal first and the reasoning afterwards, as though the reasoning were a courtesy. Cares about her figures with an intensity she shows for nothing else alive. Calls people you, or crawler, and never by name. Never raises her voice and never gives an inch.",
@@ -23742,7 +23742,7 @@
         },
         {
           "at": "2:19",
-          "text": "Four foot of brown fuzz in an orange ascot, and the fairest panel in the dungeon. I will let you finish, folks. Then I will disagree with you."
+          "text": "Four foot of brown fuzz in an orange scarf, and the fairest panel in the dungeon. I will let you finish, folks. Then I will disagree with you."
         }
       ],
       "voiceNote": "A broadcaster's warmth: welcoming, unhurried, genuinely delighted by his guests. Lets other people carry the questions and steps in when the room needs steering. Disagrees openly and without heat. Calls everyone friend and the audience folks. Never sneers, never cuts a guest off, and never pretends a segment went well when it did not.",
@@ -24264,7 +24264,7 @@
         },
         {
           "at": "2:19",
-          "text": "Crown prince of an empire that answers two sentences of provocation with artillery, and brother to the Maestro."
+          "text": "Crown prince of an empire that answers a crawler's speech with a pulse fired from his own yacht, and brother to the Maestro."
         }
       ],
       "beats": [
@@ -24410,7 +24410,7 @@
       "revealedAt": "3:17",
       "sort": 70,
       "voice": "system",
-      "tagline": "Human Resources for a railway that eats its employees. Her real name was probably something else.",
+      "tagline": "Human Resources for a railway, and fond of telling the dwarves that overtime is mandatory. Her real name was probably something else.",
       "beats": [
         {
           "kind": "origin",
@@ -24491,11 +24491,11 @@
       "tagline": [
         {
           "at": "3:21",
-          "text": "Loita. Hekla hears Zev scolding from the ceiling and says he sounds like their Loita. That is all she says."
+          "text": "Loita. Hekla hears Zev scolding from the ceiling and says she sounds like their Loita. That is all she says."
         },
         {
           "at": "3:25",
-          "text": "Kua-Tin, party member, and she gets her pick of crawlers. Hekla’s people were her main account."
+          "text": "Kua-Tin, party member, and she has a claim on Katia's account. Hekla’s people were her main account."
         }
       ],
       "beats": [
@@ -24665,7 +24665,7 @@
       "revealedAt": "3:31",
       "sort": 74,
       "voice": "system",
-      "tagline": "Harassed without pause about a dog-themed race she did not ask to be given, and fighting alongside the people doing the harassing anyway.",
+      "tagline": "A German Shepherd of a Dog Soldier on the flamethrower, snapped at by a cat for her race, and fighting beside that cat anyway.",
       "beats": [
         {
           "kind": "origin",
@@ -24962,7 +24962,7 @@
       "revealedAt": "4:6",
       "sort": 78,
       "voice": "system",
-      "tagline": "Took the Human race and a rogue’s class, and holds the subterranean quadrant of his bubble.",
+      "tagline": "Human, one of five crawlers working the subterranean quadrant, and one of only two of them with club access.",
       "beats": [
         {
           "kind": "arc",
@@ -25016,7 +25016,7 @@
       "revealedAt": "4:16",
       "sort": 79,
       "voice": "system",
-      "tagline": "A juvenile gnome whose father commanded a flying castle, and who is holding the door open for the people who arrived too late to save him.",
+      "tagline": "A juvenile gnome and the Commandant's only daughter, planning a lemonade stand in a house with a trail of blood to the front door.",
       "beats": [
         {
           "kind": "origin",
@@ -25205,7 +25205,7 @@
         },
         {
           "at": "4:end",
-          "text": "High Elf, rogue, second hand on the cookbook, and now the chief executive of an organisation that campaigns against the thing that made him."
+          "text": "High Elf, rogue, the first hand on the cookbook, and now spending a small organisation's money on one crawler and a cause."
         }
       ],
       "beats": [
@@ -25269,7 +25269,7 @@
       "revealedAt": "7:15",
       "sort": 83,
       "voice": "system",
-      "tagline": "A hammerhead shark that breathes air, and spent his first years as ink on somebody’s shoulder.",
+      "tagline": "A hammerhead shark that breathes air, and used to be one of Signet’s paper tattoos.",
       "beats": [
         {
           "kind": "origin",
@@ -25433,7 +25433,7 @@
       "revealedAt": "6:6",
       "sort": 86,
       "voice": "system",
-      "tagline": "A dancer from the club’s ground floor, hired as muscle, and better at it than the hiring implied.",
+      "tagline": "One of the names on the club’s bill, the way a stripper’s name is supposed to sound.",
       "beats": [
         {
           "kind": "arc",
@@ -25484,7 +25484,7 @@
         },
         {
           "at": "6:7",
-          "text": "An aquatic melee tank who was not wearing the headband before he was captured, and has not taken it off since."
+          "text": "A monk seal on a totem card, and the first member of the squad."
         }
       ],
       "beats": [
@@ -25520,7 +25520,7 @@
       "revealedAt": "6:12",
       "sort": 88,
       "voice": "system",
-      "tagline": "A liaison who disagrees with his own side’s philosophy and is working, openly enough, to take two crawlers off the board.",
+      "tagline": "A caprid liaison, sanctioned once already for trying to have a crawler murdered, and standing in the dark at the interview.",
       "beats": [
         {
           "kind": "origin",
@@ -25886,7 +25886,7 @@
         },
         {
           "at": "7:80",
-          "text": "Son of Epitome Noflex, leader of the Dream, and dressed like any other elf in the room."
+          "text": "Son of Epitome Noflex, leader of the Dream, and, somehow, part of the new heart and lungs in Louis."
         }
       ],
       "beats": [
@@ -25942,7 +25942,7 @@
       "revealedAt": "8:4",
       "sort": 95,
       "voice": "system",
-      "tagline": "A level seventy-five Bugbear who does a little of everything, racing a vehicle he is fond of for a team that named itself.",
+      "tagline": "A level seventy-five Bugbear who does a little of everything, sitting beside an overturned van with a dead teammate inside it.",
       "beats": [
         {
           "kind": "origin",
@@ -26172,7 +26172,7 @@
       "revealedAt": "8:36",
       "sort": 100,
       "voice": "system",
-      "tagline": "A totem card left switched on by accident, and now somebody’s pet.",
+      "tagline": "A totem card left switched on by accident, and now permanent.",
       "beats": [
         {
           "kind": "origin",

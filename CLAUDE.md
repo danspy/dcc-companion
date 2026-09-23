@@ -1752,8 +1752,18 @@ currently has a dev server running. It is not this deployment, and only one proj
   was catchable by a screen: who did what (Katia opens the Gate, not Carl; Donut picks Hedy, not
   Carl), the opposite of the book (Mordecai's verdict on Zockau; Growler Gary's forgiving avatar),
   detail from nowhere (a family shop, a vote that widens the
-  field), and floor 9's recap carrying three book-4 events. **Taglines have not had this pass yet**,
-  and they are summaries, so they will be worse.
+  field), and floor 9's recap carrying three book-4 events.
+- **Every tagline has now been read against the book too**, and they were worse, as predicted: 200
+  of 532 changed, more than one in three, against about one in six for beats. A tagline is a summary,
+  and a summary written with the whole life in view keeps reaching past its own `at` — Larracos's
+  sixty-six rings at 4:23, Big Tina's level-80 city-boss title at 5:28, a feral god walking through
+  the Gate in a 4:9 tagline about a man who had been hunting it for twenty years. The other big class
+  is confident detail from nowhere: Grull "put down", Bonnie's father commanding a flying castle,
+  Prepotente singing opera (in his voice note, too). Two findings about the book itself: Ferdinand is
+  Gravy Boat, Marjory's tomcat, not Bea's; and the edition calls Ifechi "a man… He was a healer" at 3:3
+  and 4:4 and Florin's girlfriend with a twin sister from 5:63, so text about Ifechi avoids a pronoun
+  where it can. The reveal tags the pass questioned and left for later: the tenth faction (7:end,
+  though its events are 6:22 and 6:72) and system glitches (8:1; the first remarked on is 8:6).
 - **Every book is filled chapter by chapter** — the gap between "what is written is right" and "what
   happened is written" is closed for now. Content grew by adding entities, so each got a few beats at its
   introduction and the main cast was never followed: Carl had no beat in book 8, Donut none in books 3–5
@@ -1772,9 +1782,7 @@ currently has a dev server running. It is not this deployment, and only one proj
   map covers both directions now, and seven of its entries are false first hits: "ping" the sound,
   "tutorial guilds", Geraldo Rivera, the Feral Rabies debuff. Floors got `nameAt` for the same reason.
   The lint matches a one-word name only as written, as `leak.ts` always did, so "justice" is English
-  again. What moving tags earlier did *not* do is revisit the second tagline: the old one now reads
-  from its old tag, which is correct, but it was written as a whole-life summary and has not had the
-  read against the book either.
+  again.
 - **Sixty entities the fill kept tripping over now exist** — 303 in all. Each was built from the
   edition's text: reveal at the first printing of its name, a progressive tagline, beats across its
   whole life, relations. Chris Andrews, Brandon, Yolanda, Gwen, Princess Formidable, the Night Wyrm,
