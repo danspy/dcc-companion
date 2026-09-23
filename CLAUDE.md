@@ -186,8 +186,15 @@ so a first-time visitor gets zero gated facts: no character names, no floor name
 What they do get is the premise on the front page, which is back-cover material living in the
 page rather than in the gate. That is the whole "general, nothing spoiler" surface.
 
-Defaulting to book 1 (as this did) spoils book 1 for someone who has not read it. Clicking the
-currently-selected book again clears back to unset, which is the only route home.
+Defaulting to book 1 (as this did) spoils book 1 for someone who has not read it.
+
+**Choosing a book opens a picker; it does not commit.** A tap on a book number used to mean *I have
+finished this book* on the spot, so a reader who had just started book 3 unsealed all of it with one
+click. Now the tap opens a panel under the gate bar: the book's title, *Where are you in it?*, a
+chapter slider that starts at chapter 1 (or where the reader left off, for the saved book), and three
+explicit commits: **Save · up to ch N**, **I finished book N**, and **Clear my progress**. Cancel or
+Escape writes nothing. The cookie shape is unchanged — chapter 0 still means finished, and that
+reading now only ever comes from the button that says so.
 
 ### A tagline is a summary, so it obeys the summary rule
 
