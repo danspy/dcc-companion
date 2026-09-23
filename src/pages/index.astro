@@ -42,6 +42,10 @@ function paragraphs(text: string): string[] {
   return [text.slice(0, at).trim(), text.slice(at).trim()];
 }
 
+/* The floor the reader is standing on opens by default; the ones behind them
+   fold away until they want them. */
+const reached = floors.filter(f => reveals(gate, f.revealedAt));
+const current = reached.length ? reached[reached.length - 1].id : null;
 ---
 <Layout title="Floors">
   <section class="wrap intro">
@@ -78,8 +82,8 @@ function paragraphs(text: string): string[] {
     <div class="sec-head">
       <h2>Floors</h2>
     </div>
-    <p class="sec-intro">Floor numbers and book titles are printed on the covers, so they stay
-      visible. Each floor's story opens a stretch at a time, as you read past it.</p>
+    <p class="sec-intro">Each floor's story opens a stretch at a time, as you read past it. The
+      floor you are on starts open; tap any other to unfold it.</p>
 
     {floors.map(floor => {
       const open = reveals(gate, floor.revealedAt);
@@ -91,8 +95,8 @@ function paragraphs(text: string): string[] {
       const next = open ? parts.find(p => gate.frontier < p.sortKey) : undefined;
       const left = open ? parts.length - shown.length : 0;
       return (
-        <article class="slab floor" id={`floor-${floor.id}`}>
-          <div class="floor-head">
+        <details class="slab floor" id={`floor-${floor.id}`} open={floor.id === current}>
+          <summary class="floor-head">
             <div class="floorno" style={`background:${floor.accent};color:${floor.ink}`}>
               {String(floor.id).padStart(2, '0')}
             </div>
@@ -102,7 +106,7 @@ function paragraphs(text: string): string[] {
                 ? <h3>{floor.name}</h3>
                 : <h3 class="redact" style="font-size:var(--type-lede);font-weight:400">▓▓▓▓▓▓▓▓▓</h3>}
             </div>
-          </div>
+          </summary>
           <div class="floor-body">
             {open
               ? <>
@@ -121,11 +125,23 @@ function paragraphs(text: string): string[] {
                 </>
               : <Sealed at={floor.revealedAt} />}
           </div>
-        </article>
+        </details>
       );
     })}
   </section>
 </Layout>
+
+<script>
+  /* Quick-find links a floor as /#floor-N. A folded floor would swallow the
+     jump, so the target opens itself; without JavaScript the anchor still
+     lands on the floor's head. */
+  function openTarget() {
+    const el = location.hash.length > 1 ? document.getElementById(location.hash.slice(1)) : null;
+    if (el instanceof HTMLDetailsElement) { el.open = true; el.scrollIntoView({ block: 'start' }); }
+  }
+  openTarget();
+  addEventListener('hashchange', openTarget);
+</script>
 
 <style>
   .intro { padding-block: 56px 44px; }
@@ -142,7 +158,14 @@ function paragraphs(text: string): string[] {
   .sec-intro { color: var(--color-grey-300); max-width: var(--measure); margin: 8px 0 30px; font-size: var(--type-body); }
   /* A jump to #floor-N lands below the sticky gate bar, not under it. */
   .floor { margin-bottom: 14px; scroll-margin-top: 84px; }
-  .floor-head { display: flex; border-bottom: 1px solid var(--color-line); background: var(--color-raised); }
+  .floor-head { display: flex; align-items: stretch; background: var(--color-raised);
+                cursor: pointer; list-style: none; }
+  .floor-head::-webkit-details-marker { display: none; }
+  .floor[open] > .floor-head { border-bottom: 1px solid var(--color-line); }
+  .floor-head::after { content: '+'; margin-left: auto; align-self: center; padding: 0 20px;
+                       font-family: var(--font-mono); font-size: var(--type-entry); color: var(--color-grey-500); }
+  .floor[open] > .floor-head::after { content: '−'; }
+  .floor-head:focus-visible { outline: 2px solid var(--color-gold); outline-offset: -2px; }
   .floorno { font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: 1;
              min-width: 86px; flex: none;
              display: flex; align-items: center; justify-content: center; padding: 16px 18px 12px; }
@@ -162,7 +185,8 @@ function paragraphs(text: string): string[] {
   @media (max-width: 560px) {
     .floorno { font-size: 34px; min-width: 64px; padding: 12px 10px; }
     .floor-titles h3 { font-size: 21px; }
-      .broadcast { padding: 16px; }
+    .floor-head::after { padding: 0 14px; }
+    .broadcast { padding: 16px; }
     .floor { scroll-margin-top: 150px; }
   }
 </style>

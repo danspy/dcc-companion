@@ -108,9 +108,11 @@ nothing.
 
 The **premise** is the System's floor announcement now (`*** Now entering ***`, mono), and the
 page's intro is the System too, a *Previously, on Dungeon Crawler World* that names only what the
-back cover does. Every floor stays open, as it always was: folding all but the current one was
-tried and read as a page with no information on it. A quick-find jump to `/#floor-N` clears the
-sticky bar with `scroll-margin-top`.
+back cover does. Floors are `<details>`: the one the reader stands on opens, the rest fold. (For
+a moment this looked like a page with no information on it, but that was a stale dev server whose
+seed still held string recaps; the page now renders an old string as one part rather than
+nothing.) A quick-find jump to `/#floor-N` opens its target and clears the sticky bar with
+`scroll-margin-top`.
 Floor 3's story now runs to 2:end (the epilogue's leaderboard and the veto) and floor 7's is told
 entirely at 5:end, where the book tells it.
 
