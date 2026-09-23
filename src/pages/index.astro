@@ -8,7 +8,7 @@ const { prefs, gate, chapters: currentChapters } = await readGate(Astro.cookies)
 const [books, floors] = await Promise.all([getBooks(), getFloors()]);
 const bookById = new Map(books.map(b => [b.id, b]));
 ---
-<Layout title="The Descent">
+<Layout title="Floors">
   <section class="wrap intro">
     <p class="eyebrow" style="color:var(--color-blood)">Dungeon Crawler World · Season: Earth</p>
     <h1>The Crawl<em>So Far</em></h1>
@@ -41,7 +41,7 @@ const bookById = new Map(books.map(b => [b.id, b]));
   <section class="wrap">
     <div class="sec-head">
       <span class="eyebrow">01</span>
-      <h2>The Descent</h2>
+      <h2>Floors</h2>
     </div>
     <p class="sec-intro">Floor numbers and book titles are printed on the covers, so they stay
       visible. What happened on them does not.</p>
@@ -53,7 +53,7 @@ const bookById = new Map(books.map(b => [b.id, b]));
       const recapOpen = gate.frontier >= floor.recapSortKey;
       const book = bookById.get(floor.book);
       return (
-        <article class="slab floor">
+        <article class="slab floor" id={`floor-${floor.id}`}>
           <div class="floor-head">
             <div class="floorno" style={`background:${floor.accent};color:${floor.ink}`}>
               {String(floor.id).padStart(2, '0')}

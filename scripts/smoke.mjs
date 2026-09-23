@@ -42,6 +42,8 @@ const ROUTES = [
       entries the data happens to hold. */
    ['class="pickrow entryrow" hidden', 'class="stagerow gridrow" hidden', ' shown']],
   ['/progress', ['class="stats"', 'tbl-head']],
+  /* Quick-find answers per reader from the cookie; Carl is met at 1:1. */
+  ['/find.json?q=car', ['"href":"/entity/carl"']],
   ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"']],
   /* The form and the empty state render with no model call; a POST is not
      smoked, because it would spend a real request on a real key. */

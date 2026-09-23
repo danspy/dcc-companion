@@ -144,7 +144,7 @@ const nextSealed = awards.find(a => gate.frontier < a.sortKey);
 /* "When" groups by floor; the rest are flat. There is no separate "Floor"
    sort because that is what "When" already is — see the banding below. */
 const SORTS = [
-  { key: 'when', label: 'When' },
+  { key: 'when', label: 'In order' },
   { key: 'recent', label: 'Latest' },
   { key: 'name', label: 'Name' },
   { key: 'box', label: 'Box' },

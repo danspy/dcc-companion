@@ -10,7 +10,7 @@ const { beat, floor = null, id } = Astro.props;
 ---
 <li class="entry" id={id} data-key={beat.sortKey}>
   <div class="stamp">
-    <span class="bk">Bk {beat.book}{beat.chapter ? `·${beat.chapter}` : ''}</span>
+    <span class="bk">Book {beat.book}{beat.chapter ? ` · Ch ${beat.chapter}` : ''}</span>
     {floor && (
       <span class="fl" style={`--dot:${floor.accent}`}>
         Floor {floor.id} — {floor.name}

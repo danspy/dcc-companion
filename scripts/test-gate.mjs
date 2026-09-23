@@ -520,6 +520,27 @@ test('the lint gates an alias at its own point, and never before its entity', ()
   assert.ok(run([{ name: 'Hamed', at: '3:1' }], 'x').some(e => e.includes('before the entity itself')));
 });
 
+test('quick-find answers only with what the reader has reached', async () => {
+  const { quickFind } = await import('../src/lib/quickfind.ts');
+  const { gateFor } = await import('../src/lib/spoiler.ts');
+  const gate = (book, chapter) => gateFor({ book, chapter, spoilers: true }, true, false, 100);
+  const ents = [
+    { id: 'carl', kind: 'character', name: 'Carl', aka: [], role: 'Protagonist', revealedAt: '1:1' },
+    { id: 'katia', kind: 'character', name: 'Katia Grim', aka: ['Katia'], role: 'Crawler', revealedAt: '2:21' },
+    { id: 'hamed', kind: 'character', name: 'The Night Wyrm', aka: [{ name: 'Hamed', at: '6:32' }], role: 'Guild head', revealedAt: '3:19' },
+  ];
+  const floors = [{ id: 9, name: 'Faction Wars', revealedAt: '7:1', nameAt: '1:43' }];
+  const names = (q, g) => quickFind(q, ents, floors, g).map(h => h.name);
+  assert.deepEqual(names('kat', gate(1, 10)), [], 'a sealed entity is not an answer');
+  assert.deepEqual(names('kat', gate(2, 21)), ['Katia Grim']);
+  assert.deepEqual(names('hamed', gate(4, 1)), [], 'an alias is not searchable before its own reveal');
+  assert.deepEqual(names('hamed', gate(6, 32)), ['The Night Wyrm']);
+  assert.deepEqual(names('faction', gate(1, 42)), []);
+  assert.deepEqual(names('faction', gate(1, 43)), ['Faction Wars'], 'a floor is findable from its nameAt');
+  assert.deepEqual(names('ran', gate(8, 0)), [], 'word starts only: "ran" does not find Tran-like names mid-word');
+  assert.equal(quickFind('', ents, floors, gate(8, 0)).length, 0);
+});
+
 test('the premise is never a leak, even with no position at all', () => {
   // A reader who has told us nothing has still read the front page.
   assert.deepEqual(leaksAt('Carl is not available for comment.', 0), []);

@@ -27,10 +27,13 @@ const aka = aliasesSeen(entity, gate);
 const nameById = new Map(all.map(e => [e.id, e]));
 const floorById = new Map(floors.map(f => [f.id, f]));
 
-/* Usage logs read better as their own block: "where is this used, and when" is
-   a different question from "what happened to this character". */
-const uses = beats.filter(b => b.kind === 'use');
-const story = beats.filter(b => b.kind !== 'use');
+/* Usage logs read better as their own block — for a thing. "Where is this used,
+   and when" is a question about an item or a mechanic. A character's `use`
+   beats are that character using something, which is part of their story, and
+   splitting them out put a "Where it's used" heading above Carl's own life. */
+const usable = entity.kind === 'item' || entity.kind === 'mechanic';
+const uses = usable ? beats.filter(b => b.kind === 'use') : [];
+const story = usable ? beats.filter(b => b.kind !== 'use') : beats;
 
 /* Beats arrive sorted by sortKey, so everything still sealed sits at the end.
    They collapse into a single line rather than a stack of stamped placeholders:
@@ -45,6 +48,18 @@ const split = (rows: typeof beats) => {
 };
 const useLog = split(uses);
 const storyLog = split(story);
+
+/* A long life gets a way in by book. Each book's first shown entry carries the
+   anchor; the jump row only appears once the log is long enough to need it. */
+const bookStarts = new Map<number, number>();
+storyLog.shown.forEach((b, i) => { if (!bookStarts.has(b.book)) bookStarts.set(b.book, i); });
+const bookCounts = new Map<number, number>();
+for (const b of storyLog.shown) bookCounts.set(b.book, (bookCounts.get(b.book) ?? 0) + 1);
+const jumpable = storyLog.shown.length > 12 && bookStarts.size > 1;
+const anchorOf = (i: number) => {
+  for (const [book, start] of bookStarts) if (start === i) return `book-${book}`;
+  return undefined;
+};
 
 const visibleRelations = relations.filter(r => gate.frontier >= r.sortKey);
 const hiddenRelations = relations.length - visibleRelations.length;
@@ -61,7 +76,7 @@ const description = descriptionFor(entity, gate);
    end-of-book tag. */
 const stampOf = (tag: string) => {
   const [book, chapter] = tag.split(':');
-  return chapter && chapter !== 'end' ? `Bk ${book} · ${chapter}` : `Bk ${book}`;
+  return chapter && chapter !== 'end' ? `Book ${book} · Ch ${chapter}` : `Book ${book}`;
 };
 ---
 <Layout title={entity.name}>
@@ -74,7 +89,7 @@ const stampOf = (tag: string) => {
       {onTimeline && (
         <p class="totime wide-only">
           <a class="btn btn-go" href={`/when?view=braid&id=${entity.id}`}
-             >Trace {entity.name} along the crawl →</a>
+             >See {entity.name} on the timeline →</a>
         </p>
       )}
     </header>
@@ -109,10 +124,17 @@ const stampOf = (tag: string) => {
 
         {story.length > 0 && (
           <section>
-            <h2 class="sect">{entity.kind === 'character' ? 'Arc' : 'History'}</h2>
+            <h2 class="sect">{entity.kind === 'character' ? 'Story so far' : 'History'}</h2>
+            {jumpable && (
+              <nav class="booknav" aria-label="Jump to a book">
+                {[...bookStarts.keys()].map(book => (
+                  <a href={`#book-${book}`} class="chip-btn">Book {book} <span class="n">{bookCounts.get(book)}</span></a>
+                ))}
+              </nav>
+            )}
             <ol class="log">
-              {storyLog.shown.map(b => (
-                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} />
+              {storyLog.shown.map((b, i) => (
+                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} id={anchorOf(i)} />
               ))}
               {storyLog.hidden.length > 0 && (
                 <li class="entry more">
@@ -155,6 +177,10 @@ const stampOf = (tag: string) => {
 </Layout>
 
 <style>
+  /* The jump row: one chip per book with an entry the reader has reached. The
+     anchors land under the sticky gate bar unless they leave room for it. */
+  .booknav { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px; }
+  :global(.log .entry[id^="book-"]) { scroll-margin-top: 96px; }
   /* Beat rows, the log and the relation list are in the shared component layer
      (src/styles/global.css), because /when renders the same objects. */
   .hero { padding-block: 44px 26px; border-bottom: 1px solid var(--color-line); }

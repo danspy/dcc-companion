@@ -11,10 +11,10 @@ const prefs = readPrefs(Astro.cookies);
 const books = await getBooks();
 
 const nav = [
-  { href: '/', label: 'The Descent' },
+  { href: '/', label: 'Floors' },
   { href: '/who', label: 'Who & What' },
-  { href: '/when', label: 'When' },
-  { href: '/progress', label: 'Position' },
+  { href: '/when', label: 'Timeline' },
+  { href: '/progress', label: 'Progress' },
   { href: '/achievement', label: 'Achievements' },
 ];
 const here = Astro.url.pathname;
@@ -36,6 +36,10 @@ const here = Astro.url.pathname;
         <span class="brand-mark">DCC</span>
         <span class="brand-name">Crawler's Companion</span>
       </a>
+      <!-- Without JavaScript this is a link to /who, which filters the same set. -->
+      <a href="/who" class="findbtn" id="findbtn" aria-haspopup="dialog">
+        <span>Search</span><kbd>Ctrl K</kbd>
+      </a>
       <nav>
         {nav.map(n => (
           <a href={n.href} class="navlink" aria-current={here === n.href ? 'page' : undefined}>{n.label}</a>
@@ -43,6 +47,16 @@ const here = Astro.url.pathname;
       </nav>
     </div>
   </header>
+
+  <dialog id="quickfind" class="quickfind" aria-label="Search">
+    <form method="dialog" class="finder-search qf-field" role="search">
+      <input id="qf-input" type="search" autocomplete="off" spellcheck="false"
+             placeholder="A name, an item, a place, a floor…" aria-controls="qf-results" />
+      <kbd>Esc</kbd>
+    </form>
+    <ol id="qf-results" class="qf-results" role="listbox"></ol>
+    <p id="qf-note" class="qf-note">Only what you have already reached is searchable.</p>
+  </dialog>
 
   <main><slot /></main>
 
@@ -54,6 +68,78 @@ const here = Astro.url.pathname;
          Inconsolata and Open Sans on #131313.</p>
     </div>
   </footer>
+
+  <script>
+    /* Quick-find. Every answer comes from /find.json, which gates on the
+       reader's own cookie; nothing searchable is held in the page. Results are
+       built with textContent, never innerHTML. */
+    const dlg = document.getElementById('quickfind') as HTMLDialogElement;
+    const input = document.getElementById('qf-input') as HTMLInputElement;
+    const list = document.getElementById('qf-results') as HTMLOListElement;
+    const note = document.getElementById('qf-note') as HTMLParagraphElement;
+    const btn = document.getElementById('findbtn') as HTMLAnchorElement;
+    const isMac = /Mac|iPhone|iPad/.test(navigator.platform);
+    btn.querySelector('kbd')!.textContent = isMac ? '⌘K' : 'Ctrl K';
+
+    let active = -1, timer = 0, seq = 0;
+    type Hit = { href: string; name: string; kind: string; detail: string };
+    let hits: Hit[] = [];
+
+    function open() {
+      if (dlg.open) return;
+      dlg.showModal(); input.value = ''; render([]); input.focus();
+    }
+    function render(h: Hit[]) {
+      hits = h; active = h.length ? 0 : -1;
+      list.replaceChildren(...h.map((hit, i) => {
+        const li = document.createElement('li');
+        li.setAttribute('role', 'option'); li.id = `qf-${i}`;
+        const a = document.createElement('a'); a.href = hit.href;
+        const name = document.createElement('span'); name.className = 'qf-name'; name.textContent = hit.name;
+        const kind = document.createElement('span'); kind.className = 'qf-kind'; kind.textContent = hit.kind;
+        const detail = document.createElement('span'); detail.className = 'qf-detail'; detail.textContent = hit.detail;
+        a.append(name, kind, detail); li.append(a);
+        return li;
+      }));
+      mark();
+      const q = input.value.trim();
+      note.textContent = !q ? 'Only what you have already reached is searchable.'
+        : h.length ? '↑ ↓ to choose, Enter to open.' : 'Nothing you have reached goes by that name.';
+    }
+    function mark() {
+      [...list.children].forEach((li, i) => li.setAttribute('aria-selected', String(i === active)));
+      input.setAttribute('aria-activedescendant', active >= 0 ? `qf-${active}` : '');
+      list.children[active]?.scrollIntoView({ block: 'nearest' });
+    }
+    async function search() {
+      const q = input.value.trim(), mine = ++seq;
+      if (!q) { render([]); return; }
+      try {
+        const res = await fetch(`/find.json?q=${encodeURIComponent(q)}`, { credentials: 'same-origin' });
+        const h = await res.json();
+        if (mine === seq) render(h);
+      } catch { /* a failed lookup leaves the last results; the box still works */ }
+    }
+
+    btn.addEventListener('click', e => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault(); open();
+    });
+    input.addEventListener('input', () => { clearTimeout(timer); timer = window.setTimeout(search, 90); });
+    input.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' && hits.length) { e.preventDefault(); active = (active + 1) % hits.length; mark(); }
+      else if (e.key === 'ArrowUp' && hits.length) { e.preventDefault(); active = (active - 1 + hits.length) % hits.length; mark(); }
+      else if (e.key === 'Enter') { e.preventDefault(); if (hits[active]) location.href = hits[active].href; }
+    });
+    // A click on the backdrop closes it, as a click outside any overlay should.
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+    document.addEventListener('keydown', e => {
+      const typing = e.target instanceof HTMLElement && e.target.closest('input, textarea, select, [contenteditable]');
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); open(); return; }
+      // "/" belongs to a page's own filter where it has one (/who, /when, /achievement).
+      if (e.key === '/' && !typing && !document.querySelector('main .finder-search input')) { e.preventDefault(); open(); }
+    });
+  </script>
 </body>
 </html>
 
@@ -85,6 +171,26 @@ const here = Astro.url.pathname;
              border: 1px solid transparent; padding: 6px 10px; }
   .navlink:hover { color: var(--color-grey-100); border-color: var(--color-line); text-decoration: none; }
   .navlink[aria-current="page"] { color: var(--color-gold); border-color: var(--color-line); }
+  .findbtn { display: flex; align-items: center; gap: 10px; margin-left: auto; flex: none;
+             font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label);
+             text-transform: uppercase; color: var(--color-grey-300);
+             border: 1px solid var(--color-line); background: var(--color-ink); padding: 6px 10px; }
+  .findbtn:hover { color: var(--color-grey-100); border-color: var(--color-gold); text-decoration: none; }
+  kbd { font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-500);
+        border: 1px solid var(--color-line); padding: 1px 5px; text-transform: none; letter-spacing: 0; }
+  .quickfind { width: min(640px, calc(100vw - 32px)); max-height: min(70dvh, 560px); margin: 12vh auto auto;
+               padding: 14px; border: 1px solid var(--color-line); background: var(--color-panel);
+               color: var(--color-grey-100); }
+  .quickfind::backdrop { background: rgba(0, 0, 0, .7); }
+  .qf-results { list-style: none; margin: 10px 0 0; padding: 0; max-height: min(50dvh, 400px); overflow-y: auto; }
+  .qf-results a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 9px 10px;
+                  color: inherit; border: 1px solid transparent; }
+  .qf-results a:hover, .qf-results [aria-selected="true"] a { border-color: var(--color-gold); text-decoration: none; background: var(--color-raised); }
+  .qf-name { font-size: var(--type-body); color: #fff; overflow-wrap: anywhere; }
+  .qf-kind { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
+             text-transform: uppercase; color: var(--color-gold); align-self: center; }
+  .qf-detail { grid-column: 1 / -1; font-size: var(--type-meta); color: var(--color-grey-500); overflow-wrap: anywhere; }
+  .qf-note { margin: 10px 2px 0; font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-500); }
   footer { border-top: 1px solid var(--color-line); margin-top: 48px; padding: 32px 0 64px;
            font-size: 13.5px; color: var(--color-grey-500); }
   footer p { max-width: var(--measure); margin: 0 0 10px; }

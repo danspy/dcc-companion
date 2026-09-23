@@ -10,7 +10,7 @@ const current = books.find(b => b.id === prefs.book);
 <div class="gate">
   <div class="gate-inner wrap">
     <span class="eyebrow">
-      Crawler position —
+      I've read up to —
       <b class={prefs.spoilers && !prefs.book ? 'unset' : undefined}>{!prefs.spoilers
         ? 'spoilers off'
         : prefs.book
@@ -37,7 +37,7 @@ const current = books.find(b => b.id === prefs.book);
       {current?.chapters && <span class="of">/ {current.chapters}</span>}
     </label>
     <span class="spacer"></span>
-    <button class="btn" id="spoilers" aria-pressed={!prefs.spoilers}>Spoil me</button>
+    <button class="btn" id="spoilers" aria-pressed={!prefs.spoilers}>Show everything</button>
   </div>
 </div>
 

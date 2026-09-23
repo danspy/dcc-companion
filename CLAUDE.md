@@ -243,6 +243,34 @@ Two details are deliberate rather than incidental:
   "Tran" matches inside "transparent". So "ran" does not find Tran, which is correct — three
   letters means the start of a word.
 
+### Quick-find: every page, one keystroke, nothing held in the page
+
+`/who` could filter, but only once you were on `/who`. Now a **Search** button sits in the masthead of
+every page, and Ctrl/⌘-K (or `/`, where the page has no filter of its own) opens it. Type a few
+letters, pick with the arrows, Enter goes straight to the entry — or to a floor on the front page.
+
+**The index never leaves the server.** Each keystroke asks `/find.json?q=`, which reads the reader's
+own `dcc_pos` cookie, ranks only entities and floors they have reached (`src/lib/quickfind.ts`), and
+answers with at most twelve. That is the `/who` argument taken one step further: there is no list in
+the document to gate, only the handful of hits for what was typed, so a sealed name cannot be one of
+them. Aliases go through `aliasesSeen`, floors through `nameAt`; the response is `private, no-store`
+and varies on the cookie. Word starts only, like every other filter here. Without JavaScript the
+button is a link to `/who`. `npm run test:gate` pins the gate; `npm run smoke` asks it for Carl.
+
+### Plain words for the chrome
+
+A reader asked why a character page said **"Where it's used"**. It was the usage-log heading for
+items, shown for any entity with `use` beats — and 109 character beats are the character *using*
+something, so Carl's page opened with a stray block above his own life. Only items and mechanics
+get that section now; everything else is one timeline, **"Story so far"** for a character, with a
+row of book chips once it runs long, each landing on that book's first entry.
+
+The same pass renamed chrome that only made sense to whoever built it: *The Descent* is **Floors**,
+*When* is **Timeline**, *Position* is **Progress**, the gate bar reads **"I've read up to —"**, *Spoil
+me* is **Show everything**, the entity page's *Trace … along the crawl* is **See … on the timeline**,
+and a beat stamp reads **Book 3 · Ch 13**, not *Bk 3·13*. Voice belongs in the content; the controls
+should say what they do.
+
 ### `/when` is the same set, laid along the crawl
 
 `/who` answers *who and what*; `/when` answers *when, and with whom*. Same entities, same gate,
@@ -614,7 +642,7 @@ measures the wrong elements and reports a bug that is not there.
 The chart is a frozen 224px name column plus a drawing as wide as the story is
 long. There is no honest small-screen version of that, so below 900px `/when`
 renders the notice — *Eleven floors will not fit through a porthole, crawler* —
-and a way to Who & What, and the entity pages stop offering **Trace … along the
+and a way to Who & What, and the entity pages stop offering **See … on the
 crawl**. Both sides read the breakpoint from `.wide-only` / `.narrow-only` in the
 component layer, written once: if the two disagreed, one of them would send a
 phone to a page that tells it to go away.
@@ -636,7 +664,7 @@ to anyway.
 
 ### The two pages point at each other
 
-`/entity/[id]` offers **Trace {name} along the crawl**, landing on
+`/entity/[id]` offers **See {name} on the timeline**, landing on
 `/when?view=braid&id=…` with that entry followed; the panel's *Open the full
 page* is the return leg. One loop, both directions.
 
@@ -1828,4 +1856,3 @@ currently has a dev server running. It is not this deployment, and only one proj
 - Books 3, 6 and 8 have the thinnest entity coverage relative to their chapter counts
 - Deeper coverage: more items, per-floor mechanics, quotes with chapter anchors
 - Accounts (`data/users.db` + sessions), so progress follows the reader across devices
-- Search / command palette across entities and floors
