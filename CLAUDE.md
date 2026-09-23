@@ -263,7 +263,13 @@ the phrase lived in beats. Now a name or alias hit ranks first, then an entry wh
 tagline says it, then an entry whose *reached* beats do, one row per entry with the chapter and a
 snippet of the line. Every typed word has to start a word of the text. Beats past the frontier are
 never read: the corpus is loaded once per process (content only changes on deploy) and gated per
-request. A title the book gives a character is still worth an alias — Shi Maria is "The Bedlam
+request. **A story hit lands on its own line**, not the top of the page: its href is
+`/entity/<id>#b<beat id>`, the entity page gives every entry that id, and the page script centres
+it and marks it in gold (`.is-hit`, and `:target` without JavaScript, with a `scroll-margin-top`
+that clears the gate bar). A book filter hiding the line is cleared, because the explicit request
+wins over the filter. The dialog closes on a pick, because a hit on the page already open only
+changes the hash. The id is the database row, stable within a deploy, so a stale shared link just
+lands at the top. A title the book gives a character is still worth an alias — Shi Maria is "The Bedlam
 Bride" from 6:8 — because a name hit says *who*, where a beat hit only says *where it came up*.
 
 **How it looks, and why.** The first version shipped with its rows unstyled — name, kind and

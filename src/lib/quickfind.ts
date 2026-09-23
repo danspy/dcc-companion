@@ -18,7 +18,7 @@ export interface FindEntity {
   taglines?: unknown;
 }
 /** A beat as the snapshot stores it: `sortKey` is its resolved gate. */
-export interface FindBeat { entityId: string; headline: string; text: string; sortKey: number; book: number; chapter?: number | null }
+export interface FindBeat { id: number; entityId: string; headline: string; text: string; sortKey: number; book: number; chapter?: number | null }
 export interface FindFloor { id: number; name: string; revealedAt: string; nameAt?: string | null }
 
 /** `tier` says why it matched: by what it is called, or because its story says so. */
@@ -122,7 +122,8 @@ export function quickFind(
       const label = KIND_LABELS[e.kind] ?? e.kind;
       const where = `Book ${f.beat.book}${f.beat.chapter ? ` · Ch ${f.beat.chapter}` : ''}`;
       hits.push({
-        href: `/entity/${e.id}`, name: e.name, kind: label.replace(/s( &.*)?$/, ''),
+        // Straight to the line that matched, not the top of a long page.
+        href: `/entity/${e.id}#b${f.beat.id}`, name: e.name, kind: label.replace(/s( &.*)?$/, ''),
         detail: `${where} — ${snippet(f.head ? f.beat.headline : f.beat.text, terms)}`,
         score: Math.min(20, (f.head ? 12 : 6) + f.n), tier: 'story',
       });

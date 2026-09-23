@@ -128,7 +128,7 @@ const stampOf = (tag: string) => {
             <h2 class="sect">Where it's used</h2>
             <ol class="log">
               {useLog.shown.map(b => (
-                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
+                <BeatEntry beat={b} id={`b${b.id}`} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
               ))}
               {useLog.hidden.length > 0 && (
                 <li class="entry more" hidden={pick !== 0}>
@@ -145,7 +145,7 @@ const stampOf = (tag: string) => {
             <h2 class="sect">{entity.kind === 'character' ? 'Story so far' : 'History'}</h2>
             <ol class="log">
               {storyLog.shown.map(b => (
-                <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
+                <BeatEntry beat={b} id={`b${b.id}`} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
               ))}
               {storyLog.hidden.length > 0 && (
                 <li class="entry more" hidden={pick !== 0}>
@@ -234,4 +234,24 @@ const stampOf = (tag: string) => {
     show(Number(a.dataset.book));
     try { history.replaceState(null, '', a.href); } catch { /* the view is already right */ }
   });
+
+  /* A quick-find hit in the story lands on its own line (#b123). If a book
+     filter is hiding that line, the explicit request wins over the filter; the
+     line is then brought to the middle of the view and marked, so it is found
+     at a glance rather than by reading down from the top. */
+  function reveal() {
+    const li = location.hash.length > 1 ? document.getElementById(location.hash.slice(1)) : null;
+    if (!li || !li.classList.contains('entry')) return;
+    if (li.hidden || li.closest('section[hidden]')) {
+      show(0);
+      try { history.replaceState(null, '', location.pathname + location.hash); } catch { /* shown either way */ }
+    }
+    document.querySelectorAll('.log .entry.is-hit').forEach(x => x.classList.remove('is-hit'));
+    li.classList.add('is-hit');
+    li.tabIndex = -1;
+    li.focus({ preventScroll: true });
+    li.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }
+  reveal();
+  addEventListener('hashchange', reveal);
 </script>

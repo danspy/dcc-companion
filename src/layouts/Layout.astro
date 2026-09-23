@@ -123,6 +123,8 @@ const here = Astro.url.pathname;
         const detail = document.createElement('span'); detail.className = 'qf-detail';
         detail.append(...lit(hit.detail, q));
         a.append(name, kind, detail);
+        // Close before leaving: a hit on the page already open only changes the hash.
+        a.addEventListener('click', () => dlg.close());
         a.addEventListener('mousemove', () => { if (active !== start + j) { active = start + j; mark(false); } });
         sec.append(a); rows.push(a);
       });
@@ -179,7 +181,7 @@ const here = Astro.url.pathname;
     input.addEventListener('keydown', e => {
       if (e.key === 'ArrowDown' && hits.length) { e.preventDefault(); active = (active + 1) % hits.length; mark(); }
       else if (e.key === 'ArrowUp' && hits.length) { e.preventDefault(); active = (active - 1 + hits.length) % hits.length; mark(); }
-      else if (e.key === 'Enter') { e.preventDefault(); if (hits[active]) location.href = hits[active].href; }
+      else if (e.key === 'Enter') { e.preventDefault(); if (hits[active]) { dlg.close(); location.href = hits[active].href; } }
     });
     // A click on the backdrop closes it, as a click outside any overlay should.
     dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
