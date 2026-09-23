@@ -630,7 +630,7 @@
       "tagline": [
         {
           "at": "3:19",
-          "text": "A revenge gift from a man who wanted Carl ruined, worn anyway for the five percent."
+          "text": "A revenge gift from a man who wanted Carl ruined, and worn anyway for the five percent."
         },
         {
           "at": "5:6",
@@ -827,7 +827,7 @@
       "tagline": [
         {
           "at": "5:8",
-          "text": "Something a cult keeps, by Mordecai's account: a crystal like a soul crystal, except nobody has ever established what it does."
+          "text": "Something a cult keeps, by Mordecai's account: a crystal like a soul crystal, except that nobody has ever established what it does."
         },
         {
           "at": "5:67",
@@ -1037,11 +1037,11 @@
       "tagline": [
         {
           "at": "6:3",
-          "text": "A back patch of stacked skulls for Carl's jacket: divine, unique, fleeting, and what it does depends on which gods are standing near."
+          "text": "A back patch of stacked skulls for Carl's jacket: divine, unique, fleeting, and what it does depends on which gods are standing nearby."
         },
         {
           "at": "7:78",
-          "text": "The name is also someone's. The war mages came for the Scavenger's daughter, hidden in the castle, found her, and left with her."
+          "text": "The name belongs to someone, too. The war mages came for the Scavenger's daughter, hidden in the castle, found her, and left with her."
         }
       ],
       "description": [
@@ -1670,7 +1670,7 @@
       "role": "Personal space upgrade",
       "revealedAt": "3:30",
       "sort": 46,
-      "tagline": "Twenty-five thousand gold, one of the cheapest upgrades going: a flying Roomba for the personal space, bought by people still dripping blood on the counter.",
+      "tagline": "Twenty-five thousand gold and one of the cheapest upgrades going: a flying Roomba for the personal space, bought by people still dripping blood on the counter.",
       "beats": [
         {
           "kind": "use",
@@ -2001,11 +2001,11 @@
       "tagline": [
         {
           "at": "3:29",
-          "text": "One of a hundred. An ordinary crossbow bolt unless it lands in a god's eye, and then fifteen seconds without invulnerability. Katia's, from Princess Formidable."
+          "text": "One of a hundred. An ordinary crossbow bolt unless it lands in a god's eye, and then fifteen seconds without invulnerability. Katia's, a gift from Princess Formidable."
         },
         {
           "at": "6:72",
-          "text": "The bolt that opened a goddess to a killing blow. Magical bolts can be used again if they don't break, and Katia still has this one."
+          "text": "The bolt that opened a goddess to a killing blow. Magical bolts can be reused if they don't break, and Katia still has this one."
         },
         {
           "at": "8:96",
@@ -2212,7 +2212,7 @@
         },
         {
           "at": "3:11",
-          "text": "Carl's fist since the first floor. The chance it summons Grull when it strikes one of his adherents is 1.5 percent a punch, and nobody said it stacks."
+          "text": "Carl's fist since the first floor. The chance it summons Grull when it strikes one of his adherents is 1.5 percent a punch, and nobody has said whether it stacks."
         },
         {
           "at": "4:13",
