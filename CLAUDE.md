@@ -257,6 +257,15 @@ them. Aliases go through `aliasesSeen`, floors through `nameAt`; the response is
 and varies on the cookie. Word starts only, like every other filter here. Without JavaScript the
 button is a link to `/who`. `npm run test:gate` pins the gate; `npm run smoke` asks it for Carl.
 
+**It searches the story, not just the names.** The first version matched names, aliases and roles,
+and a reader typed "bride" and got nothing — "the Bedlam Bride" was not an alias of anyone, and
+the phrase lived in beats. Now a name or alias hit ranks first, then an entry whose *reached*
+tagline says it, then an entry whose *reached* beats do, one row per entry with the chapter and a
+snippet of the line. Every typed word has to start a word of the text. Beats past the frontier are
+never read: the corpus is loaded once per process (content only changes on deploy) and gated per
+request. A title the book gives a character is still worth an alias — Shi Maria is "The Bedlam
+Bride" from 6:8 — because a name hit says *who*, where a beat hit only says *where it came up*.
+
 ### Plain words for the chrome
 
 A reader asked why a character page said **"Where it's used"**. It was the usage-log heading for

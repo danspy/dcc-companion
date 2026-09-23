@@ -539,6 +539,19 @@ test('quick-find answers only with what the reader has reached', async () => {
   assert.deepEqual(names('faction', gate(1, 43)), ['Faction Wars'], 'a floor is findable from its nameAt');
   assert.deepEqual(names('ran', gate(8, 0)), [], 'word starts only: "ran" does not find Tran-like names mid-word');
   assert.equal(quickFind('', ents, floors, gate(8, 0)).length, 0);
+
+  // The story is searchable too, but only as far as the reader has read it.
+  const beats = [
+    { entityId: 'carl', headline: 'A quest', text: 'New Quest. The Bedlam Bride. An escort quest.', sortKey: parseAt('6:26'), book: 6, chapter: 26 },
+  ];
+  const story = (q, g) => quickFind(q, ents, floors, g, 12, beats).map(h => h.name);
+  assert.deepEqual(story('bride', gate(6, 25)), [], 'a beat past the frontier is not searched');
+  assert.deepEqual(story('bride', gate(6, 26)), ['Carl']);
+  assert.deepEqual(story('bedlam bride', gate(6, 26)), ['Carl'], 'every word must start a word of the text');
+  const withTag = [{ ...ents[0], taglines: [{ sortKey: parseAt('1:1'), text: 'Coast Guard.' }, { sortKey: parseAt('5:1'), text: 'A marine technician.' }] }];
+  const tag = (q, g) => quickFind(q, withTag, [], g).map(h => h.name);
+  assert.deepEqual(tag('marine', gate(4, 1)), [], 'a later tagline is not searched early');
+  assert.deepEqual(tag('marine', gate(5, 1)), ['Carl']);
 });
 
 test('the premise is never a leak, even with no position at all', () => {

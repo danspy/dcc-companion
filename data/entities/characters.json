@@ -12341,7 +12341,9 @@
       "id": "shi-maria",
       "kind": "character",
       "name": "Shi Maria",
-      "aka": [],
+      "aka": [
+        "The Bedlam Bride"
+      ],
       "role": "Crawler · card",
       "revealedAt": "6:8",
       "sort": 13,
