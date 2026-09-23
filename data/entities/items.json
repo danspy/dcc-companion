@@ -11,7 +11,7 @@
       "role": "Artifact · legendary/celestial",
       "revealedAt": "4:9",
       "sort": 1,
-      "tagline": "An artifact a bugbear treasure hunter spent twenty years chasing, said to be buried in a necropolis under the island. Mordecai has never heard of it, and reminds everyone what the word feral usually means.",
+      "tagline": "The Gate of the Feral Gods is said to be buried in the long-lost Necropolis of Anser. A bugbear submarine captain spent close to twenty years looking for it, and an artifact of this grade has no business turning up this early.",
       "description": [
         {
           "at": "4:15",
@@ -179,7 +179,7 @@
       "role": "Unstable custom explosive",
       "revealedAt": "2:25",
       "sort": 2,
-      "tagline": "An explosion large enough to rattle the teeth of a god. It goes off the instant it leaves his inventory.",
+      "tagline": "Carl's Doomsday Scenario is a soul crystal going off inside a Sheol Glass Reaper Case, big enough to flatten forty-five square kilometres. It can no longer be stabilized, and it will explode the instant it leaves his inventory.",
       "description": "Carl's Doomsday Scenario. Type: Unstable custom explosive. Effect: An explosion large enough to rattle the teeth of a god. Status: Explosion Imminent. Created by a man who murders babies and steals rare collectibles from his elders, this device is powerful enough to level an entire city and all the suburbs around it. It is created by combining a massively overloaded soul crystal and a Sheol Glass Reaper Case. Warning: This item can no longer be stabilized.",
       "beats": [
         {
@@ -232,7 +232,7 @@
       "role": "Tiara · fleeting, unique",
       "revealedAt": "1:7",
       "sort": 3,
-      "tagline": "A tiara of dark smoky gems that enrols the wearer in a royal succession eight floors down.",
+      "tagline": "The Enchanted Crown of the Sepsis Whore is a tiara with a clouded purple stone at its centre. Putting it on places the wearer permanently in the line of succession for the Blood Sultanate on the ninth floor, and Donut put it on before Mordecai could finish warning her.",
       "description": "Enchanted Crown of the Sepsis Whore. Who's a dirty girl? You're a dirty girl! This is a Fleeting item! This is a Unique* item! Imbues wearer with +5 Intelligence, grants the user +5 to the Good First Impression Skill. All attacks, including magical attacks, now have a 15% chance to inflict the Sepsis Debuff. Warning! (Seriously though. I'm going to say this again. WARNING! Read this shit before you put it on.) Placing this crown upon your head permanently places you within the royal line of succession for the Blood Sultanate on the ninth floor of the world dungeon. Removing this item will not remove this status. Royal members of the Blood Sultanate will be required to slay the Sultan and all other members of the royal family before descending to the tenth floor. You'll only want to wear this if you're a blood-thirsty, raging psychopath.",
       "beats": [
         {
@@ -330,11 +330,11 @@
       "tagline": [
         {
           "at": "3:7",
-          "text": "A unique book off a prize carousel: chicken and goblin recipes galore, each with a tale from its anonymous author."
+          "text": "The Dungeon Anarchist's Cookbook came off a prize carousel looking like a joke book of chicken and goblin recipes, each with a story from its anonymous author."
         },
         {
           "at": "3:8",
-          "text": "Passed from crawl to crawl since the fifteenth season. Carl holds the twenty-fourth edition, and whatever he writes goes into the twenty-fifth."
+          "text": "The Cookbook has been passed from crawl to crawl since the fifteenth season. Carl holds the twenty-fourth edition, and whatever he writes in it goes into the twenty-fifth."
         }
       ],
       "description": "Book. The Dungeon Anarchist's Cookbook by Anonymous. This is a unique item. Chicken and Goblin recipes galore! But it's more than that, too. Each recipe is accompanied by a hilarious tale by the anonymous author, recounting some of the zany and madcap misadventures they experienced gathering these mouth-watering recipes. Fun for the whole family! This book is a real hoot.",
@@ -555,7 +555,7 @@
       "role": "Consumable",
       "revealedAt": "1:5",
       "sort": 5,
-      "tagline": "Over a hundred possible effects, half of them good and the rest neutral or worse. One cat ate it straight out of Carl's hand and turned into a quivering blob.",
+      "tagline": "An Enhanced Pet Biscuit has over a hundred possible effects, half of them good and the rest neutral or worse. The cat snatched this one out of Carl's hand, melted into a heap of furry goo, and got up talking.",
       "description": "Enhanced Pet Biscuit. So, it looks like a regular pet biscuit. It's not. Feed to your pet at your own risk. What's the worst that can happen?",
       "beats": [
         {
@@ -630,11 +630,11 @@
       "tagline": [
         {
           "at": "3:19",
-          "text": "A revenge gift from a man who wanted Carl ruined, and worn anyway for the five percent."
+          "text": "Frank Q gave Carl this ring as a curse: while one of its marks lives, the wearer cannot be healed. Carl wears it anyway, for the five percent it adds to every stat."
         },
         {
           "at": "5:6",
-          "text": "Mark a target, kill it, keep a point of its best stat. Mordecai says it is addictive, and Donut does not want Carl picking up a new habit."
+          "text": "The ring marks a target, and when the target dies, the wearer keeps a point of its best stat. Mordecai says it is addictive, and Donut does not want Carl picking up a new habit."
         }
       ],
       "description": [
@@ -784,7 +784,7 @@
       "role": "Consumable · boon",
       "revealedAt": "6:19",
       "sort": 7,
-      "tagline": "Eat the flower, spend an hour at one percent, and a goddess decides what you become.",
+      "tagline": "Eat the Orchid of Eileithyia's Grace and you spend an hour unconscious at one percent health, with healing blocked. Survive it, and the goddess decides which of her boons you receive.",
       "description": "Warning: This item can only be used by a female. Or a male, if you're a seahorse. It's a flower. You're supposed to eat it, though it might be a good decoration instead. […] Anyway, if you eat this flower, it renders you unconscious for one hour with your health at 1% of your max. You cannot heal during this time. If you survive this ordeal, you will be given one of three permanent boons from the goddess Eileithyia. The given boon is at the discretion of the goddess, and it cannot be predicted. If you choose to worship Eileithyia before you consume this flower, the descriptions of the boons will be expanded. She will also ask you which of the three you'd prefer. Her cooperation is not guaranteed, especially if she doesn't like you. But Eileithyia is known to be a generous goddess.",
       "beats": [
         {
@@ -827,11 +827,11 @@
       "tagline": [
         {
           "at": "5:8",
-          "text": "Something a cult keeps, by Mordecai's account: a crystal like a soul crystal, except that nobody has ever established what it does."
+          "text": "According to Mordecai, the Guild of Suffering keeps something called a memorial crystal, which is like a soul crystal, except that nobody has ever established what it does."
         },
         {
           "at": "5:67",
-          "text": "What a fallen god or demigod leaves behind: knowledge, usually god-tier spells, unlocked by wearing it and killing things. This one is the elf queen's prize, at a hundred hands."
+          "text": "A memorial crystal is what a fallen god or demigod leaves behind. This one is the most expensive prize on Chaco's counter, at a hundred hunter hands: the queen usually wears it around her neck, and nobody knows which dead god made it."
         }
       ],
       "description": [
@@ -988,7 +988,7 @@
       "role": "Jewellery · celestial",
       "revealedAt": "7:3",
       "sort": 9,
-      "tagline": "Out of a celestial box, from a waste-management company, on the eve of a war.",
+      "tagline": "The Tiara of a Thousand Lights came out of a celestial box from a waste-management company, on the eve of a war. Donut wears it with Quan Ch's cloak, though nothing has been charged into it yet.",
       "description": [
         {
           "at": "7:3",
@@ -1037,11 +1037,11 @@
       "tagline": [
         {
           "at": "6:3",
-          "text": "A back patch of stacked skulls for Carl's jacket: divine, unique, fleeting, and what it does depends on which gods are standing nearby."
+          "text": "The Scavenger's Daughter is a divine back patch for Carl's jacket: a pile of skulls, stacked nice and neat. What it does depends on which gods, and certain demons, happen to be nearby."
         },
         {
           "at": "7:78",
-          "text": "The name belongs to someone, too. The war mages came for the Scavenger's daughter, hidden in the castle, found her, and left with her."
+          "text": "The Scavenger's Daughter is also a person. The war mages came to the castle looking for her, found her, and have left with her."
         }
       ],
       "description": [
@@ -1216,11 +1216,11 @@
       "tagline": [
         {
           "at": "3:9",
-          "text": "A double-width spot on a casino wheel, marked Nothing! Hit its twin on the roulette table and the floor opens, something with claws reaches up, and the player is gone."
+          "text": "Nothing! is a double-width space on the Desperado Club's wheel of fortune. At the roulette table, a player who lands on its twin falls through the floor, and a ghostly clawed arm rises out of the dark after him."
         },
         {
           "at": "4:24",
-          "text": "Where the pantheon put the old gods, and minor deities who misbehave. Every shortcut the Gate takes goes through it."
+          "text": "The Nothing is where gods are banished, as Samantha's own father banished her. Her first escape split her in two, and every time a Gate portal closes, one of those inside gets through."
         }
       ],
       "beats": [
@@ -1308,11 +1308,11 @@
       "tagline": [
         {
           "at": "2:17",
-          "text": "A scoop that looks like wicker and is not, strapped to a forearm and reaching two and a half feet past the hand. The fans picked it, and it throws whatever he summons into it."
+          "text": "The fans voted Carl a xistera: a scoop that looks like wicker, strapped to his forearm and reaching two and a half feet past his hand, which hurls whatever he pulls from his inventory into it."
         },
         {
           "at": "4:34",
-          "text": "Range, accuracy, and a bolt-on slot for throwing a head. Everything Carl builds has to get somewhere."
+          "text": "An emergency box has sent Carl an extension slot for his xistera, built for one purpose: throwing Samantha's head, five hundred metres for every point of his strength. Take the slot off, and she comes back to him."
         }
       ],
       "description": [
@@ -1398,11 +1398,11 @@
       "tagline": [
         {
           "at": "1:19",
-          "text": "A potion from a gold Looter Box: one level in one named skill, and a remark about your card collection thrown in."
+          "text": "A Skill Potion from a gold box raises one named skill by a single level."
         },
         {
           "at": "1:43",
-          "text": "Not always one level. The Maestro's legendary one takes Find Crawler straight to fifteen, and higher for the right class."
+          "text": "Not every skill potion is worth a single level. On his show, the Maestro gave Frank and Maggie a legendary one that takes Find Crawler to level fifteen, and there is exactly one crawler Maggie wants found."
         }
       ],
       "description": [
@@ -1476,11 +1476,11 @@
       "tagline": [
         {
           "at": "6:40",
-          "text": "A convention message board rendered as a book. Write under a crawler's name and only that crawler reads it."
+          "text": "The Filthy Little Crawler's Book of Voodoo came out of a Gold Prepotente Box, and Carl cannot trade it, destroy it or throw it away. It is named after the message boards at old conventions, and the System goes out of its way to say that this is the only reason."
         },
         {
           "at": "7:57",
-          "text": "The System insists it is not named for anything nefarious, and keeps nudging Carl toward a second use for it."
+          "text": "The System has dropped Carl a heavy hint, in the name of a box, that the Voodoo book can be used together with his ability tattoo, and then declined to say how."
         }
       ],
       "description": [
@@ -1561,11 +1561,11 @@
       "tagline": [
         {
           "at": "2:13",
-          "text": "A reward the audience fills by vote. Receive one and you wait thirty hours to open it while the followers decide."
+          "text": "A Fan Box holds items voted for by the crawler's followers. Once you receive one, you cannot open it for thirty hours while the fans vote."
         },
         {
           "at": "3:7",
-          "text": "The audience chooses what is inside, and on a platinum one every vote costs a credit, which is meant to keep the trolls out."
+          "text": "A Fan Box is the prize for being watched: the audience votes on what goes inside, and the crawler carries it around for thirty hours, knowing that strangers are arguing about what they deserve."
         }
       ],
       "beats": [
@@ -1605,11 +1605,11 @@
       "tagline": [
         {
           "at": "1:4",
-          "text": "The one box only a patron can send, and by Mordecai's reckoning even a bronze one beats a plain gold box."
+          "text": "Only a patron can send a Benefactor Box, and they hold the rarest items. According to Mordecai, even a bronze Benefactor Box is better than a plain gold Adventurer Box."
         },
         {
           "at": "1:5",
-          "text": "A box bought for you by somebody who wants you to keep going, and rank for rank it beats anything the dungeon hands out on merit."
+          "text": "A Benefactor Box is bought for you by somebody out there who wants you to keep going, and it may hold things from the patron's home world that the dungeon itself would never give you."
         }
       ],
       "beats": [
@@ -1646,7 +1646,7 @@
       "role": "Contraption",
       "revealedAt": "4:4",
       "sort": 45,
-      "tagline": "A tracked all-terrain suicide machine, built by hand, and the System’s own write-up of it is mostly abuse.",
+      "tagline": "The Royal Chariot is a tracked contraption that Carl and Katia built by hand around a magical train-cart engine. Donut named it before it was finished, and the System's description of it is mostly abuse.",
       "description": "Tracked All-Terrain Suicide Machine. The Royal Chariot – Contraption. If a snowmobile got drunk on moonshine and had a sweaty, ill-advised night with a hillbilly’s coon-hunting ATV, this oversized birth defect of a vehicle would be the result.",
       "beats": [
         {
@@ -1670,7 +1670,7 @@
       "role": "Personal space upgrade",
       "revealedAt": "3:30",
       "sort": 46,
-      "tagline": "Twenty-five thousand gold and one of the cheapest upgrades going: a flying Roomba for the personal space, bought by people still dripping blood on the counter.",
+      "tagline": "A Cleaner Bot is one of the cheapest personal-space upgrades, at twenty-five thousand gold. Katia bought one without a word, because the room was swimming in ghoul blood.",
       "beats": [
         {
           "kind": "use",
@@ -1743,7 +1743,7 @@
       "role": "Airship",
       "revealedAt": "7:6",
       "sort": 47,
-      "tagline": "A stealth light bomber out of a celestial box, earned by outliving a goddess who had marked Louis for death. The name is the one Firas once wanted for the Twister.",
+      "tagline": "Party Planner is a silver tilt-rotor airship that came out of the celestial box Louis earned by outliving a goddess's mark for death. He gave it the name Firas once suggested for another vehicle.",
       "description": "Casket in the Sky. Party Planner. Tilt Rotor Stealth Light Bomber. Vehicle. This vehicle is classed as tier three Armor.",
       "beats": [
         {
@@ -1777,7 +1777,7 @@
       "role": "Contraption",
       "revealedAt": "1:16",
       "sort": 48,
-      "tagline": "A goblin motorcycle running on steam, with a sidecar built to hold a princess.",
+      "tagline": "The Goblin Copper Chopper is a steam-driven goblin motorcycle with a sidecar: a single wheel on a huge spring and a fur-lined orc skull for a seat, which Donut began demanding changes to the moment she sat in it.",
       "description": "Goblin Copper Chopper with attached sidecar. Human-sized. Contraption. Take a junkyard bicycle, add an unreliable steam engine, remove all the bolts holding it together.",
       "beats": [
         {
@@ -1828,15 +1828,15 @@
       "tagline": [
         {
           "at": "1:32",
-          "text": "Rev-Up moonshine, a splash of goblin oil, and a torch for a cork. Burns hotter, bigger and faster than a Molotov, and it has Carl's name on it."
+          "text": "Carl's Jug O' Boom is a clay jug of Rev-Up moonshine with a splash of goblin oil and a short torch jammed in like a cork. It throws blue flames up to the ceiling, and the dungeon has named it after him."
         },
         {
           "at": "1:35",
-          "text": "Rev-Up moonshine and a torch for a cork, entered in the Dungeon Codex under Carl's name. One gold coin to him for every kill another crawler makes with it."
+          "text": "The Jug O' Boom is now in the Dungeon Codex under Carl's name, and he earns a gold coin for every kill another crawler makes with it, for the rest of his life."
         },
         {
           "at": "2:15",
-          "text": "A Dungeon Codex recipe with Carl's name on it. The moonshine it needs is no longer being made, and the royalties dried up after the first few coins."
+          "text": "The moonshine the Jug O' Boom needs is no longer being made, and Carl's royalties stopped after the first few coins."
         }
       ],
       "description": "Created by an unstable, pantsless man who talks to a cat, Carl's Jug O' Boom takes the bigger-is-better approach when it comes to hobgoblin fire bottles. Burns hotter, bigger, and faster than your normal Molotov Cocktail. The use of a standard torch instead of a cloth wick makes these devices much more stable. Just don't drop it once it's lit, lest you find yourself doing a Joan of Arc impersonation.",
@@ -2001,15 +2001,15 @@
       "tagline": [
         {
           "at": "3:29",
-          "text": "One of a hundred. An ordinary crossbow bolt unless it lands in a god's eye, and then fifteen seconds without invulnerability. Katia's, a gift from Princess Formidable."
+          "text": "The Bolt of Ophiotaurus is a single crossbow bolt from Princess Formidable. It is an ordinary bolt unless it goes straight into a god's eye, and then the god's invulnerability pauses for fifteen seconds."
         },
         {
           "at": "6:72",
-          "text": "The bolt that opened a goddess to a killing blow. Magical bolts can be reused if they don't break, and Katia still has this one."
+          "text": "The Bolt of Ophiotaurus opened a goddess to a killing blow. Magical bolts can be used again as long as they don't break, and Katia still has this one."
         },
         {
           "at": "8:96",
-          "text": "Katia's bolt, fired from Donut's back straight into Emberus's eye. Fifteen seconds of a god with no invulnerability, and Taranis used them."
+          "text": "Princess Donut fired Katia's bolt straight into Emberus's eye, and for fifteen seconds the god had no invulnerability. Taranis used them."
         }
       ],
       "description": [
@@ -2110,11 +2110,11 @@
       "tagline": [
         {
           "at": "4:14",
-          "text": "A spiked ball that summons its thrower's god for sixty seconds. Maggie My's, from the Skull Empire, meant to bring the god of pain down on Carl. Carl has it now."
+          "text": "A Celestial Grenade summons its thrower's god for sixty seconds. This one was Maggie My's, bought by the Skull Empire to bring the god of pain down on Carl, and Carl dived for it and has it now."
         },
         {
           "at": "4:31",
-          "text": "Maggie's grenade, thrown by Carl instead. Emberus arrived, Quan Ch did not get his shot off, and Carl had sixty seconds in which nothing could hurt him."
+          "text": "Carl took Emberus as his god in mid-air and threw Maggie's grenade at Quan Ch. Emberus arrived, and for sixty seconds of Divine Intervention nothing could hurt Carl."
         }
       ],
       "description": [
@@ -2208,15 +2208,15 @@
       "tagline": [
         {
           "at": "1:25",
-          "text": "A charcoal wrist bracer from a brawler box that turns into a spiked black gauntlet of orcish steel when the hand makes a fist. It warns against punching Grull's worshippers, which may include horses."
+          "text": "The Enchanted War Gauntlet of the Exalted Grull is a wrist bracer that becomes a spiked gauntlet of orcish steel when Carl makes a fist. It warns that striking Grull's adherents may transform them into the god himself, and according to Mordecai, those adherents include horses."
         },
         {
           "at": "3:11",
-          "text": "Carl's fist since the first floor. The chance it summons Grull when it strikes one of his adherents is 1.5 percent a punch, and nobody has said whether it stacks."
+          "text": "Every punch Carl lands on one of Grull's adherents has a 1.5 percent chance of summoning the god. The description never said the chance was cumulative. It is."
         },
         {
           "at": "4:13",
-          "text": "Carl's fist, sharpened: longer spikes, a point more strength and dexterity when formed, and the same standing warning about Grull's worshippers."
+          "text": "A platinum sharpening stone has given Carl's gauntlet longer spikes, a point more strength and dexterity when he makes a fist, and a slightly oilier, meaner look."
         }
       ],
       "description": "Item is a wrist bracer that transforms into a spiked war gauntlet made of orcish steel when the hand is shaped into a fist or wields a hilted weapon for more than two seconds at a time. This item on its own does not negate the bare knuckle skill bonus. Warning: if you use this weapon to strike adherents of the war god Grull, you have a 1.5% chance to transfigure your target into the deity himself. Trust me on this. You don't want to do that.",
@@ -2398,19 +2398,19 @@
       "tagline": [
         {
           "at": "2:16",
-          "text": "Round hobgoblin bombs, fused or impact-enchanted, at an eighth the yield of a hobgoblin stick. Pustule has one case of the fused ones in tonight."
+          "text": "Hob-lobbers are round hobgoblin bombs with an eighth of the yield of a hobgoblin stick, in fused and impact-detonated versions. Pustule has only one case of the fused ones tonight."
         },
         {
           "at": "2:18",
-          "text": "A round bomb with a six-second fuse, the perfect size for Carl's xistera, which sends it out like a cannonball."
+          "text": "A fused hob-lobber is the perfect size for Carl's xistera, which sends it out like a cannonball. The fuse runs six or seven seconds, so he pre-lights them to cut it short."
         },
         {
           "at": "4:7",
-          "text": "Carl's staple ammunition: fused or impact-detonated, bought by the case, and cut down at the bench to half, quarter and eighth strength for close work."
+          "text": "Hob-lobbers are Carl's staple ammunition, fused or impact-detonated, and he cuts them down at the bench to half, quarter and eighth strength for close work."
         },
         {
           "at": "6:42",
-          "text": "Carl's staple ammunition, now in sticky and holy-water versions as well as fractions of strength. The dungeon has learned to build rooms that set them off early."
+          "text": "Carl makes sticky hob-lobbers as well now, but the dungeon has learned to fight back: in one room, heat lamps threaten to set a bomb off while it is still in his hand."
         }
       ],
       "description": [
@@ -2588,15 +2588,15 @@
       "tagline": [
         {
           "at": "6:64",
-          "text": "A crusty tube sock full of nickels with a cursed miser's life force inside it. Sapient, upgraded twice, and now Dong Quixote's flail."
+          "text": "Spunky Jefferson is a crusty tube sock full of nickels, cursed to hold the life force of an elderly miser. It is sapient, it grows stronger as it kills, and Dong Quixote has taken it as his flail."
         },
         {
           "at": "8:24",
-          "text": "Dong's sock. Bigger every day, smelling worse, and apparently keeping him alive just by being near him, which Imani does not like the look of."
+          "text": "Dong's sock grows bigger every day, and it seems to be keeping him alive just by being near him. Imani does not like the look of that."
         },
         {
           "at": "8:60",
-          "text": "Dong's sock, for as long as he was worth something to it. Torn, shrunk, silent, then gone, leaving him cursed with Negative ROI and told he was a bad investment."
+          "text": "The sock was torn in a bar fight, shrank back to its original size, and stopped talking to Dong. Then it left him, cursed with Negative ROI, and told him he was a bad investment."
         }
       ],
       "description": [

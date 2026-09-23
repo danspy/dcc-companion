@@ -13,11 +13,11 @@
       "tagline": [
         {
           "at": "1:1",
-          "text": "Regent of the solar system, owner of the broadcast, and the company that chose a dungeon as the way Earth gets its matter back."
+          "text": "The Borant Corporation holds the regency over this solar system, and it chose the reclamation option known as the eighteen-level dungeon."
         },
         {
           "at": "2:end",
-          "text": "Runs the show on the cheap, is being pushed toward bankruptcy itself, and gets one veto a season."
+          "text": "Borant runs the show on the cheap. It burned its one veto of the season to void the Celestial boxes it owed, which has never been done this early."
         }
       ],
       "beats": [
@@ -119,11 +119,11 @@
       "tagline": [
         {
           "at": "1:1",
-          "text": "The body whose rules Earth was seized under, subsection 543, and whose neutral AI has arrived to see those rules followed."
+          "text": "Earth was seized under Syndicate rules, subsection 543 of the Precious Elemental Reserves Code, because it failed to file an appeal within fifty solars of first contact."
         },
         {
           "at": "1:4",
-          "text": "Three billion star systems, the rules Earth was seized under, and the audience for all of this."
+          "text": "The Syndicate is over three billion star systems. It seeded humans on Earth long ago, it made the rules Earth was seized under, and every season its citizens become obsessed with the crawl."
         }
       ],
       "beats": [
@@ -228,7 +228,7 @@
       "role": "The party",
       "revealedAt": "1:7",
       "sort": 3,
-      "tagline": "Named by a cat on the first floor, on the grounds that she had the highest stat total and nobody could stop her.",
+      "tagline": "The Royal Court of Princess Donut is the party's name. Leadership goes to the highest stat total, and the cat's first act as leader was to rename the party after herself.",
       "beats": [
         {
           "kind": "origin",
@@ -322,7 +322,7 @@
       "role": "Crawler group",
       "revealedAt": "1:22",
       "sort": 4,
-      "tagline": "An elder care facility whose residents came down the stairs together and kept going.",
+      "tagline": "Meadow Lark is an eldercare facility in Wenatchee, and its residents and night staff came down the stairs together and kept going.",
       "beats": [
         {
           "kind": "origin",
@@ -420,11 +420,11 @@
       "tagline": [
         {
           "at": "1:39",
-          "text": "Hekla's group: women, led by a crossbow-wielder in a glittering breastplate, and growing."
+          "text": "Brynhild's Daughters is a growing band of women warriors killing their way through the dungeon, led by Hekla, a crossbow-wielder from Iceland in a glittering breastplate."
         },
         {
           "at": "2:21",
-          "text": "Hekla's group, and the one Katia has been fighting with."
+          "text": "Brynhild's Daughters carried Katia through two bosses, until class selection scattered them and she fell too far behind."
         }
       ],
       "beats": [
@@ -479,7 +479,7 @@
       "role": "Ninth-floor power",
       "revealedAt": "1:7",
       "sort": 6,
-      "tagline": "A royal house on the ninth floor whose succession a cat joined on the first because the crown was purple.",
+      "tagline": "The Blood Sultanate is a royal house on the ninth floor. Whoever puts on its crown joins the line of succession for good, and must kill the Sultan and the rest of the royal family before going down to the tenth floor.",
       "beats": [
         {
           "kind": "origin",
@@ -585,11 +585,11 @@
       "tagline": [
         {
           "at": "1:31",
-          "text": "A hundred and fifty men with rifles, down to eighty and counting their bullets."
+          "text": "Le Mouvement is a party of armed men from Africa, down from a hundred and fifty to about eighty after some internal strife."
         },
         {
           "at": "1:44",
-          "text": "Arrived as a recap segment and left as a wipe."
+          "text": "A city boss killed every member of Le Mouvement except one man, who was locked outside the boss room."
         }
       ],
       "beats": [
@@ -627,11 +627,11 @@
       "tagline": [
         {
           "at": "3:20",
-          "text": "What Donut's fans are calling themselves, according to Zev. The rival name, the Donut Holes, does not have her approval."
+          "text": "According to Zev, Princess Posse is what Donut's fans have started calling themselves. A rival name, the Donut Holes, does not have her approval."
         },
         {
           "at": "7:11",
-          "text": "Fifty thousand retired crawlers who came back in, under the banner of a cat."
+          "text": "The Princess Posse is a Faction Wars team now, and fifty thousand former crawlers have come back into the dungeon to fight under the cat's banner."
         }
       ],
       "beats": [
@@ -679,19 +679,19 @@
       "tagline": [
         {
           "at": "4:28",
-          "text": "Zebra-riding elves who favour poison, druid magic and long-range artillery. Outside the dungeon they are as humourless as the Skull Empire, and control half the universe's food."
+          "text": "The Dream are zebra-riding elves who favour poison, druid magic and long-range artillery, and outside the dungeon they control half the universe's food."
         },
         {
           "at": "5:15",
-          "text": "Bald, pale elves with a territory of their own marked on the hunters' map of the grounds."
+          "text": "The Dream are a powerful, galaxy-spanning family of bald, pale elves, and they have a territory of their own on the hunters' map of the grounds."
         },
         {
           "at": "7:1",
-          "text": "Half the food in the universe belongs to them, and a subsidiary of theirs has just bought Sensation Entertainment, along with a contract it intends to see honoured."
+          "text": "The Dream have bought Sensation Entertainment, and with it the third season of Vengeance of the Daughter that Carl's contract guarantees."
         },
         {
           "at": "7:84",
-          "text": "Their warlord is dead and their army is off the board."
+          "text": "Epitome Tagg is dead, and the Dream is beaten and off the board."
         }
       ],
       "beats": [
@@ -791,15 +791,15 @@
       "tagline": [
         {
           "at": "3:30",
-          "text": "Caprids. They own the tunnelling system, which is why anything that happens down here can be watched anywhere at all."
+          "text": "The Plenty are caprids who invented the modern tunnelling system, which carries the crawl across the universe in real time. Nobody knows how it works."
         },
         {
           "at": "5:41",
-          "text": "Carl's sponsor now. A full-grown goat stood in front of the cameras for fifteen seconds, bleated, and was gone."
+          "text": "The Plenty have bought the sponsorship slot Carl had open, and he has a gold benefactor box to show for it."
         },
         {
           "at": "8:29",
-          "text": "Not a collective mind. A herd, and a herd bolts, which is why their matriarch treats a piece of news the way anyone else treats a loaded weapon."
+          "text": "The Plenty are a herd, and a herd bolts. When the news broke on live television the goats panicked and fainted, and their matriarch, Gamori, had known all along and told none of them."
         }
       ],
       "beats": [
@@ -899,19 +899,19 @@
       "tagline": [
         {
           "at": "1:44",
-          "text": "The system the Maestro and his brother are princes of. If the orcs' other system is a lemonade stand, Zev says, this one is Wal-Mart."
+          "text": "The Skull Empire is one of the largest and oldest Syndicate governments, and the Maestro and his brother are its princes. If the orcs' Orcish Supremacy is a child's lemonade stand, Zev says, the Skull Empire is Wal-Mart."
         },
         {
           "at": "2:19",
-          "text": "One of the oldest and largest of the system governments, orcish, and famously bad at letting an insult go."
+          "text": "The Skull Empire is famously bad at letting an insult go. It answered the crawlers by firing on a trailer, and the shot took Manasa instead."
         },
         {
           "at": "7:32",
-          "text": "Its army is at the wall on the ninth floor and its king has come with it."
+          "text": "The Skull Empire's army stands at the wall on the ninth floor, and King Rust himself rides at its head."
         },
         {
           "at": "8:88",
-          "text": "The books are not its own. A financial criminal lives inside the empire and pays handsomely for the address."
+          "text": "The Skull Empire shelters financial criminals in exchange for investment, and one of them, Odette's husband, Harry Tisch, has been slowly working his way into its finances."
         }
       ],
       "beats": [
@@ -1041,15 +1041,15 @@
       "tagline": [
         {
           "at": "4:7",
-          "text": "A tax-exempt outfit nobody has heard of, which just won a sponsorship slot in a bidding war that ran to the final microsecond."
+          "text": "The Open Intellect Pacifist Action Network is Carl's new sponsor: a not-for-conquest that answers to no government and pays no tax. Nobody can say what it wants."
         },
         {
           "at": "7:11",
-          "text": "Crawlers who got out, and who want the whole thing stopped. Fifty thousand of them have come back in."
+          "text": "Doctor Hu formed the Open Intellect Pacifist Network for a single purpose: to end the crawl altogether."
         },
         {
           "at": "8:27",
-          "text": "Every ship in orbit is theirs."
+          "text": "The Open Intellect Action Network has sent boarding crews to every major ship in orbit and taken them all."
         }
       ],
       "beats": [
@@ -1205,15 +1205,15 @@
       "tagline": [
         {
           "at": "5:75",
-          "text": "A name on a list of faction teams: the Lemig Sortition, one of three whose local populations may vote on all government expenditures."
+          "text": "The Lemig Sortition is one of the Faction Wars teams, and one of three whose citizens may vote on all government spending."
         },
         {
           "at": "6:12",
-          "text": "A democratic government of many races, whose army had a castle dropped on it before the season had properly started."
+          "text": "The Lemig Sortion had the high elf castle dropped on the middle of its army before the season had properly begun, and it is now squatting in the wreck."
         },
         {
           "at": "7:19",
-          "text": "Caught cheating on the ninth floor, punished for it, and then out of the war altogether when its commander took his own way out."
+          "text": "The Lemig Sortion was caught cheating and punished for it. Its commander looked into Shi Maria's eye and took his own way out, and all its assets went to the Madness."
         }
       ],
       "beats": [
@@ -1299,19 +1299,19 @@
       "tagline": [
         {
           "at": "6:21",
-          "text": "A megacorporation that is also a system government, living around its own star. An occasional entrant in this war, and a frequent winner of it."
+          "text": "The Reavers are one of the teams at the Faction Wars table, represented by a warlord who looks like an old-school robot."
         },
         {
           "at": "7:21",
-          "text": "Their pets arrive before they do: a swarm of Dumplins, every one of them carrying the Gurgles."
+          "text": "The Reavers raise baby rot stickers by hand until they trust their masters, then fill them with steroids and disease and turn them loose on the enemy."
         },
         {
           "at": "7:31",
-          "text": "Several races who traded away everything but the brain for machinery, and kept going."
+          "text": "The real Reavers are all machine, with a little biological brain hidden somewhere inside, and they can reshape themselves out of nanobot-sized parts."
         },
         {
           "at": "7:80",
-          "text": "Warlord Fang hid inside his own pet, and the castle came down on the pair of them."
+          "text": "Warlord Fang hid inside his own pet drake, the castle and the dragon went up together, and the Reavers have been defeated."
         }
       ],
       "beats": [
@@ -1392,23 +1392,23 @@
       "tagline": [
         {
           "at": "1:43",
-          "text": "A name used as an insult: nobody in the Skull Clan wants to be mistaken for one."
+          "text": "Naga is an insult to the Maestro: nobody in the Skull Clan wants to be mistaken for one."
         },
         {
           "at": "2:end",
-          "text": "Showrunners once. They ran the first crawl ever to lose money, and have not run a season since."
+          "text": "According to Odette, the Blood Sultanate of the Naga ran the first crawl ever to lose money, more than 250 cycles ago, and they have not run a season since."
         },
         {
           "at": "7:21",
-          "text": "Cobra-headed, fielded as the Blood Sultanate, and part of the push on the southern line."
+          "text": "The Nagas are cobra-headed, and they fight as the Blood Sultanate, a name taken from a bloodier time in their own history."
         },
         {
           "at": "7:53",
-          "text": "The poverty was a performance. There were plans for the shipbuilding yards underneath it."
+          "text": "The AI has told everyone watching that the Nagas were only pretending to be poor, and had secret plans to seize the shipbuilding facilities."
         },
         {
           "at": "7:58",
-          "text": "A signed offer on the table: citizenship for every native of Earth, in exchange for room in Earth's system."
+          "text": "Rishi has offered Carl a signed document: citizenship in Naga lands for every native of Earth, if the Nagas may settle the other planets of Earth's system."
         }
       ],
       "beats": [
@@ -1511,15 +1511,15 @@
       "tagline": [
         {
           "at": "7:1",
-          "text": "The ninth floor's own people, fielded as the defending team, and allied with the crawlers from the first hour of it."
+          "text": "Team Retribution is the ninth floor's own NPCs, fielded as the defending team under a name they chose themselves, and the crawlers are allied with them against every other faction."
         },
         {
           "at": "7:44",
-          "text": "One of their two warlords turned into an Unwashed on camera and told the audience that it is coming for them all."
+          "text": "Juice Box, a warlord of Team Retribution, turned into an Unwashed in front of the cameras and told everyone watching that it is coming for them all."
         },
         {
           "at": "7:84",
-          "text": "One of two teams still standing at the end of the war."
+          "text": "Team Retribution was put on this floor to be fodder, and it has outlasted eight galactic powers. Only it and the Princess Posse are still standing."
         }
       ],
       "beats": [
@@ -1630,15 +1630,15 @@
       "tagline": [
         {
           "at": "3:30",
-          "text": "A collective mind spreading through the universe, and the thing the dungeon keeps drawing as the Krakaren."
+          "text": "The Apothecary is a collective mind spreading through the universe, named for its ability to synthesise elements. The dungeon keeps caricaturing it as the Krakaren."
         },
         {
           "at": "5:16",
-          "text": "Carl and Donut's third and final sponsor. Nobody on their side of it knows what she looks like."
+          "text": "The Apothecary has taken the last of Carl and Donut's sponsorship slots."
         },
         {
           "at": "8:92",
-          "text": "One Primal who refused the collective, took the nine-tier attack, and is the reason anything biological is still here to watch this."
+          "text": "According to the AI, the Apothecary was a Primal born near the end, who refused the collective and joined the resistance. She took the brunt of the final attack, and that is why any biological life survived."
         }
       ],
       "beats": [
@@ -1768,15 +1768,15 @@
       "tagline": [
         {
           "at": "7:61",
-          "text": "Dungeon-born war mages who stopped taking orders, and took the Gate with them on the way out."
+          "text": "The War Mage Rebellion is the war mages who were conscripted under Stalwart, tore him apart, and walked off with the Gate of the Feral Gods. They are nobody's soldiers now, and the rules have no slot for them."
         },
         {
           "at": "7:69",
-          "text": "Holding the castle at Larracos, six hours from taking the floor, and conscripting gods to keep it."
+          "text": "The War Mage Rebellion holds the castle at Larracos, six hours from taking the floor, and it has traded the Gate for potions that let it conscript gods."
         },
         {
           "at": "7:78",
-          "text": "They leave with exactly what they came for, and a warning about Agatha on the way out."
+          "text": "The War Mage Rebellion has left the floor with exactly what it came for, and a warning on the way out: Agatha is an enemy to all of you."
         }
       ],
       "beats": [
@@ -1872,11 +1872,11 @@
       "tagline": [
         {
           "at": "5:5",
-          "text": "The affiliation on a flying mantis hunter's tag, level 61, blood tracker: the Dark Hive."
+          "text": "The Dark Hive is the affiliation on the tag of a flying mantis hunter, a level-61 blood tracker."
         },
         {
           "at": "5:10",
-          "text": "A mantis hunting party on the Hunting Grounds, and Carl is on its list."
+          "text": "The Dark Hive is a mantis hunting party on the Hunting Grounds, and Vrah has knifed a note to Carl's door: the Hive is hunting him, and his death will not be quick."
         }
       ],
       "beats": [
@@ -1943,15 +1943,15 @@
       "tagline": [
         {
           "at": "1:47",
-          "text": "A maker's name on a relay, a personal shield and a pulse pistol found in Agatha's shopping cart. None of it belongs down here."
+          "text": "The Valtay Corporation's name is on a communications relay and a personal shield found in Agatha's shopping cart. None of it belongs down here."
         },
         {
           "at": "2:19",
-          "text": "A power outside Borant that answers the death of its star singer by destroying a prince’s yacht in orbit, with members of the royal family rumoured aboard."
+          "text": "The Valtay are parasites who take over bodies, and one of them has kept the singer Manasa's career going since her death. When the Skull Empire's shot took her, the Valtay answered by destroying a royal yacht."
         },
         {
           "at": "4:8",
-          "text": "A business that is also a nation, run by a parasite that pilots other people’s bodies, and it holds the paper on Borant’s debt."
+          "text": "The Valtay Corporation is a company that is also a nation, made up of parasites called Gondii that ride other people's bodies. It holds the paper on Borant's debt, and it is Carl's sponsor."
         }
       ],
       "beats": [
@@ -2111,11 +2111,11 @@
       "tagline": [
         {
           "at": "5:8",
-          "text": "Carl's spiderweb tattoo grants access to it. Mordecai's word for it is a cult."
+          "text": "Carl's spiderweb tattoo grants access to the Guild of Suffering. Mordecai calls it a cult: not a real guild, and not a real church."
         },
         {
           "at": "6:19",
-          "text": "Anyone who uses a divine suffering artifact is marked for it. Now a Night Wyrm lock box wants an assassination quest carried out at one of these guilds, and grants temporary access to find one."
+          "text": "The Guild of Suffering worships a demigod called the Night Wyrm. Katia's lock box needs an assassination quest carried out at one of its guilds, and owning the box grants her temporary access."
         }
       ],
       "beats": [
@@ -2190,15 +2190,15 @@
       "tagline": [
         {
           "at": "5:15",
-          "text": "The Nebular Sin Patrol. A name on a dead hunter's map: one of the groups given ground near Zockau, with Prepotente and Miriam Dom claimed as targets."
+          "text": "The Nebular Sin Patrol is a name on a dead hunter's map, one of the unaffiliated groups given ground around Zockau, and it has claimed Prepotente and Miriam Dom as its targets."
         },
         {
           "at": "5:34",
-          "text": "The Nebular Sin Patrol: trainee priests of a nomadic, self-augmenting cult who consider anyone born on a seeded world an abomination, and hunt crawlers as a crusade."
+          "text": "The Nebular Sin Patrol are young trainee priests of a self-augmenting religious cult. To them, anyone born on a seeded world is an abomination, and hunting crawlers is a crusade."
         },
         {
           "at": "6:64",
-          "text": "The Nebulars. They worship the AI at the centre of the galaxy, call imitations blasphemy, and want the crawl shut down, along with every world that could host one. They sponsor Sister Ines."
+          "text": "The Nebulars worship an ancient AI near the centre of the galaxy and call its imitations blasphemy. They want the crawl shut down, along with every world that could host one, and they sponsor Sister Ines."
         }
       ],
       "beats": [
@@ -2367,19 +2367,19 @@
       "tagline": [
         {
           "at": "6:21",
-          "text": "The Viceroys' team: masked, often winners, specialists in horrific battlefield spells and necromancy. Their representative's head came off at the table."
+          "text": "The Madness is the Viceroys' team: masked, often winners, and specialists in horrific battlefield spells and necromancy. At the pre-production meeting, their representative's head came off at the table."
         },
         {
           "at": "6:end",
-          "text": "The Viceroys' team. Told their lives are really on the line, they say they may have to use spells deemed too horrific for the crawl."
+          "text": "Told that their lives really are on the line now, the Madness say they will be forced to use spells that were deemed too horrific for the crawl."
         },
         {
           "at": "7:19",
-          "text": "Led by Architect Houston, cleared by adjutants who called the evidence damning, and handed every asset the Lemig Sortion owned."
+          "text": "The adjutants called Architect Houston obviously guilty and cleared the Madness anyway, and when the Lemig Sortion fell, all of its assets went to them."
         },
         {
           "at": "7:68",
-          "text": "Defeated in their own castle, their warlord dead on his operating table and their assets awarded to the Princess Posse."
+          "text": "The Madness was defeated in its own castle, with its warlord dead on his surgical table next door."
         }
       ],
       "beats": [
@@ -2502,15 +2502,15 @@
       "tagline": [
         {
           "at": "5:75",
-          "text": "A group called the Operatic Collective, one of three teams whose citizens vote on government spending. Quasar is certain they are going to be forced to vote yes. The people hate the family."
+          "text": "The Operatic Collective is one of the Faction Wars teams, and one of three whose citizens may vote on all government spending."
         },
         {
           "at": "6:21",
-          "text": "Quivering green blobs in tiers, breeding by splitting and speaking upward from the tops of their heads. The second seat at the Faction Wars table."
+          "text": "The Operatic Collective are quivering green blobs, shaped in tiers like a Jell-O mould, who breed by splitting apart and speak upward from the tops of their heads."
         },
         {
           "at": "7:35",
-          "text": "Defeated by one of their own: a Weeper commander drove a tank full of energy balls into their warlord's caravan. Everything went to the Bone Clan."
+          "text": "The Operatic Collective was defeated by one of its own: a Weeper commander drove a tank full of energy balls into its warlord's caravan, and more than ten thousand soldiers died in the blast."
         }
       ],
       "beats": [
@@ -2621,15 +2621,15 @@
       "tagline": [
         {
           "at": "8:5",
-          "text": "Lady Dominators and the Gimp. Third place in the results of the first heat. The name raises questions it does not answer."
+          "text": "Lady Dominators and the Gimp took third place in the first heat, and the name raises questions it does not answer."
         },
         {
           "at": "8:13",
-          "text": "Lady Dominators and the Gimp. Two womantaur dominators, Genesis and Rapture, in white racing suits and cowboy hats, who worship Enyo, and a half-mantaur in a black gimp suit."
+          "text": "Lady Dominators and the Gimp are two womantaur dominators, Genesis and Rapture, in white racing suits and cowboy hats, and a half-mantaur zipped into a black gimp suit."
         },
         {
           "at": "8:66",
-          "text": "Lady Dominators and the Gimp. Eliminated in the fifth heat, through a trapped factory floor. The gimp left in somebody else's truck."
+          "text": "Lady Dominators and the Gimp went through a trapped factory floor in the fifth heat and were eliminated. The court pulled the gimp out of the back of their car and drove on."
         }
       ],
       "beats": [
@@ -2763,15 +2763,15 @@
       "tagline": [
         {
           "at": "8:5",
-          "text": "Team Sparkles. A unicorn with a Boston growl and a French rodent in a racing helmet, driving a tumbleweed of vines. Rude on first contact."
+          "text": "Team Sparkles is a unicorn with a Boston accent and a French rodent in a racing helmet, riding a tumbleweed of vines, and they were rude on first contact."
         },
         {
           "at": "8:67",
-          "text": "Team Sparkles. Dwight the unicorn, alone since the fourth heat, and first across the line more often than anyone would like."
+          "text": "Team Sparkles is down to Dwight the unicorn, and he won the fifth heat by riding over the factory roof without ever going inside."
         },
         {
           "at": "8:82",
-          "text": "Team Sparkles. Eliminated at the starting line of the final heat, in a single swipe."
+          "text": "Team Sparkles was eliminated at the starting line of the final heat, in a single swipe."
         }
       ],
       "beats": [
@@ -2892,19 +2892,19 @@
       "tagline": [
         {
           "at": "2:12",
-          "text": "Sensation Entertainment, Incorporated. The private production company behind Vengeance of the Daughter, from one of the center systems."
+          "text": "Sensation Entertainment, Incorporated, is the private production company behind Vengeance of the Daughter, from one of the centre systems."
         },
         {
           "at": "5:15",
-          "text": "The producers of Vengeance of the Daughter, who have agreed to a ninth-floor extension in principle and are in no hurry to sign it."
+          "text": "Sensation Entertainment has agreed in principle to extend Vengeance of the Daughter to the ninth floor, and is in no hurry to sign anything."
         },
         {
           "at": "7:1",
-          "text": "The producers of Vengeance of the Daughter, bought by a subsidiary of the Dream and demanding the third season Carl's contract guarantees."
+          "text": "Sensation Entertainment has been bought by a subsidiary of the Dream, and the new owners are demanding the third season that Carl's contract guarantees."
         },
         {
           "at": "7:13",
-          "text": "Owned by the Dream, and accused by an adjutant of an unlawful assassination attempt: an elite of theirs, wired with explosives and under undue influence."
+          "text": "Baroness Victory has accused Sensation Entertainment of an unlawful assassination attempt: one of its elites was wired with explosives and under undue influence."
         }
       ],
       "beats": [
@@ -3006,19 +3006,19 @@
       "tagline": [
         {
           "at": "1:4",
-          "text": "Another corporation that runs seasons of the show. Theirs are battle royales: an entire world, down to one champion. Good for ratings, not much money."
+          "text": "The Squim Conglomerate is another corporation that runs seasons of the show, and theirs are battle royales: a whole world fighting down to a single champion. According to Mordecai, it is good for ratings but does not make much money."
         },
         {
           "at": "1:14",
-          "text": "Last season's showrunner. Battle for the Planet Aryl, in a coliseum the size of a city. Squim saps a planet dry, then leaves it."
+          "text": "The Squim Conglomerate ran last season, the Battle for the Planet Aryl, in a coliseum the size of a city. According to Tally, Squim sucks a planet dry and then leaves it without an atmosphere."
         },
         {
           "at": "4:7",
-          "text": "A planet-mining company, like Borant, that runs battle royale crawls. It also sponsors Katia, among some five hundred crawlers."
+          "text": "The Squim Conglomerate is a planet-mining company like Borant, and it has sponsored Katia, along with some five hundred other crawlers."
         },
         {
           "at": "7:41",
-          "text": "Ran the Aryl season. The moment the failsafe was pressed on this floor, the whole Aryl system went dark."
+          "text": "When the orcs pressed the failsafe, nothing happened here, but the Aryl system, the world of Squim's last season, went dark."
         }
       ],
       "beats": [
@@ -3129,15 +3129,15 @@
       "tagline": [
         {
           "at": "6:2",
-          "text": "Meat Shields. Probably, says Mordecai, the name of the mercenary markets on this floor. Somebody has sent a coupon."
+          "text": "Meat Shields is probably the name of the mercenary markets on this floor, says Mordecai, and someone has sent a coupon worth a hundred thousand gold."
         },
         {
           "at": "6:34",
-          "text": "Meat Shields, the mercenary market. Its location on the top floor of the Desperado Club had no sign and no map marker: an elderly dwarf's home office, where the dancers of the Penis Parade kept their memberships."
+          "text": "There is a Meat Shields location on the top floor of the Desperado Club, with no sign and no map marker: an elderly dwarf's home office, where the dancers of the Penis Parade kept their memberships."
         },
         {
           "at": "7:10",
-          "text": "The mercenary market. Where a crawler hires help, and where a club's surviving staff get sent when the club is reorganised."
+          "text": "Meat Shields is where a crawler hires help, and where a club's surviving staff are sent when a new manager takes over."
         }
       ],
       "beats": [
@@ -3291,19 +3291,19 @@
       "tagline": [
         {
           "at": "4:33",
-          "text": "The Semeru dwarves. Said to have built Larracos, the inverted city on the ninth floor. They no longer control it. They drink in its pubs and keep its castle at the bottom of the well."
+          "text": "The Semeru dwarves supposedly built Larracos, the inverted city on the ninth floor, but they no longer control it. They drink in its pubs and look after the castle at the bottom of the well."
         },
         {
           "at": "6:35",
-          "text": "The Semeru. Keepers of a flooded city, who let nobody near its castle and keep it underwater. Those who try get fed to the sharks."
+          "text": "The Semeru are keeping the drowned castle underwater and letting nobody near that part of Larracos, and whoever tries is fed to the sharks."
         },
         {
           "at": "7:7",
-          "text": "The Semeru. Dwarves who dug toward their goddess until they struck the roots of the All Tree, and paid for it: millions once, fewer than ten thousand now. Stewards of Larracos, and armed again."
+          "text": "The Semeru dug toward their goddess until they struck the roots of the All Tree, and built their castle there as a monument and an apology. Once a drunk and defeated people, they are arming again."
         },
         {
           "at": "7:85",
-          "text": "The Semeru. Defenders of Larracos from the first day of the war, repairing what is left of it at the end, and due to move with the city into the Ascendency."
+          "text": "The Semeru defended Larracos from the first day of the war and are repairing what is left of it, and they will move with the city to the Ascendency."
         }
       ],
       "beats": [

@@ -202,6 +202,13 @@ or a list of `{ at, text }` that supersede as the reader advances; `taglineFor()
 one reached. Lucia Mar goes from *"Seen on the very first broadcast"* to *"…more than a hundred
 thousand children in her body"* across four steps.
 
+**A tagline is written in whole sentences.** The first set read like telegrams — *"Twenty-seven.
+Coast Guard, marine technician."*, *"Art history professor, Reykjavík."* — and a reader called it
+rushed, rightly. Every step now has a subject and a verb and is read against the book at its own
+`at`: the rewrite caught *"even a bronze one beats a plain gold box"* wrongly doubted and then
+restored (Mordecai says exactly that at 1:4), Jurgen's pregnant wife one chapter early, and a
+Quetzalcoatlus beat that killed Gwen at 4:29 when the notice only hails her.
+
 **Two lint rules now enforce it, both errors:**
 
 - **Forward phrasing.** `"later"`, `"by the eighth"`, `"floors later"`, `"was killed"`, `"ends

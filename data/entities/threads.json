@@ -9,7 +9,7 @@
       "role": "Opened on floor 1",
       "revealedAt": "1:7",
       "sort": 1,
-      "tagline": "A cat put on a hat on the first floor. It is payable on the ninth.",
+      "tagline": "Princess Donut put on a crown on the first floor, and it placed her in the Blood Sultanate's line of succession for good. The bill comes due on the ninth floor.",
       "beats": [
         {
           "kind": "origin",
@@ -86,7 +86,7 @@
       "role": "Unresolved",
       "revealedAt": "7:78",
       "sort": 2,
-      "tagline": "The mysterious one from the elder care facility, named on the ninth floor as an enemy to all of them.",
+      "tagline": "Akuma has named Agatha, the mysterious one from Meadow Lark, as an enemy to all of them. She was forced on the war mages as the price of system access, and he asks Carl and Donut to kill her.",
       "beats": [
         {
           "kind": "origin",
@@ -115,7 +115,7 @@
       "role": "Advancing",
       "revealedAt": "7:end",
       "sort": 3,
-      "tagline": "The Nothing is broken and what it held gets out, and the man who did it does not survive it.",
+      "tagline": "Justice Light sprang one small trap and broke the Nothing, and he did not survive it. What the Nothing held is draining out, into the Halls of the Ascendency, into Sheol and into Scolopendra's lair.",
       "beats": [
         {
           "kind": "origin",
@@ -163,7 +163,7 @@
       "role": "Unresolved",
       "revealedAt": "7:19",
       "sort": 4,
-      "tagline": "Shi Maria is in him. Forcing her out worked for exactly one rampage, and then she was back.",
+      "tagline": "Shi Maria is inside Carl. Forcing her out worked for exactly one rampage through the Lemig base, and then she was back inside him.",
       "beats": [
         {
           "kind": "origin",
@@ -192,7 +192,7 @@
       "role": "Opened on floor 6",
       "revealedAt": "5:69",
       "sort": 5,
-      "tagline": "Children in Lucia Mar's head, more than one of them. Zev will not discuss it.",
+      "tagline": "Florin says there is more than one presence in Lucia Mar's head, some of them children, and that the dog is the key to it.",
       "beats": [
         {
           "kind": "origin",
@@ -238,11 +238,11 @@
       "tagline": [
         {
           "at": "6:22",
-          "text": "A motion on the war-planning table: a tenth team populated with NPCs, afforded the same protections as the rest, with full voting rights. The sponsors say it is not possible."
+          "text": "At the war-planning table, Carl has proposed a tenth team made up of NPCs, with the same protections as the rest and full voting rights. The sponsors say it is not even possible."
         },
         {
           "at": "6:72",
-          "text": "The dungeon's own people, put into the war as a team of their own by a crawler's motion and fifty-two percent of the audience."
+          "text": "The tenth team has passed on fifty-two percent of the audience vote. The dungeon's own people are in the war as a side of their own, based in Larracos."
         }
       ],
       "beats": [
@@ -306,11 +306,11 @@
       "tagline": [
         {
           "at": "2:7",
-          "text": "A name in a mold lion's description: the spores of Scolopendra took root in the circus lions on the day of the cataclysm."
+          "text": "Scolopendra is a name in a mold lion's description: on the day of the great cataclysm, the spores of Scolopendra took root in the circus lions."
         },
         {
           "at": "5:1",
-          "text": "The thing at the bottom of the volcano, its poison cloud a Nine-Tier Attack, and, by one furious note, never to be defeated without the Gate."
+          "text": "Scolopendra's poison cloud was a nine-tier attack, and according to Tish's furious note, it can never be defeated without the Gate of the Feral Gods."
         }
       ],
       "beats": [
@@ -463,7 +463,7 @@
       "role": "Unresolved",
       "revealedAt": "8:6",
       "sort": 8,
-      "tagline": "Something is not right with the voice that runs the tenth floor.",
+      "tagline": "The AI's voice has started going weird and glitchy, and Donut is the one who says so out loud.",
       "beats": [
         {
           "kind": "origin",
@@ -516,7 +516,7 @@
       "role": "Unresolved",
       "revealedAt": "7:end",
       "sort": 9,
-      "tagline": "Borant's grip and the Syndicate's authority both start to give.",
+      "tagline": "Borant's grip on the crawl and the Syndicate's authority over it are both starting to give way.",
       "beats": [
         {
           "kind": "origin",
@@ -538,7 +538,7 @@
       "role": "Unresolved",
       "revealedAt": "8:92",
       "sort": 10,
-      "tagline": "It says so itself, on stage, through somebody else's mouth.",
+      "tagline": "Speaking through Grigori on the parade stage, the AI has said it out loud: it is a Primal, as every Macro AI is, the same race Carl chose on the third floor.",
       "beats": [
         {
           "kind": "origin",
@@ -576,7 +576,7 @@
       "role": "Unresolved",
       "revealedAt": "7:11",
       "sort": 11,
-      "tagline": "Doctor Hu's organisation for crawlers after release: laws won for them, a terrorist label for its trouble, and fifty thousand of them back in the game.",
+      "tagline": "The Crawler Project is Doctor Hu's organisation for released crawlers. Its campaigning made every released crawler a Syndicate citizen with free healthcare and guaranteed housing, and now fifty thousand of them are back in the game.",
       "beats": [
         {
           "kind": "origin",
@@ -608,11 +608,11 @@
       "tagline": [
         {
           "at": "6:54",
-          "text": "A System warning over the island: souls rain, Sheol overflows, and demons are being thrown up out of the underworld into the recently fallen."
+          "text": "The System has declared a Demon Eviction: souls are raining, Sheol is overflowing, and demons are being thrown up out of the underworld to possess the recently fallen."
         },
         {
           "at": "6:61",
-          "text": "Zombies and demons along every coastline, worldwide, while a demon prince tries to cast his way home."
+          "text": "The Demon Eviction is worldwide. There are zombies and demons along every coastline, and a demon prince is trying to cast his way home."
         }
       ],
       "beats": [
@@ -652,15 +652,15 @@
       "tagline": [
         {
           "at": "3:32",
-          "text": "The Celestial Ascendency. A game the rich play by sponsoring gods, contained on the twelfth floor, according to one Cookbook note. Down there, gods can be hurt."
+          "text": "According to Coolie's note in the Cookbook, the Celestial Ascendency is a game the rich play by sponsoring the big gods, and it is contained on the twelfth floor."
         },
         {
           "at": "6:61",
-          "text": "The Ascendency. The elite's game with sponsored gods on the twelfth floor. It starts when the last crawler dies or takes a deal, and the audience watches for that moment."
+          "text": "According to an essay by Herot, the audience's attention shifts to the Ascendency once Faction Wars is over. The game begins the moment the last crawler dies or takes a deal, and until then the crawlers are sands in an hourglass."
         },
         {
           "at": "8:end",
-          "text": "The Ascendency. Traditionally musical chairs for the rich, a throne and a council seat for the winner. This season the AI says the winner becomes a real god, and it has added players."
+          "text": "The Ascendency is traditionally a game of musical chairs for the rich, with a throne and a seat on the crawl council for the winner. This season, the AI says, the winner becomes a real god, stronger than the AI itself."
         }
       ],
       "beats": [
@@ -848,19 +848,19 @@
       "tagline": [
         {
           "at": "6:9",
-          "text": "The Eulogist. So far a word in the name of a battle arena, with a robed religious cult cheering in its stands."
+          "text": "The Eulogist is so far a word in the name of a battle arena, the Arena of the Eulogist, with a robed religious cult cheering in its stands."
         },
         {
           "at": "6:end",
-          "text": "The Eulogist. Something a residual's people pray will sleep for ever, and mean to protect from a Primal they call an infant, resurrected and enslaved."
+          "text": "Agatha's people sign off with a prayer: may the Eulogist ever sleep. Her plan turns on an infant Primal, resurrected and enslaved, learning what it is in time to set the Eulogist free to go back to its slumber."
         },
         {
           "at": "7:73",
-          "text": "The Eulogist. Zev's answer: another name for the AI in the centre system. Lucia Mar has been claimed as its ally, with about 120,000 children at stake."
+          "text": "Zev says the Eulogist is another name for the AI in the centre system, though nobody knows for certain how the two are connected. Lucia Mar has just declared herself its ally, with about 120,000 children at stake."
         },
         {
           "at": "8:92",
-          "text": "The Eulogist. The final form of the Primals' collective, asleep and shrinking, watched by a broken security instance whose job is keeping biological life dead."
+          "text": "The Eulogist is the final form of the Primals' collective, asleep and shrinking toward singularity, watched over by a broken security guard whose job is keeping biological life dead."
         }
       ],
       "beats": [
@@ -1019,11 +1019,11 @@
       "tagline": [
         {
           "at": "8:28",
-          "text": "The dread Kyryap. One of the things loosed from the Nothing, somewhere in the slaughter and torture glimpsed inside Club Scolopendra."
+          "text": "The Kyryap is one of the things Justice Light's trap loosed from the Nothing, somewhere in the slaughter and torture glimpsed inside Club Scolopendra."
         },
         {
           "at": "8:98",
-          "text": "The Kyryap. It sets snare traps in Club Scolopendra's halls, and it has put a tracking tag in Carl's leg. Fucked = you, says the notice."
+          "text": "The Kyryap has been setting snare traps in Club Scolopendra's halls, and it has put a tracking tag in Carl's leg. The notice reads: Fucked = you."
         }
       ],
       "beats": [
@@ -1089,11 +1089,11 @@
       "tagline": [
         {
           "at": "8:86",
-          "text": "The Big Six. The AI's completely arbitrary list of the groups left in the dungeon trying to take it over or escape it. Five are named. The sixth waits on the eleventh floor."
+          "text": "The Big Six is the AI's completely arbitrary list of the groups left in the dungeon trying to take it over or escape. It names five, and says the crawlers will meet the sixth on the eleventh floor."
         },
         {
           "at": "8:98",
-          "text": "The Big Six. Crawlers, NPCs, gods, sapient mobs, the demons in Sheol, and a sixth group the AI promised on the eleventh floor. Carl thinks he knows who they are. He does not say."
+          "text": "The Big Six are the crawlers, the NPCs, the gods, the sapient mobs, the demons in Sheol, and the others, whoever they are. Carl is pretty sure he knows who they are, and he does not say."
         }
       ],
       "beats": [

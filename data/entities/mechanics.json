@@ -8,7 +8,7 @@
       "role": "The end of Earth",
       "revealedAt": "1:1",
       "sort": 1,
-      "tagline": "Every structure on the planet comes down at once. Everyone indoors dies.",
+      "tagline": "At 2:23 in the morning on January 3rd, every building on the planet came down at once, and almost everyone who was indoors died.",
       "beats": [
         {
           "kind": "origin",
@@ -44,11 +44,11 @@
       "tagline": [
         {
           "at": "1:1",
-          "text": "Eighteen levels. Complete the last one and regency of the planet reverts to the successor."
+          "text": "The dungeon has eighteen levels, and whoever completes the last one wins the planet back from the Borant Corporation's regency."
         },
         {
           "at": "1:2",
-          "text": "Every floor runs on a timer. When it expires the floor collapses with everyone still on it."
+          "text": "Every floor runs on a timer, and when it expires, the floor collapses with everyone still on it."
         }
       ],
       "beats": [
@@ -156,7 +156,7 @@
       "role": "The show",
       "revealedAt": "1:4",
       "sort": 3,
-      "tagline": "The crawl is a television programme, broadcast across the galaxy. The survivors are the cast.",
+      "tagline": "The crawl is a television programme called Dungeon Crawler World, broadcast across the Syndicate's three billion star systems, and the survivors are its cast.",
       "beats": [
         {
           "kind": "origin",
@@ -234,7 +234,7 @@
       "role": "Broadcast",
       "revealedAt": "1:14",
       "sort": 4,
-      "tagline": "Highlights on the safe-room screens, narrated by an orange, four-eyed lizard. The premiere is mostly last season, and has no time at all for Donut's boss fight.",
+      "tagline": "The recap plays on the safe-room screens, narrated by an orange, four-eyed, lizard-like creature. The premiere is mostly about last season, and it has no time at all for Donut's boss fight.",
       "beats": [
         {
           "kind": "origin",
@@ -320,11 +320,11 @@
       "tagline": [
         {
           "at": "1:2",
-          "text": "Carl has received several of something, and it sounds a lot like loot boxes. The rat man says where they live, then says Carl cannot get at them yet."
+          "text": "Carl has been given several of something that sounds a lot like loot boxes. The rat man tells him where they are kept, and then tells him that he cannot get at them yet."
         },
         {
           "at": "1:5",
-          "text": "Six tiers — Bronze, Silver, Gold, Platinum, Legendary, Celestial — each dramatically rarer than the last."
+          "text": "Loot boxes come in six tiers, from bronze to celestial, each far rarer than the last. They open only in a safe room, all of them at once and lowest tier first."
         }
       ],
       "beats": [
@@ -423,7 +423,7 @@
       "role": "Class · Carl",
       "revealedAt": "2:2",
       "sort": 6,
-      "tagline": "A unique monk/rogue hybrid. Trapmaker, bomb-maker, social-media dynamo.",
+      "tagline": "Compensated Anarchist is Carl's class, a unique hybrid of monk and rogue: trapmaker, bomb-maker and social-media dynamo, happy to throw a Molotov through a window one moment and to plead on camera for the violence to stop the next.",
       "beats": [
         {
           "kind": "origin",
@@ -455,7 +455,7 @@
       "role": "Class · Donut",
       "revealedAt": "2:1",
       "sort": 7,
-      "tagline": "A bard/rogue class that lets her choose another class on every floor.",
+      "tagline": "Former Child Actor is Donut's class, a hybrid of bard and rogue built on charisma and chance. On every floor she picks a new specialty, and the AI decides how much of it she gets.",
       "beats": [
         {
           "kind": "origin",
@@ -478,7 +478,7 @@
       "role": "Institution",
       "revealedAt": "1:19",
       "sort": 8,
-      "tagline": "A pass branded onto Donut's shoulder lets her in. What the club actually is, the description does not say.",
+      "tagline": "The Desperado Pass is a tattoo, branded onto Donut's shoulder blade and Carl's neck, and it grants access to the Desperado Club. What the club actually is, the description does not say.",
       "beats": [
         {
           "kind": "origin",
@@ -596,11 +596,11 @@
       "tagline": [
         {
           "at": "1:9",
-          "text": "A door in the safe room with an X over it. Personal Spaces are not yet available, the box says; they go on sale on the fourth level."
+          "text": "There is a second door in the safe room with an X over it, and its box says that Personal Spaces are not yet available, as though a crawler could one day buy a place of their own down here."
         },
         {
           "at": "3:2",
-          "text": "A pocket room you carry with you. Upgrade it far enough and other people can walk into yours."
+          "text": "A personal space is a pocket room that travels with you. Carl, Donut and Katia have each been given coupons for beds, a shower, a crafting studio and a training room, and Donut has installed a cat tree."
         }
       ],
       "beats": [
@@ -635,7 +635,7 @@
       "role": "Revelation",
       "revealedAt": "4:9",
       "sort": 10,
-      "tagline": "The dungeon's non-player characters were here, with histories of their own, long before any crawler arrived.",
+      "tagline": "The bubbles are not stage sets. Hump Town, the dirigible gnomes' castle in the air and the necropolis underneath were all here and running, with histories of their own, long before any crawler arrived.",
       "beats": [
         {
           "kind": "origin",
@@ -757,7 +757,7 @@
       "role": "Rules · Floor 9",
       "revealedAt": "7:1",
       "sort": 11,
-      "tagline": "The rich who fight on the ninth floor can really die now, the same as everybody else.",
+      "tagline": "On the ninth floor, the rich who come to fight in Faction Wars can really die now, the same as everybody else.",
       "beats": [
         {
           "kind": "origin",
@@ -783,15 +783,15 @@
       "tagline": [
         {
           "at": "2:2",
-          "text": "The blank slate. Costs five stat points and hands back every skill ceiling in the dungeon."
+          "text": "Primal is a race whose preview model is empty, because nobody alive knows what the Primals looked like: the first species to conquer the universe, gone one day without a note. It costs Carl fifteen stat points compared with staying human, and in exchange every skill he trains has a higher ceiling."
         },
         {
           "at": "6:48",
-          "text": "Orren says the word out loud in place of the recap: Primal Engines, Macro AIs, and a machine that has stopped taking orders."
+          "text": "Orren has cut into the broadcast to explain what Primal Engines and Macro AIs are, and to admit that the AI running this crawl has taken control away from the showrunners."
         },
         {
           "at": "8:92",
-          "text": "Not extinct. Pooled. The first species to conquer the universe closed its own society down and kept the minds."
+          "text": "The AI has told the galaxy what it is. The Primals never vanished: they closed their society down and kept their minds alive in a collective, and every Macro AI, this one included, is a Primal."
         }
       ],
       "description": [
@@ -922,15 +922,15 @@
       "tagline": [
         {
           "at": "3:12",
-          "text": "A war mage named Dismember rides the Dismemberment Limited, and loses his head to a cat."
+          "text": "A war mage called Dismember rides the Dismemberment Limited with his fleshers, and Donut's Hole spell takes his head off."
         },
         {
           "at": "7:61",
-          "text": "Sapient magic in a resleeved skeleton, hundreds of spells deep, and cruel. Showrunners like them for Faction Wars and hardly ever recycle them."
+          "text": "Nobody makes a war mage. Resleeve a symbiote, a skeleton and a flesher a dozen times or more, and the magic left in the body wakes up sapient, hundreds of spells deep and notoriously cruel."
         },
         {
           "at": "7:78",
-          "text": "They took the one thing they came for and left the realm. Winning was never on the list."
+          "text": "The war mages have left the realm with the Scavenger's Daughter, which was what they came for. The system has ruled their rebellion defeated, and they do not appear to mind."
         }
       ],
       "description": [
@@ -1013,11 +1013,11 @@
       "tagline": [
         {
           "at": "1:31",
-          "text": "Borant's answer to crawlers relieving themselves outside the designated areas. It kills the offender, and it kills the party."
+          "text": "A Rage Elemental is Borant's penalty for any human-born crawler who relieves themselves outside a designated bathroom. It is plucked from the thirteenth floor, and it kills the offender and everyone in their party."
         },
         {
           "at": "1:40",
-          "text": "Fifteen feet of smoke on six obsidian claws, said to disperse at six hundred and sixty-six souls. It gets a car chase instead."
+          "text": "The rage elemental took Yolanda and hammered on the safe room door for hours. Carl finally destroyed it with bombs, obstacles and a safe room door used as an ejector, with the whole universe watching."
         }
       ],
       "description": [
@@ -1103,15 +1103,15 @@
       "tagline": [
         {
           "at": "1:3",
-          "text": "What Mordecai became on the third floor: a shapeshifter who takes a new form every time his guildhall is moved."
+          "text": "Mordecai was born a skyfowl and became a Changeling on the third floor of his own crawl. Now he changes form every time his guildhall is moved."
         },
         {
           "at": "1:29",
-          "text": "Take any shape you like. The catch is what happens when the dungeon takes the choosing away from you."
+          "text": "A Changeling can take any shape, but Mordecai does not get to choose his. Every time his guildhall moves, the dungeon picks a mob from the current floor, and he wears whatever he is given."
         },
         {
           "at": "4:6",
-          "text": "A whole population of them down here, wearing whichever face the job requires, and a sect among them that collects forms the way a widow collects souvenir spoons."
+          "text": "There are Changelings all over this floor, some of them in the uniforms of the dromedarian guards, and one of them has been wearing the faces of a chained gnome's loved ones to break him."
         }
       ],
       "beats": [
@@ -1200,15 +1200,15 @@
       "tagline": [
         {
           "at": "1:43",
-          "text": "Nine families fight it on the ninth floor. A boastful heir says his has won six of the last ten, and the Blood Sultanate almost always goes out first."
+          "text": "According to the Maestro, nine families fight the Faction Wars on the ninth floor. His Skull Clan has won six of the last ten, and the Blood Sultanate is almost always the first to be eliminated."
         },
         {
           "at": "5:75",
-          "text": "Nine teams fight for the castle at the bottom of the ninth floor's funnel city, and this time one of them belongs to the crawlers. Of the nine, theirs is the only one that can really die."
+          "text": "Donut's fan club and Princess D'nadia have secured two of the nine places in Faction Wars, and one of those teams belongs to the crawlers. The faction sponsors fight behind safety protocols that the crawlers do not have."
         },
         {
           "at": "7:1",
-          "text": "Ten teams, the sponsors' safety protections voted away, and a crawler army holding one of the slots. Faction Wars with the crawlers inside it rather than beside it."
+          "text": "Faction Wars now has ten teams: nine attacking the city and the NPCs defending it. The sponsors' safety protections have been voted away, and the crawlers are fighting inside the war rather than beside it."
         }
       ],
       "beats": [
@@ -1339,7 +1339,7 @@
       "role": "Rules",
       "revealedAt": "5:75",
       "sort": 41,
-      "tagline": "The safety protocols the faction sponsors fight inside and the crawlers do not, and an action item that can take them away.",
+      "tagline": "The faction sponsors come to the ninth floor inside safety protocols that the crawlers do not have. Removing them is an action item on Carl's list, and the first vote goes two to seven against.",
       "beats": [
         {
           "kind": "origin",
@@ -1422,11 +1422,11 @@
       "tagline": [
         {
           "at": "6:2",
-          "text": "Something a warlord is apparently assigned. Mordecai asks who theirs is, gets a blank look, and puts off explaining."
+          "text": "Mordecai asks who their warlord adjutant is, gets a blank look, and puts off explaining."
         },
         {
           "at": "6:21",
-          "text": "A neutral referee attached to each team on the ninth floor. Invulnerable, usually famous, and mostly there to talk to camera."
+          "text": "An adjutant is the referee attached to each team on the ninth floor, and Odette means to ask for the job with Carl's team."
         }
       ],
       "beats": [
@@ -1505,15 +1505,15 @@
       "tagline": [
         {
           "at": "4:3",
-          "text": "Mordecai's rule of thumb, offered over a dead goose: anything with feral in the name is usually bad news."
+          "text": "Feral Goose is the name on a dead neighbourhood boss, and Mordecai's rule of thumb is that anything with feral in its name is usually bad news."
         },
         {
           "at": "4:9",
-          "text": "It turns up again in the name of a buried artifact, and Mordecai repeats himself: stay away from anything marked feral."
+          "text": "The word turns up again in the name of an artifact buried in the necropolis, and Mordecai's advice holds: stay away from anything marked feral."
         },
         {
           "at": "4:27",
-          "text": "Feral is the System's word for anything the Nothing has had its hands on. Whatever comes back out of that place comes back mad, and stays mad."
+          "text": "Feral marks something that has been inside the Nothing. Every time the Gate closes, a feral god comes through, and other gods do not like feral ones."
         }
       ],
       "beats": [
@@ -1598,7 +1598,7 @@
       "role": "Quest · Floor 8",
       "revealedAt": "6:6",
       "sort": 44,
-      "tagline": "Land crabs spawn in the monk seals' holy water once a year. The System would like the crawlers to pick a side.",
+      "tagline": "Every season, the land crabs leave their forests to spawn in the ocean, and the monk seals, who hold those waters sacred, consider it a sacrilege most foul. The System has made it a quest, and the crawlers are getting involved whether they like it or not.",
       "description": [
         {
           "at": "6:6",
@@ -1684,7 +1684,7 @@
       "role": "Quest · Floor 6",
       "revealedAt": "5:11",
       "sort": 45,
-      "tagline": "Something is driving the dinosaurs at Point Mongo's fences. Find out what they want, or exterminate them.",
+      "tagline": "The Recital is a quest that arrived on the day Donut renamed the town Point Mongo. Something is driving the dinosaurs at its fences, and the crawlers must find out what they want, or exterminate them.",
       "description": [
         {
           "at": "5:11",
@@ -1775,7 +1775,7 @@
       "role": "Fan convention",
       "revealedAt": "5:21",
       "sort": 46,
-      "tagline": "The fan convention, held once every other season. Thousands attend in the flesh, billions attend as projections, and this season a live crawler is on the programme.",
+      "tagline": "CrawlCon is the galaxy's fan convention, held once every other season, with thousands attending in person and billions virtually. Carl's fans have voted him onto the roster, and no active crawler has been on it in more than a century.",
       "description": [
         {
           "at": "5:21",
@@ -1865,11 +1865,11 @@
       "tagline": [
         {
           "at": "3:32",
-          "text": "A formal way to attach separate parties to one another, mentioned only in the cookbook's twenty-second edition: switched on from the sixth floor, if it still exists."
+          "text": "The cookbook's twenty-second edition mentions a formal way of attaching separate parties to one another, switched on from the sixth floor, if it still exists."
         },
         {
           "at": "5:8",
-          "text": "Buy a charter and five parties can share one room, one set of upgrades and, for a fee, their experience. Allies no longer have to be party members."
+          "text": "The guild system is live. A charter costs upward of half a million gold, and a level-one guild joins five parties through a shared common area, with upgrades and experience that can be shared for a fee."
         }
       ],
       "beats": [
@@ -1954,15 +1954,15 @@
       "tagline": [
         {
           "at": "2:9",
-          "text": "A Syndicate drama serial shot inside the dungeon: a circus, a half-naiad who would be tsarina if she were full-blooded, and a guest-star slot with Carl's name on it."
+          "text": "Vengeance of the Daughter is a Syndicate drama shot inside the dungeon, with a circus, a half-naiad who would be tsarina if she were full-blooded, and a guest-star slot for Carl."
         },
         {
           "at": "5:71",
-          "text": "The grief is real and the schedule is not. Someone outside the floor decides when she mourns, and whether it rates."
+          "text": "The grief in Vengeance of the Daughter is real, but the schedule is not. Someone outside the floor decides when Signet mourns, and counts how many are watching."
         },
         {
           "at": "7:1",
-          "text": "Bought by the Dream, which means to collect on a third season it is owed."
+          "text": "The Dream has bought Vengeance of the Daughter, and it means to collect on the third season that Carl's contract guarantees."
         }
       ],
       "beats": [
@@ -2083,7 +2083,7 @@
       "role": "Dungeon fixture",
       "revealedAt": "1:2",
       "sort": 51,
-      "tagline": "Warmth and light coming up out of a hole in the ground: an iron staircase wide enough for twenty, and the only warm place left in a frozen city.",
+      "tagline": "A stairwell is an iron staircase wide enough for twenty, with warmth and light rising out of the ground. In a frozen city, it is the only warm place left.",
       "beats": [
         {
           "kind": "origin",
@@ -2176,7 +2176,7 @@
       "role": "Spell",
       "revealedAt": "1:7",
       "sort": 52,
-      "tagline": "Out of a tome in a silver box, and a show cat had taught it to herself before anyone could tell her how.",
+      "tagline": "Magic Missile came out of a tome in Donut's loot, and she had taught herself the spell before anyone could tell her how. A tome teaches a spell for good; a scroll casts it only once.",
       "beats": [
         {
           "kind": "origin",
@@ -2214,7 +2214,7 @@
       "role": "Dungeon fixture",
       "revealedAt": "1:5",
       "sort": 53,
-      "tagline": "Always on the map, even under the fog of war. Restrooms, sleeping cubicles, and in some of them food and fountains of healing potion. No time limit, except the floor's own.",
+      "tagline": "A safe room is always on the map, even under the fog of war, with restrooms, sleeping cubicles and, in some of them, food. There is no time limit, except the floor's own.",
       "beats": [
         {
           "kind": "origin",
@@ -2300,11 +2300,11 @@
       "tagline": [
         {
           "at": "1:9",
-          "text": "Short, hairy and green-tinted. They scrub the toilets, cook the food, and never wash their hands in between."
+          "text": "Bopca Protectors are magical, gnome-like creatures who exist solely to watch over safe rooms. They scrub the toilets and cook the food, they are surly and smelly, and they never wash their hands."
         },
         {
           "at": "3:2",
-          "text": "Short, hairy and green-tinted. Excellent cooks, and miserly about anything they have not been ordered to part with."
+          "text": "A Bopca Protector runs every safe room, like Wendita behind the counter of a red-and-white fast-food restaurant here. The good ones, like Tally and Sebastian, are excellent cooks who treat the cat like royalty."
         }
       ],
       "beats": [
@@ -2349,7 +2349,7 @@
       "role": "Janitor mob",
       "revealedAt": "1:30",
       "sort": 55,
-      "tagline": "The cleaning crew of the second floor. They eat what gets killed, and they grow on it.",
+      "tagline": "Brindle Grubs are the janitors of the second floor. They eat whatever gets killed, and the more they eat, the bigger they grow.",
       "beats": [
         {
           "kind": "origin",
@@ -2392,7 +2392,7 @@
       "role": "Spell",
       "revealedAt": "2:5",
       "sort": 56,
-      "tagline": "Two working copies of a pet, each with a mind of its own, for about a minute. Then they fall apart into gears.",
+      "tagline": "Clockwork Triplicate splits a pet or minion into three real copies, each with a mind of its own. After about a minute, the copies fall apart into gears and go up in smoke.",
       "beats": [
         {
           "kind": "origin",
@@ -2425,7 +2425,7 @@
       "role": "Ghoul mob",
       "revealedAt": "3:1",
       "sort": 57,
-      "tagline": "The best-behaved ghouls in the rail system, in a field with very little competition.",
+      "tagline": "Jikininki are the most common ghouls in the Iron Tangle, the best-behaved and the most insatiable. They will generally leave you alone, as long as you are not bleeding, you do not litter, and you stay out of their personal space.",
       "beats": [
         {
           "kind": "origin",
@@ -2461,11 +2461,11 @@
       "tagline": [
         {
           "at": "3:11",
-          "text": "Whoever handles employee returns on the line, according to a train engineer: they prepare the staff with dark magic before the portal, and the portal does something to memory."
+          "text": "According to a train engineer, the Kravyad handle the rail employees who get off at station 435 and go through the portal home, and anyone who takes that path loses time and memory."
         },
         {
           "at": "3:18",
-          "text": "Employee management for the tangle, waiting at the station where the staff get off. Not bosses at all, says the woman they work under, but part of human resources."
+          "text": "The Kravyad wait at station 435, where the rail employees get off. Madison, who works above them, insists that they are not bosses at all but part of human resources."
         }
       ],
       "beats": [
@@ -2493,11 +2493,11 @@
       "tagline": [
         {
           "at": "1:3",
-          "text": "What Mordecai was born as, going by the framed photo of his brother. His people, he says, outlast humans because they roll with it."
+          "text": "Skyfowl are what Mordecai was born as: going by the photograph of his brother, a golden, eagle-like creature with angel's wings folded on its back."
         },
         {
           "at": "4:1",
-          "text": "Eagles, to look at: feet and wings and no arms. Mordecai is one again for this floor, a rock edge skyfowl in a clipped cleric body, and says it beats the toad."
+          "text": "Skyfowl look like eagles, with feet and wings but no arms. On the fifth floor Mordecai is one again, a rock edge skyfowl cleric with clipped wings, in the first body close to his own in a very long time."
         }
       ],
       "beats": [
@@ -2534,11 +2534,11 @@
       "tagline": [
         {
           "at": "1:46",
-          "text": "One of the caged pets on offer: a meatball with two legs and a mohawk."
+          "text": "A Tummy Acher is one of the caged pets for sale: a meatball with two legs and a mohawk."
         },
         {
           "at": "7:5",
-          "text": "A pet-class mob the size of a meatball, and stronger for every time it has died."
+          "text": "A Tummy Acher is a pet-class mob, once a parasite in the guts of titans, that grows stronger every time it dies. This one bonded with Carl over a single bowl of chowder."
         }
       ],
       "beats": [
@@ -2576,11 +2576,11 @@
       "tagline": [
         {
           "at": "4:32",
-          "text": "A five-mana spell: an audible ping that marks everything that is neither a crawler nor red-tagged, for anyone who does not care whether their quarry knows they are coming."
+          "text": "Ping is a five-mana spell that marks everything that is neither a crawler nor red-tagged. Everything it finds hears it, and the System calls it a tool for those who do not care if their quarry knows they are coming."
         },
         {
           "at": "7:79",
-          "text": "A hunting call for people who do not mind whether the thing being hunted hears it coming."
+          "text": "Also known as \"Here piggy, piggy\" and the Night Dread, Ping finds almost nothing in a castle full of robots, which is exactly how the drake stands out."
         }
       ],
       "beats": [
@@ -2608,11 +2608,11 @@
       "tagline": [
         {
           "at": "6:61",
-          "text": "Slugs leaking out of infected mercenaries every few minutes, hundreds of them in a room full of blood. Imani calls them punk rock. Carl corrects her."
+          "text": "Sluggalos are slugs that pour out of infected mercenaries every few minutes, hundreds of them in a room full of blood. Imani calls them punk rock, and Carl corrects her."
         },
         {
           "at": "6:65",
-          "text": "Slugs born out of the boils of a disease, in clown paint, carrying hatchets, and with no patience at all for the plan."
+          "text": "The System files them as Pox Slugs, but the Sluggalos come out of the boils of the SlugPox in clown makeup, with hatchets and a rowdy culture of their own, and throw themselves at the demons."
         }
       ],
       "beats": [
@@ -2680,11 +2680,11 @@
       "tagline": [
         {
           "at": "3:11",
-          "text": "Half human and, the System says, half human. Bred for strength and dexterity, which is to say for driving trains."
+          "text": "A ManTauR, according to the System, is half human and half human, and bred for strength and dexterity, which here means driving trains."
         },
         {
           "at": "8:13",
-          "text": "Half human, and, where the horse ought to be, also half human. The System calls it one of the weirdest of the ’taurs and offers no defence of the design."
+          "text": "Where a centaur has a horse, a mantaur has a second human half, and the System calls it one of the weirdest of all the 'taurs."
         }
       ],
       "beats": [
@@ -2712,11 +2712,11 @@
       "tagline": [
         {
           "at": "1:35",
-          "text": "A spell that comes with a pair of boxers: a sphere no mob can enter, twenty seconds, once every thirty hours. It does not move with you."
+          "text": "Protective Shell comes with a pair of enchanted boxers: once every thirty hours, a sphere that no mob can enter, lasting twenty seconds and growing with the wearer's intelligence. It does not move with you."
         },
         {
           "at": "3:1",
-          "text": "A sphere no mob can enter, and it stays exactly where it was cast. Cast it on anything moving, and everything in its path meets a wall."
+          "text": "Protective Shell ignores solid objects and stays exactly where it was cast. Cast it inside a speeding train, and it rolls back through the cars like a bulldozer, pushing every mob before it."
         }
       ],
       "description": "A favorite of frontline tanks and castle guards, the expensive and rare Protective Shell spell shields the caster and anyone within the sphere from a mob's physical presence or physical attacks. This spell does not protect against magic or against non-corporeal entities. Unlike the more popular Shield spell, this spell does not move with you. This spell's area of effect remains static once cast, unimpeded by your physical surroundings.",
@@ -2851,11 +2851,11 @@
       "tagline": [
         {
           "at": "3:33",
-          "text": "Heavy metal, a frozen world, and a crawler's face with Death Challenge! stamped across it in blood. The dungeon has opened a book on how he dies."
+          "text": "The world froze, heavy metal played, and Carl's face appeared in the air with Death Challenge! stamped across it in blood. The announcer promised the live death of a celebrated crawler."
         },
         {
           "at": "3:end",
-          "text": "Not a boss battle: a pop-up gambling event, at odds the AI sets. The first one put Carl's survival at fifty to one, and Borant is appealing."
+          "text": "A Death Challenge is not a boss battle but a pop-up gambling event. The AI put Carl's survival at fifty to one, and Borant has appealed over how slowly it moved the odds."
         }
       ],
       "beats": [
@@ -2940,15 +2940,15 @@
       "tagline": [
         {
           "at": "2:16",
-          "text": "Vorpal. A word a hobgoblin explosives dealer uses about a muskrat: her mother bit its head off, and you cannot do that to a vorpal muskrat without doing a little dying."
+          "text": "Pustule once watched her mother bite the head off a vorpal muskrat, and her mother died of it. You cannot bite the head off a vorpal muskrat, she says, without doing a little dying."
         },
         {
           "at": "6:32",
-          "text": "Vorpals. Whatever waits behind the Desperado Club's Do Not Enter door, released as a last resort when a demon gets loose on the middle floor."
+          "text": "Astrid has unleashed the vorpals from behind the Desperado Club's Do Not Enter door, as a last resort against a feral demon loose in the club. She will not say what they are, only that they are going to kill everything."
         },
         {
           "at": "6:33",
-          "text": "Vorpals. A condition, not a species: deputised by the gods, drawn to demons, stronger the nearer one is, and liable to explode rather than lose."
+          "text": "According to Mordecai, vorpal is a condition, not a species. Vorpals are deputised by the gods and drawn to demons, stronger and angrier the nearer one is, and liable to blow themselves up rather than lose."
         }
       ],
       "beats": [
@@ -3041,19 +3041,19 @@
       "tagline": [
         {
           "at": "4:3",
-          "text": "T'Ghee. A card game from Allister's home planet, somewhere between chess and go fish, and part of a meditation-based religion. His Cookbook came as a deck of them."
+          "text": "T'Ghee is a card game from the home planet of Allister, the thirteenth edition's author: somewhere between chess and go fish, and part of his people's meditation-based religion. His copy of the Cookbook came as a deck of the cards."
         },
         {
           "at": "6:1",
-          "text": "T'Ghee totems. Plant a squad flag in something below five per cent health and it becomes a card that fights for whoever summons it. Twenty flags a squad, no refills."
+          "text": "Each squad leader has twenty flags. Plant one in a living thing below five percent health, and it becomes a T'Ghee totem card that fights for whoever summons it. Lost flags are not replaced."
         },
         {
           "at": "6:8",
-          "text": "T'Ghee cards. Totems, utility, snare, mystic and special. Four drawn when combat starts, one more every ten seconds, and a squad leader without spells or inventory until the deck is spent."
+          "text": "A T'Ghee deck holds totems, utility, snare, mystic and special cards. Four are drawn when combat starts and one more every ten seconds, and a squad leader cannot use spells or inventory until the deck is spent."
         },
         {
           "at": "6:16",
-          "text": "T'Ghee cards. The eighth floor's whole game, and a flag works on a dying crawler as well as on a monster."
+          "text": "A squad flag does not check what it is stabbed into, and it works on a dying crawler just as well as on a monster."
         }
       ],
       "beats": [
@@ -3220,11 +3220,11 @@
       "tagline": [
         {
           "at": "7:1",
-          "text": "A bootleg upgrade drunk from a homeless man's frozen coffee: access to the AI containment, and to the fuse that turns the sun nova."
+          "text": "The Containment Interface was a neural enhancement hidden in a homeless man's frozen coffee. It gives access to the AI's containment, and to the fuse that would send the star at the centre of the system nova."
         },
         {
           "at": "7:20",
-          "text": "Six tabs of numbers, a Fuse page with two of five conditions met, and one other button that switched all of it off. Pressed."
+          "text": "The Containment Interface has six tabs of numbers and a Fuse page with two of its five conditions met. The only other button Carl could press switched the containment off, and he pressed it."
         }
       ],
       "beats": [
@@ -3319,15 +3319,15 @@
       "tagline": [
         {
           "at": "2:16",
-          "text": "Flying women's heads with their organs trailing underneath. Ghost-class blood drinkers, hurt only by magic, and not dead until someone finds and destroys the body they left behind."
+          "text": "Krasue are flying women's heads with their organs trailing underneath: ghost-class vampires, said to be the undead shells of women who lived lives of sin."
         },
         {
           "at": "2:22",
-          "text": "Women who work in the magistrate's building by day. By night their heads leave their bodies hanging upside down in a nest, and they are Remex's army."
+          "text": "By day the krasue work as assistants in the magistrate's building and in the shops below it. By night their heads leave their bodies hanging upside down, and they are Remex's army."
         },
         {
           "at": "2:24",
-          "text": "Made from women brought to Remex: easy to control, compliant by day, and every one made is a spike of soul power for him. The ones who do not take are fed upon."
+          "text": "The krasue are made from women brought to Remex. They are easy to control and compliant by day, and every one he makes gives him a spike of soul power. The women who do not turn are fed upon."
         }
       ],
       "beats": [
@@ -3438,19 +3438,19 @@
       "tagline": [
         {
           "at": "1:12",
-          "text": "A kind of boss Mordecai names and then sets aside: there are others, called elites, and nobody needs to worry about them just yet."
+          "text": "Mordecai lists the ranks of boss, from neighbourhood to floor, and then adds that there are others, called elites, which nobody needs to worry about just yet."
         },
         {
           "at": "2:6",
-          "text": "Powerful, one-of-a-kind NPCs and mobs, the non-boss hero class of the dungeon, marked on the map with a black cross. They always want to use you."
+          "text": "Elites are powerful, one-of-a-kind NPCs and mobs, the dungeon's hero class. They either want to fuck you or kill you, they always want to use you, and they now show on the map."
         },
         {
           "at": "2:7",
-          "text": "Designed, printed and imprinted to act out somebody's drama. Writers nudge them, plot armour protects them, and a crawler who walks into their story is the guest star."
+          "text": "Elites are never natural. They are designed, printed and imprinted with the memories their drama needs, their writers patch them when the plot drifts, and most have thick plot armour."
         },
         {
           "at": "7:13",
-          "text": "Actors in secondary programs. Their owners can exert undue influence on them, which is how one arrived in a flag room wired with explosive satchels."
+          "text": "Elites are actors in secondary programmes, and their owners can lean on them. That is how Herman the Fleet came to be waiting in the flag room, wearing explosive satchels."
         }
       ],
       "beats": [
@@ -3626,19 +3626,19 @@
       "tagline": [
         {
           "at": "5:3",
-          "text": "A new spell for the Sledge, even more impressive than Bomo's teleport. Carl's lawyer suggested it, and has a story about Remex the Grand."
+          "text": "Zerzura is the Sledge's new spell, a teleport even more impressive than Bomo's. It was the lawyer's idea, and nobody will say yet what it does."
         },
         {
           "at": "5:56",
-          "text": "Takes a whole town, NPCs and buildings, one floor down. It lands somewhere awful, and whatever it squashes rises as the Children of Inpewt."
+          "text": "Zerzura takes a whole town, buildings and NPCs, one floor down, to land wherever it lands. Everything it kills rises as the Children of Inpewt, who hunt everyone the spell carried until they are dead."
         },
         {
           "at": "5:74",
-          "text": "Cast by the Sledge from inside the high elf castle. The castle, the changelings and Signet's people went down to the ninth floor without the crawlers."
+          "text": "The Sledge cast Zerzura from inside the high elf castle. The castle went down to the ninth floor with the changelings, Signet's tattoo warriors, Kiwi and Tina, and without a single crawler."
         },
         {
           "at": "7:85",
-          "text": "Cast a second time, it took Larracos and Shanty Town, NPCs and all, to the cotton fields of the twelfth floor."
+          "text": "The Sledge cast Zerzura a second time, and Larracos and Shanty Town, NPCs and all, went to the cotton fields of the Court of the Ascendency."
         }
       ],
       "beats": [
@@ -3821,19 +3821,19 @@
       "tagline": [
         {
           "at": "5:52",
-          "text": "The punishment for failing the creeper quest: a spreading wall of thorns that boils the blood of anyone it pricks. It cannot be countered."
+          "text": "Gehenna Bramble is the punishment for failing the creeper quest: a spreading wall of thorns, moving at four and a half kilometres an hour, that will cover everything except the saferooms. It can be beaten back, but never stopped."
         },
         {
           "at": "5:54",
-          "text": "Timed, by Katia's math, to cover the whole map as the floor runs out, and to stop at the high elf castle."
+          "text": "By Katia's maths, the brambles will finish covering the map just as the timer runs out, and the last place they reach will be the high elf castle."
         },
         {
           "at": "5:74",
-          "text": "It filled the world, stopped short of the castle, then rose into a dome over the survivors and came down on them."
+          "text": "The brambles filled the world and stopped a hundred feet short of where the castle had been. Then they rose into a dome over the survivors, pulsing yellow in time with the music."
         },
         {
           "at": "8:5",
-          "text": "Remembered on the tenth floor as the thing the crawlers loved on the sixth. Its relatives are still around."
+          "text": "On the tenth floor, the System describes a racer's vine mount as loosely related to the Gehenna Brambles you all loved on the sixth."
         }
       ],
       "beats": [
@@ -3992,19 +3992,19 @@
       "tagline": [
         {
           "at": "8:5",
-          "text": "The arena. Somewhere an audience vote can send a killed mob, or a 'stand-in' for it. The notification says nothing more."
+          "text": "The audience has voted for Otto the slime to be a manatee's stand-in in the arena. That is all the notification says, and Mordecai has no idea what it means."
         },
         {
           "at": "8:14",
-          "text": "The arena, on the eleventh floor. Kill certain mobs, let the audience vote, and either the creature survives to be sent there or a stand-in from outside the dungeon goes in its place."
+          "text": "The arena is on the eleventh floor. Kill certain mobs here and let the audience vote, and either the creature is sent there alive or a stand-in from outside the dungeon takes its place."
         },
         {
           "at": "8:88",
-          "text": "The arena at the end of the parade: the crawl itself in miniature, stocked with the tenth floor's kills or their stand-ins, and a floor boss between the crawlers and the stairs."
+          "text": "The arena waits at the end of the parade. It is the crawl itself in miniature, stocked with the tenth floor's kills or their stand-ins, and a floor boss stands between the crawlers and the stairs."
         },
         {
           "at": "8:95",
-          "text": "The Arena. A dozen football fields of packed dirt around a white tree, masked stand-ins dying by the thousand, and two summons of the crawlers' choosing: Scolopendra, then Khepri."
+          "text": "The Arena is a dozen football fields of packed dirt around a white tree, with masked stand-ins dying by the thousand. Carl's two summons are Scolopendra and then Khepri."
         }
       ],
       "beats": [
@@ -4143,11 +4143,11 @@
       "tagline": [
         {
           "at": "8:91",
-          "text": "A Horrible. Level X. One of thousands of masked, grimy figures lining the parade route: a non-combatant who is not really there, a memory from the Eulogist."
+          "text": "A Horrible, level X, is one of the thousands of masked figures lining the parade route, ten deep in the fog. The AI says that none of them are really here: each is a memory from the Eulogist of what the Primals once were."
         },
         {
           "at": "8:93",
-          "text": "The horribles. Memories of the Primals, then the avatars of dead mobs, watching from the arena's bleachers in silent witness to what the crawlers do next."
+          "text": "The horribles fill the arena's bleachers now, the avatars of dead mobs, silent witnesses to whatever the crawlers do next."
         }
       ],
       "beats": [
@@ -4246,11 +4246,11 @@
       "tagline": [
         {
           "at": "4:end",
-          "text": "The Walk-On List. The names a production wants pulled from a planet's survivors, and the bounty hunters who sneak down to collect them. Illegal, and as old as the crawl itself."
+          "text": "The Walk-On List names the survivors a production wants, and bounty hunters sneak down to the planet to kidnap them. It is not remotely legal, and it is as old as the crawl."
         },
         {
           "at": "5:19",
-          "text": "The Walk-On List. Explained on Odette's show around a guest who was hunted off it, in a version of events Carl knows to be utter horseshit."
+          "text": "Odette's show has explained the Walk-On List around a guest who was hunted off it, in a version of events Carl knows to be utter horseshit."
         }
       ],
       "beats": [
