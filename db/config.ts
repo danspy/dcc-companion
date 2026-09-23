@@ -46,6 +46,9 @@ const Floor = defineTable({
     recapAt: column.text(),
     recapSortKey: column.number(),
     premise: column.text(),
+    /* The System's catch-up for a reader who has just arrived: everything
+       before this floor, so it unseals with the floor itself. */
+    previously: column.text({ optional: true }),
     recap: column.json(),
   },
 });

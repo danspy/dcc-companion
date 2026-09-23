@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
-import { reveals, UNSET_COPY } from '../lib/spoiler';
+import { reveals } from '../lib/spoiler';
 import { getBooks, getFloors, readGate } from '../lib/content';
 
 const { gate } = await readGate(Astro.cookies);
@@ -46,36 +46,59 @@ function paragraphs(text: string): string[] {
    fold away until they want them. */
 const reached = floors.filter(f => reveals(gate, f.revealedAt));
 const current = reached.length ? reached[reached.length - 1].id : null;
+
+/* The top of the page follows the reader. With no book picked it says what
+   this site is and gives the back cover; once they have a position it is the
+   System's catch-up on everything before the floor they stand on (stored per
+   floor, gated with it), and a line saying where they are. */
+const mode = gate.spoilers && gate.fresh ? 'welcome' : 'previously';
+const lastFloor = reached.length ? reached[reached.length - 1] : null;
+const lastPart = lastFloor ? partsOf(lastFloor).filter(p => gate.frontier >= p.sortKey).at(-1) : undefined;
+const positionLabel = (() => {
+  if (!gate.spoilers) return 'You are reading with everything shown';
+  const book = Math.floor(gate.frontier / 1000), chapter = gate.frontier % 1000;
+  return chapter >= 999 || chapter === 0 ? `You have finished book ${book}` : `You are in book ${book}, chapter ${chapter}`;
+})();
+
+/* The back cover: the only story this page prints to everyone. */
+const PILOT = [
+  "Seattle, January, three in the morning. A Coast Guard veteran named Carl goes outside in a leather jacket, boxer shorts and his ex-girlfriend's pink Crocs to get her prize-winning Persian, Princess Donut, down from a tree. Ninety seconds later every building on your planet falls down, and everyone inside one is dead. That is not a spoiler. That is the premise.",
+  "The Borant Corporation has foreclosed on Earth under Syndicate law, all perfectly legal, and the survivors got a choice: come down into my dungeon, or wait up top for the mining crews. Eighteen floors. Every one of them on a clock. When a clock runs out, that floor collapses with whoever is still standing on it.",
+  "Oh, and it is television! Broadcast live, across the galaxy. Ratings buy sponsors, sponsors buy loot, loot buys another floor. Being entertaining is a survival stat. Being boring is a cause of death.",
+];
 ---
 <Layout title="Floors">
   <section class="wrap intro">
     <p class="eyebrow" style="color:var(--color-blood)">Dungeon Crawler World · Season: Earth</p>
     <h1>The Crawl<em>So Far</em></h1>
 
-    <div class="sys broadcast">
-      <b>*** Previously, on Dungeon Crawler World ***</b>
-      <p>Hello, viewer! Either you are here to catch up, or you have not started yet and you are
-        snooping. Either way, pull up a chair. Chairs are optional down here, but I appreciate the
-        gesture.</p>
-      <p>Here is the pilot. Seattle, January, three in the morning. A Coast Guard veteran named
-        Carl goes outside in a leather jacket, boxer shorts and his ex-girlfriend's pink Crocs to
-        get her prize-winning Persian, Princess Donut, down from a tree. Ninety seconds later every
-        building on your planet falls down, and everyone inside one is dead. That is not a spoiler.
-        That is the premise.</p>
-      <p>The Borant Corporation has foreclosed on Earth under Syndicate law, all perfectly legal,
-        and the survivors got a choice: come down into my dungeon, or wait up top for the mining
-        crews. Eighteen floors. Every one of them on a clock. When a clock runs out, that floor
-        collapses with whoever is still standing on it.</p>
-      <p>Oh, and it is television! Broadcast live, across the galaxy. Ratings buy sponsors,
-        sponsors buy loot, loot buys another floor. Being entertaining is a survival stat. Being
-        boring is a cause of death.</p>
-      <p>Below is everything that happened on every floor you have survived. Sorry. Read. You get
-        it a stretch at a time, as far as you have got and not one chapter further. That is not me
-        being nice. Spoilers are bad for ratings.</p>
-    </div>
-    {gate.spoilers && gate.fresh
-      ? <p class="sys notice"><b>*** No position set ***</b>{UNSET_COPY}</p>
-      : null}
+    {mode === 'welcome'
+      ? <div class="sys broadcast">
+          <b>*** Welcome, viewer ***</b>
+          <p>This is a companion to <i>Dungeon Crawler Carl</i>, the book series by Matt Dinniman,
+            and it has exactly one rule: it only tells you what you have already read. Pick the
+            book you are on in the bar at the top, add a chapter if you are partway through, and
+            everything opens up to exactly that point. What happened on each floor, a stretch at a
+            time. Who everybody is, and when they turn up. The timeline. My achievements, in my own
+            words. Not one chapter further.</p>
+          <p>Until you pick a book, you get the back cover and nothing else. Here it is.</p>
+          {PILOT.map(t => <p>{t}</p>)}
+          <p class="cta">Pick your book above, and I will tell you what you missed.</p>
+        </div>
+      : <div class="sys broadcast">
+          <b>*** Previously, on Dungeon Crawler World ***</b>
+          {lastFloor?.previously
+            ? <p>{lastFloor.previously}</p>
+            : PILOT.map(t => <p>{t}</p>)}
+          <p class="status">
+            {positionLabel}.{' '}
+            {lastFloor
+              ? <>You are on floor {lastFloor.id}, {lastFloor.name}{lastPart
+                  ? <>, and the last stretch you have reached is <a href={`#floor-${lastFloor.id}`}>{lastPart.title}</a>.</>
+                  : <>, and its story is still ahead of you. <a href={`#floor-${lastFloor.id}`}>See what this floor is</a>.</>}</>
+              : <>The stairs down are still ahead of you. Keep reading.</>}
+          </p>
+        </div>}
   </section>
 
   <section class="wrap">
@@ -160,7 +183,9 @@ const current = reached.length ? reached[reached.length - 1].id : null;
                line-height: 1.7; padding: 20px 22px; }
   .broadcast p { margin: 0 0 14px; }
   .broadcast p:last-child { margin-bottom: 0; }
-  .notice { margin-top: 18px; max-width: calc(var(--measure) + 40px); }
+  .broadcast .cta { color: var(--color-gold); }
+  .broadcast .status { border-top: 1px solid var(--color-line); padding-top: 12px; color: var(--color-grey-100); }
+  .broadcast a { color: var(--color-gold); }
   .sec-head h2 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 700; }
   .sec-intro { color: var(--color-grey-300); max-width: var(--measure); margin: 8px 0 30px; font-size: var(--type-body); }
   /* A jump to #floor-N lands below the sticky gate bar, not under it. */

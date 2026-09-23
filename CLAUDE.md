@@ -106,6 +106,15 @@ part too. The lint also fails a part that unseals before its floor, parts out of
 part that is not at `recapAt`; a floor with no recap at all is only a warning, because it leaks
 nothing.
 
+**The top of the page follows the reader.** With no book picked it is a *Welcome, viewer*: what
+the site is, the one rule, and the back cover. With a position it is *Previously, on Dungeon Crawler
+World*: the System's catch-up on everything before the floor the reader stands on, stored per floor
+as `previously` and gated at the floor's own `revealedAt` (it only tells what came before
+arrival, and the lint and `check-facts` read it like a part), then a line saying where they are and
+linking the last stretch they have reached. Before the first floor, the back cover stands in.
+The status line's own copy is static, so it names no floor: "the first floor" in it failed
+`check-pages`, rightly.
+
 The **premise** is the System's floor announcement now (`*** Now entering ***`, mono), and the
 page's intro is the System too, a *Previously, on Dungeon Crawler World* that names only what the
 back cover does. Floors are `<details>`: the one the reader stands on opens, the rest fold. Each head carries a gold

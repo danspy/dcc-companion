@@ -183,6 +183,14 @@ test("a floor's recap is told in parts, each gated where its stretch ends", () =
   // stretch leaks exactly like a tagline.
   assert.ok(run([part('2:5', 'Katia Grim is coming.'), part('2:end', 'x')]).errors.some(e => e.includes('"Katia Grim"')));
   assert.ok(run([part('2:5', 'She dies later.'), part('2:end', 'x')]).errors.some(e => e.includes('points past')));
+  // The catch-up is shown on arrival, so it may only name what arrival has reached.
+  const early = lint({
+    books: [{ id: 2, title: 'Two', chapters: 25 }],
+    floors: [{ id: 3, name: 'The Over City', revealedAt: '2:2', recapAt: '2:end', premise: 'p',
+      previously: 'Katia Grim is waiting.', recap: [part('2:end', 'x')] }],
+    entities: [{ id: 'k', kind: 'character', name: 'Katia Grim', revealedAt: '2:21', tagline: 't', confidence: 'verified', beats: [] }],
+  });
+  assert.ok(early.errors.some(e => e.includes('previously') && e.includes('"Katia Grim"')));
   // The last part is the whole account, so it sits exactly at recapAt.
   const off = lint({
     books: [{ id: 2, title: 'Two', chapters: 25 }],

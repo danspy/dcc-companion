@@ -362,6 +362,8 @@ export function lint({ books, floors, entities, achievements = [] }) {
     const f = at(floor.revealedAt, where);
     if (f === null) continue;
     if (floor.premise) checkForward(floor.premise, f, `${where} premise`);
+    // The catch-up tells what came before the floor, so it is held to the floor's own point.
+    if (floor.previously) checkForward(floor.previously, f, `${where} previously`);
     const parts = Array.isArray(floor.recap) ? floor.recap : [];
     // A floor with no story yet leaks nothing; it is a gap in the curation, not a hole in the gate.
     if (!parts.length) { warnings.push(`${where}: no recap yet — a list of { from, at, title, text }`); continue; }

@@ -27,7 +27,7 @@ export default async function () {
     snapshot.floors.map((f: any) => ({
       id: f.id, name: f.name, book: f.book, bookSpan: f.bookSpan ?? null,
       accent: f.accent, ink: f.ink, revealedAt: f.revealedAt, nameAt: f.nameAt ?? null, recapAt: f.recapAt,
-      recapSortKey: f.recapSortKey, premise: f.premise, recap: f.recap,
+      recapSortKey: f.recapSortKey, premise: f.premise, previously: f.previously ?? null, recap: f.recap,
     })),
   );
 
