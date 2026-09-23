@@ -6,12 +6,21 @@ import { BOOK_COUNT } from '../lib/progress';
 interface Props { prefs: Prefs; books: BookRow[] }
 const { prefs, books } = Astro.props;
 const bookOf = (n: number) => books.find(b => b.id === n);
+/* Each book carries its official colour and a readable ink (data/book-colors.json).
+   The bar paints with them as fills and borders only: as text on the dark ground,
+   the red and the purple fall under 4.5:1, so a colour is never the text itself. */
+const tint = (n: number) => {
+  const b = bookOf(n);
+  return b?.accent ? `--bk:${b.accent};--bk-ink:${b.ink ?? '#0e0e0e'}` : undefined;
+};
+const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
 ---
 <div class="gate">
   <div class="gate-inner wrap">
     <span class="eyebrow">
       I've read up to —
-      <b class={prefs.spoilers && !prefs.book ? 'unset' : undefined}>{!prefs.spoilers
+      <b class={prefs.spoilers && !prefs.book ? 'unset' : saved ? 'chip' : undefined}
+         style={saved ? tint(saved) : undefined}>{!prefs.spoilers
         ? 'spoilers off'
         : prefs.book
           ? `Book ${prefs.book}${prefs.chapter ? ` · ch ${prefs.chapter}` : ' · finished'}`
@@ -23,7 +32,7 @@ const bookOf = (n: number) => books.find(b => b.id === n);
          whole of it for a reader who had only just started. -->
     <div class="books" role="group" aria-label="Which book are you reading?">
       {Array.from({ length: BOOK_COUNT }, (_, i) => i + 1).map(n => (
-        <button class="bk" data-book={n} data-title={bookOf(n)?.title ?? ''}
+        <button class="bk" data-book={n} data-title={bookOf(n)?.title ?? ''} style={tint(n)}
                 data-chapters={bookOf(n)?.chapters ?? 0}
                 aria-pressed={prefs.spoilers && n === prefs.book} aria-expanded="false"
                 aria-controls="pick" title={bookOf(n)?.title}>{n}</button>
@@ -36,7 +45,7 @@ const bookOf = (n: number) => books.find(b => b.id === n);
   <div class="pick" id="pick" hidden data-book={prefs.book} data-chapter={prefs.chapter}>
     <div class="pick-inner wrap">
       <div class="pick-head">
-        <span class="label">Book <span id="pick-n"></span></span>
+        <span class="pick-no" id="pick-no">Book <span id="pick-n"></span></span>
         <b id="pick-title"></b>
       </div>
       <p class="pick-q">Where are you in it?</p>
@@ -73,14 +82,21 @@ const bookOf = (n: number) => books.find(b => b.id === n);
         border: 1px solid var(--color-line); cursor: pointer;
         transition: background .12s, color .12s, border-color .12s; }
   .bk:hover { border-color: var(--color-grey-700); color: var(--color-grey-100); }
-  .bk[aria-pressed="true"] { background: var(--color-gold); color: #101010;
-                             border-color: var(--color-gold); font-weight: 700; }
-  /* The book whose picker is open, when it is not the saved one. */
-  .bk[aria-expanded="true"]:not([aria-pressed="true"]) { border-color: var(--color-gold);
-                                                        color: var(--color-gold); }
+  /* Each number wears its book's colour as an underline at rest, the full
+     border on hover or while its picker is open, and the fill once saved. */
+  .bk { box-shadow: inset 0 -3px 0 var(--bk, var(--color-gold)); }
+  .bk:hover, .bk[aria-expanded="true"] { border-color: var(--bk, var(--color-gold));
+                                         color: var(--color-grey-100); }
+  .bk[aria-pressed="true"] { background: var(--bk, var(--color-gold)); color: var(--bk-ink, #101010);
+                             border-color: var(--bk, var(--color-gold)); font-weight: 700;
+                             box-shadow: none; }
+  .eyebrow b.chip { background: var(--bk); color: var(--bk-ink); padding: 2px 7px; margin-left: 2px; }
   .spacer { flex: 1 1 auto; }
 
-  .pick { border-top: 1px solid var(--color-line); background: var(--color-panel); }
+  .pick { border-top: 3px solid var(--acc, var(--color-gold)); background: var(--color-panel); }
+  .pick-no { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
+             text-transform: uppercase; font-weight: 700; padding: 3px 7px;
+             background: var(--acc, var(--color-gold)); color: var(--acc-ink, #101010); }
   .pick[hidden] { display: none; }
   .pick-inner { padding-block: 14px 16px; display: grid; gap: 10px; }
   .pick-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
@@ -89,16 +105,20 @@ const bookOf = (n: number) => books.find(b => b.id === n);
   .pick-q { margin: 0; color: var(--color-grey-300); font-size: var(--type-meta); }
   .pick-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
   .pick-row[hidden] { display: none; }
-  #pick-range { flex: 1 1 220px; min-width: 0; accent-color: var(--color-gold); }
+  #pick-range { flex: 1 1 220px; min-width: 0; accent-color: var(--acc, var(--color-gold)); }
   .pick-ch { font-family: var(--font-mono); font-size: var(--type-ui); color: var(--color-grey-300);
              display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   #pick-num { font-family: var(--font-mono); font-size: 13px; width: 58px; height: 30px;
               background: transparent; color: var(--color-grey-100);
               border: 1px solid var(--color-line); padding: 0 7px; }
+  #pick-num:focus { outline: none; border-color: var(--acc, var(--color-gold)); }
   .pick-hint { margin: 0; color: var(--color-grey-500); font-size: var(--type-meta); }
   .pick-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-  .btn-set { border-color: var(--color-gold); color: var(--color-gold); }
-  .btn-set:hover { border-color: var(--color-gold); color: #101010; background: var(--color-gold); }
+  .btn-set { border-color: var(--acc, var(--color-gold)); background: var(--acc, var(--color-gold));
+             color: var(--acc-ink, #101010); font-weight: 700; }
+  .btn-set:hover { border-color: var(--acc, var(--color-gold)); color: var(--acc-ink, #101010);
+                   filter: brightness(1.12); }
+  #pick-done:hover { border-color: var(--acc, var(--color-gold)); }
   .pick-quiet { border-color: transparent; }
 </style>
 
@@ -151,6 +171,9 @@ const bookOf = (n: number) => books.find(b => b.id === n);
     document.querySelectorAll('.bk').forEach(b =>
       b.setAttribute('aria-expanded', String(b === btn)));
     $('pick-n').textContent = String(n);
+    const cs = getComputedStyle(btn);
+    $('pick').style.setProperty('--acc', cs.getPropertyValue('--bk').trim() || '');
+    $('pick').style.setProperty('--acc-ink', cs.getPropertyValue('--bk-ink').trim() || '');
     $('pick-title').textContent = btn.dataset.title || '';
     $('pick-done').textContent = `I finished book ${n}`;
     const saved = state.spoilers && state.book === n;
