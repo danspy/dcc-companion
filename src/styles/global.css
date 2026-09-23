@@ -459,6 +459,90 @@
   /* The timeline needs more width than a column of prose. It is a named part
      of the system rather than a number invented on one page. */
   .wrap-wide { max-width: var(--measure-wide); margin-inline: auto; padding-inline: 24px; }
+
+  /* ---------------------------------------------------------------------------
+     Quick-find. The masthead trigger and the dialog it opens. These live in the
+     component layer rather than Layout.astro's scoped style because the result
+     rows are built by a script, and a scoped rule never reaches those.
+
+     The dialog reads as the System being queried: the query is set as a
+     display-size line behind a gold prompt, results fall into two groups that
+     say *why* they matched (by name, or because the story mentions it), and the
+     typed words are lit in the result so a story hit shows its reason.
+     --------------------------------------------------------------------------- */
+  .findbtn {
+    display: flex; align-items: center; gap: 10px; margin-left: auto; flex: 0 1 240px; min-width: 0;
+    height: 34px; padding: 0 8px 0 10px;
+    border: 1px solid var(--color-line); background: var(--color-ink);
+    color: var(--color-grey-500); font-size: var(--type-meta);
+  }
+  .findbtn:hover { border-color: var(--color-grey-700); color: var(--color-grey-200); text-decoration: none; }
+  .findbtn:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+  .findbtn-glass { width: 14px; height: 14px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; }
+  .findbtn-text { flex: 1 1 auto; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  kbd {
+    font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-500);
+    border: 1px solid var(--color-line); border-bottom-width: 2px; padding: 0 5px; line-height: 17px;
+    background: var(--color-panel); flex: none;
+  }
+
+  .qf {
+    width: min(720px, calc(100vw - 32px)); max-height: min(78dvh, 640px);
+    margin: 9vh auto auto; padding: 0; overflow: hidden;
+    border: 1px solid var(--color-line); border-top: 3px solid var(--color-gold);
+    background: var(--color-panel); color: var(--color-grey-100);
+  }
+  .qf[open] { display: flex; flex-direction: column; }
+  .qf::backdrop { background: rgba(0, 0, 0, .78); }
+  .qf-bar { display: flex; align-items: center; gap: 12px; padding: 14px 16px 12px;
+            border-bottom: 1px solid var(--color-line); flex: none; }
+  .qf-prompt { font-family: var(--font-display); font-weight: 800; font-size: 34px; line-height: 1;
+               color: var(--color-gold); transform: translateY(-2px); }
+  .qf-bar input {
+    flex: 1 1 auto; min-width: 0; border: 0; outline: 0; background: transparent;
+    font-family: var(--font-display); font-weight: 700; font-size: 26px; letter-spacing: .01em;
+    color: #fff; caret-color: var(--color-gold);
+  }
+  .qf-bar input::placeholder { color: var(--color-grey-700); font-weight: 600; }
+  .qf-bar input::-webkit-search-cancel-button { display: none; }
+  .qf-close { border: 0; background: none; padding: 0; cursor: pointer; }
+  .qf-close:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+
+  .qf-results { overflow-y: auto; overscroll-behavior: contain; flex: 1 1 auto; }
+  .qf[data-state="idle"] .qf-results { display: none; }
+  .qf-group { padding: 6px 0 8px; }
+  .qf-group + .qf-group { border-top: 1px solid var(--color-line-soft); }
+  .qf-group-title {
+    margin: 8px 16px 4px; font-family: var(--font-mono); font-size: var(--type-label);
+    font-weight: 400; letter-spacing: var(--ls-label); color: var(--color-grey-500);
+  }
+  .qf-row {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 14px; align-items: baseline;
+    padding: 7px 16px 8px 13px; border-left: 3px solid transparent; color: inherit;
+  }
+  .qf-row:hover { text-decoration: none; }
+  .qf-row[aria-selected="true"] { background: var(--color-raised); border-left-color: var(--color-gold); }
+  .qf-name { font-family: var(--font-display); font-weight: 700; font-size: var(--type-sect);
+             line-height: 1.15; color: #fff; overflow-wrap: anywhere; }
+  .qf-kind { font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-gold);
+             white-space: nowrap; }
+  .qf-detail { grid-column: 1 / -1; font-size: var(--type-meta); line-height: 1.45; color: var(--color-grey-300);
+               overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+               overflow: hidden; }
+  .qf mark { background: none; color: var(--color-gold); box-shadow: inset 0 -1px 0 var(--color-gold); }
+  .qf-name mark { box-shadow: none; }
+  .qf-none { margin: 16px; }
+  .qf-none b { color: var(--color-blood); }
+  .qf-note { margin: 0; padding: 9px 16px 11px; border-top: 1px solid var(--color-line); flex: none;
+             font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-500); }
+  @media (max-width: 560px) {
+    .findbtn { flex: 0 0 auto; }
+    .findbtn-text, .findbtn kbd { display: none; }
+    .findbtn { width: 38px; justify-content: center; padding: 0; }
+    .qf { width: 100vw; max-width: 100vw; margin: 0; max-height: 100dvh; border-left: 0; border-right: 0; }
+    .qf-bar input { font-size: 22px; }
+  }
+
 }
 
 /* While the stage owns the window, the page behind it holds still. */

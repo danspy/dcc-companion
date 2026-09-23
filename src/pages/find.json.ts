@@ -15,7 +15,7 @@ export const GET: APIRoute = async ({ url, cookies }) => {
   const { gate } = await readGate(cookies);
   const [entities, floors, beats] = await load();
   const hits = quickFind(q, entities, floors, gate, 12, beats)
-    .map(({ href, name, kind, detail }) => ({ href, name, kind, detail }));
+    .map(({ href, name, kind, detail, tier }) => ({ href, name, kind, detail, tier }));
   return new Response(JSON.stringify(hits), {
     headers: {
       'content-type': 'application/json; charset=utf-8',

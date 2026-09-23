@@ -266,6 +266,19 @@ never read: the corpus is loaded once per process (content only changes on deplo
 request. A title the book gives a character is still worth an alias — Shi Maria is "The Bedlam
 Bride" from 6:8 — because a name hit says *who*, where a beat hit only says *where it came up*.
 
+**How it looks, and why.** The first version shipped with its rows unstyled — name, kind and
+snippet run together as one gold line — because its CSS sat in Layout.astro's scoped `<style>` and
+the rows are built by a script. It is the same trap as the trophy case, and the fix is the same: the
+quick-find styles live in `@layer components` in `global.css`. The dialog reads as the System being
+queried: a gold `›` prompt before a display-size query line, results split into **Names** and **In
+the story** (why each matched), the typed words lit in gold, the active row marked with a gold bar,
+and "*** No record ***" in blood when nothing answers. On a phone it is a full-width sheet and the
+masthead trigger is an icon. A result says "also X" only when the name itself did not match — so
+"don" shows Princess Donut's role, not "also Donut".
+
+**The static-copy check caught the placeholder.** It read "Carl, the Bedlam Bride, a floor…" — a
+gated alias in page source, shown to a reader on book 1. It names only premise names now.
+
 ### Plain words for the chrome
 
 A reader asked why a character page said **"Where it's used"**. It was the usage-log heading for
@@ -935,6 +948,18 @@ reader of both shapes: `aliasesSeen(e, gate)` is what a view shows and searches;
 before its entity; `check-anchors` reads a timed alias as its own row, `id~alias`. Twenty-one aliases
 carry their own point now. The first build with them caught a 5:75 beat calling the Operatic
 Collective "the Operatics", a nickname the book first prints at 7:12.
+
+**A short alias inside an open full name is not a leak.** "Lucia" is first printed alone at 2:7,
+but "Lucia Mar" is open from book 1, and a 1:14 beat saying "Lucia Mar" does not name "Lucia"
+early. The lint, `leak.ts` and `check-anchors` each mask the longer open names that contain a gated
+one before testing it. Without that, timing "Miriam", "Quan" or "Lucia" failed the build on every
+correct use of the full name.
+
+A sweep of all 355 entities for names the book uses that the site did not know added 30 more:
+Shi Maria's six epithets (the Screamer, the Reviled, MaeMae…), Sledgie, Harpo, Dr. Hu, Eva Sigrid,
+Britney Proskurina, Prince Maestro, Lord of Blight, and the short forms Frank, Maggie, Huanxin,
+Quan, Miriam, Gluteus and Lucia. It also moved the Lemig Sortion to 5:75, where the book first lists
+it (as "the Lemig Sortition"), and timed "Dr. Porthus Hu" to 7:11, where it is printed.
 
 A title that only adds a rank to a name already open ("Crawler Carl", "Sergeant Toyotomi") stays a
 plain string. Timing an alias is for a name, or a fact, the reader has not been given.

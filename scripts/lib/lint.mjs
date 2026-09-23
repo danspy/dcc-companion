@@ -88,6 +88,20 @@ export function lint({ books, floors, entities, achievements = [] }) {
        ping are English. Matching those case-blind made ordinary sentences fail. */
     .map(n => ({ ...n, re: new RegExp(`\\b${escapeRe(n.name)}\\b`, /\s/.test(n.name) ? 'i' : '') }));
 
+  /* A short name can sit inside a longer one the reader already has: "Lucia" is
+     printed on its own at 2:7, but "Lucia Mar" is open from book 1, and a text
+     saying "Lucia Mar" does not name "Lucia" early. So each gated name carries
+     the longer names that contain it, and those are masked out of the text
+     first whenever they are open at the text's own point. */
+  for (const n of gatedNames) {
+    n.within = gatedNames.filter(o => o !== n && o.name.length > n.name.length && n.re.test(o.name));
+  }
+  const mentions = (n, text, atValue) => {
+    let t = text;
+    for (const o of n.within) if (o.at <= atValue) t = t.replace(new RegExp(o.re.source, o.re.flags + 'g'), ' ');
+    return n.re.test(t);
+  };
+
   /* One text, one reveal point: does it point past itself? A verbatim quotation
      of something the reader has already seen in the book cannot point forward
      by construction, and the book's own text does say "eventually" — so a
@@ -100,7 +114,7 @@ export function lint({ books, floors, entities, achievements = [] }) {
       errors.push(`${where}: "${phrase[0]}" points past its own reveal point — split it, or gate it later`);
     }
     for (const n of gatedNames) {
-      if (n.at > atValue && n.re.test(text)) {
+      if (n.at > atValue && mentions(n, text, atValue)) {
         errors.push(`${where}: names "${n.name}", which is not revealed until later`);
       }
     }
@@ -326,7 +340,7 @@ export function lint({ books, floors, entities, achievements = [] }) {
 
     for (const n of gatedNames) {
       if (n.at <= aAt) continue;
-      if (!n.re.test(`${a.name} ${a.text ?? ''} ${a.reward ?? ''} ${a.box ?? ''}`)) continue;
+      if (!mentions(n, `${a.name} ${a.text ?? ''} ${a.reward ?? ''} ${a.box ?? ''}`, aAt)) continue;
       if (n.at > floorAt) floorAt = n.at;
       warnings.push(`award ${a.id}: names "${n.name}", so it waits for it`);
     }

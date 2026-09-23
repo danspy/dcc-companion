@@ -21,7 +21,8 @@ export interface FindEntity {
 export interface FindBeat { entityId: string; headline: string; text: string; sortKey: number; book: number; chapter?: number | null }
 export interface FindFloor { id: number; name: string; revealedAt: string; nameAt?: string | null }
 
-export interface Hit { href: string; name: string; kind: string; detail: string; score: number }
+/** `tier` says why it matched: by what it is called, or because its story says so. */
+export interface Hit { href: string; name: string; kind: string; detail: string; score: number; tier: 'name' | 'story' }
 
 const words = (s: string) => s.toLowerCase().split(/[^a-z0-9']+/).filter(Boolean);
 
@@ -73,24 +74,29 @@ export function quickFind(
   for (const e of entities) {
     if (!reveals(gate, e.revealedAt)) continue;
     byEntity.set(e.id, e);
-    let best = score(e.name, query);
+    const own = score(e.name, query);
+    let best = own;
     let via = '';
     for (const a of aliasesSeen(e, gate)) {
       const s = score(a, query) - 5;           // a name beats its nickname on a tie
-      if (s > best) { best = s; via = a; }
+      if (s > best) best = s;
+      // Say "also X" only when the name itself did not answer: "Princess Donut,
+      // also Donut" repeats what the row already shows.
+      if (!own && s > 0 && !via) via = a;
     }
     if (!best && e.role) { const s = score(e.role, query) - 30; if (s > 0) best = s; }
     // The tagline the reader has reached, which is what the entry says about itself.
     let detail = via ? `also “${via}”` : (e.role ?? '');
+    let tier: Hit['tier'] = 'name';
     if (!best) {
       const tag = taglineAt(e, gate.frontier);
-      if (tag && matchesAll(tag, terms)) { best = 25; detail = snippet(tag, terms); }
+      if (tag && matchesAll(tag, terms)) { best = 25; detail = snippet(tag, terms); tier = 'story'; }
     }
     if (!best) continue;
     const label = KIND_LABELS[e.kind] ?? e.kind;
     hits.push({
       href: `/entity/${e.id}`, name: e.name, kind: label.replace(/s( &.*)?$/, ''),
-      detail, score: best,
+      detail, score: best, tier,
     });
   }
 
@@ -118,7 +124,7 @@ export function quickFind(
       hits.push({
         href: `/entity/${e.id}`, name: e.name, kind: label.replace(/s( &.*)?$/, ''),
         detail: `${where} — ${snippet(f.head ? f.beat.headline : f.beat.text, terms)}`,
-        score: Math.min(20, (f.head ? 12 : 6) + f.n),
+        score: Math.min(20, (f.head ? 12 : 6) + f.n), tier: 'story',
       });
     }
   }
@@ -126,7 +132,7 @@ export function quickFind(
   for (const f of floors) {
     if (!reveals(gate, f.nameAt ?? f.revealedAt)) continue;
     const s = Math.max(score(f.name, query), score(`floor ${f.id}`, query));
-    if (s) hits.push({ href: `/#floor-${f.id}`, name: f.name, kind: 'Floor', detail: `Floor ${f.id}`, score: s });
+    if (s) hits.push({ href: `/#floor-${f.id}`, name: f.name, kind: 'Floor', detail: `Floor ${f.id}`, score: s, tier: 'name' });
   }
 
   return hits.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name)).slice(0, limit);

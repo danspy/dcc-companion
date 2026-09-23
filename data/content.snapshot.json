@@ -717,7 +717,19 @@
       "kind": "character",
       "name": "Shi Maria",
       "aka": [
-        "The Bedlam Bride"
+        "The Bedlam Bride",
+        "The Screamer",
+        "The Reviled",
+        "Kwaku's Love",
+        "The Corrupted Paramour",
+        {
+          "name": "MaeMae",
+          "at": "6:26"
+        },
+        {
+          "name": "The Widow Endless",
+          "at": "6:26"
+        }
       ],
       "role": "Crawler · card",
       "taglines": [
@@ -779,7 +791,9 @@
       "id": "louis",
       "kind": "character",
       "name": "Louis",
-      "aka": [],
+      "aka": [
+        "Louis Santiago"
+      ],
       "role": "Crawler",
       "taglines": [
         {
@@ -886,7 +900,12 @@
       "id": "miriam-dom",
       "kind": "character",
       "name": "Miriam Dom",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Miriam",
+          "at": "3:32"
+        }
+      ],
       "role": "Crawler",
       "taglines": [
         {
@@ -1010,7 +1029,12 @@
       "id": "lucia-mar",
       "kind": "character",
       "name": "Lucia Mar",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Lucia",
+          "at": "2:7"
+        }
+      ],
       "role": "Crawler",
       "taglines": [
         {
@@ -1043,7 +1067,12 @@
       "id": "quan-ch",
       "kind": "character",
       "name": "Quan Ch",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Quan",
+          "at": "2:end"
+        }
+      ],
       "role": "Crawler",
       "taglines": [
         {
@@ -1119,7 +1148,9 @@
       "name": "Frank Q & Maggie My",
       "aka": [
         "Frank Q",
-        "Maggie My"
+        "Maggie My",
+        "Frank",
+        "Maggie"
       ],
       "role": "Antagonists",
       "taglines": [
@@ -1181,7 +1212,12 @@
       "id": "eva",
       "kind": "character",
       "name": "Eva",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Eva Sigrid",
+          "at": "3:21"
+        }
+      ],
       "role": "Crawler",
       "taglines": [
         {
@@ -1371,7 +1407,12 @@
       "id": "britney",
       "kind": "character",
       "name": "Britney",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Britney Proskurina",
+          "at": "4:25"
+        }
+      ],
       "role": "Crawler",
       "taglines": [
         {
@@ -1569,7 +1610,12 @@
       "id": "maestro",
       "kind": "character",
       "name": "The Maestro",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Prince Maestro",
+          "at": "1:44"
+        }
+      ],
       "role": "Presenter",
       "taglines": [
         {
@@ -1725,7 +1771,12 @@
       "id": "harpocrates",
       "kind": "character",
       "name": "Harpocrates",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Harpo",
+          "at": "7:60"
+        }
+      ],
       "role": "God of silence",
       "taglines": [
         {
@@ -2161,7 +2212,12 @@
       "id": "sledge",
       "kind": "character",
       "name": "The Sledge",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Sledgie",
+          "at": "3:9"
+        }
+      ],
       "role": "Mercenary",
       "taglines": [
         {
@@ -2497,7 +2553,11 @@
       "kind": "character",
       "name": "Asojano",
       "aka": [
-        "Lord of Smallpox"
+        "Lord of Smallpox",
+        {
+          "name": "Lord of Blight",
+          "at": "6:58"
+        }
       ],
       "role": "Orisha · city boss",
       "taglines": [
@@ -3865,7 +3925,18 @@
       "kind": "character",
       "name": "Porthus",
       "aka": [
-        "Dr. Porthus Hu"
+        {
+          "name": "Dr. Porthus Hu",
+          "at": "7:11"
+        },
+        {
+          "name": "Dr. Hu",
+          "at": "4:end"
+        },
+        {
+          "name": "Doctor Hu",
+          "at": "6:end"
+        }
       ],
       "role": "Former crawler · second edition",
       "taglines": [
@@ -3945,7 +4016,12 @@
       "id": "gluteus-maxx",
       "kind": "character",
       "name": "Gluteus Maxx",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Gluteus",
+          "at": "6:24"
+        }
+      ],
       "role": "Dancer · mercenary",
       "taglines": [
         {
@@ -4004,7 +4080,9 @@
       "id": "huanxin-jinx",
       "kind": "character",
       "name": "Huanxin Jinx",
-      "aka": [],
+      "aka": [
+        "Huanxin"
+      ],
       "role": "Sponsor · Grixist",
       "taglines": [
         {
@@ -4230,7 +4308,9 @@
       "id": "jacobus",
       "kind": "character",
       "name": "Jacobus",
-      "aka": [],
+      "aka": [
+        "The Reverse Tooth Fairy"
+      ],
       "role": "Reverse Tooth Fairy",
       "taglines": [
         {
@@ -7564,7 +7644,12 @@
       "id": "faction-wars",
       "kind": "mechanic",
       "name": "Faction Wars",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Faction War Games",
+          "at": "2:19"
+        }
+      ],
       "role": "Floor event · ninth floor",
       "taglines": [
         {
@@ -7713,7 +7798,12 @@
       "id": "crawlcon",
       "kind": "mechanic",
       "name": "CrawlCon",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Crawl Con",
+          "at": "5:63"
+        }
+      ],
       "role": "Fan convention",
       "taglines": [
         {
@@ -7829,7 +7919,12 @@
       "id": "safe-room",
       "kind": "mechanic",
       "name": "Safe Room",
-      "aka": [],
+      "aka": [
+        {
+          "name": "saferoom",
+          "at": "1:9"
+        }
+      ],
       "role": "Dungeon fixture",
       "taglines": [
         {
@@ -7970,7 +8065,16 @@
       "id": "tummy-acher",
       "kind": "mechanic",
       "name": "Tummy Acher",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Belly Achers",
+          "at": "7:5"
+        },
+        {
+          "name": "Colon Worms",
+          "at": "7:5"
+        }
+      ],
       "role": "Pet-class mob",
       "taglines": [
         {
@@ -8733,10 +8837,16 @@
       "kind": "faction",
       "name": "The Lemig Sortion",
       "aka": [
-        "Lemig Sortion"
+        "Lemig Sortion",
+        "Lemig Sortition"
       ],
       "role": "System government",
       "taglines": [
+        {
+          "at": "5:75",
+          "sortKey": 5075,
+          "text": "A name on a list of faction teams: the Lemig Sortition, one of three whose local populations may vote on all government expenditures."
+        },
         {
           "at": "6:12",
           "sortKey": 6012,
@@ -8748,7 +8858,7 @@
           "text": "Caught cheating on the ninth floor, punished for it, and then out of the war altogether when its commander took his own way out."
         }
       ],
-      "revealedAt": "6:12",
+      "revealedAt": "5:75",
       "sort": 44,
       "voice": "narrator",
       "descriptions": []
@@ -9108,7 +9218,11 @@
       "kind": "faction",
       "name": "Lady Dominators and the Gimp",
       "aka": [
-        "Lady Dominators"
+        "Lady Dominators",
+        {
+          "name": "the Dominators",
+          "at": "8:32"
+        }
       ],
       "role": "Racing team · tenth floor",
       "taglines": [
@@ -16954,7 +17068,7 @@
       "at": "3:3",
       "sortKey": 3003,
       "headline": "On the recap",
-      "text": "They have put me on their recap, the programme between floors, in a row with humans. The captions say Elle, Li Na's team, Ifechi, Florin, Hekla, Lucia. And Miriam, of course, since she is the one who walked me into this place. I did not ask for the camera and I do not smile for it. If the audience wants a goat that performs, the audience can wait until I feel like singing, and then it can sit very still and listen.",
+      "text": "They have put me on their recap, the programme between floors, in a row with humans. The captions say Elle, Li Na's team, Ifechi, Florin, Hekla, Lucia Mar. And Miriam Dom, of course, since she is the one who walked me into this place. I did not ask for the camera and I do not smile for it. If the audience wants a goat that performs, the audience can wait until I feel like singing, and then it can sit very still and listen.",
       "confidence": "verified",
       "voice": "self"
     },
@@ -16967,7 +17081,7 @@
       "at": "3:3",
       "sortKey": 3003,
       "headline": "The board, two hours in",
-      "text": "Elle, Li Jun, Ifechi, Florin, Miriam, Prepotente, Hekla and Lucia, all in one broadcast. It is how the crawl keeps track of itself.",
+      "text": "Elle, Li Jun, Ifechi, Florin, Miriam Dom, Prepotente, Hekla and Lucia Mar, all in one broadcast. It is how the crawl keeps track of itself.",
       "confidence": "verified",
       "voice": "narrator"
     },

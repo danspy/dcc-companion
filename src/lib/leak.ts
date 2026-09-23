@@ -52,6 +52,9 @@ export interface ScreenEntry {
   name: string;
   at: string | number;
   re: RegExp;
+  /** Open names that contain this one ("Lucia Mar" around "Lucia"): masked
+      out before testing, so an open full name is not a sealed short one. */
+  within?: RegExp[];
 }
 
 /* Shorter than this and a name is more word than name: "Zev" and "Bea" would
@@ -91,8 +94,10 @@ export function buildScreen(
   frontier: number,
 ): ScreenEntry[] {
   const out: ScreenEntry[] = [];
+  const open: string[] = [];
   const add = (id: string, name: string, at: string | number) => {
     if (screenable(name, at, frontier)) out.push({ id, name, at, re: matcher(name) });
+    else if (name) open.push(name);
   };
 
   for (const e of entities) {
@@ -109,6 +114,10 @@ export function buildScreen(
   }
   for (const f of floors) add(`floor ${f.id}`, f.name, f.nameAt ?? f.revealedAt);
 
+  for (const s of out) {
+    const within = open.filter(n => n.length > s.name.length && s.re.test(n));
+    if (within.length) s.within = within.map(n => new RegExp(matcher(n).source, matcher(n).flags.replace('g', '') + 'g'));
+  }
   return out;
 }
 
@@ -127,7 +136,8 @@ export function findLeaks(
 ): ScreenEntry[] {
   const hits: ScreenEntry[] = [];
   for (const s of screen) {
-    if (!s.re.test(text)) continue;
+    const t = (s.within ?? []).reduce((acc, re) => acc.replace(re, ' '), text);
+    if (!s.re.test(t)) continue;
     if (supplied && s.re.test(supplied)) continue;
     hits.push(s);
   }

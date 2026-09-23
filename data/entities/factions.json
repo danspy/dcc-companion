@@ -1196,12 +1196,17 @@
       "kind": "faction",
       "name": "The Lemig Sortion",
       "aka": [
-        "Lemig Sortion"
+        "Lemig Sortion",
+        "Lemig Sortition"
       ],
       "role": "System government",
-      "revealedAt": "6:12",
+      "revealedAt": "5:75",
       "sort": 44,
       "tagline": [
+        {
+          "at": "5:75",
+          "text": "A name on a list of faction teams: the Lemig Sortition, one of three whose local populations may vote on all government expenditures."
+        },
         {
           "at": "6:12",
           "text": "A democratic government of many races, whose army had a castle dropped on it before the season had properly started."
@@ -2604,7 +2609,11 @@
       "kind": "faction",
       "name": "Lady Dominators and the Gimp",
       "aka": [
-        "Lady Dominators"
+        "Lady Dominators",
+        {
+          "name": "the Dominators",
+          "at": "8:32"
+        }
       ],
       "role": "Racing team · tenth floor",
       "revealedAt": "8:5",

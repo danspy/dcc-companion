@@ -554,6 +554,25 @@ test('quick-find answers only with what the reader has reached', async () => {
   assert.deepEqual(tag('marine', gate(5, 1)), ['Carl']);
 });
 
+test('an open full name does not count as its sealed short form', () => {
+  // "Lucia Mar" is open from book 1; "Lucia" alone is printed at 2:7.
+  const lucia = [{ id: 'lucia-mar', name: 'Lucia Mar', aka: [{ name: 'Lucia', at: '2:7' }], revealedAt: '1:15' }];
+  const leaks = (text, at) => findLeaks(text, buildScreen(lucia, [], parseAt(at))).map(l => l.name);
+  assert.deepEqual(leaks('Lucia Mar is on the board.', '1:20'), [], 'the full name is open');
+  assert.deepEqual(leaks('Lucia is on the board.', '1:20'), ['Lucia'], 'the short form alone is not');
+  const lint1 = text => lint({
+    books: [{ id: 1, title: 'One', chapters: 47 }, { id: 2, title: 'Two', chapters: 25 }],
+    floors: [],
+    entities: [
+      { id: 'lucia-mar', kind: 'character', name: 'Lucia Mar', aka: [{ name: 'Lucia', at: '2:7' }], revealedAt: '1:15', tagline: 't', beats: [] },
+      { id: 'x', kind: 'character', name: 'Someone', revealedAt: '1:1', tagline: 't',
+        beats: [{ kind: 'arc', book: 1, chapter: 20, at: '1:20', confidence: 'verified', headline: 'h', text }] },
+    ],
+  }).errors;
+  assert.equal(lint1('Lucia Mar is on the board.').length, 0);
+  assert.ok(lint1('Lucia is on the board.').some(e => e.includes('"Lucia"')));
+});
+
 test('the premise is never a leak, even with no position at all', () => {
   // A reader who has told us nothing has still read the front page.
   assert.deepEqual(leaksAt('Carl is not available for comment.', 0), []);

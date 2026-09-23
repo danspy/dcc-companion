@@ -76,11 +76,15 @@ const pattern = n => esc(n).replace(/'/g, "['’]").replace(/ /g, '\\s+');
 const matcher = (n, anyCase, plural) =>
   new RegExp(`(?<![\\w’'])${pattern(n)}${plural ? '(?:e?s)?' : ''}(?:['’]s)?(?![\\w’])`, anyCase || /\s/.test(n) ? 'i' : '');
 
-function firstMention(names, anyCase, plural) {
+/* `mask` holds longer names to blank out first: a timed alias "Lucia" is not
+   printed by a page that says "Lucia Mar". */
+function firstMention(names, anyCase, plural, mask = []) {
   const res = names.filter(n => n && n.length >= 3).map(n => ({ n, re: matcher(n, anyCase, plural) }));
+  const masks = mask.map(n => new RegExp(matcher(n, anyCase, plural).source, 'gi'));
   for (const s of sections) {
+    const text = masks.reduce((t, re) => t.replace(re, m => ' '.repeat(m.length)), s.text);
     for (const { n, re } of res) {
-      const m = re.exec(s.text);
+      const m = re.exec(text);
       if (m) {
         const ctx = s.text.slice(Math.max(0, m.index - 70), m.index + n.length + 70).replace(/\s+/g, ' ');
         return { at: s.at, value: s.value, name: n, context: ctx };
@@ -126,6 +130,7 @@ const REVIEWED = {
   "war-gauntlet@1:25": "the 1:12 hit is 'war gauntlets' as a class of gear in a skill description; Carl's gauntlet is named at 1:25",
   "meat-shields@6:2": "the 2:20 and 4:5 hits are 'meat shields' as a phrase for raised dead; the mercenary brand is on the 6:2 coupon",
   "kimaris~Kimmy@7:87": "the 7:5 'Kimmy' is Samantha naming a stripper 'Kimmy the second'; Kimaris is called Kimmy at 7:87",
+  "jacobus@8:36": "6:30 is 'the reverse tooth fairy card' in lower case, Imani's trade; the name Jacobus is first given at 8:36, and revealing him earlier would print it early",
 };
 
 /* An entity is anchored on its name and the aliases that open with it; an alias
@@ -136,12 +141,13 @@ const subjects = entities.flatMap(e => [
   { ...e, names: [e.name, ...aliasesOf(e).filter(a => !a.own).map(a => a.name)] },
   ...aliasesOf(e).filter(a => a.own).map(a => ({
     ...e, id: `${e.id}~${a.name}`, name: a.name, revealedAt: a.at, names: [a.name],
+    mask: [e.name, ...aliasesOf(e).filter(x => !x.own).map(x => x.name)].filter(n => n.length > a.name.length),
   })),
 ]);
 
 const report = [];
 for (const e of subjects) {
-  const hit = firstMention(e.names, !['character', 'faction'].includes(e.kind), e.kind !== 'character');
+  const hit = firstMention(e.names, !['character', 'faction'].includes(e.kind), e.kind !== 'character', e.mask ?? []);
   const declared = parseAt(e.revealedAt);
   if (!hit) { report.push({ id: e.id, kind: e.kind, revealedAt: e.revealedAt, verdict: 'unnamed' }); continue; }
   const bookLevel = declared % 1000 === 0;

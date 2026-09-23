@@ -38,7 +38,8 @@ const here = Astro.url.pathname;
       </a>
       <!-- Without JavaScript this is a link to /who, which filters the same set. -->
       <a href="/who" class="findbtn" id="findbtn" aria-haspopup="dialog">
-        <span>Search</span><kbd>Ctrl K</kbd>
+        <svg class="findbtn-glass" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" /><path d="M11 11l3.5 3.5" /></svg>
+        <span class="findbtn-text">Search the record</span><kbd>Ctrl K</kbd>
       </a>
       <nav>
         {nav.map(n => (
@@ -48,14 +49,16 @@ const here = Astro.url.pathname;
     </div>
   </header>
 
-  <dialog id="quickfind" class="quickfind" aria-label="Search">
-    <form method="dialog" class="finder-search qf-field" role="search">
+  <dialog id="quickfind" class="qf" aria-label="Search the record">
+    <form method="dialog" class="qf-bar" role="search">
+      <span class="qf-prompt" aria-hidden="true">›</span>
       <input id="qf-input" type="search" autocomplete="off" spellcheck="false"
-             placeholder="A name, an item, a place, a floor…" aria-controls="qf-results" />
-      <kbd>Esc</kbd>
+             placeholder="Carl, Donut, a nickname, a floor…" aria-controls="qf-results"
+             aria-describedby="qf-note" />
+      <button class="qf-close" value="close" aria-label="Close search"><kbd>Esc</kbd></button>
     </form>
-    <ol id="qf-results" class="qf-results" role="listbox"></ol>
-    <p id="qf-note" class="qf-note">Only what you have already reached is searchable.</p>
+    <div id="qf-results" class="qf-results" role="listbox" aria-label="Results"></div>
+    <p id="qf-note" class="qf-note"></p>
   </dialog>
 
   <main><slot /></main>
@@ -71,46 +74,88 @@ const here = Astro.url.pathname;
 
   <script>
     /* Quick-find. Every answer comes from /find.json, which gates on the
-       reader's own cookie; nothing searchable is held in the page. Results are
-       built with textContent, never innerHTML. */
+       reader's own cookie; nothing searchable is held in the page. Rows are
+       built with DOM nodes and textContent, never innerHTML, so their styles
+       live in the global component layer: a scoped rule cannot reach markup a
+       script built. */
+    type Hit = { href: string; name: string; kind: string; detail: string; tier: 'name' | 'story' };
     const dlg = document.getElementById('quickfind') as HTMLDialogElement;
     const input = document.getElementById('qf-input') as HTMLInputElement;
-    const list = document.getElementById('qf-results') as HTMLOListElement;
+    const box = document.getElementById('qf-results') as HTMLDivElement;
     const note = document.getElementById('qf-note') as HTMLParagraphElement;
     const btn = document.getElementById('findbtn') as HTMLAnchorElement;
     const isMac = /Mac|iPhone|iPad/.test(navigator.platform);
     btn.querySelector('kbd')!.textContent = isMac ? '⌘K' : 'Ctrl K';
 
     let active = -1, timer = 0, seq = 0;
-    type Hit = { href: string; name: string; kind: string; detail: string };
     let hits: Hit[] = [];
+    let rows: HTMLAnchorElement[] = [];
 
-    function open() {
-      if (dlg.open) return;
-      dlg.showModal(); input.value = ''; render([]); input.focus();
+    const IDLE = 'Only what you have already reached answers. Arrows choose, Enter opens.';
+
+    /* The typed words, lit where they start a word, so a story hit shows why. */
+    function lit(text: string, q: string): Node[] {
+      const words = q.toLowerCase().split(/[^a-z0-9']+/).filter(Boolean)
+        .map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      if (!words.length) return [document.createTextNode(text)];
+      const re = new RegExp(`\\b(${words.join('|')})[a-z0-9']*`, 'gi');
+      const out: Node[] = []; let last = 0;
+      for (const m of text.matchAll(re)) {
+        if (m.index! > last) out.push(document.createTextNode(text.slice(last, m.index)));
+        const mark = document.createElement('mark'); mark.textContent = m[0]; out.push(mark);
+        last = m.index! + m[0].length;
+      }
+      if (last < text.length) out.push(document.createTextNode(text.slice(last)));
+      return out;
     }
-    function render(h: Hit[]) {
-      hits = h; active = h.length ? 0 : -1;
-      list.replaceChildren(...h.map((hit, i) => {
-        const li = document.createElement('li');
-        li.setAttribute('role', 'option'); li.id = `qf-${i}`;
-        const a = document.createElement('a'); a.href = hit.href;
-        const name = document.createElement('span'); name.className = 'qf-name'; name.textContent = hit.name;
+
+    function group(title: string, list: Hit[], q: string, start: number) {
+      const sec = document.createElement('section'); sec.className = 'qf-group';
+      const h = document.createElement('h2'); h.className = 'qf-group-title'; h.textContent = title;
+      sec.append(h);
+      list.forEach((hit, j) => {
+        const a = document.createElement('a');
+        a.href = hit.href; a.className = 'qf-row'; a.id = `qf-${start + j}`;
+        a.setAttribute('role', 'option');
+        const name = document.createElement('span'); name.className = 'qf-name';
+        name.append(...lit(hit.name, q));
         const kind = document.createElement('span'); kind.className = 'qf-kind'; kind.textContent = hit.kind;
-        const detail = document.createElement('span'); detail.className = 'qf-detail'; detail.textContent = hit.detail;
-        a.append(name, kind, detail); li.append(a);
-        return li;
-      }));
-      mark();
+        const detail = document.createElement('span'); detail.className = 'qf-detail';
+        detail.append(...lit(hit.detail, q));
+        a.append(name, kind, detail);
+        a.addEventListener('mousemove', () => { if (active !== start + j) { active = start + j; mark(false); } });
+        sec.append(a); rows.push(a);
+      });
+      return sec;
+    }
+
+    function render(h: Hit[]) {
       const q = input.value.trim();
-      note.textContent = !q ? 'Only what you have already reached is searchable.'
-        : h.length ? '↑ ↓ to choose, Enter to open.' : 'Nothing you have reached goes by that name.';
+      hits = [...h.filter(x => x.tier === 'name'), ...h.filter(x => x.tier === 'story')];
+      rows = []; active = hits.length ? 0 : -1;
+      const named = hits.filter(x => x.tier === 'name');
+      const story = hits.filter(x => x.tier === 'story');
+      const parts: Node[] = [];
+      if (named.length) parts.push(group('Names', named, q, 0));
+      if (story.length) parts.push(group('In the story', story, q, named.length));
+      if (q && !hits.length) {
+        const none = document.createElement('p'); none.className = 'sys qf-none';
+        const b = document.createElement('b'); b.textContent = '*** No record ***';
+        none.append(b, document.createTextNode('Nothing you have reached answers to that. Try a shorter word, or a nickname.'));
+        parts.push(none);
+      }
+      box.replaceChildren(...parts);
+      dlg.dataset.state = !q ? 'idle' : hits.length ? 'hits' : 'none';
+      note.textContent = IDLE;
+      mark(false);
     }
-    function mark() {
-      [...list.children].forEach((li, i) => li.setAttribute('aria-selected', String(i === active)));
+
+    function mark(scroll = true) {
+      rows.forEach((r, i) => r.setAttribute('aria-selected', String(i === active)));
       input.setAttribute('aria-activedescendant', active >= 0 ? `qf-${active}` : '');
-      list.children[active]?.scrollIntoView({ block: 'nearest' });
+      if (scroll) rows[active]?.scrollIntoView({ block: 'nearest' });
     }
+
     async function search() {
       const q = input.value.trim(), mine = ++seq;
       if (!q) { render([]); return; }
@@ -118,7 +163,12 @@ const here = Astro.url.pathname;
         const res = await fetch(`/find.json?q=${encodeURIComponent(q)}`, { credentials: 'same-origin' });
         const h = await res.json();
         if (mine === seq) render(h);
-      } catch { /* a failed lookup leaves the last results; the box still works */ }
+      } catch { /* a failed lookup keeps the last results; the box still works */ }
+    }
+
+    function open() {
+      if (dlg.open) return;
+      dlg.showModal(); input.value = ''; render([]); input.focus();
     }
 
     btn.addEventListener('click', e => {
@@ -171,26 +221,6 @@ const here = Astro.url.pathname;
              border: 1px solid transparent; padding: 6px 10px; }
   .navlink:hover { color: var(--color-grey-100); border-color: var(--color-line); text-decoration: none; }
   .navlink[aria-current="page"] { color: var(--color-gold); border-color: var(--color-line); }
-  .findbtn { display: flex; align-items: center; gap: 10px; margin-left: auto; flex: none;
-             font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label);
-             text-transform: uppercase; color: var(--color-grey-300);
-             border: 1px solid var(--color-line); background: var(--color-ink); padding: 6px 10px; }
-  .findbtn:hover { color: var(--color-grey-100); border-color: var(--color-gold); text-decoration: none; }
-  kbd { font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-500);
-        border: 1px solid var(--color-line); padding: 1px 5px; text-transform: none; letter-spacing: 0; }
-  .quickfind { width: min(640px, calc(100vw - 32px)); max-height: min(70dvh, 560px); margin: 12vh auto auto;
-               padding: 14px; border: 1px solid var(--color-line); background: var(--color-panel);
-               color: var(--color-grey-100); }
-  .quickfind::backdrop { background: rgba(0, 0, 0, .7); }
-  .qf-results { list-style: none; margin: 10px 0 0; padding: 0; max-height: min(50dvh, 400px); overflow-y: auto; }
-  .qf-results a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 9px 10px;
-                  color: inherit; border: 1px solid transparent; }
-  .qf-results a:hover, .qf-results [aria-selected="true"] a { border-color: var(--color-gold); text-decoration: none; background: var(--color-raised); }
-  .qf-name { font-size: var(--type-body); color: #fff; overflow-wrap: anywhere; }
-  .qf-kind { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
-             text-transform: uppercase; color: var(--color-gold); align-self: center; }
-  .qf-detail { grid-column: 1 / -1; font-size: var(--type-meta); color: var(--color-grey-500); overflow-wrap: anywhere; }
-  .qf-note { margin: 10px 2px 0; font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-grey-500); }
   footer { border-top: 1px solid var(--color-line); margin-top: 48px; padding: 32px 0 64px;
            font-size: 13.5px; color: var(--color-grey-500); }
   footer p { max-width: var(--measure); margin: 0 0 10px; }

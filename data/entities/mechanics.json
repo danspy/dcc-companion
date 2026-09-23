@@ -274,7 +274,7 @@
           "at": "3:3",
           "confidence": "verified",
           "headline": "The board, two hours in",
-          "text": "Elle, Li Jun, Ifechi, Florin, Miriam, Prepotente, Hekla and Lucia, all in one broadcast. It is how the crawl keeps track of itself."
+          "text": "Elle, Li Jun, Ifechi, Florin, Miriam Dom, Prepotente, Hekla and Lucia Mar, all in one broadcast. It is how the crawl keeps track of itself."
         },
         {
           "kind": "arc",
@@ -1188,7 +1188,12 @@
       "id": "faction-wars",
       "kind": "mechanic",
       "name": "Faction Wars",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Faction War Games",
+          "at": "2:19"
+        }
+      ],
       "role": "Floor event · ninth floor",
       "revealedAt": "1:43",
       "sort": 40,
@@ -1761,7 +1766,12 @@
       "id": "crawlcon",
       "kind": "mechanic",
       "name": "CrawlCon",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Crawl Con",
+          "at": "5:63"
+        }
+      ],
       "role": "Fan convention",
       "revealedAt": "5:21",
       "sort": 46,
@@ -2195,7 +2205,12 @@
       "id": "safe-room",
       "kind": "mechanic",
       "name": "Safe Room",
-      "aka": [],
+      "aka": [
+        {
+          "name": "saferoom",
+          "at": "1:9"
+        }
+      ],
       "role": "Dungeon fixture",
       "revealedAt": "1:5",
       "sort": 53,
@@ -2503,7 +2518,16 @@
       "id": "tummy-acher",
       "kind": "mechanic",
       "name": "Tummy Acher",
-      "aka": [],
+      "aka": [
+        {
+          "name": "Belly Achers",
+          "at": "7:5"
+        },
+        {
+          "name": "Colon Worms",
+          "at": "7:5"
+        }
+      ],
       "role": "Pet-class mob",
       "revealedAt": "1:46",
       "sort": 60,
