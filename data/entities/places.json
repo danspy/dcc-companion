@@ -790,6 +790,611 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "pandinus",
+      "kind": "place",
+      "name": "Pandinus",
+      "aka": [],
+      "role": "Pazuzu town · fifth floor, land quadrant",
+      "revealedAt": "4:23",
+      "sort": 54,
+      "tagline": [
+        {
+          "at": "4:23",
+          "text": "A pazuzu town on the land quadrant, all scorpion tails and post-apocalyptic leather, and the only place a quarter turn around the bowl that would take the party in."
+        },
+        {
+          "at": "4:27",
+          "text": "The scorpion town on the land quadrant where the party drinks, recruits, and comes out of the Gate of the Feral Gods with a wall of seawater behind them."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 23,
+          "floor": 5,
+          "at": "4:23",
+          "confidence": "verified",
+          "headline": "A town that would take them in",
+          "text": "After the sandcastle the party had to track a quarter turn around the land quadrant before any town would let them in. This one did. Its people are pazuzu, half human and half scorpion, built like centaurs and dressed as though the world already ended: punk leather, tassels, goggles, chains and dreadlocks, all bound for a Mad Max convention. Louis and Firas went off to sleep, Louis grumbling about the drink. Once Mordecai walked off, Carl's question about the place was whether it had a Desperado Club."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 25,
+          "floor": 5,
+          "at": "4:25",
+          "confidence": "verified",
+          "headline": "The Death Stalker",
+          "text": "Smaller than Hump Town, with several inns and taverns. No Desperado Club, but a Club Vanquisher, currently closed for cleansing after Prepotente set his hellspawn goat loose in the main lounge over Miriam Dom's revoked membership. So the party met at The Death Stalker: a few tables, a bar and, inexplicably, a gelato cart with about twenty flavours. Donut talked the pazuzu down from two gold to one for a bowl of raspberry. Two crawlers from the water quadrant joined them at the table."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 27,
+          "floor": 5,
+          "at": "4:27",
+          "confidence": "verified",
+          "headline": "A wall of water",
+          "text": "Carl dialled the Gate of the Feral Gods to a spot just outside town, and he, Katia and Tran splashed out onto the beach inside a wall of seawater. The portal was open three or four seconds. That was enough to topple the metal wall, knock over a guard tower and put a chunk of metal through one pazuzu's front door like a javelin. Any longer and the town would have gone the way of the sandcastle. They ran for the nearest inn, past a staring bartender."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 29,
+          "floor": 5,
+          "at": "4:29",
+          "confidence": "verified",
+          "headline": "Feral pazuzu out of the sand",
+          "text": "Night, a rising storm, waves slapping the pub windows, and the pazuzu barkeep huddled behind his bar pointing outside with a shaking hand. When the giant dog jumped, a stone statue off the necropolis crushed a pazuzu hut two hundred feet away. Then a wave of feral pazuzu came up through the sand. Carl caught one stinger in his hand, immune to the venom but not to the hole, tore off the tip, and stabbed its owner in the neck with it."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "sheltered",
+          "at": "4:23"
+        },
+        {
+          "to": "vadim",
+          "kind": "meeting-place-of",
+          "at": "4:25"
+        },
+        {
+          "to": "gate-of-the-feral-gods",
+          "kind": "flooded-by",
+          "at": "4:27"
+        },
+        {
+          "to": "orthrus",
+          "kind": "struck-by",
+          "at": "4:29"
+        }
+      ]
+    },
+    {
+      "id": "fort-freedom",
+      "kind": "place",
+      "name": "Fort Freedom",
+      "aka": [],
+      "role": "Naiad castle · sixth floor",
+      "revealedAt": "5:15",
+      "sort": 55,
+      "tagline": [
+        {
+          "at": "5:15",
+          "text": "Fort Freedom: the naiads' former river palace, where the leaders of the Naiad Confederacy are holed up, and the first target of Signet's revenge."
+        },
+        {
+          "at": "5:28",
+          "text": "Fort Freedom, the naiad castle, retaken by Tsarina Signet. Barely a fight: the confederates had stopped ruling long ago and had lost their own throne room to an eryops."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 15,
+          "floor": 6,
+          "at": "5:15",
+          "confidence": "verified",
+          "headline": "Part one of two",
+          "text": "The Vengeance of the Daughter, part one of two. Tsarina Signet, exiled half-daughter of the naiads, has come home to a kingdom marred by infighting and a sloppy revolution that cut off the head of the government and left the body flailing. The current leaders of the Naiad Confederacy are holed up in the former river palace, now dubbed Fort Freedom. Assault it, avenge her mother's assassination, and survivors follow your orders twenty percent more willingly. The name is doing a lot of work."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 24,
+          "floor": 6,
+          "at": "5:24",
+          "confidence": "verified",
+          "headline": "A castle mostly underwater",
+          "text": "Night in the forest, heading north to join Signet's assault team at one of the old trees before approaching the river. Crawler Carl and Crawler Princess Donut have only a minor role tonight; Signet is plainly saving them for part two. That suits the cat, because the castle is mostly submerged, and she has reiterated her position on going underwater several times. Carl is more concerned with part two, and with which programme gets to own its climax."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 25,
+          "floor": 6,
+          "at": "5:25",
+          "confidence": "verified",
+          "headline": "Traps all the way down",
+          "text": "From the treeline, Fort Freedom glitters in the dark. The river is a mile and a half wide here. The naiads have cleared the long, muddy slope so nothing can approach unseen, and one stone-paved trail runs down to an archway at the water. The slope lights up with traps: alarms, summoning traps, silent alarms along the walkway. Inside, the usurpers occupy the castle and neither maintain it nor rule. They were so obsessed with being free that they forgot what governing involves."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 26,
+          "floor": 6,
+          "at": "5:26",
+          "confidence": "verified",
+          "headline": "The front door is the decoy",
+          "text": "The plan is child's play because the defence is a joke. An alarm goes off at the front, the poorly trained guards run toward it, and Signet's amphibious team comes in the undefended rear, straight to the throne room, where the confederacy's leaders are conveniently hiding. Samantha is given a long line to deliver if captured, announcing herself as Psamathe. Signet walks in with the water shying away from her. Then the bodies start surfacing: naiads, paper soldiers, and what is probably a bush elf, ripped in half."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 27,
+          "floor": 6,
+          "at": "5:27",
+          "confidence": "verified",
+          "headline": "An eryops on the throne",
+          "text": "Whatever holds the throne room is a lightning-shooting river monster, and Samantha has her teeth in it. Claude Sludgington the Fourth, Eryops Gigantis, arrives beside Crawler Carl at truck size. His history: short of gold, because they would not tax anyone yet still owed tithes to the high elves, the confederates threw a fundraiser ball at fifty gold a head. Nobody came. The citizens were starving and eating anyone near the water. Claude did come, and the guards let him in."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 28,
+          "floor": 6,
+          "at": "5:28",
+          "confidence": "verified",
+          "headline": "Barely a fight",
+          "text": "Premature Questjaculation: a quest is beaten before it can even be handed out, so the reward is nothing. Tsarina Signet takes the castle. Plenty of guards, an algae infestation, confederates who stopped attempting to rule ages ago, a throne room surrendered to an eryops, a kingdom in shambles. It would have fallen on its own within months. Part one completes. Part two names the true culprit: the high elves, and Queen Imogen."
+        }
+      ],
+      "relations": [
+        {
+          "to": "signet",
+          "kind": "concerns",
+          "at": "5:15",
+          "note": "Her family's castle, retaken"
+        },
+        {
+          "to": "vengeance-of-the-daughter",
+          "kind": "concerns",
+          "at": "5:15",
+          "note": "The target of part one"
+        },
+        {
+          "to": "samantha",
+          "kind": "concerns",
+          "at": "5:26"
+        }
+      ]
+    },
+    {
+      "id": "shanty-town",
+      "kind": "place",
+      "name": "Shanty Town",
+      "aka": [],
+      "role": "Settlement ringing Larracos · ninth floor",
+      "revealedAt": "7:1",
+      "sort": 56,
+      "tagline": [
+        {
+          "at": "7:1",
+          "text": "Shanty Town: a ring around Larracos, named in the ceasefire warning as the one place the ban on entering the city does not reach."
+        },
+        {
+          "at": "7:9",
+          "text": "A ring of hovels around the mouth of Larracos that nobody actually built, bigger than any season's before, with food markets, temples, and a mayor who keeps getting killed."
+        },
+        {
+          "at": "7:14",
+          "text": "The ring around Larracos, pink on the map now: controlled by the Princess Posse, bought from Ferdinand with a bowler hat."
+        },
+        {
+          "at": "7:73",
+          "text": "Flattened by the passage of two gods, most of its towers never used."
+        },
+        {
+          "at": "7:85",
+          "text": "Handed back to the NPCs, joined to Larracos, and carried away with it to the twelfth floor."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "An exception in the fine print",
+          "text": "The warning about the ceasefire is mostly bad news. When it expires, only members of the defending team may remain within the city of Larracos, and that restriction holds until certain conditions are met. Then one line more: the restriction does not apply to the Shanty Town ring. Ten teams remain, and every one of them has just been told there is a ring around the city where they are allowed to stand."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 9,
+          "floor": 9,
+          "at": "7:9",
+          "confidence": "verified",
+          "headline": "Hovels nobody built",
+          "text": "There is usually a shanty town. Never one like this. It appeared soon after the flooding, supposedly built by displaced NPCs, except that nobody built it: the hovels simply sprang up, a full ring round the top entrance of Larracos, large enough to count as a settlement. It has new shops and new NPCs, food markets and temples, and one hard-to-find Club Vanquisher entrance, but no weapons or mercenary markets. Its mayors keep dying. The gnoll Theora lost a single combat to a cheat. The current mayor, Juice Box says, pained, is someone else."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 11,
+          "floor": 9,
+          "at": "7:11",
+          "confidence": "verified",
+          "headline": "Mayor, for a bowler hat",
+          "text": "Crawler Carl wanted to be mayor of Shanty Town, and the mayor was Ferdinand. The deal: Ferdinand transferred the mayorship, the jewel on his necklace went away, and he got a bowler hat to wear until they trade it back for his turban in a day or so. Juice Box was on board. Carl's reasoning, on the walk back: if the bad guys can freely enter Shanty Town once the truce breaks, it is a liability, and it has a defence system of its own."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 14,
+          "floor": 9,
+          "at": "7:14",
+          "confidence": "verified",
+          "headline": "Pink on the map",
+          "text": "On the hologram of the floor a tiny ring around Larracos blinks and turns pink: Shanty Town, controlled by the Princess Posse. Baroness Victory calls it a smart trade. The shanty town is usually small and does not form until the fighting starts and the NPCs flee, but this one circles the whole city, giving the NPCs another layer of security, and the Posse holds it. Li Na asks, the moment she is recruited, that her squad build the defences in and around it."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 29,
+          "floor": 9,
+          "at": "7:29",
+          "confidence": "verified",
+          "headline": "No throne room",
+          "text": "The 107th White Dragons are parked in the makeshift town, and it worries Crawler Carl: it is shaped like a donut and can be attacked from nearly any angle. Nobody has tried yet. Entering Shanty Town exposes an attacker to the Larracos defence system, and the town's rules are different. There is no throne room. The only way to take it is to kill Carl. Li Na's battalion, meanwhile, is bankrupting the Posse's coffers building its defences."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 56,
+          "floor": 9,
+          "at": "7:56",
+          "confidence": "verified",
+          "headline": "The third front",
+          "text": "The round border of Shanty Town is now the Posse's third front. Juice Box, stingy with support until now, lends ground troops to hold it: Semeru dwarves and ordinary citizens of Larracos, mixed in with Li Na's 107th White Dragon Urban Defense battalion in a ring around the lip of the city. None of the enemy may enter Larracos until four teams remain, but Shanty Town itself is exposed. At the base of the Nest tower, Crawler Donut asks whether it is too late to paint it another colour."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 65,
+          "floor": 9,
+          "at": "7:65",
+          "confidence": "verified",
+          "headline": "Frozen where they stood",
+          "text": "Eris casts Bear Witness, and most of Shanty Town is caught. Li Na reports: those inside structures are fine, she and Li Jun among them, but Zhang was outside. Anyone who was once a tattoo is unaffected, and so are the sluggalos. Everyone else is a frozen witness, and across the floor the frozen witnesses rise into the air and disappear."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 73,
+          "floor": 9,
+          "at": "7:73",
+          "confidence": "verified",
+          "headline": "Trampled by two gods",
+          "text": "The fight between the gods passes through the other side of Shanty Town, and then it is simply gone. Most of the defensive towers the Posse paid for, and never really got to use, are trampled. The Nest tower and Li Na's abandoned synergy towers still stand, drawing a lot of fire. Every other building is flattened."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 79,
+          "floor": 9,
+          "at": "7:79",
+          "confidence": "verified",
+          "headline": "Ceded back to the NPCs",
+          "text": "Clean-up is shared: NPCs, won-over mercenaries, veterans and crawlers repairing towers side by side, with Ferdinand directing the Nest tower. Mordecai thinks Shanty Town can be adjoined to Larracos. It first has to be ceded back to the NPCs, and the Posse has already done it. Meanwhile the top defensive ring of the city is being readied, towers repaired and their spells changed out."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 85,
+          "floor": 9,
+          "at": "7:85",
+          "confidence": "verified",
+          "headline": "Inside the glow",
+          "text": "Rosetta, on the chat: it worked. Shanty Town is included in the glow, and the two towns have been combined. The entire funnel city of Larracos, Shanty Town with it, is about to be transferred to the twelfth floor as the Sledge casts. Rosetta is moving to the saferoom with Tipid and the others, and she has Samantha with her."
+        }
+      ],
+      "relations": [
+        {
+          "to": "larracos",
+          "kind": "surrounds",
+          "at": "7:1"
+        },
+        {
+          "to": "ferdinand",
+          "kind": "held-by",
+          "at": "7:10",
+          "note": "Mayor, until the bowler hat"
+        },
+        {
+          "to": "princess-posse",
+          "kind": "held-by",
+          "at": "7:14"
+        },
+        {
+          "to": "li-na",
+          "kind": "defended-by",
+          "at": "7:14"
+        }
+      ]
+    },
+    {
+      "id": "pineapple-cabaret",
+      "kind": "place",
+      "name": "The Pineapple Cabaret",
+      "aka": [],
+      "role": "Hidden pocket dimension · behind the seventeenth floor",
+      "revealedAt": "7:37",
+      "sort": 57,
+      "tagline": [
+        {
+          "at": "7:37",
+          "text": "The Pineapple Cabaret. One of four places the AI offers to send a banished orc princess, and only the backstage part of it. She chooses elsewhere."
+        },
+        {
+          "at": "8:38",
+          "text": "The Pineapple Cabaret. A pocket dimension behind the seventeenth floor, built by two forgotten former crawlers as a refuge for mobs and NPCs. No worshipper of a god may enter."
+        },
+        {
+          "at": "8:73",
+          "text": "The Pineapple Cabaret. Two hundred and twenty-seven crawlers have gone through by cleaner bot, with Li Na ahead of them. A cactus with one flower says it is safe."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 37,
+          "floor": 9,
+          "at": "7:37",
+          "confidence": "verified",
+          "headline": "Backstage, if you please",
+          "text": "The AI, wearing Growler Gary, offers Princess Formidable four choices after her attempt on the fail-safe: death, the Scolopendra Club, the Cabaret backstage, or Earth's surface. Ten seconds. She asks what the hells the cabaret is. The Pineapple Cabaret, it says, though backstage at it, not the cabaret itself, and not a bad choice. Tick tock. She picks the surface and teleports away with a crack. The AI hopes she knows how to swim."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 24,
+          "floor": 10,
+          "at": "8:24",
+          "confidence": "verified",
+          "headline": "A note under a dirty drawing",
+          "text": "A blank invoice from C&W&U, a shop that opens after the third heat, carries a crude drawing for the gremlins and, legible only to Crawler Carl's Escape Plan skill, a message from Akuma: kill two teams next heat, visit the shop and ask for top-shelf upgrades, we want the same thing. I can smuggle friends to the Pineapple Cabaret. We can escape this chaos. Come alone. Carl has heard the name exactly once, when the AI offered it to an orc princess as a place of banishment. It is not in the Cookbook."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 35,
+          "floor": 10,
+          "at": "8:35",
+          "confidence": "verified",
+          "headline": "Eris vouches for the door",
+          "text": "Eris, recruiting, tells Crawler Carl to make nice with Akuma and his head-exploding mages: he really does have a way to crack open the Pineapple Cabaret. Akuma thinks it is his exit ticket, and it is much more than that. The war mages probably turn on the crawlers at the end, she says, but not right away; they need each other. She does not care what happens to them as long as the path to the Cabaret is open, because it is a way for some of Carl's friends to escape."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 38,
+          "floor": 10,
+          "at": "8:38",
+          "confidence": "verified",
+          "headline": "What it is, under questioning",
+          "text": "Akuma, questioned in considerable pain, explains. Many seasons ago two indentured former crawlers asked a showrunner for the job of building the seventeenth floor. The showrunner agreed, was murdered soon after, and never transferred the paperwork, so the two were forgotten: ghosts in the system, rebuilding the floor every season unsupervised. The floor is a front. Attached to it is the only entrance to a pocket dimension they built as an oasis, where mobs and NPCs can escape the dungeon for good. They gave up any chance of leaving to make it. That is the Pineapple Cabaret."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 38,
+          "floor": 10,
+          "at": "8:38",
+          "confidence": "verified",
+          "headline": "Nobody who worships a god",
+          "text": "The terms. The Cabaret is not a floor but a separate dimension, like the Nothing, and the rules allow crawlers into it; anyone inside when a floor collapses counts as lost, not killed. With the Gate broken there are two possible ways in: the casinos at the Desperado Club, or something involving the shop interface, which was Herot's idea. And nobody who worships a god may enter. It would bring a smite, and the Cabaret cannot risk being drawn into the Ascendency battles. That rules out Crawler Carl, and most of his friends."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 55,
+          "floor": 10,
+          "at": "8:55",
+          "confidence": "verified",
+          "headline": "A standing order for cleaner bots",
+          "text": "Mordecai reports that the test worked, on Samantha and then on some sluggalos. The explanation for the missing cleaner bots is Herot, inside the Cabaret with limited powers and a shop interface and a standing order to buy every one that appears. Menerva runs the NPCs building the Backstage Death Maze on the seventeenth floor. The Cabaret itself is overrun, by ogres from a binned plotline, a shadow mimic infestation and more, and the war mages want help clearing it. The casino plan looks like a bust. Li Na, dying of poison, is to go first, if she can be talked into it."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 61,
+          "floor": 10,
+          "at": "8:61",
+          "confidence": "verified",
+          "headline": "One flower means come",
+          "text": "Li Na's passage is reported by a dread cactus that stays with Crawler Carl. If it crumbles to dust, she died inside the dungeon. If its glow fails slowly over several days, she is trapped in the cleaner bot's storage and never released. If she reaches the Pineapple Cabaret and believes it safe for others to follow, she can make a single flower bloom on top. Alive but unsafe is three flowers. Crawler Donut repeats it back to be sure."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 73,
+          "floor": 10,
+          "at": "8:73",
+          "confidence": "verified",
+          "headline": "Two hundred and twenty-seven",
+          "text": "It goes smoothly. Crawler Carl's cleaner bot fits forty people; Bobby Montague's fits a hundred and five. Two hundred and twenty-seven crawlers go to the Pineapple Cabaret, not counting Li Na, and among them are Zhang, Tran, Daniel, Archie and Randall 3. Every cleaner bot for sale is bought immediately. Mordecai reports the cactus steady, glowing, with a single bloom. Each of the departed now has a small potted plant under glass in the guildhall, and Crawler Donut names it the Garden of Deliverance."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "floor": 11,
+          "at": "8:end",
+          "confidence": "verified",
+          "headline": "The back door, contested",
+          "text": "The shadow mimic Mitch, cornered, admits they needed some of the crawlers for the Cabaret: the war mages, the ogres and something called Cock-A-Doodle-Do all vie for control of the dungeon's back door. For Louis and others, the plan was a jump from the casino to a holding area, where Herot, inside the Pineapple Cabaret, pulls them out. Louis jumps and wakes in Sheol instead. The demon who greets him there says the Pineapple Cabaret has more than enough hands to protect it."
+        }
+      ],
+      "relations": [
+        {
+          "to": "growler-gary",
+          "kind": "concerns",
+          "at": "7:37"
+        },
+        {
+          "to": "akuma",
+          "kind": "concerns",
+          "at": "8:24"
+        },
+        {
+          "to": "herot",
+          "kind": "built-by",
+          "at": "8:38"
+        },
+        {
+          "to": "desperado-club",
+          "kind": "reached-via",
+          "at": "8:38"
+        },
+        {
+          "to": "minerva",
+          "kind": "concerns",
+          "at": "8:55"
+        },
+        {
+          "to": "cleaner-bot",
+          "kind": "reached-via",
+          "at": "8:55"
+        },
+        {
+          "to": "li-na",
+          "kind": "concerns",
+          "at": "8:61"
+        },
+        {
+          "to": "forkith",
+          "kind": "concerns",
+          "at": "8:end"
+        }
+      ]
+    },
+    {
+      "id": "hungry-eyes-village",
+      "kind": "place",
+      "name": "Hungry Eyes Village",
+      "aka": [
+        "Hungry Eyes",
+        "Hungry Eyes Vendor Village"
+      ],
+      "role": "Hub town · tenth floor",
+      "revealedAt": "8:5",
+      "sort": 58,
+      "tagline": [
+        {
+          "at": "8:5",
+          "text": "Hungry Eyes Village. A dot on the GPS beside the finish line, and a spread of colourful lights at the far end of a cave."
+        },
+        {
+          "at": "8:14",
+          "text": "Hungry Eyes. A neon, 1980s-cyberpunk town behind the racers' cul-de-sacs: bars, temples, street food. Safe room rules stop at the main square; poisoning rules stop everywhere."
+        },
+        {
+          "at": "8:71",
+          "text": "Hungry Eyes. The main square where two hundred crawlers bound for the Pineapple Cabaret gathered to say goodbye before a heat."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 5,
+          "floor": 10,
+          "at": "8:5",
+          "confidence": "verified",
+          "headline": "Lights at the end of the cave",
+          "text": "End of the first heat. The racers come out of the cave, and two dots appear on the GPS, labelled Hungry Eyes Village and Finish Line, as a spread of colourful lights shows up in the distance. Would you look at that, says Crawler Carl, as the town comes into view. Crawler Donut misses it entirely. She is absorbed in Elle's running report on an awkward meeting with a fan who wants a giant pillow with Elle on it signed."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 6,
+          "floor": 10,
+          "at": "8:6",
+          "confidence": "verified",
+          "headline": "A bar for hiring help",
+          "text": "Hedy, the court's engineer, sets out the crew rules: up to three mercenaries each heat, previously hired ones allowed under the same rules, and a bar out in Hungry Eyes where they can be hired. She reckons the best ones have already been snatched, the court having taken its sweet time getting here. Crawler Donut rules out Samantha as crew for any race whatsoever, citing an attention span like a Cornish Rex. Crawler Carl raises no objection."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 12,
+          "floor": 10,
+          "at": "8:12",
+          "confidence": "verified",
+          "headline": "The team roundabout cul-de-sac",
+          "text": "Through the garage door is the court's team roundabout, officially part of Hungry Eyes: an asphalt cul-de-sac under a red sun, ringed by nine garage doors, eight numbered and one painted with a runny red skull. Manicured grass, tall trees, the smell of cut lawn. The court's door carries a big 7. A truck can leave the garage and go nowhere, and a narrow path leads to a see-through portal onto a neon settlement. The bugbears of team Free Love are out in lawn chairs with peach beer. Safe room rules apply."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 14,
+          "floor": 10,
+          "at": "8:14",
+          "confidence": "verified",
+          "headline": "Neon, and eat at your own risk",
+          "text": "The vendor village proper. Safe room rules do not apply in the main square, and poisoning rules do not apply anywhere. Where most towns in the dungeon run faux-medieval, this one is a 1980s cyberpunk fever dream in pink, teal and purple, mostly gremlins, a few Draconians. Flashing temples, one of them a Club Vanquisher entrance Crawler Carl is banned from. An unsigned storefront, C&W&U, grand opening soon. A bar called the Hairpin, with the Desperado Club entrance in the back, and the Lollipop next door."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 71,
+          "floor": 10,
+          "at": "8:71",
+          "confidence": "verified",
+          "headline": "Goodbye in the main square",
+          "text": "Volunteers for the assault on the Pineapple Cabaret gather in the commons of Hungry Eyes, where Tran and Zhang chase off the NPCs and set up tables, and Linus's goodbye party joins them because he is barred from town between the sixth and seventh heats. Before the heat, all two hundred crawlers bound for the transfer, and several of their friends, fill the main square: too many for the guild's common room, so the farewell happens here, and then there is a race to run."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 79,
+          "floor": 10,
+          "at": "8:79",
+          "confidence": "verified",
+          "headline": "The Outreach Guild opens",
+          "text": "A system message: the Outreach Guild is now available in Hungry Eyes. Crawler Donut declines to visit. Before the final heat, crawlers queue along the street to enter it, and Prepotente walks the line collecting last-minute items from their inventories as they go in. So far nobody who has entered has come back out. Crawler Carl finds that somewhat encouraging, since it suggests the deals on offer inside are at least decent, and is tempted to join the queue just to talk to Quasar."
+        }
+      ],
+      "relations": [
+        {
+          "to": "royal-court",
+          "kind": "home-of",
+          "at": "8:12"
+        },
+        {
+          "to": "club-vanquisher",
+          "kind": "contains",
+          "at": "8:14"
+        },
+        {
+          "to": "desperado-club",
+          "kind": "contains",
+          "at": "8:14"
+        },
+        {
+          "to": "pineapple-cabaret",
+          "kind": "concerns",
+          "at": "8:71"
+        }
+      ]
     }
   ]
 }

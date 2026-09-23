@@ -124,8 +124,10 @@ floor name that is **not** safe at `1:1` and fails the build if it appears in pa
 details make it work rather than merely exist:
 
 - **word boundaries** — without them "Tran" matches inside `transparent` and the check drowns in CSS
-- **case-insensitive** — the copy that shipped said "the Great Race" against a floor named "The
-  Great Race", and an exact match sailed past it
+- **case-insensitive for a name of more than one word** — the copy that shipped said "the Great
+  Race" against a floor named "The Great Race", and an exact match sailed past it. A one-word name
+  matches as written, the line the lint and `leak.ts` also draw: the crawler Tally would otherwise
+  have made every `tally` counter in the page source a leak
 - **comments stripped first** — this codebase explains the gate in comments, which name gated
   things constantly and legitimately
 
@@ -1773,10 +1775,19 @@ currently has a dev server running. It is not this deployment, and only one proj
   again. What moving tags earlier did *not* do is revisit the second tagline: the old one now reads
   from its old tag, which is correct, but it was written as a whole-life summary and has not had the
   read against the book either.
-- Entities book 8 needs and does not have, each flagged by more than one reader: the Pineapple
-  Cabaret, Chris (Imani's teammate, on nearly every page of 8:79–85), Princess Chandra, Grigori the
-  Placid, Chalchiuhtlicue, Hamed, the Midnight Epicure, Minus (the tourist filed as Linus), Lamashtu,
-  the Ascendency, and Scolopendra as a crawler from 8:98.
+- **Sixty entities the fill kept tripping over now exist** — 303 in all. Each was built from the
+  edition's text: reveal at the first printing of its name, a progressive tagline, beats across its
+  whole life, relations. Chris Andrews, Brandon, Yolanda, Gwen, Princess Formidable, the Night Wyrm,
+  Paz, Uzzi, Carl's father and Asher, Architect Houston, Princess Chandra, Grigori, the Pineapple
+  Cabaret, the Ascendency, the Eulogist and forty more. New characters are System dossiers; nobody
+  has written them a voice note, and inventing a register would be inventing character. The review
+  pass changed 77 of their 467 beats and 8 of 187 taglines. **The seed now inserts in batches**: one insert of
+  3,159 beats × 11 columns passed SQLite's 32,766-variable limit and failed the build with nothing
+  wrong in the content.
+- Still unbuilt, flagged once each: Minus (the tourist filed as Linus), Scolopendra as a crawler from
+  8:98, the Arena and its stand-ins, the Kyryap, Ricky Joe, Silfa, Levi the Seventh, Mukta. And the
+  Night Wyrm's own name "Hamed" is not an alias: it is printed at 6:32, and an alias reveals with the
+  entity (3:19). An alias with its own reveal point would fix that; the schema has none.
 - Coverage gaps it noticed: the Gate in book 7 (waiting in a mailbox at 7:1, taken from Elle by Akuma
   at 7:61); `no-respawns` as a name, which 7:8 contradicts for outworlders; Rishi's death is only
   confirmed at 8:10 while his fate beat sits at 7:58.

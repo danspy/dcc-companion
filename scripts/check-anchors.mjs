@@ -111,6 +111,14 @@ const REVIEWED = {
   "ping@4:32": "the 1:19 hit is an 8-bit 'ping' sound; the spell is learned and named at 4:32",
   "trainyard@3:5": "at 3:5 the engineer calls station 10 'really just the yard'; the word 'trainyard' is 3:14",
   "demon-eviction@6:54": "6:54 prints 'Demon Eviction is commencing' without the article the name carries",
+  "carls-father@1:3": "never named; he is 'my dad' from 1:3, and the phrase 'Carl's father' is only the checker's handle, first in print at 8:1",
+  "hamed@3:19": "'Enchanted Night Wyrm's Ring of Divine Suffering' at 3:19 prints the name without the article",
+  "viscount-fog@5:46": "the 1:5 hit is 'fog of war'; the Viscount is first named in Sierra's description at 5:46",
+  "asher@6:45": "the 1:3 hit is ash from Mordecai's mother's urn; Asher is named at 6:45",
+  "york@3:15": "the 2:15 hit is New York City; the crawler York is first named in the cookbook at 3:15",
+  "containment-interface@7:1": "the 2:16 hit is a dynamite fuse; the Containment Interface is named at 7:1",
+  "the-madness@6:21": "the 4:34 hit is 'eons in the madness', a phrase; the team is first named at 6:21",
+  "shanty-town@7:1": "the 1:14 hit is 'shanty towns' on Earth; the ring is first named at 7:1",
 };
 
 const report = [];

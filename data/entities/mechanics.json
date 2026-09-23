@@ -2676,6 +2676,613 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "protective-shell",
+      "kind": "mechanic",
+      "name": "Protective Shell",
+      "aka": [],
+      "role": "Item-based spell",
+      "revealedAt": "1:35",
+      "sort": 64,
+      "tagline": [
+        {
+          "at": "1:35",
+          "text": "A spell that comes with a pair of boxers: a sphere no mob can enter, twenty seconds, once every thirty hours. It does not move with you."
+        },
+        {
+          "at": "3:1",
+          "text": "A sphere no mob can enter, and it stays exactly where it was cast. Cast it on anything moving, and everything in its path meets a wall."
+        }
+      ],
+      "description": "A favorite of frontline tanks and castle guards, the expensive and rare Protective Shell spell shields the caster and anyone within the sphere from a mob's physical presence or physical attacks. This spell does not protect against magic or against non-corporeal entities. Unlike the more popular Shield spell, this spell does not move with you. This spell's area of effect remains static once cast, unimpeded by your physical surroundings.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 35,
+          "floor": 2,
+          "at": "1:35",
+          "confidence": "verified",
+          "headline": "Inside a pair of boxers",
+          "text": "A boss box yields a white pair of boxers covered in little red hearts, the Enchanted BigBoi Boxers: plus two Constitution, and the wearer may cast a level-fifteen Protective Shell once every thirty hours. No mana; take the boxers off and the spell goes with them. A sphere with a radius of three metres plus half a metre per point of Intelligence, lasting twenty seconds. Mordecai had it during his own crawl and starts to explain its fantastic secondary effect, when an admin warning cuts him off."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 38,
+          "floor": 2,
+          "at": "1:38",
+          "confidence": "verified",
+          "headline": "A dog at the end of its leash",
+          "text": "First cast, in a hallway, with a rage elemental coming for the residents. The glowing half-sphere fills the corridor floor to ceiling, and the monster flies back like a charging dog reaching the end of its leash. It charges again; its badger head gets through, but its claws cannot. Crawler Carl's ears pop as he runs out of the area toward the safe room. Twenty seconds, and he spent five of them being dumbfounded that it worked."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 7,
+          "floor": 3,
+          "at": "2:7",
+          "confidence": "verified",
+          "headline": "Lions off a bug zapper",
+          "text": "Six mold lions pounce at once in a dark street. Crawler Carl slams the shell down as Crawler Donut's Confusing Fog billows out, and the lions bounce off it like fireflies off a bug zapper, each ricocheting in a different direction, howling. It holds long enough for Carl to punch into a lion's chest with his gauntlet and pull its heart out. The shell fizzles just as the reanimated lion gets back to its feet."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 13,
+          "floor": 3,
+          "at": "2:13",
+          "confidence": "verified",
+          "headline": "The boxers, upgraded",
+          "text": "An upgrade scroll goes onto the boxers. The spell itself does not change; the garment gets plus five Dexterity, plus five Intelligence, three more Constitution, and the Freeballing benefit, which permits one layer of clothing over the crotch and so rules out trousers. Mordecai calls them probably the most valuable item Crawler Carl owns. Five points of Intelligence is two and a half more metres of radius."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 1,
+          "floor": 4,
+          "at": "3:1",
+          "confidence": "verified",
+          "headline": "Left behind on the tracks",
+          "text": "The secondary effect, applied. Trapped in a speeding subway car with mobs breaking through the doors, Crawler Carl checks that the track is straight and casts. The shell ignores solid objects and stays exactly where it was cast along the track, so the train carries on through it, and it rolls down the cars, sixteen to twenty, pushing every mob before it like a bulldozer and squashing them into paste against the first surface they meet."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 14,
+          "floor": 4,
+          "at": "3:14",
+          "confidence": "verified",
+          "headline": "The train drives into it",
+          "text": "The plan for the Nightmare Express: stand on the track in the tunnel, cast the shell as the train arrives, and let Crawler Donut's Puddle Jumper take them a quarter of a mile down the line. They cut it close. The train roars through the spell, and every red-tagged monster aboard slams into its wall and is pushed backward. The train then speeds up, and they have to run for the platform."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 21,
+          "floor": 5,
+          "at": "4:21",
+          "confidence": "verified",
+          "headline": "The floor was the monster",
+          "text": "Cast on a stairway as a door explodes inward, the shell sweeps the sand off the floor of the room like a broom and uncovers glass beneath. Suddenly the whole room is red on the map. The sand is a mob, and there is no second cast today."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 27,
+          "floor": 5,
+          "at": "4:27",
+          "confidence": "verified",
+          "headline": "Straight down a city boss",
+          "text": "Swallowed along with a submarine, Crawler Carl casts in the throat of an enormous shark. The static sphere, about twelve metres across by now, shoots away as the shark swims on. He hoped for a bullet through the brain. Instead the boss stops dead, as if it had hit a wall; the top of its mouth peels back over its own eyes, teeth shatter, and the immovable spell pushes it down into the ocean floor. Grievously wounded, it is not yet dead."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 32,
+          "floor": 6,
+          "at": "5:32",
+          "confidence": "verified",
+          "headline": "Train the spell, upgrade the shorts",
+          "text": "The tier-four training room installed for Crawler Carl while he is held off the floor lists spells that come from equipment alongside the ordinary ones. Train Protective Shell there, and it is the equipment that gets upgraded: the boxers, in this case. The room also trains workshop tables without them being present, which Crawler Carl rates as its most valuable feature."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 36,
+          "floor": 6,
+          "at": "5:36",
+          "confidence": "verified",
+          "headline": "Straight up, not sideways",
+          "text": "The frog-lizard boss on the hill had a weak belly and a description hinting it should be rolled over. Crawler Carl cast too close and at the wrong angle, and the monster went straight up into the night sky instead of sideways. Crawler Donut's fireball met its stomach as it fell back down, and it landed on the shield in flames. Now, in a saferoom, the achievement catches up: Uprooted notes that a rooted-in-place boss was moved, and hopes he remembers how."
+        },
+        {
+          "kind": "use",
+          "book": 5,
+          "chapter": 74,
+          "floor": 6,
+          "at": "5:74",
+          "confidence": "verified",
+          "headline": "A crater of bugs",
+          "text": "A literal wave of thrashing bugs falls on Crawler Carl in the fight with a deity. He slams the shell down. Bugs, elves, dinosaurs and a few hunters rocket away in every direction. With the Intelligence he has now, the shell is huge; it leaves a crater with only crawlers and corpses in the middle, and Imani uses the gap to heal whoever she can reach."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "used-by",
+          "at": "1:35"
+        }
+      ]
+    },
+    {
+      "id": "death-challenge",
+      "kind": "mechanic",
+      "name": "Death Challenge",
+      "aka": [],
+      "role": "Pop-up gambling event",
+      "revealedAt": "3:33",
+      "sort": 65,
+      "tagline": [
+        {
+          "at": "3:33",
+          "text": "Heavy metal, a frozen world, and a crawler's face with Death Challenge! stamped across it in blood. The dungeon has opened a book on how he dies."
+        },
+        {
+          "at": "3:end",
+          "text": "Not a boss battle: a pop-up gambling event, at odds the AI sets. The first one put Carl's survival at fifty to one, and Borant is appealing."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 33,
+          "floor": 4,
+          "at": "3:33",
+          "confidence": "verified",
+          "headline": "The world freezes, the music starts",
+          "text": "Carl tumbles out of a portal into Trainyard E beside a glowing mantaur, a Mimic Rex's mouth opens in front of him, and the world stops. Music starts: heavy metal, bass-driven. A framed graphic of Carl's face appears in the air with Death Challenge! stamped across it, blood running from the words. The announcer promises the death of a celebrated crawler, live, and asks which lucky monster gets to kill him. Carl, frozen, has one thought about it, and it is a swear word."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 33,
+          "floor": 4,
+          "at": "3:33",
+          "confidence": "verified",
+          "headline": "Two contenders and a sponsor",
+          "text": "On the right, a level-90 Mimic Rex, city boss and crawler-killer champion of the floor with over 23,000 deaths. On the left, Grull, and for the first time on Dungeon Crawler World his sponsor: Prince Maestro of the Skull Empire, once thought dead, interviewed on screen telling the worms to try harder. The world stays frozen through the portraits while Donut gallops toward the trainyard on Mongo. Then the announcer tells everyone to get their bets in, and the world unfreezes."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "chapter": 33,
+          "floor": 4,
+          "at": "3:33",
+          "confidence": "verified",
+          "headline": "No announcement at the end",
+          "text": "Grull splits the mimic in half, steps on Carl, and runs off after a second Carl who is Katia in disguise. Carl lives through the god's stamping on Mordecai's Special Brew. A mutilated mantaur, thrown into the portal with one second left on its summoning, takes the god away mid-attack. Then the music stops. There is no additional announcement, the way there usually is. There is only the chugging of a train, and a whole page of notifications."
+        },
+        {
+          "kind": "arc",
+          "book": 3,
+          "floor": 4,
+          "at": "3:end",
+          "confidence": "verified",
+          "headline": "What the odds were",
+          "text": "On Odette's couch it is explained. A Death Challenge is not a boss battle but a pop-up gambling event: viewers in systems where gambling is legal bet on outcomes, general or specific, each at its own odds. The AI put Carl's general survival at fifty to one. Plenty of viewers thought that was a good bet, and the odds slid less than you would expect. Borant has filed an appeal over how slowly the AI moved the spread. Odette made a good amount of credits."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "concerns",
+          "at": "3:33"
+        },
+        {
+          "to": "grull",
+          "kind": "concerns",
+          "at": "3:33"
+        },
+        {
+          "to": "maestro",
+          "kind": "concerns",
+          "at": "3:33"
+        },
+        {
+          "to": "system-ai",
+          "kind": "administered-by",
+          "at": "3:end"
+        },
+        {
+          "to": "borant-corporation",
+          "kind": "concerns",
+          "at": "3:end"
+        }
+      ]
+    },
+    {
+      "id": "vorpals",
+      "kind": "mechanic",
+      "name": "Vorpals",
+      "aka": [
+        "vorpal"
+      ],
+      "role": "Condition",
+      "revealedAt": "2:16",
+      "sort": 66,
+      "tagline": [
+        {
+          "at": "2:16",
+          "text": "Vorpal. A word a hobgoblin explosives dealer uses about a muskrat: her mother bit its head off, and you cannot do that to a vorpal muskrat without doing a little dying."
+        },
+        {
+          "at": "6:32",
+          "text": "Vorpals. Whatever waits behind the Desperado Club's Do Not Enter door, released as a last resort when a demon gets loose on the middle floor."
+        },
+        {
+          "at": "6:33",
+          "text": "Vorpals. A condition, not a species: deputised by the gods, drawn to demons, stronger the nearer one is, and liable to explode rather than lose."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 2,
+          "chapter": 16,
+          "floor": 3,
+          "at": "2:16",
+          "confidence": "verified",
+          "headline": "One muskrat, one mother",
+          "text": "A hobgoblin at the Silk Road, midway through pricing hob-lobbers, mentions that she once watched her mother bite the head off a vorpal muskrat. To teach the warlord a lesson, her mother said; the daughter suspects another reason. A few minutes on, Princess Donut hopes the mother won't be biting her head off too. No danger, says the hobgoblin: she died. It was a vorpal muskrat. You can't bite the head off a vorpal muskrat without doing a little dying in the process. Nobody asks what vorpal means."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 31,
+          "floor": 8,
+          "at": "6:31",
+          "confidence": "verified",
+          "headline": "Fifteen things behind a door",
+          "text": "In a secret corridor of the Desperado Club, past fifty traps, some of them demon snares, is the abandoned practice arena of the defunct Demon Tamer's Guild, and in it fifteen red-tagged monsters nobody has identified. The paper sign on the padlocked door: Warning. Do Not Enter. Extreme, You're-Going-To-Die-In-A-Lot-Of-Pain Danger. Posted by Management. Parties have gone in. None came out. Carl, setting an ambush in that same corridor, walls the door off with two blast-resistant panels and sandbags, on a feeling."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 32,
+          "floor": 8,
+          "at": "6:32",
+          "confidence": "verified",
+          "headline": "The last resort",
+          "text": "A feral demon out of the Nothing is loose on the middle floor, eating guards, and the club cannot kill her. Astrid pulls the trigger: \"I had to unleash the vorpals.\" Carl asks what those are. It does not matter, she says; they are going to kill everything, so flee or hide. Then she frets about what is taking them so long. Meanwhile, guards heading down that corridor keep landing on Carl's teleport traps. The vorpals won't go up to the top floor, she adds, not sounding sure."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 33,
+          "floor": 8,
+          "at": "6:33",
+          "confidence": "verified",
+          "headline": "Deputised by the gods",
+          "text": "Mordecai, asked in chat, has not seen these in a while. Vorpal is a condition, not a species. Feral means touched by the Nothing; vorpal means deputised by the gods, or better, turned into suicide bombers. Any race, sometimes hidden until a demon is near. Celestial guards and foot soldiers. The closer the demon, the stronger and angrier they get; they sense it, go to it, and draw its aggro. If one thinks it is losing, it explodes, and everybody in the room is dead with it. Stay away."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 33,
+          "floor": 8,
+          "at": "6:33",
+          "confidence": "verified",
+          "headline": "Carl opens his own wall",
+          "text": "The only thing between the vorpals and the club is the wall Carl built. So he sends a door-opening bot down the hidden hallway, programmed with a sixty-second delay to undo his own bracers and burrow through his own sandbags, and goes upstairs. Some minutes on, a buzzsaw sound rises through the floor of the strip club, and yellow fluid sprays through a hole in the boards. The demon screams a name, and a curse, and stops. The vorpals have found her."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 34,
+          "floor": 8,
+          "at": "6:34",
+          "confidence": "verified",
+          "headline": "Still loose downstairs",
+          "text": "The demon is dead and the vorpals are still tearing through the lower level. Now that they have bathed in demon blood they are supposed to dissipate back to the celestial realm, which is fine in theory and silent on timing. Crawler Carl keeps an eye on Damascus Steel, crying on the floor of the club, because Damascus is a demon class and his presence is a problem with those things still in the building."
+        }
+      ],
+      "relations": [
+        {
+          "to": "desperado-club",
+          "kind": "based-at",
+          "at": "6:31"
+        },
+        {
+          "to": "astrid",
+          "kind": "deployed-by",
+          "at": "6:32"
+        }
+      ]
+    },
+    {
+      "id": "tghee-cards",
+      "kind": "mechanic",
+      "name": "T'Ghee cards",
+      "aka": [
+        "T'Ghee",
+        "totems",
+        "totem cards"
+      ],
+      "role": "Card game",
+      "revealedAt": "4:3",
+      "sort": 67,
+      "tagline": [
+        {
+          "at": "4:3",
+          "text": "T'Ghee. A card game from Allister's home planet, somewhere between chess and go fish, and part of a meditation-based religion. His Cookbook came as a deck of them."
+        },
+        {
+          "at": "6:1",
+          "text": "T'Ghee totems. Plant a squad flag in something below five per cent health and it becomes a card that fights for whoever summons it. Twenty flags a squad, no refills."
+        },
+        {
+          "at": "6:8",
+          "text": "T'Ghee cards. Totems, utility, snare, mystic and special. Four drawn when combat starts, one more every ten seconds, and a squad leader without spells or inventory until the deck is spent."
+        },
+        {
+          "at": "6:16",
+          "text": "T'Ghee cards. The eighth floor's whole game, and a flag works on a dying crawler as well as on a monster."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 3,
+          "floor": 5,
+          "at": "4:3",
+          "confidence": "verified",
+          "headline": "Allister's deck of cards",
+          "text": "The Cookbook manifests differently for each owner. For Allister, author of the thirteenth edition, it came as a massive deck of playing cards from his home planet, for a game called T'Ghee. From the little he wrote about it, a mix of chess and go fish; also part of his people's meditation-based religion, which made it easy for him to spend hours studying the cards."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 45,
+          "floor": 6,
+          "at": "5:45",
+          "confidence": "verified",
+          "headline": "Two vampires in the deck",
+          "text": "Allister, on vampires: his culture has them too, and his T'Ghee deck contains two vampiric forms. Both represent death and the end of days. One is deliberate, thirst-based evil. The other, the Plague Bearer, is a study in how poor actions ripple through time, amplify, and doom everyone. The vampires on the floor he is writing from, he thinks, are a combination of the two. It is strange, he writes, that the traditions are so different yet the same."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 1,
+          "floor": 8,
+          "at": "6:1",
+          "confidence": "verified",
+          "headline": "Twenty flags a squad",
+          "text": "Floor announcement. Each squad leader receives twenty flags bearing a logo the system designed. Plant one in a living thing below five per cent health, noncorporeal included, and it becomes a T'Ghee totem, a minion of whoever summons it, obedient to a point depending on level and temperament. Rip the totem in two to dismiss it. Trade them, steal them. Lost flags are not replaced. Every surviving squad keeps one card when the floor collapses. Carl's breath catches: he knows the word from the Cookbook."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 1,
+          "floor": 8,
+          "at": "6:1",
+          "confidence": "verified",
+          "headline": "Like the stuffed animals",
+          "text": "Mordecai's gloss on the announcement: T'Ghee totems are like Bautista's stuffed animals, only in the form of large playing cards. Like Carl's tarot cards, actually. Reusable even when the summoned monster dies. He has seen them used a few different ways over the seasons, so they are going to have to wait for the next announcement. Carl, who has read Allister, notes that for its inventor T'Ghee was a religion and had nothing to do with capturing monsters."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 8,
+          "floor": 8,
+          "at": "6:8",
+          "confidence": "verified",
+          "headline": "The rules, at length",
+          "text": "The full rules arrive. Six totems minimum per deck. Five card types: totems, utility, snare, mystic, special. Four cards drawn when combat starts and one more every ten seconds; one discard, recharging every thirty. A squad leader in deck combat loses spells and inventory until the deck is spent, and most totems may not attack an enemy leader while enemy totems stand, so the squad guards the leader. Against an opponent holding a deck, deck combat is compulsory. Saferooms gain practice arenas, for a fee."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 10,
+          "floor": 8,
+          "at": "6:10",
+          "confidence": "verified",
+          "headline": "Sacred to someone",
+          "text": "On the road to a cemetery, Sister Ines says what she has been holding in: all of this is a mockery of their faiths and legends, the stories stripped of meaning and made shiny, holy things mixed with fictions nobody ever believed. They do not care. Crawler Carl gives her a moment, and says it is what they do. He does not say the rest aloud. The cards themselves were sacred to the aliens the idea was stolen from. They were never meant to be used like this."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 16,
+          "floor": 8,
+          "at": "6:16",
+          "confidence": "verified",
+          "headline": "A flag in a person",
+          "text": "A squad flag does not check what it is stabbed into. Sister Ines drives one into the neck of her dying friend Paz, who has just asked to be let go, and Paz becomes a card, green, common, in her hand. She looks as stunned as everyone else that it worked. Behind her, the fountain bubbles over, and two goddesses make an appearance in the realm."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 40,
+          "floor": 8,
+          "at": "6:40",
+          "confidence": "verified",
+          "headline": "Millions of work hours",
+          "text": "An achievement, at length. Borant's proposal for this season included an outline of the eighth floor as a T'Ghee card game; artists, engineers and writers spent millions of work hours designing and balancing it for thousands of players at once, and Cascadia, the executive producer, is on the edge. Most crawlers keep ending card fights before either side draws. Crawler Carl's review: a half-assed YuGiOh! ripoff duct-taped together on an Adderall bender, and no card game is fair when players draw from different pools."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 64,
+          "floor": 8,
+          "at": "6:64",
+          "confidence": "verified",
+          "headline": "A card called The Inevitable",
+          "text": "Allister again, writing about a goddess the dwarves call the Downward Spiral: an earth and water goddess who punishes those who abuse her world and the weakest in it, a trickster, jealous of mortals, forever moving nations like chess pieces. In his religion, he writes, there is a T'Ghee card that represents such a figure. It is called The Inevitable."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "One card to keep",
+          "text": "Each surviving squad may keep a single card past the collapse. Princess Donut had meant it to be Lazarus or the Golden Combo, and now offers a third: a card of Paz, in case there is a way to set him free. Crawler Carl remembers what Paz said the last time he was summoned. Not that one, and not the Golden Combo either. The Paz card is ripped in half on his shoulder."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 54,
+          "floor": 9,
+          "at": "7:54",
+          "confidence": "verified",
+          "headline": "The Open Wound",
+          "text": "Allister, on the Immortality condition: an immortal's wounds heal, but make certain they heal before the condition wears off, and pair it with a Numb spell if possible, because pain without respite takes its own toll. He has a card in his T'Ghee deck, The Open Wound. She teaches that all suffering leaves scars. So the condition scares him, and he says so in writing, for whoever reads the Cookbook next."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 36,
+          "floor": 10,
+          "at": "8:36",
+          "confidence": "verified",
+          "headline": "A card made permanent",
+          "text": "Imani's eighth-floor card, Jacobus the Reverse Tooth Fairy, is out and buzzing in Carl's face. The notice says he is now permanently summoned and can no longer be used as a card, due to something Carl did. Princess Donut did not know cards could be turned real. She and Carl are both thinking of Paz, whose card they ripped, and neither says it. Could Raul be set free? Carl doubts it. This was a god thing."
+        }
+      ],
+      "relations": [
+        {
+          "to": "dungeon-anarchists-cookbook",
+          "kind": "concerns",
+          "at": "4:3",
+          "note": "Allister's edition was a T'Ghee deck"
+        },
+        {
+          "to": "sister-ines",
+          "kind": "concerns",
+          "at": "6:10"
+        },
+        {
+          "to": "paz",
+          "kind": "transformed",
+          "at": "6:16"
+        },
+        {
+          "to": "cascadia",
+          "kind": "concerns",
+          "at": "6:40"
+        },
+        {
+          "to": "jacobus",
+          "kind": "concerns",
+          "at": "8:36"
+        }
+      ]
+    },
+    {
+      "id": "containment-interface",
+      "kind": "mechanic",
+      "name": "Containment Interface",
+      "aka": [
+        "the fuse"
+      ],
+      "role": "Bootleg interface upgrade · the AI's failsafe",
+      "revealedAt": "7:1",
+      "sort": 68,
+      "tagline": [
+        {
+          "at": "7:1",
+          "text": "A bootleg upgrade drunk from a homeless man's frozen coffee: access to the AI containment, and to the fuse that turns the sun nova."
+        },
+        {
+          "at": "7:20",
+          "text": "Six tabs of numbers, a Fuse page with two of five conditions met, and one other button that switched all of it off. Pressed."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "Coffee, with a finger",
+          "text": "Christmas morning, in a shelter, in memory. Time stops, and Paulie delivers his real message. His coffee holds a neural enhancement: Crawler Carl pushes a finger into the frozen cup and drinks. It gives access to the AI containment, and upon it to what the Mantids call the fuse, a failsafe that trips when five or six conditions are met and sends the star at the centre of the system nova. The controller lets Carl pop it himself. He dies; so does everyone. It only works in a natural interface, and the AI, says Paulie, wants it done."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "Paulie's own opinion",
+          "text": "That was the pitch, Paulie says, the one he gives every day. Then the Paulie part of him speaks. Popping the fuse would disrupt the crawl for seasons, kill system leaders, and put the Mantids under a microscope. But the human in him hates wasting so many innocent lives, and direct action against the true culprits would be better. If you make this decision, be sure. It is more than a failsafe. It is the end of everything. Then a notice: Containment Interface is currently installing. A notification comes when the handshake is complete."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 6,
+          "floor": 9,
+          "at": "7:6",
+          "confidence": "verified",
+          "headline": "So close to the edge",
+          "text": "Crawler Carl thinks of Lightning Lou, the old dog at the gas station in Florida left to spend Christmas Day alone. Carl curled up beside him on the floor and contemplated his options, and came so close to the edge that it almost broke his mind to think about it. Paulie's words come back to him: be sure it's your only option. On his chest, the eye blinks."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 20,
+          "floor": 9,
+          "at": "7:20",
+          "confidence": "verified",
+          "headline": "The handshake completes",
+          "text": "In Orren's zero zone, Carl asks whether Paulie ever made it into the dungeon. No, says Orren; most of them never do, and the parts of a collective mind are often disposable. Then the notice: Containment Interface is now available for use, as a new tab. Carl changes his request and asks to be sent to the gas station with the memory ghost of the dog, and sits beside Lightning Lou with a bag of chips and a soda. I could end it all right now, he thinks."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 20,
+          "floor": 9,
+          "at": "7:20",
+          "confidence": "verified",
+          "headline": "Two buttons, one pressed",
+          "text": "There is no single Boom button. There are six tabs of numbers in a language that is not quite Syndicate standard, and the controls are for the device that installed the AI into the primal engine, not the AI itself. Carl screenshots everything. The Fuse page lists five benchmarks, two met, and a button: Override Conditions And Activate Fuse. At the end of a list sits the only other thing he can press: Disconnect Containment, which renders the failsafe inert. He weighs which hurts the Syndicate most and protects his people most, and presses Disconnect. The red dot over Earth starts to grow."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 37,
+          "floor": 9,
+          "at": "7:37",
+          "confidence": "verified",
+          "headline": "So close, it says",
+          "text": "The AI walks into Orren's office wearing Growler Gary, feet on the desk and a bottle of vodka in its hand, and brings the interface up itself. The game Carl and I played the other day, it tells Orren, when I let him install that interface. That was so close, and I felt it. Carl asks the only question that matters: would it have worked, if he had pressed the fuse button? The AI does not answer. It looks at him and laughs."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "held-by",
+          "at": "7:1"
+        },
+        {
+          "to": "system-ai",
+          "kind": "concerns",
+          "at": "7:1"
+        },
+        {
+          "to": "oipan",
+          "kind": "delivered-by",
+          "at": "7:1",
+          "note": "Carl was put in that shelter by the Pacifist network"
+        }
+      ]
     }
   ]
 }

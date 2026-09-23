@@ -1812,6 +1812,387 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "jug-o-boom",
+      "kind": "item",
+      "name": "Carl's Jug O' Boom",
+      "aka": [
+        "Jug O' Boom",
+        "Jug-O-Boom",
+        "boom jug"
+      ],
+      "role": "Incendiary tossable",
+      "revealedAt": "1:32",
+      "sort": 49,
+      "tagline": [
+        {
+          "at": "1:32",
+          "text": "Rev-Up moonshine, a splash of goblin oil, and a torch for a cork. Burns hotter, bigger and faster than a Molotov, and it has Carl's name on it."
+        },
+        {
+          "at": "1:35",
+          "text": "Rev-Up moonshine and a torch for a cork, entered in the Dungeon Codex under Carl's name. One gold coin to him for every kill another crawler makes with it."
+        },
+        {
+          "at": "2:15",
+          "text": "A Dungeon Codex recipe with Carl's name on it. The moonshine it needs is no longer being made, and the royalties dried up after the first few coins."
+        }
+      ],
+      "description": "Created by an unstable, pantsless man who talks to a cat, Carl's Jug O' Boom takes the bigger-is-better approach when it comes to hobgoblin fire bottles. Burns hotter, bigger, and faster than your normal Molotov Cocktail. The use of a standard torch instead of a cloth wick makes these devices much more stable. Just don't drop it once it's lit, lest you find yourself doing a Joan of Arc impersonation.",
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 1,
+          "chapter": 32,
+          "floor": 2,
+          "at": "1:32",
+          "confidence": "verified",
+          "headline": "They named it after him",
+          "text": "Twenty-five clay jugs of Rev-Up Toilet-Grade Moonshine, looted off clurichauns. Pour a splash out, add a couple of ounces of goblin oil, and jam a short torch into the mouth, where it fits like a cork. The test throw: an insignificant explosion, then blue flames splashing like water across the room, high enough to reach the ceiling. The dungeon names the result Carl's Jug O' Boom. \"Carl, look, they named it after you!\" He sees."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 33,
+          "floor": 2,
+          "at": "1:33",
+          "confidence": "verified",
+          "headline": "Two for the laminak",
+          "text": "The moonshine is made nearby, where dozens of clurichauns fill jugs from a filthy aluminium bathtub under two fairy managers. Crawler Donut lures the fairies out; Crawler Carl lights two jugs and tosses them in among the forty workers. Afterwards he collects everything that survived: eighty empty jugs and sixty full ones. He leaves the moonshine in the tub alone, in case touching it blinds him."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 34,
+          "floor": 2,
+          "at": "1:34",
+          "confidence": "verified",
+          "headline": "Carried in by a zombie",
+          "text": "The delivery method for the Krakaren's chamber is a zombified clurichaun. On Crawler Donut's order it holds a jug over its head, like the boombox in Say Anything, a stick of dynamite shoved down its overalls for good measure; the torch is lit, and it runs through the doorway. Crawler Carl dives behind a shield, puts the alchemy table over himself and the cat like a clamshell, and wraps himself around her before the explosion comes."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 35,
+          "floor": 2,
+          "at": "1:35",
+          "confidence": "verified",
+          "headline": "Dungeonpreneur, and a Codex entry",
+          "text": "New achievement: Dungeonpreneur, for inventing a stackable weapon, device or potion. The recipe goes into the Dungeon Codex under Carl's name. The reward: one gold coin for every kill made with it by other crawlers, payable for the rest of his natural life if he survives, even in future seasons. The lawyers insisted on that last part. The citation adds that he is going to die, and the dungeon is going to keep using his work."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 39,
+          "floor": 2,
+          "at": "1:39",
+          "confidence": "verified",
+          "headline": "Almost a quarter of an elemental",
+          "text": "From the safe room doorway, Crawler Carl tosses a lit jug at the back of the rage elemental and slams the door. The recap shows the rest: the show pauses on the recipe, stamps Added to the Dungeon Codex over his mugshot, and then the monster's health plummets almost twenty-five percent. It is stunned for a good ten seconds, and the napalm-like fire slows its healing."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 40,
+          "floor": 2,
+          "at": "1:40",
+          "confidence": "verified",
+          "headline": "Boom babies down the hall",
+          "text": "Carts on free-weight wheels, dropped off the back of the trailer into the hallway behind it with the rage elemental in pursuit. Baby Uno carries three boom jugs, a jug of goblin oil, a jar of gunpowder and the last of the hobgoblin pus. There are boom jar babies, shredder babies, and the oh shit babies, which pair two boom jars with a gunpowder satchel wrapped in dynamite. They carpet bomb the hall, and whatever does not light itself, Crawler Donut lights with a low magic missile."
+        },
+        {
+          "kind": "arc",
+          "book": 1,
+          "chapter": 44,
+          "floor": 2,
+          "at": "1:44",
+          "confidence": "verified",
+          "headline": "Four kills, one coin each",
+          "text": "A new tab in the interface: ACCOUNTS. One item. Creator's Fee, Carl's Jug O' Boom. Royalty: 1 gold coin per kill. Current kills: 4. The small print, too small to zoom: the count updates once daily, and two gold coins plus a 25% deposit fee, rounded up, are deducted upon cash out. Four kills, all by other crawlers' hands."
+        },
+        {
+          "kind": "use",
+          "book": 1,
+          "chapter": 45,
+          "floor": 2,
+          "at": "1:45",
+          "confidence": "verified",
+          "headline": "Frozen in mid-air",
+          "text": "Crawler Carl lights a jug and throws it at the barn doors of a neighbourhood boss's chamber as they open, just as about forty cheering kobolds come pouring out. The world freezes with the jug hanging in the air like a comet while the dungeon introduces the boss. When it unfreezes, the jug explodes among the kobolds, evaporating most of them, including the boss's owner."
+        },
+        {
+          "kind": "arc",
+          "book": 2,
+          "chapter": 15,
+          "floor": 3,
+          "at": "2:15",
+          "confidence": "verified",
+          "headline": "Ten left, and no more moonshine",
+          "text": "Crawler Carl has ten boom jugs left and a stash of Rev-Up bottles set aside to sell. Quint the pharmacist had heard the Krakaren say no more of the stuff was being made this season; Mordecai says Carl and Donut are the reason it was shut down. The royalties stopped after the first few coins. At least one other crawler found a few bottles."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 16,
+          "floor": 3,
+          "at": "2:16",
+          "confidence": "verified",
+          "headline": "Valued at 7,500 gold",
+          "text": "Pustule the hobgoblin, asked what a jug is worth, rubs it, whimpers, and licks it. Her verdict: nice design, material cost much too high. A different accelerant would burn less hot and cost ninety percent less, and plain moonshine would sell for more than the bomb. She would sell one for about 7,500 gold and pay half that. Crawler Carl keeps it, for a value reference."
+        },
+        {
+          "kind": "use",
+          "book": 2,
+          "chapter": 20,
+          "floor": 3,
+          "at": "2:20",
+          "confidence": "verified",
+          "headline": "Mic drop at the temple door",
+          "text": "A one-armed dwarf child under one arm, a lit jug in the other hand, a swordsman guard swinging. Crawler Carl tosses the jug straight up, Crawler Donut's Puddle Jumper takes them all to a rooftop across the street, and the jug comes down on the temple entrance. The remaining eight city elves are crisped instantly. The two guards' health bars barely move."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 32,
+          "floor": 4,
+          "at": "3:32",
+          "confidence": "verified",
+          "headline": "Twin fireballs at a junction",
+          "text": "In the station defence, Katia's Crowd Blast carries her into a T-shaped junction packed with krakaren monsters. Crawler Carl follows and throws one jug down each branch as Crawler Donut puddle jumps the three of them back to the main room. Twin fireballs erupt at the far ends. Soon after, the two closest soul crystals pop."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 22,
+          "floor": 5,
+          "at": "4:22",
+          "confidence": "verified",
+          "headline": "Too hot for this job",
+          "text": "Two jugs left. The sand ooze's core sits under the recliner, and ordinary fire is no good: the ooze has already snuffed out the flames left by Crawler Donut's spell. It needs something that burns hot, and Crawler Carl fears the jugs would burn a little too hot. He uses burn gel instead, a cookbook recipe that Mordecai showed him how to improve. With moonshine and a paste of his, it burns hot and bright with little smoke."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 46,
+          "floor": 8,
+          "at": "6:46",
+          "confidence": "verified",
+          "headline": "Plain moonshine, nearly the same",
+          "text": "Against the hydra, Crawler Carl digs through his inventory for jugs. He long ago ran out of his Jug-O-Booms and has only a few regular moonshine jugs left, which are almost the same thing. He lights one and throws it over Alpha Carl's head at the hydra, and it catches one of the replicants in the face."
+        }
+      ],
+      "relations": [
+        {
+          "to": "carl",
+          "kind": "wielded-by",
+          "at": "1:32"
+        }
+      ]
+    },
+    {
+      "id": "bolt-of-ophiotaurus",
+      "kind": "item",
+      "name": "Bolt of Ophiotaurus",
+      "aka": [],
+      "role": "Crossbow bolt · sponsor gift",
+      "revealedAt": "3:29",
+      "sort": 50,
+      "tagline": [
+        {
+          "at": "3:29",
+          "text": "One of a hundred. An ordinary crossbow bolt unless it lands in a god's eye, and then fifteen seconds without invulnerability. Katia's, from Princess Formidable."
+        },
+        {
+          "at": "6:72",
+          "text": "The bolt that opened a goddess to a killing blow. Magical bolts can be used again if they don't break, and Katia still has this one."
+        },
+        {
+          "at": "8:96",
+          "text": "Katia's bolt, fired from Donut's back straight into Emberus's eye. Fifteen seconds of a god with no invulnerability, and Taranis used them."
+        }
+      ],
+      "description": [
+        {
+          "at": "3:29",
+          "source": "3:29",
+          "text": "The Bolt of Ophiotaurus. This is 1 of 100. This item acts as a regular crossbow bolt unless it is shot directly into the eye of a deity. Upon a successful strike to the god's eye, the deity's invulnerability pauses for fifteen seconds."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 3,
+          "chapter": 29,
+          "floor": 4,
+          "at": "3:29",
+          "confidence": "verified",
+          "headline": "One of a hundred, in a benefactor box",
+          "text": "Katia's first benefactor box from Princess Formidable holds a single small item, and nobody says anything while she examines it. A crossbow bolt, just the one. It is a regular bolt unless it goes directly into the eye of a deity, in which case the god's invulnerability pauses for fifteen seconds. The sender is the youngest sister of the Maestro, now dead, and of Crown Prince Stalwart, who is somewhere in the dungeon. Carl reads the description and decides the sister is not a huge fan of her big brother."
+        },
+        {
+          "kind": "use",
+          "book": 3,
+          "chapter": 34,
+          "floor": 4,
+          "at": "3:34",
+          "confidence": "verified",
+          "headline": "A message, not a plan",
+          "text": "In the trainyard, Grull, with the Maestro at the controls, told Carl mid-rampage that even the magical bolt his sister wasted on Carl's friend would not work: Carl was not strong enough yet to hurt him. Afterwards, loading the portal cart onto the employee track, Katia wishes she could have used it. Carl says it would have been a waste, since they could not have hurt him, and that the gift was probably more a message to the brother than a plan to kill him. He promises her a use for it."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 69,
+          "floor": 8,
+          "at": "6:69",
+          "confidence": "verified",
+          "headline": "Into a goddess's eye",
+          "text": "Ysalte stands in the corpse of Sister Ines, summoned for a boss event and invulnerable on this floor. Donut's all-caps report tells the rest. Katia gave a crawler an arrow thing, and he stuck it into the goddess's eye. Then he blew himself up, the explosion concentrated on her neck, and her head fell off. The system message names him as her slayer, marked for death by every deity except her sworn enemies. He was her own totem."
+        },
+        {
+          "kind": "use",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "Reusable, if unbroken",
+          "text": "Carl thinks Katia should have had the credit for the goddess, since it took her bolt to do it. Katia is glad she did not: every god is angry at the one who did. Then she pulls it out of her inventory. Funny thing about magical bolts, she says: as long as they don't break, you can reuse them. Carl grins back. The princess meant it for her brother inside Grull, and that possibility is still on the table."
+        },
+        {
+          "kind": "use",
+          "book": 8,
+          "chapter": 96,
+          "floor": 11,
+          "at": "8:96",
+          "confidence": "verified",
+          "headline": "Emberus, fifteen seconds",
+          "text": "Donut swaps into the room through one of Lucia's loop-de-loop traps with the Scorpion's Bite mount on her back, cocked and loaded with Katia's bolt. She fires true, straight into Emberus's smouldering eye socket. A second shot, one of her Danforth bolts, takes the other eye and holds him in place. The yellow glow winks off: fifteen seconds, and he cannot move. Taranis, seeing his little brother rise, raises a hand and twists his wrist, and with one second left Emberus explodes."
+        }
+      ],
+      "relations": [
+        {
+          "to": "princess-formidable",
+          "kind": "gift-of",
+          "at": "3:29"
+        },
+        {
+          "to": "katia",
+          "kind": "owned-by",
+          "at": "3:29"
+        },
+        {
+          "to": "ysalte",
+          "kind": "used-on",
+          "at": "6:69"
+        },
+        {
+          "to": "emberus",
+          "kind": "used-on",
+          "at": "8:96"
+        },
+        {
+          "to": "princess-donut",
+          "kind": "wielded-by",
+          "at": "8:96"
+        }
+      ]
+    },
+    {
+      "id": "celestial-grenade",
+      "kind": "item",
+      "name": "Celestial Grenade",
+      "aka": [],
+      "role": "Consumable · summons a god",
+      "revealedAt": "4:14",
+      "sort": 51,
+      "tagline": [
+        {
+          "at": "4:14",
+          "text": "A spiked ball that summons its thrower's god for sixty seconds. Maggie My's, from the Skull Empire, meant to bring the god of pain down on Carl. Carl has it now."
+        },
+        {
+          "at": "4:31",
+          "text": "Maggie's grenade, thrown by Carl instead. Emberus arrived, Quan Ch did not get his shot off, and Carl had sixty seconds in which nothing could hurt him."
+        }
+      ],
+      "description": [
+        {
+          "at": "4:14",
+          "source": "4:14",
+          "text": "These little balls of fun were developed by the nuns of Enyo during the first enlightenment, back when the gods had to compete for worshippers. The nuns would descend upon a village and proselytize to the people about why their goddess was the best. If the villagers didn't immediately fall to their knees in veneration, the nuns would be forced to invoke a more aggressive campaign. A nun would drop a celestial grenade, which would summon Enyo directly into town for a period of sixty seconds. That was usually enough to change the minds of the survivors. Celestial grenades grant the following effects: If the wielder of the grenade has pledged themselves to a specific deity, this grenade will summon their god for sixty seconds. In addition, the wielder will receive a 60-second Divine Intervention aura. If the wielder does not worship a deity, this grenade will summon a random god. They will not receive the Divine Intervention buff."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 4,
+          "chapter": 14,
+          "floor": 5,
+          "at": "4:14",
+          "confidence": "verified",
+          "headline": "The ball in the impostor's hand",
+          "text": "The friend standing in front of Carl is Maggie My wearing him, and she has a round, spiked ball in her hand when Katia's petrify bolt takes her in the head. The ball rolls. Carl dives for it and puts it in his inventory before it can do anything, without knowing what it is. It does not list itself as an explosive. It is a celestial grenade: summon your god for sixty seconds, and stand inside Divine Intervention while it is here."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
+          "chapter": 14,
+          "floor": 5,
+          "at": "4:14",
+          "confidence": "verified",
+          "headline": "Bought by the Skull Empire",
+          "text": "Mordecai's eyes go huge when Carl tosses it to him. These are very expensive and rare, he says, seen on the ninth floor a lot, near the end; using one on a single crawler is like trying to kill a bug with a kinetic strike. The crawler Maggie has been riding gets a message out before he is cut off. She worships Algos, the god of pain, chosen from a scroll sent by her sponsors, Prince Maestro and Crown Prince Stalwart. She got the grenade on this floor."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 31,
+          "floor": 5,
+          "at": "4:31",
+          "confidence": "verified",
+          "headline": "Thrown from the upper wing",
+          "text": "The biplane is spiralling down, Orthrus is unconscious, and Quan Ch is closing in, both hands glowing. Carl takes Emberus as his god in mid-air, against every warning in the cookbook, climbs onto the upper wing with Donut clinging to his back, and throws the grenade at Quan. Quan freezes it fifteen feet in front of him with a red bolt. It makes no difference. The ball winks out, and Emberus arrives as a city-sized floating head. Quan never gets his spell off."
+        },
+        {
+          "kind": "use",
+          "book": 4,
+          "chapter": 31,
+          "floor": 5,
+          "at": "4:31",
+          "confidence": "verified",
+          "headline": "Sixty seconds of Divine Intervention",
+          "text": "The second clause is the one that saves Carl. Imbued with Divine Intervention, he is invulnerable for sixty seconds, and nothing over his head says so. He lands in a valley of the land quadrant unhurt while Donut, on his back, is knocked down to five percent. Emberus leaves early, gone with Orthrus before the minute is out. Quan Ch, who cannot see the buff, hits Carl with lightning while the buff still has a few seconds to run. Carl gets up and punches him in the face."
+        }
+      ],
+      "relations": [
+        {
+          "to": "frank-and-maggie",
+          "kind": "held-by",
+          "at": "4:14"
+        },
+        {
+          "to": "skull-empire",
+          "kind": "produced-by",
+          "at": "4:14"
+        },
+        {
+          "to": "carl",
+          "kind": "wielded-by",
+          "at": "4:14"
+        },
+        {
+          "to": "emberus",
+          "kind": "summoned",
+          "at": "4:31"
+        },
+        {
+          "to": "quan-ch",
+          "kind": "used-on",
+          "at": "4:31"
+        }
+      ]
     }
   ]
 }

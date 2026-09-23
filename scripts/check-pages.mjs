@@ -22,12 +22,15 @@ const snap = JSON.parse(readFileSync(join(root, 'data/content.snapshot.json'), '
 
 const START = parseAt('1:1');
 
-/* Whole words, case-insensitively. Both halves are load-bearing: the leak that
-   shipped read "the Great Race" while the floor is named "The Great Race", so
-   an exact match sailed past it — and without word boundaries "Tran" matches
-   inside "transparent" and the check drowns in CSS. */
+/* Whole words; case-blind for a name of more than one word, as written for a
+   name of one. Each part is load-bearing: the leak that shipped read "the Great
+   Race" while the floor is named "The Great Race", so an exact match sailed past
+   it — and without word boundaries "Tran" matches inside "transparent" and the
+   check drowns in CSS. A one-word name matched case-blind fails in the other
+   direction: the crawler Tally made every `tally` counter in the page source a
+   leak. The lint and src/lib/leak.ts draw the same line. */
 const escape = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-const matcher = name => new RegExp(`\\b${escape(name)}\\b`, 'i');
+const matcher = name => new RegExp(`\\b${escape(name)}\\b`, /\s/.test(name) ? 'i' : '');
 
 const gated = [];
 for (const e of snap.entities) {

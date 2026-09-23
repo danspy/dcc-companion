@@ -2160,6 +2160,702 @@
           "note": "Use the artefact, take the tattoo, and you are a member."
         }
       ]
+    },
+    {
+      "id": "nebular-sin-patrol",
+      "kind": "faction",
+      "name": "The Nebular Sin Patrol",
+      "aka": [
+        "Nebular Sin Patrol",
+        "Nebulars"
+      ],
+      "role": "Hunting team of a nomadic cult",
+      "revealedAt": "5:15",
+      "sort": 53,
+      "tagline": [
+        {
+          "at": "5:15",
+          "text": "The Nebular Sin Patrol. A name on a dead hunter's map: one of the groups given ground near Zockau, with Prepotente and Miriam Dom claimed as targets."
+        },
+        {
+          "at": "5:34",
+          "text": "The Nebular Sin Patrol: trainee priests of a nomadic, self-augmenting cult who consider anyone born on a seeded world an abomination, and hunt crawlers as a crusade."
+        },
+        {
+          "at": "6:64",
+          "text": "The Nebulars. They worship the AI at the centre of the galaxy, call imitations blasphemy, and want the crawl shut down, along with every world that could host one. They sponsor Sister Ines."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 15,
+          "floor": 6,
+          "at": "5:15",
+          "confidence": "verified",
+          "headline": "Circled on a dead man's map",
+          "text": "A map off a dead hunter. The hunters sat down and divided the floor between them: the Hive has the bottom left, the Dream holds Point Mongo, and the unaffiliated are relegated to the country around Zockau, among them groups called the Crafters and the Nebular Sin Patrol. Some groups have also claimed specific crawlers. The Nebular group's names are Prepotente and Miriam Dom. It is a hunting licence, drawn in pencil, and it ended up in the wrong hands."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 34,
+          "floor": 6,
+          "at": "5:34",
+          "confidence": "verified",
+          "headline": "Sand people in bishop hats",
+          "text": "The CrawlCon audience briefs Crawler Carl. The Nebulars are camping out and claiming the right to hunt him too, since he is in their territory, and they are pushing back against the Dark Hive: the nebs and the mantids fought a war once. They are not a race but a religious cult that augments itself as a sacrament. They settle hard planets, engineer their children to survive them, then half move on. Soothers, humans, elves and more, all in the same full-body outfit. Carl pictures sand people in bishop hats."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 34,
+          "floor": 6,
+          "at": "5:34",
+          "confidence": "verified",
+          "headline": "Priests in training",
+          "text": "The Nebular Sin Patrol attends nearly every crawl with different hunters each time: young males, studying for the priesthood, trained for the event. Anyone born on a seeded planet is an abomination to them, and hunting one is a crusade. They spend heavily, sometimes on a deity sponsorship, and campaign for the right to run a crawl of their own. They favour cleric and paladin targets, hence Prepotente and Miriam Dom. Someone mentions they botched an attack on Lucia Mar a few days ago."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 35,
+          "floor": 6,
+          "at": "5:35",
+          "confidence": "verified",
+          "headline": "Caught between mantises and a hob-lobber",
+          "text": "Zockau. A group of robed priests opens up on Crawler Carl's doorway with magic missiles and fireballs and hits a mantis warrior too. Her sisters take it personally. Carl drops a hob-lobber into the argument and kills three priests; the mantises are protected against explosives. A berserking mantis tears into what remains, and Carl marks three more with his Ring of Divine Suffering before she cuts them down. The first is a young human under the robe, name starting with Q. By the end, every neb is dead."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 9,
+          "floor": 8,
+          "at": "6:9",
+          "confidence": "verified",
+          "headline": "A stadium full of hats",
+          "text": "Crawler Princess Donut plays an arena card and gets a colosseum with adjustable gravity and landscaping and a capacity crowd: thousands upon thousands of robe-clad people in large hats. Crawler Carl recognises them from the hunters on the last floor. The Nebulars, the nomadic religious cult. The card does not let Donut change the audience, only how much it likes them, and she has set that to the top. It cheers every time she adjusts the grass. Mongo screeches."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 21,
+          "floor": 8,
+          "at": "6:21",
+          "confidence": "verified",
+          "headline": "Cousins of the Reavers",
+          "text": "Faction wars briefing, on the Reavers: a megacorporation and system government living on a Dyson sphere, who were supposedly once related to the Nebulars, the religious nuts who sent a team called the Nebular Sin Patrol to die as hunters on the sixth floor. Like the nebs, the Reavers began as several biological races who enhanced themselves with machines. The Reavers kept going, until only the brains were left. The Nebulars stopped somewhere short of that."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 55,
+          "floor": 8,
+          "at": "6:55",
+          "confidence": "verified",
+          "headline": "Sister Ines's patron",
+          "text": "Recap commentary on the zombie event. It had started to disrupt Sister Ines's charm poem, but her sponsor and patron, the Nebulars, had helped her raise the Word Weaver spell to level fifteen, so she controlled the boss, the spells the boss could cast, and therefore the zombies. The charm is strong enough that fish haul themselves out of the ocean to get closer. The commentator's co-host notes that Princess Donut could only dream of charm like that."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 64,
+          "floor": 8,
+          "at": "6:64",
+          "confidence": "verified",
+          "headline": "What the Nebs want",
+          "text": "Mordecai remembers: the Nebular team has been sponsoring Ysalte, as well as Sister Ines. What they want is simple. An ancient, stable AI near the galaxy's centre runs a benign enhancement zone over several systems, and the Nebs worship it and call its imitations blasphemy. They hunt, they play the Celestial Ascendency for a seat on the crawl council, and they want the crawl shut down, along with every world that could host one, every person on it, and every other religion. Crawler Carl notes this is not pacifism."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 66,
+          "floor": 8,
+          "at": "6:66",
+          "confidence": "verified",
+          "headline": "Pontifex Shine's goddess",
+          "text": "Goddess of Hopelessness and Insanity Ysalte, level two hundred and fifty, arrives with her paperwork attached: this goddess is sponsored by Pontifex Shine of the Nebular Balance. The sponsor is not currently inside the shell, so she speaks and acts according to her regular nature, which, the warning adds, is bad news. The Nebulars have paid for a god and are not driving it."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 34,
+          "floor": 9,
+          "at": "7:34",
+          "confidence": "verified",
+          "headline": "A crackpot theory's origin",
+          "text": "An orc warlord explains why his daughter is determined to destroy the system: she believes the local AI's insanity is contagious, and that it could reach the centre system and collapse their way of life. He grunts that there is no proof anything like that can happen. It would be like a gnat taking down one of his corvettes. It is a crackpot theory, and it originated, he says, with those Nebular idiots. The analysts dismiss it. His daughter is convinced."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "floor": 9,
+          "at": "7:end",
+          "confidence": "verified",
+          "headline": "A colony, gone",
+          "text": "The galactic news after the war, as York watches it. A new prime minister. A Dream cruiser crashed onto the surface of Earth over Australia. The mass suicide of one of the Nebular colonies. But mostly, the talk is of the Mantis system, which has simply gone boom. The Nebulars rate a single line of the bulletin, and it does not say why, or which colony, or how many were in it."
+        }
+      ],
+      "relations": [
+        {
+          "to": "prepotente",
+          "kind": "enemy",
+          "at": "5:15",
+          "note": "Claimed as a target"
+        },
+        {
+          "to": "miriam-dom",
+          "kind": "enemy",
+          "at": "5:15",
+          "note": "Claimed as a target"
+        },
+        {
+          "to": "carl",
+          "kind": "enemy",
+          "at": "5:34"
+        },
+        {
+          "to": "dark-hive",
+          "kind": "enemy",
+          "at": "5:34",
+          "note": "The nebs and the mantids fought a war"
+        },
+        {
+          "to": "reavers",
+          "kind": "concerns",
+          "at": "6:21",
+          "note": "Said to be distantly related"
+        },
+        {
+          "to": "sister-ines",
+          "kind": "patron-of",
+          "at": "6:55"
+        },
+        {
+          "to": "ysalte",
+          "kind": "patron-of",
+          "at": "6:64"
+        }
+      ]
+    },
+    {
+      "id": "the-madness",
+      "kind": "faction",
+      "name": "The Madness",
+      "aka": [
+        "Madness"
+      ],
+      "role": "Faction Wars team · the Viceroys",
+      "revealedAt": "6:21",
+      "sort": 54,
+      "tagline": [
+        {
+          "at": "6:21",
+          "text": "The Viceroys' team: masked, often winners, specialists in horrific battlefield spells and necromancy. Their representative's head came off at the table."
+        },
+        {
+          "at": "6:end",
+          "text": "The Viceroys' team. Told their lives are really on the line, they say they may have to use spells deemed too horrific for the crawl."
+        },
+        {
+          "at": "7:19",
+          "text": "Led by Architect Houston, cleared by adjutants who called the evidence damning, and handed every asset the Lemig Sortion owned."
+        },
+        {
+          "at": "7:68",
+          "text": "Defeated in their own castle, their warlord dead on his operating table and their assets awarded to the Princess Posse."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 6,
+          "chapter": 21,
+          "floor": 8,
+          "at": "6:21",
+          "confidence": "verified",
+          "headline": "A mask at seat eight",
+          "text": "Seat eight at the pre-production meeting: a bulky humanoid with a long, thin, bone-white neck and a blank white mask. A Viceroy. They are a constant of Faction Wars and often its winners, though not lately, and they specialise in horrific battlefield spells and necromancy. Their home system is where non-citizens go for cheap medical procedures. Their team is called the Madness. The Viceroy raises a hand to Crawler Donut, says nothing, and then falls forward onto the table. His head rolls away like a billiard ball, and under the mask is a bone-white, tusked, demonic face."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 72,
+          "floor": 8,
+          "at": "6:72",
+          "confidence": "verified",
+          "headline": "Five summonings, not fifteen",
+          "text": "A line of pending action items is decided all at once, most of them about building materials, mercenary cost limits and advertising revenue, which Crawler Carl and Crawler Donut had voted against down the line just to be obstinate. Among them, one originally proposed by the Madness: Celestial Summoning events to be limited to five per team. It is rejected by a thirty-seven percent audience vote. The existing rule of fifteen per team remains."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "floor": 8,
+          "at": "6:end",
+          "confidence": "verified",
+          "headline": "Spells too horrific for the crawl",
+          "text": "Rosetta has a news channel on, covering the court appeals over the sudden change in the rules of Faction Wars and an emergency meeting of the Syndicate Council. On screen, a representative for the Madness declares that if their lives are truly going to be on the line, they are going to be forced to use some of their illegal spells, the ones deemed too horrific for the crawl. Tipid, watching beside her, shudders."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 11,
+          "floor": 9,
+          "at": "7:11",
+          "confidence": "verified",
+          "headline": "What Tipid remembers",
+          "text": "Tipid, in a zero zone, is told he has brain lesions and needs to get to a Viceroy system for repair, at the cost of a good chunk of his pension. The word frightens him. He remembers the Viceroys: the masked monsters of his own Faction Wars, who called themselves the Madness. Their chief surgeon had a spell that cooked your brain, made your teeth fall out, and turned the liquid in your eyeballs to acid. That is what happened to Rosaline."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 19,
+          "floor": 9,
+          "at": "7:19",
+          "confidence": "verified",
+          "headline": "Heir to the Sortion",
+          "text": "A minor quorum of adjutants finds the Madness and the Princess Posse not guilty of the conspiracy the Lemig Sortion has already confessed to. Baroness Victory calls Architect Houston obviously guilty and votes not culpable anyway. Then the Sortion's warlord dies, the team is defeated, and because the defeat was voluntary, its assets go to the closest ally. System Message: all assets of the Lemig Sortion have been awarded to the Madness. Phase One combat engages."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 22,
+          "floor": 9,
+          "at": "7:22",
+          "confidence": "verified",
+          "headline": "Invisible ones called Monkeywrenchers",
+          "text": "Elle watched at least a hundred of the Madness turn invisible and disappear. Colonel Boomer's briefing: there are probably few real Viceroys among them, mostly ordinary soldiers wearing the robes, but the ones who go invisible and sneak in are called Monkeywrenchers. A few seasons back, twenty of them took the Dreadnaught and Naga castles in the first hours. The Madness as a whole looks like a strong contender this season."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 65,
+          "floor": 9,
+          "at": "7:65",
+          "confidence": "verified",
+          "headline": "Dune buggies in the dark",
+          "text": "The Madness soldiers are the most dangerous standing force left, and half of them come for Crawler Carl's small group at once, hundreds of troop-laden dune buggies with flares and torch spells lighting the night. Imani flies the line: watch the person on your left and your right, because the Madness is known for mind magic and Atrocity magic. The Cheese Cutters take out more than half the marked mages. Then Bear Witness goes off across the floor, and the Madness soldiers float up off their carts with everyone else."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 68,
+          "floor": 9,
+          "at": "7:68",
+          "confidence": "verified",
+          "headline": "Defeated in their own castle",
+          "text": "The Madness castle is small, about the size of a supermarket, with its barracks sunk into the ground and a garage door at the back painted the colour of the wall. Crawler Carl lifts it. Bigs sits in the empty throne room, and the six-hour clock starts. It does not need to run. Architect Houston dies in his surgical theater next door, and the notices arrive in order: the warlord has fallen, the Madness has been defeated, and all its assets are awarded to the Princess Posse. Larracos is no longer safe."
+        }
+      ],
+      "relations": [
+        {
+          "to": "faction-wars",
+          "kind": "member-of",
+          "at": "6:21"
+        },
+        {
+          "to": "architect-houston",
+          "kind": "led-by",
+          "at": "7:8"
+        },
+        {
+          "to": "lemig-sortion",
+          "kind": "absorbed",
+          "at": "7:19"
+        },
+        {
+          "to": "princess-posse",
+          "kind": "defeated-by",
+          "at": "7:68"
+        }
+      ]
+    },
+    {
+      "id": "operatic-collective",
+      "kind": "faction",
+      "name": "The Operatic Collective",
+      "aka": [
+        "Operatics"
+      ],
+      "role": "Faction Wars team · slime bankers",
+      "revealedAt": "5:75",
+      "sort": 55,
+      "tagline": [
+        {
+          "at": "5:75",
+          "text": "A group called the Operatic Collective, one of three teams whose citizens vote on government spending. Quasar is certain they are going to be forced to vote yes. The people hate the family."
+        },
+        {
+          "at": "6:21",
+          "text": "Quivering green blobs in tiers, breeding by splitting and speaking upward from the tops of their heads. The second seat at the Faction Wars table."
+        },
+        {
+          "at": "7:35",
+          "text": "Defeated by one of their own: a Weeper commander drove a tank full of energy balls into their warlord's caravan. Everything went to the Bone Clan."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 5,
+          "chapter": 75,
+          "floor": 6,
+          "at": "5:75",
+          "confidence": "verified",
+          "headline": "The photo that is missing",
+          "text": "Crawler Carl holds up his photos of the faction teams like a hand of cards. He is missing two: a naga photo, and one from a group called the Operatic Collective, because they did not file a lawsuit against him on the previous floor. Three of the teams, the Operatic Collective among them, have local populations allowed to vote on all government expenditures, which means those citizens can change the vote here. Quasar is certain the Operatics are going to be forced to vote yes. The people hate the family."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 21,
+          "floor": 8,
+          "at": "6:21",
+          "confidence": "verified",
+          "headline": "A Jell-O mold at the table",
+          "text": "Seat two at the pre-production meeting holds no chair, just a big green blob: opaque, quivering, shaped into three tiers of decreasing size like a Jell-O mold from the 1970s. It may be a representative or it may be their king. Crawler Carl cannot tell, because they all look the same except for size. They breed by literally splitting apart, and they can merge back together. The mouth is at the top and speaks upward. I am Voting Admin Cell Mass Number three, it says, and bubbles gurgle out of the top."
+        },
+        {
+          "kind": "arc",
+          "book": 6,
+          "chapter": 48,
+          "floor": 8,
+          "at": "6:48",
+          "confidence": "verified",
+          "headline": "An attempt to walk away",
+          "text": "Sponsor message, in the Faction Wars tab: the Operatic Collective has abdicated its spot and indicated its intention to abandon Faction Wars. It is not the only one. The Blood Sultanate, the Dream, the Lemig Sortion, the Madness and the Reavers send the same notice in the same breath, and every request is denied while the Earth system remains in quarantine. It arrives while Crawler Carl sits with the strippers and with Elle, who is drinking whiskey out of a mug far too big for her hands."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 1,
+          "floor": 9,
+          "at": "7:1",
+          "confidence": "verified",
+          "headline": "A truce with the Bone Clan",
+          "text": "The floor opens, and the warnings arrive. Among them: the Bone Clan has announced a formal truce with the Operatic Collective. Quasar, fixing pipes with his niece Tempest, has already summed up the stakes. All the rich fuckers on the floor, Prince Stalwart the orc, that banker Operatic guy, Epitome Tagg from the Dream, can really die now. It is going to be, in his words, an epic shitshow."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 14,
+          "floor": 9,
+          "at": "7:14",
+          "confidence": "verified",
+          "headline": "Rolling hills, and the northern border",
+          "text": "On Baroness Victory's map the Operatics hold pie piece number two, rolling hills between the orcs' peaks and the Posse's flat ground, with the big river curving through their territory before it passes through Shanty Town and into Larracos. The main body of the enemy is massing on the Posse's northern border with the Operatics, about a hundred thousand strong by first estimate. Their best chance, says the adjutant, is to sweep over the Posse at once."
+        },
+        {
+          "kind": "arc",
+          "book": 7,
+          "chapter": 35,
+          "floor": 9,
+          "at": "7:35",
+          "confidence": "verified",
+          "headline": "Hortense, on a litter",
+          "text": "Warlord Hortense Leadership Unit has come to the front in person, pulled on a long flat litter with the right combination of admin personnel around him to make him appear strong, behind a dozen or more shields. The Operatics, a Weeper commander reckons, likely ran a cost-benefit analysis and found a .01 percent profit in it. With King Rust dead, Hortense declares himself the new leader of the Bloc. Stalwart disputes it, and the warlords vote."
+        },
+        {
+          "kind": "fate",
+          "book": 7,
+          "chapter": 35,
+          "floor": 9,
+          "at": "7:35",
+          "confidence": "verified",
+          "headline": "A self-contained defeat",
+          "text": "Weeper Commander Volteeg, a former crawler working for the Operatic Collective, pulls the fire-control chamber out of his own tank, fills it with charged energy balls, turns up the Mozart, and drives into the warlord's caravan. Over ten thousand soldiers die in one blast, Hortense among them. The System rules the kill either accidental or a fragging incident. The Operatic Collective has been defeated, and as the defeat was self-contained, all its assets go to the Bone Clan."
+        }
+      ],
+      "relations": [
+        {
+          "to": "faction-wars",
+          "kind": "member-of",
+          "at": "5:75"
+        },
+        {
+          "to": "skull-empire",
+          "kind": "ally",
+          "at": "7:1",
+          "note": "A formal truce with the Bone Clan"
+        },
+        {
+          "to": "princess-posse",
+          "kind": "enemy",
+          "at": "7:14"
+        }
+      ]
+    },
+    {
+      "id": "lady-dominators",
+      "kind": "faction",
+      "name": "Lady Dominators and the Gimp",
+      "aka": [
+        "Lady Dominators"
+      ],
+      "role": "Racing team · tenth floor",
+      "revealedAt": "8:5",
+      "sort": 56,
+      "tagline": [
+        {
+          "at": "8:5",
+          "text": "Lady Dominators and the Gimp. Third place in the results of the first heat. The name raises questions it does not answer."
+        },
+        {
+          "at": "8:13",
+          "text": "Lady Dominators and the Gimp. Two womantaur dominators, Genesis and Rapture, in white racing suits and cowboy hats, who worship Enyo, and a half-mantaur in a black gimp suit."
+        },
+        {
+          "at": "8:66",
+          "text": "Lady Dominators and the Gimp. Eliminated in the fifth heat, through a trapped factory floor. The gimp left in somebody else's truck."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 5,
+          "floor": 10,
+          "at": "8:5",
+          "confidence": "verified",
+          "headline": "A name on the results board",
+          "text": "Heat One, results. First place, One Fine Pig. Second, the Jugglers. Third place goes to a team called Lady Dominators and the Gimp, a name that raises questions it does not answer. The Royal Court of Princess Donut finishes seventh of the eight survivors, having spent much of the heat towing team Free Love home. The Trauco Triplets are eliminated. Nobody on the court has met the Dominators yet."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 13,
+          "floor": 10,
+          "at": "8:13",
+          "confidence": "verified",
+          "headline": "Cowboy hats and boots on hands",
+          "text": "The neighbours arrive. Two womantaurs in sleek white racing suits with a red-and-blue stripe, white cowboy hats, and long black boots on all four lower limbs, which turn out to be a second pair of hands. Genesis, black-haired, level ninety-five, does the talking, in an accent Crawler Carl places in Kentucky. Rapture, freckled and red-haired, chews tobacco and spits. Both are Lady Mantaur Dominators, and unlike every mantaur Carl has met they do not worship Grull but Enyo. Rapture harpoons a rolling beer can to sniff it."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 13,
+          "floor": 10,
+          "at": "8:13",
+          "confidence": "verified",
+          "headline": "The third member, zipped in",
+          "text": "In the doorway of garage number three stands the gimp: a figure in a shiny black vinyl bodysuit with a zipper at the mouth, split vertically down the middle, one leg, one side of a face. Half of a mantaur. He waves a top hand before the door lowers. He is Corky, the friend Dong Quixote has been searching for, and he races with the Dominators. A quest opens on the spot to bring the two together."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 21,
+          "floor": 10,
+          "at": "8:21",
+          "confidence": "verified",
+          "headline": "A burgundy GTO and a hooked engineer",
+          "text": "Their vehicle is a late-sixties Pontiac GTO convertible in deep burgundy, under a wide, clearly visible shield, with Corky out cold in the back, hanging over the side. In the second heat, working an arrangement with the court against the boss, Genesis is meant to fish a dead joey out of the boss's pouch with her arm chains. She hooks the upgrade engineer inside instead, kills him, and drops him at Crawler Carl's feet: she was not about to let Carl have the engineer. The Dominators finish fifth."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 24,
+          "floor": 10,
+          "at": "8:24",
+          "confidence": "verified",
+          "headline": "The door that stays shut",
+          "text": "Dong, Bucket Boy and Splash Zone are on the Dominators' driveway, Dong wanting Corky. The door stays closed. Dong goes down on the driveway with a health bar and nothing visible wrong with him, and still calls for Corky. From inside, Genesis tells him to go away, you freak. Rapture adds that Corky says he hates him now. Laughter follows. Dong is carried off to be looked at, and the garage door does not open."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 32,
+          "floor": 10,
+          "at": "8:32",
+          "confidence": "verified",
+          "headline": "Blown over the line",
+          "text": "In the third heat the Dominators are under the impression that they and the court are working together, and the GTO runs close behind the court's truck for much of the course. At the finish, Team Sparkles comes up on the left and fires its cannon across the line into both the food truck and the GTO. All three vehicles go over the line airborne. The Dominators finish third."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 51,
+          "floor": 10,
+          "at": "8:51",
+          "confidence": "verified",
+          "headline": "Second, and a grudge",
+          "text": "Heat Four. Team Sparkles screams at them from the starting line, and Crawler Carl judges they very likely hold a grudge over the blast at the last finish, which puts Corky at risk. The GTO takes the same trail as the court, and Genesis, in the passenger seat, gives the truck a four-armed obscene gesture on the way past. In Satan's Water Park they trade blows with the unicorn at the loop. The Dominators finish second."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 59,
+          "floor": 10,
+          "at": "8:59",
+          "confidence": "verified",
+          "headline": "Corky is nontransferable",
+          "text": "The court comes to take Corky out of their garage before Heat Five, and they were listening. The door opens, and the GTO rolls out for the starting line on tyres that look to be made of gold, Corky unconscious in the back; on the way to the start it may not be attacked. They invite Porky to hop in: they would love a matched set. Rapture says they heard about the fleshmancer, and they would unzip Corky and let him spill before handing him over. He is nontransferable, says Genesis. See you in the factory, says Rapture."
+        },
+        {
+          "kind": "fate",
+          "book": 8,
+          "chapter": 66,
+          "floor": 10,
+          "at": "8:66",
+          "confidence": "verified",
+          "headline": "Eliminated in the factory",
+          "text": "Rockets from Prepotente's tapir hit the GTO, and it went through a trapped floor in the Gasworks factory and landed on its side ten metres down, axle broken, a golden wheel sheared off, its containment failed. Cocaine-infused action figures went to work on it. The court took Corky out of the back and drove on, and rejoined him to his other half in its own truck. Heat Five, results, final line: Eliminated, Lady Dominators and the Gimp."
+        }
+      ],
+      "relations": [
+        {
+          "to": "genesis",
+          "kind": "member",
+          "at": "8:13"
+        },
+        {
+          "to": "rapture",
+          "kind": "member",
+          "at": "8:13"
+        },
+        {
+          "to": "corcunda",
+          "kind": "member",
+          "at": "8:13"
+        },
+        {
+          "to": "royal-court",
+          "kind": "rival",
+          "at": "8:13"
+        },
+        {
+          "to": "team-sparkles",
+          "kind": "enemy",
+          "at": "8:32"
+        }
+      ]
+    },
+    {
+      "id": "team-sparkles",
+      "kind": "faction",
+      "name": "Team Sparkles",
+      "aka": [],
+      "role": "Racing team · tenth floor",
+      "revealedAt": "8:5",
+      "sort": 57,
+      "tagline": [
+        {
+          "at": "8:5",
+          "text": "Team Sparkles. A unicorn with a Boston growl and a French rodent in a racing helmet, driving a tumbleweed of vines. Rude on first contact."
+        },
+        {
+          "at": "8:67",
+          "text": "Team Sparkles. Dwight the unicorn, alone since the fourth heat, and first across the line more often than anyone would like."
+        },
+        {
+          "at": "8:82",
+          "text": "Team Sparkles. Eliminated at the starting line of the final heat, in a single swipe."
+        }
+      ],
+      "beats": [
+        {
+          "kind": "origin",
+          "book": 8,
+          "chapter": 5,
+          "floor": 10,
+          "at": "8:5",
+          "confidence": "verified",
+          "headline": "A tumbleweed with a unicorn head",
+          "text": "Jasha met them just before the race: Team Sparkles. They come up the road as a round tangle of vines with a unicorn's head, an Avernus Creeper, a bramble almost impossible to kill and held to half size by the rules. The unicorn, Dwight, is the racer, not the mount, with a three-packs-a-day Boston accent. The rodent whose tail anchors her to his horn, Lucienne, has a French accent and a racing helmet. They call Crawler Donut fatty and a corpulent swine and tell her to move. Crawler Carl tells Donut to let them go around."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 21,
+          "floor": 10,
+          "at": "8:21",
+          "confidence": "verified",
+          "headline": "The cannon in the bush",
+          "text": "Second heat, under the awning, Dwight is shouting at Girth the Trouble in the next spot. On green, a tank barrel slides out of the vines and fires point-blank into Girth the Trouble's yellow Bel Air, which goes up like a rocket and comes down burning. Girth the Trouble is eliminated, and the plan the court had built with its allies falls apart before the shot is taken. The bush leaves. Team Sparkles takes first place in the heat."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 32,
+          "floor": 10,
+          "at": "8:32",
+          "confidence": "verified",
+          "headline": "Across the finish, airborne",
+          "text": "Third heat. Team Sparkles has some sort of rocket fixed to the back of the tumbleweed and rolls far ahead of the pack. At the finish it comes up on the left and fires its cannon across the line into the court's food truck and the Lady Dominators' GTO. All three vehicles go over airborne. The vine survives, smouldering. Team Sparkles finishes second, behind the court, and Dwight promises that everyone is dead next race."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 42,
+          "floor": 10,
+          "at": "8:42",
+          "confidence": "verified",
+          "headline": "New exhausts, a new driver",
+          "text": "Fourth heat. The tumbleweed arrives with a pair of massive new metallic exhaust ports and Lucienne driving. She screams at nobody in particular, then at the Dominators, and Dwight joins in. The court's plan this time is to kill Team Sparkles, with no specific strategy for doing it, which Crawler Carl is beginning to see as a mistake. At the first split in the track the tumbleweed pulls up beside the court's truck and swerves down the left path."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 51,
+          "floor": 10,
+          "at": "8:51",
+          "confidence": "verified",
+          "headline": "Swatted off the loop",
+          "text": "In Satan's Water Park Team Sparkles and Florin's team harass each other all the way down, Florin trying to stop his driver, Lucia Mar's psycho personality, from killing them. Both vehicles are nearly round the loop-de-loop when Satan headbutts it over and swats them through the air. The vine, on fire and covered in goo from a Denial of Service missile, splats to the ground. Lucienne, charmed by Crawler Donut's vermin spell, comes apart passing through the court's windshield at the finish. Team Sparkles finishes fifth."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 52,
+          "floor": 10,
+          "at": "8:52",
+          "confidence": "verified",
+          "headline": "Towed in by the van it flattened",
+          "text": "Team Sparkles is still in the race only because team Free Love dragged it in. Jasha asked whether Crawler Carl really thought they should save him, the worst of them; Carl told the bugbears to tow Dwight in if he would let them, and to be wary. They found the unicorn spinning in a circle just outside the exit and dragged him in. The court, meanwhile, picks its next upgrades and takes the regular version of the booster rockets Team Sparkles has, which with its new bubble will let the truck cover large jumps."
+        },
+        {
+          "kind": "arc",
+          "book": 8,
+          "chapter": 67,
+          "floor": 10,
+          "at": "8:67",
+          "confidence": "verified",
+          "headline": "Over the roof",
+          "text": "Heat Five. Dwight, alone now, sits motionless on the starting line while everyone else drives into the Gasworks factory, and Team Sparkles wins. According to Jasha, relayed by Osvaldo, he rode up the factory wall, crossed the roof and dropped off at the finish without ever entering the building, and was the only racer to work out that this was allowed. Osvaldo calls it cheating. Crawler Donut calls it cheating. The results stand."
+        },
+        {
+          "kind": "fate",
+          "book": 8,
+          "chapter": 82,
+          "floor": 10,
+          "at": "8:82",
+          "confidence": "verified",
+          "headline": "One swipe at the starting blocks",
+          "text": "Heat Six goes to Team Sparkles too, the court second. The final heat locks them in with the court and Team Flamengo. Dwight arrives sober, towing a missile launcher he cannot fire until he clears the low ceiling, with a navigation hologram built to look like Lucienne. On green, a timed hole punch opens his shield, a potion kills the vine, another fries the navigation, and Crawler Donut goes through the window and takes his head in a single swipe, and then his horn. Team One, Team Sparkles, has been eliminated."
+        }
+      ],
+      "relations": [
+        {
+          "to": "dwight",
+          "kind": "member",
+          "at": "8:5"
+        },
+        {
+          "to": "lucienne",
+          "kind": "member",
+          "at": "8:5"
+        },
+        {
+          "to": "royal-court",
+          "kind": "enemy",
+          "at": "8:5"
+        },
+        {
+          "to": "lady-dominators",
+          "kind": "enemy",
+          "at": "8:32"
+        }
+      ]
     }
   ]
 }
