@@ -13,7 +13,7 @@
    Anything pulled from the wiki with a chapter number — the chapter tables, an
    achievement's {{cite}} — goes through `toEdition` on the way in. */
 
-const WIKI_TO_EDITION = {
+export const WIKI_TO_EDITION = {
   5: {
     count: 75,
     /* Edition chapter 63 (Everly's cookbook notes, the talent-show planning,

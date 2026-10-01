@@ -1573,6 +1573,60 @@ keeps its "nothing here is worth preserving" property and `prefs.ts` is still th
 only seam where accounts would land. The endpoint is rate-limited in memory —
 fifteen per ten minutes per address — which is all a single process needs.
 
+### The KOReader plugin reads the position off the book
+
+The site has to be told where a reader is. An e-reader already knows, which is why the
+companion also exists as a KOReader plugin, in its own repo (`../dcc-companion-koreader`,
+`crawlerscompanion.koplugin/`). Long-press a name, tap **Crawler's Companion**, get the entry
+sealed past the chapter the book is open at. The design is in
+`docs/superpowers/specs/2026-10-01-koreader-plugin-design.md`.
+
+**The data is exported from here, never edited there.** `npm run export:koreader -- --out <dir>`
+(`scripts/lib/koreader-export.mjs`) reads the committed snapshot and writes `index.json` (every
+entry with its names, aliases and taglines, plus the books) and `entities/<id>.json` (descriptions
+and beats). Every comparison key is the resolved integer `sortKey`, so the Lua side never parses a
+tag; the stamp beside it is the beat's *own* tag, because a `1:end` beat has no chapter number and a
+book-level one has been floored to its entity by inheritance. Floors are entries of kind `floor`:
+the name opens at `nameAt`, the premise is a tagline at arrival, each recap part a beat at its own
+end. `scripts/test-export-koreader.mjs` runs under `test:gate` and fails on a tag string anywhere in
+the export. The plugin repo's `scripts/sync-data.sh` calls the export and commits the result.
+
+**Where the reader is, in two numbers.** The book is matched in the document title — books 2–8 by
+their titles, book 1 only when nothing else matched because "Dungeon Crawler Carl" is in every
+title, and a `Book N` / `Book VII` / `#N` suffix wins. The chapter is the table-of-contents entry
+the reader is inside: walk back to the first `Chapter N`; N if that is the current entry, N + 1 if
+the current one is an interlude after it, `Epilogue` first means finished, nothing found means
+chapter 1 — the rule `fetch-books.mjs` already applies to the same files. The real tables of
+contents of books 7 and 8 are test fixtures; the book 8 one has a **non-breaking space** in "Also by
+Matt Dinniman", so the parser treats one as a space. The edition is detected by counting chapters
+(book 5: 75 Ace, 77 original) and renumbered through the same map `edition.mjs` holds.
+
+**The gate sits at the current chapter, not the previous one**, so a fact from a few pages ahead
+in the same chapter can already answer. The alternative fails "who is this?" on the name just met.
+The popup prints the position it used, and the menu offers `7:12` / `7:end` as a per-document
+override for a copy with an odd table of contents.
+
+**An unreached name and an unknown word get the same reply.** Only entries at or below the
+frontier are searched, and only aliases whose own key is reached; matching is at word starts and
+case-insensitive because the reader chose the word. The site's one-word case rule is for
+unprompted screening; this is prompted.
+
+Three things about the plugin runtime worth knowing before touching it:
+
+- **Module names carry a `cc_` prefix** (`cc_gate`, `cc_position`, `cc_store`, `cc_json`). The
+  plugin loader puts the plugin root on `package.path`, so a sibling `gate.lua` would load — and
+  so would any other plugin's, first come first served. `cc_json` is vendored rxi/json.lua, so the
+  data path is identical under the test runner and on the device.
+- **KOReader publishes no macOS build in its stable releases.** The `ota` release on GitHub has
+  `koreader-macos-11.0-arm64-*.7z` nightlies; that app's bundled `luajit` runs the plugin's tests
+  (`luajit tests/run.lua`, no busted), and the app itself runs the plugin from
+  `~/Library/Application Support/koreader/plugins/` — a symlink to the repo works. On a Kobo the
+  path is `.adds/koreader/plugins/`.
+- **The wiring is tested under stubs.** `tests/test_main.lua` preloads fake `ui/*` modules and a
+  fake `ui` (title, ToC, settings) and asserts the button is registered as `12_crawlers_companion`,
+  what a reached, an unreached and a no-book lookup show, and that an override beats detection.
+  `astro check` cannot see any of this; the Lua suite is the only check there is.
+
 ## Content pipeline
 
 ```
@@ -1857,6 +1911,8 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `data/achievements.json` | The books' own awards, gated; the corpus behind it is gitignored |
 | `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
 | `scripts/check-pages.mjs` | Fails the build if gated content is hardcoded into page source |
+| `scripts/export-koreader.mjs` | `npm run export:koreader` — the KOReader plugin's data, written from the snapshot |
+| `scripts/lib/koreader-export.mjs` | The export itself: integer keys, own-tag stamps, floors as entries |
 | `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |
 | `data/entities/places.json` | Places: somewhere *on* a floor, never a floor itself |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |

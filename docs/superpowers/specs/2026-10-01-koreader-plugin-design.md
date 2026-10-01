@@ -108,15 +108,20 @@ Under Tools → *Crawler's Companion*:
 
 ```
 crawlerscompanion.koplugin/
-  _meta.lua         name + description
-  main.lua          KOReader wiring only: menu, highlight button, popup
-  gate.lua          pure: frontier, reached, taglineFor, match, beatsFor
-  position.lua      pure: bookOf(title, books), chapterOf(toc, index), edition detection
+  _meta.lua         fullname + description
+  main.lua          KOReader wiring only: menu, highlight button, popup, a position log line
+  cc_gate.lua       pure: reached, tagline_for, match, beats_for, popup_text
+  cc_position.lua   pure: book_of(title, books), chapter_of(toc, index), edition detection
+  cc_store.lua      index.json once, entities/<id>.json on a hit
+  cc_json.lua       vendored rxi/json.lua (MIT), so the data path is the same everywhere
   data/index.json
   data/entities/*.json
 tests/              run with KOReader's own luajit; stubs for the ui modules main.lua needs
 README.md           install steps, what it does, what it never does
 ```
+
+Module names carry a `cc_` prefix because the plugin loader puts the plugin root on
+`package.path`, where a bare `gate.lua` would collide with any other plugin's.
 
 The highlight button is registered as `12_crawlers_companion` so it sorts before KOReader's
 own `12_search` and shows only when the plugin has a position. The handler follows
