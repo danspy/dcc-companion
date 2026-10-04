@@ -60,6 +60,9 @@ const ROUTES = [
      already hidden, so a reader with no JavaScript never sees all 146 first. */
   ['/achievement?q=donut&box=Silver',
    ['recrow"', ' hidden data-find=', 'aria-pressed="true"', 'id="rectally"', ' shown']],
+  /* The iOS app's feed: the manifest it asks for first, and the content behind it. */
+  ['/app/manifest.json', ['"schema":1', '"version":"', '"counts":{']],
+  ['/app/content.json', ['"schema":1', '"beats":[', '"awards":[']],
 ];
 
 let failed = 0;

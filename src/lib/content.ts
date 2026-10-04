@@ -97,7 +97,11 @@ export function coverage(beats: BeatRow[], gate: Gate) {
  * get to see" has a single answer.
  */
 export async function readGate(cookies: AstroCookies): Promise<{ prefs: Prefs; gate: Gate; chapters: number | null }> {
-  const prefs = readPrefs(cookies);
+  return gateFromPrefs(readPrefs(cookies));
+}
+
+/** The same answer for a position that did not arrive in a cookie: the app sends its own. */
+export async function gateFromPrefs(prefs: Prefs): Promise<{ prefs: Prefs; gate: Gate; chapters: number | null }> {
   const books = await getBooks();
   const chapters = books.find(b => b.id === prefs.book)?.chapters ?? null;
   return { prefs, gate: gateFor(prefs, prefs.spoilers, prefs.fresh, chapters), chapters };

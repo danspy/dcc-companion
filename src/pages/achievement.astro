@@ -13,32 +13,11 @@
    is the only part that is nobody's loss without it. */
 import Layout from '../layouts/Layout.astro';
 import AchievementCard from '../components/AchievementCard.astro';
-import { readGate, getEntities, getFloors, getAchievements, taglineFor } from '../lib/content';
-import { reveals, describeAt, parseAt } from '../lib/spoiler';
-import { aliasesSeen } from '../lib/aliases';
-import {
-  grantAchievement, SystemOffline, MAX_DEED,
-  type Grant, type LoreEntry,
-} from '../lib/achievement';
-import { SUGGESTIONS } from '../lib/deeds';
+import { readGate, getEntities, getFloors, getAchievements } from '../lib/content';
+import { describeAt, parseAt } from '../lib/spoiler';
+import { MAX_DEED, type Grant } from '../lib/achievement';
+import { fileReport } from '../lib/report';
 import { BOX_TIERS, tierOf, findRe, keeps } from '../lib/awards';
-
-/* A public endpoint that costs a model call needs a ceiling. In memory and per
-   process, which is all this needs: there is one process, and a limiter that
-   outlives a restart would be a database — and this app deliberately has no
-   user state on the server. */
-const WINDOW_MS = 10 * 60 * 1000;
-const PER_WINDOW = 15;
-const seen = new Map<string, number[]>();
-
-function overLimit(ip: string): boolean {
-  const now = Date.now();
-  const hits = (seen.get(ip) ?? []).filter(t => now - t < WINDOW_MS);
-  hits.push(now);
-  seen.set(ip, hits);
-  if (seen.size > 2000) for (const [k, v] of seen) if (!v.some(t => now - t < WINDOW_MS)) seen.delete(k);
-  return hits.length > PER_WINDOW;
-}
 
 const { gate } = await readGate(Astro.cookies);
 
@@ -46,79 +25,16 @@ let grant: Grant | null = null;
 let deed = '';
 let problem: { head: string; body: string } | null = null;
 
+/* The desk has two doors, this form and the app's JSON endpoint, and both go
+   through `fileReport`: one limiter, one prompt, one screen. */
 if (Astro.request.method === 'POST') {
   const form = await Astro.request.formData();
-  deed = String(form.get('deed') ?? '').replace(/\s+/g, ' ').trim().slice(0, MAX_DEED);
-
-  /* Surprise me. The server picks, not the script, so there is one source of
-     randomness and no copy of the list in the document — and the button works
-     with no JavaScript at all, which a client-side filler would not. It
-     overrides whatever is in the box, because that is what the button says it
-     does. */
-  if (form.get('surprise') != null) {
-    deed = SUGGESTIONS[Math.floor(Math.random() * SUGGESTIONS.length)];
-  }
-
-  if (!deed) {
-    problem = {
-      head: 'Nothing filed',
-      body: 'You have submitted an empty report, crawler. Even the vending machines manage a noun.',
-    };
-  } else if (overLimit(Astro.clientAddress ?? 'unknown')) {
-    problem = {
-      head: 'Throttled',
-      body: 'Production notes that you have filed a great many reports in a short window. ' +
-            'The department handling them is on a break. Try again shortly.',
-    };
-  } else {
-    /* Only what the reader has reached, with the tagline they have reached for
-       it. Shuffled and capped: the whole cast in one prompt is slower, and a
-       fixed order makes the System reach for the same three names every time. */
-    const [entities, floors] = await Promise.all([getEntities(), getFloors()]);
-    /* `revealedAt` is a curation tag ("4:12"), not an integer — `reveals`
-       parses it. Comparing it to the frontier directly is silently always
-       false, which would hand the System an empty world. */
-    const reached = entities.filter(e => reveals(gate, e.revealedAt));
-    const lore: LoreEntry[] = reached
-      .map(e => ({ e, r: Math.random() }))
-      .sort((a, b) => a.r - b.r)
-      .slice(0, 45)
-      .map(({ e }) => ({
-        id: e.id, name: e.name, aka: aliasesSeen(e, gate),
-        revealedAt: e.revealedAt, role: e.role, kind: e.kind,
-        tagline: taglineFor(e, gate),
-      }));
-
-    try {
-      const result = await grantAchievement({
-        deed, lore, entities, floors, frontier: gate.frontier,
-      });
-      grant = result.grant;
-      if (result.screened.length) {
-        /* Not shown to the reader — the screen working is not their problem.
-           It is worth knowing which names the System keeps reaching for. */
-        console.warn(
-          `[achievement] screened ${result.screened.length} sealed name(s) in ` +
-          `${result.attempts} attempt(s): ` +
-          result.screened.map(s => `${s.name} (${s.at})`).join(', '),
-        );
-      }
-    } catch (e) {
-      problem = e instanceof SystemOffline
-        ? {
-            head: 'Transmission interrupted',
-            body: 'The department that issues achievements is not answering. This is ' +
-                  'either a scheduling error or a labour dispute. Production apologises ' +
-                  'for nothing.',
-          }
-        : {
-            head: 'Citation redacted',
-            body: 'Three drafts were written and all three said something you have not ' +
-                  'earned the right to hear. The record has been destroyed. File again.',
-          };
-      console.error('[achievement]', e);
-    }
-  }
+  ({ deed, grant, problem } = await fileReport({
+    deed: String(form.get('deed') ?? ''),
+    surprise: form.get('surprise') != null,
+    gate,
+    ip: Astro.clientAddress ?? 'unknown',
+  }));
 }
 
 /* The awards the System actually handed out. Gated on sortKey like every other

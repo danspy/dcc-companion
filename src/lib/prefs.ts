@@ -16,17 +16,22 @@ export interface Prefs extends Position {
 
 export const DEFAULT_PREFS: Prefs = { ...DEFAULT_POSITION, spoilers: true, fresh: true };
 
+/** The clamps a position goes through, whatever carried it here: a cookie or a request body. */
+export function prefsFrom(v: any): Prefs {
+  const book = clampBook(v?.book);
+  return {
+    book,
+    chapter: Math.max(0, Number(v?.chapter) || 0),
+    spoilers: v?.spoilers !== false,
+    fresh: book === 0,
+  };
+}
+
 export function readPrefs(cookies: AstroCookies): Prefs {
   const raw = cookies.get(COOKIE)?.value;
   if (!raw) return { ...DEFAULT_PREFS };
   try {
-    const v = JSON.parse(decodeURIComponent(raw));
-    return {
-      book: clampBook(v.book),
-      chapter: Math.max(0, Number(v.chapter) || 0),
-      spoilers: v.spoilers !== false,
-      fresh: clampBook(v.book) === 0,
-    };
+    return prefsFrom(JSON.parse(decodeURIComponent(raw)));
   } catch {
     return { ...DEFAULT_PREFS };
   }
