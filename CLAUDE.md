@@ -1627,6 +1627,45 @@ Three things about the plugin runtime worth knowing before touching it:
   what a reached, an unreached and a no-book lookup show, and that an override beats detection.
   `astro check` cannot see any of this; the Lua suite is the only check there is.
 
+### The iOS app holds the whole companion, and gates it on the device
+
+The site can gate on the server because every page is rendered for one reader. A native app that
+works with no network cannot: the whole dataset is on the phone. So the app
+(`../dcc-companion-ios`, SwiftUI, iPhone and iPad) is a second place the gate runs, and the design
+is built around making that second place unable to drift from the first. The spec is
+`docs/superpowers/specs/2026-10-04-ios-app-design.md`.
+
+**The data is exported from here, never edited there.** `npm run export:app -- --out <dir>`
+(`src/lib/app-export.ts`) writes `content.json` — books, floors, entities, beats, relations and
+awards, every gate a resolved integer `key`, no reveal tag anywhere — and `manifest.json`, whose
+`version` is the SHA-256 of those bytes. The snapshot is committed and the export is deterministic,
+so the version moves only when content does. A beat's `kind` is left behind (the word *fate* is a
+spoiler); only `use` survives. Beats are numbered in gate order, so the beats a reader has reached
+are always a prefix. `span()` and `stampOf()` moved to `src/lib/stamps.ts` so the pages and the
+export print a tag the same way.
+
+**The Swift gate is held to this one by fixtures.** The same command writes `gate-fixtures.json`
+(`scripts/lib/app-fixtures.mjs`): at eleven positions — none, a first chapter, mid-book, a
+finished book, a last chapter, everything shown — what `progress.ts`, `spoiler.ts`, `aliases.ts`
+and `quickfind.ts` themselves reveal over the snapshot, and quick-find's answers to a dozen
+queries. The app's tests must reproduce every one from the export. That file decides nothing; it
+only asks the modules the pages use.
+
+**The feed.** `/app/manifest.json` and `/app/content.json` (`src/lib/app-feed.ts`) serve the same
+export, built once per process. The app asks for the manifest and downloads the content only when
+the hash differs. This is the whole dataset ungated at a URL, which is not a new exposure: *Show
+everything* already hands the same content to anyone as pages. The gate keeps a reader from
+spoilers; it was never access control. The routes are unlisted and `noindex` all the same.
+
+**The achievement desk has two doors.** `POST /app/achievement.json` takes
+`{ deed, surprise, book, chapter, spoilers }` and answers `{ grant }` or `{ problem }`. It and the
+form on `/achievement` both go through `fileReport()` in `src/lib/report.ts`, so there is one
+limiter, one prompt and one leak screen; the app's position goes through `prefsFrom()`, the same
+clamps a cookie does. The Ollama key never leaves the server.
+
+`APP_SCHEMA` and the app's `Library.schema` are one number written twice. Changing the export's
+shape means bumping both; an older build then says it needs updating instead of misreading.
+
 ## Content pipeline
 
 ```
@@ -1842,6 +1881,7 @@ node scripts/fetch-books.mjs [--no-fetch]  # the edition from the OPDS library i
 npm run content:check   # lint only; prints the draft/chapter-count work queue
 npm run achievements:refresh  # re-pull the awards + the voice corpus from the wiki
 npm run test:gate       # frontier arithmetic + the lint rules
+npm run export:app -- --out <dir>   # the iOS app's content, manifest and gate fixtures
 
 # Always build against a throwaway DB so data/dcc.db isn't half-written:
 ASTRO_DATABASE_FILE=./.astro/build.db npm run build
@@ -1912,6 +1952,11 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/coverage-report.mjs` | `npm run content:coverage` — who earns a page next, by mention count |
 | `scripts/check-pages.mjs` | Fails the build if gated content is hardcoded into page source |
 | `scripts/export-koreader.mjs` | `npm run export:koreader` — the KOReader plugin's data, written from the snapshot |
+| `src/lib/app-export.ts` | `npm run export:app` — the iOS app's content: integer keys, no tags, a hash for a version |
+| `scripts/lib/app-fixtures.mjs` | What this site's gate reveals at eleven positions, for the app's Swift gate to reproduce |
+| `src/lib/app-feed.ts`, `src/pages/app/*` | The app's update feed and its JSON door onto the achievement desk |
+| `src/lib/report.ts` | `fileReport()` — the limiter, the lore and the grant, shared by the page and the app |
+| `src/lib/stamps.ts` | How a reveal tag is printed: `span()` and `stampOf()` |
 | `scripts/lib/koreader-export.mjs` | The export itself: integer keys, own-tag stamps, floors as entries |
 | `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |
 | `data/entities/places.json` | Places: somewhere *on* a floor, never a floor itself |
