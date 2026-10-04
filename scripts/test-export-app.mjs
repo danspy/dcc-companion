@@ -114,3 +114,64 @@ test('the version is the hash of the bytes and does not depend on the clock', ()
   assert.equal(one.manifest.counts.entities, snapshot.entities.length);
   assert.equal(one.manifest.counts.beats, snapshot.beats.length);
 });
+
+/* ---- The fixtures: what the site's own gate reveals, for the Swift gate to reproduce ---- */
+const { fixturesFor, POSITIONS, QUERIES } = await import('./lib/app-fixtures.mjs');
+const fixtures = fixturesFor(snapshot, content, 'test');
+const at = label => fixtures.positions.find(p => p.label === label);
+const find = (label, q) => fixtures.finds.find(f => f.label === label && f.q === q);
+
+test('there is a fixture for every position and every query', () => {
+  assert.deepEqual(fixtures.positions.map(p => p.label), POSITIONS.map(p => p.label));
+  assert.equal(fixtures.positions.length, 11);
+  assert.equal(fixtures.finds.length, QUERIES.length);
+  assert.equal(fixtures.version, 'test');
+});
+
+test('a reader who has said nothing is shown nothing', () => {
+  const none = at('none');
+  assert.equal(none.frontier, 0);
+  assert.deepEqual(none.entries, []);
+  assert.equal(none.beats, 0);
+  assert.deepEqual(none.awards.reached, []);
+  assert.equal(none.awards.sealed, content.awards.length);
+  assert.equal(none.opening.mode, 'welcome');
+  assert.ok(none.floors.every(f => !f.open && !f.nameOpen && f.parts === 0));
+  assert.deepEqual(find('none', 'carl').hits, []);
+});
+
+test('a position meets what it has reached and nothing later', () => {
+  const p = at('1:22');
+  assert.equal(p.frontier, 1022);
+  assert.ok(p.entries.includes('carl'));
+  const wyrm = content.entities.find(e => e.aka.some(a => a.name === 'Hamed'));
+  assert.ok(!p.entries.includes(wyrm.id));
+  assert.ok(p.beats > 0 && p.beats < content.beats.length);
+  assert.equal(p.opening.mode, 'previously');
+  assert.equal(p.pages.carl.story.shown + p.pages.carl.story.sealed,
+    content.beats.filter(b => b.entity === 'carl').length);
+});
+
+test('a last chapter is the end of its book, and no chapter means finished', () => {
+  assert.equal(at('5:75').frontier, 5999);
+  assert.equal(at('1:finished').frontier, 1999);
+  assert.equal(at('8:finished').frontier, 8999);
+});
+
+test('everything shown reveals every entity, beat and award', () => {
+  const all = at('everything');
+  assert.equal(all.entries.length, content.entities.length);
+  assert.equal(all.beats, content.beats.length);
+  assert.equal(all.awards.reached.length, content.awards.length);
+  assert.equal(all.awards.sealed, 0);
+  assert.equal(all.awards.nextKey, null);
+  assert.ok(all.floors.every(f => f.open && f.nameOpen && f.sealedParts === 0));
+});
+
+test('an alias with its own reveal point is found only once it is reached', () => {
+  assert.deepEqual(find('3:19', 'hamed').hits, []);
+  const hits = find('6:32', 'hamed').hits;
+  assert.ok(hits.length > 0);
+  assert.match(hits[0].target, /^entry:/);
+  assert.ok(find('6:32', 'bride').hits.some(h => h.tier === 'name' || h.tier === 'story'));
+});
