@@ -37,6 +37,7 @@ export interface AppContent {
 export interface AppManifest {
   schema: number;
   version: string;
+  /** When the content was committed. See scripts/lib/content-date.mjs. */
   generatedAt: string;
   bytes: number;
   counts: Record<string, number>;
@@ -69,8 +70,8 @@ export function exportForApp(snapshot: any): AppContent {
     schema: APP_SCHEMA,
     source: SITE,
     books: snapshot.books.map((b: any) => ({
-      id: b.id, title: b.title, blurb: b.blurb ?? '', chapters: b.chapters ?? null,
-      accent: b.accent, ink: b.ink,
+      /* No blurb: it is prose that names things, and nothing would gate it. */
+      id: b.id, title: b.title, chapters: b.chapters ?? null, accent: b.accent, ink: b.ink,
     })),
     floors: snapshot.floors.map((f: any) => ({
       id: f.id, name: f.name, book: f.book, bookSpan: f.bookSpan ?? String(f.book),

@@ -6,6 +6,7 @@ import type { APIRoute } from 'astro';
 import { gateFromPrefs } from '../../lib/content';
 import { prefsFrom } from '../../lib/prefs';
 import { fileReport } from '../../lib/report';
+import { clientKey } from '../../lib/client-address';
 
 export const POST: APIRoute = async ({ request, clientAddress }) => {
   let body: Record<string, unknown> = {};
@@ -19,7 +20,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     deed: typeof body.deed === 'string' ? body.deed : '',
     surprise: body.surprise === true,
     gate,
-    ip: clientAddress ?? 'unknown',
+    ip: clientKey(clientAddress, request.headers.get('x-forwarded-for')),
   });
 
   const payload = out.grant

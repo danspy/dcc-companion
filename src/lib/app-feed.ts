@@ -12,11 +12,16 @@
 import raw from '../../data/content.snapshot.json?raw';
 import { packForApp, type AppManifest } from './app-export.ts';
 
+/* Set at build time to the commit date of the snapshot (astro.config.mjs). The app
+   compares it with the date of the content it holds, so it has to be the content's
+   own date and not the moment this process happened to start. */
+declare const __CONTENT_DATE__: string;
+
 let pack: { json: string; manifest: AppManifest } | null = null;
 
 export function appFeed(): { json: string; manifest: AppManifest } {
   if (!pack) {
-    const { json, manifest } = packForApp(JSON.parse(raw));
+    const { json, manifest } = packForApp(JSON.parse(raw), { now: new Date(__CONTENT_DATE__) });
     pack = { json, manifest };
   }
   return pack;

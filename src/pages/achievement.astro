@@ -17,6 +17,7 @@ import { readGate, getEntities, getFloors, getAchievements } from '../lib/conten
 import { describeAt, parseAt } from '../lib/spoiler';
 import { MAX_DEED, type Grant } from '../lib/achievement';
 import { fileReport } from '../lib/report';
+import { clientKey } from '../lib/client-address';
 import { BOX_TIERS, tierOf, findRe, keeps } from '../lib/awards';
 
 const { gate } = await readGate(Astro.cookies);
@@ -33,7 +34,7 @@ if (Astro.request.method === 'POST') {
     deed: String(form.get('deed') ?? ''),
     surprise: form.get('surprise') != null,
     gate,
-    ip: Astro.clientAddress ?? 'unknown',
+    ip: clientKey(Astro.clientAddress, Astro.request.headers.get('x-forwarded-for')),
   }));
 }
 

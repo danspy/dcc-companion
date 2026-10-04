@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { packForApp } from '../src/lib/app-export.ts';
 import { fixturesFor } from './lib/app-fixtures.mjs';
+import { contentDate } from './lib/content-date.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -23,7 +24,7 @@ const outArg = args.find((a, i) => args[i - 1] === '--out') ?? args.find(a => a.
 const out = outArg ? (outArg.startsWith('/') ? outArg : join(process.cwd(), outArg)) : join(root, '.app-export');
 
 const snapshot = JSON.parse(readFileSync(join(root, 'data/content.snapshot.json'), 'utf8'));
-const { content, json, manifest } = packForApp(snapshot);
+const { content, json, manifest } = packForApp(snapshot, { now: contentDate(root) });
 const fixtures = JSON.stringify(fixturesFor(snapshot, content, manifest.version));
 
 mkdirSync(out, { recursive: true });

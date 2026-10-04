@@ -1639,17 +1639,25 @@ is built around making that second place unable to drift from the first. The spe
 (`src/lib/app-export.ts`) writes `content.json` — books, floors, entities, beats, relations and
 awards, every gate a resolved integer `key`, no reveal tag anywhere — and `manifest.json`, whose
 `version` is the SHA-256 of those bytes. The snapshot is committed and the export is deterministic,
-so the version moves only when content does. A beat's `kind` is left behind (the word *fate* is a
+so the version moves only when content does. **`generatedAt` is the commit date of the snapshot**
+(`scripts/lib/content-date.mjs`, fixed into the server at build time by `astro.config.mjs`), not
+the moment an export ran or a process started: the app refuses content older than its own by
+comparing the two dates, and with wall-clock stamps any server restart made old content look new
+and an app built ahead of a deploy would download a downgrade. A book's `blurb` is not exported:
+it is prose that names things, no page renders it, and nothing would gate it. A beat's `kind` is left behind (the word *fate* is a
 spoiler); only `use` survives. Beats are numbered in gate order, so the beats a reader has reached
 are always a prefix. `span()` and `stampOf()` moved to `src/lib/stamps.ts` so the pages and the
 export print a tag the same way.
 
 **The Swift gate is held to this one by fixtures.** The same command writes `gate-fixtures.json`
-(`scripts/lib/app-fixtures.mjs`): at eleven positions — none, a first chapter, mid-book, a
-finished book, a last chapter, everything shown — what `progress.ts`, `spoiler.ts`, `aliases.ts`
-and `quickfind.ts` themselves reveal over the snapshot, and quick-find's answers to a dozen
-queries. The app's tests must reproduce every one from the export. That file decides nothing; it
-only asks the modules the pages use.
+(`scripts/lib/app-fixtures.mjs`): at eighteen positions — none, a first chapter, mid-book, a
+finished book, a last chapter, a chapter past the end, the windows where a floor is named and not
+yet reached, everything shown — what `progress.ts`, `spoiler.ts`, `aliases.ts` and `quickfind.ts`
+themselves reveal, and quick-find's answers to seventeen queries. The app's tests must reproduce
+every one from the export. That file decides nothing; it only asks the modules the pages use.
+**It gates on the snapshot's own `sortKey` and never on the export's keys**: the export is the
+thing under test, and a fixture computed from it would agree with any bug in it. The first version
+did exactly that for beats, relations and awards, and a review caught it.
 
 **The feed.** `/app/manifest.json` and `/app/content.json` (`src/lib/app-feed.ts`) serve the same
 export, built once per process. The app asks for the manifest and downloads the content only when
@@ -1660,7 +1668,12 @@ spoilers; it was never access control. The routes are unlisted and `noindex` all
 **The achievement desk has two doors.** `POST /app/achievement.json` takes
 `{ deed, surprise, book, chapter, spoilers }` and answers `{ grant }` or `{ problem }`. It and the
 form on `/achievement` both go through `fileReport()` in `src/lib/report.ts`, so there is one
-limiter, one prompt and one leak screen; the app's position goes through `prefsFrom()`, the same
+limiter, one prompt and one leak screen. **That move switched the limiter on for the first time**:
+its `Map` used to sit in the page's frontmatter, which Astro runs per request, so it was born
+empty every time and never refused anyone. As a module it works — and behind Caddy every socket is
+loopback, so keyed on `clientAddress` it would have been one bucket for the whole world. It is
+keyed with `clientKey()` (`src/lib/client-address.ts`): the last hop of `X-Forwarded-For` when the
+peer is local, the peer itself when it is not. The app's position goes through `prefsFrom()`, the same
 clamps a cookie does. The Ollama key never leaves the server.
 
 `APP_SCHEMA` and the app's `Library.schema` are one number written twice. Changing the export's
@@ -1956,6 +1969,8 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `scripts/lib/app-fixtures.mjs` | What this site's gate reveals at eleven positions, for the app's Swift gate to reproduce |
 | `src/lib/app-feed.ts`, `src/pages/app/*` | The app's update feed and its JSON door onto the achievement desk |
 | `src/lib/report.ts` | `fileReport()` — the limiter, the lore and the grant, shared by the page and the app |
+| `src/lib/client-address.ts` | `clientKey()` — who the limiter counts, behind the reverse proxy |
+| `scripts/lib/content-date.mjs` | The content's own date: the snapshot's last commit |
 | `src/lib/stamps.ts` | How a reveal tag is printed: `span()` and `stampOf()` |
 | `scripts/lib/koreader-export.mjs` | The export itself: integer keys, own-tag stamps, floors as entries |
 | `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |

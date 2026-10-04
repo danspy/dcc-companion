@@ -123,7 +123,7 @@ const find = (label, q) => fixtures.finds.find(f => f.label === label && f.q ===
 
 test('there is a fixture for every position and every query', () => {
   assert.deepEqual(fixtures.positions.map(p => p.label), POSITIONS.map(p => p.label));
-  assert.equal(fixtures.positions.length, 11);
+  assert.ok(fixtures.positions.length >= 18);
   assert.equal(fixtures.finds.length, QUERIES.length);
   assert.equal(fixtures.version, 'test');
 });
@@ -174,4 +174,74 @@ test('an alias with its own reveal point is found only once it is reached', () =
   assert.ok(hits.length > 0);
   assert.match(hits[0].target, /^entry:/);
   assert.ok(find('6:32', 'bride').hits.some(h => h.tier === 'name' || h.tier === 'story'));
+});
+
+/* ---- Fixes from the branch review ---- */
+import { execFileSync } from 'node:child_process';
+import { mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+const { clientKey } = await import('../src/lib/client-address.ts');
+const { contentDate } = await import('./lib/content-date.mjs');
+
+test('behind the local proxy, the limiter counts the reader and not the proxy', () => {
+  assert.equal(clientKey('127.0.0.1', '198.51.100.7'), '198.51.100.7');
+  assert.equal(clientKey('::1', '198.51.100.7'), '198.51.100.7');
+  assert.equal(clientKey('::ffff:127.0.0.1', '198.51.100.7'), '198.51.100.7');
+  // The hop our own proxy observed is the last one; anything before it is the client's claim.
+  assert.equal(clientKey('127.0.0.1', '10.9.9.9, 198.51.100.7'), '198.51.100.7');
+  // Reached directly, the header is the client's own word and is not believed.
+  assert.equal(clientKey('203.0.113.9', '1.2.3.4'), '203.0.113.9');
+  assert.equal(clientKey('127.0.0.1', null), '127.0.0.1');
+  assert.equal(clientKey(undefined, null), 'unknown');
+  assert.notEqual(clientKey('127.0.0.1', '198.51.100.7'), clientKey('127.0.0.1', '198.51.100.8'));
+});
+
+test('content is dated by when it was committed, not by when it was exported or served', () => {
+  const committed = execFileSync('git', ['log', '-1', '--format=%cI', '--', 'data/content.snapshot.json'],
+    { cwd: root, encoding: 'utf8' }).trim();
+  assert.equal(contentDate(root).toISOString(), new Date(committed).toISOString());
+  const out = mkdtempSync(join(tmpdir(), 'dcc-app-export-'));
+  execFileSync('node', ['--disable-warning=ExperimentalWarning', '--experimental-strip-types',
+    'scripts/export-app.mjs', '--out', out], { cwd: root });
+  const manifest = JSON.parse(readFileSync(join(out, 'manifest.json'), 'utf8'));
+  assert.equal(manifest.generatedAt, new Date(committed).toISOString(),
+    'two exports of the same commit must carry the same date, or the app cannot tell newer from older');
+});
+
+test('a book carries no blurb: it is prose nothing gates', () => {
+  for (const b of content.books) assert.deepEqual(Object.keys(b).sort(), ['accent', 'chapters', 'id', 'ink', 'title']);
+});
+
+test('the fixtures take their gate from the snapshot, never from the export under test', () => {
+  const broken = structuredClone(content);
+  for (const b of broken.beats) b.key = 0;
+  for (const r of broken.relations) r.key = 0;
+  for (const a of broken.awards) a.key = 0;
+  const fromBroken = fixturesFor(snapshot, broken, 'test');
+  assert.deepEqual(fromBroken.positions.map(p => p.beats), fixtures.positions.map(p => p.beats));
+  assert.deepEqual(fromBroken.positions.map(p => p.awards), fixtures.positions.map(p => p.awards));
+  assert.deepEqual(fromBroken.positions.map(p => p.pages), fixtures.positions.map(p => p.pages));
+  assert.deepEqual(fromBroken.finds, fixtures.finds);
+});
+
+test('the fixtures stand in the windows where a name is open and its floor is not', () => {
+  const floor = (label, id) => at(label).floors.find(f => f.id === id);
+  assert.deepEqual([floor('5:60', 7).nameOpen, floor('5:60', 7).open], [true, false]);
+  assert.deepEqual([floor('7:finished', 10).nameOpen, floor('7:finished', 10).open], [true, false]);
+  assert.deepEqual([floor('8:40', 11).nameOpen, floor('8:40', 11).open], [true, false]);
+  assert.equal(at('5:80').frontier, 5999, 'a stored chapter past the end is the end');
+  const all = at('everything-at-3:5');
+  assert.equal(all.frontier, 9000);
+  assert.equal(all.entries.length, content.entities.length);
+  assert.equal(all.opening.mode, 'previously');
+});
+
+test('a pinned page names the beats and the connections it shows, in order', () => {
+  const carl = at('5:40').pages.carl;
+  assert.equal(carl.story.ids.length, carl.story.shown);
+  assert.deepEqual(carl.story.ids, [...carl.story.ids].sort((a, b) => a - b));
+  assert.equal(carl.others.length, carl.connections);
+  assert.ok(carl.others.includes('princess-donut'));
+  const gate = at('8:finished').pages['gate-of-the-feral-gods'];
+  assert.ok(gate.uses.ids.length > 0 && gate.story.ids.length > 0);
 });
