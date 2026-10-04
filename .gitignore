@@ -9,3 +9,5 @@ data/*.db-shm
 data/index/
 .serena/
 .koreader-export/
+.app-export/
+.superpowers/

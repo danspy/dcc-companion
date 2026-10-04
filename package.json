@@ -13,7 +13,7 @@
     "astro": "astro",
     "content:build": "node scripts/build-content.mjs",
     "content:check": "node scripts/build-content.mjs --check && node scripts/check-pages.mjs && node scripts/check-stage.mjs",
-    "test:gate": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test scripts/test-gate.mjs scripts/test-export-koreader.mjs",
+    "test:gate": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test scripts/test-gate.mjs scripts/test-export-koreader.mjs scripts/test-export-app.mjs",
     "chapters:refresh": "node scripts/fetch-chapters.mjs",
     "achievements:refresh": "node scripts/fetch-achievements.mjs",
     "content:coverage": "node scripts/coverage-report.mjs",
@@ -22,7 +22,8 @@
     "content:anchors": "node scripts/check-anchors.mjs",
     "content:gaps": "node scripts/check-gaps.mjs",
     "smoke": "node scripts/smoke.mjs",
-    "export:koreader": "node scripts/export-koreader.mjs"
+    "export:koreader": "node scripts/export-koreader.mjs",
+    "export:app": "node --disable-warning=ExperimentalWarning --experimental-strip-types scripts/export-app.mjs"
   },
   "dependencies": {
     "@astrojs/db": "^0.20.0",

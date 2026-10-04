@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Sealed from '../components/Sealed.astro';
 import { reveals } from '../lib/spoiler';
 import { getBooks, getFloors, readGate } from '../lib/content';
+import { span } from '../lib/stamps';
 
 const { gate } = await readGate(Astro.cookies);
 const [books, floors] = await Promise.all([getBooks(), getFloors()]);
@@ -20,17 +21,6 @@ const partsOf = (floor: { recap: unknown; revealedAt: string; recapAt: string; r
   : typeof floor.recap === 'string' && floor.recap
     ? [{ title: 'What happened', text: floor.recap, from: floor.revealedAt, at: floor.recapAt, sortKey: floor.recapSortKey }]
     : [];
-
-/* "Book 3 · Ch 20–25", "Book 3 · Ch 31 to the end", "Book 5 · The end". */
-function span(from: string, at: string): string {
-  const [fb, fc = ''] = from.split(':');
-  const [ab, ac = ''] = at.split(':');
-  const ch = (c: string, first: boolean) => (c === 'end' ? 'the end' : c || (first ? '1' : 'the end'));
-  if (fb !== ab) return `Book ${fb} · Ch ${ch(fc, true)} to book ${ab} · Ch ${ch(ac, false)}`;
-  if (fc === 'end' && ac === 'end') return `Book ${fb} · The end`;
-  const a = ch(fc, true), b = ch(ac, false);
-  return b === 'the end' ? `Book ${fb} · Ch ${a} to the end` : `Book ${fb} · Ch ${a}–${b}`;
-}
 
 /* A part is one stretch of story, written as one piece, and a quarter-page
    block reads as a wall. Break it once, at the sentence nearest its middle. */

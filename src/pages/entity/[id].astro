@@ -8,6 +8,7 @@ import {
   getEntity, getBeats, getRelations, getEntities, getFloors,
   KIND_LABELS, readGate, taglineFor, descriptionFor,
 } from '../../lib/content';
+import { stampOf } from '../../lib/stamps';
 
 const { id } = Astro.params;
 const entity = id ? await getEntity(id) : null;
@@ -76,12 +77,6 @@ const hiddenRelations = relations.length - visibleRelations.length;
 const onTimeline = beats.some(b => gate.frontier >= b.sortKey);
 
 const description = descriptionFor(entity, gate);
-/* Source tags read "1:5"; the stamp shows "Bk 1 · 5", or just the book for an
-   end-of-book tag. */
-const stampOf = (tag: string) => {
-  const [book, chapter] = tag.split(':');
-  return chapter && chapter !== 'end' ? `Book ${book} · Ch ${chapter}` : `Book ${book}`;
-};
 ---
 <Layout title={entity.name}>
   <article class="wrap">
