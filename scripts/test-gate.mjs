@@ -1075,3 +1075,11 @@ test('no position means no story', () => {
   assert.deepEqual(s.books, []);
   assert.equal(s.current, null);
 });
+
+test('a plural of a name the sources have in the singular is the same name', () => {
+  assert.deepEqual(faithfulness('He opens three Boxes and eats two Biscuits.', ['a Gold Box', 'an Enhanced Pet Biscuit']), []);
+  assert.deepEqual(faithfulness('He meets the Nagas.', ['a Naga']), []);
+  assert.deepEqual(faithfulness('He meets the Nagas.', ['a Nagas']), [], 'and the other way round');
+  assert.deepEqual(faithfulness('He meets Bea.', ['Beas']), [], 'a singular of a plural source');
+  assert.deepEqual(faithfulness('He meets Ben.', ['Bea']), ['Ben'], 'but not a different word');
+});

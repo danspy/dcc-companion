@@ -41,6 +41,11 @@ export function tokensOf(text) {
 export function faithfulness(text, sources) {
   const have = new Set();
   for (const s of sources) for (const t of tokensOf(s)) have.add(t);
+  /* A plural of a name the sources have in the singular is the same name —
+     "Boxes" for a Box, "Biscuits" for a Biscuit — and so is the other way round. */
+  const known = tok => have.has(tok)
+    || (/s$/.test(tok) && (have.has(tok.slice(0, -1)) || (/es$/.test(tok) && have.has(tok.slice(0, -2)))))
+    || have.has(`${tok}s`) || have.has(`${tok}es`);
   const offending = [];
   const sentences = (text ?? '').split(/(?<=[.!?…])\s+/);
   for (const sentence of sentences) {
@@ -49,7 +54,7 @@ export function faithfulness(text, sources) {
       const tok = m[0].replace(/'s$/, '');
       const checked = /\p{N}/u.test(tok) || (!first && /^\p{Lu}/u.test(tok));
       first = false;
-      if (checked && !have.has(tok) && !offending.includes(tok)) offending.push(tok);
+      if (checked && !known(tok) && !offending.includes(tok)) offending.push(tok);
     }
   }
   return offending;
