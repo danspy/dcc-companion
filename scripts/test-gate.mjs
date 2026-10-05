@@ -901,3 +901,64 @@ test('book 5 counts in the edition\'s chapters, and the map never runs backwards
   assert.equal(tagToEdition('5'), '5');
   assert.equal(tagToEdition('6:77'), '6:77');
 });
+
+/* ---------------------------------------------------------------------------
+   The recap: a paragraph per book at the book's end, and a gist per beat.
+   --------------------------------------------------------------------------- */
+
+const recapBooks = [{ id: 1, title: 'One', chapters: 47 }, { id: 2, title: 'Two', chapters: 25 }];
+const recapEntity = (recap, beats) => ({
+  id: 'x', kind: 'character', name: 'Xan', role: 'r', tagline: 't', revealedAt: '1:1', voice: 'system',
+  beats: beats ?? [{ kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', confidence: 'verified' }],
+  recap,
+});
+const recapLint = (recap, beats) => lint({ books: recapBooks, floors: [], entities: [recapEntity(recap, beats)] });
+
+test('a recap step must be gated at the end of its book', () => {
+  const { errors } = recapLint([{ at: '1:12', text: 'Xan arrives.', confidence: 'draft' }]);
+  assert.ok(errors.some(e => /recap 1: "1:12" is not a book's end/.test(e)), errors.join('\n'));
+  assert.equal(recapLint([{ at: '1:end', text: 'Xan arrives.', confidence: 'draft' }]).errors.length, 0);
+});
+
+test('one recap step per book, in order, and only for a book with a beat', () => {
+  const two = recapLint([
+    { at: '1:end', text: 'Xan arrives.', confidence: 'draft' },
+    { at: '1:end', text: 'Xan arrives again.', confidence: 'draft' },
+  ]);
+  assert.ok(two.errors.some(e => /recap 2: a second step for book 1/.test(e)), two.errors.join('\n'));
+  const empty = recapLint([{ at: '2:end', text: 'Xan rests.', confidence: 'draft' }]);
+  assert.ok(empty.errors.some(e => /recap 1: book 2 has no beat of x to recap/.test(e)), empty.errors.join('\n'));
+});
+
+test('a recap step before its entity, or with no text, or an unknown confidence, is an error', () => {
+  const late = recapLint([{ at: '1:end', text: 'Xan arrives.', confidence: 'draft' }], [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', confidence: 'verified' },
+  ]);
+  assert.equal(late.errors.length, 0);
+  const e2 = lint({ books: recapBooks, floors: [], entities: [{ ...recapEntity([{ at: '1:end', text: 'Xan.', confidence: 'draft' }]), revealedAt: '2:1',
+    beats: [{ kind: 'arc', book: 2, at: '2:3', headline: 'h', text: 'Xan.', confidence: 'verified' }] }] });
+  assert.ok(e2.errors.some(e => /recap 1: unseals at "1:end", before the entity itself/.test(e)), e2.errors.join('\n'));
+  assert.ok(recapLint([{ at: '1:end', text: '', confidence: 'draft' }]).errors.some(e => /recap 1: no text/.test(e)));
+  assert.ok(recapLint([{ at: '1:end', text: 'Xan.', confidence: 'maybe' }]).errors.some(e => /recap 1: confidence must be/.test(e)));
+});
+
+test('recap and gist text obey the forward rules, and a blank gist is an error', () => {
+  const fwd = recapLint([{ at: '1:end', text: 'Xan arrives and later dies.', confidence: 'draft' }]);
+  assert.ok(fwd.errors.some(e => /recap 1: "later" points past/.test(e)), fwd.errors.join('\n'));
+  const gist = recapLint(undefined, [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: 'Xan arrives, and ends up dead.', confidence: 'verified' },
+  ]);
+  assert.ok(gist.errors.some(e => /beat "h" gist: "ends up" points past/.test(e)), gist.errors.join('\n'));
+  const blank = recapLint(undefined, [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: '', confidence: 'verified' },
+  ]);
+  assert.ok(blank.errors.some(e => /beat "h" gist: empty/.test(e)), blank.errors.join('\n'));
+});
+
+test('draft recaps and draft gists are warnings, which is the work queue', () => {
+  const { warnings } = recapLint([{ at: '1:end', text: 'Xan arrives.', confidence: 'draft' }], [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: 'Xan arrives.', gistDraft: true, confidence: 'verified' },
+  ]);
+  assert.ok(warnings.some(w => w === 'draft recap — x: book 1'), warnings.join('\n'));
+  assert.ok(warnings.some(w => w === 'draft gist — x: h'), warnings.join('\n'));
+});

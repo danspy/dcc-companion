@@ -187,6 +187,36 @@ export function lint({ books, floors, entities, achievements = [] }) {
       });
     }
 
+    /* The recap: a paragraph per book, each telling that book only. A paragraph
+       about a book is a summary of a span and unseals at the span's end, so
+       `at` is always "N:end". A step for a book the entity has no beat in would
+       be a paragraph written from nothing, and two steps for one book is a
+       duplicated list. Steps are born draft; the warning is the work queue. */
+    if (e.recap != null) {
+      if (!Array.isArray(e.recap)) {
+        errors.push(`${where}: recap must be a list of { at, text, confidence }`);
+      } else {
+        const beatBooks = new Set((e.beats ?? []).map(b => b.book));
+        let prevBook = 0;
+        e.recap.forEach((r, i) => {
+          const rw = `${where} recap ${i + 1}`;
+          const rAt = at(r.at, rw);
+          if (rAt === null) return;
+          if (rAt % 1000 !== 999) { errors.push(`${rw}: "${r.at}" is not a book's end — a recap is a summary of a span`); return; }
+          const book = bookOf(rAt);
+          if (book === prevBook) errors.push(`${rw}: a second step for book ${book}`);
+          else if (book < prevBook) errors.push(`${rw}: book ${book} comes after book ${prevBook} in the list`);
+          prevBook = Math.max(prevBook, book);
+          if (!beatBooks.has(book)) errors.push(`${rw}: book ${book} has no beat of ${e.id} to recap`);
+          if (rAt < entityAt) errors.push(`${rw}: unseals at "${r.at}", before the entity itself ("${e.revealedAt}")`);
+          if (!r.text) errors.push(`${rw}: no text`);
+          if (!VALID_CONFIDENCE.has(r.confidence ?? 'draft')) errors.push(`${rw}: confidence must be "verified" or "draft"`);
+          checkForward(r.text, rAt, rw);
+          if ((r.confidence ?? 'draft') === 'draft') warnings.push(`draft recap — ${e.id}: book ${book}`);
+        });
+      }
+    }
+
     for (const b of e.beats ?? []) {
       const bw = `${where} beat "${b.headline}"`;
       if (!VALID_BEATS.has(b.kind)) errors.push(`${bw}: unknown beat kind "${b.kind}"`);
@@ -235,6 +265,15 @@ export function lint({ books, floors, entities, achievements = [] }) {
       }
       /* A beat may not name something the reader has not met yet either. */
       checkForward(b.text, beatAt, `${bw}`);
+
+      /* A gist is one sentence restating the beat, gated by the beat's own key.
+         Its review state is its own: a drafted gist on a verified beat does not
+         make the beat draft. */
+      if (b.gist != null) {
+        if (!b.gist.trim()) errors.push(`${bw} gist: empty`);
+        else checkForward(b.gist, Math.max(beatAt, entityAt), `${bw} gist`);
+        if (b.gistDraft) warnings.push(`draft gist — ${e.id}: ${b.headline}`);
+      }
 
       if ((b.confidence ?? 'draft') === 'draft') {
         warnings.push(`draft — ${e.id}: ${b.headline}`);
