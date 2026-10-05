@@ -5,6 +5,7 @@ import { parseAt, describeAt, bookOf, END_OF_BOOK, CHAPTER_STRIDE } from './lib/
 import { lint, faithfulness, tokensOf } from './lib/lint.mjs';
 import { entityVoice, beatVoice, VOICES } from './lib/voice.mjs';
 import { toEdition, editionCount, unsummarised, tagToEdition } from './lib/edition.mjs';
+import { storySoFar } from '../src/lib/story.ts';
 
 test('reveal tags parse to a total order', () => {
   assert.equal(parseAt('4'), 4000);
@@ -1017,4 +1018,60 @@ test('the snapshot carries recap steps and gists in resolved form', () => {
     assert.ok('gist' in b && 'gistDraft' in b, `${b.entityId} "${b.headline}": gist fields present`);
     assert.equal(typeof b.gistDraft, 'boolean');
   }
+});
+
+/* ---------------------------------------------------------------------------
+   storySoFar: the one composition rule for "the story so far".
+   --------------------------------------------------------------------------- */
+
+const steps = [{ sortKey: 1999, text: 'Book one.', confidence: 'verified' }, { sortKey: 3999, text: 'Book three.', confidence: 'draft' }];
+const sbeat = (sortKey, headline, gist) => ({ sortKey, book: Math.floor(sortKey / 1000), chapter: sortKey % 1000, headline, gist: gist ?? null });
+const sbeats = [sbeat(1003, 'h1', 'Gist one.'), sbeat(3002, 'h3'), sbeat(4001, 'h4a', 'Four a.'), sbeat(4002, 'h4b', 'Four b.'),
+  sbeat(4005, 'h4e', 'Four e.'), sbeat(4006, 'h4f', 'Four f.'), sbeat(4009, 'h4i', 'Four i.')];
+
+test('storySoFar lists every reached book paragraph and the current book to the cut', () => {
+  const s = storySoFar(steps, sbeats, 4006, { cut: 4005 });
+  assert.deepEqual(s.books.map(b => b.book), [1, 3]);
+  assert.equal(s.books[1].draft, true);
+  assert.equal(s.current.book, 4);
+  assert.deepEqual(s.current.lines.map(l => l.text), ['Four a.', 'Four b.', 'Four e.']);
+  assert.equal(s.current.thisChapter, 1, 'the beat at 4:6 is counted, not shown');
+  assert.deepEqual(s.sealed, { count: 1, nextKey: 4009 });
+});
+
+test('on the site the cut is the frontier, so the current chapter is listed and nothing is counted', () => {
+  const s = storySoFar(steps, sbeats, 4006);
+  assert.deepEqual(s.current.lines.map(l => l.text), ['Four a.', 'Four b.', 'Four e.', 'Four f.']);
+  assert.equal(s.current.thisChapter, 0);
+});
+
+test('a finished book has its paragraph and no current list; a reader before any recap gets lines only', () => {
+  const done = storySoFar(steps, sbeats, 3999);
+  assert.deepEqual(done.books.map(b => b.book), [1, 3]);
+  assert.equal(done.current, null);
+  const early = storySoFar(steps, sbeats, 1005);
+  assert.deepEqual(early.books, []);
+  assert.deepEqual(early.current.lines.map(l => l.text), ['Gist one.']);
+});
+
+test('a beat with no gist is listed by its headline, and long lists fold', () => {
+  const s = storySoFar([], sbeats, 3002);
+  assert.deepEqual(s.current.lines.map(l => l.text), ['h3']);
+  const many = Array.from({ length: 12 }, (_, i) => sbeat(5001 + i, `h${i}`, `g${i}`));
+  const folded = storySoFar([], many, 5020, { max: 8 });
+  assert.equal(folded.current.lines.length, 8);
+  assert.equal(folded.current.earlier, 4);
+  assert.equal(folded.current.lines[0].text, 'g4');
+});
+
+test('a current book with no beat yet is an empty list, not nothing', () => {
+  const s = storySoFar(steps, [sbeat(1003, 'h1', 'g'), sbeat(4009, 'h4i', 'g')], 4001);
+  assert.deepEqual(s.current, { book: 4, lines: [], earlier: 0, thisChapter: 0 });
+  assert.deepEqual(s.sealed, { count: 1, nextKey: 4009 });
+});
+
+test('no position means no story', () => {
+  const s = storySoFar(steps, sbeats, 0);
+  assert.deepEqual(s.books, []);
+  assert.equal(s.current, null);
 });
