@@ -14,6 +14,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { exportForKoreader } from './lib/koreader-export.mjs';
+import { contentDate } from './lib/content-date.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -21,7 +22,9 @@ const outArg = args.find((a, i) => args[i - 1] === '--out') ?? args.find(a => a.
 const out = outArg ? (outArg.startsWith('/') ? outArg : join(process.cwd(), outArg)) : join(root, '.koreader-export');
 
 const snapshot = JSON.parse(readFileSync(join(root, 'data/content.snapshot.json'), 'utf8'));
-const { index, entities } = exportForKoreader(snapshot);
+// Dated by the snapshot's commit, as the app export is, so re-running the export over
+// unchanged content writes the same bytes and the plugin repo's sync shows no diff.
+const { index, entities } = exportForKoreader(snapshot, { now: contentDate(root) });
 
 rmSync(join(out, 'entities'), { recursive: true, force: true });
 mkdirSync(join(out, 'entities'), { recursive: true });
