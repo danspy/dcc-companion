@@ -36,7 +36,10 @@ function exportEntity(e) {
     file: {
       id: e.id,
       descriptions: (e.descriptions ?? []).map(d => keyed(d.sortKey ?? parseAt(d.at), { source: d.source ?? '', text: d.text })),
+      /* The recap: a paragraph per book, keyed at that book's end. */
+      recap: (e.recap ?? []).map(r => keyed(r.sortKey, { text: r.text })),
       beats: [],
+      relations: [],
     },
   };
 }
@@ -58,7 +61,9 @@ function exportFloor(f) {
     file: {
       id: `floor-${f.id}`,
       descriptions: [],
+      recap: [],
       beats: parts.map(p => keyed(p.sortKey ?? parseAt(p.at), { headline: p.title, text: p.text, voice: 'narrator' })),
+      relations: [],
     },
   };
 }
@@ -88,10 +93,25 @@ export function exportForKoreader(snapshot, { now = new Date() } = {}) {
        the snapshot, and a book-level one has been floored to its entity by inheritance. */
     file.beats.push(keyed(parseAt(b.at), {
       headline: b.headline ?? '', text: b.text ?? '', voice: b.voice ?? 'narrator',
+      // One sentence restating the beat; absent, not null, when there is none yet.
+      ...(b.gist ? { gist: b.gist } : {}),
     }));
     file.beats[file.beats.length - 1].key = b.sortKey;
   }
   for (const file of entities.values()) file.beats.sort((a, b) => a.key - b.key);
+
+  /* Relations, both sides written out so a page shows who it is connected to
+     whichever side declared the edge — the same mirror the site's getRelations
+     does at read time. The kind is in display form, as the site shows it, and
+     the key is the relation's sortKey, which already waits for both ends. */
+  for (const r of snapshot.relations ?? []) {
+    const kind = r.kind.replace(/-/g, ' ');
+    const a = entities.get(r.fromId), b = entities.get(r.toId);
+    if (!a || !b) throw new Error(`relation ${r.fromId} -> ${r.toId} names an unknown entity`);
+    a.relations.push(keyed(r.sortKey, { other: r.toId, kind, note: r.note ?? '' }));
+    b.relations.push(keyed(r.sortKey, { other: r.fromId, kind, note: r.note ?? '' }));
+  }
+  for (const file of entities.values()) file.relations.sort((x, y) => x.key - y.key);
 
   const index = {
     generatedAt: now.toISOString(),
