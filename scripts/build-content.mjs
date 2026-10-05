@@ -9,35 +9,17 @@ import { dirname, join } from 'node:path';
 import { parseAt } from './lib/gate.mjs';
 import { lint } from './lib/lint.mjs';
 import { entityVoice, beatVoice } from './lib/voice.mjs';
+import { loadBooks } from './lib/books.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = p => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const checkOnly = process.argv.includes('--check');
 
-const { books, floors } = read('data/books.json');
-
-/* Chapter counts come from data/chapters.json (npm run chapters:refresh), not
-   from books.json — one source, refreshed on its own schedule. A book with no
-   entry keeps a null count, which switches the chapter dial off for it. */
-const chapterIndex = new Map(read('data/chapters.json').books.map(b => [b.book, b]));
-for (const b of books) {
-  const entry = chapterIndex.get(b.id);
-  b.chapters = entry ? entry.count : null;
-  b.divisions = entry ? entry.divisions : [];
-  b.chapterTitles = entry ? entry.titles : [];
-}
-
-/* Each book's own colour, as published on mattdinniman.com, plus the ink that
-   is readable on it (npm run colors:refresh). A floor takes the colour of the
-   book it is told in — two floors from one book therefore match, which is the
-   honest answer rather than a coincidence to design around. */
-const colorIndex = new Map(read('data/book-colors.json').books.map(c => [c.book, c]));
-for (const b of books) {
-  const c = colorIndex.get(b.id);
-  if (!c) throw new Error(`book ${b.id} has no colour in data/book-colors.json`);
-  b.accent = c.accent;
-  b.ink = c.ink;
-}
+/* Books with their chapter counts and colours (scripts/lib/books.mjs). A floor
+   takes the colour of the book it is told in — two floors from one book
+   therefore match, which is the honest answer rather than a coincidence to
+   design around. */
+const { books, floors, colorIndex } = loadBooks(root);
 const entities = ['characters', 'items', 'mechanics', 'factions', 'places', 'threads']
   .flatMap(f => read(`data/entities/${f}.json`).entities);
 

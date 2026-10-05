@@ -12,6 +12,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "content:build": "node scripts/build-content.mjs",
+    "recaps:draft": "node scripts/draft-recaps.mjs",
+    "gists:draft": "node scripts/draft-gists.mjs",
     "content:check": "node scripts/build-content.mjs --check && node scripts/check-pages.mjs && node scripts/check-stage.mjs",
     "test:gate": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test scripts/test-gate.mjs scripts/test-export-koreader.mjs scripts/test-export-app.mjs scripts/test-recaps.mjs",
     "chapters:refresh": "node scripts/fetch-chapters.mjs",
