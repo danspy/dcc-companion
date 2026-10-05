@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { parseAt, describeAt, bookOf, END_OF_BOOK, CHAPTER_STRIDE } from './lib/gate.mjs';
 import { lint, faithfulness, tokensOf } from './lib/lint.mjs';
@@ -1000,4 +1001,20 @@ test('a recap may draw on taglines and descriptions reached by its gate, and on 
   assert.equal(ok.errors.filter(e => /none of its sources/.test(e)).length, 0, ok.errors.join('\n'));
   const bad = lint({ books: recapBooks, floors: [], entities: [{ ...ent, recap: [{ at: '1:end', text: 'Xan the Navy man arrives.', confidence: 'draft' }] }] });
   assert.ok(bad.errors.some(e => /recap 1: names "Navy"/.test(e)), 'a tagline past the step\'s gate is not a source');
+});
+
+test('the snapshot carries recap steps and gists in resolved form', () => {
+  const snap = JSON.parse(readFileSync(new URL('../data/content.snapshot.json', import.meta.url), 'utf8'));
+  for (const e of snap.entities) {
+    assert.ok(Array.isArray(e.recap), `${e.id}: recap is a list`);
+    for (const r of e.recap) {
+      assert.equal(typeof r.sortKey, 'number');
+      assert.equal(r.sortKey % 1000, 999, `${e.id}: a recap step sits at a book's end`);
+      assert.ok(['verified', 'draft'].includes(r.confidence));
+    }
+  }
+  for (const b of snap.beats) {
+    assert.ok('gist' in b && 'gistDraft' in b, `${b.entityId} "${b.headline}": gist fields present`);
+    assert.equal(typeof b.gistDraft, 'boolean');
+  }
 });

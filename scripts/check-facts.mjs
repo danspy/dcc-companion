@@ -145,8 +145,12 @@ for (const e of entities) {
   if (only && e.id !== only) continue;
   const tl = Array.isArray(e.tagline) ? e.tagline : e.tagline ? [{ at: e.revealedAt, text: e.tagline }] : [];
   tl.forEach((t, i) => units.push({ id: e.id, where: `tagline ${i + 1}`, gate: max(t.at, e.revealedAt), text: t.text }));
-  for (const b of e.beats ?? [])
+  // A recap step is a summary gated at its book's end; a gist is read at its beat's own gate.
+  (e.recap ?? []).forEach((r, i) => units.push({ id: e.id, where: `recap ${i + 1}`, gate: max(r.at, e.revealedAt), text: r.text, confidence: r.confidence }));
+  for (const b of e.beats ?? []) {
     units.push({ id: e.id, where: `beat "${b.headline}"`, gate: max(b.at, e.revealedAt), text: `${b.headline}. ${b.text}`, confidence: b.confidence });
+    if (b.gist) units.push({ id: e.id, where: `gist "${b.headline}"`, gate: max(b.at, e.revealedAt), text: b.gist, confidence: b.gistDraft ? 'draft' : 'verified' });
+  }
   for (const r of e.relations ?? []) {
     const to = byId.get(r.to);
     if (r.note && to) units.push({ id: e.id, where: `relation → ${r.to}`, gate: max(r.at, e.revealedAt, to.revealedAt), text: r.note });

@@ -77,11 +77,17 @@ for (const e of entities) {
   ).map(d => ({ at: d.at, source: d.source ?? d.at, sortKey: Math.max(parseAt(d.at), entityAt), text: d.text }))
    .sort((a, b) => a.sortKey - b.sortKey);
 
+  /* The recap: one paragraph per book, each unsealing at that book's end. The
+     lint has already pinned the shape; this only resolves the key. */
+  const recap = (e.recap ?? []).map(r => ({
+    at: r.at, sortKey: Math.max(parseAt(r.at), entityAt), text: r.text, confidence: r.confidence ?? 'draft',
+  }));
+
   resolvedEntities.push({
     id: e.id, kind: e.kind, name: e.name, aka: e.aka ?? [],
     role: e.role, taglines, revealedAt: e.revealedAt, sort: e.sort ?? 0,
     // voiceNote stays in the curation file: it is guidance, not content.
-    voice: entityVoice(e), descriptions,
+    voice: entityVoice(e), descriptions, recap,
   });
 
   for (const b of e.beats ?? []) {
@@ -93,6 +99,8 @@ for (const e of entities) {
       headline: b.headline, text: b.text, confidence: b.confidence ?? 'draft',
       // Who speaks, already decided, so no view has to know the defaults.
       voice: beatVoice(e, b),
+      // One sentence restating the beat, gated by the beat's own key. Its review state is its own.
+      gist: b.gist ?? null, gistDraft: !!b.gistDraft,
     });
   }
 
@@ -150,11 +158,16 @@ const snapshot = {
 };
 
 const drafts = resolvedBeats.filter(b => b.confidence === 'draft').length;
+const recapSteps = resolvedEntities.reduce((n, e) => n + e.recap.length, 0);
+const recapDrafts = resolvedEntities.reduce((n, e) => n + e.recap.filter(r => r.confidence === 'draft').length, 0);
+const gists = resolvedBeats.filter(b => b.gist).length;
+const gistDrafts = resolvedBeats.filter(b => b.gistDraft).length;
 const chapterTotal = books.reduce((a, b) => a + (b.chapters ?? 0), 0);
 const summary =
   `${books.length} books · ${chapterTotal} chapters · ${floors.length} floors · ` +
   `${resolvedEntities.length} entities · ${resolvedBeats.length} beats (${drafts} draft) · ` +
-  `${resolvedRelations.length} relations · ${snapshot.achievements.length} achievements`;
+  `${resolvedRelations.length} relations · ${snapshot.achievements.length} achievements · ` +
+  `${recapSteps} recap steps (${recapDrafts} draft) · ${gists} gists (${gistDrafts} draft)`;
 
 if (checkOnly) {
   console.log(`\nOK — ${summary}`);
