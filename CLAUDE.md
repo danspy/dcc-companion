@@ -1611,8 +1611,18 @@ frontier are searched, and only aliases whose own key is reached; matching is at
 case-insensitive because the reader chose the word. The site's one-word case rule is for
 unprompted screening; this is prompted.
 
-Three things about the plugin runtime worth knowing before touching it:
+Four things about the plugin runtime worth knowing before touching it:
 
+- **A held word lands in the dictionary popup, not the highlight menu.** The first build on the
+  Kobo showed *Carl* → "No definition found" and no button anywhere: KOReader's default sends a
+  single-word long-press straight to the dictionary, and the highlight menu — the only place the
+  plugin had registered — opens for a two-word selection or with that default off. The button is
+  in both now, and KOReader has had two hooks for the popup: `addToDictButtons` from v2026.07, the
+  `DictButtonsReady` event before it (v2026.03 on the Kobo). Only one exists on any version; the
+  event handler steps aside where the spec is registered. The stubbed suite was green throughout,
+  so the self-test (`CRAWLERS_COMPANION_SELFTEST=<name>`, with `KO_HOME` pointing at the user data
+  dir or the user plugin folder is never searched) now opens a real lookup and logs the popup's
+  button ids — proven red-green on the nightly.
 - **Module names carry a `cc_` prefix** (`cc_gate`, `cc_position`, `cc_store`, `cc_json`). The
   plugin loader puts the plugin root on `package.path`, so a sibling `gate.lua` would load — and
   so would any other plugin's, first come first served. `cc_json` is vendored rxi/json.lua, so the
@@ -1623,9 +1633,10 @@ Three things about the plugin runtime worth knowing before touching it:
   `~/Library/Application Support/koreader/plugins/` — a symlink to the repo works. On a Kobo the
   path is `.adds/koreader/plugins/`.
 - **The wiring is tested under stubs.** `tests/test_main.lua` preloads fake `ui/*` modules and a
-  fake `ui` (title, ToC, settings) and asserts the button is registered as `12_crawlers_companion`,
-  what a reached, an unreached and a no-book lookup show, and that an override beats detection.
-  `astro check` cannot see any of this; the Lua suite is the only check there is.
+  fake `ui` (title, ToC, settings, a dictionary in both of KOReader's shapes) and asserts the button
+  is registered as `12_crawlers_companion` and in the popup, what a reached, an unreached and a
+  no-book lookup show, and that an override beats detection. `astro check` cannot see any of this;
+  the Lua suite and the self-test above are the only checks there are.
 
 ### The iOS app holds the whole companion, and gates it on the device
 
