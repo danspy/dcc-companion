@@ -45,7 +45,7 @@ const ROUTES = [
   ['/progress', ['class="stats"', 'tbl-head']],
   /* Quick-find answers per reader from the cookie; Carl is met at 1:1. */
   ['/find.json?q=car', ['"href":"/entity/carl"']],
-  ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"']],
+  ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"', 'class="sofar"']],
   /* The book filter is resolved on the server: ?book=3 arrives with the other
      books' entries already hidden and the Book 3 chip pressed. */
   ['/entity/carl?book=3', ['data-book="3" aria-pressed="true"', 'data-book="1" hidden']],
