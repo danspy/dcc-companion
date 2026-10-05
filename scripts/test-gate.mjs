@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { parseAt, describeAt, bookOf, END_OF_BOOK, CHAPTER_STRIDE } from './lib/gate.mjs';
-import { lint } from './lib/lint.mjs';
+import { lint, faithfulness, tokensOf } from './lib/lint.mjs';
 import { entityVoice, beatVoice, VOICES } from './lib/voice.mjs';
 import { toEdition, editionCount, unsummarised, tagToEdition } from './lib/edition.mjs';
 
@@ -961,4 +961,43 @@ test('draft recaps and draft gists are warnings, which is the work queue', () =>
   ]);
   assert.ok(warnings.some(w => w === 'draft recap — x: book 1'), warnings.join('\n'));
   assert.ok(warnings.some(w => w === 'draft gist — x: h'), warnings.join('\n'));
+});
+
+test('a text may name only what its sources name', () => {
+  const src = ['The stairwell drops us into a sandstorm and an achievement. The Quarry pays 2,145 gold.', 'Every bounty on me, doubled'];
+  assert.deepEqual(faithfulness('The stairwell drops them into a sandstorm; the Quarry pays 2,145 gold.', src), []);
+  assert.deepEqual(faithfulness('The cat Donut watches from the Quarry.', src), ['Donut']);
+  assert.deepEqual(faithfulness('The Quarry pays 2145 gold.', src), ['2145']);
+  assert.deepEqual(faithfulness('He wins 1.5 million.', src), ['1.5']);
+});
+
+test('a sentence-initial capital is not a name, and a possessive still counts as the name', () => {
+  assert.deepEqual(faithfulness('Stairwells drop. Sandstorms follow.', ['the stairwell and the sandstorm']), []);
+  assert.deepEqual(faithfulness("Carl finds Donut's biscuit.", ["Donut's biscuit is in Carl's pocket"]), []);
+  assert.deepEqual(faithfulness('He meets Mordecai-the-guide.', ['Mordecai is the guide']), []);
+  assert.ok(tokensOf("Donut's 2,145 Quarry-side").has('Donut'));
+  assert.ok(tokensOf("Donut's 2,145 Quarry-side").has('2,145'));
+  assert.ok(tokensOf("Donut's 2,145 Quarry-side").has('Quarry'));
+});
+
+test('the lint fails a recap or a gist that names what its sources do not', () => {
+  const { errors } = lint({ books: recapBooks, floors: [], entities: [{
+    ...recapEntity([{ at: '1:end', text: 'Xan arrives with Bea.', confidence: 'draft' }], [
+      { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: 'Xan arrives at Meadow Lark.', confidence: 'verified' },
+    ]),
+  }] });
+  assert.ok(errors.some(e => /recap 1: names "Bea", which none of its sources do/.test(e)), errors.join('\n'));
+  assert.ok(errors.some(e => /beat "h" gist: names "Meadow", "Lark", which none of its sources do/.test(e)), errors.join('\n'));
+});
+
+test('a recap may draw on taglines and descriptions reached by its gate, and on the name and aliases', () => {
+  const ent = {
+    ...recapEntity([{ at: '1:end', text: 'Xan, the Coast Guard man, arrives.', confidence: 'draft' }]),
+    aka: ['Xan the Bold'],
+    tagline: [{ at: '1:1', text: 'A Coast Guard man.' }, { at: '2:end', text: 'A Navy man now.' }],
+  };
+  const ok = lint({ books: recapBooks, floors: [], entities: [ent] });
+  assert.equal(ok.errors.filter(e => /none of its sources/.test(e)).length, 0, ok.errors.join('\n'));
+  const bad = lint({ books: recapBooks, floors: [], entities: [{ ...ent, recap: [{ at: '1:end', text: 'Xan the Navy man arrives.', confidence: 'draft' }] }] });
+  assert.ok(bad.errors.some(e => /recap 1: names "Navy"/.test(e)), 'a tagline past the step\'s gate is not a source');
 });

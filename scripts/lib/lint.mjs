@@ -22,6 +22,39 @@ const FORWARD_PHRASE =
 
 const escapeRe = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
+/* Faithfulness. Model-drafted text enters a project where every sentence has
+   been read against the book; the rule that makes that tolerable is that a
+   text may name only what its sources name. A token is a run of letters,
+   digits, apostrophes, and the commas or periods inside a number ("2,145",
+   "1.5"); a possessive drops its 's so "Donut's" names Donut. A capitalised
+   word at the start of a sentence is English, not a name, and is skipped.
+   Like the forward-phrase rule this flags honest sentences now and then, and
+   like it has no exemption list: the sentence is reworded instead. */
+const TOKEN = /[\p{L}\p{N}]+(?:[,.](?=\p{N})[\p{N}]+)*(?:'s)?/gu;
+
+export function tokensOf(text) {
+  const out = new Set();
+  for (const m of (text ?? '').matchAll(TOKEN)) out.add(m[0].replace(/'s$/, ''));
+  return out;
+}
+
+export function faithfulness(text, sources) {
+  const have = new Set();
+  for (const s of sources) for (const t of tokensOf(s)) have.add(t);
+  const offending = [];
+  const sentences = (text ?? '').split(/(?<=[.!?…])\s+/);
+  for (const sentence of sentences) {
+    let first = true;
+    for (const m of sentence.matchAll(TOKEN)) {
+      const tok = m[0].replace(/'s$/, '');
+      const checked = /\p{N}/u.test(tok) || (!first && /^\p{Lu}/u.test(tok));
+      first = false;
+      if (checked && !have.has(tok) && !offending.includes(tok)) offending.push(tok);
+    }
+  }
+  return offending;
+}
+
 export function lint({ books, floors, entities, achievements = [] }) {
   const errors = [];
   const warnings = [];
@@ -212,6 +245,16 @@ export function lint({ books, floors, entities, achievements = [] }) {
           if (!r.text) errors.push(`${rw}: no text`);
           if (!VALID_CONFIDENCE.has(r.confidence ?? 'draft')) errors.push(`${rw}: confidence must be "verified" or "draft"`);
           checkForward(r.text, rAt, rw);
+          /* Faithfulness: the step's sources are this book's beats, and the
+             taglines, descriptions, name and aliases open at its gate. */
+          const sources = [
+            e.name, ...aliasesOf(e).map(a => a.name),
+            ...(e.beats ?? []).filter(b => b.book === book).flatMap(b => [b.headline, b.text]),
+            ...(Array.isArray(taglines) ? taglines : []).filter(t => (at(t.at, rw) ?? Infinity) <= rAt).map(t => t.text),
+            ...(Array.isArray(descriptions) ? descriptions : []).filter(d => (at(d.at, rw) ?? Infinity) <= rAt).map(d => d.text),
+          ];
+          const off = faithfulness(r.text, sources);
+          if (off.length) errors.push(`${rw}: names ${off.map(t => `"${t}"`).join(', ')}, which none of its sources do`);
           if ((r.confidence ?? 'draft') === 'draft') warnings.push(`draft recap — ${e.id}: book ${book}`);
         });
       }
@@ -271,7 +314,11 @@ export function lint({ books, floors, entities, achievements = [] }) {
          make the beat draft. */
       if (b.gist != null) {
         if (!b.gist.trim()) errors.push(`${bw} gist: empty`);
-        else checkForward(b.gist, Math.max(beatAt, entityAt), `${bw} gist`);
+        else {
+          checkForward(b.gist, Math.max(beatAt, entityAt), `${bw} gist`);
+          const off = faithfulness(b.gist, [e.name, ...aliasesOf(e).map(a => a.name), b.headline, b.text]);
+          if (off.length) errors.push(`${bw} gist: names ${off.map(t => `"${t}"`).join(', ')}, which none of its sources do`);
+        }
         if (b.gistDraft) warnings.push(`draft gist — ${e.id}: ${b.headline}`);
       }
 
