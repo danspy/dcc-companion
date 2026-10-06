@@ -236,6 +236,61 @@ Quetzalcoatlus beat that killed Gwen at 4:29 when the notice only hails her.
   gating *Dungeon Crawler World*'s alias "the show" would flag every honest sentence about the
   broadcast.
 
+### A recap per book, a gist per beat, and the rule that lets a model write here
+
+A reader who long-pressed *Carl* on a Kobo at 4:6 got his last twelve beats in full, in his own
+voice, and asked what on earth he was looking at. The answer is two new fields, both model-drafted,
+both gated and linted like everything else, composed by one rule into **the story so far**.
+
+- **`recap`** on an entity: one paragraph per book the entry has a beat in, telling *that book
+  only*, 2–4 sentences, at most 80 words, in the narrator's third person. Gated `N:end` — the
+  summary rule — and the lint accepts no other form, no second step for a book, and no step for
+  a book with no beat. Not cumulative: the reader asked for a paragraph per book, and a paragraph
+  that is a rewrite of the last one drifts.
+- **`gist`** on a beat: one sentence restating it, at most 18 words, gated by the beat's own key.
+  Its review state is its own (`gistDraft`), so a drafted gist never marks a verified beat draft.
+
+`storySoFar()` in `src/lib/story.ts` is the one composition: every recap step reached, then the
+current book one line per beat up to a *cut* — the frontier on the site, the **previous chapter**
+in the plugin, whose position means "reading this chapter" and whose reader asked for the one
+before; the beats in between are counted ("and 1 entry in this chapter"), never shown. A book
+whose paragraph is reached has no list. `cc_gate.lua`'s `story_so_far` is a pure copy held to the
+same cases; the entity page's **So far** block and the Kobo's Recap screen read the same.
+
+**The faithfulness rule is what makes model prose tolerable here.** A recap may name only what the
+entry's own beats, taglines, description, name and aliases name at its gate; a gist only what its
+one beat names. Every capitalised word not at a sentence start and every token with a digit must
+occur in the sources, whole-word, case-sensitive, plurals allowed either way (the full pass
+failed exactly two of 892 on "Boxes" against a Box). Like the forward-phrase rule it has **no
+exemption list**. It proves the *names* came from the notes, not the claims about them: the
+trial of Carl's eight paragraphs traced every name to a beat and still had the Bahamas chosen
+where the beat says "that wasn't the Bahamas". That is what `draft` and the `unverified` chip
+are for, and why the main cast is read by hand.
+
+**Drafting** (`npm run recaps:draft`, `npm run gists:draft`; `scripts/lib/recaps.mjs`) asks
+`gemma4:31b` through one fetch, screens each answer **with the lint itself** — the candidate is
+linted as the entity it would join, so the screen and the build cannot disagree — and asks again
+up to three times naming what was wrong. Only missing steps are drafted, so the pass resumes;
+`--entity`, `--book`, `--redo`, `--limit`, `--dry`. Two things the trial taught: the voice is
+shown by example, not described (the achievement page's lesson, again); and **ban the abstract
+verbs by name**. The first eight paragraphs were faithful and flat — "navigates" four times,
+"gains", "acquires", "deals with" — and a rule listing those words and asking for the notes' own
+concrete verbs and one odd specific detail (the pink Crocs, the dachshund) turned them into prose.
+A third came out of the full pass: **first-person beats never say she or he about the speaker**,
+and the model guessed — Zev was "he" in three books of eight. The voice note is written *about*
+the character and does say it, so `pronounOf()` reads it and the prompt says "Refer to Zev as
+she/her".
+
+**What the pass produced:** 900 recap steps and 3,556 gists; 19 beats have no gist because the
+model would not stop retelling the whole note in three tries, and are listed by headline. The
+main cast — Carl, Donut, Mordecai, Katia and the twenty next by beat count, 146 steps — was read
+against the beats and is `verified`; **four sentences were wrong** (Carl's race for his class, the
+Bahamas for the Caribbean, Donut sponsoring Veriluxx rather than the reverse, a threat told as an
+act), roughly one in forty. **One sentence I was certain was wrong was in the book**: Donut shoots
+Katia with a crossbow at 7:86. Review against the beats, never against memory — the rule this
+file already states about the wiki applies to the reviewer too. The other 754 steps and every
+gist are `draft` with the chip, and `check-facts` found nothing LATE in any of them.
+
 ### Who speaks: three voices, resolved in the build
 
 Character pages are written **in the character's own voice**, as a confessional to camera spoken
@@ -1623,6 +1678,14 @@ Four things about the plugin runtime worth knowing before touching it:
   so the self-test (`CRAWLERS_COMPANION_SELFTEST=<name>`, with `KO_HOME` pointing at the user data
   dir or the user plugin folder is never searched) now opens a real lookup and logs the popup's
   button ids — proven red-green on the nightly.
+- **A tap opens three screens, not one.** The Recap (`recap_text`: role, tagline, a paragraph per
+  finished book, this book one line per beat to the previous chapter, the sealed line) with one
+  button, *The whole crawl for Carl so far* (`crawl_text`: description, every reached beat in
+  voice) with *Connections · N*, a Menu whose rows open the other entry's Recap. The export
+  carries `recap`, `gist` and **both sides of every relation** per entity file; `index.json` is
+  unchanged. `story_so_far` in `cc_gate.lua` is a copy of `src/lib/story.ts`; `previous_chapter`
+  in `cc_position.lua` is the cut. One closing button per screen: KOReader's Menu closes itself
+  after a row's callback, so a connection lands on its Recap with the crawl beneath.
 - **Module names carry a `cc_` prefix** (`cc_gate`, `cc_position`, `cc_store`, `cc_json`). The
   plugin loader puts the plugin root on `package.path`, so a sibling `gate.lua` would load — and
   so would any other plugin's, first come first served. `cc_json` is vendored rxi/json.lua, so the
@@ -1719,6 +1782,8 @@ The snapshot is committed, so a build is reproducible and a deploy needs no netw
 `scripts/lib/lint.mjs` **fails the build** on:
 
 - a beat that unlocks before its own entity (the reader gets the fact without the introduction)
+- a recap step not gated at its book's end, doubled for a book, or written for a book with no beat
+- a recap or a gist naming what its sources do not — the faithfulness rule, no exemption list
 - a beat whose declared `book` disagrees with its own reveal tag
 - a relation pointing at an entity that doesn't exist
 - an unknown entity kind, beat kind or confidence value
@@ -1823,6 +1888,10 @@ event by event, and both wiki pulls (`chapters:refresh`, `achievements:refresh`)
 it on the way in. A wiki chapter straddling two edition chapters maps to the **later** one. Edition
 chapter 63 has no summary row of its own on the wiki, which the map declares rather than hides.
 
+The splitter (`fetch-books.mjs`) reads an `.ncx` or, failing that, the EPUB3 `nav.xhtml`; the Kobo-bought
+copies of books 1–6 carry only the latter, and `--no-fetch` re-splits whatever EPUBs sit in
+`data/index/books/` — which is how the text was rebuilt on a second Mac from the device's own files.
+
 So a `5:NN` anywhere in `data/` is an edition chapter. A reveal point read off a wiki page for late
 book 5 must be converted before it is written down.
 
@@ -1905,6 +1974,8 @@ node scripts/fetch-books.mjs [--no-fetch]  # the edition from the OPDS library i
 npm run content:check   # lint only; prints the draft/chapter-count work queue
 npm run achievements:refresh  # re-pull the awards + the voice corpus from the wiki
 npm run test:gate       # frontier arithmetic + the lint rules
+npm run recaps:draft    # the missing recap paragraphs, drafted and screened (needs OLLAMA_API_KEY in .env)
+npm run gists:draft     # the missing one-sentence gists, likewise
 npm run export:app -- --out <dir>   # the iOS app's content, manifest and gate fixtures
 
 # Always build against a throwaway DB so data/dcc.db isn't half-written:
@@ -1987,7 +2058,12 @@ currently has a dev server running. It is not this deployment, and only one proj
 | `data/entities/*.json` | The curated graph; `tagline` may be one string or a progressive list |
 | `data/entities/places.json` | Places: somewhere *on* a floor, never a floor itself |
 | `scripts/build-content.mjs` | Lint, resolve tags, inherit gates, write the snapshot |
-| `scripts/lib/lint.mjs` | Every rule that stops the gate leaking |
+| `scripts/lib/lint.mjs` | Every rule that stops the gate leaking; `faithfulness()` for model-drafted text |
+| `src/lib/story.ts` | `storySoFar()` — the paragraphs reached and the current book to a cut; `cc_gate.lua` copies it |
+| `scripts/lib/recaps.mjs` | The drafting library: prompts by example, the lint as the screen, three tries |
+| `scripts/draft-recaps.mjs`, `scripts/draft-gists.mjs` | `npm run recaps:draft` / `gists:draft` |
+| `scripts/lib/ollama.mjs` | One fetch to Ollama's chat endpoint, key from `.env` |
+| `scripts/lib/books.mjs` | `loadBooks()` — books with chapter counts and colours, shared by the build and the drafting |
 | `scripts/lib/voice.mjs` | Who speaks on a beat: self / system / narrator, resolved in the build |
 | `scripts/smoke.mjs` | `npm run smoke` — does every route actually render? |
 | `scripts/check-stage.mjs` | No `<script>` or `<noscript>` in a component the view swap replaces |
@@ -2026,6 +2102,10 @@ currently has a dev server running. It is not this deployment, and only one proj
   Locations, Dungeon Mechanics, Quests, Shows, Bosses — are now re-runnable rather than remembered.
   Watch for generic nouns: a category page called "Party" or "Boss" matches almost every summary
   and tells you nothing.
+- **754 recap steps and 3,556 gists are `draft`** — model-drafted from the beats, screened, not yet read.
+  The main cast's 146 steps are verified; `npm run content:check` lists the rest as the queue. Reading
+  one is: open the entity, read the step beside that book's beats, fix, set `confidence: "verified"`
+  (or drop `gistDraft`).
 - Chapter-accurate reveal points for the entities still tagged at book level
 - **2 `draft` beats remain of 692** (Frank Q's "safe rooms" confession, which the book implies
   rather than states, and the cracking-order thread, which is our framing). `verified` now means
