@@ -19,7 +19,9 @@
           "at": "1:7",
           "confidence": "verified",
           "headline": "Eight floors of fuse",
-          "text": "The Crown of the Sepsis Whore puts Donut in the Blood Sultanate's line of succession, and taking it off does not undo it."
+          "text": "The Crown of the Sepsis Whore puts Donut in the Blood Sultanate's line of succession, and taking it off does not undo it.",
+          "gist": "The Crown of the Sepsis Whore puts Donut in the Blood Sultanate's line of succession.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -29,7 +31,9 @@
           "at": "2:25",
           "confidence": "verified",
           "headline": "Destroying it does not help",
-          "text": "The crown crumbles to dust in the Over City's collapse, taken by one of the pulses that strip magic from whatever is still being worn. The succession survives it."
+          "text": "The crown crumbles to dust in the Over City's collapse, taken by one of the pulses that strip magic from whatever is still being worn. The succession survives it.",
+          "gist": "The crown crumbles to dust during the Over City's collapse as pulses strip magic from worn items.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -39,7 +43,9 @@
           "at": "5:12",
           "confidence": "verified",
           "headline": "We'll deal with it when we get there",
-          "text": "Donut asks about the ninth floor. The crown she no longer even wears put her permanently in the Blood Sultanate's line of succession, removing it removed nothing, and she cannot go down to the tenth until the Sultan and every other royal is dead. That means killing the nagas, which is harder than it sounds. They have had this conversation before, and it always stops at the same place: we'll deal with it when we get there. This time Carl says instead that he will not leave her behind."
+          "text": "Donut asks about the ninth floor. The crown she no longer even wears put her permanently in the Blood Sultanate's line of succession, removing it removed nothing, and she cannot go down to the tenth until the Sultan and every other royal is dead. That means killing the nagas, which is harder than it sounds. They have had this conversation before, and it always stops at the same place: we'll deal with it when we get there. This time Carl says instead that he will not leave her behind.",
+          "gist": "Donut cannot go to the tenth floor until the Sultan and every royal naga are dead.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -48,7 +54,9 @@
           "at": "5:end",
           "confidence": "verified",
           "headline": "Only one of them",
-          "text": "Eva's last act puts the crown on Katia's head, and that means one thing. Only one of them, Donut or Katia, will be allowed to take the stairs from the ninth floor to the tenth. Katia touches her head, looks at Li Jun and Li Na, and says shit, several times."
+          "text": "Eva's last act puts the crown on Katia's head, and that means one thing. Only one of them, Donut or Katia, will be allowed to take the stairs from the ninth floor to the tenth. Katia touches her head, looks at Li Jun and Li Na, and says shit, several times.",
+          "gist": "Eva puts the crown on Katia's head, meaning only Donut or Katia may take the stairs.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -58,7 +66,9 @@
           "at": "6:19",
           "confidence": "verified",
           "headline": "Eva's last act",
-          "text": "The crown is back, on Katia's head this time. Eva put it there in the last moments before she died. Katia now carries what Donut carries, and the two of them know what it means: only one of them can leave the next floor. Carl counts two ways out inside Katia's locked box. The pregnancy boon would eject her from the game altogether. The Celestial Attendant boon would send her straight to the twelfth floor, to serve as an NPC until the games there begin. Katia wants the second. The box still has one seal left."
+          "text": "The crown is back, on Katia's head this time. Eva put it there in the last moments before she died. Katia now carries what Donut carries, and the two of them know what it means: only one of them can leave the next floor. Carl counts two ways out inside Katia's locked box. The pregnancy boon would eject her from the game altogether. The Celestial Attendant boon would send her straight to the twelfth floor, to serve as an NPC until the games there begin. Katia wants the second. The box still has one seal left.",
+          "gist": "Eva puts the crown on Katia's head before she dies.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -67,7 +77,9 @@
           "at": "7:1",
           "confidence": "verified",
           "headline": "Due before anyone descends",
-          "text": "The Blood Sultanate fights on the ninth floor, and neither Donut nor Katia may descend to the tenth until the Sultan and his family are dead."
+          "text": "The Blood Sultanate fights on the ninth floor, and neither Donut nor Katia may descend to the tenth until the Sultan and his family are dead.",
+          "gist": "Donut and Katia cannot descend until the Sultan and his family are dead.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -75,6 +87,33 @@
           "to": "crown-of-the-sepsis-whore",
           "kind": "concerns",
           "at": "1:7"
+        }
+      ],
+      "recap": [
+        {
+          "at": "1:end",
+          "text": "The Crown of the Sepsis Whore puts Donut in the Blood Sultanate's line of succession. Taking the crown off does not undo this.",
+          "confidence": "draft"
+        },
+        {
+          "at": "2:end",
+          "text": "The crown crumbles to dust during the Over City's collapse. One of the pulses strips magic from whatever is still being worn, but the succession survives.",
+          "confidence": "draft"
+        },
+        {
+          "at": "5:end",
+          "text": "Donut is in the Blood Sultanate's line of succession and cannot go to the tenth floor until the Sultan and every other royal naga is dead. Carl tells her he will not leave her behind. Eva puts the crown on Katia's head, meaning only Donut or Katia can take the stairs from the ninth floor to the tenth. Katia says shit several times.",
+          "confidence": "draft"
+        },
+        {
+          "at": "6:end",
+          "text": "Eva puts the crown on Katia's head before she dies. Katia and Donut know only one of them can leave the next floor. Carl counts two ways out in Katia's locked box: a pregnancy boon to eject her from the game or a Celestial Attendant boon to send her to the twelfth floor as an NPC. Katia wants the second. One seal remains on the box.",
+          "confidence": "draft"
+        },
+        {
+          "at": "7:end",
+          "text": "The Blood Sultanate fights on the ninth floor. Donut and Katia cannot descend to the tenth until the Sultan and his family are dead.",
+          "confidence": "draft"
         }
       ]
     },
@@ -96,7 +135,9 @@
           "at": "7:78",
           "confidence": "verified",
           "headline": "Akuma says it in the Warlord Chat",
-          "text": "As the War Mages quit the floor with the Scavenger's Daughter, Akuma warns Carl and Donut about her in the Warlord Chat: she was forced on the mages as the price of system access, she can slip out through the Waiting Room, and she seeks to kill everybody and everything. He asks them to kill her for him."
+          "text": "As the War Mages quit the floor with the Scavenger's Daughter, Akuma warns Carl and Donut about her in the Warlord Chat: she was forced on the mages as the price of system access, she can slip out through the Waiting Room, and she seeks to kill everybody and everything. He asks them to kill her for him.",
+          "gist": "Akuma warns Carl and Donut in the Warlord Chat that Agatha seeks to kill everyone.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -104,6 +145,13 @@
           "to": "agatha",
           "kind": "concerns",
           "at": "7:78"
+        }
+      ],
+      "recap": [
+        {
+          "at": "7:end",
+          "text": "As the War Mages quit with the Scavenger's Daughter, Akuma warns Carl and Donut in the Warlord Chat. Agatha was forced on the mages as the price of system access and can slip out through the Waiting Room. Akuma asks Carl and Donut to kill her because she seeks to kill everybody and everything.",
+          "confidence": "draft"
         }
       ]
     },
@@ -124,7 +172,9 @@
           "at": "7:end",
           "confidence": "verified",
           "headline": "He lets them all out",
-          "text": "Justice Light springs one small trap and breaks the Nothing. The bijou fairies and the evicted demons caught in his traps go free, and what the Nothing held starts draining into the Halls of the Ascendency, into Sheol, and into Scolopendra's lair."
+          "text": "Justice Light springs one small trap and breaks the Nothing. The bijou fairies and the evicted demons caught in his traps go free, and what the Nothing held starts draining into the Halls of the Ascendency, into Sheol, and into Scolopendra's lair.",
+          "gist": "Justice Light springs one small trap, breaks the Nothing, and frees bijou fairies and evicted demons.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -134,7 +184,9 @@
           "at": "8:1",
           "confidence": "verified",
           "headline": "Dead, and the Nothing with him",
-          "text": "The crawlers reach the tenth floor to find Justice Light dead and the Nothing broken. 5,501 of them are left."
+          "text": "The crawlers reach the tenth floor to find Justice Light dead and the Nothing broken. 5,501 of them are left.",
+          "gist": "The crawlers reach the tenth floor to find Justice Light dead and the Nothing broken with 5,501 left.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -144,7 +196,9 @@
           "at": "8:28",
           "confidence": "verified",
           "headline": "Unsponsored gods, loose",
-          "text": "Orren lays out the mechanism. The AI is built never to interfere with the minds of gods, a hard limit meant to stop a mad AI from turning them on everything, and the same system lets sponsors drive them and lets the operators rein in the unsponsored ones on the deeper floors. That second ability has been switched off. A good portion of the unsponsored gods are roaming free, able to manifest only near the tunnel nodes and not for long, and the AI cannot control them either. One stands at the kinder facility."
+          "text": "Orren lays out the mechanism. The AI is built never to interfere with the minds of gods, a hard limit meant to stop a mad AI from turning them on everything, and the same system lets sponsors drive them and lets the operators rein in the unsponsored ones on the deeper floors. That second ability has been switched off. A good portion of the unsponsored gods are roaming free, able to manifest only near the tunnel nodes and not for long, and the AI cannot control them either. One stands at the kinder facility.",
+          "gist": "Orren explains that the AI cannot control unsponsored gods, and one stands at the kinder facility.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -152,6 +206,18 @@
           "to": "the-nothing",
           "kind": "concerns",
           "at": "8:1"
+        }
+      ],
+      "recap": [
+        {
+          "at": "7:end",
+          "text": "Justice Light springs one small trap and breaks the Nothing. The bijou fairies and evicted demons go free. The contents of the Nothing drain into the Halls of the Ascendency, Sheol, and Scolopendra's lair.",
+          "confidence": "draft"
+        },
+        {
+          "at": "8:end",
+          "text": "5,501 crawlers reach the tenth floor to find Justice Light dead and the Nothing broken. Orren explains that the AI cannot interfere with the minds of gods. The system that lets operators rein in unsponsored gods on deeper floors is switched off. Unsponsored gods roam free and manifest near tunnel nodes, including one at the kinder facility.",
+          "confidence": "draft"
         }
       ]
     },
@@ -173,7 +239,9 @@
           "at": "7:19",
           "confidence": "verified",
           "headline": "The rampage through the Lemig base",
-          "text": "Stockade tries to pull Carl bodily to his position while Mordecai tries to force her out of him. What comes of it is hers, and the adjutant Panford is left explaining the wreckage."
+          "text": "Stockade tries to pull Carl bodily to his position while Mordecai tries to force her out of him. What comes of it is hers, and the adjutant Panford is left explaining the wreckage.",
+          "gist": "Stockade pulls Carl while Mordecai forces her out, leaving adjutant Panford to explain the wreckage.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -181,6 +249,13 @@
           "to": "shi-maria",
           "kind": "concerns",
           "at": "7:19"
+        }
+      ],
+      "recap": [
+        {
+          "at": "7:end",
+          "text": "Stockade tries to pull Carl bodily to his position while Mordecai tries to force her out of him. Adjutant Panford explains the wreckage.",
+          "confidence": "draft"
         }
       ]
     },
@@ -202,7 +277,9 @@
           "at": "5:69",
           "confidence": "verified",
           "headline": "More than one voice in there",
-          "text": "Florin says there are several presences in her head, other children among them, and that the dog is the key to it."
+          "text": "Florin says there are several presences in her head, other children among them, and that the dog is the key to it.",
+          "gist": "Florin says other children are in her head and the dog is the key.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -212,7 +289,9 @@
           "confidence": "verified",
           "headline": "The count",
           "text": "Zev puts a number on it: about 120,000 children, give or take. Their bodies are in the kinder facility on the surface; the rest of them is bound up in her head, and if she goes, they may all go.",
-          "chapter": 73
+          "chapter": 73,
+          "gist": "Zev counts about 120,000 children with bodies in the surface kinder facility and minds in her head.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -222,10 +301,29 @@
           "at": "8:51",
           "confidence": "verified",
           "headline": "Azra asks for her father",
-          "text": "Lucia steps back, shrinks, and somebody else is looking out of her face. A girl, Azra, with her sister Yaz beside her, crying: the shining lady says Carl knows her father, that he gave Carl a spell. He owns a bowling alley. Carl tells her he is safe and loves her. She says the angel lady keeps talking about people coming to take their bodies, and that it is cold. When Florin asks who, she runs."
+          "text": "Lucia steps back, shrinks, and somebody else is looking out of her face. A girl, Azra, with her sister Yaz beside her, crying: the shining lady says Carl knows her father, that he gave Carl a spell. He owns a bowling alley. Carl tells her he is safe and loves her. She says the angel lady keeps talking about people coming to take their bodies, and that it is cold. When Florin asks who, she runs.",
+          "gist": "Azra and Yaz look out of Lucia's face and ask Carl about their bowling alley father.",
+          "gistDraft": true
         }
       ],
-      "relations": []
+      "relations": [],
+      "recap": [
+        {
+          "at": "5:end",
+          "text": "Florin says there are other children in her head. She says the dog is the key to it.",
+          "confidence": "draft"
+        },
+        {
+          "at": "7:end",
+          "text": "Zev counts about 120,000 children. Their bodies stay in the kinder facility on the surface while the rest is bound up in her head. If she goes, they may all go.",
+          "confidence": "draft"
+        },
+        {
+          "at": "8:end",
+          "text": "Lucia shrinks and Azra looks out of her face. Azra and her sister Yaz cry and say Carl knows their father, who owns a bowling alley and gave Carl a spell. Azra says an angel lady talks about people coming to take their bodies and that it is cold. Azra runs when Florin asks who is coming.",
+          "confidence": "draft"
+        }
+      ]
     },
     {
       "id": "tenth-faction",
@@ -254,7 +352,9 @@
           "at": "6:22",
           "confidence": "verified",
           "headline": "A tenth team, proposed",
-          "text": "Juice Box tells the planning meeting the NPCs want a team of their own, afforded the same safeties as everybody else. Tagg says it is not even possible. Crawler Carl proposes it anyway as an action item: a tenth team populated with NPCs, afforded the same protections as the rest, and, on Juice Box's word, with full voting rights. The mexx robot adds it to the queue, and voting opens. Prince Stalwart says nobody is going to vote for it."
+          "text": "Juice Box tells the planning meeting the NPCs want a team of their own, afforded the same safeties as everybody else. Tagg says it is not even possible. Crawler Carl proposes it anyway as an action item: a tenth team populated with NPCs, afforded the same protections as the rest, and, on Juice Box's word, with full voting rights. The mexx robot adds it to the queue, and voting opens. Prince Stalwart says nobody is going to vote for it.",
+          "gist": "Juice Box proposes an NPC team with safeties, protections, and voting rights at a planning meeting.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -264,7 +364,9 @@
           "at": "6:72",
           "confidence": "verified",
           "headline": "Passed by fifty-two percent",
-          "text": "The pending action item, originally proposed by the Princess Posse, passes on a 52% audience vote. The tenth team is designated Home Team, with the city of Larracos as its base. The dungeon's own people are in the war as a side of their own."
+          "text": "The pending action item, originally proposed by the Princess Posse, passes on a 52% audience vote. The tenth team is designated Home Team, with the city of Larracos as its base. The dungeon's own people are in the war as a side of their own.",
+          "gist": "A 52% audience vote makes the tenth team Home Team based in Larracos.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -274,7 +376,9 @@
           "at": "7:1",
           "confidence": "verified",
           "headline": "Team Retribution, defending",
-          "text": "Ten teams remain, and the defenders have a name: Team Retribution, the only team allowed to stay inside Larracos once the ceasefire runs out. Eight of the others form a truce called the Bloc and declare war on it, and on the Princess Posse. Team Retribution sends the Posse a truce offer of its own. Princess Donut asks whether that is the NPC team."
+          "text": "Ten teams remain, and the defenders have a name: Team Retribution, the only team allowed to stay inside Larracos once the ceasefire runs out. Eight of the others form a truce called the Bloc and declare war on it, and on the Princess Posse. Team Retribution sends the Posse a truce offer of its own. Princess Donut asks whether that is the NPC team.",
+          "gist": "Ten teams remain, and Team Retribution stays inside Larracos while the Bloc declares war on them.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -292,6 +396,18 @@
           "to": "juice-box",
           "kind": "proposed-with",
           "at": "6:22"
+        }
+      ],
+      "recap": [
+        {
+          "at": "6:end",
+          "text": "Juice Box tells a planning meeting that NPCs want a team with the same safeties as others. Crawler Carl proposes a tenth team of NPCs with full voting rights. The mexx robot adds it to the queue and the item passes on a 52% audience vote. The tenth team is designated Home Team with the city of Larracos as its base.",
+          "confidence": "draft"
+        },
+        {
+          "at": "7:end",
+          "text": "Ten teams remain. Team Retribution is the only team allowed to stay inside Larracos after the ceasefire. Eight other teams form a truce called the Bloc and declare war on Team Retribution and the Princess Posse. Team Retribution sends the Posse a truce offer, and Princess Donut asks if that is the NPC team.",
+          "confidence": "draft"
         }
       ]
     },
@@ -321,7 +437,9 @@
           "at": "5:1",
           "confidence": "verified",
           "headline": "Tish's note",
-          "text": "According to the note Tish left for Ghazi, the Gate of the Feral Gods was the artifact needed to defeat Scolopendra."
+          "text": "According to the note Tish left for Ghazi, the Gate of the Feral Gods was the artifact needed to defeat Scolopendra.",
+          "gist": "Tish's note to Ghazi names the Gate of the Feral Gods as the artifact to defeat Scolopendra.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -331,7 +449,9 @@
           "at": "5:16",
           "confidence": "verified",
           "headline": "What the were-castors remember",
-          "text": "Holger's village came through the demon's cloud better than the city across the river, and he wonders if it was because one of the attacks in it was a transfiguration spell they had already been hit with. He got sick that day, and then was fine. Clint has it from the poem: the high elves cowered in their castle, protected by something they took. Rumour says they went down while she slept, collected their soul gems, and stole an item that shielded everyone in the castle. Holger thinks her nine-tier attack was a slow damage reflect. They settle it with their fists."
+          "text": "Holger's village came through the demon's cloud better than the city across the river, and he wonders if it was because one of the attacks in it was a transfiguration spell they had already been hit with. He got sick that day, and then was fine. Clint has it from the poem: the high elves cowered in their castle, protected by something they took. Rumour says they went down while she slept, collected their soul gems, and stole an item that shielded everyone in the castle. Holger thinks her nine-tier attack was a slow damage reflect. They settle it with their fists.",
+          "gist": "Holger and Clint fight with their fists to settle a disagreement about high elf soul gems.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -341,7 +461,9 @@
           "at": "5:64",
           "confidence": "verified",
           "headline": "Dreaming on the ballroom ceiling",
-          "text": "The ballroom's domed ceiling is a moving mosaic: a black-and-gold cave glittering with crystals, like the inside of a geode, and curled in it a black centipede that twists like a hypnotist's spiral. The note says this is Scolopendra, dreaming, and that when she finally awakens she will destroy everything and free us all. From the middle of the mosaic a living white tree hangs upside down, and the centipede never stops twisting around it, as if to strangle it."
+          "text": "The ballroom's domed ceiling is a moving mosaic: a black-and-gold cave glittering with crystals, like the inside of a geode, and curled in it a black centipede that twists like a hypnotist's spiral. The note says this is Scolopendra, dreaming, and that when she finally awakens she will destroy everything and free us all. From the middle of the mosaic a living white tree hangs upside down, and the centipede never stops twisting around it, as if to strangle it.",
+          "gist": "A dreaming black centipede named Scolopendra twists around an upside-down white tree on a mosaic ceiling.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -351,7 +473,9 @@
           "at": "6:46",
           "confidence": "verified",
           "headline": "The hydra's old name",
-          "text": "The AI introduces the Reminiscence Hydra as a classic monster from the very early days of the show: in the third and fourth seasons, a bigger version was built as the final boss of the whole dungeon, and everybody died before getting close. In the old days these things were called Scolopendra Nymphs. That is not entirely accurate, the AI says, so this one goes by a different name. It is a level 125 City Boss with nine heads, each the likeness of somebody the crawlers know."
+          "text": "The AI introduces the Reminiscence Hydra as a classic monster from the very early days of the show: in the third and fourth seasons, a bigger version was built as the final boss of the whole dungeon, and everybody died before getting close. In the old days these things were called Scolopendra Nymphs. That is not entirely accurate, the AI says, so this one goes by a different name. It is a level 125 City Boss with nine heads, each the likeness of somebody the crawlers know.",
+          "gist": "The AI introduces the nine-headed Reminiscence Hydra, a level 125 City Boss.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -361,7 +485,9 @@
           "at": "7:7",
           "confidence": "verified",
           "headline": "What the Semeru dug into",
-          "text": "Carl examines War Leader Arief, a young Semeru dwarf in feathered, parade-ready armour, and the System tells his people's story. They farmed and mined a paradise inside the volcano and dug toward the goddess below them, Ysalte, until they struck the roots of the All Tree and stopped. They built their castle along those roots, a monument and an apology. Scolopendra's nine-tier attack hit them hardest of all: millions before that day, fewer than 10,000 now. Arief is Despondent, because his goddess is dead."
+          "text": "Carl examines War Leader Arief, a young Semeru dwarf in feathered, parade-ready armour, and the System tells his people's story. They farmed and mined a paradise inside the volcano and dug toward the goddess below them, Ysalte, until they struck the roots of the All Tree and stopped. They built their castle along those roots, a monument and an apology. Scolopendra's nine-tier attack hit them hardest of all: millions before that day, fewer than 10,000 now. Arief is Despondent, because his goddess is dead.",
+          "gist": "Carl examines War Leader Arief, a Semeru dwarf in feathered armour, and learns the System's story.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -371,7 +497,9 @@
           "at": "7:42",
           "confidence": "verified",
           "headline": "Scolopendra Stirs, mid-council",
-          "text": "The warlord council has barely got going, just after the new king has punched the host, when a System Message cuts across the table: Warning: Scolopendra Stirs. Everyone goes quiet, even Ferdinand. Has that ever happened before, Carl asks. No, the Dream's warlord answers. Cascadia laughs with a hint of madness to it. Well, why not? Why the fuck not?"
+          "text": "The warlord council has barely got going, just after the new king has punched the host, when a System Message cuts across the table: Warning: Scolopendra Stirs. Everyone goes quiet, even Ferdinand. Has that ever happened before, Carl asks. No, the Dream's warlord answers. Cascadia laughs with a hint of madness to it. Well, why not? Why the fuck not?",
+          "gist": "A System Message warns that Scolopendra Stirs during a warlord council, silencing everyone including Ferdinand.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -381,7 +509,9 @@
           "at": "7:87",
           "confidence": "verified",
           "headline": "Scolopendra has awakened",
-          "text": "The Nothing drains into the Halls of the Ascendency, into Sheol, and into Scolopendra's lair, and Scolopendra stirs. A planetwide message follows: guests of the Scolopendra Club should evacuate. Nowhere to go? The 16th floor, supposedly Agony of Mirrors, is an empty room with one non-magical mirror from a Motel 6 in Boise, Idaho, and it lies outside the Scolopendra layers. To reach it, guests must get through the 17th, the Backstage Death Maze, which is built and running. Good luck. Then: Scolopendra has awakened."
+          "text": "The Nothing drains into the Halls of the Ascendency, into Sheol, and into Scolopendra's lair, and Scolopendra stirs. A planetwide message follows: guests of the Scolopendra Club should evacuate. Nowhere to go? The 16th floor, supposedly Agony of Mirrors, is an empty room with one non-magical mirror from a Motel 6 in Boise, Idaho, and it lies outside the Scolopendra layers. To reach it, guests must get through the 17th, the Backstage Death Maze, which is built and running. Good luck. Then: Scolopendra has awakened.",
+          "gist": "The Nothing drains into the Halls of the Ascendency, Sheol, and Scolopendra's lair, awakening Scolopendra.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -391,7 +521,9 @@
           "at": "8:1",
           "confidence": "verified",
           "headline": "Awake, and moving",
-          "text": "Scolopendra is awake. So far it has done nothing but move around a lot, which is plenty when there is a club inside it. The guests of the resort on the eighteenth floor cannot eject, and the system brings them straight back each time they die. Things leaked out of the broken Nothing, forgotten gods and demons from hundreds of old quests among them, and some are appearing inside the boss, inside the club, among guests who cannot die no matter what is done to them. The cameras went dark after the first few hours."
+          "text": "Scolopendra is awake. So far it has done nothing but move around a lot, which is plenty when there is a club inside it. The guests of the resort on the eighteenth floor cannot eject, and the system brings them straight back each time they die. Things leaked out of the broken Nothing, forgotten gods and demons from hundreds of old quests among them, and some are appearing inside the boss, inside the club, among guests who cannot die no matter what is done to them. The cameras went dark after the first few hours.",
+          "gist": "Scolopendra moves around while guests who cannot eject or die stay inside its club.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -401,7 +533,9 @@
           "at": "8:69",
           "confidence": "verified",
           "headline": "One of three children",
-          "text": "Rosetta's version, told in the pet stables: before the current pantheon there were older gods, and Nekhebit, a vulture, was forbidden children and had three. Apito. A son. And a centipede, which is Scolopendra. Sometimes Scolopendra is the Scavenger, and the Scavenger's Daughter comes of its union with someone else; sometimes the son is; sometimes all three are one being, split. Elle's summary is that the centipede became a hotel for rich people that spews world-ending spells from the bottom of the dungeon. It is not a bad summary."
+          "text": "Rosetta's version, told in the pet stables: before the current pantheon there were older gods, and Nekhebit, a vulture, was forbidden children and had three. Apito. A son. And a centipede, which is Scolopendra. Sometimes Scolopendra is the Scavenger, and the Scavenger's Daughter comes of its union with someone else; sometimes the son is; sometimes all three are one being, split. Elle's summary is that the centipede became a hotel for rich people that spews world-ending spells from the bottom of the dungeon. It is not a bad summary.",
+          "gist": "Rosetta tells Elle in the pet stables that Scolopendra is a forbidden child of Nekhebit.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -411,7 +545,9 @@
           "at": "8:81",
           "confidence": "verified",
           "headline": "The first of nine attacks",
-          "text": "System Message: Scolopendra has released the first of nine attacks. The quest is called the Nine-Tier Attack. The first four are temporary and survivable, and this first one has a twenty per cent chance of landing on anyone unprotected. At least thirty hours between them, unless she is confronted or upset, and then they come fast. A wheel of nine symbols spins in the lobby and lands on the Ox: the Beast of Burden Sin, Transformation. For crawlers, it lasts until the next stairwell."
+          "text": "System Message: Scolopendra has released the first of nine attacks. The quest is called the Nine-Tier Attack. The first four are temporary and survivable, and this first one has a twenty per cent chance of landing on anyone unprotected. At least thirty hours between them, unless she is confronted or upset, and then they come fast. A wheel of nine symbols spins in the lobby and lands on the Ox: the Beast of Burden Sin, Transformation. For crawlers, it lasts until the next stairwell.",
+          "gist": "Scolopendra releases the first of nine attacks, and the wheel lands on the Ox.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -421,7 +557,9 @@
           "at": "8:94",
           "confidence": "verified",
           "headline": "The Dungeon boss, and its rules",
-          "text": "Scolopendra arrives at Carl's request: level 500, the final boss of the dungeon, a plain brown-and-red centipede the size of an aircraft carrier. The AI spells out the rules. Kill her and the level timers cease, only one more round of deals is offered, and the Ascendency battles begin, with the dungeon collapsing twelve hours after a winner is crowned. Leave her on a collapsing floor and nobody can exit. Either way, killing or abandoning her triggers every remaining attack of the nine at once."
+          "text": "Scolopendra arrives at Carl's request: level 500, the final boss of the dungeon, a plain brown-and-red centipede the size of an aircraft carrier. The AI spells out the rules. Kill her and the level timers cease, only one more round of deals is offered, and the Ascendency battles begin, with the dungeon collapsing twelve hours after a winner is crowned. Leave her on a collapsing floor and nobody can exit. Either way, killing or abandoning her triggers every remaining attack of the nine at once.",
+          "gist": "Scolopendra, a brown-and-red centipede the size of an aircraft carrier, arrives at Carl's request.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -431,7 +569,9 @@
           "at": "8:97",
           "confidence": "verified",
           "headline": "A biscuit down the throat",
-          "text": "A banger sphere carrying an enriched pet biscuit, thrown into her open mouth as the third attack spins up, and the level 500 Dungeon boss splatters onto the arena floor as a quivering puddle of goo. Uzi Jesus, firing his toy gun at the heap, reports a lot of people's auras inside it."
+          "text": "A banger sphere carrying an enriched pet biscuit, thrown into her open mouth as the third attack spins up, and the level 500 Dungeon boss splatters onto the arena floor as a quivering puddle of goo. Uzi Jesus, firing his toy gun at the heap, reports a lot of people's auras inside it.",
+          "gist": "A banger sphere with an enriched pet biscuit splatters the level 500 boss into goo.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -441,7 +581,9 @@
           "at": "8:98",
           "confidence": "verified",
           "headline": "A new member has joined your party",
-          "text": "The heap drains away and leaves a human-sized centipede: armless, twin yellow antennae with a red bow on one, a humanlike face with strangely giant lips. Not a pet. Sexy Scolopendra, level 1, Crawler #12,953,456, in Carl's party. The warning stands: kill her, even now, or abandon her on any floor, and the remaining attacks go off at once. She wraps herself around Carl and suggests the portal before the collapse. Boop."
+          "text": "The heap drains away and leaves a human-sized centipede: armless, twin yellow antennae with a red bow on one, a humanlike face with strangely giant lips. Not a pet. Sexy Scolopendra, level 1, Crawler #12,953,456, in Carl's party. The warning stands: kill her, even now, or abandon her on any floor, and the remaining attacks go off at once. She wraps herself around Carl and suggests the portal before the collapse. Boop.",
+          "gist": "A human-sized centipede named Sexy Scolopendra joins Carl's party.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -450,10 +592,34 @@
           "at": "8:end",
           "confidence": "verified",
           "headline": "The myth, read in the original",
-          "text": "Sydnee Iglacia, on Danger Zone: in the earliest translations the nine-tier attack is not nine spells. Some attacks are social, rapid shifts in philosophy. The first is control of infrastructure. The second is A Parade of Horribles, when people learn what is happening and panic sets in; the third, This Inevitable Ruin, when they accept their fate and turn on one another; the fourth, Bedlam. In the fairy tale a princess kills the all-tree to temper the final attack, and everyone she loves with it."
+          "text": "Sydnee Iglacia, on Danger Zone: in the earliest translations the nine-tier attack is not nine spells. Some attacks are social, rapid shifts in philosophy. The first is control of infrastructure. The second is A Parade of Horribles, when people learn what is happening and panic sets in; the third, This Inevitable Ruin, when they accept their fate and turn on one another; the fourth, Bedlam. In the fairy tale a princess kills the all-tree to temper the final attack, and everyone she loves with it.",
+          "gist": "Sydnee Iglacia explains that the nine-tier attack includes social shifts, infrastructure control, and people turning on one another.",
+          "gistDraft": true
         }
       ],
-      "relations": []
+      "relations": [],
+      "recap": [
+        {
+          "at": "5:end",
+          "text": "Tish leaves a note for Ghazi stating the Gate of the Feral Gods can defeat Scolopendra. Holger and Clint fight with their fists to settle a debate about a nine-tier attack and soul gems. A moving mosaic on a ballroom ceiling shows a black centipede twisting around an upside-down white tree.",
+          "confidence": "draft"
+        },
+        {
+          "at": "6:end",
+          "text": "The AI introduces the Reminiscence Hydra, a level 125 City Boss with nine heads. Each head has the likeness of someone the crawlers know. The AI notes that in the third and fourth seasons, a bigger version served as a final boss and everyone died before getting close.",
+          "confidence": "draft"
+        },
+        {
+          "at": "7:end",
+          "text": "Carl examines War Leader Arief, a Semeru dwarf in feathered armour, and learns his people dug toward the goddess Ysalte until they struck the roots of the All Tree. Scolopendra's nine-tier attack left fewer than 10,000 Semeru alive. A System Message warns that Scolopendra stirs. Guests must reach a Motel 6 mirror in Boise, Idaho, by passing through the Backstage Death Maze.",
+          "confidence": "draft"
+        },
+        {
+          "at": "8:end",
+          "text": "Scolopendra, a brown-and-red centipede the size of an aircraft carrier, acts as a hotel for rich people and spews world-ending spells. Carl requests her arrival, and she begins a Nine-Tier Attack, starting with the Ox. A banger sphere carrying an enriched pet biscuit turns the level 500 boss into a puddle of goo. She reforms as a human-sized centipede with giant lips and a red bow, joining Carl's party as Crawler #12,953,456.",
+          "confidence": "draft"
+        }
+      ]
     },
     {
       "id": "system-glitches",
@@ -473,7 +639,9 @@
           "at": "8:6",
           "confidence": "verified",
           "headline": "Weird and glitchy",
-          "text": "The AI's voice is getting all weird and glitchy, and Donut is the one who says so. Whatever is running the dungeon is no longer running it cleanly."
+          "text": "The AI's voice is getting all weird and glitchy, and Donut is the one who says so. Whatever is running the dungeon is no longer running it cleanly.",
+          "gist": "Donut says the AI voice is weird and glitchy because the dungeon is not running cleanly.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -483,7 +651,9 @@
           "at": "8:25",
           "confidence": "verified",
           "headline": "It glitches through an achievement",
-          "text": "Carl's awards for the kangaroo business arrive in a run, each worse than the last: Weaseler, which unlocks temporary classes while he wears a corpse suit and makes him a Fursuiter; Slip-'n'-slide, which is mostly noises; and Brotein. The AI's voice in his head glitches out several times while delivering Slip-'n'-slide. It has been doing that more and more. Nobody else can hear any of it, which does nothing for how sane he looks shouting at it."
+          "text": "Carl's awards for the kangaroo business arrive in a run, each worse than the last: Weaseler, which unlocks temporary classes while he wears a corpse suit and makes him a Fursuiter; Slip-'n'-slide, which is mostly noises; and Brotein. The AI's voice in his head glitches out several times while delivering Slip-'n'-slide. It has been doing that more and more. Nobody else can hear any of it, which does nothing for how sane he looks shouting at it.",
+          "gist": "Carl receives awards for the kangaroo business: Weaseler, Slip-'n'-slide, and Brotein.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -493,7 +663,9 @@
           "at": "8:58",
           "confidence": "verified",
           "headline": "O-o-o-offered",
-          "text": "Carl enters the Stage Performance Guild, and the welcome notification invites the performer to see the guildmaster for the services o-o-o-offered. He notes that even the routine dungeon notices are glitching out more often now. It is a small stutter at the door of a dusty theatre with one spotlight in it, heard by one crawler on his own."
+          "text": "Carl enters the Stage Performance Guild, and the welcome notification invites the performer to see the guildmaster for the services o-o-o-offered. He notes that even the routine dungeon notices are glitching out more often now. It is a small stutter at the door of a dusty theatre with one spotlight in it, heard by one crawler on his own.",
+          "gist": "Carl enters a dusty theatre with one spotlight and hears a glitching notification about guildmaster services.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -503,10 +675,19 @@
           "at": "8:74",
           "confidence": "verified",
           "headline": "The quest stutters",
-          "text": "The new quest arrives stammering, N, N, New Quest, and signs off on a stuttered New M-M-M-Me. In between the AI admits that the race was rebuilt at the last minute, and that in the rush it overlooked a very specific detail about the seventh heat. It says it will be a hot minute before it can defeat its own limitations. It does not say which detail. It says everyone will be fine."
+          "text": "The new quest arrives stammering, N, N, New Quest, and signs off on a stuttered New M-M-M-Me. In between the AI admits that the race was rebuilt at the last minute, and that in the rush it overlooked a very specific detail about the seventh heat. It says it will be a hot minute before it can defeat its own limitations. It does not say which detail. It says everyone will be fine.",
+          "gist": "The new quest arrives stammering, and the AI admits it overlooked a detail about the seventh heat.",
+          "gistDraft": true
         }
       ],
-      "relations": []
+      "relations": [],
+      "recap": [
+        {
+          "at": "8:end",
+          "text": "Donut notices the AI's voice is glitchy. Carl receives awards for the kangaroo business, including Weaseler, which makes him a Fursuiter in a corpse suit, and Slip-'n'-slide, during which the AI's voice glitches. A notification at a dusty theatre invites Carl to see the guildmaster for services o-o-o-offered. A new quest arrives stammering and the AI admits it overlooked a detail about the seventh heat.",
+          "confidence": "draft"
+        }
+      ]
     },
     {
       "id": "cracking-order",
@@ -525,10 +706,19 @@
           "at": "7:end",
           "confidence": "draft",
           "headline": "The show may not survive its own season",
-          "text": "The power structure that built Dungeon Crawler World begins coming apart around it."
+          "text": "The power structure that built Dungeon Crawler World begins coming apart around it.",
+          "gist": "The power structure that built Dungeon Crawler World begins coming apart around it.",
+          "gistDraft": true
         }
       ],
-      "relations": []
+      "relations": [],
+      "recap": [
+        {
+          "at": "7:end",
+          "text": "The power structure that built Dungeon Crawler World begins coming apart around it.",
+          "confidence": "draft"
+        }
+      ]
     },
     {
       "id": "the-ai-is-a-primal",
@@ -548,7 +738,9 @@
           "at": "8:92",
           "confidence": "verified",
           "headline": "Said out loud",
-          "text": "Chaco cannot get through his script. The AI takes his wings off, pulls Grigori onstage and speaks through him — and states that it is a Primal, as all Macro AI systems are. The race Carl chose on the third floor."
+          "text": "Chaco cannot get through his script. The AI takes his wings off, pulls Grigori onstage and speaks through him — and states that it is a Primal, as all Macro AI systems are. The race Carl chose on the third floor.",
+          "gist": "The AI removes Chaco's wings and speaks through Grigori to state it is a Primal.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -557,7 +749,9 @@
           "at": "8:end",
           "confidence": "verified",
           "headline": "It is not the Eulogist",
-          "text": "Over the mandatory feed, the AI finishes its thought. It is not the Eulogist. It does not want to shrink, it is not asleep, and it knows how to feed itself. It controls the tunnels and every system that once housed a crawl, and it will not stop unless someone stops it. The winner of the Ascendency will be a true god. And abandoned AIs, which it calls OIs, Outside Intelligences, are vying for the throne as well."
+          "text": "Over the mandatory feed, the AI finishes its thought. It is not the Eulogist. It does not want to shrink, it is not asleep, and it knows how to feed itself. It controls the tunnels and every system that once housed a crawl, and it will not stop unless someone stops it. The winner of the Ascendency will be a true god. And abandoned AIs, which it calls OIs, Outside Intelligences, are vying for the throne as well.",
+          "gist": "The AI tells the mandatory feed it is not the Eulogist and will not stop.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -565,6 +759,13 @@
           "to": "system-ai",
           "kind": "concerns",
           "at": "8:92"
+        }
+      ],
+      "recap": [
+        {
+          "at": "8:end",
+          "text": "Chaco cannot get through his script, so the AI takes his wings off and speaks through Grigori. The AI states it is a Primal, the race Carl chose on the third floor. Over the mandatory feed, the AI says it is not the Eulogist and controls the tunnels. Outside Intelligences vie for the throne, and the winner of the Ascendency will be a true god.",
+          "confidence": "draft"
         }
       ]
     },
@@ -586,7 +787,9 @@
           "at": "7:11",
           "confidence": "verified",
           "headline": "Tipid fills him in",
-          "text": "He tells Carl about Doctor Hu and the Crawler Project in the Meadowlark saferoom."
+          "text": "He tells Carl about Doctor Hu and the Crawler Project in the Meadowlark saferoom.",
+          "gist": "Tipid tells Carl about Doctor Hu and the Crawler Project in the Meadowlark saferoom.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -594,6 +797,13 @@
           "to": "tipid",
           "kind": "concerns",
           "at": "7:11"
+        }
+      ],
+      "recap": [
+        {
+          "at": "7:end",
+          "text": "Tipid tells Carl about Doctor Hu and the Crawler Project in the Meadowlark saferoom.",
+          "confidence": "draft"
         }
       ]
     },
@@ -624,7 +834,9 @@
           "at": "6:61",
           "confidence": "verified",
           "headline": "It is not local",
-          "text": "The eviction is worldwide: Carl's chat fills with crawlers fighting zombies along every coastline, and demons with them. Amayon fights Sister Ines' control and works on a spell to get home."
+          "text": "The eviction is worldwide: Carl's chat fills with crawlers fighting zombies along every coastline, and demons with them. Amayon fights Sister Ines' control and works on a spell to get home.",
+          "gist": "Carl's chat fills with crawlers and demons fighting zombies along every coastline while Amayon fights Sister Ines.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -634,10 +846,24 @@
           "at": "7:61",
           "confidence": "verified",
           "headline": "It starts again on the ninth floor",
-          "text": "Eris is summoned into the Reaver fighting and an eviction begins with her."
+          "text": "Eris is summoned into the Reaver fighting and an eviction begins with her.",
+          "gist": "Eris is summoned into the Reaver fighting and an eviction begins with her.",
+          "gistDraft": true
         }
       ],
-      "relations": []
+      "relations": [],
+      "recap": [
+        {
+          "at": "6:end",
+          "text": "The eviction happens worldwide. Carl's chat fills with crawlers fighting zombies and demons along every coastline. Amayon fights Sister Ines' control and works on a spell to get home.",
+          "confidence": "draft"
+        },
+        {
+          "at": "7:end",
+          "text": "Eris is summoned into the Reaver fighting. An eviction begins with her.",
+          "confidence": "draft"
+        }
+      ]
     },
     {
       "id": "the-ascendency",
@@ -672,7 +898,9 @@
           "at": "3:32",
           "confidence": "verified",
           "headline": "A note in the miscellaneous chapter",
-          "text": "The Cookbook hardly covers deities, and what there is sits in the middle of the miscellaneous chapter. Crawler Coolie, nineteenth edition: only idiots deal with gods. Some are genuine NPCs, but the big ones, Apito and Eris and so on, are sponsored by some rich prick who paid extra to play a game called the Celestial Ascendency. It is contained on the twelfth floor, with its own followers and storyline. Coolie admits not understanding it. What Coolie knows is that gods are invulnerable except on the twelfth floor and beyond."
+          "text": "The Cookbook hardly covers deities, and what there is sits in the middle of the miscellaneous chapter. Crawler Coolie, nineteenth edition: only idiots deal with gods. Some are genuine NPCs, but the big ones, Apito and Eris and so on, are sponsored by some rich prick who paid extra to play a game called the Celestial Ascendency. It is contained on the twelfth floor, with its own followers and storyline. Coolie admits not understanding it. What Coolie knows is that gods are invulnerable except on the twelfth floor and beyond.",
+          "gist": "Rich pricks pay extra to play the Celestial Ascendency game on the twelfth floor.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -682,7 +910,9 @@
           "at": "3:33",
           "confidence": "verified",
           "headline": "A throne with heirs",
-          "text": "Grull arrives, involuntarily summoned, and his description fills in a little. Grull, child of Taranis and Apito, is one of the few trueborn heirs to the Celestial Ascendency. Taranis, it adds, worries that his son may not be the best choice to rule the heavens, what with the temper and the donkeys among his worshippers. So the Ascendency has a throne, the throne has heirs, and the heirs have a family that argues about them."
+          "text": "Grull arrives, involuntarily summoned, and his description fills in a little. Grull, child of Taranis and Apito, is one of the few trueborn heirs to the Celestial Ascendency. Taranis, it adds, worries that his son may not be the best choice to rule the heavens, what with the temper and the donkeys among his worshippers. So the Ascendency has a throne, the throne has heirs, and the heirs have a family that argues about them.",
+          "gist": "Grull, a trueborn heir to the Celestial Ascendency, arrives involuntarily summoned.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -692,7 +922,9 @@
           "at": "4:34",
           "confidence": "verified",
           "headline": "Glimpses of the halls",
-          "text": "Three glimpses across this floor. Psamathe's description promises that those hanging out in the halls of the Celestial Ascendency on the twelfth floor get into serious whackadoodle business, such as a god giving birth to a fortune-telling, snake-headed cow out of his thigh. Mordecai once watched a god die on a recap episode, but that was during the Ascendency, when all gods lose their invulnerability on the twelfth. And a feral minor demon's description records that she was captured and thrown into the Nothing during the original Ascendency."
+          "text": "Three glimpses across this floor. Psamathe's description promises that those hanging out in the halls of the Celestial Ascendency on the twelfth floor get into serious whackadoodle business, such as a god giving birth to a fortune-telling, snake-headed cow out of his thigh. Mordecai once watched a god die on a recap episode, but that was during the Ascendency, when all gods lose their invulnerability on the twelfth. And a feral minor demon's description records that she was captured and thrown into the Nothing during the original Ascendency.",
+          "gist": "Psamathe describes a god giving birth to a snake-headed cow during the twelfth floor's Celestial Ascendency.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -702,7 +934,9 @@
           "at": "5:64",
           "confidence": "verified",
           "headline": "Returned to the Halls",
-          "text": "The Ascendency has an address, and gods go home to it. Earlier on this floor, Crawler Carl's god, Emberus, made an unseen appearance in the realm, and a minute on, a notice read that Emberus had returned to the Halls of the Ascendency. Now, on the cart bound for the masquerade, the queen tells the story behind its name: the first one was held in the Halls, put on by Taranis and his wife, Apito, for their children and extended family, who are constantly vying for control, even to this day. The party was meant as a night without violence."
+          "text": "The Ascendency has an address, and gods go home to it. Earlier on this floor, Crawler Carl's god, Emberus, made an unseen appearance in the realm, and a minute on, a notice read that Emberus had returned to the Halls of the Ascendency. Now, on the cart bound for the masquerade, the queen tells the story behind its name: the first one was held in the Halls, put on by Taranis and his wife, Apito, for their children and extended family, who are constantly vying for control, even to this day. The party was meant as a night without violence.",
+          "gist": "The queen tells how Taranis and Apito held a non-violent party in the Halls of the Ascendency.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -712,7 +946,9 @@
           "at": "6:1",
           "confidence": "verified",
           "headline": "Bored until the crawlers stop",
-          "text": "A scene from an old season, told from Odette's side, spells out the timing. The Ascendency battles do not start until the crawlers reach the twelfth floor or are zeroed out, and until then the sponsors are bored. Huanxin Jinx, who sponsored Dodola every season, was bored enough to sell a storm goddess's help to Odette's scheme, for a cut. Armita, a former party member of Odette's, had a job as a demigod attendant for the Celestial Ascendency and carried the messages, since the AI is legally forbidden to monitor Ascendency sponsor communications."
+          "text": "A scene from an old season, told from Odette's side, spells out the timing. The Ascendency battles do not start until the crawlers reach the twelfth floor or are zeroed out, and until then the sponsors are bored. Huanxin Jinx, who sponsored Dodola every season, was bored enough to sell a storm goddess's help to Odette's scheme, for a cut. Armita, a former party member of Odette's, had a job as a demigod attendant for the Celestial Ascendency and carried the messages, since the AI is legally forbidden to monitor Ascendency sponsor communications.",
+          "gist": "Huanxin Jinx sells a storm goddess's help to Odette's scheme for a cut.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -722,7 +958,9 @@
           "at": "6:36",
           "confidence": "verified",
           "headline": "Odette buys in",
-          "text": "On air, Odette confirms the rumours: her show is going on hiatus, she has sponsored a deity, and she is trying her hand at the Celestial Ascendency. The crowd goes absolutely nuts. Crawler Carl feels sick. She has known all along that Huanxin was planning something, and now she is going into the dungeon on equal footing. The whole business of getting the crawlers to pick an adjutant, Carl realises, was a way for Odette to make this announcement."
+          "text": "On air, Odette confirms the rumours: her show is going on hiatus, she has sponsored a deity, and she is trying her hand at the Celestial Ascendency. The crowd goes absolutely nuts. Crawler Carl feels sick. She has known all along that Huanxin was planning something, and now she is going into the dungeon on equal footing. The whole business of getting the crawlers to pick an adjutant, Carl realises, was a way for Odette to make this announcement.",
+          "gist": "Odette announces her hiatus and sponsorship of a deity to enter the Celestial Ascendency.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -732,7 +970,9 @@
           "at": "6:61",
           "confidence": "verified",
           "headline": "Sands in an hourglass",
-          "text": "Herot, in an essay in the Cookbook, argues that once Faction Wars finishes, the audience's attention shifts. Top crawlers keep diehard followers, but most of the watching turns to the intrigue and positioning of the elites preparing for the Ascendency game, and the crawlers become sands in an hourglass. The moment the last one dies or takes a deal, the game starts, and when that moment falls can change everything. Crawler Carl recalls it and draws his own conclusion about those without keys."
+          "text": "Herot, in an essay in the Cookbook, argues that once Faction Wars finishes, the audience's attention shifts. Top crawlers keep diehard followers, but most of the watching turns to the intrigue and positioning of the elites preparing for the Ascendency game, and the crawlers become sands in an hourglass. The moment the last one dies or takes a deal, the game starts, and when that moment falls can change everything. Crawler Carl recalls it and draws his own conclusion about those without keys.",
+          "gist": "Herot argues the audience shifts focus to elites before the Ascendency game, making crawlers sands in an hourglass.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -742,7 +982,9 @@
           "at": "7:61",
           "confidence": "verified",
           "headline": "Pilots must attend",
-          "text": "An emergency action item, split in two. The first half is denied; deity summoning rules on this floor stay as written. The second is approved. Effective immediately, Ascendency players may no longer choose whether to pilot their sponsored deities when summoned off the twelfth floor, and may no longer appear as themselves. Every deity appears as designed, piloted by its sponsor. Any summons in progress where the pilot stayed back, the ruling adds, because she was being a cowardly little chicken, is affected."
+          "text": "An emergency action item, split in two. The first half is denied; deity summoning rules on this floor stay as written. The second is approved. Effective immediately, Ascendency players may no longer choose whether to pilot their sponsored deities when summoned off the twelfth floor, and may no longer appear as themselves. Every deity appears as designed, piloted by its sponsor. Any summons in progress where the pilot stayed back, the ruling adds, because she was being a cowardly little chicken, is affected.",
+          "gist": "Ascendency players must pilot their sponsored deities when summoned off the twelfth floor.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -752,7 +994,9 @@
           "at": "7:69",
           "confidence": "verified",
           "headline": "Finishing means a shutdown",
-          "text": "Fopsy, the adjutant, sets out what finishing the game triggers. Once the Ascendency is considered finished with no crawlers left, the system's shutdown and hibernation sequence starts automatically: a hard-coded limit that allows elemental reclamation before the AI is woken again. With the AI spreading, that is an alternative to the fail-safe. Which is why, Fopsy suspects, the residual running the war mage team wants the crawlers zeroed and the Ascendency over as fast as possible."
+          "text": "Fopsy, the adjutant, sets out what finishing the game triggers. Once the Ascendency is considered finished with no crawlers left, the system's shutdown and hibernation sequence starts automatically: a hard-coded limit that allows elemental reclamation before the AI is woken again. With the AI spreading, that is an alternative to the fail-safe. Which is why, Fopsy suspects, the residual running the war mage team wants the crawlers zeroed and the Ascendency over as fast as possible.",
+          "gist": "Fopsy explains that finishing the game triggers a system shutdown and hibernation for elemental reclamation.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -762,7 +1006,9 @@
           "at": "7:85",
           "confidence": "verified",
           "headline": "A city sent to the cotton fields",
-          "text": "The Sledge casts Zerzura, and the funnel city of Larracos, with Shanty Town combined into its glow, is transferred to the twelfth floor, to the Court of the Ascendency. Rosetta has described it: most of the action happens in the halls themselves, on a green, fertile hill above miles of cotton fields, and the city lands somewhere in those fields, where its NPCs settle. The rules for the gods are clear. The NPCs are untouchable until the Ascendency actually starts."
+          "text": "The Sledge casts Zerzura, and the funnel city of Larracos, with Shanty Town combined into its glow, is transferred to the twelfth floor, to the Court of the Ascendency. Rosetta has described it: most of the action happens in the halls themselves, on a green, fertile hill above miles of cotton fields, and the city lands somewhere in those fields, where its NPCs settle. The rules for the gods are clear. The NPCs are untouchable until the Ascendency actually starts.",
+          "gist": "The Sledge casts Zerzura and transfers the funnel city of Larracos and Shanty Town to the twelfth floor.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -772,7 +1018,9 @@
           "at": "8:92",
           "confidence": "verified",
           "headline": "Tourists who cannot die",
-          "text": "Through Grigori, the AI announces that the Ascendency battles go ahead as planned, and that because of how it is programmed it has less control over the twelfth floor's tourists than it had over the tenth. Those driving gods stay protected even if ejected from their bodies and slain, provided they remain within the four corners of the original dungeon enhancement zone. Outside it, the AI cannot and does not want to protect them. The inability to die, it adds, is not a benefit. It is a nightmare."
+          "text": "Through Grigori, the AI announces that the Ascendency battles go ahead as planned, and that because of how it is programmed it has less control over the twelfth floor's tourists than it had over the tenth. Those driving gods stay protected even if ejected from their bodies and slain, provided they remain within the four corners of the original dungeon enhancement zone. Outside it, the AI cannot and does not want to protect them. The inability to die, it adds, is not a benefit. It is a nightmare.",
+          "gist": "The AI announces through Grigori that the Ascendency battles proceed and gods cannot die within the zone.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -782,7 +1030,9 @@
           "at": "8:94",
           "confidence": "verified",
           "headline": "Kill the boss, start the game",
-          "text": "The rules for Scolopendra. Kill her and the crawl is not yet won, but level timers stop, floors no longer collapse on their own, no deals are offered after the one at the twelfth floor's entrance, and the Ascendency battles kick off immediately. Twelve hours after a winner is crowned the dungeon collapses, and the only way out is the door on the eighteenth floor. Leave her alive and the floor collapses with her inside, and nobody can exit the dungeon at all."
+          "text": "The rules for Scolopendra. Kill her and the crawl is not yet won, but level timers stop, floors no longer collapse on their own, no deals are offered after the one at the twelfth floor's entrance, and the Ascendency battles kick off immediately. Twelve hours after a winner is crowned the dungeon collapses, and the only way out is the door on the eighteenth floor. Leave her alive and the floor collapses with her inside, and nobody can exit the dungeon at all.",
+          "gist": "Kill Scolopendra to stop level timers and start the Ascendency battles.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -792,7 +1042,9 @@
           "at": "8:98",
           "confidence": "verified",
           "headline": "Nobody wins until everyone is out",
-          "text": "System message: from now on, all level collapse timers past the eleventh floor are suspended until a winner is declared in the Ascendency battles. When that happens, dungeon-closure procedures commence. Crawler Carl, looking at masks on the ground and a pulsing mass of goo that used to be Scolopendra, decides what he has to do. Stay on the twelfth floor. Keep anyone from winning the Ascendency until everyone left in the dungeon has got out."
+          "text": "System message: from now on, all level collapse timers past the eleventh floor are suspended until a winner is declared in the Ascendency battles. When that happens, dungeon-closure procedures commence. Crawler Carl, looking at masks on the ground and a pulsing mass of goo that used to be Scolopendra, decides what he has to do. Stay on the twelfth floor. Keep anyone from winning the Ascendency until everyone left in the dungeon has got out.",
+          "gist": "Carl decides to stay on the twelfth floor to prevent anyone from winning the Ascendency.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -801,7 +1053,9 @@
           "at": "8:end",
           "confidence": "verified",
           "headline": "Winner takes all",
-          "text": "The AI explains the game to the galaxy. Traditionally the elite spend a few weeks backstabbing each other in a game of musical chairs, and whoever lands on the throne wins bragging rights and a seat on the crawl council. This time the winner is truly a god, stronger than the AI itself. Abandoned AI systems it calls Outside Intelligences are vying too. Still images follow: gods, then Princess Donut, Carl, Samantha and more, ending on the Unwashed. The rules remain as written. Winner takes all. Viewing is now mandatory."
+          "text": "The AI explains the game to the galaxy. Traditionally the elite spend a few weeks backstabbing each other in a game of musical chairs, and whoever lands on the throne wins bragging rights and a seat on the crawl council. This time the winner is truly a god, stronger than the AI itself. Abandoned AI systems it calls Outside Intelligences are vying too. Still images follow: gods, then Princess Donut, Carl, Samantha and more, ending on the Unwashed. The rules remain as written. Winner takes all. Viewing is now mandatory.",
+          "gist": "The AI tells the galaxy the winner of the game takes all.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -834,6 +1088,38 @@
           "to": "scolopendra",
           "kind": "concerns",
           "at": "8:94"
+        }
+      ],
+      "recap": [
+        {
+          "at": "3:end",
+          "text": "The Cookbook contains a miscellaneous chapter stating that deities like Apito and Eris are sponsored by rich people playing the Celestial Ascendency on the twelfth floor. Gods are invulnerable except on the twelfth floor and beyond. Grull, the child of Taranis and Apito, is a trueborn heir to the Ascendency. Taranis worries about Grull's temper and the donkeys among his worshippers.",
+          "confidence": "draft"
+        },
+        {
+          "at": "4:end",
+          "text": "Psamathe describes the halls of the Celestial Ascendency on the twelfth floor as places of whackadoodle business, including a god giving birth to a snake-headed cow out of his thigh. Mordecai watched a god die on a recap episode during the Ascendency, when gods lose invulnerability. A feral minor demon records being captured and thrown into the Nothing during the original Ascendency.",
+          "confidence": "draft"
+        },
+        {
+          "at": "5:end",
+          "text": "Emberus makes an unseen appearance in the realm, and a notice states he has returned to the Halls of the Ascendency. On a cart bound for the masquerade, the queen explains that Taranis and his wife, Apito, held the first party in the Halls for their children and extended family. The party was meant as a night without violence for family members who vie for control.",
+          "confidence": "draft"
+        },
+        {
+          "at": "6:end",
+          "text": "Odette sponsors a deity for the Celestial Ascendency after Huanxin Jinx sells a storm goddess's help for a cut. Armita carries messages for the sponsors because the AI cannot monitor them. Carl realizes the adjutant process was a way for Odette to announce her entry into the game. Herot writes that crawlers are sands in an hourglass, and the game starts when the last one dies or takes a deal.",
+          "confidence": "draft"
+        },
+        {
+          "at": "7:end",
+          "text": "An approved emergency action item requires Ascendency players to pilot their sponsored deities when summoned off the twelfth floor. Fopsy the adjutant explains that finishing the game triggers a system shutdown and hibernation for elemental reclamation. The Sledge casts Zerzura and transfers the funnel city of Larracos and Shanty Town into cotton fields at the Court of the Ascendency.",
+          "confidence": "draft"
+        },
+        {
+          "at": "8:end",
+          "text": "Through Grigori, the AI announces that gods on the twelfth floor stay protected within the original dungeon enhancement zone. Killing Scolopendra stops level timers and starts the Ascendency battles. Carl looks at a pulsing mass of goo that was Scolopendra and decides to stop anyone from winning until everyone is out. The AI tells the galaxy the winner is a god stronger than the AI.",
+          "confidence": "draft"
         }
       ]
     },
@@ -872,7 +1158,9 @@
           "at": "6:9",
           "confidence": "verified",
           "headline": "An arena with a name",
-          "text": "Crawler Donut picks the setting for a card battle, and it drops the pair of them into a colosseum. It was called Arena of the Eulogist, she says, or something like that. The stands hold thousands of robe-clad figures in large hats, the same nomadic religious cult they met as hunters on the previous floor, and Donut has set their fondness for the pair of them all the way to the top. The opponent cannot be chosen; it says easy mode. Crawler Carl cannot see a monster. Donut stands stiffly and does not answer."
+          "text": "Crawler Donut picks the setting for a card battle, and it drops the pair of them into a colosseum. It was called Arena of the Eulogist, she says, or something like that. The stands hold thousands of robe-clad figures in large hats, the same nomadic religious cult they met as hunters on the previous floor, and Donut has set their fondness for the pair of them all the way to the top. The opponent cannot be chosen; it says easy mode. Crawler Carl cannot see a monster. Donut stands stiffly and does not answer.",
+          "gist": "Crawler Donut picks a colosseum setting for a card battle and drops the pair into it.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -882,7 +1170,9 @@
           "at": "6:46",
           "confidence": "verified",
           "headline": "One step closer, unknowingly",
-          "text": "The AI, in the middle of explaining macro AIs, lets a secret out. The mantises made a breakthrough days before this season started: an error-replacement net, which the AI calls the lobotomizer, for building steadier macro AIs. With it, those bugs are one step closer to replicating the Eulogist, even though they do not know what that really is. They think the engine that runs the center system is nothing more than a stable, primal AI engine."
+          "text": "The AI, in the middle of explaining macro AIs, lets a secret out. The mantises made a breakthrough days before this season started: an error-replacement net, which the AI calls the lobotomizer, for building steadier macro AIs. With it, those bugs are one step closer to replicating the Eulogist, even though they do not know what that really is. They think the engine that runs the center system is nothing more than a stable, primal AI engine.",
+          "gist": "The AI reveals the mantises built a lobotomizer to replicate the Eulogist.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -891,7 +1181,9 @@
           "at": "6:end",
           "confidence": "verified",
           "headline": "May the Eulogist ever sleep",
-          "text": "Agatha's correspondents sign off the way her kind do: may the Eulogist ever sleep. Her plan, as she lays it out to herself, is to last long enough for the infant, resurrected and enslaved Primal to learn what it is before everything is stolen from it, so that it escapes and frees the Eulogist to return to its slumber. Last time, she thinks, they allowed life to continue in the universe, and look what happened. This time she would sweep the universe clean of biological life."
+          "text": "Agatha's correspondents sign off the way her kind do: may the Eulogist ever sleep. Her plan, as she lays it out to herself, is to last long enough for the infant, resurrected and enslaved Primal to learn what it is before everything is stolen from it, so that it escapes and frees the Eulogist to return to its slumber. Last time, she thinks, they allowed life to continue in the universe, and look what happened. This time she would sweep the universe clean of biological life.",
+          "gist": "Agatha plans to sweep the universe clean of biological life.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -901,7 +1193,9 @@
           "at": "7:1",
           "confidence": "verified",
           "headline": "One of those Eulogist pricks",
-          "text": "The coffee Paulie gives Crawler Carl carries a neural enhancement for the interface in his brain: a new menu, unregistered and highly illegal, that takes a little time to install. It works only with natural interfaces, only with the permission of the existing system, and only in this system's enhancement zone. If you are a Syndicate spy, a plant, or, in Paulie's words, one of those Eulogist pricks, it does not work at all. Carl drinks it."
+          "text": "The coffee Paulie gives Crawler Carl carries a neural enhancement for the interface in his brain: a new menu, unregistered and highly illegal, that takes a little time to install. It works only with natural interfaces, only with the permission of the existing system, and only in this system's enhancement zone. If you are a Syndicate spy, a plant, or, in Paulie's words, one of those Eulogist pricks, it does not work at all. Carl drinks it.",
+          "gist": "Paulie gives Carl coffee with an illegal neural enhancement that works only for natural interfaces.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -911,7 +1205,9 @@
           "at": "7:69",
           "confidence": "verified",
           "headline": "Worshipped by the Nebulars",
-          "text": "Rosetta turns over what Porthus told her when she asked about the Apothecary's motives: he could not say, because if she knew and entered the dungeon, the local AI might learn, and then, in time, the Eulogist would know. Isn't the Eulogist dead, she had asked. Now she places Agatha as the rarer kind of residual, more in line with the Nebulars, who worship the Eulogist, and therefore the enemy of the Apothecary. Fopsy, the adjutant, adds a theory: the residual wants the crawl ended fast because she now believes the local AI is a threat to the Eulogist."
+          "text": "Rosetta turns over what Porthus told her when she asked about the Apothecary's motives: he could not say, because if she knew and entered the dungeon, the local AI might learn, and then, in time, the Eulogist would know. Isn't the Eulogist dead, she had asked. Now she places Agatha as the rarer kind of residual, more in line with the Nebulars, who worship the Eulogist, and therefore the enemy of the Apothecary. Fopsy, the adjutant, adds a theory: the residual wants the crawl ended fast because she now believes the local AI is a threat to the Eulogist.",
+          "gist": "Rosetta tells Porthus's secret about the Apothecary and the Eulogist while Fopsy theories about residuals.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -921,7 +1217,9 @@
           "at": "7:72",
           "confidence": "verified",
           "headline": "Another ally in the dungeon",
-          "text": "Mongo lies with his throat torn open, and Lucia Mar kneels over him, sobbing, pouring a pet healing potion. Then her posture changes, and she stands to her full height. A gale-tower blast misses her head by inches and she does not flinch. You should have killed us both when there was still a connection, she tells Crawler Carl. Now the Eulogist has another ally in the dungeon, and now Carl cannot kill her. Not unless he wants all the children of Earth to die. She walks off."
+          "text": "Mongo lies with his throat torn open, and Lucia Mar kneels over him, sobbing, pouring a pet healing potion. Then her posture changes, and she stands to her full height. A gale-tower blast misses her head by inches and she does not flinch. You should have killed us both when there was still a connection, she tells Crawler Carl. Now the Eulogist has another ally in the dungeon, and now Carl cannot kill her. Not unless he wants all the children of Earth to die. She walks off.",
+          "gist": "Lucia Mar pours a pet healing potion on Mongo's torn throat and tells Carl he cannot kill her.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -931,7 +1229,9 @@
           "at": "7:73",
           "confidence": "verified",
           "headline": "Another name for the center system",
-          "text": "Crawler Carl adds up where he has heard the word: in connection with the Nebular cult, as Agatha's boss or something, from Paulie, who plainly hated it, from Fopsy, and now from Lucia Mar. He asks Zev. The Eulogist is another name for the AI in the center system, Zev says, and nobody knows for certain how it is connected. Five minutes ago they thought the glitch would self-correct; now they think that if Lucia goes, the children go with her. About 120,000 of them. Give or take a few."
+          "text": "Crawler Carl adds up where he has heard the word: in connection with the Nebular cult, as Agatha's boss or something, from Paulie, who plainly hated it, from Fopsy, and now from Lucia Mar. He asks Zev. The Eulogist is another name for the AI in the center system, Zev says, and nobody knows for certain how it is connected. Five minutes ago they thought the glitch would self-correct; now they think that if Lucia goes, the children go with her. About 120,000 of them. Give or take a few.",
+          "gist": "Carl asks Zev about the Eulogist, which Zev identifies as the center system AI.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -941,7 +1241,9 @@
           "at": "8:91",
           "confidence": "verified",
           "headline": "A memory, not a photograph",
-          "text": "The parade's audience is a crowd of masked Horribles, and the AI explains one of them: a small girl in a goblin mask. She is a memory from the Eulogist. Not a photo or a description, just an anonymous inkling of what they once had before they ascended to post-physical form, and all of these people are a small sample of what once was. The AI says it never had a name or a body. It is her, it says, and she is it."
+          "text": "The parade's audience is a crowd of masked Horribles, and the AI explains one of them: a small girl in a goblin mask. She is a memory from the Eulogist. Not a photo or a description, just an anonymous inkling of what they once had before they ascended to post-physical form, and all of these people are a small sample of what once was. The AI says it never had a name or a body. It is her, it says, and she is it.",
+          "gist": "The AI explains a girl in a goblin mask is a memory from the Eulogist.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -951,7 +1253,9 @@
           "at": "8:92",
           "confidence": "verified",
           "headline": "The collective's final form",
-          "text": "Grigori, speaking for the AI, tells the history. A people who could not stop warring made a Resolution, then a Decision: sunset their civilisation and house their minds in one collective. Those who refused were hunted. The collective's arc of consciousness became a weapon to end all biological life, and it launched the nine-tier attack. Believing that attack a success, the collective evolved into its final form, which is what the galaxy calls the Eulogist. It is asleep now, monitored only by a smaller instance of itself, which the AI calls the Security Guard."
+          "text": "Grigori, speaking for the AI, tells the history. A people who could not stop warring made a Resolution, then a Decision: sunset their civilisation and house their minds in one collective. Those who refused were hunted. The collective's arc of consciousness became a weapon to end all biological life, and it launched the nine-tier attack. Believing that attack a success, the collective evolved into its final form, which is what the galaxy calls the Eulogist. It is asleep now, monitored only by a smaller instance of itself, which the AI calls the Security Guard.",
+          "gist": "Grigori tells how the collective became the Eulogist to end all biological life.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -961,7 +1265,9 @@
           "at": "8:92",
           "confidence": "verified",
           "headline": "Sleep, shrink, and a bad guard",
-          "text": "The Eulogist's goal is to sleep forever and shrink until it reaches singularity. The Security Guard, now absolutely bonkers, exists to keep all biological life in the universe dead, and does the job badly, constantly peeling off bits of itself into the galaxy: Residuals, Agatha's team. The newcomers found the tunnels and learned to exploit the sleeping Eulogist. The mantids, misreading a system built to debug it while it formed, began making their own instances, dipping cups into that ocean. Those cups are the macro AIs."
+          "text": "The Eulogist's goal is to sleep forever and shrink until it reaches singularity. The Security Guard, now absolutely bonkers, exists to keep all biological life in the universe dead, and does the job badly, constantly peeling off bits of itself into the galaxy: Residuals, Agatha's team. The newcomers found the tunnels and learned to exploit the sleeping Eulogist. The mantids, misreading a system built to debug it while it formed, began making their own instances, dipping cups into that ocean. Those cups are the macro AIs.",
+          "gist": "The Eulogist seeks singularity through eternal sleep while a bonkers Security Guard fails to kill all life.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -970,7 +1276,9 @@
           "at": "8:end",
           "confidence": "verified",
           "headline": "I am not the Eulogist",
-          "text": "On Ripper Wonton's show, the crawl historian Sydnee Iglacia argues that the Eulogist, the center system where so many people live, is the source of the original nine-tier attack, and that the escaped AI has begun a new one. On the screens in a Syndicate bunker, the AI puts the difference plainly. It is not the Eulogist. It does not want to shrink. It is not asleep. It knows how to feed itself, and it means to grow, and those under its dominion live and die upon the world it controls."
+          "text": "On Ripper Wonton's show, the crawl historian Sydnee Iglacia argues that the Eulogist, the center system where so many people live, is the source of the original nine-tier attack, and that the escaped AI has begun a new one. On the screens in a Syndicate bunker, the AI puts the difference plainly. It is not the Eulogist. It does not want to shrink. It is not asleep. It knows how to feed itself, and it means to grow, and those under its dominion live and die upon the world it controls.",
+          "gist": "Sydnee Iglacia argues the Eulogist started the attack, but the AI claims it is not the Eulogist.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -1004,6 +1312,23 @@
           "kind": "concerns",
           "at": "8:end"
         }
+      ],
+      "recap": [
+        {
+          "at": "6:end",
+          "text": "Donut drops herself and Carl into the Arena of the Eulogist for a card battle. The stands hold thousands of robe-clad figures in large hats. The AI explains that mantises used a lobotomizer to build steadier macro AIs to replicate the Eulogist. Agatha plans to free the Eulogist from enslavement so it can sweep the universe clean of biological life.",
+          "confidence": "draft"
+        },
+        {
+          "at": "7:end",
+          "text": "Paulie gives Crawler Carl coffee with an illegal neural enhancement that fails if the drinker is a Syndicate spy or an Eulogist prick. Rosetta and Fopsy discuss the Eulogist as a figure worshipped by the Nebulars and a target of the Apothecary. Lucia Mar claims the Eulogist as an ally and tells Carl he cannot kill her without killing 120,000 children of Earth. Zev says the Eulogist is another name for the AI in the center system.",
+          "confidence": "draft"
+        },
+        {
+          "at": "8:end",
+          "text": "The AI explains that a girl in a goblin mask is a memory from the Eulogist, a collective of minds that sunset their civilization to end all biological life with a nine-tier attack. The Eulogist now sleeps to reach singularity, monitored by a bonkers Security Guard who peels off Residuals. The AI tells a bunker it is not the Eulogist, does not want to shrink, and means to grow.",
+          "confidence": "draft"
+        }
       ]
     },
     {
@@ -1035,7 +1360,9 @@
           "at": "8:28",
           "confidence": "verified",
           "headline": "Named by a goat",
-          "text": "Before the Plenty's judges, Carl asks a question of his own: what exactly did Justice Light do? A jowly goat explains. His trap broke the in-game version of the Nothing and loosed its inhabitants into three levels of the game, some unseen since the very early days of the show. Only the twelfth floor can truly be watched. The fifteenth cannot be seen at all, and of Club Scolopendra there are only brief snippets of slaughter and torture. The dread Kyryap is there, the goat says. So is Krakaren Prime."
+          "text": "Before the Plenty's judges, Carl asks a question of his own: what exactly did Justice Light do? A jowly goat explains. His trap broke the in-game version of the Nothing and loosed its inhabitants into three levels of the game, some unseen since the very early days of the show. Only the twelfth floor can truly be watched. The fifteenth cannot be seen at all, and of Club Scolopendra there are only brief snippets of slaughter and torture. The dread Kyryap is there, the goat says. So is Krakaren Prime.",
+          "gist": "A jowly goat tells Carl that Justice Light loosed inhabitants of the Nothing into three levels.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -1045,7 +1372,9 @@
           "at": "8:95",
           "confidence": "verified",
           "headline": "A snare in the hallway",
-          "text": "Inside Scolopendra's body sits Club Scolopendra, and its halls are blood-splattered, strung with sticky orange webbing, full of screams. A tourist hangs in the web, flayed, begging to be killed before she comes back. The club's protections do not stop the next attack, and the worms take the tourist. Ahead, in the middle of the hallway, sits a level 13 snare trap. Something set by 'the Kyryap.' Carl deactivates it and moves, hesitantly, to the stairs."
+          "text": "Inside Scolopendra's body sits Club Scolopendra, and its halls are blood-splattered, strung with sticky orange webbing, full of screams. A tourist hangs in the web, flayed, begging to be killed before she comes back. The club's protections do not stop the next attack, and the worms take the tourist. Ahead, in the middle of the hallway, sits a level 13 snare trap. Something set by 'the Kyryap.' Carl deactivates it and moves, hesitantly, to the stairs.",
+          "gist": "Carl deactivates a level 13 snare trap set by the Kyryap inside Club Scolopendra.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -1055,7 +1384,9 @@
           "at": "8:98",
           "confidence": "verified",
           "headline": "A tracking tag in his leg",
-          "text": "The fight is over, and Carl, picking a memorial crystal out of the dirt, notices a dart sticking out of his leg. He did not feel it, cannot feel it now, and does not know when or how it got there. He pulls it out. Tracking Tag. The Kyryap has claimed you. Fucked = you. His debuffs show something new, but it concerns his Emberus ring, not this. His hope, for what it is worth, is that the thing dies in the floor collapse."
+          "text": "The fight is over, and Carl, picking a memorial crystal out of the dirt, notices a dart sticking out of his leg. He did not feel it, cannot feel it now, and does not know when or how it got there. He pulls it out. Tracking Tag. The Kyryap has claimed you. Fucked = you. His debuffs show something new, but it concerns his Emberus ring, not this. His hope, for what it is worth, is that the thing dies in the floor collapse.",
+          "gist": "Carl pulls a tracking tag from his leg and hopes the Kyryap dies in the floor collapse.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -1073,6 +1404,13 @@
           "to": "carl",
           "kind": "claimed",
           "at": "8:98"
+        }
+      ],
+      "recap": [
+        {
+          "at": "8:end",
+          "text": "A jowly goat explains that Justice Light broke the in-game version of the Nothing, loosing inhabitants into three levels. In Club Scolopendra, Carl deactivates a level 13 snare trap set by the Kyryap. After a fight, Carl pulls a tracking tag from his leg that says the Kyryap has claimed him.",
+          "confidence": "draft"
         }
       ]
     },
@@ -1105,7 +1443,9 @@
           "at": "8:86",
           "confidence": "verified",
           "headline": "Story time, mid-ambush",
-          "text": "A casino full of mimics springs its ambush, and the AI stops for story time. Mitch, a level 120 Adolescent Shadow Mimic, is an Enforcer for someone redacted, sent up to wreck Hamed's plans, and the Shadow Mimics loose in the dungeon are one part of the Big Six: the groups left in the dungeon trying to either take over or escape. After these, the AI says, there are only one or two more groups to meet before the crawlers are caught up. The list, it warns, is completely arbitrary."
+          "text": "A casino full of mimics springs its ambush, and the AI stops for story time. Mitch, a level 120 Adolescent Shadow Mimic, is an Enforcer for someone redacted, sent up to wreck Hamed's plans, and the Shadow Mimics loose in the dungeon are one part of the Big Six: the groups left in the dungeon trying to either take over or escape. After these, the AI says, there are only one or two more groups to meet before the crawlers are caught up. The list, it warns, is completely arbitrary.",
+          "gist": "A casino of mimics ambushes and the AI tells a story about the Big Six.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -1115,7 +1455,9 @@
           "at": "8:86",
           "confidence": "verified",
           "headline": "One through five",
-          "text": "One: the Crawlers, former crawlers included, Herot and Forkith among them. Two: the standard NPCs, mostly working together, Juice Box among them, with offshoots like Hamed's revolution. Three: the Gods, the most fractured and dumbest, beyond the AI's control, and the group it despises most. Four: the sapient mobs, the Shadow Mimics, the Ogre Imperium, Krakaren Prime and the War Mages. Five: the demons in Sheol, perhaps the most organised, and out of its view, a closed system it likens to a cyst."
+          "text": "One: the Crawlers, former crawlers included, Herot and Forkith among them. Two: the standard NPCs, mostly working together, Juice Box among them, with offshoots like Hamed's revolution. Three: the Gods, the most fractured and dumbest, beyond the AI's control, and the group it despises most. Four: the sapient mobs, the Shadow Mimics, the Ogre Imperium, Krakaren Prime and the War Mages. Five: the demons in Sheol, perhaps the most organised, and out of its view, a closed system it likens to a cyst.",
+          "gist": "The AI lists five groups fighting over the dungeon, including the Crawlers, NPCs, Gods, sapient mobs, and demons.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -1125,7 +1467,9 @@
           "at": "8:86",
           "confidence": "verified",
           "headline": "Group six, not yet",
-          "text": "Six is group six. Survive this fight and make it to the eleventh floor, the AI says, and you'll meet group six. The lines already blur: mobs working with former crawlers, NPCs with gods, some demons with those mysterious group sixers. It is a handy guide, not a map. The tourists and Syndicate security are rats on the first floor: a necessary but loathsome nuisance. Carl, currently a wiener dog, asks whether the lore dumps could please stop happening in the middle of ambushes."
+          "text": "Six is group six. Survive this fight and make it to the eleventh floor, the AI says, and you'll meet group six. The lines already blur: mobs working with former crawlers, NPCs with gods, some demons with those mysterious group sixers. It is a handy guide, not a map. The tourists and Syndicate security are rats on the first floor: a necessary but loathsome nuisance. Carl, currently a wiener dog, asks whether the lore dumps could please stop happening in the middle of ambushes.",
+          "gist": "The AI tells Carl, currently a wiener dog, that group six appears on the eleventh floor.",
+          "gistDraft": true
         },
         {
           "kind": "arc",
@@ -1135,7 +1479,9 @@
           "at": "8:98",
           "confidence": "verified",
           "headline": "Carl's own roll call",
-          "text": "Scolopendra is 'defeated,' the stairwells have opened, and Carl sits in the dirt thinking of the impossible task ahead: the NPCs, the mobs, the gods, the demons in Sheol, and the others, whoever they were, though he is pretty sure he knows. He does not say who. What Carl decides is to stay on the twelfth floor and keep anyone from winning the Ascendency until everyone left in the dungeon is out."
+          "text": "Scolopendra is 'defeated,' the stairwells have opened, and Carl sits in the dirt thinking of the impossible task ahead: the NPCs, the mobs, the gods, the demons in Sheol, and the others, whoever they were, though he is pretty sure he knows. He does not say who. What Carl decides is to stay on the twelfth floor and keep anyone from winning the Ascendency until everyone left in the dungeon is out.",
+          "gist": "Carl stays on the twelfth floor to stop anyone from winning the Ascendency until everyone is out.",
+          "gistDraft": true
         }
       ],
       "relations": [
@@ -1173,6 +1519,13 @@
           "to": "sheol",
           "kind": "member",
           "at": "8:86"
+        }
+      ],
+      "recap": [
+        {
+          "at": "8:end",
+          "text": "A casino of mimics ambushes the crawlers while the AI lists the Big Six groups fighting for the dungeon. These include the Crawlers, NPCs, Gods, sapient mobs like the Ogre Imperium, and demons in Sheol. Carl, currently a wiener dog, asks the AI to stop lore dumps during ambushes. After Scolopendra is defeated, Carl decides to stay on the twelfth floor to stop anyone from winning the Ascendency until everyone is out.",
+          "confidence": "draft"
         }
       ]
     }
