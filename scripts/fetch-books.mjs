@@ -123,12 +123,27 @@ function split(n) {
   const manifest = new Map([...opf.matchAll(/<item\b[^>]*>/g)].map(([tag]) => [
     /\bid="([^"]+)"/.exec(tag)[1], posix.join(base, /\bhref="([^"]+)"/.exec(tag)[1])]));
   const spine = [...opf.matchAll(/<itemref\b[^>]*idref="([^"]+)"/g)].map(m => manifest.get(m[1]));
+  /* The table of contents: an EPUB2 .ncx where there is one, otherwise the
+     EPUB3 nav document's <nav epub:type="toc"> — the Kobo-bought copies of
+     books 1–6 carry only the latter. Either way, a list of label + target. */
   const ncxPath = [...zip.keys()].find(k => k.endsWith('.ncx'));
-  const nav = [...read(ncxPath).matchAll(/<text>([\s\S]*?)<\/text>\s*<\/navLabel>\s*<content src="([^"]+)"/g)]
-    .map(m => {
-      const [file, anchor] = m[2].split('#');
-      return { label: decode(m[1].replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim(),
-               file: posix.join(posix.dirname(ncxPath), decodeURIComponent(file)), anchor };
+  let points;
+  if (ncxPath) {
+    points = [...read(ncxPath).matchAll(/<text>([\s\S]*?)<\/text>\s*<\/navLabel>\s*<content src="([^"]+)"/g)]
+      .map(m => ({ label: m[1], src: m[2], from: ncxPath }));
+  } else {
+    const navId = /<item\b[^>]*properties="[^"]*\bnav\b[^"]*"[^>]*>/.exec(opf)?.[0];
+    const navPath = navId ? posix.join(base, /\bhref="([^"]+)"/.exec(navId)[1]) : [...zip.keys()].find(k => /nav[^/]*\.x?html$/i.test(k));
+    const navHtml = read(navPath);
+    const toc = /<nav\b[^>]*epub:type="toc"[^>]*>([\s\S]*?)<\/nav>/i.exec(navHtml)?.[1] ?? navHtml;
+    points = [...toc.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)]
+      .map(m => ({ label: m[2], src: m[1], from: navPath }));
+  }
+  const nav = points
+    .map(p => {
+      const [file, anchor] = p.src.split('#');
+      return { label: decode(p.label.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim(),
+               file: posix.join(posix.dirname(p.from), decodeURIComponent(file)), anchor };
     })
     .filter(p => spine.includes(p.file));
 
