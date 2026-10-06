@@ -130,6 +130,12 @@ test('an entity file carries its recap steps, gists and both sides of every rela
   const donut = carl.relations.find(r => r.other === 'princess-donut');
   assert.ok(donut, 'Carl lists Donut');
   assert.ok(entities.get('princess-donut').relations.some(r => r.other === 'carl' && r.kind === donut.kind), 'Donut lists Carl with the same kind');
+  /* The kind reads from the declaring side ("killed by"), so each row says which side it is
+     on: the declaring side carries outgoing: true, the mirrored one false. */
+  const declared = snapshot.relations.find(r => r.fromId === 'carl' && r.toId === 'princess-donut');
+  assert.equal(donut.outgoing, !!declared, 'Carl\'s row is outgoing when Carl declared it');
+  assert.equal(entities.get('princess-donut').relations.find(r => r.other === 'carl').outgoing, !declared);
+  for (const [, file] of entities) for (const r of file.relations) assert.equal(typeof r.outgoing, 'boolean');
   const carlAt = index.entries.find(e => e.id === 'carl').revealedAt;
   for (const r of carl.relations) {
     const other = index.entries.find(e => e.id === r.other);

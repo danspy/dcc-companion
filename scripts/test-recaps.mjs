@@ -84,3 +84,26 @@ test('the prompt names the pronoun when the voice note gives it, and nothing whe
   assert.doesNotMatch(recapMessages(xan(), 1, xan().beats.slice(0, 1)).at(-1).content, /Refer to/);
   assert.equal(pronounOf({ voiceNote: 'Says she and he equally: she, he.' }), null, 'a tie decides nothing');
 });
+
+test('redo asks for existing steps and gists without removing them first', () => {
+  const e = xan();
+  e.recap = [{ at: '1:end', text: 'kept', confidence: 'verified' }];
+  const work = recapWork([e], { redo: (ent, book) => ent.id === 'xan' && book === 1 });
+  assert.deepEqual(work.map(w => w.book), [1, 2], 'book 1 again, book 2 because it is missing');
+  assert.equal(e.recap[0].text, 'kept', 'nothing was deleted to make the work list');
+  const gists = gistWork([e], { redo: (ent, beat) => beat.headline === 'The second floor' });
+  assert.deepEqual(gists.map(w => w.beat.headline), ['Down the stairs', 'The second floor']);
+  assert.equal(e.beats[1].gist, 'Xan reaches the Over City.', 'the old gist stays until a new one passes');
+});
+
+test('a throw from the model counts as a failed try, never as a crash', async () => {
+  let calls = 0;
+  const flaky = async () => { calls++; if (calls === 1) throw new Error('ollama 502'); return 'Xan takes the stairs with Bea.'; };
+  const e = xan();
+  const r = await draftOne(recapMessages(e, 1, e.beats.slice(0, 1)), t => screenRecap(t, e, 1, books), flaky);
+  assert.equal(r.text, 'Xan takes the stairs with Bea.');
+  assert.deepEqual(r.problems, []);
+  const dead = await draftOne([{ role: 'user', content: 'x' }], () => [], async () => { throw new Error('ollama 503'); }, 2);
+  assert.deepEqual(dead.problems, ['error: ollama 503']);
+  assert.equal(dead.text, '');
+});

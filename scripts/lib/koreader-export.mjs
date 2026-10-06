@@ -103,13 +103,15 @@ export function exportForKoreader(snapshot, { now = new Date() } = {}) {
   /* Relations, both sides written out so a page shows who it is connected to
      whichever side declared the edge — the same mirror the site's getRelations
      does at read time. The kind is in display form, as the site shows it, and
-     the key is the relation's sortKey, which already waits for both ends. */
+     the key is the relation's sortKey, which already waits for both ends. A directional
+     kind ("killed by") reads from the declaring side, so each row says which side it is on:
+     `outgoing` is true on the side that declared the edge, false on the mirror. */
   for (const r of snapshot.relations ?? []) {
     const kind = r.kind.replace(/-/g, ' ');
     const a = entities.get(r.fromId), b = entities.get(r.toId);
     if (!a || !b) throw new Error(`relation ${r.fromId} -> ${r.toId} names an unknown entity`);
-    a.relations.push(keyed(r.sortKey, { other: r.toId, kind, note: r.note ?? '' }));
-    b.relations.push(keyed(r.sortKey, { other: r.fromId, kind, note: r.note ?? '' }));
+    a.relations.push(keyed(r.sortKey, { other: r.toId, kind, note: r.note ?? '', outgoing: true }));
+    b.relations.push(keyed(r.sortKey, { other: r.fromId, kind, note: r.note ?? '', outgoing: false }));
   }
   for (const file of entities.values()) file.relations.sort((x, y) => x.key - y.key);
 

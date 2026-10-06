@@ -18,6 +18,8 @@ export async function ask(messages, { model, host, key } = {}) {
   if (!key) throw new Error('OLLAMA_API_KEY is not set — put it in .env (it is in /etc/dcc-companion.env on the box)');
   const res = await fetch(`${host ?? 'https://ollama.com'}/api/chat`, {
     method: 'POST',
+    // A hung call would otherwise hold a worker forever; the caller treats a throw as a failed try.
+    signal: AbortSignal.timeout(90_000),
     headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       model: model ?? 'gemma4:31b', stream: false, think: false,

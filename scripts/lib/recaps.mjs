@@ -118,7 +118,12 @@ export async function draftOne(messages, screen, askFn, tries = 3) {
   let msgs = [...messages];
   let text = '', problems = [];
   for (let i = 0; i < tries; i++) {
-    text = unwrap(await askFn(msgs));
+    /* A model that is down counts as a try that failed, not as a crash: the
+       worker goes on to the next item and the batch is still saved. */
+    let raw;
+    try { raw = await askFn(msgs); }
+    catch (err) { text = ''; problems = [`error: ${err?.message ?? err}`]; continue; }
+    text = unwrap(raw);
     problems = screen(text);
     if (!problems.length) return { text, problems };
     msgs = [...msgs, { role: 'assistant', content: text }, { role: 'user', content: `Not acceptable: ${problems.join('; ')}. Write it again, obeying every rule.` }];
@@ -127,8 +132,11 @@ export async function draftOne(messages, screen, askFn, tries = 3) {
 }
 
 /* What is missing: every (entity, book) with a beat and no step, every beat
-   with no gist. Re-running drafts only these, so the pass is resumable. */
-export function recapWork(entities) {
+   with no gist. Re-running drafts only these, so the pass is resumable. A
+   `redo` predicate asks for an existing step or gist again *without* removing
+   it: the old text stands until a new one passes the screen, so a failed redo
+   never leaves a hole, and never deletes a verified paragraph. */
+export function recapWork(entities, { redo = () => false } = {}) {
   const out = [];
   for (const e of entities) {
     const have = new Set((e.recap ?? []).map(r => parseInt(r.at)));
@@ -138,14 +146,14 @@ export function recapWork(entities) {
       byBook.get(b.book).push(b);
     }
     for (const book of [...byBook.keys()].sort((a, b) => a - b)) {
-      if (!have.has(book)) out.push({ entity: e, book, beats: byBook.get(book) });
+      if (!have.has(book) || redo(e, book)) out.push({ entity: e, book, beats: byBook.get(book) });
     }
   }
   return out;
 }
 
-export function gistWork(entities) {
-  return entities.flatMap(e => (e.beats ?? []).filter(b => b.gist == null).map(beat => ({ entity: e, beat })));
+export function gistWork(entities, { redo = () => false } = {}) {
+  return entities.flatMap(e => (e.beats ?? []).filter(b => b.gist == null || redo(e, b)).map(beat => ({ entity: e, beat })));
 }
 
 export function applyRecap(entity, book, text) {

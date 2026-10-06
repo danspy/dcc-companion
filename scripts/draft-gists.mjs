@@ -30,14 +30,9 @@ const files = FILES.map(f => {
 });
 const entities = files.flatMap(f => f.data.entities);
 
-if (redo) for (const e of entities) {
-  if (only && e.id !== only) continue;
-  for (const b of e.beats ?? []) {
-    if (onlyBook && b.book !== onlyBook) continue;
-    delete b.gist; delete b.gistDraft;
-  }
-}
-let work = gistWork(entities);
+/* --redo asks for the chosen gists again; the old text stands until a new one passes. */
+const again = (e, b) => redo && (!only || e.id === only) && (!onlyBook || b.book === onlyBook);
+let work = gistWork(entities, { redo: again });
 if (only) work = work.filter(w => w.entity.id === only);
 if (onlyBook) work = work.filter(w => w.beat.book === onlyBook);
 work = work.slice(0, limit);

@@ -32,13 +32,9 @@ const files = FILES.map(f => {
 });
 const entities = files.flatMap(f => f.data.entities);
 
-/* --redo forgets the chosen steps first, so the work list rebuilds them. */
-if (redo) for (const e of entities) {
-  if (only && e.id !== only) continue;
-  e.recap = (e.recap ?? []).filter(r => onlyBook && parseInt(r.at) !== onlyBook);
-  if (!e.recap.length) delete e.recap;
-}
-let work = recapWork(entities);
+/* --redo asks for the chosen steps again; the old text stands until a new one passes. */
+const again = (e, book) => redo && (!only || e.id === only) && (!onlyBook || book === onlyBook);
+let work = recapWork(entities, { redo: again });
 if (only) work = work.filter(w => w.entity.id === only);
 if (onlyBook) work = work.filter(w => w.book === onlyBook);
 work = work.slice(0, limit);
