@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { unwrap, recapWork, gistWork, recapMessages, gistMessages, screenRecap, screenGist, draftOne, applyRecap, applyGist } from './lib/recaps.mjs';
+import { unwrap, recapWork, gistWork, recapMessages, gistMessages, screenRecap, screenGist, draftOne, applyRecap, applyGist, pronounOf } from './lib/recaps.mjs';
 
 const books = [{ id: 1, title: 'One', chapters: 47 }, { id: 2, title: 'Two', chapters: 25 }];
 const xan = () => ({
@@ -72,4 +72,15 @@ test('applyRecap keeps book order and applyGist marks the gist draft', () => {
   applyGist(e.beats[0], 'Xan finds a Boon Box.');
   assert.equal(e.beats[0].gist, 'Xan finds a Boon Box.');
   assert.equal(e.beats[0].gistDraft, true);
+});
+
+test('the prompt names the pronoun when the voice note gives it, and nothing when it does not', () => {
+  const e = { ...xan(), voiceNote: 'Brisk, kind, permanently worried about her job. She says okay, so.' };
+  const user = recapMessages(e, 1, e.beats.slice(0, 1)).at(-1).content;
+  assert.match(user, /Refer to Xan as she\/her\./);
+  assert.match(gistMessages(e, e.beats[0]).at(-1).content, /Refer to Xan as she\/her\./);
+  const him = { ...xan(), voiceNote: 'Gruff. He calls everyone kid.' };
+  assert.match(recapMessages(him, 1, him.beats.slice(0, 1)).at(-1).content, /Refer to Xan as he\/him\./);
+  assert.doesNotMatch(recapMessages(xan(), 1, xan().beats.slice(0, 1)).at(-1).content, /Refer to/);
+  assert.equal(pronounOf({ voiceNote: 'Says she and he equally: she, he.' }), null, 'a tie decides nothing');
 });

@@ -17,6 +17,7 @@ const RULES = `You write for a reader's companion to Dungeon Crawler Carl. Rules
 - Name only people, places, things and numbers that the notes name. Invent nothing. Add nothing you merely remember about these books.
 - Never write "book", "the series", "chapter", "later", "eventually", "ends up", "in the end", "the reader", or any phrase that points past the notes.
 - Never mention a floor by name unless the notes do.
+- Tell what happens, in order, with the notes' own concrete verbs and details: who did what to whom, with what, and what it cost. Never "navigates", "deals with", "manages", "gains", "acquires", "various", "several", "a number of", "powerful", "emotional weight". Keep one odd, specific detail the notes give (the pink Crocs, the dachshund) rather than a category ("equipment", "challenges").
 - No preamble, no title, no quotation marks, no markdown. The paragraph or sentence alone.`;
 
 const RECAP_EXAMPLES = `Notes for Carl, one stretch:
@@ -39,12 +40,25 @@ The stairwell drops them into a sandstorm; the Quarry opens and every bounty on 
 const beatLine = b => `${b.at} "${b.headline}" — ${b.text}`;
 const who = e => `${e.name}${e.aka?.length ? ` (also ${e.aka.map(a => typeof a === 'string' ? a : a.name).join(', ')})` : ''}, ${e.kind}${e.role ? `, ${e.role}` : ''}`;
 
+/* A character's beats are in the first person, so they never say "she" or "he"
+   about the speaker, and the model guessed — Zev came out "he" in three books
+   of eight. The voice note is written about the character and does say it. A
+   tie, or no note, decides nothing and the model is left to the text. */
+export function pronounOf(e) {
+  const note = e.voiceNote ?? '';
+  const f = (note.match(/\b(she|her|hers|herself)\b/gi) ?? []).length;
+  const m = (note.match(/\b(he|him|his|himself)\b/gi) ?? []).length;
+  if (f === m) return null;
+  return f > m ? 'she/her' : 'he/him';
+}
+const pronounLine = e => { const p = pronounOf(e); return p ? ` Refer to ${e.name} as ${p}.` : ''; };
+
 export function recapMessages(entity, book, beats) {
   return [
     { role: 'system', content: `${RULES}\n- A recap is 2 to 4 sentences, at most ${RECAP_WORDS} words, telling only what these notes tell.` },
     { role: 'user', content: 'Two examples, then mine.' },
     { role: 'assistant', content: RECAP_EXAMPLES },
-    { role: 'user', content: `Notes for ${who(entity)}, one stretch:\n${beats.map(beatLine).join('\n')}\n\nThe recap:` },
+    { role: 'user', content: `Notes for ${who(entity)}, one stretch:${pronounLine(entity)}\n${beats.map(beatLine).join('\n')}\n\nThe recap:` },
   ];
 }
 
@@ -53,7 +67,7 @@ export function gistMessages(entity, beat) {
     { role: 'system', content: `${RULES}\n- A gist is one sentence, at most ${GIST_WORDS} words, restating the note.` },
     { role: 'user', content: 'Two examples, then mine.' },
     { role: 'assistant', content: GIST_EXAMPLES },
-    { role: 'user', content: `Note for ${who(entity)}: ${beatLine(beat)}\nThe gist:` },
+    { role: 'user', content: `Note for ${who(entity)}:${pronounLine(entity)} ${beatLine(beat)}\nThe gist:` },
   ];
 }
 
