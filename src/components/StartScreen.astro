@@ -1,0 +1,100 @@
+---
+import { entryArt } from '../lib/voxel/art';
+
+/* The homepage for a reader who has told us nothing: no floors (with nothing
+   read, the descent is eighteen sealed islands, which says nothing), but the way
+   in, as the first chapter has it, Carl and the cat either side of the lit hole,
+   the System's one rule, and a button that opens the position picker in the
+   header. Picking a book reloads the page, and the page is then the descent. */
+interface Props { pilot: string[] }
+const { pilot } = Astro.props;
+const art = await entryArt();
+const pct = (n: number) => `${(n * 100).toFixed(2)}%`;
+---
+<section class="start" aria-labelledby="start-title">
+  <div class="start-in">
+    <div class="start-text">
+      <div class="start-head">
+        <p class="eyebrow">Dungeon Crawler World · Season: Earth</p>
+        <h1 id="start-title">The Crawl<em>So Far</em></h1>
+      </div>
+      <div class="sys start-rule">
+        <b>*** Welcome, viewer ***</b>
+        <p>This is a companion to <i>Dungeon Crawler Carl</i>, the book series by Matt Dinniman, and it has exactly one
+          rule: it only tells you what you have already read.</p>
+        <p>Tell me which book you are on, and how far into it, and everything opens up to exactly that point. Not one
+          chapter further.</p>
+      </div>
+      <button type="button" class="start-go" data-enter>Enter the dungeon</button>
+    </div>
+    <figure class="start-art" style={`--bx:${pct(art.beam.x)};--by:${pct(art.beam.y)};--bw:${pct(art.beam.w)}`}>
+      <span class="start-beam" aria-hidden="true"></span>
+      <img src={`/art/entry.png?v=${art.version}`} width={art.width} height={art.height}
+           alt="A night street with every building gone, a hole in the ground lit from below with an iron staircase going down into the light, and beside it a man in a leather jacket, boxer shorts and pink Crocs, and a cat." />
+    </figure>
+  </div>
+  <section class="start-back" aria-label="The back cover">
+    <p class="label">The back cover</p>
+    {pilot.map(t => <p>{t}</p>)}
+  </section>
+</section>
+
+<script>
+  /* Enter the dungeon: the position picker in the header. The click is kept from
+     the document, or the panel's own close-on-click-outside shuts it at once. */
+  document.querySelector('[data-enter]')?.addEventListener('click', e => {
+    e.stopPropagation();
+    const pos = document.getElementById('pos');
+    pos?.click();
+    pos?.scrollIntoView({ block: 'nearest' });
+  });
+</script>
+
+<style>
+  .start { position: relative; overflow: clip; background: radial-gradient(ellipse 60% 55% at 68% 56%, #ffb3400f, transparent 70%); }
+  .start-in { max-width: 1180px; margin: 0 auto; padding: 32px 24px 56px; box-sizing: border-box;
+              min-height: calc(100svh - 57px); display: grid; grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+              column-gap: 48px; align-items: center; }
+  .start-head { position: relative; z-index: 3; }
+  .eyebrow { color: var(--color-blood); margin: 0; }
+  h1 { font-size: clamp(46px, 6.2vw, 88px); font-weight: 800; line-height: .92; margin: 10px 0 0; }
+  h1 em { display: block; font-style: normal; color: var(--color-gold); }
+  .start-rule { position: relative; z-index: 3; margin-top: 28px; }
+  .start-rule p { margin: 8px 0 0; }
+  .start-rule p:first-of-type { margin-top: 2px; }
+  /* the one thing to do here, and it looks like it */
+  .start-go { position: relative; z-index: 4; margin-top: 24px; display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+              padding: 17px 26px 15px; border: 0; cursor: pointer; background: var(--color-gold); color: #0e0e0e;
+              font-family: var(--font-display); font-weight: 800; font-size: 24px; line-height: 1; letter-spacing: .03em; text-transform: uppercase;
+              box-shadow: 0 0 0 1px #ffd75a, 0 10px 40px #ffc10a33; transition: background .15s ease, box-shadow .2s ease; }
+  .start-go:hover { background: #ffd23c; box-shadow: 0 0 0 1px #ffe28a, 0 10px 48px #ffc10a55; }
+  .start-go:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  .start-art { position: relative; margin: 0; }
+  .start-art img { position: relative; z-index: 1; display: block; width: 100%; height: auto; image-rendering: pixelated; }
+  /* the spotlight bursting into the air out of the hole, widening as it climbs into the dark */
+  /* (the cone is cut inside, the blur outside it: a filter on the element itself runs before its clip, and left the edges hard) */
+  .start-beam { position: absolute; z-index: 2; left: var(--bx); bottom: calc(100% - var(--by)); width: calc(var(--bw) * 2); height: 140vh;
+                translate: -50% 0; pointer-events: none; mix-blend-mode: screen; filter: blur(9px); animation: beam 5.5s ease-in-out infinite alternate; }
+  .start-beam::before { content: ''; position: absolute; inset: 0; clip-path: polygon(27% 100%, 73% 100%, 100% 0, 0 0);
+                        background: linear-gradient(to top, #ffd98ac4, #ffd98a5c 12%, #ffd98a1c 44%, #ffd98a00 86%); }
+  @keyframes beam { from { opacity: .85; } to { opacity: 1; } }
+  .start-back { position: relative; z-index: 3; max-width: 680px; margin: 0 auto; padding: 0 24px 72px; }
+  .start-back .label { color: var(--color-grey-300); margin: 0 0 12px; }
+  .start-back p:not(.label) { font-family: var(--font-mono); font-size: var(--type-meta); line-height: 1.7; color: var(--color-grey-200); margin: 0 0 14px; }
+
+  /* a phone: the title, the picture, the rule, the button in reach at the foot */
+  @media (max-width: 760px) {
+    .start-in { grid-template-columns: minmax(0, 1fr); min-height: 0; padding: 18px 16px 24px; row-gap: 0; }
+    .start-text { display: contents; }
+    .start-head { order: 1; }
+    .start-art { order: 2; margin: 6px -8px 0; }
+    .start-rule { order: 3; margin-top: 4px; }
+    .start-go { order: 4; position: sticky; bottom: 12px; width: 100%; margin-top: 16px; font-size: 22px; padding-block: 17px 15px; }
+    /* pinned in reach, the text under it fades away rather than running into it */
+    .start-go::before { content: ''; position: absolute; left: -16px; right: -16px; bottom: calc(100% - 1px); height: 30px; pointer-events: none;
+                        background: linear-gradient(transparent, var(--color-ink)); }
+    h1 { font-size: 40px; }
+    .start-back { padding: 8px 16px 48px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .start-beam { animation: none; } }
+</style>

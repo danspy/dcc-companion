@@ -46,6 +46,11 @@ for (const f of snap.floors) {
   gated.push({ name: f.name, re: matcher(f.name), at: f.revealedAt, id: `floor ${f.id}` });
 }
 
+for (const f of snap.foretold ?? []) {
+  if (!f.name || parseAt(f.nameAt) <= START) continue;
+  gated.push({ name: f.name, re: matcher(f.name), at: f.nameAt, id: `foretold floor ${f.id}` });
+}
+
 const files = [];
 (function walk(dir) {
   for (const e of readdirSync(dir, { withFileTypes: true })) {
@@ -66,6 +71,13 @@ const EXEMPT = [
       "The show's name is the masthead eyebrow, and it is on the back cover of book 1. The " +
       'premise block under it is deliberately ungated blurb content for exactly the same reason. ' +
       'The entity is tagged 1:4 because that is where the text names it, not because it is secret.',
+  },
+  {
+    file: 'src/components/StartScreen.astro',
+    name: 'Dungeon Crawler World',
+    reason:
+      "The start screen is the homepage for a reader with no position yet, and it carries the homepage's own " +
+      'masthead: the same eyebrow, on the back cover of book 1, for the reason above.',
   },
 ];
 const exempt = (file, name) =>

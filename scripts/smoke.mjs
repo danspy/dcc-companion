@@ -27,8 +27,34 @@ const headers = { cookie: `dcc_pos=${position}` };
 /* Each route, and the markers that prove its content rendered. */
 const ROUTES = [
   // The front page tells each floor in parts: at least one must reach the position.
-  ['/', ['class="slab floor"', 'floorno', 'class="part"', 'Now entering']],
-  ['/who', ['class="finder"', 'data-find', 'class="cell']],
+  /* The homepage is the overview: eighteen tiles, the current floor featured,
+     its picture served from the gated art route. */
+  ['/', ['id="dungeon"', 'id="hud"', 'level level-reached', 'is-here', 'src="/art/floor-', 'src="/art/uncharted/', 'class="rail"', 'here-pin', 'Previously, on Dungeon Crawler World']],
+  /* A floor picked on the descent renders open, beside it, with no script. */
+  ['/art/cubes-4.bin', []],
+  /* A floor with no picture to show stands as the uncharted island: every floor
+     past the reader at 5:40 does, and the island and its blocks are served. */
+  ['/art/uncharted/13-known.png', []],
+  ['/art/uncharted/16-sealed.bin', []],
+  ['/?floor=4', ['crawl is-detail', 'id="dcard"', 'class="peek"', 'Open the floor']],
+  ['/floor/peek/4', ['class="peek"', 'Now entering']],
+  /* The floor guide: its map drew layers (each is only rendered when reached),
+     both art styles render, and the guide sections arrived. */
+  ['/floor/1', ['id="crawl"', 'class="part"', 'class="gsec"', 'fmap-voxel', 'class="lineup"', 'src="/art/figure/']],
+  ['/floor/2', ['id="crawl"', 'fmap-voxel', 'class="keyrow"']],
+  ['/floor/3', ['id="crawl"', 'fmap-voxel', 'class="keyrow"']],
+  ['/floor/4', ['id="crawl"', 'fmap-voxel', 'class="keyrow"']],
+  /* Floors past the default position redirect, rightly; they are smoked as a
+     reader who has finished book 8 (the third element is that reader). */
+  ...[6, 7, 8, 9, 10, 11].map(n => [`/floor/${n}`, ['id="crawl"', 'fmap-voxel', 'class="keyrow"', 'class="gsec"'], { book: 8, chapter: 0 }]),
+  ['/floor/5', ['id="crawl"', 'fmap-voxel', 'data:image/png;base64', 'class="px-hl"', 'class="gsec"', 'As of Book 4']],
+  /* The rewind is rendered by the server: ?at= lands on that state of the map
+     with the timeline, the changes line and the way back. */
+  /* Floors ahead: a page of what is known, at the floor's own address. */
+  ['/floor/12', ['Not reached yet', 'class="notes"', 'Halls of the Ascendency'], { book: 8, chapter: 0 }],
+  ['/floor/9', ['Not reached yet', 'Faction Wars', 'Named · Book 1']],
+  ['/floor/5?at=4012', ['id="scrubber"', 'Rewound to', 'data-layer="house"', 'Back to where you are']],
+  ['/who', ['class="finder"', 'data-find', 'class="cell', 'class="cell-fig"', 'src="/art/figure/carl-']],
   ['/when?view=braid', ['class="stagehead', 'id="braid-svg"', 'class="lane"', 'entryrow']],
   ['/when?view=grid', ['class="stagehead', 'gridrow', 'class="mark', 'entryrow']],
   ['/when?view=downstream', ['class="stagehead', 'class="chain"', 'entryrow']],
@@ -45,7 +71,11 @@ const ROUTES = [
   ['/progress', ['class="stats"', 'tbl-head']],
   /* Quick-find answers per reader from the cookie; Carl is met at 1:1. */
   ['/find.json?q=car', ['"href":"/entity/carl"']],
-  ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"']],
+  ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"', 'class="hero-fig"', 'src="/art/figure/carl-']],
+  // a character stands as a voxel figure, gated look by look; the shadow figure is the same for everyone
+  ['/art/figure/unpictured.png', []],
+  // the start screen's picture: the way in on the first night, public like the uncharted island
+  ['/art/entry.png', []],
   /* The book filter is resolved on the server: ?book=3 arrives with the other
      books' entries already hidden and the Book 3 chip pressed. */
   ['/entity/carl?book=3', ['data-book="3" aria-pressed="true"', 'data-book="1" hidden']],
@@ -66,10 +96,11 @@ const ROUTES = [
 ];
 
 let failed = 0;
-for (const [route, markers] of ROUTES) {
+for (const [route, markers, reader] of ROUTES) {
   let res, html;
   try {
-    res = await fetch(base + route, { headers });
+    const h = reader ? { cookie: `dcc_pos=${encodeURIComponent(JSON.stringify({ ...reader, spoilers: true }))}` } : headers;
+    res = await fetch(base + route, { headers: h });
     html = await res.text();
   } catch (e) {
     console.error(`FAIL ${route}: ${e.message}`);

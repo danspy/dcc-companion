@@ -45,11 +45,38 @@ const Floor = defineTable({
     nameAt: column.text({ optional: true }),
     recapAt: column.text(),
     recapSortKey: column.number(),
+    /* Where the floor's tile picture opens (src/lib/voxel/floors.ts): the point
+       by which everything it shows has been read. */
+    artKey: column.number({ optional: true }),
     premise: column.text(),
     /* The System's catch-up for a reader who has just arrived: everything
        before this floor, so it unseals with the floor itself. */
     previously: column.text({ optional: true }),
     recap: column.json(),
+    /* The floor guide (/floor/N): sections of `{ at, sortKey, text }` steps
+       that supersede one another as the reader advances, the tagline rule
+       applied to a whole floor. Empty for a floor with no guide yet. */
+    guide: column.json({ default: [] }),
+    /* The floor's map: layers drawn from `sortKey` and, for a state that is
+       replaced (a castle that falls), hidden again from `untilKey`. The
+       geometry lives in src/lib/maps/, keyed by layer id; only labels live here. */
+    map: column.json({ optional: true }),
+  },
+});
+
+/* The floors the crawl has not reached, as the books announce them: a name
+   gated where it is first printed (`nameKey`), and notes `{ at, sortKey, text }`
+   each gated where it is first given. Floors 1–11 live in Floor; this is
+   12–18, whatever the books have said so far. */
+const Foretold = defineTable({
+  columns: {
+    id: column.number({ primaryKey: true }),
+    name: column.text({ optional: true }),
+    nameAt: column.text({ optional: true }),
+    nameKey: column.number({ optional: true }),
+    artKey: column.number({ optional: true }),
+    heroKey: column.number({ optional: true }),
+    notes: column.json({ default: [] }),
   },
 });
 
@@ -76,6 +103,9 @@ const Entity = defineTable({
        taglines: [{ at, source, sortKey, text }], ascending. Items carry these
        ahead of their usage log. */
     descriptions: column.json({ default: [] }),
+    /* A character's figure, a look per stretch of the story, gated like
+       taglines: [{ look, at, sortKey }], ascending (src/lib/voxel/figures). */
+    figures: column.json({ default: [] }),
   },
 });
 
@@ -142,4 +172,4 @@ const Achievement = defineTable({
   },
 });
 
-export default defineDb({ tables: { Book, Floor, Entity, Beat, Relation, Achievement } });
+export default defineDb({ tables: { Book, Floor, Foretold, Entity, Beat, Relation, Achievement } });

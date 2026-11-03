@@ -14,7 +14,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = p => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const checkOnly = process.argv.includes('--check');
 
-const { books, floors } = read('data/books.json');
+const { books, floors, foretold = [] } = read('data/books.json');
 
 /* Chapter counts come from data/chapters.json (npm run chapters:refresh), not
    from books.json — one source, refreshed on its own schedule. A book with no
@@ -45,7 +45,7 @@ const entities = ['characters', 'items', 'mechanics', 'factions', 'places', 'thr
    curation, so they are linted for gate correctness and never for prose. */
 const { achievements } = read('data/achievements.json');
 
-const { errors, warnings, tightened } = lint({ books, floors, entities, achievements });
+const { errors, warnings, tightened } = lint({ books, floors, entities, achievements, foretold });
 
 for (const w of warnings) console.warn(`  warn  ${w}`);
 if (errors.length) {
@@ -77,11 +77,17 @@ for (const e of entities) {
   ).map(d => ({ at: d.at, source: d.source ?? d.at, sortKey: Math.max(parseAt(d.at), entityAt), text: d.text }))
    .sort((a, b) => a.sortKey - b.sortKey);
 
+  /* How a character looks, a look per stretch: [{ look, at, sortKey }]. The
+     page shows the latest one reached; the picture's address answers 404 short
+     of it. */
+  const figures = (e.figure ?? []).map(f => ({ look: f.look, at: f.at, sortKey: Math.max(parseAt(f.at), entityAt) }))
+    .sort((a, b) => a.sortKey - b.sortKey);
+
   resolvedEntities.push({
     id: e.id, kind: e.kind, name: e.name, aka: e.aka ?? [],
     role: e.role, taglines, revealedAt: e.revealedAt, sort: e.sort ?? 0,
     // voiceNote stays in the curation file: it is guidance, not content.
-    voice: entityVoice(e), descriptions,
+    voice: entityVoice(e), descriptions, figures,
   });
 
   for (const b of e.beats ?? []) {
@@ -121,6 +127,8 @@ const snapshot = {
     accent: colorIndex.get(f.book).accent,
     ink: colorIndex.get(f.book).ink,
     sortKey: parseAt(f.revealedAt),
+    // The tile's picture opens where everything in it has been read, never before the floor.
+    artKey: f.artAt ? Math.max(parseAt(f.artAt), parseAt(f.revealedAt)) : null,
     // A recap can never surface before its own floor does.
     recapSortKey: Math.max(parseAt(f.recapAt), parseAt(f.revealedAt)),
     /* Each part of the recap unseals where the stretch it tells ends, and never
@@ -130,7 +138,32 @@ const snapshot = {
       title: p.title, text: p.text, from: p.from ?? f.revealedAt, at: p.at,
       sortKey: Math.max(parseAt(p.at), parseAt(f.revealedAt)),
     })),
+    /* The floor guide: sections of steps that supersede one another, and the
+       map's layers, each with the point it is drawn from and, for a state that
+       is replaced, the point it stops. Resolved here so the page only compares. */
+    guide: (f.guide ?? []).map(s => ({
+      id: s.id, title: s.title,
+      steps: s.steps.map(st => ({ at: st.at, sortKey: Math.max(parseAt(st.at), parseAt(f.revealedAt)), text: st.text })),
+    })),
+    map: f.map ? {
+      title: f.map.title ?? null,
+      layers: f.map.layers.map(l => ({
+        id: l.id, label: l.label ?? null, at: l.at,
+        sortKey: Math.max(parseAt(l.at), parseAt(f.revealedAt)),
+        untilKey: l.until != null ? parseAt(l.until) : null,
+      })),
+    } : null,
   })),
+  /* The floors the crawl has not reached: a name gated where the book first
+     prints it, and notes gated one at a time where each is first given. */
+  foretold: foretold.map(f => ({
+    id: f.id, name: f.name ?? null, nameAt: f.nameAt ?? null,
+    nameKey: f.nameAt ? parseAt(f.nameAt) : null,
+    artKey: f.artAt ? parseAt(f.artAt) : null,
+    /* a second picture, for once what the first shows is no longer true */
+    heroKey: f.heroAt ? parseAt(f.heroAt) : null,
+    notes: (f.notes ?? []).map(n => ({ at: n.at, sortKey: parseAt(n.at), text: n.text })).sort((a, b) => a.sortKey - b.sortKey),
+  })).sort((a, b) => a.id - b.id),
   entities: resolvedEntities,
   beats: resolvedBeats,
   relations: resolvedRelations,

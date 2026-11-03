@@ -1,0 +1,80 @@
+---
+import Sealed from './Sealed.astro';
+import { getBooks, getFloors, getForetold, readGate } from '../lib/content';
+import { floorStatus } from '../lib/floorstatus';
+import { pictureFor, showsHero, FALLBACK_ACCENT } from '../lib/voxel/art';
+import { VOXEL_FLOORS } from '../lib/voxel/floors';
+import { stampOf, span } from '../lib/stamps';
+
+/* One floor, as the homepage's side panel shows it: everything a reader may
+   know about it at a glance, and a door to its full page. Rendered on the
+   server for the reader's own position, both into the homepage (?floor=N) and
+   by /floor/peek/N, which the page fetches when a floor is picked. Markup only:
+   it is swapped in through DOMParser, so a script here would never run. */
+
+interface Props { id: number }
+const { id } = Astro.props;
+const { gate } = await readGate(Astro.cookies);
+const [books, floors, foretold] = await Promise.all([getBooks(), getFloors(), getForetold()]);
+const status = floorStatus(id, floors, foretold, gate);
+const floor = floors.find(f => f.id === id);
+const fore = foretold.find(f => f.id === id);
+const reached = status.kind === 'reached' && floor;
+const book = reached ? books.find(b => b.id === floor.book) : undefined;
+
+interface Part { title: string; text: string; from: string; at: string; sortKey: number }
+interface Step { at: string; sortKey: number; text: string }
+interface Section { id: string; title: string; steps: Step[] }
+const parts: Part[] = reached && Array.isArray(floor.recap) ? (floor.recap as Part[]) : [];
+const shownParts = parts.filter(p => gate.frontier >= p.sortKey);
+const latest = shownParts.at(-1) ?? null;
+const nextPart = parts.find(p => gate.frontier < p.sortKey);
+const guide = reached ? ((floor.guide ?? []) as Section[]).map(s => ({ ...s, step: s.steps.filter(st => gate.frontier >= st.sortKey).at(-1) ?? null })).filter(s => s.step) : [];
+
+const artOk = !!VOXEL_FLOORS[id] && status.artKey != null && gate.frontier >= status.artKey;
+const hero = reached ? showsHero(id, gate.frontier, floor.recapSortKey) : showsHero(id, gate.frontier, fore?.heroKey);
+const art = await pictureFor(id, artOk ? { accent: reached ? floor.accent : FALLBACK_ACCENT, hero } : null, status.kind !== 'sealed');
+const accent = reached ? floor.accent : '#3a3a3a', ink = reached ? floor.ink : '#ffffff';
+const name = status.name;
+const short = (t: string, n = 420) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + ' …' : t);
+---
+<article class="peek" data-floor={id} style={`--peek:${accent};--peek-ink:${ink}`}>
+  <header class="peek-head">
+    <span class="peek-no">{String(id).padStart(2, '0')}</span>
+    <div>
+      <p class="label peek-eyebrow">{reached ? `Floor ${id} · Book ${floor.bookSpan ?? floor.book}${book ? ` · ${book.title}` : ''}` : `Floor ${id} · Not reached yet`}</p>
+      <h2 class={name ? undefined : 'unnamed'}>{name ?? 'Not yet named'}</h2>
+      {status.nameAt && <p class="label peek-named">Named · {stampOf(status.nameAt)}</p>}
+    </div>
+  </header>
+
+  <figure class="peek-art"><img src={art.src} alt={`Floor ${id}${name ? `, ${name}` : ''}${art.own ? '' : ', not yet pictured'}`} width={art.width} height={art.height} /></figure>
+
+  {reached && <p class="sys peek-arrival"><b>*** Now entering ***</b>{floor.premise}</p>}
+  {status.kind === 'named' && <p class="sys peek-arrival"><b>*** Not yet entered ***</b>You have heard its name, crawler. You have not stood on it.</p>}
+
+  {latest && (
+    <section class="peek-sec">
+      <h3 class="label">Last stretch · {span(latest.from, latest.at)}</h3>
+      <h4>{latest.title}</h4>
+      <p>{short(latest.text)}</p>
+    </section>
+  )}
+  {reached && !latest && nextPart && <Sealed at={nextPart.sortKey} compact />}
+
+  {guide.map(s => (
+    <section class="peek-sec">
+      <h3 class="label">{s.title} · as of {stampOf(s.step!.at)}</h3>
+      <p>{short(s.step!.text, 300)}</p>
+    </section>
+  ))}
+
+  {status.kind === 'foretold' && status.notes.length > 0 && (
+    <section class="peek-sec">
+      <h3 class="label">What is known</h3>
+      <ol class="peek-notes">{status.notes.map(n => <li><span class="label">{stampOf(n.at)}</span>{n.text}</li>)}</ol>
+    </section>
+  )}
+
+  <a class="peek-go" href={`/floor/${id}`}>{reached ? 'Open the floor: map, story and guide' : 'Open its page'} →</a>
+</article>

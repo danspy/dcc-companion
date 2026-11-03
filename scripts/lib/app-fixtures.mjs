@@ -196,7 +196,7 @@ function fixtureAt(pos, snapshot, beats) {
 
 /* A quick-find href, as the place in the app it lands on. */
 const targetOf = href => {
-  const floor = /^\/#floor-(\d+)$/.exec(href);
+  const floor = /^\/(?:#floor-|floor\/)(\d+)$/.exec(href);
   if (floor) return `floor:${floor[1]}`;
   const [, id, beat] = /^\/entity\/([^#]+)(?:#b(\d+))?$/.exec(href);
   return beat ? `entry:${id}#${beat}` : `entry:${id}`;

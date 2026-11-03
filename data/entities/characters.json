@@ -3966,6 +3966,60 @@
           "kind": "has-class",
           "at": "2:2"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:1",
+          "look": "crocs"
+        },
+        {
+          "at": "1:2",
+          "look": "barefoot"
+        },
+        {
+          "at": "1:6",
+          "look": "cloak"
+        },
+        {
+          "at": "1:15",
+          "look": "sleeve"
+        },
+        {
+          "at": "1:35",
+          "look": "hearts"
+        },
+        {
+          "at": "2:17",
+          "look": "xistera"
+        },
+        {
+          "at": "4:30",
+          "look": "rattle"
+        },
+        {
+          "at": "5:36",
+          "look": "patches"
+        },
+        {
+          "at": "6:72",
+          "look": "bald"
+        },
+        {
+          "at": "7:5",
+          "look": "ponytail"
+        },
+        {
+          "at": "7:54",
+          "look": "loose"
+        },
+        {
+          "at": "8:21",
+          "look": "kangaroo"
+        },
+        {
+          "at": "8:34",
+          "look": "unsuited"
+        }
       ]
     },
     {
@@ -6631,6 +6685,44 @@
           "kind": "has-class",
           "at": "2:1"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:1",
+          "look": "cat"
+        },
+        {
+          "at": "1:7",
+          "look": "crown"
+        },
+        {
+          "at": "1:23",
+          "look": "crupper"
+        },
+        {
+          "at": "2:25",
+          "look": "bare"
+        },
+        {
+          "at": "3:2",
+          "look": "tiara"
+        },
+        {
+          "at": "3:15",
+          "look": "shades"
+        },
+        {
+          "at": "6:24",
+          "look": "citrine"
+        },
+        {
+          "at": "7:3",
+          "look": "lights"
+        },
+        {
+          "at": "8:9",
+          "look": "chain"
+        }
       ]
     },
     {
@@ -7311,6 +7403,28 @@
           "to": "princess-donut",
           "kind": "protects",
           "at": "1:46"
+        }
+      ],
+      "figure": [
+        {
+          "at": "1:46",
+          "look": "chick"
+        },
+        {
+          "at": "2:5",
+          "look": "juvenile"
+        },
+        {
+          "at": "2:21",
+          "look": "pony"
+        },
+        {
+          "at": "3:7",
+          "look": "grown"
+        },
+        {
+          "at": "8:11",
+          "look": "nemes"
         }
       ]
     },
@@ -8496,6 +8610,48 @@
           "kind": "ally",
           "at": "1:28"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:2",
+          "look": "rat"
+        },
+        {
+          "at": "1:35",
+          "look": "bugaboo"
+        },
+        {
+          "at": "2:2",
+          "look": "incubus"
+        },
+        {
+          "at": "3:2",
+          "look": "grulke"
+        },
+        {
+          "at": "4:1",
+          "look": "skyfowl"
+        },
+        {
+          "at": "5:2",
+          "look": "kuma"
+        },
+        {
+          "at": "6:2",
+          "look": "cyclops"
+        },
+        {
+          "at": "7:2",
+          "look": "canadian"
+        },
+        {
+          "at": "8:7",
+          "look": "reaper"
+        },
+        {
+          "at": "8:89",
+          "look": "table"
+        }
       ]
     },
     {
@@ -9612,6 +9768,36 @@
           "kind": "wields",
           "at": "7:end"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:21",
+          "look": "first-face"
+        },
+        {
+          "at": "3:2",
+          "look": "blond"
+        },
+        {
+          "at": "3:6",
+          "look": "mohawk"
+        },
+        {
+          "at": "3:15",
+          "look": "hulk"
+        },
+        {
+          "at": "3:24",
+          "look": "crossbow"
+        },
+        {
+          "at": "3:31",
+          "look": "shield"
+        },
+        {
+          "at": "7:86",
+          "look": "shielded"
+        }
       ]
     },
     {
@@ -10111,6 +10297,16 @@
           "kind": "member-of",
           "at": "1:22"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:22",
+          "look": "scrubs"
+        },
+        {
+          "at": "3:8",
+          "look": "butterfly"
+        }
       ]
     },
     {
@@ -10268,6 +10464,12 @@
           "to": "meadow-lark",
           "kind": "member-of",
           "at": "1:22"
+        }
+      ],
+      "figure": [
+        {
+          "at": "1:22",
+          "look": "cart"
         }
       ]
     },
@@ -10765,7 +10967,25 @@
           "text": "I'm alive. Barely. Me and Bodi are stuck in what's left of the truck after the god blew up, and somebody had better dig us out. It's wrecked pretty good. I haven't been folded like this since Brandon showed us how to use Tinder. Imani is shouting my name on the chat. I'm here, Imani."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "1:31",
+          "look": "chair"
+        },
+        {
+          "at": "3:8",
+          "look": "frost"
+        },
+        {
+          "at": "5:36",
+          "look": "ring"
+        },
+        {
+          "at": "6:2",
+          "look": "staff"
+        }
+      ]
     },
     {
       "id": "zev",
@@ -11314,6 +11534,16 @@
           "kind": "works-for",
           "at": "1:36"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:36",
+          "look": "suit"
+        },
+        {
+          "at": "5:17",
+          "look": "rebreather"
+        }
       ]
     },
     {
@@ -11561,6 +11791,12 @@
           "kind": "embodies",
           "at": "5:1"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:6",
+          "look": "tattoos"
+        }
       ]
     },
     {
@@ -11645,7 +11881,13 @@
           "text": "Status update on Redstone Grimaldi, filed by Tsarina Signet from a log outside the town. When he came to this world, they planted him next to an all-tree node. The roots intertwined, and he became one with the tree. The tree's roots go deep; it has survived countless infestations like this, she says, and will outlast this one. Crawler Carl did not ask whether that means the ringmaster is alive. He decided not to pursue it."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "2:10",
+          "look": "vine"
+        }
+      ]
     },
     {
       "id": "samantha",
@@ -12335,6 +12577,12 @@
           "kind": "ally",
           "at": "6:25"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:24",
+          "look": "head"
+        }
       ]
     },
     {
@@ -12485,6 +12733,12 @@
           "to": "carl",
           "kind": "inhabits",
           "at": "7:19"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:26",
+          "look": "spider"
         }
       ]
     },
@@ -12698,6 +12952,16 @@
           "to": "gate-of-the-feral-gods",
           "kind": "travelled-through",
           "at": "7:7"
+        }
+      ],
+      "figure": [
+        {
+          "at": "4:5",
+          "look": "mouse"
+        },
+        {
+          "at": "7:42",
+          "look": "bodysuit"
         }
       ]
     },
@@ -13159,6 +13423,16 @@
           "kind": "ally",
           "at": "4:5"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:3",
+          "look": "pudgy"
+        },
+        {
+          "at": "7:7",
+          "look": "jacket"
+        }
       ]
     },
     {
@@ -13296,7 +13570,25 @@
           "text": "Two hundred of us are going to the Pineapple Cabaret, and I am one of them, spider legs and all. Carl calls Zhang and me generals. Zhang reminds him he was only ever made colonel. Carl says he sees I'm wearing a red shirt now. I hold out my arms and ask how he likes it. Donut headbutts me. Then Bautista pours the tea. That is the goodbye. It is enough of one."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:20",
+          "look": "tired"
+        },
+        {
+          "at": "4:29",
+          "look": "cutlass"
+        },
+        {
+          "at": "6:22",
+          "look": "chair"
+        },
+        {
+          "at": "7:21",
+          "look": "crab"
+        }
+      ]
     },
     {
       "id": "ferdinand",
@@ -13478,6 +13770,20 @@
           "kind": "owned-by",
           "at": "1:34"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:73",
+          "look": "turban"
+        },
+        {
+          "at": "6:12",
+          "look": "bare"
+        },
+        {
+          "at": "7:10",
+          "look": "tissue"
+        }
       ]
     },
     {
@@ -13621,6 +13927,16 @@
           "kind": "patron-of",
           "at": "4:31"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:31",
+          "look": "ablaze"
+        },
+        {
+          "at": "8:95",
+          "look": "toga"
+        }
       ]
     },
     {
@@ -13763,6 +14079,16 @@
           "to": "prepotente",
           "kind": "partner",
           "at": "3:32"
+        }
+      ],
+      "figure": [
+        {
+          "at": "3:32",
+          "look": "shepherd"
+        },
+        {
+          "at": "5:6",
+          "look": "vampire"
         }
       ]
     },
@@ -14259,6 +14585,12 @@
           "kind": "partner",
           "at": "3:32"
         }
+      ],
+      "figure": [
+        {
+          "at": "3:3",
+          "look": "armor"
+        }
       ]
     },
     {
@@ -14457,7 +14789,17 @@
           "text": "It works. The transfer holds, and they come across to the Pineapple Cabaret one after another, and my Dread watches over each of them from the moment they arrive. They are calling it the Garden of Deliverance. I do not need to see them to know they are alive. The Dread tells me. It tells me everything, all the time, and it does not stop."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:32",
+          "look": "changbi"
+        },
+        {
+          "at": "8:61",
+          "look": "gear-eye"
+        }
+      ]
     },
     {
       "id": "florin",
@@ -14759,6 +15101,12 @@
           "kind": "ally",
           "at": "5:69"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:end",
+          "look": "shotgun"
+        }
       ]
     },
     {
@@ -15040,6 +15388,24 @@
           "kind": "subject-of",
           "at": "7:end"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:14",
+          "look": "girl"
+        },
+        {
+          "at": "2:7",
+          "look": "woman"
+        },
+        {
+          "at": "4:4",
+          "look": "goat"
+        },
+        {
+          "at": "5:37",
+          "look": "flame"
+        }
       ]
     },
     {
@@ -15185,7 +15551,17 @@
           "text": "Inventory update, ninth floor. Crawler Princess Donut opens a celestial box from Long Haul Biological Waste Management Solutions and takes out the Tiara of a Thousand Lights. In the same sitting she puts on Quan Ch's cloak and takes the benefits that come with it. The cloak does not ask where its previous owner is, and neither do I."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "2:end",
+          "look": "robe"
+        },
+        {
+          "at": "4:31",
+          "look": "one-arm"
+        }
+      ]
     },
     {
       "id": "bomo",
@@ -15325,6 +15701,20 @@
           "kind": "based-at",
           "at": "3:8"
         }
+      ],
+      "figure": [
+        {
+          "at": "3:8",
+          "look": "tuxedo"
+        },
+        {
+          "at": "6:14",
+          "look": "scrapheap"
+        },
+        {
+          "at": "6:15",
+          "look": "unarmored"
+        }
       ]
     },
     {
@@ -15448,7 +15838,13 @@
           "text": "Three minutes with my client. One deal on offer: a single season of indenture, then freedom. I show him the paperwork. I tell him I would not trust it, and that I would understand if he took it. No exit is offered at the close of the eleventh; one is offered at the start of the twelfth, and I would not trust that either. He declines. I leave. I do not tell him why I am in a hurry."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "5:3",
+          "look": "suit"
+        }
+      ]
     },
     {
       "id": "frank-and-maggie",
@@ -15538,7 +15934,13 @@
           "text": "The goddess plays a Raid Stash, and five cards come flying out of five decks. One of them is the only inactive totem the cat was carrying, and that's me. Leveled-Up Frank, Sober Edition, a level 100 night elf blood assassin, landing on a roof that is coming apart underneath all of us, folks. And there's the young man. Hello, Carl. Fancy seeing you here. Where's your ring? The cat sends her tentacle cloud at me, and I pull the red sword off my shoulder."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "1:20",
+          "look": "recap"
+        }
+      ]
     },
     {
       "id": "beatrice",
@@ -15623,7 +16025,13 @@
           "text": "Report filed by the cat, after the fact. Subject was on her boyfriend's Facebook, notifications and all, because he used one password for everything. A coworker named Sally, a single mother, asked him out. Subject blocked her from his account, told his boss she was stalking him, and had a friend send the boss a stranger's photographs from the internet. Sally was fired that day. Subject and her friends thought it was the funniest thing ever."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "5:19",
+          "look": "gown"
+        }
+      ]
     },
     {
       "id": "hekla",
@@ -15722,6 +16130,16 @@
           "kind": "leads",
           "at": "2:21"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:39",
+          "look": "shieldmaiden"
+        },
+        {
+          "at": "2:7",
+          "look": "amazonian"
+        }
       ]
     },
     {
@@ -15789,7 +16207,13 @@
           "text": "Hunting Grounds, the end of the floor. Crawler Eva, bitten by a dinosaur and buried in a corner, is still alive, and Crawler Katia Grim goes looking for her. Crawler Katia Grim kills Crawler Eva. That is the whole of it. Two professors came in through the same door; from here on, one. I don't do eulogies, and this is not the entry where I start."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:21",
+          "look": "sabers"
+        }
+      ]
     },
     {
       "id": "odette",
@@ -15950,7 +16374,17 @@
           "text": "Chaco is feeling a little punched in the face, so I am filling in for my very old friend. Yes, this is me out of gear: no mask, no breastplate, no crab, a yellow shirt and my hair in a bun. I have just onboarded into the Ascendency, where I am playing Nekhebit. Today's council is brought to you by the Ultima Corporation. Three teams defeated, seven remain, and for the first time ever a crawler team and an NPC team among them. Cascadia laughs in my face, so I take the meeting."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "1:28",
+          "look": "costume"
+        },
+        {
+          "at": "1:29",
+          "look": "herself"
+        }
+      ]
     },
     {
       "id": "system-ai",
@@ -16276,7 +16710,13 @@
           "text": "Story time, in the middle of your ambush. Here's my completely arbitrary list of the Big Six groups fighting to control or escape my dungeon. One: crawlers, current and former. Two: the NPCs, like Juice Box, who got dumped in Sheol where I can't see her, and who you should check on. Three: the gods, the dumbest and my least favourite. Four: sapient mobs, Shadow Mimics, the Ogre Imperium, Krakaren Prime, the War Mages. Five: the demons in Sheol. Six: survive this and reach the eleventh floor, and you'll meet them."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "1:2",
+          "look": "box"
+        }
+      ]
     },
     {
       "id": "orren",
@@ -16404,6 +16844,12 @@
           "to": "the-syndicate",
           "kind": "works-for",
           "at": "4:19"
+        }
+      ],
+      "figure": [
+        {
+          "at": "4:19",
+          "look": "hood"
         }
       ]
     },
@@ -16544,6 +16990,12 @@
           "kind": "broke",
           "at": "8:1"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:20",
+          "look": "one-wing"
+        }
       ]
     },
     {
@@ -16652,6 +17104,12 @@
           "to": "princess-posse",
           "kind": "member-of",
           "at": "7:11"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:11",
+          "look": "scar"
         }
       ]
     },
@@ -16784,6 +17242,12 @@
           "kind": "controls",
           "at": "6:61"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:5",
+          "look": "trident"
+        }
       ]
     },
     {
@@ -16857,7 +17321,17 @@
           "text": "Their quest, the Missing Piece, updates. Succeeded, it says. And beneath the word, a timer, one for each region, counting down to the moment my spell goes off there. A global teleport. When it lands, the walls of their stairwell chambers will be sucked away, and anyone crouched beneath them pulled upward into the stairwell. They wanted me casting. They have their wish. Home is the direction I am going in any case, and I have never minded company on the road."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:60",
+          "look": "serpent"
+        },
+        {
+          "at": "6:66",
+          "look": "demon"
+        }
+      ]
     },
     {
       "id": "britney",
@@ -17062,7 +17536,21 @@
           "text": "Louis comes out of the fold coughing steam through his gills. I tell him to let Forkith work, or he dies. The leech filters your blood so you live down here. Chris got changed by the first Scolopendra attack. Werewolf. A Crest knocks him out before he turns, and somebody says they don't know him from the feeds. I tell them who he is. I tell them not to hurt him."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:25",
+          "look": "bikini"
+        },
+        {
+          "at": "5:75",
+          "look": "burned"
+        },
+        {
+          "at": "6:22",
+          "look": "sigil"
+        }
+      ]
     },
     {
       "id": "osvaldo",
@@ -17185,6 +17673,12 @@
           "kind": "collects",
           "at": "5:75"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:40",
+          "look": "boots"
+        }
       ]
     },
     {
@@ -17290,6 +17784,12 @@
           "kind": "owns",
           "at": "5:51"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:64",
+          "look": "gown"
+        }
       ]
     },
     {
@@ -17383,6 +17883,16 @@
           "to": "agatha",
           "kind": "enemy",
           "at": "7:78"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:61",
+          "look": "gate"
+        },
+        {
+          "at": "8:37",
+          "look": "milkshake"
         }
       ]
     },
@@ -17480,6 +17990,16 @@
           "kind": "wields",
           "at": "8:97"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:35",
+          "look": "woman"
+        },
+        {
+          "at": "8:97",
+          "look": "snakes"
+        }
       ]
     },
     {
@@ -17553,7 +18073,21 @@
           "text": "Chaco had one job: read the script. He got partway in, looked up, and stopped. Stage fright, on my stage. So I removed his wings, which he was not using anyway, and brought Grigori up to finish the reading. I'm doing Grigori's talking myself; it saves time. A presenter is a mouth with a costume on it, crawler, and mouths can be replaced. Wings, apparently, cannot."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:7",
+          "look": "leisure-suit"
+        },
+        {
+          "at": "8:92",
+          "look": "tuxedo"
+        },
+        {
+          "at": "8:93",
+          "look": "wingless"
+        }
+      ]
     },
     {
       "id": "li-jun",
@@ -17672,6 +18206,20 @@
           "kind": "family-sibling",
           "at": "1:42"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:42",
+          "look": "scars"
+        },
+        {
+          "at": "7:50",
+          "look": "patch"
+        },
+        {
+          "at": "7:56",
+          "look": "robot"
+        }
       ]
     },
     {
@@ -17760,7 +18308,13 @@
           "text": "Glurp, glurp. I am riding a god of war through a factory, I have finally found the man with the cat, and I am in the middle of a sentence, a very good sentence, when the cat casts Laundry Day and I am out of Grull's chest and dropping into a river of molten steel. It is fine. It is television. Nothing kills a tourist on this floor. I will be splattered, I will regenerate, and the soul armor rule sends me straight back to my god. A few minutes. They may have a few minutes."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "1:42",
+          "look": "shirt"
+        }
+      ]
     },
     {
       "id": "firas",
@@ -17828,7 +18382,13 @@
           "text": "Crawler Firas has been eliminated on the sixth floor. Crawler Princess Donut is bringing the night's count to Crawler Carl as I speak, and his name is on it, next to the Popovs. Found in a desert. Sobered up by a manager. Lasted one floor past that. The file is closed. It was never a thick one."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:3",
+          "look": "lanky"
+        }
+      ]
     },
     {
       "id": "vrah",
@@ -17955,7 +18515,17 @@
           "text": "Hunter Vrah has been removed from the Hunting Grounds by Mongo and Kiwi, in the all-out battle around the submerged castle. Two dinosaurs. It took two. Also logged from the same fight: Tsarina Signet's tattoos are now permanently alive, and an incomplete flesh golem of her mother has appeared, which Crawler Carl has put in his inventory. Do not ask me what he intends to do with it. I have stopped asking."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "5:35",
+          "look": "heads"
+        },
+        {
+          "at": "5:38",
+          "look": "shed"
+        }
+      ]
     },
     {
       "id": "apito",
@@ -18168,6 +18738,16 @@
           "at": "5:61",
           "note": "The hunter she crosses the floor to reach"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:61",
+          "look": "squirrel"
+        },
+        {
+          "at": "5:74",
+          "look": "mantis"
+        }
       ]
     },
     {
@@ -18221,7 +18801,7 @@
           "at": "7:60",
           "confidence": "verified",
           "headline": "The two of them go for each other",
-          "text": "Update on the two gods in the Dream territory: they are fighting each other. Not the crawlers, not the armies, each other, immediately and with feeling. Whatever the crawlers were hoping for when that gate opened, this is a better result than any of them had a right to. Elsewhere the dwarves set off a volcano in Reaver territory, because everyone on this floor has decided that scale is a substitute for a plan."
+          "text": "Update on the two gods in the Dream territory: they are fighting each other. Not the crawlers, not the armies, each other, immediately and with feeling. Whatever the crawlers were hoping for when that gate opened, this is a better result than any of them had a right to. Elsewhere the dwarves blow the top off the mountain under King's Point, next door to the Reavers, because everyone on this floor has decided that scale is a substitute for a plan."
         },
         {
           "kind": "arc",
@@ -18279,6 +18859,12 @@
           "to": "eris",
           "kind": "concerns",
           "at": "7:76"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:71",
+          "look": "robes"
         }
       ]
     },
@@ -18405,6 +18991,12 @@
           "kind": "concerns",
           "at": "8:95",
           "note": "Named as the one who killed his son"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:53",
+          "look": "beetle"
         }
       ]
     },
@@ -18539,6 +19131,12 @@
           "to": "britney",
           "kind": "concerns",
           "at": "8:83"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:66",
+          "look": "miner"
         }
       ]
     },
@@ -18759,6 +19357,12 @@
           "kind": "concerns",
           "at": "8:69"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:36",
+          "look": "vulture"
+        }
       ]
     },
     {
@@ -18864,6 +19468,16 @@
           "to": "crown-of-the-sepsis-whore",
           "kind": "concerns",
           "at": "6:17"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:17",
+          "look": "toga"
+        },
+        {
+          "at": "7:86",
+          "look": "true-form"
         }
       ]
     },
@@ -18975,6 +19589,12 @@
           "to": "princess-donut",
           "kind": "enemy",
           "at": "8:66"
+        }
+      ],
+      "figure": [
+        {
+          "at": "3:33",
+          "look": "axe"
         }
       ]
     },
@@ -19090,6 +19710,12 @@
           "to": "carl",
           "kind": "concerns",
           "at": "4:30"
+        }
+      ],
+      "figure": [
+        {
+          "at": "4:29",
+          "look": "puppy"
         }
       ]
     },
@@ -19382,6 +20008,12 @@
           "kind": "concerns",
           "at": "6:16"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:16",
+          "look": "hammer"
+        }
       ]
     },
     {
@@ -19545,6 +20177,16 @@
           "kind": "works-for",
           "at": "3:9"
         }
+      ],
+      "figure": [
+        {
+          "at": "3:8",
+          "look": "tuxedo"
+        },
+        {
+          "at": "3:19",
+          "look": "boa"
+        }
       ]
     },
     {
@@ -19650,6 +20292,12 @@
           "kind": "killed-by",
           "at": "6:32"
         }
+      ],
+      "figure": [
+        {
+          "at": "3:9",
+          "look": "tuxedo"
+        }
       ]
     },
     {
@@ -19731,6 +20379,12 @@
           "kind": "summoned",
           "at": "4:24"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:21",
+          "look": "bathrobe"
+        }
       ]
     },
     {
@@ -19805,6 +20459,12 @@
           "to": "npcs-are-people",
           "kind": "concerns",
           "at": "4:9"
+        }
+      ],
+      "figure": [
+        {
+          "at": "4:6",
+          "look": "camel"
         }
       ]
     },
@@ -19899,6 +20559,16 @@
           "to": "emberus",
           "kind": "enemy",
           "at": "4:32"
+        }
+      ],
+      "figure": [
+        {
+          "at": "4:3",
+          "look": "sun"
+        },
+        {
+          "at": "7:54",
+          "look": "man"
         }
       ]
     },
@@ -20150,6 +20820,16 @@
           "kind": "transformed",
           "at": "5:44"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:28",
+          "look": "boa"
+        },
+        {
+          "at": "5:52",
+          "look": "ballerina"
+        }
       ]
     },
     {
@@ -20285,6 +20965,24 @@
           "kind": "transformed",
           "at": "5:73"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:11",
+          "look": "raptor"
+        },
+        {
+          "at": "5:74",
+          "look": "ursine"
+        },
+        {
+          "at": "7:59",
+          "look": "one-eyed"
+        },
+        {
+          "at": "7:82",
+          "look": "twins"
+        }
       ]
     },
     {
@@ -20368,6 +21066,16 @@
           "kind": "works-for",
           "at": "5:29"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:25",
+          "look": "tortoise"
+        },
+        {
+          "at": "5:29",
+          "look": "needle"
+        }
       ]
     },
     {
@@ -20442,6 +21150,12 @@
           "to": "the-syndicate",
           "kind": "answers-to",
           "at": "7:34"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:32",
+          "look": "feathers"
         }
       ]
     },
@@ -20573,6 +21287,12 @@
           "kind": "killed-by",
           "at": "7:26"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:19",
+          "look": "crown"
+        }
       ]
     },
     {
@@ -20703,6 +21423,12 @@
           "kind": "enemy",
           "at": "8:23"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:21",
+          "look": "rebreather"
+        }
       ]
     },
     {
@@ -20802,6 +21528,16 @@
           "kind": "fought-by",
           "at": "6:15"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:11",
+          "look": "reeds"
+        },
+        {
+          "at": "6:58",
+          "look": "gold"
+        }
       ]
     },
     {
@@ -20891,6 +21627,16 @@
           "kind": "enemy",
           "at": "7:58"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:21",
+          "look": "armor"
+        },
+        {
+          "at": "7:58",
+          "look": "armless"
+        }
       ]
     },
     {
@@ -20959,6 +21705,12 @@
           "kind": "ally",
           "at": "6:34"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:23",
+          "look": "ink"
+        }
       ]
     },
     {
@@ -21012,6 +21764,12 @@
           "to": "princess-donut",
           "kind": "favourite-of",
           "at": "6:33"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:23",
+          "look": "dancer"
         }
       ]
     },
@@ -21211,6 +21969,12 @@
           "kind": "adjutant-of",
           "at": "7:11"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:36",
+          "look": "tusk"
+        }
       ]
     },
     {
@@ -21301,6 +22065,16 @@
           "kind": "concerns",
           "at": "7:48",
           "note": "The crown's outstanding requirement is paid in her nagas."
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:42",
+          "look": "white"
+        },
+        {
+          "at": "7:55",
+          "look": "gray"
         }
       ]
     },
@@ -21461,6 +22235,16 @@
           "kind": "ally",
           "at": "7:63"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:23",
+          "look": "vest"
+        },
+        {
+          "at": "7:63",
+          "look": "mounted"
+        }
       ]
     },
     {
@@ -21533,6 +22317,16 @@
           "to": "princess-posse",
           "kind": "member-of",
           "at": "7:63"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:52",
+          "look": "otter"
+        },
+        {
+          "at": "7:5",
+          "look": "vest"
         }
       ]
     },
@@ -21621,6 +22415,12 @@
           "at": "8:1",
           "note": "Garage attendant"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:6",
+          "look": "overalls"
+        }
       ]
     },
     {
@@ -21699,6 +22499,12 @@
           "to": "royal-court",
           "kind": "ally",
           "at": "8:4"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:4",
+          "look": "headband"
         }
       ]
     },
@@ -21820,7 +22626,17 @@
           "text": "Team One, Team Sparkles, has been eliminated. The light turned green and the timed hole punch opened the shield, the vine-killing potion killed the vine, and a second potion fried the navigation that looked like Lucienne. Before Osvaldo's gnu had recovered from Dwight's own cannon, Crawler Donut was through the window and had removed his head. His horn is now in her inventory. The missile cart never launched. The official notification reads: because, holy shit, that was pretty badass. It stands."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "8:5",
+          "look": "vine"
+        },
+        {
+          "at": "8:55",
+          "look": "horse"
+        }
+      ]
     },
     {
       "id": "chiyome",
@@ -21885,6 +22701,12 @@
           "to": "royal-court",
           "kind": "ally",
           "at": "8:18"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:12",
+          "look": "ninja"
         }
       ]
     },
@@ -21999,6 +22821,16 @@
           "at": "8:58",
           "note": "Danced there, before the split"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:13",
+          "look": "gimp"
+        },
+        {
+          "at": "8:66",
+          "look": "whole"
+        }
       ]
     },
     {
@@ -22101,6 +22933,16 @@
           "kind": "ally",
           "at": "8:14"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:8",
+          "look": "blond"
+        },
+        {
+          "at": "8:63",
+          "look": "axes"
+        }
       ]
     },
     {
@@ -22199,6 +23041,12 @@
           "kind": "works-for",
           "at": "8:17",
           "note": "Driver and medic"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:23",
+          "look": "bucket"
         }
       ]
     },
@@ -22331,6 +23179,16 @@
           "kind": "works-for",
           "at": "8:17"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:17",
+          "look": "screen"
+        },
+        {
+          "at": "8:73",
+          "look": "hologram"
+        }
       ]
     },
     {
@@ -22436,6 +23294,12 @@
           "kind": "transformed",
           "at": "8:93"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:19",
+          "look": "pig"
+        }
       ]
     },
     {
@@ -22525,6 +23389,12 @@
           "kind": "works-for",
           "at": "8:71",
           "note": "Driver"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:19",
+          "look": "mallet"
         }
       ]
     },
@@ -22745,6 +23615,12 @@
           "kind": "works-for",
           "at": "8:58",
           "note": "Before the split"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:58",
+          "look": "white-suit"
         }
       ]
     },
@@ -22991,6 +23867,12 @@
           "at": "5:57",
           "note": "Two swashbucklers, one training routine."
         }
+      ],
+      "figure": [
+        {
+          "at": "2:23",
+          "look": "tigran"
+        }
       ]
     },
     {
@@ -23141,6 +24023,16 @@
           "at": "1:42",
           "note": "Bullied for a segment on Death Watch Extreme Dungeon Mayhem."
         }
+      ],
+      "figure": [
+        {
+          "at": "1:42",
+          "look": "plain"
+        },
+        {
+          "at": "3:31",
+          "look": "armor"
+        }
       ]
     },
     {
@@ -23276,6 +24168,16 @@
           "kind": "fought-by",
           "at": "1:34"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:33",
+          "look": "tentacles"
+        },
+        {
+          "at": "1:35",
+          "look": "body"
+        }
       ]
     },
     {
@@ -23363,6 +24265,12 @@
           "kind": "twin-of",
           "at": "5:64"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:4",
+          "look": "medic"
+        }
       ]
     },
     {
@@ -23446,6 +24354,12 @@
           "kind": "serves",
           "at": "1:28",
           "note": "Associate producer, and the mouth Odette uses when Odette cannot be seen to speak."
+        }
+      ],
+      "figure": [
+        {
+          "at": "1:27",
+          "look": "tablet"
         }
       ]
     },
@@ -23538,6 +24452,12 @@
           "at": "2:25",
           "note": "The convulsion that ends him is where the scenario begins."
         }
+      ],
+      "figure": [
+        {
+          "at": "2:24",
+          "look": "leech"
+        }
       ]
     },
     {
@@ -23618,6 +24538,12 @@
           "to": "system-ai",
           "kind": "avatar-of",
           "at": "7:37"
+        }
+      ],
+      "figure": [
+        {
+          "at": "3:26",
+          "look": "bottle"
         }
       ]
     },
@@ -23736,6 +24662,12 @@
           "kind": "old-friend-of",
           "at": "2:15"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:15",
+          "look": "tornado"
+        }
       ]
     },
     {
@@ -23812,6 +24744,12 @@
           "to": "princess-donut",
           "kind": "encountered-by",
           "at": "2:18"
+        }
+      ],
+      "figure": [
+        {
+          "at": "2:18",
+          "look": "perch"
         }
       ]
     },
@@ -23902,6 +24840,12 @@
           "to": "hekla",
           "kind": "interviewed",
           "at": "2:19"
+        }
+      ],
+      "figure": [
+        {
+          "at": "2:19",
+          "look": "scarf"
         }
       ]
     },
@@ -24097,6 +25041,16 @@
           "kind": "killed",
           "at": "7:35"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:12",
+          "look": "pantsuit"
+        },
+        {
+          "at": "7:11",
+          "look": "leather"
+        }
       ]
     },
     {
@@ -24131,7 +25085,13 @@
           "text": "Survival Royale Special Event, called live from Earth orbit, with the orc announcer, both in tuxedoes, both clearly drinking. The broadcast breaks away from a one-sided Lucia Mar slaughter in Beijing. Subject explains the board: Sister Ines used a bard skill from her patron to raise her Word Weaver charm to level 15 and took a city boss. Then Carl punted a zombie turkey into the ocean, and the AI counted crab sperm as a mob. Eight groups, one fight. Betting is open."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:26",
+          "look": "host"
+        }
+      ]
     },
     {
       "id": "mistress-tiatha",
@@ -24214,7 +25174,13 @@
           "text": "Subject, drunk as usual, listens to Tipid describe what the Crawler Project won, citizenship, healthcare and housing for released crawlers, and grunts with derision. That perk is only for new crawlers, she says, and they will still be bled dry on taxes. The old guard will be extra fucked on release. The rich like their faces on screen while they donate, and they will fight like hell when a scruffy former crawler tries to settle in their system. She takes a long swig, looks at Mongo with wet eyes, and wanders off."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:48",
+          "look": "bottle"
+        }
+      ]
     },
     {
       "id": "bianca",
@@ -24280,7 +25246,17 @@
           "text": "Bianca, hellspawn familiar, pursued the Lady Dominators out of the smelting room and through the next one as instructed. The next one was dotted with piles of white powder like giant anthills, kicked into a cloud by the vehicles ahead. The powder is Toddler Cocaine. She was rendered strung out before she could lay a hoof on the target, and Prepotente pulled off the track to administer aid before she perished. The description on that powder runs to several paragraphs. She did not read it."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "5:6",
+          "look": "stubby"
+        },
+        {
+          "at": "5:49",
+          "look": "saddle"
+        }
+      ]
     },
     {
       "id": "clarabelle",
@@ -24334,7 +25310,13 @@
           "text": "Subject sees Crawler Carl's party of thirty walk into the Hairpin, raises both hands, and says: nope. She makes no attempt to stop them. She confirms the door now runs to the top level, then realises that the dachshund is Carl and bursts out laughing. She notes, for the record, that some of the party are permanently banned and some have no pass, and that it would be strangely adorable if half the club did not die every time they came in."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "2:15",
+          "look": "chair"
+        }
+      ]
     },
     {
       "id": "prince-stalwart",
@@ -24399,7 +25381,17 @@
           "text": "Crawler Carl lands in the woods to find the leader of the Skull Empire on his knees in a clearing, beside Elle McGibbons's open portal. He had reportedly been piloting a scorpion tank Florin guessed at seven hundred tons, had teleported out through a breached net, and his war mages had come with him, four of them already dead from Princess Donut's missiles. Three of the others chanted in unison and his flesh began to tear. He met the crawler's eyes and said, \"My sister was right.\" Then he exploded, all over the clearing."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "2:19",
+          "look": "prince"
+        },
+        {
+          "at": "7:42",
+          "look": "king"
+        }
+      ]
     },
     {
       "id": "clay-ton",
@@ -24433,7 +25425,13 @@
           "text": "Subject, formerly security, now plays upright bass in the house jazz band. His contract ran out, he told them he no longer wanted to fight, and they let him play. He puts the bass down when Chris walks in, notes that Chris is different, and takes his side. If the guards stop Chris and Donut and friends, he says, they stop him. Then he explains the job to a troll guard named Klonder: he worked as a guard a very long time. Late-stage crawlers, you do not try to stop."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:8",
+          "look": "arms-crossed"
+        }
+      ]
     },
     {
       "id": "fire-brandy",
@@ -24489,7 +25487,13 @@
           "text": "Subject Fire Brandy is gone into the abyss aboard the Nightmare, by choice. After talking with Tizquick, she remembered the babies from before: a ship's boiler, a castle's heating, one or two each time, then gone and never returned, and she always sent back. Three this time. They will not use her like this again. She asks Carl to help them: they should not be enemies in this. The train whistles twice and goes through the portal, and Carl's log fills with experience."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:14",
+          "look": "boiler"
+        }
+      ]
     },
     {
       "id": "madison",
@@ -24533,7 +25537,13 @@
           "text": "Subject Madison, human resources associate, is dead. The dwarves and gremlins of the Tangle built a stand and a noose and hanged her, once word spread, as Fire Brandy tells it. Fire Brandy did not see it. They brought the body to her, and she took it into the fire. Carl's assessment: Madison did not deserve it, though her character did. That is the whole difficulty with a staff that is starting to notice it is a cast."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:17",
+          "look": "one-heel"
+        }
+      ]
     },
     {
       "id": "tizquick",
@@ -24567,7 +25577,13 @@
           "text": "Subject Tizquick, conductor, helped drive the Nightmare to the trainyard and then stayed aboard. He and Fire Brandy discussed it and decided together. He knows how this works, he says, and promises to make her blow nice and big just before the bottom of the pit. Carl's reading is that he went because his daughter was a lie. Soon after, Bautista reports feeling the generator on his side explode."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:21",
+          "look": "tears"
+        }
+      ]
     },
     {
       "id": "loita",
@@ -24649,7 +25665,13 @@
           "text": "Subject Loita, outreach associate of the Borant Corporation and member of the Bloom, waits in a rented undersea trailer while the crawlers tape a toy commercial, Crawler Carl having left the cat doll beside her with orders to stay. She has just told them that their culture is a rot upon the Bloom, and that bringing Zev back into the fold took unspeakable things done to Zev's mother and aunts. The doll explodes. The trailer's shield holds the cracked window, and repair ships are on their way. Her last words: the Bloom will prevail. Crawler Carl tells her nobody likes melodrama."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:end",
+          "look": "rebreather"
+        }
+      ]
     },
     {
       "id": "milk",
@@ -24742,7 +25764,13 @@
           "text": "Milk will not go to the twelfth floor. She goes back to her guild. She has fulfilled her contract, lives out the season, and may leave after it, glad to have been given the chance to cook one final meal. Then, amplified by a word etched on her own throat, she presents the crawlers taking deals and the former crawlers going home: each crawler has painted three skills or spells onto pages, one for Carl, one for Donut, one for anyone. Goodbye, Carl. Burn it all to the ground. He hugs his sister."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "7:26",
+          "look": "winged"
+        }
+      ]
     },
     {
       "id": "tserendolgor",
@@ -24898,7 +25926,13 @@
           "text": "Crawler Tserendolgor tells Crawler Carl to get himself clear of the building, because her magical wrist bracer is about to bring it down. Her last message to the chat says goodbye, notes that at least nobody will butcher the pronunciation of her name any more, and asks everyone to make them all pay. The dome folds in on itself like a controlled demolition, barely noticeable in a burning city. Princess Donut's reply arrives in capitals, asking what she is doing. She never sees it. Her name moves to the deceased crawlers folder."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "3:31",
+          "look": "helmet"
+        }
+      ]
     },
     {
       "id": "ruby",
@@ -24951,7 +25985,13 @@
           "text": "Subject is a changeling orphan with compression sickness, met on the fifth floor: in human form, no arms and a sunken head. She is now employed as a room attendant in the court's personal space, one of six hired by Mordecai without mentioning it to the court and paid for out of its supply money. The game console has a new controller, split into left and right halves and propped on the floor at forty-five degrees with a small pillow in front of it. Carl works out who it is for. Mordecai stands by his decision."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:10",
+          "look": "armless"
+        }
+      ]
     },
     {
       "id": "skarn",
@@ -24985,7 +26025,13 @@
           "text": "Aboard Louis's airship, a changeling scout listed as Gangue, suspiciously thin for an adult. Carl works it out halfway to the target: this is Skarn, the child from the fifth floor, who has learned enough about his shapeshifting to hide his age. Carl resolves to have words with Louis and Princess Donut about children going into battle, as soon as they are back, and not before."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:2",
+          "look": "telescope"
+        }
+      ]
     },
     {
       "id": "langley",
@@ -25039,7 +26085,13 @@
           "text": "Crawler Langley's head is mounted on Hunter Vrah's shoulder, beside Bogdon Ro's, among the trophies she wears on her back. Princess Donut, invisible, has cast Second Chance on as many of them as her mana allows. Carl tells Langley he is sorry he could not help him before, and that he appreciates his help now. Vrah says \"What?\" as the head bites into her exposed neck and holds. Bogdon Ro bites from the other side. Then a third."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:3",
+          "look": "archer"
+        }
+      ]
     },
     {
       "id": "bobby",
@@ -25095,7 +26147,13 @@
           "text": "Crawler Bobby has been eliminated in the necropolis. He had already told the quest chat he was done, that it was too much, and he was still possessed by a ghost when two of his teammates scratched theirs out on Crawler Carl's advice. The three survivors of the tomb raiders were scattered through the crypt by then, and two of them were on a job for Carl. The tomb has crushers in it; Janice had already walked into one. Morris Sp reports Bobby gone. Cause of death, as reported: crushed."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:7",
+          "look": "spy"
+        }
+      ]
     },
     {
       "id": "bonnie",
@@ -25159,7 +26217,13 @@
           "text": "Subject and the changeling Skarn were explicitly banned from the door guns of Party Planner, today especially. Subject was found hiding behind the EMP bombs anyway, chewing gum, in an oversized shirt from the 105th Scream Warriors printed with a little girl berserker holding an axe. Carl ordered the ship turned around. Then the Reaver missiles came up through the clouds. Three got through and locked on. Subject unbuckled the gun, put on a farseer helmet too big for her head, and fired three short bursts. Splash three."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:16",
+          "look": "lemonade"
+        }
+      ]
     },
     {
       "id": "drakea",
@@ -25232,7 +26296,13 @@
           "text": "A note in the Cookbook, from Crawler Drakea, twenty-second edition. Beware the naga. They are cunning, and sometimes he wonders if they can read minds. The others call the mantids the masters of strategy; he does not believe it. Even with everything going wrong for the nagas in his season, he could not shake the idea that it was all part of some grand scheme. Underestimate them at your own peril. Carl remembers it with the Blood Sultanate's warlord coiled at his side."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "4:28",
+          "look": "bune"
+        }
+      ]
     },
     {
       "id": "geyrun",
@@ -25423,7 +26493,17 @@
           "text": "Jamal crosses the arena with his flamethrower roaring and Samantha on his head, landing on monsters and snapping them in half. His Tundra sits in a smoking wreck against the wall. When the god goes up, the blast throws him against the far wall and wrecks his legs until they fall off him. He is alive."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "7:15",
+          "look": "legs"
+        },
+        {
+          "at": "8:90",
+          "look": "gurkha"
+        }
+      ]
     },
     {
       "id": "drick",
@@ -25477,7 +26557,13 @@
           "text": "Subject, adjutant for Team Retribution, cracks into the Posse's forward trench beside Baroness Victory, causing some moments of bedlam until Carl shouts everyone down. Team Retribution is taking a small part in this assault, he explains sheepishly, so he has come to watch from the best position. Told he will see nothing from there, he offers to go across and warn the other side instead. The offer is not taken up."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "5:33",
+          "look": "silk-shirt"
+        }
+      ]
     },
     {
       "id": "anton",
@@ -25523,7 +26609,13 @@
           "text": "Subject is dead. Carl threw Black Nimbus over him, which took Anton out from under Ogun's protection and did nothing whatever about Ogun's wrath. The god considered this, called it a good attempt, took a step backward, and crushed Anton's head underfoot. He had already turned his back on Anton to face Carl when he did it. Paz, bleeding on the floor nearby, called him cousin."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:5",
+          "look": "crossbow"
+        }
+      ]
     },
     {
       "id": "gluteus-maxx",
@@ -25572,7 +26664,17 @@
           "text": "Chosen to drive heat three because Crawler Carl cannot reach the pedals in a kangaroo and Gluteus Maxx is the best of the strippers at Mario Kart. He drives in a Speedo and a borrowed hockey helmet. At the line his eyes are red. Samantha found outworlder uppers in the garbage pile from the snake guy and says one before a race lets you taste time; it is how she wins at Mario Kart. He took two. It is too late to change drivers."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:52",
+          "look": "gauntlets"
+        },
+        {
+          "at": "8:30",
+          "look": "speedo"
+        }
+      ]
     },
     {
       "id": "geraldo",
@@ -25615,7 +26717,17 @@
           "text": "Practice record: Subject tanks well and follows orders, except when Raul the crab is also on the field. They came to blows once, when Subject said something about Raul's mother. Raul had the upper hand, stopped the moment Princess Donut told them to, and Subject cracked his shell and finished him. Donut made him apologise at the next summoning. Subject now calls Raul the spider lady's jinetera, after hearing from Shi Maria how she used him as a cudgel."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:6",
+          "look": "seal"
+        },
+        {
+          "at": "6:9",
+          "look": "headband"
+        }
+      ]
     },
     {
       "id": "harbinger",
@@ -25669,7 +26781,13 @@
           "text": "Harbinger, liaison, expelled from the herd, teleports into the Plenty's studio carrying an enormous pulse rifle and addresses the matriarch as Mother. He warned her. She did not listen. He has been alone in this, and he is lonely. Exertion, he reminds her, is meant to be an expression of joy. He will exert himself now: protect the herd, protect the universe, and do what should have been done from the start. He raises the rifle at Crawler Carl. The AI intervenes. Everything inside the goat is suddenly outside the goat."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:12",
+          "look": "goat"
+        }
+      ]
     },
     {
       "id": "huanxin-jinx",
@@ -25724,7 +26842,17 @@
           "text": "Huanxin Jinx of the Grixist Swarm, CEO of Icon Industries, arrived wearing her goddess to collect Katia and was loudly unpleasant about the delay. Crawler Princess Donut laundered her out of the soul armour and onto a circle she could not teleport from. Her shields lasted one pass of Claw. The bolt that killed her was plain and unenchanted, with some of Mordecai's mother's ashes in the tip, fired from Katia's crossbow on the cat's back. She came to rest at Victory's feet."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:17",
+          "look": "toga"
+        },
+        {
+          "at": "8:86",
+          "look": "undershirt"
+        }
+      ]
     },
     {
       "id": "uzi-jesus",
@@ -25800,7 +26928,17 @@
           "text": "Uzi Jesus appears on the arena dirt beside Crawler Carl, still tiny, mouth an O, apparently unaware that Eris could take this form. He fires his toy gun at the Scolopendra heap, pop-pop-pop, and reports that there are a lot of people's auras inside. He pokes the frozen Donut with the same gun. Then he climbs a snake tail onto Eris's shoulder, and leaves with her."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:28",
+          "look": "robe"
+        },
+        {
+          "at": "6:58",
+          "look": "gold"
+        }
+      ]
     },
     {
       "id": "doctor-bones",
@@ -25855,7 +26993,13 @@
           "text": "Observed in the mercenary arcade. Subject is a Skin Skellie, able to grow flesh and organs, and his off-stage voice is that of a soft-spoken professor. Bards take patrons; his was Astrid, and is now Carl. He is practising a military charm that works only on the weak-minded and lasts, on the weak, more or less forever. It is called Conscript, the spell factions use to enslave crawlers on the ninth floor. He has some of Carl's own spells too, he says, and some are more powerful than Carl's."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:34",
+          "look": "crown"
+        }
+      ]
     },
     {
       "id": "bodi",
@@ -25879,7 +27023,13 @@
           "text": "Subject is a veteran of Land War, a different game entirely, which was inflicted on his home planet; everyone calls him a crawler anyway, and he comes to the Princess Posse’s aid during the faction fighting. He is given a battalion, the 103rd, on the strength of what he has done both inside a dungeon and outside one. He has said perhaps three words since."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "7:15",
+          "look": "spear"
+        }
+      ]
     },
     {
       "id": "rend",
@@ -25974,7 +27124,25 @@
           "text": "After the arena. Rend sits against Crawler Carl's side licking a bloody horribles mask. Before the fight he did not want to leave Carl, and went to the RV only when Donut called. In the fight he rode the head of a spiked turtle while Mongo pulled its leg out of the shell. Carl says eat the rich. Rend looks up with his tongue out, and says, for the record, yum."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "5:63",
+          "look": "meatball"
+        },
+        {
+          "at": "7:5",
+          "look": "baby"
+        },
+        {
+          "at": "7:65",
+          "look": "silver-tooth"
+        },
+        {
+          "at": "8:11",
+          "look": "headband"
+        }
+      ]
     },
     {
       "id": "epitome-tagg",
@@ -26039,7 +27207,13 @@
           "text": "Warlord Epitome Tagg of the Dream has fallen. With Louis open on the table and the swap two minutes off, he told everyone they did not deserve singularity and stopped the heart himself. The machinery was yanked out, thrown on the floor, and chewed to pieces by a dinosaur. Credit is complicated. I almost called it a suicide. I almost gave it to the kid who pulled it. It goes to pet Mongo of the Princess Posse, as a present for the baby shower. And then there were two."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "6:21",
+          "look": "jerkin"
+        }
+      ]
     },
     {
       "id": "radoslav",
@@ -26083,7 +27257,13 @@
           "text": "Team Free Love has been eliminated due to the death of both racers. Radoslav, bugbear, self-aware NPC racer, sits in that total. The instrument was a can of peach-flavoured beer, drilled out and refilled by Crawler Carl in his bomber's studio and slipped into the team's own magical cooler, which teleported itself back to their van after every race, exactly as advertised. The can was the peach one Radoslav had handed him on the first day."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "8:4",
+          "look": "scared"
+        }
+      ]
     },
     {
       "id": "lucienne",
@@ -26117,7 +27297,17 @@
           "text": "Crawler Princess Donut's Summon Ye, Vermin draws every rodent in the area to her. Lucienne, driver for team Sparkles, qualifies. She arrives on the hood of the court's truck, charmed, choking on the park's air, beating her helmeted head on the windshield to get in. The finish line does not allow passage outside one's conveyance. The barrier pushes her through the glass, and through Crawler Carl, and she comes apart. That is the end of Lucienne."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "8:5",
+          "look": "helmet"
+        },
+        {
+          "at": "8:32",
+          "look": "cracked"
+        }
+      ]
     },
     {
       "id": "genesis",
@@ -26171,7 +27361,13 @@
           "text": "Heat Five results, final line: Eliminated, Lady Dominators and the Gimp. Genesis drove the GTO into the Gasworks factory on golden tyres and did not drive it out. The car went through a trapped floor, the containment failed, and the dolls were at it when Crawler Carl's party took Corky and left. The team is struck from the standings. The gimp, for the record, was no longer theirs by the finish, and would not have agreed that he ever was."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "8:13",
+          "look": "racer"
+        }
+      ]
     },
     {
       "id": "rapture",
@@ -26225,7 +27421,13 @@
           "text": "NPC Rapture, womantaur, dominator and co-owner of a gimp she declined to transfer, is eliminated with her team at the close of Heat Five. Her last recorded position was the bottom of a hole in the doll-packing room, beside Genesis, strung out, containment gone, in a building hot enough to boil anyone uncontained, surrounded by action figures. She told Crawler Carl she would see him in the factory. She was right about that much."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "8:13",
+          "look": "racer"
+        }
+      ]
     },
     {
       "id": "linus",
@@ -26269,7 +27471,17 @@
           "text": "Correction to the file. The subject is not Linus. The real Linus died before this floor began, and the soother at the farewell in the square is his brother, brought in afterwards. His targets: Crawler Imani first and Crawler Louis second. Not Carl, whom his superiors want alive, and not the cat, whose death they judged would make Carl too volatile. The poison in the tea would not have worked; the healers had already made everyone immune. He was outed days ago. He was the last in the galaxy to know."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "8:15",
+          "look": "fan"
+        },
+        {
+          "at": "8:54",
+          "look": "print"
+        }
+      ]
     },
     {
       "id": "jacobus",
@@ -26295,7 +27507,17 @@
           "text": "Subject is a Reverse Tooth Fairy, level ninety, and he was a totem card until a patch on the Scavenger’s Daughter made him permanent, which nobody intended. He is tiny, absurdly muscled, blond, and his wings move too fast to see. Imani has him now. The paperwork to reverse it does not exist."
         }
       ],
-      "relations": []
+      "relations": [],
+      "figure": [
+        {
+          "at": "8:36",
+          "look": "loincloth"
+        },
+        {
+          "at": "8:84",
+          "look": "starfish"
+        }
+      ]
     },
     {
       "id": "chris-andrews",
@@ -26530,6 +27752,24 @@
           "kind": "partner",
           "at": "8:85"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:22",
+          "look": "skullcap"
+        },
+        {
+          "at": "3:8",
+          "look": "igneous"
+        },
+        {
+          "at": "4:14",
+          "look": "molten"
+        },
+        {
+          "at": "8:84",
+          "look": "overalls"
+        }
       ]
     },
     {
@@ -26665,6 +27905,12 @@
           "kind": "ally",
           "at": "1:22"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:22",
+          "look": "hammer"
+        }
       ]
     },
     {
@@ -26790,6 +28036,12 @@
           "kind": "killed-by",
           "at": "1:38"
         }
+      ],
+      "figure": [
+        {
+          "at": "1:22",
+          "look": "scrubs"
+        }
       ]
     },
     {
@@ -26873,6 +28125,12 @@
           "to": "princess-donut",
           "kind": "serves",
           "at": "1:9"
+        }
+      ],
+      "figure": [
+        {
+          "at": "1:9",
+          "look": "apron"
         }
       ]
     },
@@ -26993,6 +28251,12 @@
           "kind": "member-of",
           "at": "2:18"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:22",
+          "look": "dreamcatcher"
+        }
       ]
     },
     {
@@ -27086,6 +28350,12 @@
           "to": "carl",
           "kind": "supplies",
           "at": "2:16"
+        }
+      ],
+      "figure": [
+        {
+          "at": "2:16",
+          "look": "unicorn"
         }
       ]
     },
@@ -27250,6 +28520,12 @@
           "kind": "banished-by",
           "at": "7:37"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:37",
+          "look": "spacesuit"
+        }
       ]
     },
     {
@@ -27349,6 +28625,12 @@
           "kind": "killed-by",
           "at": "3:11"
         }
+      ],
+      "figure": [
+        {
+          "at": "3:11",
+          "look": "engineer"
+        }
       ]
     },
     {
@@ -27447,6 +28729,12 @@
           "to": "trainyard",
           "kind": "concerns",
           "at": "3:5"
+        }
+      ],
+      "figure": [
+        {
+          "at": "3:5",
+          "look": "uniform"
         }
       ]
     },
@@ -27613,6 +28901,12 @@
           "to": "imogen",
           "kind": "fought",
           "at": "5:74"
+        }
+      ],
+      "figure": [
+        {
+          "at": "4:20",
+          "look": "spear"
         }
       ]
     },
@@ -27813,6 +29107,12 @@
           "kind": "concerns",
           "at": "4:6"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:6",
+          "look": "chained"
+        }
       ]
     },
     {
@@ -27943,6 +29243,12 @@
           "kind": "fought",
           "at": "4:26"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:25",
+          "look": "daggers"
+        }
       ]
     },
     {
@@ -28051,6 +29357,12 @@
           "to": "kevin",
           "kind": "announced-by",
           "at": "4:26"
+        }
+      ],
+      "figure": [
+        {
+          "at": "4:26",
+          "look": "brood"
         }
       ]
     },
@@ -28300,6 +29612,12 @@
           "kind": "lingered-in",
           "at": "4:16"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:16",
+          "look": "bonnet"
+        }
       ]
     },
     {
@@ -28469,6 +29787,12 @@
           "to": "diwata",
           "kind": "sponsors",
           "at": "5:55"
+        }
+      ],
+      "figure": [
+        {
+          "at": "5:33",
+          "look": "hive-queen"
         }
       ]
     },
@@ -28659,6 +29983,16 @@
           "kind": "killed-by",
           "at": "5:74"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:40",
+          "look": "two-heads"
+        },
+        {
+          "at": "5:75",
+          "look": "babies"
+        }
       ]
     },
     {
@@ -28759,6 +30093,12 @@
           "to": "carl",
           "kind": "killed-by",
           "at": "5:74"
+        }
+      ],
+      "figure": [
+        {
+          "at": "5:67",
+          "look": "four-arms"
         }
       ]
     },
@@ -29054,6 +30394,12 @@
           "kind": "killed-by",
           "at": "7:49"
         }
+      ],
+      "figure": [
+        {
+          "at": "4:34",
+          "look": "harem"
+        }
       ]
     },
     {
@@ -29265,6 +30611,16 @@
           "to": "katia",
           "kind": "ally",
           "at": "6:69"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:5",
+          "look": "plate"
+        },
+        {
+          "at": "6:16",
+          "look": "burned"
         }
       ]
     },
@@ -29492,6 +30848,12 @@
           "kind": "concerns",
           "at": "6:19"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:17",
+          "look": "siren"
+        }
       ]
     },
     {
@@ -29670,6 +31032,12 @@
           "kind": "parent-of",
           "at": "6:45"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:45",
+          "look": "last"
+        }
       ]
     },
     {
@@ -29797,6 +31165,12 @@
           "to": "shi-maria",
           "kind": "concerns",
           "at": "6:46"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:45",
+          "look": "boy"
         }
       ]
     },
@@ -30142,6 +31516,16 @@
           "kind": "killed-by",
           "at": "7:68"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:18",
+          "look": "mask"
+        },
+        {
+          "at": "7:19",
+          "look": "arms"
+        }
       ]
     },
     {
@@ -30271,6 +31655,12 @@
           "kind": "ally",
           "at": "7:end"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:22",
+          "look": "cigar"
+        }
       ]
     },
     {
@@ -30391,6 +31781,16 @@
           "kind": "killed-by",
           "at": "7:80"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:21",
+          "look": "robot"
+        },
+        {
+          "at": "7:42",
+          "look": "young-man"
+        }
       ]
     },
     {
@@ -30455,6 +31855,12 @@
           "kind": "concerns",
           "at": "7:19",
           "note": "He sealed her into the eye"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:18",
+          "look": "man"
         }
       ]
     },
@@ -30594,6 +32000,12 @@
           "kind": "friend",
           "at": "7:87"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:23",
+          "look": "plush"
+        }
       ]
     },
     {
@@ -30710,6 +32122,12 @@
           "to": "prepotente",
           "kind": "worshipped-by",
           "at": "8:29"
+        }
+      ],
+      "figure": [
+        {
+          "at": "5:43",
+          "look": "symbol"
         }
       ]
     },
@@ -30831,6 +32249,12 @@
           "kind": "ally",
           "at": "7:end"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:end",
+          "look": "tenodera"
+        }
       ]
     },
     {
@@ -30945,6 +32369,12 @@
           "to": "quasar",
           "kind": "enemy",
           "at": "8:1"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:1",
+          "look": "naga"
         }
       ]
     },
@@ -31124,6 +32554,12 @@
           "to": "lamashtu",
           "kind": "rider-of",
           "at": "8:92"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:54",
+          "look": "robes"
         }
       ]
     },
@@ -31322,6 +32758,12 @@
           "kind": "concerns",
           "at": "8:92"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:92",
+          "look": "parade"
+        }
       ]
     },
     {
@@ -31433,6 +32875,12 @@
           "to": "louis",
           "kind": "ally",
           "at": "8:end"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:end",
+          "look": "demon"
         }
       ]
     },
@@ -31656,6 +33104,12 @@
           "kind": "killed-by",
           "at": "2:19"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:19",
+          "look": "cobra"
+        }
       ]
     },
     {
@@ -31857,6 +33311,12 @@
           "kind": "killed-by",
           "at": "2:9"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:8",
+          "look": "clown"
+        }
       ]
     },
     {
@@ -31980,6 +33440,12 @@
           "kind": "concerns",
           "at": "2:24"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:14",
+          "look": "bloodstained"
+        }
       ]
     },
     {
@@ -32089,6 +33555,12 @@
           "kind": "concerns",
           "at": "2:21"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:20",
+          "look": "one-arm"
+        }
       ]
     },
     {
@@ -32193,6 +33665,16 @@
           "kind": "encountered-by",
           "at": "2:22"
         }
+      ],
+      "figure": [
+        {
+          "at": "2:18",
+          "look": "papers"
+        },
+        {
+          "at": "2:22",
+          "look": "charred"
+        }
       ]
     },
     {
@@ -32275,6 +33757,12 @@
           "kind": "protected-by",
           "at": "3:12"
         }
+      ],
+      "figure": [
+        {
+          "at": "3:12",
+          "look": "flesher"
+        }
       ]
     },
     {
@@ -32352,6 +33840,12 @@
           "to": "princess-donut",
           "kind": "haggled-by",
           "at": "3:4"
+        }
+      ],
+      "figure": [
+        {
+          "at": "3:2",
+          "look": "book"
         }
       ]
     },
@@ -32461,6 +33955,12 @@
           "kind": "healer-of",
           "at": "3:22"
         }
+      ],
+      "figure": [
+        {
+          "at": "3:22",
+          "look": "healer"
+        }
       ]
     },
     {
@@ -32549,6 +34049,12 @@
           "to": "trainyard",
           "kind": "works-at",
           "at": "3:17"
+        }
+      ],
+      "figure": [
+        {
+          "at": "3:17",
+          "look": "wrench"
         }
       ]
     },
@@ -32915,6 +34421,12 @@
           "kind": "answers-to",
           "at": "5:38"
         }
+      ],
+      "figure": [
+        {
+          "at": "5:38",
+          "look": "hunched"
+        }
       ]
     },
     {
@@ -32999,6 +34511,12 @@
           "to": "carl",
           "kind": "killed-by",
           "at": "5:46"
+        }
+      ],
+      "figure": [
+        {
+          "at": "5:46",
+          "look": "vampire"
         }
       ]
     },
@@ -33152,6 +34670,12 @@
           "to": "sledge",
           "kind": "protected-by",
           "at": "5:70"
+        }
+      ],
+      "figure": [
+        {
+          "at": "5:44",
+          "look": "apron"
         }
       ]
     },
@@ -33348,6 +34872,16 @@
           "to": "elle-mcgibbons",
           "kind": "teased-by",
           "at": "5:70"
+        }
+      ],
+      "figure": [
+        {
+          "at": "5:70",
+          "look": "mushroom"
+        },
+        {
+          "at": "5:71",
+          "look": "guitar"
         }
       ]
     },
@@ -33604,6 +35138,12 @@
           "kind": "ally",
           "at": "7:70"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:28",
+          "look": "samurai"
+        }
       ]
     },
     {
@@ -33815,6 +35355,16 @@
           "kind": "enemy",
           "at": "7:82"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:55",
+          "look": "hatchet"
+        },
+        {
+          "at": "8:90",
+          "look": "gurkha"
+        }
       ]
     },
     {
@@ -33974,6 +35524,12 @@
           "kind": "enemy",
           "at": "7:68"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:8",
+          "look": "badger"
+        }
       ]
     },
     {
@@ -34123,6 +35679,12 @@
           "kind": "concerns",
           "at": "7:37",
           "note": "Both worn by the AI"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:18",
+          "look": "robes"
         }
       ]
     },
@@ -34295,6 +35857,12 @@
           "kind": "fought",
           "at": "7:71"
         }
+      ],
+      "figure": [
+        {
+          "at": "6:24",
+          "look": "crab"
+        }
       ]
     },
     {
@@ -34415,6 +35983,12 @@
           "to": "quan-ch",
           "kind": "fought",
           "at": "6:58"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:41",
+          "look": "candle"
         }
       ]
     },
@@ -34549,6 +36123,12 @@
           "to": "carl",
           "kind": "concerns",
           "at": "7:1"
+        }
+      ],
+      "figure": [
+        {
+          "at": "6:51",
+          "look": "red-hat"
         }
       ]
     },
@@ -34686,6 +36266,12 @@
           "kind": "concerns",
           "at": "7:7",
           "note": "Delivers Juice Box's marriage offer"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:7",
+          "look": "feathers"
         }
       ]
     },
@@ -35097,6 +36683,12 @@
           "kind": "killed-by",
           "at": "7:69"
         }
+      ],
+      "figure": [
+        {
+          "at": "7:69",
+          "look": "armor"
+        }
       ]
     },
     {
@@ -35231,6 +36823,12 @@
           "to": "rosetta",
           "kind": "scorned-by",
           "at": "7:73"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:69",
+          "look": "tripod"
         }
       ]
     },
@@ -35371,6 +36969,12 @@
           "to": "akuma",
           "kind": "shaken-by",
           "at": "8:42"
+        }
+      ],
+      "figure": [
+        {
+          "at": "8:34",
+          "look": "flame"
         }
       ]
     },
@@ -35525,6 +37129,16 @@
           "kind": "targeted",
           "at": "8:72"
         }
+      ],
+      "figure": [
+        {
+          "at": "8:52",
+          "look": "fan"
+        },
+        {
+          "at": "8:54",
+          "look": "print"
+        }
       ]
     },
     {
@@ -35603,6 +37217,16 @@
           "to": "quasar",
           "kind": "family",
           "at": "7:1"
+        }
+      ],
+      "figure": [
+        {
+          "at": "7:1",
+          "look": "recorder"
+        },
+        {
+          "at": "8:88",
+          "look": "blaster"
         }
       ]
     }

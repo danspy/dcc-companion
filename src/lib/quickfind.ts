@@ -133,7 +133,7 @@ export function quickFind(
   for (const f of floors) {
     if (!reveals(gate, f.nameAt ?? f.revealedAt)) continue;
     const s = Math.max(score(f.name, query), score(`floor ${f.id}`, query));
-    if (s) hits.push({ href: `/#floor-${f.id}`, name: f.name, kind: 'Floor', detail: `Floor ${f.id}`, score: s, tier: 'name' });
+    if (s) hits.push({ href: `/floor/${f.id}`, name: f.name, kind: 'Floor', detail: `Floor ${f.id}`, score: s, tier: 'name' });
   }
 
   return hits.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name)).slice(0, limit);

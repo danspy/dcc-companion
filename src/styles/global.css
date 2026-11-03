@@ -555,3 +555,26 @@ body.is-locked { overflow: hidden; }
 @media (max-width: 640px) { :root { --entry-col: 150px; } }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* ---- Moving between pages: a descent, not a cut ----
+   Same-origin navigations cross-fade with the browser's view transitions (a
+   browser without them simply navigates). The page sinks away and the next
+   rises in, and a floor's picture and name travel between the descent on the
+   homepage and the floor's own page, where they share a view-transition-name. */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-sink .42s cubic-bezier(.4, 0, .2, 1) both; }
+::view-transition-new(root) { animation: vt-rise .55s cubic-bezier(.22, 1, .36, 1) both; }
+::view-transition-group(*) { animation-duration: .6s; animation-timing-function: cubic-bezier(.22, 1, .36, 1); }
+::view-transition-image-pair(*) { isolation: auto; }
+::view-transition-old(*), ::view-transition-new(*) { image-rendering: pixelated; }
+/* The header stays out of it: a layer of its own that does not move, the new
+   page's header shown at once, so the section marked in it changes and nothing
+   else does. Sinking and rising with the page, it looked like a glitch. */
+#top { view-transition-name: site-header; }
+::view-transition-group(site-header), ::view-transition-new(site-header) { animation: none; }
+::view-transition-old(site-header) { display: none; }
+@keyframes vt-sink { to { opacity: 0; transform: translateY(-36px) scale(.985); filter: brightness(.55); } }
+@keyframes vt-rise { from { opacity: 0; transform: translateY(48px); } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

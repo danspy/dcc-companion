@@ -4,6 +4,7 @@ import Sealed from '../components/Sealed.astro';
 import { reveals, UNSET_COPY } from '../lib/spoiler';
 import { aliasesSeen } from '../lib/aliases';
 import { getEntities, getAllBeats, coverage, readGate, taglineFor, KIND_LABELS, KIND_ORDER } from '../lib/content';
+import { figureFor, unpicturedArt, type FigureImage, type FigureStep } from '../lib/voxel/art';
 
 const { gate } = await readGate(Astro.cookies);
 const [entities, beats] = await Promise.all([getEntities(), getAllBeats()]);
@@ -36,6 +37,15 @@ const groups = KIND_ORDER.map(kind => {
   };
 }).filter(g => g.rows.length);
 const metTotal = groups.reduce((n, g) => n + g.met, 0);
+
+/* Every character's cell carries their figure, small: the latest look this
+   reader has reached, or the shadow figure for one not drawn yet, not reached
+   yet, or not met at all (it shows nothing, so a sealed cell may have it). */
+const shadowArt = await unpicturedArt(true);
+const shadow: FigureImage = { src: `/art/figure/unpictured-s.png?v=${shadowArt.version}`, width: shadowArt.width, height: shadowArt.height };
+const figures = new Map(await Promise.all(entities
+  .filter(e => e.kind === 'character' && reveals(gate, e.revealedAt))
+  .map(async e => [e.id, (await figureFor(e.id, (e.figures ?? []) as FigureStep[], k => reveals(gate, k))).small] as const)));
 
 /* The searchable string for one row, assembled from what this reader may
    actually see. A sealed row gets none, and that is what makes filtering safe
@@ -99,8 +109,13 @@ const findable = (e: (typeof entities)[number]) =>
           const own = beatsByEntity.get(e.id) ?? [];
           const cov = coverage(own, gate);
           return (
-            <div class="cell" data-kind={e.kind} data-met={known ? '1' : '0'}
+            <div class={`cell${e.kind === 'character' ? ' has-fig' : ''}`} data-kind={e.kind} data-met={known ? '1' : '0'}
                  data-find={known ? findable(e) : ''}>
+              {e.kind === 'character' && (() => { const f = figures.get(e.id) ?? shadow; return (
+                <div class="cell-stage">
+                  <img class="cell-fig" src={f.src} width={f.width} height={f.height} alt="" loading="lazy" decoding="async" />
+                </div>
+              ); })()}
               <div class="cell-head">
                 {known
                   ? <h3><a href={`/entity/${e.id}`}>{e.name}</a></h3>
@@ -129,6 +144,20 @@ const findable = (e: (typeof entities)[number]) =>
   .standfirst { font-size: 16.5px; color: var(--color-grey-200); max-width: var(--measure); margin-top: 18px; }
   .group { padding-top: 40px; }
   .group h2 { font-size: 26px; font-weight: 700; color: var(--color-gold); margin-bottom: 14px; }
+  /* A character is a portrait card: a stage of one height across the top of the
+     cell, every figure standing on its floor at its own pixels, the name, role
+     and tagline under it at the card's full width. Beside the text, figures 72 to
+     132px wide started every name and tagline somewhere else. The same shape as a
+     floor's line-up and as a phone, so it is one card everywhere. The whole card
+     is the link. */
+  .cell.has-fig { position: relative; padding-top: 0; }
+  .cell-stage { height: 188px; margin: 0 -18px 14px; display: flex; align-items: flex-end; justify-content: center;
+                background: var(--color-ink); border-bottom: 1px solid var(--color-line); }
+  .cell-fig { display: block; image-rendering: pixelated; margin-bottom: 2px; }
+  .cell.has-fig h3 a::after { content: ''; position: absolute; inset: 0; }
+  .cell.has-fig:has(h3 a:hover) .cell-stage, .cell.has-fig:has(h3 a:focus-visible) .cell-stage { background: #121008; }
+  .cell.has-fig:has(h3 a:focus-visible) { outline: 1px solid var(--color-gold); outline-offset: -1px; }
+  .cell[data-met="0"] .cell-fig { opacity: .55; }
   .cell-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
   .cell h3 { font-size: 21px; font-weight: 700; color: #fff; }
   .cell h3 a { color: inherit; }

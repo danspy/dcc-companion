@@ -1,0 +1,125 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getFloors, getForetold, readGate } from '../../../lib/content';
+import { floorStatus, hasPage } from '../../../lib/floorstatus';
+import { pictureFor, showsHero, FALLBACK_ACCENT } from '../../../lib/voxel/art';
+import { VOXEL_FLOORS } from '../../../lib/voxel/floors';
+import { stampOf } from '../../../lib/stamps';
+
+/* A floor the reader has heard of and not reached: its name if the books have
+   printed one, its picture once everything in it has been read, and every
+   thing the books have let slip about it, note by note, as far as the reader
+   has read. /floor/N shows this page in place of the floor's own while the
+   floor is ahead, so the address does not change the day the crawl arrives.
+
+   Nothing here says when the floor arrives or how much more there is to learn:
+   a stamp of the arrival would say which book it is told in, and a count of
+   sealed notes would say how much the books still have to tell. */
+
+const id = Number(Astro.params.id);
+const { gate } = await readGate(Astro.cookies);
+const [floors, foretold] = await Promise.all([getFloors(), getForetold()]);
+const status = floorStatus(id, floors, foretold, gate);
+if (status.kind === 'reached') return Astro.redirect(`/floor/${id}`, 302);
+if (!hasPage(status)) return Astro.redirect('/', 302);
+
+// its own picture once everything in it has been read; until then the uncharted island
+const art = await pictureFor(id, !!VOXEL_FLOORS[id] && status.artKey != null && gate.frontier >= status.artKey
+  ? { accent: FALLBACK_ACCENT, hero: showsHero(id, gate.frontier, status.heroKey) } : null, true);
+const latest = status.notes.at(-1) ?? null;
+
+/* Neighbours with a page of their own, reached or ahead. */
+const near = (d: number) => {
+  const s = id + d >= 1 && id + d <= 18 ? floorStatus(id + d, floors, foretold, gate) : null;
+  return s && hasPage(s) ? s : null;
+};
+const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n => n.s) as { s: NonNullable<ReturnType<typeof near>>; dir: string }[];
+const title = status.name ?? `Floor ${id}`;
+---
+<Layout title={title}>
+  <section class="wrap head">
+    <a class="back label" href="/#atlas">← All floors</a>
+    <div class="titlerow">
+      <div class="floorno">{String(id).padStart(2, '0')}</div>
+      <div>
+        <p class="eyebrow">Floor {id} · Not reached yet</p>
+        <h1 class={status.name ? undefined : 'unnamed'} style={status.name ? `view-transition-name:floor-name-${id}` : undefined}>{status.name ?? 'Not yet named'}</h1>
+        {status.nameAt && <p class="label named">Named · {stampOf(status.nameAt)}</p>}
+      </div>
+    </div>
+    <p class="sys arrival"><b>*** Not yet entered ***</b>{status.kind === 'named'
+      ? 'You have heard its name, crawler. You have not stood on it. Keep descending.'
+      : 'Nobody you know has stood on this floor. Here is everything the dungeon has let slip so far, and not a word more.'}</p>
+  </section>
+
+  <section class="wrap">
+    <figure class={`slab artframe${art.own ? '' : ' uncharted'}`} style={`view-transition-name:floor-art-${id}`}>
+      <img src={art.src} width={art.width} height={art.height}
+           alt={`Floor ${id}${status.name ? `, ${status.name}` : ''}${art.own ? ', as the books describe it so far' : ', not yet pictured'}`} />
+    </figure>
+  </section>
+
+  {status.notes.length > 0 && (
+    <section class="wrap known">
+      <h2 class="sect">What is known</h2>
+      <p class="intro">Every word the books have spent on this floor, in the order you read it.</p>
+      <ol class="notes">
+        {status.notes.map(n => (
+          <li class={n === latest ? 'is-latest' : undefined}>
+            <span class="label stamp">{stampOf(n.at)}</span>
+            <p>{n.text}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
+
+  {nav.length > 0 && (
+    <nav class="wrap floornav" aria-label="Other floors">
+      {nav.map(({ s, dir }) => (
+        <a href={`/floor/${s.id}`} class="slab">
+          <span class="label">{dir} · Floor {s.id}</span>
+          <b>{s.name ?? 'Not yet named'}</b>
+        </a>
+      ))}
+    </nav>
+  )}
+</Layout>
+
+<style>
+  .head { padding-block: 36px 8px; }
+  .back { color: var(--color-grey-300); text-decoration: none; }
+  .back:hover { color: var(--color-gold); }
+  .titlerow { display: flex; gap: 18px; align-items: stretch; margin-top: 14px; }
+  /* No book colour: on a floor not yet reached it would say which book it is told in. */
+  .floorno { font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1; min-width: 96px;
+             display: flex; align-items: center; justify-content: center; padding: 14px 16px 10px;
+             background: var(--color-panel); color: var(--color-grey-300); border: 1px dashed var(--color-line); }
+  h1 { font-size: clamp(38px, 6vw, 64px); font-weight: 800; margin-top: 4px; }
+  h1.unnamed { color: var(--color-grey-300); font-style: italic; }
+  .named { color: var(--color-grey-300); margin-top: 6px; display: block; }
+  .arrival { max-width: calc(var(--measure) + 34px); margin: 24px 0 0; }
+  section + section, section + nav { margin-top: 44px; }
+  .artframe { margin: 0; padding: 18px; display: grid; place-items: center;
+              background: radial-gradient(ellipse at 50% 60%, #1d1a14 0%, var(--color-panel) 70%); }
+  .artframe img { display: block; width: 100%; max-width: 760px; height: auto; image-rendering: pixelated; }
+  /* the stand-in is a smaller thing than a floor's own picture */
+  .artframe.uncharted img { max-width: 440px; }
+  .intro { color: var(--color-grey-300); font-size: var(--type-meta); margin: 6px 0 0; max-width: var(--measure); }
+  .notes { list-style: none; margin: 18px 0 0; padding: 0; border-left: 1px solid var(--color-line); max-width: calc(var(--measure) + 60px); }
+  .notes li { position: relative; padding: 0 0 22px 24px; }
+  .notes li::before { content: ''; position: absolute; left: -5px; top: 5px; width: 9px; height: 9px; background: var(--color-line); }
+  .notes li.is-latest::before { background: var(--color-gold); }
+  .notes .stamp { color: var(--color-grey-300); }
+  .notes li.is-latest .stamp { color: var(--color-gold); }
+  .notes p { margin: 6px 0 0; font-size: var(--type-body); line-height: 1.6; color: var(--color-grey-100, #e8e8e8); }
+  .floornav { display: flex; gap: 12px; justify-content: space-between; padding-bottom: 40px; }
+  .floornav a { flex: 1 1 0; padding: 14px 16px; text-decoration: none; display: flex; flex-direction: column; gap: 4px; }
+  .floornav a:hover { border-color: var(--color-gold); }
+  .floornav b { color: #fff; font-family: var(--font-display); font-size: var(--type-entry); }
+  .floornav .label { color: var(--color-grey-300); }
+  @media (max-width: 640px) {
+    .floorno { font-size: 40px; min-width: 68px; }
+    .floornav { flex-direction: column; }
+  }
+</style>

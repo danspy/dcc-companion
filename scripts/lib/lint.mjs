@@ -22,7 +22,7 @@ const FORWARD_PHRASE =
 
 const escapeRe = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-export function lint({ books, floors, entities, achievements = [] }) {
+export function lint({ books, floors, entities, achievements = [], foretold = [] }) {
   const errors = [];
   const warnings = [];
   const byId = new Map(entities.map(e => [e.id, e]));
@@ -79,6 +79,8 @@ export function lint({ books, floors, entities, achievements = [] }) {
       return [{ name: e.name, at: eAt }, ...aliases];
     }),
     ...floors.map(f => ({ name: f.name, at: at(f.nameAt ?? f.revealedAt, `floor ${f.id}`) ?? 0 })),
+    // a floor not yet reached is named where the book first prints its name, and leaks like any name
+    ...foretold.filter(f => f.name && f.nameAt).map(f => ({ name: f.name, at: at(f.nameAt, `foretold floor ${f.id}`) ?? 0 })),
   ]
     .filter(n => n.name && n.name.length >= 4)
     /* Multi-word names match regardless of case ("the Great Race" against "The
@@ -155,6 +157,25 @@ export function lint({ books, floors, entities, achievements = [] }) {
         prevD = dAt;
         checkForward(d.text, Math.max(dAt, entityAt), dw, { quotation: true });
       });
+    }
+
+    /* A figure is a picture of how a character looks, so it is a summary and
+       opens where everything in it has been read: each look at its own point,
+       never before the character, in order, superseding like taglines. */
+    if (e.figure != null) {
+      if (!Array.isArray(e.figure) || e.kind !== 'character') errors.push(`${where}: figure must be a list of { at, look }, on a character`);
+      else {
+        let prevF = -1;
+        e.figure.forEach((f, i) => {
+          const fw = `${where} figure ${i + 1}`;
+          const fAt = at(f.at, fw);
+          if (fAt === null) return;
+          if (!f.look || typeof f.look !== 'string') errors.push(`${fw}: no look`);
+          if (entityAt !== null && fAt < entityAt) errors.push(`${fw}: opens at "${f.at}", before the character itself ("${e.revealedAt}")`);
+          if (fAt <= prevF) errors.push(`${fw}: does not come after the one before it`);
+          prevF = fAt;
+        });
+      }
     }
 
     /* An alias with its own reveal point opens after its entity, never before:
@@ -385,6 +406,90 @@ export function lint({ books, floors, entities, achievements = [] }) {
     if (last !== null && r !== null && last !== r) {
       errors.push(`${where}: the last recap part ends at "${parts[parts.length - 1].at}", not at recapAt "${floor.recapAt}"`);
     }
+  }
+
+  /* A floor's guide and map. Each guide section is a summary of the floor so
+     far, so it is a list of steps that supersede one another, like a tagline:
+     each step is read against its own point and none may open before the floor.
+     A map layer is content too (a picture of the tomb's flooded catacombs says
+     the catacombs flood), so its label is held to the same rules, and a layer
+     that is replaced by a later state names the point it stops being drawn. */
+  for (const floor of floors) {
+    const where = `floor ${floor.id}`;
+    const f = at(floor.revealedAt, where);
+    if (f === null) continue;
+    const ids = new Set();
+    for (const s of floor.guide ?? []) {
+      const sw = `${where} guide "${s.id}"`;
+      if (!s.id || !s.title || !Array.isArray(s.steps) || !s.steps.length) { errors.push(`${sw}: needs an id, a title and steps`); continue; }
+      if (ids.has(s.id)) errors.push(`${sw}: duplicate section id`);
+      ids.add(s.id);
+      checkForward(s.title, f, `${sw} title`);
+      let prev = -1;
+      s.steps.forEach((st, i) => {
+        const tw = `${sw} step ${i + 1}`;
+        const sAt = at(st.at, tw);
+        if (sAt === null) return;
+        if (!st.text) errors.push(`${tw}: no text`);
+        if (sAt < f) errors.push(`${tw}: unseals at "${st.at}", before the floor itself ("${floor.revealedAt}")`);
+        if (sAt <= prev) errors.push(`${tw}: "${st.at}" is not after the step before it`);
+        prev = sAt;
+        checkForward(st.text, sAt, tw);
+      });
+    }
+    /* A tile's picture is a summary of the floor in one image, so it opens where
+       the last thing in it has been read, and never before the floor itself. */
+    if (floor.artAt != null) {
+      const a = at(floor.artAt, `${where} art`);
+      if (a !== null && a < f) errors.push(`${where}: art opens at "${floor.artAt}", before the floor itself ("${floor.revealedAt}")`);
+    }
+    if (floor.map) {
+      if (floor.map.title) checkForward(floor.map.title, f, `${where} map title`);
+      const layerIds = new Set();
+      for (const l of floor.map.layers ?? []) {
+        const lw = `${where} map layer "${l.id}"`;
+        if (layerIds.has(l.id)) errors.push(`${lw}: duplicate layer id`);
+        layerIds.add(l.id);
+        const lAt = at(l.at, lw);
+        if (lAt === null) continue;
+        if (lAt < f) errors.push(`${lw}: drawn at "${l.at}", before the floor itself ("${floor.revealedAt}")`);
+        if (l.until != null) {
+          const u = at(l.until, `${lw} until`);
+          if (u !== null && u <= lAt) errors.push(`${lw}: stops at "${l.until}", no later than it starts`);
+        }
+        if (l.label) checkForward(l.label, lAt, `${lw} label`);
+      }
+    }
+  }
+
+  /* Foretold floors: what the books say about floors the crawl has not reached.
+     Every note is read against its own point, like a beat; a name needs the
+     point where it is first printed, and a number has to be a floor past the
+     last one curated. */
+  const seenForetold = new Set();
+  for (const f of foretold) {
+    const where = `foretold floor ${f.id}`;
+    if (!Number.isInteger(f.id) || f.id <= floors.length || f.id > 18) errors.push(`${where}: not a floor between ${floors.length + 1} and 18`);
+    if (seenForetold.has(f.id)) errors.push(`${where}: listed twice`);
+    seenForetold.add(f.id);
+    if (f.name && !f.nameAt) errors.push(`${where}: a name with no point where it is first printed`);
+    if (f.artAt != null) at(f.artAt, `${where} art`);
+    if (f.heroAt != null) {
+      const h = at(f.heroAt, `${where} second picture`), a = f.artAt != null ? at(f.artAt, `${where} art`) : null;
+      if (a == null) errors.push(`${where}: a second picture with no first`);
+      else if (h != null && h <= a) errors.push(`${where}: second picture "${f.heroAt}" is not after its first "${f.artAt}"`);
+    }
+    if (f.name) checkForward(f.name, at(f.nameAt, where) ?? 0, `${where} name`);
+    let prev = -1;
+    (f.notes ?? []).forEach((n, i) => {
+      const nw = `${where} note ${i + 1}`;
+      const nAt = at(n.at, nw);
+      if (nAt === null) return;
+      if (!n.text) errors.push(`${nw}: no text`);
+      if (nAt < prev) errors.push(`${nw}: "${n.at}" is before the note above it`);
+      prev = nAt;
+      checkForward(n.text, nAt, nw);
+    });
   }
 
   return { errors, warnings, tightened };

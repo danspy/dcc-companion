@@ -1,0 +1,17 @@
+---
+import FloorPeek from '../../../components/FloorPeek.astro';
+import { getFloors, getForetold, readGate } from '../../../lib/content';
+import { floorStatus, hasPage } from '../../../lib/floorstatus';
+
+/* The homepage's side panel for one floor, as a bare fragment: fetched when a
+   reader picks a floor, so the descent stays where it is. Gated like the page
+   it stands for; a floor the reader knows nothing of answers 404. */
+export const partial = true;
+const id = Number(Astro.params.id);
+const { gate } = await readGate(Astro.cookies);
+const [floors, foretold] = await Promise.all([getFloors(), getForetold()]);
+if (!(id >= 1 && id <= 18) || !hasPage(floorStatus(id, floors, foretold, gate))) return new Response(null, { status: 404 });
+Astro.response.headers.set('Cache-Control', 'private, no-store');
+Astro.response.headers.set('Vary', 'Cookie');
+---
+<FloorPeek id={id} />

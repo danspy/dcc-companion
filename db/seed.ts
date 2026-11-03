@@ -1,4 +1,4 @@
-import { db, Book, Floor, Entity, Beat, Relation, Achievement } from 'astro:db';
+import { db, Book, Floor, Foretold, Entity, Beat, Relation, Achievement } from 'astro:db';
 import { readFileSync } from 'node:fs';
 
 /* No network, no cleverness: the snapshot is committed, so a build is
@@ -27,10 +27,12 @@ export default async function () {
     snapshot.floors.map((f: any) => ({
       id: f.id, name: f.name, book: f.book, bookSpan: f.bookSpan ?? null,
       accent: f.accent, ink: f.ink, revealedAt: f.revealedAt, nameAt: f.nameAt ?? null, recapAt: f.recapAt,
-      recapSortKey: f.recapSortKey, premise: f.premise, previously: f.previously ?? null, recap: f.recap,
+      recapSortKey: f.recapSortKey, artKey: f.artKey ?? null, premise: f.premise, previously: f.previously ?? null, recap: f.recap,
+      guide: f.guide ?? [], map: f.map ?? null,
     })),
   );
 
+  await insertAll(Foretold, snapshot.foretold ?? []);
   await insertAll(Entity, snapshot.entities);
   await insertAll(Beat, snapshot.beats);
   await insertAll(Relation, snapshot.relations);

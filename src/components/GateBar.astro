@@ -2,9 +2,14 @@
 import type { Prefs } from '../lib/prefs';
 import type { BookRow } from '../lib/content';
 import { BOOK_COUNT } from '../lib/progress';
-
-interface Props { prefs: Prefs; books: BookRow[] }
-const { prefs, books } = Astro.props;
+/* The reading position, in two parts: the chip in the header's one row that
+   says where the reader is, and the panel it opens under the header, with the
+   eight books, the chapter picker and Show everything. It used to be a whole
+   row of its own above the masthead, which scrolled away under it; on the
+   homepage, which opens on the reader's floor, that left no way to another
+   page in view, and on a phone the bar alone was three rows deep. */
+interface Props { prefs: Prefs; books: BookRow[]; part: 'chip' | 'panel' }
+const { prefs, books, part } = Astro.props;
 const bookOf = (n: number) => books.find(b => b.id === n);
 /* Each book carries its official colour and a readable ink (data/book-colors.json).
    The bar paints with them as fills and borders only: as text on the dark ground,
@@ -14,66 +19,85 @@ const tint = (n: number) => {
   return b?.accent ? `--bk:${b.accent};--bk-ink:${b.ink ?? '#0e0e0e'}` : undefined;
 };
 const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
+const state = !prefs.spoilers ? 'off' : prefs.book ? 'set' : 'unset';
 ---
-<div class="gate">
-  <div class="gate-inner wrap">
-    <span class="eyebrow">
-      I've read up to —
-      <b class={prefs.spoilers && !prefs.book ? 'unset' : saved ? 'chip' : undefined}
-         style={saved ? tint(saved) : undefined}>{!prefs.spoilers
-        ? 'spoilers off'
-        : prefs.book
-          ? `Book ${prefs.book}${prefs.chapter ? ` · ch ${prefs.chapter}` : ' · finished'}`
-          : 'not set — pick a book'}</b>
-    </span>
-
-    <!-- A book button opens the picker below; it does not commit anything.
-         One tap used to mean "I have finished this book", which unsealed the
-         whole of it for a reader who had only just started. -->
-    <div class="books" role="group" aria-label="Which book are you reading?">
-      {Array.from({ length: BOOK_COUNT }, (_, i) => i + 1).map(n => (
-        <button class="bk" data-book={n} data-title={bookOf(n)?.title ?? ''} style={tint(n)}
-                data-chapters={bookOf(n)?.chapters ?? 0}
-                aria-pressed={prefs.spoilers && n === prefs.book} aria-expanded="false"
-                aria-controls="pick" title={bookOf(n)?.title}>{n}</button>
-      ))}
-    </div>
-    <span class="spacer"></span>
-    <button class="btn" id="spoilers" aria-pressed={!prefs.spoilers}>Show everything</button>
-  </div>
-
-  <div class="pick" id="pick" hidden data-book={prefs.book} data-chapter={prefs.chapter}>
+{part === 'chip' && (
+  <button class="pos" id="pos" type="button" aria-expanded="false" aria-controls="pick" data-saved={saved}
+          title="Where you are in the books: everything here is sealed past it">
+    <span class="pos-lead">I've read up to</span>
+    <b class={`pos-val pos-${state}`} style={saved ? tint(saved) : undefined}>{state === 'off'
+      ? <>Everything<span class="pos-more"> · spoilers off</span></>
+      : state === 'set'
+        ? <>Book {prefs.book}<span class="pos-more">{prefs.chapter ? ` · ch ${prefs.chapter}` : ' · finished'}</span></>
+        : <>Pick <span class="pos-more">your </span>book</>}</b>
+    <svg class="pos-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" /></svg>
+  </button>
+)}
+{part === 'panel' && (
+  <div class="pick" id="pick" hidden>
     <div class="pick-inner wrap">
-      <div class="pick-head">
-        <span class="pick-no" id="pick-no">Book <span id="pick-n"></span></span>
-        <b id="pick-title"></b>
-      </div>
-      <p class="pick-q">Where are you in it?</p>
-      <div class="pick-row" id="pick-range-row">
-        <input type="range" id="pick-range" min="1" value="1" aria-label="Chapter" />
-        <span class="pick-ch">Ch <input type="number" id="pick-num" min="1" value="1" aria-label="Chapter number" /> <span id="pick-of"></span></span>
-      </div>
-      <p class="pick-hint" id="pick-hint"></p>
-      <div class="pick-actions">
-        <button class="btn btn-set" id="pick-set">Save</button>
-        <button class="btn" id="pick-done">I finished it</button>
-        <button class="btn pick-quiet" id="pick-cancel">Cancel</button>
+      <!-- A book button opens its chapter picker below; it does not commit
+           anything. One tap used to mean "I have finished this book", which
+           unsealed the whole of it for a reader who had only just started. -->
+      <div class="pick-books">
+        <span class="pick-ask">Which book are you reading?</span>
+        <div class="books" role="group" aria-label="Which book are you reading?">
+          {Array.from({ length: BOOK_COUNT }, (_, i) => i + 1).map(n => (
+            <button class="bk" type="button" data-book={n} data-title={bookOf(n)?.title ?? ''} style={tint(n)}
+                    data-chapters={bookOf(n)?.chapters ?? 0}
+                    aria-pressed={prefs.spoilers && n === prefs.book} aria-expanded="false"
+                    title={bookOf(n)?.title}>{n}</button>
+          ))}
+        </div>
         <span class="spacer"></span>
-        <button class="btn pick-quiet" id="pick-clear" hidden>Clear my progress</button>
+        <button class="btn" id="spoilers" type="button" aria-pressed={!prefs.spoilers}>Show everything</button>
+      </div>
+      <div class="pick-book" id="pick-book" hidden>
+        <div class="pick-head">
+          <span class="pick-no" id="pick-no">Book <span id="pick-n"></span></span>
+          <b id="pick-title"></b>
+        </div>
+        <p class="pick-q">Where are you in it?</p>
+        <div class="pick-row" id="pick-range-row">
+          <input type="range" id="pick-range" min="1" value="1" aria-label="Chapter" />
+          <span class="pick-ch">Ch <input type="number" id="pick-num" min="1" value="1" aria-label="Chapter number" /> <span id="pick-of"></span></span>
+        </div>
+        <p class="pick-hint" id="pick-hint"></p>
+        <div class="pick-actions">
+          <button class="btn btn-set" id="pick-set" type="button">Save</button>
+          <button class="btn" id="pick-done" type="button">I finished it</button>
+          <button class="btn pick-quiet" id="pick-cancel" type="button">Cancel</button>
+          <span class="spacer"></span>
+          <button class="btn pick-quiet" id="pick-clear" type="button" hidden>Clear my progress</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+)}
 
 <style>
-  .gate { position: sticky; top: 0; z-index: 50; background: #0b0b0bf2;
-          backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-line); }
-  .gate-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px;
-                padding-block: 12px; }
-  .eyebrow b { color: var(--color-gold); font-weight: 700; }
+  /* The chip: the label, the position on its book's colour, a caret. */
+  .pos { display: inline-flex; align-items: center; gap: 9px; flex: none; height: 34px; padding: 0 10px;
+         background: transparent; border: 1px solid var(--color-line); color: var(--color-grey-300); cursor: pointer;
+         font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label); text-transform: uppercase;
+         transition: border-color .15s; }
+  .pos:hover, .pos[aria-expanded="true"] { border-color: var(--bk-open, var(--color-gold)); }
+  .pos:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+  .pos-lead { color: var(--color-grey-500); white-space: nowrap; }
+  .pos-val { font-weight: 700; white-space: nowrap; color: var(--color-gold); }
+  .pos-set { background: var(--bk); color: var(--bk-ink); padding: 2px 7px; }
   /* Nothing chosen yet is a prompt, not a value — colour it differently. */
-  .eyebrow b.unset { color: var(--color-blood); }
-  /* One row that scrolls itself on a phone, contained like the masthead's. */
+  .pos-unset { color: var(--color-blood); }
+  .pos-off { color: var(--color-grey-100); }
+  .pos-caret { width: 10px; height: 6px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; transition: rotate .2s; }
+  .pos[aria-expanded="true"] .pos-caret { rotate: 180deg; }
+  @media (max-width: 980px) { .pos-lead { display: none; } }
+  @media (max-width: 420px) { .pos-more { display: none; } .pos { padding: 0 8px; gap: 7px; } }
+
+  /* The panel: the books in a row that scrolls itself on a phone, then the chosen book's chapter */
+  .pick-books { display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap; }
+  .pick-ask { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
+              text-transform: uppercase; color: var(--color-grey-500); }
   .books { display: flex; gap: 4px; flex-wrap: nowrap; min-width: 0;
            overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
   .bk { flex: none; }
@@ -90,10 +114,15 @@ const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
   .bk[aria-pressed="true"] { background: var(--bk, var(--color-gold)); color: var(--bk-ink, #101010);
                              border-color: var(--bk, var(--color-gold)); font-weight: 700;
                              box-shadow: none; }
-  .eyebrow b.chip { background: var(--bk); color: var(--bk-ink); padding: 2px 7px; margin-left: 2px; }
   .spacer { flex: 1 1 auto; }
+  .pick-book { display: grid; gap: 10px; padding-top: 4px; border-top: 1px solid var(--color-line-soft); }
+  .pick-book[hidden] { display: none; }
 
-  .pick { border-top: 3px solid var(--acc, var(--color-gold)); background: var(--color-panel); }
+  /* dropped over the page from under the header, never part of it: the header
+     keeps one height, which the homepage measures its room from */
+  .pick { position: absolute; left: 0; right: 0; top: 100%; border-top: 3px solid var(--acc, var(--color-gold));
+          border-bottom: 1px solid var(--color-line); background: var(--color-panel); box-shadow: 0 18px 40px #000a;
+          max-height: calc(100dvh - 60px); overflow-y: auto; overscroll-behavior: contain; }
   .pick-no { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
              text-transform: uppercase; font-weight: 700; padding: 3px 7px;
              background: var(--acc, var(--color-gold)); color: var(--acc-ink, #101010); }
@@ -125,8 +154,10 @@ const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
 <script>
   /* The position lives in one cookie the server reads on every request, so a
      change has to round-trip: write, then reload. Nothing is written until the
-     reader presses Save, I finished it, or Clear — choosing a book only opens
-     the picker. Delegated on document because the header survives navigations. */
+     reader presses Save, I finished it, Clear or Show everything: the chip only
+     opens the panel, and a book there only opens its chapter picker. Delegated
+     on document, and every selector scoped to the panel: a beat's book stamp is
+     a `.bk` too, and a bare `.bk` once caught a click on one. */
   const COOKIE = 'dcc_pos';
 
   function read() {
@@ -143,6 +174,7 @@ const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
   }
 
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const books = () => document.querySelectorAll<HTMLElement>('#pick .bk');
   let open = 0;
 
   function setChapter(n: number) {
@@ -156,20 +188,32 @@ const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
       : `Everything up to the end of chapter ${c} is unsealed, and nothing after it.`;
   }
 
-  function close() {
-    $('pick').hidden = true;
-    document.querySelectorAll('.bk').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  const isOpen = () => !$('pick').hidden;
+  function close(refocus = false) {
+    if (!isOpen()) return;
+    $('pick').hidden = true; $('pick-book').hidden = true;
+    $('pick').style.removeProperty('--acc'); $('pick').style.removeProperty('--acc-ink');
+    books().forEach(b => b.setAttribute('aria-expanded', 'false'));
+    $('pos').setAttribute('aria-expanded', 'false');
     open = 0;
+    if (refocus) $('pos').focus();
+  }
+  // the panel, on the saved book if there is one, or on the row of books
+  function openPanel() {
+    document.querySelector<HTMLDetailsElement>('#top .menu')?.removeAttribute('open');
+    $('pick').hidden = false;
+    $('pos').setAttribute('aria-expanded', 'true');
+    const saved = document.querySelector<HTMLElement>(`#pick .bk[data-book="${$('pos').dataset.saved}"]`);
+    if (saved) show(saved); else books()[0]?.focus();
   }
 
   function show(btn: HTMLElement) {
     const n = Number(btn.dataset.book);
-    if (open === n) { close(); return; }
+    if (open === n) return;
     const state = read();
     const chapters = Number(btn.dataset.chapters) || 0;
     open = n;
-    document.querySelectorAll('.bk').forEach(b =>
-      b.setAttribute('aria-expanded', String(b === btn)));
+    books().forEach(b => b.setAttribute('aria-expanded', String(b === btn)));
     $('pick-n').textContent = String(n);
     const cs = getComputedStyle(btn);
     $('pick').style.setProperty('--acc', cs.getPropertyValue('--bk').trim() || '');
@@ -192,13 +236,16 @@ const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
       $('pick-set').hidden = true;
       $('pick-hint').textContent = 'No chapter list for this book yet, so it is all or nothing.';
     }
-    $('pick').hidden = false;
+    $('pick-book').hidden = false;
     $<HTMLInputElement>('pick-range').focus({ preventScroll: true });
   }
 
   document.addEventListener('click', e => {
     const target = e.target as HTMLElement;
-    const book = target.closest<HTMLElement>('.bk');
+    if (target.closest('#pos')) { if (isOpen()) close(); else openPanel(); return; }
+    // a click anywhere outside the header puts the panel away, as any dropdown does
+    if (!target.closest('#top')) { close(); return; }
+    const book = target.closest<HTMLElement>('#pick .bk');
     if (book) { show(book); return; }
     const state = read();
     if (target.closest('#pick-set')) {
@@ -208,7 +255,7 @@ const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
     // Chapter 0 is how the position says "finished" — see frontierOf.
     if (target.closest('#pick-done')) { write({ ...state, book: open, chapter: 0, spoilers: true }); return; }
     if (target.closest('#pick-clear')) { write({ ...state, book: 0, chapter: 0, spoilers: true }); return; }
-    if (target.closest('#pick-cancel')) { close(); return; }
+    if (target.closest('#pick-cancel')) { close(true); return; }
     if (target.closest('#spoilers')) { write({ ...state, spoilers: !state.spoilers }); return; }
   });
 
@@ -218,7 +265,9 @@ const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
   });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && open) { close(); return; }
+    if (e.key === 'Escape' && isOpen()) { e.preventDefault(); close(true); return; }
     if (e.key === 'Enter' && open && (e.target as HTMLElement).id === 'pick-num') $('pick-set').click();
   });
+  // the menu and the panel share the room under the header: one at a time
+  document.querySelector('#top .menu')?.addEventListener('toggle', e => { if ((e.target as HTMLDetailsElement).open) close(); });
 </script>

@@ -1,4 +1,4 @@
-import { db, Book, Floor, Entity, Beat, Relation, Achievement, asc, eq, or } from 'astro:db';
+import { db, Book, Floor, Foretold, Entity, Beat, Relation, Achievement, asc, eq, or } from 'astro:db';
 import type { AstroCookies } from 'astro';
 import { readPrefs, type Prefs } from './prefs';
 import { gateFor, type Gate } from './spoiler';
@@ -14,6 +14,9 @@ export type BeatRow = typeof Beat.$inferSelect;
 
 export const getBooks = () => db.select().from(Book).orderBy(asc(Book.id));
 export const getFloors = () => db.select().from(Floor).orderBy(asc(Floor.id));
+/** Floors not yet reached, as the books have announced them. Gate per name and per note. */
+export const getForetold = () => db.select().from(Foretold).orderBy(asc(Foretold.id));
+export type ForetoldRow = typeof Foretold.$inferSelect;
 
 /* The awards the System handed out, in the order the reader reaches them.
    Gated like everything else: an award's name says what happens. */

@@ -9,6 +9,7 @@ import {
   KIND_LABELS, readGate, taglineFor, descriptionFor,
 } from '../../lib/content';
 import { stampOf } from '../../lib/stamps';
+import { figureFor, type FigureStep } from '../../lib/voxel/art';
 
 const { id } = Astro.params;
 const entity = id ? await getEntity(id) : null;
@@ -77,10 +78,23 @@ const hiddenRelations = relations.length - visibleRelations.length;
 const onTimeline = beats.some(b => gate.frontier >= b.sortKey);
 
 const description = descriptionFor(entity, gate);
+/* A character stands beside their name as a voxel figure: the latest look the
+   reader has reached, stamped when the look changes over the story, or the
+   shadow figure where none is drawn yet or none reached. */
+const figure = entity.kind === 'character'
+  ? await figureFor(entity.id, (entity.figures ?? []) as FigureStep[], key => reveals(gate, key))
+  : null;
 ---
 <Layout title={entity.name}>
   <article class="wrap">
-    <header class="hero">
+    <header class={`hero${figure ? ' has-figure' : ''}`}>
+      {figure && (
+        <figure class={`hero-fig${figure.own ? '' : ' unpictured'}`}>
+          <img src={figure.src} width={figure.width} height={figure.height} alt={figure.own ? '' : 'Not yet pictured'} />
+          {figure.own && figure.changes && figure.at && <figcaption>As of {stampOf(figure.at)}</figcaption>}
+          {!figure.own && <figcaption>Not yet pictured</figcaption>}
+        </figure>
+      )}
       <p class="eyebrow">{KIND_LABELS[entity.kind]} · {entity.role}</p>
       <h1>{entity.name}</h1>
       <p class={`tagline${entity.voice === 'self' ? ' spoken' : ''}`}>{taglineFor(entity, gate)}</p>
@@ -198,6 +212,28 @@ const description = descriptionFor(entity, gate);
   /* Beat rows, the log and the relation list are in the shared component layer
      (src/styles/global.css), because /when renders the same objects. */
   .hero { padding-block: 44px 26px; border-bottom: 1px solid var(--color-line); }
+  /* the figure stands to the right of the name, on its own patch of ground,
+     drawn at its own pixels (never scaled up, or a block goes soft) */
+  .hero.has-figure { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 28px; align-items: end; }
+  .hero.has-figure > :not(.hero-fig) { grid-column: 1; }
+  .hero-fig { grid-column: 2; grid-row: 1 / span 6; align-self: end; margin: 0 0 -14px; text-align: center; }
+  .hero-fig img { display: block; image-rendering: pixelated; height: auto; max-width: 100%; }
+  .hero-fig.unpictured img { opacity: .8; }
+  .hero-fig figcaption { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
+                         text-transform: uppercase; color: var(--color-grey-500); margin-top: 2px; }
+  @media (max-width: 600px) {
+    .hero.has-figure { column-gap: 12px; }
+    .hero-fig { width: 34vw; }
+  }
+  /* On a phone the figure stands over the name, centred and at its own pixels,
+     rather than squeezing the tagline into a third of the screen beside it.
+     Centred by translate, not auto margins, so the widest (Frank and Maggie,
+     280px) keeps its pixels at 320 and spills its transparent edge into the
+     gutter on both sides instead of being shrunk. */
+  @media (max-width: 560px) {
+    .hero.has-figure { display: block; padding-top: 22px; }
+    .hero-fig { width: max-content; margin: 0 0 20px 50%; translate: -50% 0; }
+  }
   h1 { font-size: clamp(38px, 7vw, 68px); font-weight: 800; margin: 10px 0 0; }
   .tagline { font-size: 17px; color: var(--color-grey-200); max-width: var(--measure); margin: 14px 0 0; }
   .aka { font-family: var(--font-mono); font-size: 12px; color: var(--color-grey-500); margin: 10px 0 0; }

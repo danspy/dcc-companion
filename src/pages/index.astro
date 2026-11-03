@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Sealed from '../components/Sealed.astro';
 import { reveals } from '../lib/spoiler';
-import { getBooks, getFloors, readGate } from '../lib/content';
-import { span } from '../lib/stamps';
+import { getBooks, getFloors, getForetold, readGate } from '../lib/content';
+import { VOXEL_FLOORS } from '../lib/voxel/floors';
+import { pictureFor, showsHero, FALLBACK_ACCENT } from '../lib/voxel/art';
+import { stampOf, span } from '../lib/stamps';
+import FloorPeek from '../components/FloorPeek.astro';
+import StartScreen from '../components/StartScreen.astro';
 
 const { gate } = await readGate(Astro.cookies);
-const [books, floors] = await Promise.all([getBooks(), getFloors()]);
+const [books, floors, foretoldRows] = await Promise.all([getBooks(), getFloors(), getForetold()]);
 const bookById = new Map(books.map(b => [b.id, b]));
 
 /* A floor's story arrives in parts, each unsealed at the end of the stretch
@@ -22,18 +25,8 @@ const partsOf = (floor: { recap: unknown; revealedAt: string; recapAt: string; r
     ? [{ title: 'What happened', text: floor.recap, from: floor.revealedAt, at: floor.recapAt, sortKey: floor.recapSortKey }]
     : [];
 
-/* A part is one stretch of story, written as one piece, and a quarter-page
-   block reads as a wall. Break it once, at the sentence nearest its middle. */
-function paragraphs(text: string): string[] {
-  const cuts = [...text.matchAll(/[.!?] (?=[A-Z])/g)].map(m => (m.index ?? 0) + 1);
-  if (text.length < 700 || !cuts.length) return [text];
-  const mid = text.length / 2;
-  const at = cuts.reduce((best, c) => (Math.abs(c - mid) < Math.abs(best - mid) ? c : best));
-  return [text.slice(0, at).trim(), text.slice(at).trim()];
-}
 
-/* The floor the reader is standing on opens by default; the ones behind them
-   fold away until they want them. */
+/* The floor the reader stands on: the page opens on it. */
 const reached = floors.filter(f => reveals(gate, f.revealedAt));
 const current = reached.length ? reached[reached.length - 1].id : null;
 
@@ -42,13 +35,97 @@ const current = reached.length ? reached[reached.length - 1].id : null;
    System's catch-up on everything before the floor they stand on (stored per
    floor, gated with it), and a line saying where they are. */
 const mode = gate.spoilers && gate.fresh ? 'welcome' : 'previously';
-const lastFloor = reached.length ? reached[reached.length - 1] : null;
-const lastPart = lastFloor ? partsOf(lastFloor).filter(p => gate.frontier >= p.sortKey).at(-1) : undefined;
 const positionLabel = (() => {
   if (!gate.spoilers) return 'You are reading with everything shown';
   const book = Math.floor(gate.frontier / 1000), chapter = gate.frontier % 1000;
   return chapter >= 999 || chapter === 0 ? `You have finished book ${book}` : `You are in book ${book}, chapter ${chapter}`;
 })();
+
+/* The World Dungeon at a glance: all eighteen floors, each as much as the
+   reader has been told. Eighteen is on the back cover, so the count is safe;
+   what fills each tile is not. A floor reached shows its diorama and opens its
+   guide; a floor only named shows the name, stamped where it was printed; a
+   floor further down shows what the books have said about it so far, note by
+   note; anything else is sealed. A floor with no picture to show stands as
+   the uncharted island (see `unchartedArt`). */
+interface Note { at: string; sortKey: number; text: string }
+const foretoldById = new Map(foretoldRows.map(f => [f.id, f]));
+const atlas = Array.from({ length: 18 }, (_, i) => {
+  const id = i + 1;
+  const floor = floors.find(f => f.id === id);
+  if (floor) {
+    const arrived = reveals(gate, floor.revealedAt);
+    const named = arrived || (floor.nameAt != null && reveals(gate, floor.nameAt));
+    /* The tile's picture opens at the floor's artKey, the point by which
+       everything it shows has been read (served by /art/floor-N.png, which
+       checks the same thing). */
+    const art = !!VOXEL_FLOORS[id] && floor.artKey != null && gate.frontier >= floor.artKey;
+    return {
+      id, kind: arrived ? 'reached' : named ? 'named' : 'sealed',
+      name: named ? floor.name : null,
+      stamp: arrived ? null : named && floor.nameAt ? stampOf(floor.nameAt) : null,
+      /* Only a floor stood on wears its book's colour: on a sealed or merely
+         named tile the colour would say which book it is told in. */
+      book: arrived ? bookById.get(floor.book) : undefined,
+      accent: arrived ? floor.accent : '#3a3a3a', ink: arrived ? floor.ink : '#ffffff',
+      href: arrived || named ? `/floor/${id}` : null,
+      current: id === current,
+      /* the last stretch of its story the reader has reached */
+      latest: arrived ? partsOf(floor).filter(p => gate.frontier >= p.sortKey).at(-1) ?? null : null,
+      previously: arrived ? floor.previously ?? floor.premise : null,
+      art, notes: [] as Note[],
+    };
+  }
+  const f = foretoldById.get(id);
+  const notes = ((f?.notes ?? []) as Note[]).filter(n => gate.frontier >= n.sortKey);
+  const named = !!f?.name && f.nameKey != null && gate.frontier >= f.nameKey;
+  return {
+    id, kind: notes.length || named ? 'foretold' : 'sealed',
+    name: named ? f!.name : null, stamp: named && f!.nameAt ? stampOf(f!.nameAt) : null,
+    book: undefined, accent: '#3a3a3a', ink: '#ffffff',
+    href: notes.length || named ? `/floor/${id}` : null,
+    current: false, latest: null, previously: null,
+    art: !!VOXEL_FLOORS[id] && f?.artKey != null && gate.frontier >= f.artKey, notes,
+  };
+});
+/* Every floor has a picture: its own once the reader may see it, the
+   uncharted island under its question mark otherwise. Each address carries
+   the picture's hash, so a redrawn one is a new address; its size lets the
+   stairwells land on the picture, and `stair` (only for a finished floor) is
+   where its own way down is drawn. */
+const arts = new Map(await Promise.all(atlas.map(async t =>
+  [t.id, await pictureFor(t.id, t.art ? {
+    accent: t.kind === 'reached' ? t.accent : FALLBACK_ACCENT,
+    hero: showsHero(t.id, gate.frontier, t.kind === 'reached' ? floors.find(f => f.id === t.id)?.recapSortKey : foretoldById.get(t.id)?.heroKey),
+  } : null, t.kind !== 'sealed')] as const)));
+
+/* Voxel debris drifting in the dark around the descent, in three depths that
+   scroll at different speeds. Seeded, so it is the same field on every visit.
+   Mostly loose stone; near a floor the reader has reached, some of it takes
+   that floor's book colour (never a colour of a floor not reached), and a few
+   embers glow. */
+const debris = (() => {
+  let a = 1801;
+  const r = () => { a = (a + 0x6d2b79f5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const STONE = [['#8a8a90', '#6e6e76', '#53535b'], ['#6b6762', '#55524e', '#3f3d3a'], ['#8a5530', '#6d4426', '#52331d']];
+  return [0, 1, 2].map(layer => Array.from({ length: [70, 44, 18][layer] }, () => {
+    const y = r(), side = r() < 0.5, x = side ? r() * 0.24 : 0.76 + r() * 0.24;
+    const near = atlas[Math.min(17, Math.floor(y * 18))];
+    const ember = r() < 0.12, tinted = !ember && near?.kind === 'reached' && r() < 0.3;
+    const base = tinted ? near.accent : null, st = STONE[Math.floor(r() * STONE.length)];
+    return { x: layer === 0 ? r() : x, y, size: [8, 16, 30][layer] + r() * [6, 12, 22][layer],
+             spin: r() * 360, drift: 6 + r() * 8, delay: -r() * 12, ember, faces: base ? [base, base, base] : st, tinted };
+  }));
+})();
+
+/* A floor picked opens its card; ?floor=N renders it open, so a reload or a
+   shared link lands the same way, with no JavaScript at all. */
+const peekParam = Number(Astro.url.searchParams.get('floor'));
+const peekId = atlas.find(t => t.id === peekParam && t.href)?.id ?? null;
+const picked = peekId ? atlas.find(t => t.id === peekId)! : null;
+const hudStart = peekId ?? current ?? 0;
+const stepTo = (d: -1 | 1) => (peekId ? (d < 0 ? atlas.filter(x => x.href && x.id < peekId).at(-1) : atlas.find(x => x.href && x.id > peekId))?.id ?? null : null);
+const pad2 = (n: number) => String(n).padStart(2, '0');
 
 /* The back cover: the only story this page prints to everyone. */
 const PILOT = [
@@ -58,168 +135,1758 @@ const PILOT = [
 ];
 ---
 <Layout title="Floors">
-  <section class="wrap intro">
-    <p class="eyebrow" style="color:var(--color-blood)">Dungeon Crawler World · Season: Earth</p>
-    <h1>The Crawl<em>So Far</em></h1>
+  {/* A reader who has told us nothing gets the start screen: the way in, and the
+      button that opens the position picker. The descent is for a reader with a
+      position: with nothing read it is eighteen sealed islands. */}
+  {mode === 'welcome' ? <StartScreen pilot={PILOT} /> : <>
+  {/* Hide the crawl for the instant it takes the script to put the reader's
+      floor in view, so the page never paints at the surface and jumps. A CSS
+      fallback reveals it regardless, should the script not run. */}
+  <script is:inline>document.documentElement.classList.add('descent-pending'); try { history.scrollRestoration = 'manual'; } catch (e) {}</script>
+  <div class="world" id="world">
+  <div class="void" aria-hidden="true">
+    {debris.map((field, layer) => (
+      <div class={`field field-${layer}`} data-depth={[0.25, 0.55, 1.15][layer]}>
+        {field.map(d => (
+          <span class={`vox${d.ember ? ' vox-ember' : ''}`}
+                style={`left:${(d.x * 100).toFixed(2)}%;top:${(d.y * 100).toFixed(2)}%;--s:${d.size.toFixed(1)}px;--r:${d.spin.toFixed(0)}deg;--d:${d.drift.toFixed(1)}s;--dl:${d.delay.toFixed(1)}s`}>
+            <svg viewBox="0 0 20 22"><path d="M10 1 19 6 10 11 1 6Z" fill={d.faces[0]} /><path d="M1 6 10 11V21L1 16Z" fill={d.faces[1]} style={d.tinted ? 'filter:brightness(.78)' : undefined} /><path d="M10 11 19 6V16L10 21Z" fill={d.faces[2]} style={d.tinted ? 'filter:brightness(.58)' : undefined} /><path d="M10 1 19 6V16L10 21 1 16V6Z" fill="none" stroke="#120c0c" stroke-width="1" /></svg>
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
 
-    {mode === 'welcome'
-      ? <div class="sys broadcast">
-          <b>*** Welcome, viewer ***</b>
-          <p>This is a companion to <i>Dungeon Crawler Carl</i>, the book series by Matt Dinniman,
-            and it has exactly one rule: it only tells you what you have already read. Pick the
-            book you are on in the bar at the top, add a chapter if you are partway through, and
-            everything opens up to exactly that point. What happened on each floor, a stretch at a
-            time. Who everybody is, and when they turn up. The timeline. My achievements, in my own
-            words. Not one chapter further.</p>
-          <p>Until you pick a book, you get the back cover and nothing else. Here it is.</p>
-          {PILOT.map(t => <p>{t}</p>)}
-          <p class="cta">Pick your book above, and I will tell you what you missed.</p>
+  <div class={`crawl${peekId ? ' is-detail' : ''}`} id="crawl">
+    {/* A floor's card: the System's box widened across the column, the text on
+        the left, the floor's own picture on the right, ▲ ▼ ✕ beside it. */}
+    <section class="dcard" id="dcard" tabindex="-1" aria-label="Floor details" style={picked ? `--dcard-tile:${picked.accent}` : undefined}>
+      <div class="dcard-bg" id="dcardbg" aria-hidden="true"></div>
+      <div class="dcard-text" id="dcardtext">{peekId && <FloorPeek id={peekId} />}</div>
+      <div class="dcard-art" id="dcardart">{peekId && arts.get(peekId) && (
+        <img class="isle-img" src={`/art/floor-${peekId}.png?v=${arts.get(peekId)!.version}`} width={arts.get(peekId)!.width} height={arts.get(peekId)!.height} alt="" />
+      )}</div>
+      <nav class="dcard-nav" aria-label="Floors">
+        <a class="dnav" data-close href="/" aria-label="Back to the crawl" title="Back (Esc)">✕</a>
+        <a class={`dnav${peekId && !stepTo(-1) ? ' is-off' : ''}`} data-step="-1" href={stepTo(-1) ? `/?floor=${stepTo(-1)}` : '/'} aria-label="The floor above" title="Up (↑)">▲</a>
+        <a class={`dnav${peekId && !stepTo(1) ? ' is-off' : ''}`} data-step="1" href={stepTo(1) ? `/?floor=${stepTo(1)}` : '/'} aria-label="The floor below" title="Down (↓)">▼</a>
+      </nav>
+    </section>
+
+    {/* The System's box, pinned beside the descent: it speaks of the floor in
+        view and changes as each one passes. Every card is gated like the rest
+        of the page, and with no JavaScript it shows the reader's own floor. */}
+    <aside class="hud" id="hud">
+      <div class="hud-title" id="hudtitle">
+        <div class="hud-title-in">
+          <p class="eyebrow">Dungeon Crawler World · Season: Earth</p>
+          <h1>The Crawl<em>So Far</em></h1>
         </div>
-      : <div class="sys broadcast">
-          <b>*** Previously, on Dungeon Crawler World ***</b>
-          {lastFloor?.previously
-            ? <p>{lastFloor.previously}</p>
-            : PILOT.map(t => <p>{t}</p>)}
-          <p class="status">
-            {positionLabel}.{' '}
-            {lastFloor
-              ? <>You are on floor {lastFloor.id}, {lastFloor.name}{lastPart
-                  ? <>, and the last stretch you have reached is <a href={`#floor-${lastFloor.id}`}>{lastPart.title}</a>.</>
-                  : <>, and its story is still ahead of you. <a href={`#floor-${lastFloor.id}`}>See what this floor is</a>.</>}</>
-              : <>The stairs down are still ahead of you. Keep reading.</>}
-          </p>
-        </div>}
-  </section>
-
-  <section class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">01</span>
-      <h2>Floors</h2>
-    </div>
-    <p class="sec-intro">Each floor's story opens a stretch at a time, as you read past it. The
-      floor you are on starts open; tap any other to unfold it.</p>
-
-    {floors.map(floor => {
-      const open = reveals(gate, floor.revealedAt);
-      // The name can arrive first: the book prints some floors' names chapters ahead.
-      const nameOpen = open || (floor.nameAt != null && reveals(gate, floor.nameAt));
-      const book = bookById.get(floor.book);
-      const parts = partsOf(floor);
-      const shown = open ? parts.filter(p => gate.frontier >= p.sortKey) : [];
-      const next = open ? parts.find(p => gate.frontier < p.sortKey) : undefined;
-      const left = open ? parts.length - shown.length : 0;
-      return (
-        <details class="slab floor" id={`floor-${floor.id}`} open={floor.id === current}>
-          <summary class="floor-head">
-            <div class="floorno" style={`background:${floor.accent};color:${floor.ink}`}>
-              {String(floor.id).padStart(2, '0')}
-            </div>
-            <div class="floor-titles">
-              <span class="eyebrow">Book <b>{floor.bookSpan ?? floor.book}</b> · {book?.title}</span>
-              {nameOpen
-                ? <h3>{floor.name}</h3>
-                : <h3 class="redact" style="font-size:var(--type-lede);font-weight:400">▓▓▓▓▓▓▓▓▓</h3>}
-            </div>
-            {/* The control says what a click does, so a folded floor reads as one
-                you can open rather than as a finished row. */}
-            <span class="toggle" aria-hidden="true">
-              <span class="when-shut">{open ? `Read · ${shown.length} ${shown.length === 1 ? 'part' : 'parts'}` : 'Sealed'}</span>
-              <span class="when-open">Close</span>
-              <svg viewBox="0 0 12 8" width="12" height="8"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-            </span>
-          </summary>
-          <div class="floor-body">
-            {open
+      </div>
+      <div class="hud-cards" id="hudcards">
+        <section class={`hud-card sys${hudStart === 0 ? ' is-shown' : ''}`} data-floor="0">
+          {/* (a first visit never reaches the descent: it gets the start screen) */}
+                <b>*** The surface ***</b>
+                {PILOT.map(t => <p>{t}</p>)}
+                <p class="hud-lede">Up top, before the stairs.</p>
+        </section>
+        {atlas.map(t => (
+          <section class={`hud-card sys${hudStart === t.id ? ' is-shown' : ''}`} data-floor={t.id} style={`--tile:${t.accent}`}>
+            <header class="hud-head">
+              <span class="hud-no" aria-hidden="true">{pad2(t.id)}</span>
+              <h2 class={t.name ? undefined : 'unnamed'} style={t.name ? `view-transition-name:floor-name-${t.id}` : undefined}>
+                <span class="sr-only">Floor {t.id}: </span>{t.name ?? (t.kind === 'sealed' ? 'Sealed' : 'Not yet named')}</h2>
+            </header>
+            {t.kind === 'reached'
               ? <>
-                  <p class="sys arrival"><b>*** Now entering ***</b>{floor.premise}</p>
-                  {shown.length > 0 &&
-                    <ol class="parts">
-                      {shown.map(p => (
-                        <li class="part">
-                          <span class="label part-span">{span(p.from, p.at)}</span>
-                          <h4>{p.title}</h4>
-                          {paragraphs(p.text).map(t => <p>{t}</p>)}
-                        </li>
-                      ))}
-                    </ol>}
-                  {next && <Sealed at={next.sortKey} count={left} noun="part" compact />}
+                  {t.book && <p class="hud-book">Book {t.book.id}, <i>{t.book.title}</i></p>}
+                  <b>*** Previously, on Dungeon Crawler World ***</b>
+                  <p>{t.previously}</p>
+                  {t.latest && <p class="hud-last"><span class="label">{t.current ? 'Where you are' : 'Last stretch'} · {span(t.latest.from, t.latest.at)}</span>{t.latest.title}</p>}
+                  {t.current && <p class="status">{positionLabel}.</p>}
+                  <a class="hud-go" href={`/floor/${t.id}`} data-peek={t.id}><span class="go-long">Details →</span><span class="go-short">What happened</span></a>
                 </>
-              : <Sealed at={floor.revealedAt} />}
-          </div>
-        </details>
-      );
-    })}
-  </section>
+              : t.kind === 'sealed'
+                ? <><b>*** Sealed ***</b><p>That's above your pay grade, crawler.</p></>
+                : <>
+                    {t.stamp && <p class="hud-book">Named in {t.stamp}</p>}
+                    <b>*** Not yet entered ***</b>
+                    <p>{t.notes.length > 0 ? t.notes[t.notes.length - 1].text : 'You have heard its name. You have not stood on it.'}</p>
+                    {t.href && <a class="hud-go" href={t.href} data-peek={t.id}><span class="go-long">What is known →</span><span class="go-short">What is known</span></a>}
+                  </>}
+          </section>
+        ))}
+      </div>
+    </aside>
+
+    {/* Where you are: the eighteen floors as a gauge, the one in view lit, the
+        reader's own floor marked. Colour only on floors the reader has reached. */}
+    <nav class="rail" id="rail" aria-label="Floors">
+      {atlas.map(t => (
+        <a class={`tick tick-${t.kind}${t.current ? ' is-here' : ''}${hudStart === t.id ? ' in-view' : ''}`} href={t.href ?? `#floor-${t.id}`}
+           data-goto={t.id} style={`--tile:${t.accent}`} aria-label={`Floor ${t.id}${t.name ? `, ${t.name}` : ''}${t.current ? ', you are here' : ''}`}>
+          <span class="tick-no">{pad2(t.id)}</span><span class="tick-bar"></span>
+        </a>
+      ))}
+      {/* the keys that walk the descent, for a reader with a keyboard */}
+      <p class="rail-keys" aria-hidden="true" title="↑ ↓ from floor to floor · Enter for details"><kbd>↑</kbd><kbd>↓</kbd></p>
+    </nav>
+
+    {/* The descent: eighteen islands down a shaft, stairwells between them. */}
+    <section class="descent" id="atlas" aria-label="The World Dungeon">
+      {/* tilt-shift: the top and bottom of the view go soft, so the floor in the middle is in focus */}
+      <div class="tilt" aria-hidden="true">
+        <div class="tilt-band tilt-top"><i></i><i></i><i></i></div>
+        <div class="tilt-band tilt-bottom"><i></i><i></i><i></i></div>
+      </div>
+      <div class="dungeon" id="dungeon">
+        <svg class="stairs" id="stairs" aria-hidden="true"></svg>
+        <ol class="shaft" id="shaft">
+          {atlas.map((t, i) => {
+            const art = arts.get(t.id)!;
+            const label = `Floor ${t.id}${t.name ? `, ${t.name}` : ''}${art.own ? '' : ', not yet pictured'}`;
+            const isle = (
+              <span class="art" data-cubes={art.cubes} data-origin={art.origin.join(',')} data-scale={art.scale}>
+                <img class="isle-img" src={art.src} width={art.width} height={art.height}
+                     style={`view-transition-name:floor-art-${t.id}`} alt={label} loading={Math.abs(t.id - (current ?? 1)) < 3 ? 'eager' : 'lazy'} decoding="async" />
+                {art.stair && <span class="stairmark" style={`left:${art.stair[0] * 100}%;top:${art.stair[1] * 100}%`} />}
+              </span>
+            );
+            return (
+              <li id={`floor-${t.id}`} class={`level level-${t.kind}${t.current ? ' is-here' : ''}${peekId === t.id ? ' is-picked' : ''}${hudStart === t.id ? ' in-view' : ''}`}
+                  data-id={t.id} data-side={i % 2 ? 'r' : 'l'} data-depart={art?.stair ? art.stair.join(',') : '0.5,0.93'}
+                  data-lit={t.kind === 'reached' ? '1' : '0'} style={`--tile:${t.accent};--i:${i};--ar:${(art.width / art.height).toFixed(4)}`}>
+                {t.href
+                  ? <a class="isle" href={t.href} data-peek={t.id} aria-label={`${label}${t.current ? ', where you are' : ''}: details`}>{isle}{t.current && <span class="here-pin" aria-hidden="true"><b></b>You are here</span>}</a>
+                  : <div class="isle" role="img" aria-label={`${label}, sealed`}>{isle}</div>}
+              </li>
+            );
+          })}
+        </ol>
+        <div class="bottom" aria-hidden="true"><span class="label">The bottom</span></div>
+      </div>
+    </section>
+  </div>
+  </div>
+  </>}
 </Layout>
 
 <script>
-  /* Quick-find links a floor as /#floor-N. A folded floor would swallow the
-     jump, so the target opens itself; without JavaScript the anchor still
-     lands on the floor's head. */
-  function openTarget() {
-    const el = location.hash.length > 1 ? document.getElementById(location.hash.slice(1)) : null;
-    if (el instanceof HTMLDetailsElement) { el.open = true; el.scrollIntoView({ block: 'start' }); }
-  }
-  openTarget();
-  addEventListener('hashchange', openTarget);
+  /* The homepage is the crawl, and the crawl is a descent. All of it works on
+     markup the server rendered; the script adds the motion and saves round trips.
+
+     The sequence, all of it tied to the scroll and so all of it reversible:
+     1. The floor on the focus line is whole and lit; the next one waits below,
+        dark and soft in the tilt-shift; the floors above are gone.
+     2. Scrolling down, a stairwell builds out of the floor step by step, down
+        to the next one (its first steps already show at rest: the way down).
+     3. The next floor clicks onto the focus line and is pinned there. The
+        wheel and the keys step from floor to floor; scrolled freely (a finger,
+        the scrollbar) a floor is held for a notch's worth and the page glides
+        the last stretch when the reader stops.
+     4. Behind, the floor that was left collapses, as floors do: it cracks,
+        its underside and rim give first, its chunks sink, tip and fade into the
+        dark with crumbs and dust, and its stairs crumble after it.
+     5. Scrolling up rewinds it: the floor above comes back together.
+
+     Beside it the System's box speaks of the floor on the focus line; a floor's
+     card opens from the box and closes back into it, the page held still while
+     it is open. Every pick is a real link, so with no JavaScript, a middle-click
+     or a failed fetch it simply navigates. */
+  const root = document.documentElement;
+  const crawl = document.getElementById('crawl');
+  const dungeon = document.getElementById('dungeon');
+  const svg = document.getElementById('stairs') as SVGSVGElement | null;
+  const hud = document.getElementById('hud');
+  const card = document.getElementById('dcard');
+  const text = document.getElementById('dcardtext');
+  const artBox = document.getElementById('dcardart');
+  const reveal = () => root.classList.remove('descent-pending');
+  if (crawl && dungeon && svg && hud && card && text && artBox) {
+    const motion = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const narrow = matchMedia('(max-width: 999px)');
+    const EASE = 'cubic-bezier(.22, 1, .36, 1)';
+    const levels = [...dungeon.querySelectorAll<HTMLElement>('.level')];
+    const idOf = (el: Element) => Number((el as HTMLElement).dataset.id);
+    const levelOf = (id: number) => levels.find(l => idOf(l) === id);
+    const imgOf = (id: number) => levelOf(id)?.querySelector<HTMLImageElement>('.isle-img') ?? null;
+    const cards = new Map([...hud.querySelectorAll<HTMLElement>('.hud-card')].map(c => [Number(c.dataset.floor), c]));
+    const pickable = levels.filter(l => l.querySelector('[data-peek]')).map(idOf);
+    const hudCards = document.getElementById('hudcards')!;
+    const hudTitle = document.getElementById('hudtitle');
+    const world = document.getElementById('world')!;
+    const descentEl = dungeon.closest<HTMLElement>('.descent')!;
+    const rail = document.getElementById('rail');
+    // the pinned header: everything under it is the room the descent has
+    const gateEl = document.getElementById('top');
+    if (motion) dungeon.classList.add('moves');
+    const clamp01 = (v: number) => Math.min(1, Math.max(0, v));
+
+    /* ---- measured when the layout changes, read on every frame ---- */
+    type Box = { left: number; top: number; width: number; height: number };
+    const boxIn = (el: HTMLElement): Box => {
+      let left = 0, top = 0, n: HTMLElement | null = el;
+      while (n && n !== dungeon) { left += n.offsetLeft; top += n.offsetTop; n = n.offsetParent as HTMLElement | null; }
+      return { left, top, width: el.offsetWidth, height: el.offsetHeight };
+    };
+    const centres = new Map<number, number>(), halves = new Map<number, number>();
+    const cardHeights = new Map<number, number>();
+    let dungeonTop = 0, descentTop = 0, worldMid = 0, boxH = 0, shown = Number([...cards.values()].find(c => c.classList.contains('is-shown'))?.dataset.floor ?? 0);
+    const gateTop = () => gateEl?.offsetHeight ?? 0;
+
+    /* ---- home: the title stands over the reader's own floor ----
+       The page opens on the reader's floor, so that is its homepage: there the
+       title stands full size over the box, the box under it, the floor beside
+       them. Moving off toward the next floor (or the one above) it shrinks into
+       a small title over the box, all of it tied to the scroll, and grows again
+       on the way back. With nothing read, home is the top. On a phone the title
+       is a band over the strip at home and slides away under the header
+       elsewhere. The title is out of the flow once the script runs, so the box's
+       place is worked out here and not by the layout. */
+    const homeId = Number(levels.find(l => l.classList.contains('is-here'))?.dataset.id ?? 0);
+    const titleIn = hudTitle?.querySelector<HTMLElement>('.hud-title-in') ?? null;
+    const titleEye = titleIn?.querySelector<HTMLElement>('.eyebrow') ?? null;
+    const K_SMALL = () => (narrow.matches ? 0 : 0.34), GAP = () => (narrow.matches ? 0 : 14);
+    let titleH = 0, kBig = 1, homeY = 0, spanUp = 1, spanDown = 1;
+    const cardFor = (id: number) => (pickable.length ? id : 0);
+    // how much of home is in view at scroll y: 1 on it, 0 a little over halfway to the next stop either side
+    const homeAt = (y: number) => { const d = y - homeY, span = d > 0 ? spanDown : spanUp; const t = clamp01(Math.abs(d) / (0.55 * span)); return 1 - t * t * (3 - 2 * t); };
+    const kAt = (y: number) => { const h = homeAt(y), s = K_SMALL(); return motion ? s + (kBig - s) * h : h > 0.5 ? kBig : s; };
+
+    function measure() {
+      root.style.setProperty('--gate-h', `${gateTop()}px`);
+      crawl!.classList.add('pinned-title');
+      titleH = titleIn?.offsetHeight ?? 0;
+      // every card's own height, so the box can grow and shrink to it smoothly
+      for (const [id, c] of cards) { const was = c.style.display; c.style.display = 'block'; cardHeights.set(id, c.offsetHeight); c.style.display = was; }
+      dungeonTop = dungeon!.getBoundingClientRect().top + scrollY;
+      descentTop = descentEl.getBoundingClientRect().top + scrollY;
+      const w = world.getBoundingClientRect(); worldMid = w.top + scrollY + w.height / 2;
+      for (const lv of levels) { const b = boxIn(lv.querySelector<HTMLElement>('.art')!); centres.set(idOf(lv), dungeonTop + b.top + b.height / 2); halves.set(idOf(lv), b.height / 2); }
+      sizeBox(shown, false);
+      /* The title at home: full size. The box under it takes the room that is
+         left, its text scrolling if the card is longer (a first visit's welcome
+         is); only a view too short to leave the box a fair share shrinks the
+         title, and on a phone the floor keeps at least 40% of the view. */
+      const g = gateTop(), hHome = Math.min(boxHeightFor(cardFor(homeId)), 0.45 * (innerHeight - g));
+      kBig = titleH ? Math.min(1, Math.max(K_SMALL(), narrow.matches ? (innerHeight * 0.6 - g - boxH) / titleH : (innerHeight - g - 32 - GAP() - hHome) / titleH)) : 0;
+      const i = Math.max(0, levels.findIndex(l => idOf(l) === homeId));
+      homeY = i > 0 ? restOn(homeId) : 0;
+      const prev = i > 0 ? (i === 1 ? 0 : restOn(idOf(levels[i - 1]))) : null, next = levels[i + 1] ? restOn(idOf(levels[i + 1])) : null;
+      spanUp = prev != null ? Math.max(120, homeY - prev) : 600;
+      spanDown = next != null ? Math.max(120, next - homeY) : 600;
+    }
+    // the box is as tall as what it says, up to the room there is under the small title
+    const capH = (h: number) => Math.min(h, innerHeight - gateTop() - 32 - K_SMALL() * titleH - GAP());
+    const boxHeightFor = (id: number) => (narrow.matches ? boxH : capH(cardHeights.get(id) ?? boxH));
+    // and with k of the title over it, no taller than the room left under the title
+    const roomFor = (k: number, h: number) => (narrow.matches ? h : Math.min(h, innerHeight - gateTop() - 32 - k * titleH - GAP()));
+    /* The box's height eases to its card's over .45s, here rather than in CSS,
+       because its top is worked out from that height every frame. */
+    let shownH = 0, fromH = 0, hT0 = -1;
+    function sizeBox(id: number, smooth = true) {
+      if (narrow.matches) { boxH = hudCards.offsetHeight; hudCards.style.height = ''; shownH = boxH; hT0 = -1; root.style.setProperty('--strip-h', `${boxH}px`); return; }
+      root.style.setProperty('--strip-h', '0px');
+      boxH = capH(cardHeights.get(id) ?? hudCards.offsetHeight);
+      if (!smooth || !motion || !shownH) { shownH = boxH; hT0 = -1; } else { fromH = shownH; hT0 = performance.now(); }
+      onScroll();
+    }
+    // the box at its size at once (to be flown into, or after a jump)
+    function settleBox() { shownH = boxH; hT0 = -1; placeBox(scrollY); }
+
+    /* ---- the focus line: the middle of the box ----
+       The box is pinned with its middle on the middle of the view under the
+       header, unless the title over it needs the room, and then it stands
+       under the title. On a phone, the box is a console docked at the bottom
+       of the screen and the focus line is the middle of the room between the
+       header (and the title's band, at home) and the console. */
+    function boxTopFor(k: number, h: number) {
+      const g = gateTop(), t = k * titleH;
+      return narrow.matches ? innerHeight - h : Math.max(g + 16 + t + GAP(), g + (innerHeight - g - h) / 2);
+    }
+    const focusFor = (k: number, h: number) => { const t = boxTopFor(k, h); return narrow.matches ? (gateTop() + k * titleH + t) / 2 : t + h / 2; };
+    const focusAt = (y: number, h = boxH) => { const k = kAt(y); return focusFor(k, roomFor(k, h)); };
+    const focusNow = () => focusAt(scrollY);
+    // the box, the title over it and the room under them, drawn for scroll y
+    let lastUnder = -1;
+    function placeBox(y: number) {
+      const k = kAt(y), g = gateTop();
+      if (hT0 >= 0) { const p = clamp01((performance.now() - hT0) / 450); shownH = fromH + (boxH - fromH) * (1 - (1 - p) ** 4); if (p >= 1) hT0 = -1; }
+      const h = roomFor(k, narrow.matches ? boxH : shownH), top = boxTopFor(k, h);
+      if (!narrow.matches) hudCards.style.height = `${h}px`;
+      // on a phone the console is docked at the bottom by the stylesheet
+      hudCards.style.top = narrow.matches ? '' : `${top}px`;
+      if (hudTitle && titleIn) {
+        if (narrow.matches) { hudTitle.style.top = `${g - titleH + k * titleH}px`; titleIn.style.transform = ''; }
+        else { hudTitle.style.top = `${top - GAP() - k * titleH}px`; titleIn.style.transform = `scale(${k.toFixed(4)})`; }
+        // the eyebrow is too small to read once the title has shrunk: it goes first
+        if (titleEye) titleEye.style.opacity = String(narrow.matches ? 1 : clamp01((k - K_SMALL()) / Math.max(0.01, kBig - K_SMALL())));
+      }
+      // on a phone, the room between the title's band and the console is where the tilt-shift works
+      const under = Math.round(k * titleH);
+      if (narrow.matches && under !== lastUnder) { lastUnder = under; root.style.setProperty('--under-h', `${under}px`); }
+      return narrow.matches ? g + under : top + h;
+    }
+    // room above the first floor so it sits on the focus line at the very top, beside its own card
+    function lead() {
+      const first = levels[0];
+      if (!first || !centres.has(idOf(first))) return;
+      const h = boxHeightFor(cardFor(idOf(first)));
+      const cur = parseFloat(getComputedStyle(dungeon!).paddingTop) || 0;
+      const next = Math.max(8, Math.round(cur + focusAt(0, h) - centres.get(idOf(first))!));
+      if (Math.abs(next - cur) > 1) { dungeon!.style.paddingTop = `${next}px`; measure(); }
+    }
+
+    /* ---- the pin ----
+       A floor coming onto the focus line catches up with it and clicks into
+       place: for a moment a little faster than the page, then not at all. It
+       sits there, pinned, for a short stretch of scrolling (PIN either side of
+       the line) and leaves the same way. Its drawn distance from the line is 0
+       inside the pin and its laid-out distance beyond PIN + LEAP; in between, a
+       Hermite curve that starts at rest and ends at the page's own speed, so
+       nothing jumps. The layout's --dwell leaves the room the pin uses. */
+    const PIN = () => (narrow.matches ? 64 : 100), LEAP = () => (narrow.matches ? 96 : 130);
+    function holdOffset(d: number) {
+      if (!motion) return 0;
+      const h = PIN(), w = LEAP(), a = Math.abs(d);
+      if (a >= h + w) return 0;
+      if (a <= h) return -d;
+      const t = (a - h) / w, f = (3 * t * t - 2 * t * t * t) * (h + w) + (t * t * t - t * t) * w;
+      return Math.sign(d) * f - d;
+    }
+    const dOf = (id: number, focusDoc: number) => (centres.get(id) ?? 0) - focusDoc;
+    /* Where the view is between floor a and the next: 0 on a, 1 on the next. */
+    const between = (i: number, focusDoc: number) => {
+      const a = centres.get(idOf(levels[i])) ?? 0, b = levels[i + 1] ? centres.get(idOf(levels[i + 1]))! : a + 1;
+      return (focusDoc - a) / Math.max(1, b - a);
+    };
+
+    /* ---- stairwells: steps of voxels, built one by one, crumbling behind ---- */
+    const shade = (hex: string, k: number) => {
+      const n = parseInt(hex.replace('#', '').trim().slice(0, 6), 16);
+      const c = (v: number) => Math.max(0, Math.min(255, Math.round(v * k))).toString(16).padStart(2, '0');
+      return `#${c((n >> 16) & 255)}${c((n >> 8) & 255)}${c(n & 255)}`;
+    };
+    type Flight = { steps: SVGGElement[]; t: number[]; on: number; fall: number; top: number; bottom: number };
+    let flights: Flight[] = [];
+    function drawStairs() {
+      svg!.setAttribute('viewBox', `0 0 ${dungeon!.offsetWidth} ${dungeon!.offsetHeight}`);
+      const out: string[] = ['<defs><radialGradient id="torchglow"><stop offset="0" stop-color="#ffb340" stop-opacity=".55"/><stop offset="1" stop-color="#ff7a1f" stop-opacity="0"/></radialGradient></defs>'];
+      const poly = (pts: number[][], fill: string) => `<polygon points="${pts.map(q => q.map(v => v.toFixed(1)).join(',')).join(' ')}" fill="${fill}" stroke="#120c0c" stroke-width="1" stroke-linejoin="round"/>`;
+      const at = (r: Box, fx: number, fy: number) => [r.left + r.width * fx, r.top + r.height * fy];
+      const boxOf = (lv: HTMLElement) => boxIn(lv.querySelector<HTMLElement>('.art')!);
+      const tile = (lv: HTMLElement) => getComputedStyle(lv).getPropertyValue('--tile').trim() || '#ffc10a';
+      const spans: { top: number; bottom: number; t: number[] }[] = [];
+      levels.forEach((lv, i) => {
+        const next = levels[i + 1];
+        if (!next) return;
+        const [fx, fy] = (lv.dataset.depart ?? '0.5,0.93').split(',').map(Number);
+        const a = at(boxOf(lv), fx, fy), b = at(boxOf(next), 0.5, 0.14), lit = lv.dataset.lit === '1' && next.dataset.lit === '1', color = tile(lv);
+        const dy = Math.max(30, (b[1] - a[1]) * 0.55);
+        const P = (t: number) => { const u = 1 - t; return [u * u * u * a[0] + 3 * u * u * t * a[0] + 3 * u * t * t * b[0] + t * t * t * b[0], u * u * u * a[1] + 3 * u * u * t * (a[1] + dy) + 3 * u * t * t * (b[1] - dy) + t * t * t * b[1]]; };
+        const pts: number[][] = [P(0)], ts = [0]; let prev = pts[0], acc = 0;
+        for (let k = 1; k <= 400; k++) { const q = P(k / 400); acc += Math.hypot(q[0] - prev[0], q[1] - prev[1]); prev = q; if (acc >= 19) { pts.push(q); ts.push(k / 400); acc = 0; } }
+        const stone = lit ? '#8a8a90' : '#4a4744', w = lit ? 13 : 9, h = lit ? 9 : 5, g: string[] = [], keep: number[] = [];
+        pts.forEach(([x, y], k) => {
+          if (!lit && k % 3 === 2) return;                       // gaps in the rubble
+          const X = x + (lit ? 0 : ((k * 37) % 5) - 2), parts = [
+            poly([[X, y - w / 2], [X + w, y], [X, y + w / 2], [X - w, y]], lit ? color : stone),
+            poly([[X - w, y], [X, y + w / 2], [X, y + w / 2 + h], [X - w, y + h]], shade(stone, .86)),
+            poly([[X, y + w / 2], [X + w, y], [X + w, y + h], [X, y + w / 2 + h]], shade(stone, .64)),
+          ];
+          if (lit && k % 7 === 3) {
+            const tx = X + w + 5, ty = y - 2;
+            parts.push(`<circle class="torchglow" cx="${tx}" cy="${ty - 13}" r="16"/><rect x="${tx - 1.5}" y="${ty - 10}" width="3" height="12" fill="#5c3a20"/><path class="torchfire" d="M${tx} ${ty - 19}C${tx + 4} ${ty - 14} ${tx + 3} ${ty - 10} ${tx} ${ty - 10}C${tx - 3} ${ty - 10} ${tx - 4} ${ty - 14} ${tx} ${ty - 19}Z"/>`);
+          }
+          g.push(`<g class="stp"><g class="stp-in">${parts.join('')}</g></g>`);
+          keep.push(ts[k]);
+        });
+        out.push(`<g class="flight${lit ? '' : ' fogged'}">${g.join('')}</g>`);
+        spans.push({ top: dungeonTop + a[1] - 30, bottom: dungeonTop + b[1] + 30, t: keep });
+      });
+      svg!.innerHTML = out.join('');
+      flights = [...svg!.querySelectorAll<SVGGElement>('.flight')].map((f, i) => ({ steps: [...f.querySelectorAll<SVGGElement>('.stp')], t: spans[i].t, on: -1, fall: -1, top: spans[i].top, bottom: spans[i].bottom }));
+    }
+    function stairs(focusDoc: number, offs: number[]) {
+      const lo = scrollY - 300, hi = scrollY + innerHeight + 300;
+      flights.forEach((f, i) => {
+        const n = f.steps.length;
+        // built one by one from the floor above, a few already at rest; crumbling top first as that floor collapses
+        const u = between(i, focusDoc);
+        const on = motion ? Math.round(clamp01((u + 0.18) / 0.6) * n) : n;
+        const fall = motion ? Math.round(clamp01((u - 0.5) / 0.47) * n) : 0;
+        if (on !== f.on || fall !== f.fall) {
+          f.steps.forEach((s, k) => { s.classList.toggle('on', k < on && k >= fall); s.classList.toggle('fall', k < fall); });
+          f.on = on; f.fall = fall;
+        }
+        // the steps follow the two floors they join through the soft hold
+        if (!motion || f.bottom < lo || f.top > hi) return;
+        const oa = offs[i], ob = offs[i + 1] ?? oa;
+        f.steps.forEach((s, k) => { s.style.transform = `translate(0px, ${(oa + (ob - oa) * f.t[k]).toFixed(1)}px)`; });
+      });
+    }
+
+    /* ---- collapse: a floor left behind gives way, as floors do ----
+       The floor is redrawn on a WebGL canvas exactly as its picture shows it,
+       together with the blocks the picture shows (/art/cubes-N.bin, gated with
+       it). It breaks into irregular chunks a few blocks across and deep. Each
+       one cracks and settles, then drops, tipping over its outer edge,
+       darkening as it falls into the dark and fading out to nothing; crumbs
+       trickle from it and dust blooms where it broke. The underside and the rim
+       go first, the middle of the surface last. Until its moment a chunk is the
+       picture's own pixels, and once it moves it carries them with it, so the
+       floor never changes its look when it starts to break, and nothing is
+       left to vanish at the end. All of it follows the scroll: scrolling back
+       up builds the floor again. Without WebGL, or before the blocks have
+       arrived, the picture sinks and fades as a whole; with reduced motion
+       nothing falls. */
+    const LEAD = 0.07, DUR = 0.36;     // the crack before a chunk drops, and how long its fall lasts (in q)
+    /* The canvas draws the same picture, but a browser scales two images onto
+       the screen a sub-pixel apart, so the picture fades over the canvas
+       across the first HAND of the collapse instead of swapping in one frame. */
+    const HAND = 0.04;
+    const smooth = (a: number, b: number, v: number) => { const t = clamp01((v - a) / (b - a)); return t * t * (3 - 2 * t); };
+    const webgl = motion && (() => { try { return !!document.createElement('canvas').getContext('webgl2'); } catch { return false; } })();
+    const arts = [...dungeon.querySelectorAll<HTMLElement>('.art')];
+    const cubeData = new Map<HTMLElement, ArrayBuffer | null>();
+    function fetchCubes(a: HTMLElement) {
+      if (!webgl || cubeData.has(a) || !a.dataset.cubes) return;
+      cubeData.set(a, null);
+      fetch(a.dataset.cubes, { credentials: 'same-origin' }).then(r => (r.ok ? r.arrayBuffer() : null)).catch(() => null)
+        .then(buf => { if (buf) { cubeData.set(a, buf); onScroll(); } });
+    }
+    const near = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { fetchCubes(e.target as HTMLElement); near.unobserve(e.target); } }), { rootMargin: '1600px 0px' });
+    if (webgl) arts.forEach(a => near.observe(a));
+
+    /* One cube per instance, drawn twice: once at rest into an id buffer (which
+       chunk and how deep, per pixel of the picture), then every frame where it
+       is. A cube still in place is not drawn: the picture is. A cube's visible
+       faces are coloured from the picture at its place of rest, the faces it
+       turns to show from its own tone. */
+    const VS_CUBE = `#version 300 es
+      layout(location=0) in vec3 aCorner; layout(location=1) in vec2 aUV; layout(location=2) in float aFace;
+      layout(location=3) in vec3 aHome; layout(location=4) in vec4 aPivot; layout(location=5) in vec4 aSpin; layout(location=6) in vec4 aDrift; layout(location=7) in vec4 aColor;
+      uniform float uQ, uS, uLead, uDur, uRest; uniform vec2 uOrigin, uCanvas, uDepth;
+      out vec3 vFlat; out vec2 vUV; out vec2 vRest; out float vRestZ; out float vA; out float vDark; flat out float vFace; flat out float vCode;
+      vec3 turn(vec3 v, vec3 k, float a) { return v * cos(a) + cross(k, v) * sin(a) + k * dot(k, v) * (1.0 - cos(a)); }
+      vec3 place(vec3 p) {
+        return vec3((p.x - p.y) * 4.0 * uS + uOrigin.x, ((p.x + p.y) * 2.0 - p.z * 4.0) * uS + uOrigin.y,
+                    1.0 - clamp((p.x + p.y + p.z - uDepth.x) / (uDepth.y - uDepth.x), 0.0, 1.0));
+      }
+      void main() {
+        vCode = aPivot.w;
+        float at = aPivot.w / 65000.0;
+        vec3 rest = aHome + aCorner, pos = rest;
+        vec3 r = place(rest);
+        vRest = r.xy; vRestZ = r.z; vA = 1.0; vDark = 1.0;
+        if (uRest < 0.5) {
+          if (uQ < at - uLead) { gl_Position = vec4(2.0, 2.0, 2.0, 1.0); return; }
+          float s = smoothstep(at - uLead, at, uQ), t = clamp((uQ - at) / uDur, 0.0, 1.0);
+          pos = aPivot.xyz + turn(rest - aPivot.xyz, aSpin.xyz, 0.06 * s + aSpin.w * pow(t, 1.6))
+              + vec3(aDrift.xy * t, -0.55 * s - aDrift.z * t * t);
+          vA = 1.0 - smoothstep(0.55, 0.95, t);
+          vDark = mix(1.0, 0.22, smoothstep(0.2, 0.95, t));
+        }
+        vec3 p = place(pos);
+        gl_Position = vec4(p.x / uCanvas.x * 2.0 - 1.0, 1.0 - p.y / uCanvas.y * 2.0, 2.0 * p.z - 1.0, 1.0);
+        int flags = int(aColor.a * 255.0 + 0.5);
+        float k = aFace < 0.5 ? 1.12 : aFace < 1.5 ? 0.86 : aFace < 2.5 ? 0.64 : aFace < 3.5 ? 0.42 : aFace < 4.5 ? 0.72 : 0.56;
+        if ((flags & 2) != 0) k = 1.0; else if ((flags & 1) != 0) k = max(k, 1.0);
+        vFlat = min(aColor.rgb * k, vec3(1.0)); vUV = aUV; vFace = aFace;
+      }`;
+    const FS_CUBE = `#version 300 es
+      precision highp float;
+      uniform sampler2D uPic, uId; uniform ivec2 uPad, uPicSize; uniform float uTol;
+      in vec3 vFlat; in vec2 vUV; in vec2 vRest; in float vRestZ; in float vA; in float vDark; flat in float vFace; flat in float vCode;
+      out vec4 o;
+      void main() {
+        if (vA <= 0.003) discard;
+        vec2 w = fwidth(vUV) * 1.1;
+        vec3 c = vFlat * ((vUV.x < w.x || vUV.y < w.y || vUV.x > 1.0 - w.x || vUV.y > 1.0 - w.y) ? 0.8 : 1.0);
+        if (vFace < 2.5) {
+          ivec2 p = ivec2(floor(vRest)) - uPad;
+          if (p.x >= 0 && p.y >= 0 && p.x < uPicSize.x && p.y < uPicSize.y) {
+            vec4 id = texelFetch(uId, p, 0), pic = texelFetch(uPic, p, 0);
+            float z = (floor(id.b * 255.0 + 0.5) * 256.0 + floor(id.a * 255.0 + 0.5)) / 65535.0;
+            if (pic.a > 0.5 && abs(z - vRestZ) < uTol) c = pic.rgb;
+          }
+        }
+        c *= vDark;
+        o = vec4(c * vA, vA);
+      }`;
+    const FS_ID = `#version 300 es
+      precision highp float;
+      flat in float vCode; out vec4 o;
+      void main() {
+        float z = floor(gl_FragCoord.z * 65535.0 + 0.5);
+        o = vec4(floor(vCode / 256.0), mod(vCode, 256.0), floor(z / 256.0), mod(z, 256.0)) / 255.0;
+      }`;
+    // the picture itself, less every chunk that has broken away, at the depth it was drawn at
+    const VS_PIC = `#version 300 es
+      void main() { gl_Position = vec4(gl_VertexID == 1 ? 3.0 : -1.0, gl_VertexID == 2 ? 3.0 : -1.0, 0.0, 1.0); }`;
+    const FS_PIC = `#version 300 es
+      precision highp float;
+      uniform sampler2D uPic, uId; uniform ivec2 uPad, uPicSize; uniform int uCh; uniform float uQ, uLead, uNone;
+      out vec4 o;
+      void main() {
+        ivec2 f = ivec2(gl_FragCoord.xy), p = ivec2(f.x - uPad.x, uCh - 1 - f.y - uPad.y);
+        if (p.x < 0 || p.y < 0 || p.x >= uPicSize.x || p.y >= uPicSize.y) discard;
+        vec4 pic = texelFetch(uPic, p, 0), id = texelFetch(uId, p, 0);
+        float code = floor(id.r * 255.0 + 0.5) * 256.0 + floor(id.g * 255.0 + 0.5), a = pic.a;
+        if (code > 65500.0) { a *= uNone; gl_FragDepth = 0.99999; }
+        else {
+          if (uQ >= code / 65000.0 - uLead) discard;
+          gl_FragDepth = (floor(id.b * 255.0 + 0.5) * 256.0 + floor(id.a * 255.0 + 0.5)) / 65535.0;
+        }
+        if (a < 0.004) discard;
+        o = vec4(pic.rgb * a, a);
+      }`;
+    // crumbs that trickle out of a chunk, and dust where it broke
+    const VS_DUST = `#version 300 es
+      layout(location=0) in vec4 aP; layout(location=1) in vec4 aV; layout(location=2) in vec4 aC; layout(location=3) in vec2 aZ;
+      uniform float uQ, uS; uniform vec2 uOrigin, uCanvas, uDepth;
+      out vec4 vC; flat out float vKind;
+      void main() {
+        float age = (uQ - aP.w) / aV.w;
+        vKind = aC.a > 0.5 ? 1.0 : 0.0;
+        if (age < 0.0 || age > 1.0) { gl_Position = vec4(2.0, 2.0, 2.0, 1.0); gl_PointSize = 1.0; vC = vec4(0.0); return; }
+        bool dust = vKind > 0.5;
+        vec3 pos = aP.xyz + aV.xyz * (dust ? 1.0 - (1.0 - age) * (1.0 - age) : age) - vec3(0.0, 0.0, aZ.y * age * age);
+        float sx = (pos.x - pos.y) * 4.0 * uS + uOrigin.x, sy = ((pos.x + pos.y) * 2.0 - pos.z * 4.0) * uS + uOrigin.y;
+        float d = clamp((pos.x + pos.y + pos.z - uDepth.x) / (uDepth.y - uDepth.x), 0.0, 1.0);
+        gl_Position = vec4(sx / uCanvas.x * 2.0 - 1.0, 1.0 - sy / uCanvas.y * 2.0, 1.0 - 2.0 * d, 1.0);
+        gl_PointSize = aZ.x * (dust ? 0.45 + 0.9 * age : 1.0);
+        float a = dust ? 0.2 * smoothstep(0.0, 0.18, age) * (1.0 - smoothstep(0.3, 1.0, age)) : 1.0 - smoothstep(0.45, 1.0, age);
+        vC = vec4(aC.rgb * (dust ? 1.0 - 0.4 * age : mix(1.0, 0.25, age)) * a, a);
+      }`;
+    const FS_DUST = `#version 300 es
+      precision highp float;
+      in vec4 vC; flat in float vKind; out vec4 o;
+      void main() {
+        float k = 1.0;
+        if (vKind > 0.5) { float d = length(gl_PointCoord - 0.5) * 2.0; k = d < 0.5 ? 1.0 : d < 0.8 ? 0.55 : d < 1.0 ? 0.25 : 0.0; }
+        if (k * vC.a <= 0.003) discard;
+        o = vC * k;
+      }`;
+    // six faces: top, +y, +x (the three the picture shows), then bottom, -y, -x
+    const FACES = [
+      [[0, 0, 1], [1, 0, 1], [1, 1, 1], [0, 1, 1]], [[0, 1, 1], [1, 1, 1], [1, 1, 0], [0, 1, 0]], [[1, 0, 1], [1, 1, 1], [1, 1, 0], [1, 0, 0]],
+      [[0, 0, 0], [1, 0, 0], [1, 1, 0], [0, 1, 0]], [[0, 0, 1], [1, 0, 1], [1, 0, 0], [0, 0, 0]], [[0, 0, 1], [0, 1, 1], [0, 1, 0], [0, 0, 0]],
+    ];
+    const UVS = [[0, 0], [1, 0], [1, 1], [0, 1]];
+    const corner: number[] = [], uvs: number[] = [], face: number[] = [];
+    FACES.forEach((f, fi) => [0, 1, 2, 0, 2, 3].forEach(k => { corner.push(...f[k]); uvs.push(...UVS[k]); face.push(fi); }));
+
+    /* How a floor breaks, worked out once per picture. Columns are a jittered
+       grid of seeds in the plane (each block goes to the nearest, measured
+       from its 2x2 cell so a big block stays whole), cut into bands of four
+       blocks deep: rubble, not a grid. */
+    type Prep = {
+      n: number; home: Float32Array; pivot: Float32Array; spin: Float32Array; drift: Float32Array; col: Uint8Array;
+      np: number; pp: Float32Array; pv: Float32Array; pc: Uint8Array; pz: Float32Array;
+      W: number; H: number; S: number; ox: number; oy: number; padL: number; padT: number; cw: number; ch: number; dmin: number; dmax: number;
+    };
+    const preps = new Map<HTMLElement, Prep>();
+    function prepFor(a: HTMLElement): Prep | null {
+      const have = preps.get(a);
+      if (have) return have;
+      const buf = cubeData.get(a);
+      if (!buf) return null;
+      const img = a.querySelector('img')!, W = Number(img.getAttribute('width')), H = Number(img.getAttribute('height'));
+      const S = Number(a.dataset.scale ?? 2), [ox, oy] = (a.dataset.origin ?? '0,0').split(',').map(Number);
+      const dv = new DataView(buf), n = dv.getUint32(0, true), raw = new Uint8Array(buf, 4 + n * 6, n * 4);
+      if (!n) return null;
+      const X = new Int16Array(n), Y = new Int16Array(n), Z = new Int16Array(n);
+      let cx = 0, cy = 0, zmin = Infinity, smin = Infinity, smax = -Infinity;
+      for (let i = 0; i < n; i++) {
+        X[i] = dv.getInt16(4 + i * 6, true); Y[i] = dv.getInt16(6 + i * 6, true); Z[i] = dv.getInt16(8 + i * 6, true);
+        cx += X[i] + 0.5; cy += Y[i] + 0.5; zmin = Math.min(zmin, Z[i]);
+        smin = Math.min(smin, X[i] + Y[i] + Z[i]); smax = Math.max(smax, X[i] + Y[i] + Z[i] + 3);
+      }
+      cx /= n; cy /= n;
+      let rmax = 1;
+      for (let i = 0; i < n; i++) rmax = Math.max(rmax, Math.hypot(X[i] + 0.5 - cx, Y[i] + 0.5 - cy));
+      const salt = idOf(a.closest('.level')!) * 7919;
+      const hash = (p: number, q: number, r: number) => {
+        let h = (Math.imul(p, 374761393) + Math.imul(q, 668265263) + Math.imul(r, 1274126177) + salt) | 0;
+        h = Math.imul(h ^ (h >>> 13), 1274126177); h ^= h >>> 16;
+        return (h >>> 0) / 4294967296;
+      };
+      const CS = 4;
+      const colOf = new Int32Array(n), colKey = new Map<number, number>(), colTop: number[] = [], colBand: number[] = [];
+      for (let i = 0; i < n; i++) {
+        const px = Math.floor(X[i] / 2) * 2 + 1, py = Math.floor(Y[i] / 2) * 2 + 1, gx = Math.floor(px / CS), gy = Math.floor(py / CS);
+        let best = 0, bd = Infinity;
+        for (let u = -1; u <= 1; u++) for (let w = -1; w <= 1; w++) {
+          const sx = (gx + u) * CS + CS / 2 + (hash(gx + u, gy + w, 1) - 0.5) * CS * 0.9, sy = (gy + w) * CS + CS / 2 + (hash(gx + u, gy + w, 2) - 0.5) * CS * 0.9;
+          const d = (sx - px) ** 2 + (sy - py) ** 2;
+          if (d < bd) { bd = d; best = (gx + u + 4096) * 8192 + (gy + w + 4096); }
+        }
+        let c = colKey.get(best);
+        if (c === undefined) { c = colTop.length; colKey.set(best, c); colTop.push(-Infinity); colBand.push(hash(best, 0, 3) < 0.5 ? 0 : 2); }
+        colOf[i] = c; colTop[c] = Math.max(colTop[c], Z[i] + 1);
+      }
+      // chunks: a column cut into bands, its parts together
+      const chunkOf = new Int32Array(n), chunkKey = new Map<number, number>();
+      const sum: number[][] = [], top: number[] = [], cols: number[] = [];
+      for (let i = 0; i < n; i++) {
+        const c = colOf[i], band = Math.floor((Math.floor(Z[i] / 2) * 2 + colBand[c]) / 4), key = c * 4096 + band;
+        let k = chunkKey.get(key);
+        if (k === undefined) { k = sum.length; chunkKey.set(key, k); sum.push([0, 0, 0, 0, 0, 0, 0]); top.push(-Infinity); cols.push(c); }
+        chunkOf[i] = k;
+        const s = sum[k]; s[0] += X[i] + 0.5; s[1] += Y[i] + 0.5; s[2] += Z[i] + 0.5; s[3]++; s[4] += raw[i * 4]; s[5] += raw[i * 4 + 1]; s[6] += raw[i * 4 + 2];
+        top[k] = Math.max(top[k], Z[i] + 1);
+      }
+      const G0 = 1.3 * H / (4 * S), K = sum.length;
+      const cP = new Float32Array(K * 4), cS = new Float32Array(K * 4), cD = new Float32Array(K * 4);
+      const pp: number[] = [], pv: number[] = [], pc: number[] = [], pz: number[] = [];
+      let gmax = 0;
+      for (let k = 0; k < K; k++) {
+        const s = sum[k], m = s[3], px = s[0] / m, py = s[1] / m, pz0 = s[2] / m;
+        let dx = px - cx, dy = py - cy;
+        const len = Math.hypot(dx, dy);
+        if (len < 0.01) { const ang = hash(k, 7, 7) * Math.PI * 2; dx = Math.cos(ang); dy = Math.sin(ang); } else { dx /= len; dy /= len; }
+        const rr = Math.min(1, len / rmax), under = clamp01((colTop[cols[k]] - top[k]) / 10);
+        const hc = hash(cols[k], 11, 5), hk = hash(k, 13, 9);
+        // the rim and the underside give first, the middle of the surface last
+        // (nothing cracks until the picture has handed over to the canvas, at HAND)
+        const at = Math.min(0.56, Math.max(LEAD + HAND, 0.11 + 0.44 * (0.62 * (1 - rr) + 0.22 * hc + 0.16 * hk) - 0.14 * under));
+        const code = Math.round(at * 65000);
+        cP.set([px, py, pz0, code], k * 4);
+        // tipping over its outer edge, more at the rim
+        let ax = -dy + (hash(k, 1, 1) - 0.5) * 0.6, ay = dx + (hash(k, 2, 2) - 0.5) * 0.6, az = (hash(k, 3, 3) - 0.5) * 0.5;
+        const al = Math.hypot(ax, ay, az) || 1; ax /= al; ay /= al; az /= al;
+        cS.set([ax, ay, az, 0.15 + 0.6 * rr + 0.3 * hash(k, 4, 4)], k * 4);
+        const out = rr * 3.2 - 0.8, G = G0 * (0.85 + 0.3 * hash(k, 5, 5));
+        gmax = Math.max(gmax, G);
+        cD.set([dx * out + (hash(k, 6, 6) - 0.5) * 1.2, dy * out + (hash(k, 8, 8) - 0.5) * 1.2, G, hk], k * 4);
+        if (m < 2) continue;
+        const r = s[4] / m, g = s[5] / m, b = s[6] / m, bottom = top[k] - 4;
+        // crumbs: a couple from every chunk, more from the rim, falling a little faster than it
+        for (let c = 0, nc = rr > 0.6 ? 3 : 2; c < nc; c++) {
+          const h1 = hash(k, c, 21), h2 = hash(k, c, 22), h3 = hash(k, c, 23), life = 0.22 + 0.12 * h3;
+          pp.push(px + (h1 - 0.5) * 3, py + (h2 - 0.5) * 3, Math.max(zmin, bottom + h3 * 2), code / 65000 - LEAD * 0.6 + h1 * 0.05);
+          pv.push(dx * (0.5 + h2) + (h3 - 0.5), dy * (0.5 + h1) + (h2 - 0.5), 0, life);
+          pc.push(r * 0.8, g * 0.8, b * 0.8, 0);
+          pz.push((2.5 + 2.5 * h2) * S / 2 * 1.4, G * (life / DUR) ** 2 * 1.25);
+        }
+        // dust where it broke away: the rim, and under the surface
+        if ((rr > 0.45 || under > 0.3) && hash(k, 9, 31) < 0.7) {
+          const h1 = hash(k, 1, 32), h2 = hash(k, 2, 33), life = 0.32 + 0.15 * h1;
+          pp.push(px, py, Math.max(zmin, bottom), code / 65000 - LEAD * 0.3);
+          pv.push(dx * (1.5 + 2 * h1) + (h2 - 0.5) * 1.5, dy * (1.5 + 2 * h2) + (h1 - 0.5) * 1.5, 1.2 + h2, life);
+          pc.push(r * 0.35 + 140 * 0.65, g * 0.35 + 132 * 0.65, b * 0.35 + 122 * 0.65, 255);
+          pz.push((10 + 16 * h2) * S / 2 * 1.4, 0);
+        }
+      }
+      // far blocks first, so a fading one in front blends over what is behind it
+      const order = [...Array(n).keys()].sort((i, j) => X[i] + Y[i] + Z[i] - (X[j] + Y[j] + Z[j]));
+      const home = new Float32Array(n * 3), pivot = new Float32Array(n * 4), spin = new Float32Array(n * 4), drift = new Float32Array(n * 4), col = new Uint8Array(n * 4);
+      order.forEach((i, o) => {
+        const k = chunkOf[i];
+        home.set([X[i], Y[i], Z[i]], o * 3);
+        pivot.set(cP.subarray(k * 4, k * 4 + 4), o * 4); spin.set(cS.subarray(k * 4, k * 4 + 4), o * 4); drift.set(cD.subarray(k * 4, k * 4 + 4), o * 4);
+        col.set(raw.subarray(i * 4, i * 4 + 4), o * 4);
+      });
+      // room round the picture for the fall: a little to the sides, most of it below
+      const padL = Math.round(W * 0.14), padT = Math.round(H * 0.06), padB = Math.round(0.92 * gmax * 4 * S) + 24;
+      const prep: Prep = {
+        n, home, pivot, spin, drift, col, np: pp.length / 4, pp: new Float32Array(pp), pv: new Float32Array(pv), pc: new Uint8Array(pc), pz: new Float32Array(pz),
+        W, H, S, ox, oy, padL, padT, cw: W + padL * 2, ch: padT + H + padB, dmin: smin - gmax - 10, dmax: smax + 10,
+      };
+      preps.set(a, prep);
+      return prep;
+    }
+
+    type Rig = { cv: HTMLCanvasElement; gl: WebGL2RenderingContext; n: number; np: number; cw: number; ch: number; q: number; dead: boolean;
+                 pic: WebGLProgram; cube: WebGLProgram; dust: WebGLProgram; vPic: WebGLVertexArrayObject; vCube: WebGLVertexArrayObject; vDust: WebGLVertexArrayObject;
+                 uq: { pic: WebGLUniformLocation | null; none: WebGLUniformLocation | null; cube: WebGLUniformLocation | null; dust: WebGLUniformLocation | null } };
+    const rigs = new Map<HTMLElement, Rig>();
+    /* Built a slice at a time in idle moments (a generator, resumed by the
+       idle pump below), so no step costs a frame of scrolling or animation. */
+    function* buildRig(a: HTMLElement): Generator<void, Rig | null> {
+      const img = a.querySelector('img');
+      if (!preps.has(a)) { prepFor(a); yield; }
+      const P = prepFor(a);
+      if (!P || !img || !img.complete || !img.naturalWidth) return null;
+      const { W, H, S, cw, ch, n } = P;
+      const cv = document.createElement('canvas');
+      cv.width = cw; cv.height = ch; cv.className = 'collapse-gl'; cv.setAttribute('aria-hidden', 'true');
+      Object.assign(cv.style, { left: `${(-P.padL / W) * 100}%`, top: `${(-P.padT / H) * 100}%`, width: `${(cw / W) * 100}%`, height: `${(ch / H) * 100}%`, visibility: 'hidden' });
+      const gl = cv.getContext('webgl2', { antialias: false, premultipliedAlpha: true, alpha: true, depth: true });
+      if (!gl) return null;
+      const sh = (type: number, src: string) => { const o = gl.createShader(type)!; gl.shaderSource(o, src); gl.compileShader(o); return o; };
+      const program = (vs: string, fs: string) => {
+        const p = gl.createProgram()!;
+        gl.attachShader(p, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(p, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(p);
+        return p;
+      };
+      const progs = [program(VS_CUBE, FS_CUBE), program(VS_CUBE, FS_ID), program(VS_PIC, FS_PIC), program(VS_DUST, FS_DUST)];
+      // compiled in the background where the browser can, asked about only once done
+      const par = gl.getExtension('KHR_parallel_shader_compile');
+      yield;
+      while (par && !progs.every(p => gl.getProgramParameter(p, par.COMPLETION_STATUS_KHR))) yield;
+      if (!progs.every(p => gl.getProgramParameter(p, gl.LINK_STATUS))) { gl.getExtension('WEBGL_lose_context')?.loseContext(); return null; }
+      const [cube, ids, pic, dust] = progs;
+      const attr = (loc: number, data: ArrayBufferView, size: number, type: number, norm: boolean, div: number) => {
+        gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+        gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, size, type, norm, 0, 0); gl.vertexAttribDivisor(loc, div);
+      };
+      const vCube = gl.createVertexArray()!;
+      gl.bindVertexArray(vCube);
+      attr(0, new Float32Array(corner), 3, gl.FLOAT, false, 0); attr(1, new Float32Array(uvs), 2, gl.FLOAT, false, 0); attr(2, new Float32Array(face), 1, gl.FLOAT, false, 0);
+      attr(3, P.home, 3, gl.FLOAT, false, 1); attr(4, P.pivot, 4, gl.FLOAT, false, 1); attr(5, P.spin, 4, gl.FLOAT, false, 1);
+      attr(6, P.drift, 4, gl.FLOAT, false, 1); attr(7, P.col, 4, gl.UNSIGNED_BYTE, true, 1);
+      const vDust = gl.createVertexArray()!;
+      gl.bindVertexArray(vDust);
+      attr(0, P.pp, 4, gl.FLOAT, false, 0); attr(1, P.pv, 4, gl.FLOAT, false, 0); attr(2, P.pc, 4, gl.UNSIGNED_BYTE, true, 0); attr(3, P.pz, 2, gl.FLOAT, false, 0);
+      const vPic = gl.createVertexArray()!;
+      const u = (p: WebGLProgram, k: string) => gl.getUniformLocation(p, k);
+      const shared = (p: WebGLProgram, origin: [number, number], size: [number, number]) => {
+        gl.useProgram(p);
+        gl.uniform1f(u(p, 'uS'), S); gl.uniform2f(u(p, 'uOrigin'), ...origin); gl.uniform2f(u(p, 'uCanvas'), ...size); gl.uniform2f(u(p, 'uDepth'), P.dmin, P.dmax);
+        gl.uniform1f(u(p, 'uLead'), LEAD); gl.uniform1f(u(p, 'uDur'), DUR);
+      };
+      const tex = (unit: number, fill: () => void) => {
+        const t = gl.createTexture(); gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, t);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        fill();
+      };
+      // the picture, exactly as the page shows it
+      gl.pixelStorei(gl.UNPACK_COLORSPACE_CONVERSION_WEBGL, gl.NONE);
+      tex(0, () => gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img));
+      yield;
+      // which chunk owns each pixel, and how deep it sits: every block drawn once at rest
+      shared(ids, [P.ox, P.oy], [W, H]);
+      gl.uniform1f(u(ids, 'uRest'), 1);
+      const fb = gl.createFramebuffer(), ct = gl.createTexture(), rb = gl.createRenderbuffer();
+      gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, ct); gl.texStorage2D(gl.TEXTURE_2D, 1, gl.RGBA8, W, H);
+      gl.bindRenderbuffer(gl.RENDERBUFFER, rb); gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT24, W, H);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, ct, 0);
+      gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, rb);
+      gl.viewport(0, 0, W, H); gl.clearColor(1, 1, 1, 1); gl.clearDepth(1); gl.enable(gl.DEPTH_TEST); gl.depthFunc(gl.LESS); gl.disable(gl.BLEND);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      gl.bindVertexArray(vCube); gl.drawArraysInstanced(gl.TRIANGLES, 0, 36, n);
+      const px = new Uint8Array(W * H * 4);
+      gl.readPixels(0, 0, W, H, gl.RGBA, gl.UNSIGNED_BYTE, px);
+      yield;
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null); gl.deleteFramebuffer(fb); gl.deleteTexture(ct); gl.deleteRenderbuffer(rb);
+      gl.deleteProgram(ids);
+      // the outline, a flame, a banner's edge: each pixel next to a block goes with it
+      const N = W * H, code = new Uint16Array(N).fill(65535), dep = new Uint16Array(N).fill(65535), dist = new Uint8Array(N).fill(255), queue = new Int32Array(N);
+      let qh = 0, qt = 0;
+      for (let r = 0; r < H; r++) for (let x = 0; x < W; x++) {
+        const s = (r * W + x) * 4, c = (px[s] << 8) | px[s + 1];
+        if (c === 65535) continue;
+        const t = (H - 1 - r) * W + x;
+        code[t] = c; dep[t] = (px[s + 2] << 8) | px[s + 3]; dist[t] = 0; queue[qt++] = t;
+      }
+      while (qh < qt) {
+        const t = queue[qh++], d = dist[t];
+        if (d >= 8) continue;
+        const x = t % W, y = (t - x) / W;
+        for (let j = -1; j <= 1; j++) for (let i = -1; i <= 1; i++) {
+          const nx = x + i, ny = y + j;
+          if (nx < 0 || ny < 0 || nx >= W || ny >= H) continue;
+          const nt = ny * W + nx;
+          if (dist[nt] !== 255) continue;
+          dist[nt] = d + 1; code[nt] = code[t]; dep[nt] = dep[t]; queue[qt++] = nt;
+        }
+      }
+      yield;
+      const idm = new Uint8Array(N * 4);
+      for (let t = 0; t < N; t++) { idm[t * 4] = code[t] >> 8; idm[t * 4 + 1] = code[t] & 255; idm[t * 4 + 2] = dep[t] >> 8; idm[t * 4 + 3] = dep[t] & 255; }
+      tex(1, () => gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA8, W, H, 0, gl.RGBA, gl.UNSIGNED_BYTE, idm));
+      // the three passes a frame draws
+      const pad: [number, number] = [P.ox + P.padL, P.oy + P.padT];
+      gl.useProgram(pic);
+      gl.uniform1i(u(pic, 'uPic'), 0); gl.uniform1i(u(pic, 'uId'), 1); gl.uniform2i(u(pic, 'uPad'), P.padL, P.padT); gl.uniform2i(u(pic, 'uPicSize'), W, H);
+      gl.uniform1i(u(pic, 'uCh'), ch); gl.uniform1f(u(pic, 'uLead'), LEAD);
+      shared(cube, pad, [cw, ch]);
+      gl.uniform1f(u(cube, 'uRest'), 0); gl.uniform1i(u(cube, 'uPic'), 0); gl.uniform1i(u(cube, 'uId'), 1);
+      gl.uniform2i(u(cube, 'uPad'), P.padL, P.padT); gl.uniform2i(u(cube, 'uPicSize'), W, H); gl.uniform1f(u(cube, 'uTol'), 0.6 / (P.dmax - P.dmin));
+      shared(dust, pad, [cw, ch]);
+      gl.clearColor(0, 0, 0, 0); gl.viewport(0, 0, cw, ch); gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+      a.prepend(cv);
+      const rig: Rig = { cv, gl, n, np: P.np, cw, ch, q: -1, dead: false, pic, cube, dust, vPic, vCube, vDust,
+                         uq: { pic: u(pic, 'uQ'), none: u(pic, 'uNone'), cube: u(cube, 'uQ'), dust: u(dust, 'uQ') } };
+      cv.addEventListener('webglcontextlost', () => { rig.dead = true; });
+      return rig;
+    }
+    function drawRig(r: Rig, q: number) {
+      const gl = r.gl;
+      gl.depthMask(true);                      // or the depth clear is masked by the last frame's dust pass
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      gl.depthFunc(gl.ALWAYS);
+      gl.useProgram(r.pic); gl.uniform1f(r.uq.pic, q); gl.uniform1f(r.uq.none, 1 - smooth(0.12, 0.5, q));
+      gl.bindVertexArray(r.vPic); gl.drawArrays(gl.TRIANGLES, 0, 3);
+      gl.depthFunc(gl.LESS);
+      gl.useProgram(r.cube); gl.uniform1f(r.uq.cube, q);
+      gl.bindVertexArray(r.vCube); gl.drawArraysInstanced(gl.TRIANGLES, 0, 36, r.n);
+      gl.depthMask(false);
+      gl.useProgram(r.dust); gl.uniform1f(r.uq.dust, q);
+      gl.bindVertexArray(r.vDust); gl.drawArrays(gl.POINTS, 0, r.np);
+      r.q = q;
+    }
+    function dropRig(a: HTMLElement) {
+      const r = rigs.get(a);
+      if (!r) return;
+      r.gl.getExtension('WEBGL_lose_context')?.loseContext();
+      r.cv.remove(); rigs.delete(a);
+    }
+    /* A rig is built in idle time while its floor is still whole, so breaking
+       never waits on it, and kept while the floor is near either way. */
+    const pending = new Set<HTMLElement>(), wanted = new Set<HTMLElement>(), kept = new Set<HTMLElement>();
+    const jobs: { a: HTMLElement; it: Generator<void, Rig | null> }[] = [];
+    let pumping = false, cardMoving = 0, cardStill = 0;
+    // never while a card is open or has just moved: its animation has the frames
+    const quiet = () => open == null && !cardMoving && performance.now() - cardStill > 400;
+    function pump(deadline?: IdleDeadline) {
+      pumping = false;
+      // a page that never idles still gets one slice a second
+      let slices = deadline?.didTimeout ? 1 : Infinity;
+      while (jobs.length && quiet() && slices-- > 0 && (!deadline || deadline.didTimeout || deadline.timeRemaining() > 6)) {
+        const job = jobs[0], r = job.it.next();
+        if (r.done) { jobs.shift(); pending.delete(job.a); if (r.value) rigs.set(job.a, r.value); onScroll(); }
+        if (!deadline) break;
+      }
+      if (jobs.length) later();
+    }
+    function later() {
+      if (pumping) return;
+      pumping = true;
+      if ('requestIdleCallback' in window) requestIdleCallback(pump, { timeout: 1000 }); else setTimeout(pump, 60);
+    }
+    function want(a: HTMLElement) {
+      if (rigs.has(a) || pending.has(a)) return;
+      if (!cubeData.get(a)) { fetchCubes(a); return; }
+      const img = a.querySelector('img');
+      if (!img) return;
+      if (!img.complete || !img.naturalWidth) { img.addEventListener('load', onScroll, { once: true }); return; }
+      pending.add(a);
+      jobs.push({ a, it: buildRig(a) });
+      later();
+    }
+    const vises = levels.map(lv => lv.querySelector<HTMLElement>('.art')!);
+    const modes = new Map<HTMLElement, 'rig' | 'drop'>();
+    function settle(lv: HTMLElement, vis: HTMLElement, state: string) {
+      modes.delete(lv);
+      const r = rigs.get(vis);
+      if (r) { r.cv.style.visibility = 'hidden'; r.q = -1; }
+      vis.style.transform = '';
+      vis.style.opacity = state === 'gone' ? '0' : '';
+      const img = vis.querySelector<HTMLImageElement>('.isle-img');
+      if (img) img.style.opacity = '';
+    }
+    function collapse(focusDoc: number) {
+      wanted.clear(); kept.clear();
+      levels.forEach((lv, i) => {
+        const vis = vises[i], isArt = vis.classList.contains('art'), last = !levels[i + 1];
+        const u = last ? -1 : between(i, focusDoc);
+        // ready before it is needed: from the floor on the focus line to the one just left
+        if (isArt && webgl && !last) { if (u >= -0.35 && u <= 1.7) wanted.add(vis); if (u >= -0.55 && u <= 1.9) kept.add(vis); }
+        // a floor gives way once the view is well on its way to the next; the last never goes
+        const q = motion && !last ? clamp01((u - 0.42) / 0.55) : 0;
+        const state = q <= 0 ? 'whole' : q >= 1 ? 'gone' : 'collapsing';
+        if (lv.dataset.state !== state) { lv.dataset.state = state; if (state !== 'collapsing') settle(lv, vis, state); }
+        if (state !== 'collapsing') return;
+        let m = modes.get(lv), rig = isArt ? rigs.get(vis) : undefined;
+        if (!m) {
+          // decided once as it starts to go, so it never switches halfway
+          m = rig && !rig.dead ? 'rig' : 'drop';
+          modes.set(lv, m);
+          vis.style.transform = ''; vis.style.opacity = '';
+        }
+        if (m === 'rig' && rig && !rig.dead) {
+          if (Math.abs(rig.q - q) > 0.0003) drawRig(rig, q);
+          rig.cv.style.visibility = 'visible';
+          rig.cv.style.opacity = String(1 - smooth(0.9, 1, q));
+          vis.querySelector<HTMLImageElement>('.isle-img')!.style.opacity = String(1 - smooth(0, HAND, q));
+          return;
+        }
+        // no cubes to throw (no WebGL, or the blocks not here yet): it sinks and fades whole
+        if (m === 'rig') { modes.set(lv, 'drop'); const img = vis.querySelector<HTMLImageElement>('.isle-img'); if (img) img.style.opacity = ''; }
+        vis.style.transform = `translate(0px, ${(q * q * 90).toFixed(1)}px) scale(${(1 - 0.08 * q).toFixed(3)})`;
+        vis.style.opacity = String(1 - smooth(0.1, 0.95, q));
+      });
+      for (const a of wanted) want(a);
+      for (const a of [...rigs.keys()]) {
+        const lv = a.closest<HTMLElement>('.level')!;
+        if (!kept.has(a) && modes.get(lv) !== 'rig') dropRig(a);
+      }
+    }
+
+    /* ---- parallax: the three depths of debris scroll at their own speeds ---- */
+    const fields = [...world.querySelectorAll<HTMLElement>('.field')];
+    function parallax() {
+      if (!motion) return;
+      const p = innerHeight / 2 - (worldMid - scrollY);
+      for (const f of fields) f.style.transform = `translate3d(0, ${(p * (1 - Number(f.dataset.depth))).toFixed(1)}px, 0)`;
+    }
+
+    /* ---- the box, the rail and the floor in view ---- */
+    let inView = Number(levels.find(l => l.classList.contains('in-view'))?.dataset.id ?? 0);
+    let open: number | null = crawl.classList.contains('is-detail') ? Number(new URL(location.href).searchParams.get('floor')) || null : null;
+    const tickOf = (id: number) => rail?.querySelector<HTMLElement>(`[data-goto="${id}"]`);
+    function floorInView(focusDoc: number) {
+      if (levels[0] && dOf(idOf(levels[0]), focusDoc) > 120) return 0;      // still above the first floor
+      let best = 0, d = Infinity;
+      for (const lv of levels) { const e = Math.abs(dOf(idOf(lv), focusDoc)); if (e < d) { d = e; best = idOf(lv); } }
+      return best;
+    }
+    function setInView(id: number) {
+      if (id === inView) return;
+      levelOf(inView)?.classList.remove('in-view'); tickOf(inView)?.classList.remove('in-view');
+      levelOf(id)?.classList.add('in-view'); tickOf(id)?.classList.add('in-view');
+      inView = id;
+    }
+    function showCard(id: number) {
+      if (id === shown || !cards.has(id)) return;
+      cards.get(shown)?.classList.remove('is-shown');
+      cards.get(id)!.classList.add('is-shown');
+      shown = id;
+      sizeBox(id);
+      try { sessionStorage.setItem('dcc-descent', String(id)); } catch { /* a convenience */ }
+    }
+    function follow(focusDoc: number) {
+      if (open != null) return;
+      const id = floorInView(focusDoc);
+      setInView(id);
+      showCard(pickable.length ? id : 0);    // with nothing read, every floor is sealed: the welcome stays
+    }
+
+    /* ---- one frame: everything that follows the scroll ---- */
+    let queued = false;
+    function frame() {
+      queued = false;
+      const f = focusNow(), focusDoc = scrollY + f;
+      root.style.setProperty('--focus-y', `${Math.round(f)}px`);
+      const boxBottom = placeBox(scrollY);
+      root.style.setProperty('--focus-in', `${Math.round(f - Math.max(narrow.matches ? boxBottom : gateTop(), descentTop - scrollY))}px`);
+      // the pin is off while a step runs (the floors move as one) and eases back in when it is done or cut short
+      const now = performance.now(), goal = (mv && !mv.pin) || dragging ? 0 : 1;
+      if (pinW !== goal) { const k = 1 - Math.exp(-Math.min(32, now - pinT) / 90); pinW = Math.abs(goal - pinW) < 0.01 ? goal : pinW + (goal - pinW) * k; }
+      pinT = now;
+      // past the last floor there is nothing to hold it for: it scrolls away to the bottom
+      const offs = levels.map((lv, i) => { const d = dOf(idOf(lv), focusDoc); return i === levels.length - 1 && d < 0 ? 0 : pinW * holdOffset(d); });
+      if (motion) levels.forEach((lv, i) => { lv.style.transform = `translate3d(0, ${offs[i].toFixed(1)}px, 0)`; });
+      parallax(); stairs(focusDoc, offs); collapse(focusDoc); follow(focusDoc); placePin();
+      if ((pinW !== goal || hT0 >= 0) && !mv) onScroll();
+    }
+    // while a step runs its own loop draws every frame
+    const onScroll = () => { if (!queued && !mv) { queued = true; requestAnimationFrame(frame); } };
+    addEventListener('scroll', onScroll, { passive: true });
+    const relayout = () => { measure(); lead(); drawStairs(); onScroll(); };
+    addEventListener('resize', relayout);
+    new ResizeObserver(relayout).observe(dungeon);
+    document.fonts?.ready.then(relayout);
+
+    /* Put a floor on the focus line (where the box is pinned). */
+    // a floor on the line: with its own card in the box, and the title full size only over home
+    // (the first floor's place is the very top, where the lead puts it on the line)
+    const restOn = (id: number) => { if (!id || !centres.has(id) || id === idOf(levels[0])) return 0; const k = id === homeId ? kBig : K_SMALL(); return Math.max(0, centres.get(id)! - focusFor(k, roomFor(k, boxHeightFor(cardFor(id))))); };
+    const maxY = () => root.scrollHeight - innerHeight;
+    /* The stops the view steps between: each floor on the focus line (the
+       first at the very top, where it is on the line too, under the title) and
+       the bottom of the page, past the last. */
+    function stops() {
+      const out = levels.map((lv, i) => (i === 0 ? 0 : restOn(idOf(lv))));
+      if (maxY() > out[out.length - 1] + 40) out.push(maxY());
+      return out;
+    }
+    function centre(id: number, smooth = false) {
+      const i = levels.findIndex(l => idOf(l) === id), to = i >= 0 ? stops()[i] : restOn(id);
+      if (smooth) travel(to); else { stop(); scrollTo({ top: to, behavior: 'instant' }); }
+    }
+
+    /* ---- one mover for every step ----
+       A cubic Hermite from where the view is, at the speed it already has, to
+       the stop, arriving at rest. A fresh step leaves at once and settles (an
+       ease-out that never overshoots); a step asked for while one is under way
+       carries its speed into the next, so a held key or a wheel rolled on walks
+       floor after floor without a hitch. The pin is off while a step runs: the
+       floors move as one and the curve is the snap. Ridden through the pin, a
+       step held the floor for its first notch and then flung it off at more than
+       twice the page's speed. A pointer or a finger on the page, or the page
+       moved by anything else, stops it where it is. */
+    type Move = { x0: number; dist: number; v0: number; t0: number; dur: number; to: number; pin: boolean };
+    let mv: Move | null = null, lastSet = -1, pinW = 1, pinT = 0, looping = false, dragging = false;
+    const along = (m: Move, now: number) => {
+      const t = Math.min(1, Math.max(0, (now - m.t0) / m.dur)), h = m.v0 * m.dur;
+      return { t, x: m.x0 + m.dist * (3 * t * t - 2 * t * t * t) + h * (t * t * t - 2 * t * t + t), v: (m.dist * (6 * t - 6 * t * t) + h * (3 * t * t - 4 * t + 1)) / m.dur };
+    };
+    function travel(to: number, o: { pin?: boolean; dur?: number; v?: number } = {}) {
+      to = Math.max(0, Math.min(maxY(), to));
+      if (!motion) { stop(); scrollTo({ top: to, behavior: 'instant' }); onScroll(); return; }
+      const now = performance.now(), cur = mv ? along(mv, now) : { x: scrollY, v: 0, t: 1 };
+      const dist = to - cur.x;
+      if (!mv && Math.abs(dist) < 1) return;
+      const dur = o.dur ?? Math.min(950, Math.max(460, 360 + Math.abs(dist) * 0.32));
+      // a swipe let go hands on the finger's own speed; one let go at rest leaves gently
+      let v0 = mv ? cur.v : o.v != null ? (Math.abs(o.v) < 0.1 ? 1.4 * dist / dur : o.v) : 2.6 * dist / dur;
+      if (o.v != null && Math.sign(v0) !== Math.sign(dist)) v0 = 0;
+      // leaving faster than three times its average speed, a curve would overshoot the stop
+      if (Math.sign(v0) === Math.sign(dist) && Math.abs(v0) > 3 * Math.abs(dist) / dur) v0 = 3 * dist / dur;
+      const pin = o.pin ?? false;
+      // from rest no floor is held, so the pin can go at once; from a floor half released it eases out
+      if (!pin && !mv && levels.every(lv => Math.abs(holdOffset(dOf(idOf(lv), scrollY + focusNow()))) < 0.5)) pinW = 0;
+      mv = { x0: cur.x, dist, v0, t0: now, dur, to, pin };
+      if (!looping) { looping = true; requestAnimationFrame(tick); }
+    }
+    function tick(now: number) {
+      if (!mv) { looping = false; return; }
+      // the page was moved by something else (the scrollbar, find in page): give way to it
+      if (lastSet >= 0 && Math.abs(scrollY - lastSet) > 3) { looping = false; stop(); return; }
+      const s = along(mv, now), done = s.t >= 1;
+      scrollTo({ top: done ? mv.to : s.x, behavior: 'instant' });
+      lastSet = scrollY;
+      if (done) { mv = null; lastSet = -1; }
+      frame();
+      if (mv) requestAnimationFrame(tick); else { looping = false; if (pinW !== 1 || hT0 >= 0) onScroll(); }
+    }
+    function stop() { if (!mv) return; mv = null; lastSet = -1; onScroll(); }
+    /* One stop on from where the view is, or from where it is already heading. */
+    function stepBy(dir: number) {
+      const s = stops(), y = mv ? mv.to : scrollY;
+      let i = -1;
+      if (dir > 0) i = s.findIndex(v => v > y + 2);
+      else for (let k = s.length - 1; k >= 0; k--) if (s[k] < y - 2) { i = k; break; }
+      if (i < 0) return -1;
+      travel(s[i]);
+      return i;
+    }
+
+    /* ---- coming to rest on a floor ----
+       Scrolled freely (a finger, the scrollbar), the view always comes to rest
+       on a floor, never between two: when the reader stops, it glides on to the
+       next floor in the direction they were going if the one they left has
+       started to move (they scrolled past its pin), and otherwise back onto the
+       one they are on, which inside its pin never moved on screen, so that
+       correction is invisible. Never while a finger or a button is down, a card
+       is open, or the reader is at the very bottom, which is a place too. The
+       wheel and the keys never get here: they step. */
+    let heading = 0, lastY = scrollY, holding = false, restTimer = 0;
+    function comeToRest() {
+      if (!motion || mv || holding || !heading || open != null || cardMoving || crawl!.classList.contains('is-detail')) return;
+      if (scrollY + innerHeight >= root.scrollHeight - 4) return;
+      const s = stops(), y = scrollY, first = levels[0] ? restOn(idOf(levels[0])) : 0;
+      // where each stop is: the first is on the line all the way from the top to where the box pins
+      const lo = (k: number) => s[k], hi = (k: number) => (k === 0 ? Math.max(s[0], first) : s[k]);
+      const nearest = (k: number) => Math.min(hi(k), Math.max(lo(k), y));
+      if (s.some((_, k) => Math.abs(nearest(k) - y) < 1.5)) return;
+      // the stop just left, and the one ahead, in the direction the reader was going
+      let back = -1, ahead = -1;
+      for (let k = 0; k < s.length; k++) {
+        if (hi(k) < y) { if (heading > 0) back = k; else ahead = k; }
+        else if (lo(k) > y) { if (heading > 0) { if (ahead < 0) ahead = k; } else if (back < 0) back = k; }
+      }
+      const k = ahead >= 0 && (back < 0 || Math.abs(nearest(back) - y) > PIN()) ? ahead : back;
+      if (k < 0) return;
+      const to = nearest(k);
+      travel(to, { pin: true, dur: Math.min(520, 220 + Math.abs(to - y) * 0.6) });
+    }
+    addEventListener('scroll', () => {
+      if (mv) return;
+      const dy = scrollY - lastY;
+      if (Math.abs(dy) > 0.5) { heading = Math.sign(dy); lastY = scrollY; }
+      clearTimeout(restTimer); restTimer = window.setTimeout(comeToRest, 170);
+    }, { passive: true });
+    // a finger or a button on the page: whatever was moving stops where it is
+    for (const ev of ['touchstart', 'pointerdown']) addEventListener(ev, () => { holding = true; stop(); lastY = scrollY; }, { passive: true });
+    for (const ev of ['touchend', 'touchcancel', 'pointerup', 'pointercancel']) addEventListener(ev, () => {
+      holding = false; clearTimeout(restTimer); restTimer = window.setTimeout(comeToRest, 170);
+    }, { passive: true });
+
+    /* ---- the wheel steps the descent, a floor at a time ----
+       Scrolled freely, a mouse wheel fought the pin: a notch inside it moved
+       nothing, the next sent the floor off at twice the page's speed, and the
+       glide to rest started between notches only to be cut off by the next. So
+       the wheel does not scroll this page, it steps it: one turn of the wheel,
+       or one swipe on a trackpad, is one floor. A gesture is a run of events
+       without a pause; it steps as soon as it has moved far enough, and again
+       only if it keeps coming at full strength once that step is well under
+       way, which a wheel rolled on does and a trackpad's momentum, dying away,
+       does not. Turning back answers at once. Anything that scrolls by itself
+       (the box's text when it overflows) keeps its wheel, and so do zooming,
+       a sideways scroll and an open dialog. */
+    const scrollsItself = (el: Element | null, dir: number) => {
+      for (let n = el; n && n !== document.body && n !== root; n = n.parentElement) {
+        const cs = getComputedStyle(n);
+        if (!/(auto|scroll)/.test(cs.overflowY) || n.scrollHeight <= n.clientHeight + 1) continue;
+        if (cs.overscrollBehaviorY !== 'auto') return true;           // held in: the wheel is its own either way
+        if (dir > 0 ? n.scrollTop + n.clientHeight < n.scrollHeight - 1 : n.scrollTop > 0) return true;
+      }
+      return false;
+    };
+    let wAcc = 0, wLast = -1e9, wDir = 0, wPeak = 0, wPrev = 0, wSpent = false;
+    addEventListener('wheel', e => {
+      if (e.defaultPrevented || e.ctrlKey || e.metaKey || open != null || cardMoving || crawl!.classList.contains('is-detail')) return;
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY) || document.querySelector('dialog[open]')) return;
+      const dy = e.deltaMode === 1 ? e.deltaY * 40 : e.deltaMode === 2 ? e.deltaY * innerHeight : e.deltaY, dir = Math.sign(dy);
+      if (!dir || scrollsItself(e.target as Element, dir)) return;
+      e.preventDefault();
+      // the gap is read off the events' own times, so a busy frame that delivers a run of them at once is not a pause
+      const now = performance.now(), gap = e.timeStamp - wLast, mag = Math.abs(dy);
+      wLast = e.timeStamp;
+      // a new gesture: after a pause, turning back, or a fresh swipe rising out of the last one's momentum
+      if (gap > 180 || dir !== wDir || mag > wPrev * 1.5 + 4) { if (dir !== wDir) wAcc = 0; wDir = dir; wSpent = false; wPeak = 0; }
+      wPrev = mag; wPeak = Math.max(wPeak, mag);
+      wAcc = wAcc * Math.exp(-Math.min(gap, 2000) / 320) + dy;
+      if (Math.abs(wAcc) < 30) return;
+      const t = mv && Math.sign(mv.dist) === dir ? along(mv, now).t : 1;
+      if (!wSpent) { if (t < 0.35) return; stepBy(dir); wSpent = true; wAcc = 0; return; }
+      // the same gesture still coming: a wheel rolled on walks on; momentum dying away does not
+      if (t < 0.6 || mag < wPeak * 0.8) return;
+      stepBy(dir); wAcc = 0;
+    }, { passive: false });
+
+    /* ---- on a phone, a swipe is one floor ----
+       Scrolled freely under a finger the page fought the pin the way a mouse
+       wheel did: the floor held still for a moment, then caught up at more than
+       twice the finger's speed, and when the finger let go a glide waited for the
+       browser's own momentum to die before it set off for a floor. A reader
+       called it glitchy. So on a phone the descent is a vertical slider: the
+       finger drags it one to one, everything moving as one (the pin is off), and
+       letting go goes on to the next floor, or back to this one if the swipe was
+       short and slow, carrying the finger's own speed into the glide. One swipe is
+       one floor, never more; a swipe during a glide goes one on from where that
+       glide was going. Native scrolling stays wherever something scrolls by
+       itself (the console's text when it runs long), for a sideways or two-finger
+       touch, and in the header, its menu and the position panel. */
+    type Slide = { x: number; y: number; y0: number; from: number; mode: 0 | 1 | 2; el: Element; pts: [number, number][] };
+    let slide: Slide | null = null, aim: number | null = null;
+    const nearestStop = (st: number[], y: number) => st.reduce((b, v, i) => (Math.abs(v - y) < Math.abs(st[b] - y) ? i : b), 0);
+    // where a glide under way was heading, taken before anything stops it: a touch's pointerdown comes before its touchstart
+    document.addEventListener('pointerdown', () => { aim = mv ? mv.to : null; }, { passive: true, capture: true });
+    document.addEventListener('touchstart', e => {
+      slide = null;
+      if (!narrow.matches || !motion || e.touches.length !== 1 || open != null || cardMoving || crawl!.classList.contains('is-detail')) return;
+      const el = e.target as Element;
+      if (el.closest?.('#top, #pick, dialog, input, textarea, select')) return;
+      const t = e.touches[0];
+      slide = { x: t.clientX, y: t.clientY, y0: scrollY, from: nearestStop(stops(), mv ? mv.to : aim ?? scrollY), mode: 0, el, pts: [[e.timeStamp, t.clientY]] };
+      aim = null;
+    }, { passive: true, capture: true });
+    document.addEventListener('touchmove', e => {
+      if (!slide || slide.mode === 2) return;
+      if (e.touches.length !== 1) { if (slide.mode === 1) release(); slide = null; return; }
+      const t = e.touches[0], dx = t.clientX - slide.x, dy = t.clientY - slide.y;
+      if (slide.mode === 0) {
+        // decided on the first move: the browser starts its own scroll if this one is not taken
+        if (!e.cancelable || Math.abs(dx) > Math.abs(dy) || scrollsItself(slide.el, dy < 0 ? 1 : -1)) { slide.mode = 2; return; }
+        slide.mode = 1; dragging = true; stop(); pinW = 0; slide.y0 = scrollY;
+      }
+      e.preventDefault();
+      const st = stops(), lo = st[Math.max(0, slide.from - 1)], hi = st[Math.min(st.length - 1, slide.from + 1)];
+      let y = slide.y0 - dy;
+      // a floor either way, and past it only a little give
+      if (y < lo) y = lo - Math.min(56, (lo - y) * 0.3); else if (y > hi) y = hi + Math.min(56, (y - hi) * 0.3);
+      scrollTo({ top: Math.max(0, Math.min(maxY(), y)), behavior: 'instant' });
+      slide.pts.push([e.timeStamp, t.clientY]);
+      while (slide.pts.length > 2 && e.timeStamp - slide.pts[0][0] > 90) slide.pts.shift();
+    }, { passive: false });
+    function release() {
+      const sl = slide!;
+      dragging = false; slide = null;
+      // which way is read off the finger alone, never off where the view stands: a swipe begun in the middle
+      // of a glide ends short of the floor that glide was heading for, and measured from that floor a swipe
+      // on read as a swipe back and returned the view a floor
+      const st = stops(), y = scrollY, moved = y - sl.y0;
+      // the finger's speed over its last tenth of a second, as the page's (+ is down the page)
+      const [t0, f0] = sl.pts[0], [t1, f1] = sl.pts[sl.pts.length - 1];
+      const v = t1 > t0 ? -(f1 - f0) / (t1 - t0) : 0;
+      const dir = Math.abs(v) > 0.3 ? Math.sign(v) : Math.abs(moved) > 48 ? Math.sign(moved) : 0;
+      const to = st[Math.max(0, Math.min(st.length - 1, sl.from + dir))], dist = Math.abs(to - y);
+      travel(to, { v: Math.max(-4, Math.min(4, v)), dur: Math.min(620, Math.max(300, 240 + dist * 0.55)) });
+    }
+    for (const ev of ['touchend', 'touchcancel']) document.addEventListener(ev, () => { if (slide?.mode === 1) release(); slide = null; }, { passive: true, capture: true });
+
+    /* ---- keys ----
+       ↓ ↑, Page Down / Page Up and Space / Shift+Space step a floor, Home and End
+       go to the top and the bottom, Enter opens the floor in view; in the card
+       the arrows step it and Escape closes it. Never while typing, with a
+       modifier held or a dialog open, and Space and Enter are left to a control
+       that has the focus. Keyboard focus follows the floor in view, so Enter on
+       it opens the floor the reader is looking at. */
+    document.addEventListener('keydown', e => {
+      if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || open != null || cardMoving || crawl!.classList.contains('is-detail')) return;
+      const t = e.target as Element, k = e.key;
+      if (t.closest?.('#pick, #top .menu, input, textarea, select, [contenteditable]:not([contenteditable="false"]), dialog, [role="slider"], [role="listbox"], [role="menu"], [role="radiogroup"], [role="tablist"], [role="spinbutton"]') || document.querySelector('dialog[open]')) return;
+      const presses = t.closest?.('button, summary, [role="button"], [role="switch"], [role="checkbox"]'), follows = presses || t.closest?.('a[href]');
+      const dir = k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !e.shiftKey && !presses) ? 1
+        : k === 'ArrowUp' || k === 'PageUp' || (k === ' ' && e.shiftKey && !presses) ? -1 : 0;
+      let to = -1;
+      if (dir) { e.preventDefault(); to = stepBy(dir); }
+      else if (k === 'Home' || k === 'End') { e.preventDefault(); const s = stops(); to = k === 'Home' ? 0 : s.length - 1; travel(s[to]); }
+      else if (k === 'Enter' && !follows && pickable.includes(inView)) { e.preventDefault(); pick(inView); return; }
+      // a keyboard reader on a floor's link: the focus goes with the view
+      const a = document.activeElement;
+      if (to >= 0 && levels[to] && a && a !== document.body && crawl!.contains(a)) levels[to].querySelector<HTMLElement>('a.isle')?.focus({ preventScroll: true });
+    });
+    // a link to a floor on this page lands it on the line, not at the top of the view
+    addEventListener('hashchange', () => { const id = Number(/^#floor-(\d+)$/.exec(location.hash)?.[1] ?? 0); if (id && levelOf(id) && open == null) centre(id); });
+
+    /* ---- a floor's card ----
+       Opening: the page is held still, the box's own panel grows into the card
+       (a layer of its own, scaled, so nothing inside is stretched), the floor's
+       picture flies from its island to the card's right, the text fades in.
+       Closing is the same played back. ▲ ▼ step to the next floor in place, the
+       descent moving behind the card so closing lands on that floor. */
+    const setUrl = (id: number | null) => {
+      try { const u = new URL(location.href); if (id) u.searchParams.set('floor', String(id)); else u.searchParams.delete('floor'); history.replaceState(history.state, '', u); } catch { /* the view is right; the address is a convenience */ }
+    };
+    const markSteps = () => {
+      const i = open ? pickable.indexOf(open) : -1;
+      card!.querySelectorAll<HTMLAnchorElement>('.dnav[data-step]').forEach(b => { const n = pickable[i + Number(b.dataset.step)]; b.classList.toggle('is-off', !n); b.href = n ? `/?floor=${n}` : '/'; });
+      const lv = open ? levelOf(open) : null;
+      if (lv) card!.style.setProperty('--dcard-tile', getComputedStyle(lv).getPropertyValue('--tile'));
+      levels.forEach(l => l.classList.toggle('is-picked', idOf(l) === open));
+    };
+    /* The picture in the card is a fresh copy of the island's: never a clone,
+       which would carry whatever the island is doing at that moment (half faded
+       as it collapses, or a lazy picture not yet fetched). */
+    function lend(id: number) {
+      const src = imgOf(id);
+      if (!src) { artBox!.replaceChildren(); return null; }
+      const c = document.createElement('img');
+      c.className = 'isle-img'; c.alt = ''; c.decoding = 'async';
+      c.width = Number(src.getAttribute('width')); c.height = Number(src.getAttribute('height'));
+      c.src = src.getAttribute('src')!;
+      c.style.viewTransitionName = `floor-art-${id}`;
+      src.style.viewTransitionName = 'none';
+      artBox!.replaceChildren(c);
+      return c;
+    }
+    const giveBack = (id: number) => { const src = imgOf(id); if (src) src.style.viewTransitionName = `floor-art-${id}`; };
+    let seq = 0;
+    async function loadText(id: number) {
+      const mine = ++seq;
+      let doc: Document;
+      try {
+        const r = await fetch(`/floor/peek/${id}`, { credentials: 'same-origin' });
+        if (!r.ok) throw new Error(String(r.status));
+        doc = new DOMParser().parseFromString(await r.text(), 'text/html');
+      } catch { location.href = `/floor/${id}`; return; }
+      if (mine !== seq) return;
+      const peek = doc.querySelector('.peek');
+      if (peek) text!.replaceChildren(document.importNode(peek, true));
+      text!.scrollTop = 0;
+    }
+    const T = motion ? 560 : 0;
+    const run = (el: Element, k: Keyframe[], o: KeyframeAnimationOptions) => (T ? el.animate(k, { duration: T, easing: EASE, ...o }).finished.catch(() => {}) : Promise.resolve());
+    const bg = document.getElementById('dcardbg')!;
+    const parts = () => [text!, artBox!, card!.querySelector<HTMLElement>('.dcard-nav')!];
+    const boxAt = (box: DOMRect, cardR: DOMRect) => `translate(${box.left - cardR.left}px, ${box.top - cardR.top}px) scale(${box.width / cardR.width}, ${box.height / cardR.height})`;
+    const flyFrom = (el: HTMLElement, from: DOMRect, to: DOMRect) => {
+      if (!from.width || !to.width) return Promise.resolve();
+      el.style.transformOrigin = '0 0';
+      return run(el, [{ transform: `translate(${from.left - to.left}px, ${from.top - to.top}px) scale(${from.width / to.width})` }, { transform: 'none' }], {});
+    };
+    let busy: Promise<unknown> = Promise.resolve();
+    const asCard = async (f: () => Promise<unknown>) => { cardMoving++; try { return await f(); } finally { cardMoving--; cardStill = performance.now(); } };
+    const exclusive = (f: () => Promise<unknown>) => (busy = busy.then(() => asCard(f), () => asCard(f)));
+
+    async function openCard(id: number) {
+      const boxFrom = hudCards.getBoundingClientRect(), picFrom = imgOf(id)?.getBoundingClientRect();
+      const t0 = performance.now(), textReady = loadText(id);
+      open = id; setUrl(id); markSteps();
+      text!.style.opacity = '0';
+      const pic = lend(id);
+      crawl!.classList.add('is-detail');
+      setInView(id);
+      centre(id, true);
+      const cardR = card!.getBoundingClientRect();
+      const runs = [run(bg, [{ transform: boxAt(boxFrom, cardR) }, { transform: 'none' }], {})];
+      if (T) for (const el of parts()) if (el !== artBox) el.animate([{ opacity: 0 }, { opacity: 0, offset: .35 }, { opacity: 1 }], { duration: T, easing: 'ease-out' });
+      if (pic && picFrom) runs.push(flyFrom(pic, picFrom, pic.getBoundingClientRect()));
+      await textReady;
+      text!.style.opacity = '';
+      if (T && performance.now() - t0 > T * 0.6) text!.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 240, easing: 'ease-out' });
+      await Promise.all(runs);
+      card!.focus({ preventScroll: true });
+    }
+    async function stepCard(id: number) {
+      const was = open!;
+      open = id; setUrl(id); markSteps();
+      setInView(id);
+      centre(id, true);
+      const out = T ? [text!, artBox!].map(el => el.animate([{ opacity: 1 }, { opacity: 0, transform: 'translateY(-8px)' }], { duration: 180, easing: 'ease-in', fill: 'forwards' }).finished.catch(() => {})) : [];
+      await Promise.all([loadText(id), ...out]);
+      giveBack(was); lend(id);
+      [text!, artBox!].forEach(el => { el.getAnimations().forEach(a => a.cancel()); if (T) el.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 320, easing: EASE }); });
+    }
+    async function closeCard() {
+      const id = open!;
+      const pic = artBox!.firstElementChild as HTMLElement | null, dest = imgOf(id);
+      open = null; setUrl(null); markSteps();
+      showCard(id); setInView(id);
+      if (T) {
+        settleBox();                                             // the box takes its size at once, to be flown into
+        const cardR = card!.getBoundingClientRect(), boxTo = hudCards.getBoundingClientRect();
+        crawl!.classList.add('is-closing');
+        const runs = [
+          ...parts().filter(el => el !== artBox).map(el => el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 160, easing: 'ease-in', fill: 'forwards' }).finished.catch(() => {})),
+          run(bg, [{ transform: 'none' }, { transform: boxAt(boxTo, cardR) }], { fill: 'forwards', delay: 60 }),
+        ];
+        if (pic && dest) {
+          const from = pic.getBoundingClientRect(), to = dest.getBoundingClientRect(), k = to.width / (from.width || 1);
+          pic.style.transformOrigin = '0 0';
+          runs.push(run(pic, [{ transform: 'none' }, { transform: `translate(${to.left - from.left}px, ${to.top - from.top}px) scale(${k})` }], { fill: 'forwards' }));
+        }
+        await Promise.all(runs);
+      }
+      crawl!.classList.remove('is-detail', 'is-closing');
+      [bg, pic, ...parts()].forEach(el => el?.getAnimations().forEach(a => a.cancel()));
+      giveBack(id);
+      artBox!.replaceChildren();
+      if (T) hud!.querySelector('.hud-card.is-shown')?.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200, easing: 'ease-out' });
+      (cards.get(id)?.querySelector<HTMLElement>('.hud-go') ?? levelOf(id)?.querySelector<HTMLElement>('a.isle'))?.focus({ preventScroll: true });
+      onScroll();
+    }
+    const pick = (id: number) => exclusive(() => (open == null ? openCard(id) : open === id ? Promise.resolve() : stepCard(id)));
+    const step = (d: number) => exclusive(async () => { if (open == null) return; const n = pickable[pickable.indexOf(open) + d]; if (n) await stepCard(n); });
+    const close = () => exclusive(() => (open == null ? Promise.resolve() : closeCard()));
+
+    document.addEventListener('click', e => {
+      const me = e as MouseEvent;
+      if (me.button !== 0 || me.metaKey || me.ctrlKey || me.shiftKey || me.altKey) return;
+      const t = (e.target as Element).closest<HTMLElement>('#crawl [data-peek], #crawl [data-close], #crawl [data-step], #rail [data-goto]');
+      if (!t) return;
+      e.preventDefault();
+      if (t.dataset.goto) { const id = Number(t.dataset.goto); if (open != null) { if (pickable.includes(id)) pick(id); } else centre(id, true); }
+      else if (t.hasAttribute('data-close')) close();
+      else if (t.dataset.step) step(Number(t.dataset.step));
+      else pick(Number(t.dataset.peek));
+    });
+    document.addEventListener('keydown', e => {
+      if (open == null || (e.target as Element).closest?.('input, textarea, select')) return;
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      else if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp'].includes(e.key)) { e.preventDefault(); step(e.key === 'ArrowDown' || e.key === 'PageDown' ? 1 : -1); }
+    });
+    // held still: a touch drag outside the card's own text does nothing
+    document.addEventListener('touchmove', e => { if (open != null && !(e.target as Element).closest?.('.dcard-text')) e.preventDefault(); }, { passive: false });
+    addEventListener('pagehide', () => { try { sessionStorage.setItem('dcc-descent', String(open ?? shown)); } catch { /* a convenience */ } });
+
+    /* ---- on a phone, "You are here" stands above the tilt-shift ----
+       Drawn inside its island it is under the blur whenever its floor is not the
+       one on the focus line, and even then its label sits in the soft band over
+       the floor. So on a phone it is lifted out into a layer of its own over the
+       blur (still under the console and the title), put on its island's top every
+       frame from the island's own place, with the island's bob run in step, and
+       it fades when its floor goes or a card opens, as it did inside it. */
+    const hereLevel = levelOf(homeId), hereIsle = hereLevel?.querySelector<HTMLElement>('.isle') ?? null;
+    const herePin = hereIsle?.querySelector<HTMLElement>('.here-pin') ?? null;
+    let lifted = false, pinLoop = 0;
+    function liftPin() {
+      if (!herePin || !hereIsle || !hereLevel || narrow.matches === lifted) return;
+      lifted = narrow.matches;
+      if (lifted) {
+        herePin.style.setProperty('--i', hereLevel.style.getPropertyValue('--i'));
+        crawl!.appendChild(herePin); herePin.classList.add('is-lifted');
+        requestAnimationFrame(() => {
+          const a = hereIsle.getAnimations().find(x => (x as CSSAnimation).animationName === 'bob'), b = herePin.getAnimations().find(x => (x as CSSAnimation).animationName === 'bob');
+          if (a && b && a.currentTime != null) b.currentTime = a.currentTime;
+        });
+        placePin();
+      } else { herePin.classList.remove('is-lifted', 'is-gone'); herePin.style.transform = ''; hereIsle.appendChild(herePin); }
+    }
+    function placePin() {
+      if (!lifted) return;
+      const lr = hereLevel!.getBoundingClientRect(), sc = parseFloat(getComputedStyle(hereIsle!).scale) || 1;
+      const w = hereIsle!.offsetWidth, h = hereIsle!.offsetHeight;
+      // the island's place in its level, untransformed (the level, being transformed, may itself be its offset parent)
+      const own = hereIsle!.offsetParent === hereLevel;
+      const ox = hereIsle!.offsetLeft - (own ? 0 : hereLevel!.offsetLeft), oy = hereIsle!.offsetTop - (own ? 0 : hereLevel!.offsetTop);
+      const x = lr.left + ox + w / 2, y = lr.top + oy + h / 2 - sc * h / 2;
+      herePin!.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0) translate(-50%, calc(-100% - 8px))`;
+      const state = hereLevel!.dataset.state;
+      herePin!.classList.toggle('is-gone', state === 'collapsing' || state === 'gone');
+    }
+    // the island eases its size when it comes into view or leaves it, with no scroll to draw a frame: follow it
+    function followPin() {
+      if (!lifted) return;
+      const until = performance.now() + 900;
+      cancelAnimationFrame(pinLoop);
+      const go = () => { placePin(); if (performance.now() < until) pinLoop = requestAnimationFrame(go); };
+      pinLoop = requestAnimationFrame(go);
+    }
+    hereIsle?.addEventListener('transitionrun', followPin);
+    narrow.addEventListener('change', () => { liftPin(); followPin(); });
+    liftPin();
+
+    /* ---- first paint: the reader's floor ----
+       Always where the reader is, except coming back (the floor they left
+       from) or following a link to a floor. The browser's own scroll restore
+       is off (the inline script at the top), the fonts are waited for so
+       nothing moves after the floor is placed, and it is placed again once
+       everything has loaded unless the reader has already started to scroll. */
+    const navType = (performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined)?.type;
+    let saved = -1;
+    try { saved = navType === 'back_forward' ? Number(sessionStorage.getItem('dcc-descent') ?? -1) : -1; } catch { /* a convenience */ }
+    const hashed = Number(/^#floor-(\d+)$/.exec(location.hash)?.[1] ?? 0);
+    const here = levels.find(l => l.classList.contains('is-here'));
+    const start = open ?? (hashed && levelOf(hashed) ? hashed : saved >= 0 && (saved === 0 || levelOf(saved)) ? saved : here ? idOf(here) : 0);
+    let touched = false;
+    for (const ev of ['wheel', 'touchstart', 'keydown', 'mousedown']) addEventListener(ev, () => { touched = true; }, { once: true, passive: true });
+    const place = () => {
+      (window as unknown as { __descentPlaced?: boolean }).__descentPlaced = true;    // from here on, a page transition back to it may pair a floor
+      measure(); lead(); drawStairs();
+      if (open) { lend(open); markSteps(); setInView(open); }
+      else { setInView(start); showCard(start); }
+      measure();
+      centre(start);
+      frame();
+    };
+    dungeon.classList.add('no-anim');
+    Promise.race([document.fonts?.ready ?? Promise.resolve(), new Promise(r => setTimeout(r, 700))]).then(() => {
+      place();
+      requestAnimationFrame(() => requestAnimationFrame(() => { dungeon.classList.remove('no-anim'); hudCards.classList.remove('no-ease'); reveal(); }));
+    });
+    addEventListener('load', () => { if (!touched && open == null) place(); }, { once: true });
+  } else reveal();
 </script>
 
 <style>
-  .intro { padding-block: 56px 44px; }
-  h1 { font-size: clamp(52px, 10vw, 116px); font-weight: 800; letter-spacing: -.01em; margin-top: 14px; }
-  h1 em { font-style: normal; color: var(--color-gold); display: block; }
-  /* The System's register at reading size: it is the one long thing on the
-     page it speaks, so it gets body type, not the 13px of a margin note. */
-  .broadcast { margin-top: 28px; max-width: calc(var(--measure) + 40px); font-size: var(--type-body);
-               line-height: 1.7; padding: 20px 22px; }
-  .broadcast p { margin: 0 0 14px; }
-  .broadcast p:last-child { margin-bottom: 0; }
-  .broadcast .cta { color: var(--color-gold); }
-  .broadcast .status { border-top: 1px solid var(--color-line); padding-top: 12px; color: var(--color-grey-100); }
-  .broadcast a { color: var(--color-gold); }
-  .sec-head { display: flex; align-items: baseline; gap: 14px; }
-  .sec-head h2 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 700; }
-  .sec-intro { color: var(--color-grey-300); max-width: var(--measure); margin: 8px 0 30px; font-size: var(--type-body); }
-  /* A jump to #floor-N lands below the sticky gate bar, not under it. */
-  .floor { margin-bottom: 14px; scroll-margin-top: 84px; }
-  .floor-head { display: flex; align-items: stretch; background: var(--color-raised);
-                cursor: pointer; list-style: none; }
-  .floor-head::-webkit-details-marker { display: none; }
-  .floor[open] > .floor-head { border-bottom: 1px solid var(--color-line); }
-  .floor-head:hover { background: var(--color-panel); }
-  .toggle { margin: auto 18px auto auto; flex: none; display: inline-flex; align-items: center; gap: 9px;
-            font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label);
-            text-transform: uppercase; color: var(--color-gold);
-            border: 1px solid var(--color-line); padding: 7px 11px; }
-  .floor-head:hover .toggle { border-color: var(--color-gold); }
-  .toggle svg { transition: transform .15s ease; }
-  .floor[open] > .floor-head .toggle svg { transform: rotate(180deg); }
-  .toggle .when-open, .floor[open] > .floor-head .toggle .when-shut { display: none; }
-  .floor[open] > .floor-head .toggle .when-open { display: inline; }
-  @media (prefers-reduced-motion: reduce) { .toggle svg { transition: none; } }
-  .floor-head:focus-visible { outline: 2px solid var(--color-gold); outline-offset: -2px; }
-  .floorno { font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: 1;
-             min-width: 86px; flex: none;
-             display: flex; align-items: center; justify-content: center; padding: 16px 18px 12px; }
-  .floor-titles { padding: 13px 18px; display: flex; flex-direction: column;
-                  justify-content: center; gap: 3px; min-width: 0; }
-  .floor-titles h3 { font-size: 26px; font-weight: 700; color: #fff; }
-  .eyebrow b { color: var(--color-grey-200); font-weight: 600; }
-  .floor-body { padding: 22px 18px 24px; }
-  .arrival { max-width: calc(var(--measure) + 34px); margin: 0 0 22px; }
-  /* One stretch of the floor per row; the gaps are the dividers, as in .log. */
-  .parts { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 26px; }
-  .part { max-width: var(--measure); }
-  .part-span { color: var(--color-gold); }
-  .part h4 { font-size: var(--type-entry); font-weight: 700; color: #fff; margin: 4px 0 8px; }
-  .part p { margin: 0 0 12px; font-size: var(--type-body); line-height: 1.7; color: var(--color-grey-200); }
-  .part p:last-child { margin-bottom: 0; }
-  @media (max-width: 560px) {
-    .floorno { font-size: 34px; min-width: 64px; padding: 12px 10px; }
-    .floor-titles h3 { font-size: 21px; }
-    .toggle { margin-right: 12px; padding: 6px 8px; }
-    .toggle .when-shut, .toggle .when-open { display: none !important; }
-    .broadcast { padding: 16px; }
-    .floor { scroll-margin-top: 150px; }
+  /* ---- the whole page: one dark space, debris drifting behind everything ---- */
+  :global(html) { scrollbar-gutter: stable; }
+  :global(html:has(.crawl.is-detail)) { overflow: hidden; }
+  :global(html.descent-pending) .crawl { opacity: 0; animation: pending-fallback 0s 1.2s forwards; }
+  @keyframes pending-fallback { to { opacity: 1; } }
+  .crawl { transition: opacity .35s ease; }
+  .world { position: relative; overflow-x: clip; }
+  .void { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .field { position: absolute; inset: -45% 0; will-change: transform; }
+  .field-0 { opacity: .45; }
+  .field-1 { opacity: .75; }
+  .field-2 { opacity: .95; filter: blur(.8px); }
+  .vox { position: absolute; width: var(--s); height: calc(var(--s) * 1.1); rotate: var(--r);
+         animation: drift var(--d) ease-in-out var(--dl) infinite alternate; }
+  .vox svg { display: block; width: 100%; height: 100%; shape-rendering: crispEdges; }
+  .vox-ember svg path:nth-child(1) { fill: #ffd36a; }
+  .vox-ember svg path:nth-child(2) { fill: #ff9a2e; }
+  .vox-ember svg path:nth-child(3) { fill: #d8561a; }
+  .vox-ember { filter: drop-shadow(0 0 6px #ff8a1fcc); }
+  @keyframes drift { from { translate: 0 -9px; } to { translate: 0 9px; rotate: calc(var(--r) + 18deg); } }
+
+  /* ---- the crawl: the box pinned on the left, the descent on the right, in the site's column ---- */
+  .crawl { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 32px;
+           max-width: 1080px; margin: 0 auto; padding: 36px 24px 0; align-items: start; }
+  /* placed, not auto-placed: the card shares row 1 and must lie over the box
+     and the descent, never push them down a row */
+  .hud { grid-column: 1; grid-row: 1; align-self: stretch; min-width: 0; }
+  .hud-title { padding-bottom: 18px; }
+  .hud .eyebrow { color: var(--color-blood); }
+  .hud h1 { font-size: clamp(40px, 5.4vw, 72px); font-weight: 800; line-height: .95; margin: 6px 0 4px; }
+  .hud h1 em { font-style: normal; color: var(--color-gold); display: block; }
+  /* The box is as tall as what it says (the script sets the height, up to the
+     room there is) and is pinned with its middle on the middle of the view
+     below the header, the line the floor in view is centred on. When the
+     floor changes it grows or shrinks around that middle, smoothly. Over the
+     reader's own floor it stands under the full-size title instead (see "home"
+     in the script, which places it). */
+  .hud-cards { position: sticky; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin;
+               top: max(calc(var(--gate-h, 62px) + 16px), calc(var(--gate-h, 62px) + (100dvh - var(--gate-h, 62px) - var(--card-h, 480px)) / 2));
+               }
+  /* the script eases the box's height and works out its top every frame, so nothing here transitions */
+  .hud-cards.no-ease { transition: none; }
+  /* With the script running the title leaves the flow: a sticky line of no
+     height the script places over the box and scales, full size over the
+     reader's own floor and small everywhere else (see "home" in the script).
+     The crawl's top padding goes, or the title could not rise to the top of
+     the view at home. */
+  .crawl.pinned-title { padding-top: 0; }
+  .crawl.pinned-title .hud-title { position: sticky; z-index: 3; height: 0; padding: 0; overflow: visible; pointer-events: none; transition: opacity .3s ease; }
+  /* its own layer, so scaling it with the scroll never repaints the text */
+  .crawl.pinned-title .hud-title-in { transform-origin: left top; padding-bottom: 0; will-change: transform; }
+  .crawl.pinned-title .hud-title h1 { margin-bottom: 0; }
+  .crawl.is-detail .hud-title { opacity: 0; }
+  .hud-card { display: none; box-sizing: border-box; margin: 0; padding: 18px 20px; font-size: var(--type-meta); line-height: 1.65;
+              background: var(--color-panel);
+              border-left-color: var(--tile, var(--color-gold)); }
+  .hud-card.is-shown { display: block; animation: hud-in .45s cubic-bezier(.22, 1, .36, 1) both; }
+  @keyframes hud-in { from { opacity: 0; translate: 0 10px; } }
+  .hud-card p { margin: 10px 0 0; }
+  .hud-head { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; }
+  .hud-no { font-family: var(--font-display); font-weight: 800; font-size: 46px; line-height: .9; color: var(--tile); min-width: 1.4em; }
+  .hud-card:has(h2.unnamed) .hud-no { color: var(--color-grey-500); }
+  .hud-card h2 { font-family: var(--font-display); font-size: var(--type-title); font-weight: 800; color: #fff; margin: 0; line-height: 1.05; }
+  .hud-card h2.unnamed { color: var(--color-grey-500); }
+  .hud-book { color: var(--color-grey-300); margin: 2px 0 12px; font-size: var(--type-meta); }
+  .hud-last { color: #fff; }
+  .hud-last .label { display: block; color: var(--color-gold); }
+  .hud-card .status { border-top: 1px solid var(--color-line); padding-top: 10px; color: var(--color-grey-100); }
+  .hud-card .cta { color: var(--color-gold); }
+  .hud-go { display: inline-block; margin-top: 14px; font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label);
+            text-transform: uppercase; color: var(--color-gold); border: 1px solid var(--color-line); padding: 7px 11px; text-decoration: none;
+            transition: border-color .2s; }
+  .hud-go:hover, .hud-go:focus-visible { border-color: var(--color-gold); outline: none; }
+
+  /* ---- the descent ---- */
+  .descent { grid-column: 2; grid-row: 1; position: relative; min-width: 0; margin-bottom: 72px; transition: opacity .45s ease; }
+  .dungeon { position: relative; padding-top: 20vh; padding-bottom: 45vh; }
+  .stairs { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: visible; }
+  .bottom { text-align: center; margin-top: 18px; }
+  .bottom .label { color: var(--color-grey-700); }
+  /* the gap leaves room for the soft hold: each floor rests on the focus line for this much scrolling */
+  .shaft { --dwell: 220px; list-style: none; margin: 0; padding: 0 12px; display: grid; gap: calc(54px + var(--dwell)); position: relative; z-index: 1; }
+  .dungeon.moves .level { will-change: transform; }
+  .level { display: grid; justify-items: start; }
+  .level[data-side="r"] { justify-items: end; }
+
+  /* An island: it floats, and the one in view grows toward the middle while
+     the rest wait a little dimmer. Separate properties (translate for the
+     float, scale for the zoom) so the two never override each other. */
+  /* Every floor is as wide as the stage between the box and the rail: 88% of
+     it, so the one in view (scaled 1.14) reaches its edges exactly. Its height
+     is whatever its picture's proportions make it, up to 72% of the view
+     under the header; only a picture taller than that is drawn narrower. A
+     fixed 320px cap made every tall picture (floors 1, 5, 9, the uncharted
+     ones) half the width of a wide one, and a reader rightly called it out.
+     The box is fixed by the picture's proportions before the picture arrives,
+     so nothing below it moves as pictures load. */
+  .crawl { --maxh: min(640px, calc((100svh - var(--gate-h, 62px)) * .72)); }
+  .isle { position: relative; display: block; max-width: 88%; color: inherit; text-decoration: none;
+          animation: bob 7s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -0.9s);
+          transform-origin: left center; transition: scale .8s cubic-bezier(.22, 1, .36, 1); }
+  .level[data-side="r"] .isle { transform-origin: right center; }
+  .level.in-view .isle { scale: 1.14; }
+  .level.in-view a.isle:hover { scale: 1.17; }
+  /* the floor in view is the lit one; the others stay solid but dark (never
+     see-through, or the stairs behind them would show), and the tilt-shift
+     does the blurring */
+  .isle > .art { filter: brightness(.42) saturate(.7); transition: filter .45s ease; }
+  .level.in-view .isle > .art { filter: none; }
+  a.isle:focus-visible { outline: none; }
+  a.isle:focus-visible .art { outline: 1px solid var(--color-gold); outline-offset: 8px; }
+  @keyframes bob { from { translate: 0 -5px; } to { translate: 0 5px; } }
+  .level[style*="--ar"] .isle { width: min(88%, calc(var(--maxh) * var(--ar))); }
+  .art { position: relative; display: block; }
+  .isle-img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+  /* collapse: a floor left behind falls as its own cubes, drawn on a canvas the
+     script makes (so its rules are global) reaching well below the island */
+  :global(.collapse-gl) { position: absolute; pointer-events: none; image-rendering: pixelated; }
+  .level[data-state="gone"] .isle-img, .level[data-state="gone"] .stairmark { visibility: hidden; }
+  .level[data-state="collapsing"] .stairmark { visibility: hidden; }
+  .here-pin { transition: opacity .3s ease; }
+  .level[data-state="collapsing"] .here-pin, .level[data-state="gone"] .here-pin { opacity: 0; }
+  /* the stairs: steps set one by one as the way opens, crumbling top first behind */
+  .dungeon.moves :global(.stp-in) { transform-box: fill-box; transform-origin: 50% 50%; opacity: 0; transform: translate(0, -12px) scale(.55);
+                                     transition: opacity .25s ease, transform .4s cubic-bezier(.22, 1.2, .36, 1); }
+  .dungeon.moves :global(.stp.on .stp-in) { opacity: 1; transform: none; }
+  .dungeon.moves :global(.stp.fall .stp-in) { opacity: 0; transform: translate(0, 54px) rotate(9deg) scale(.86);
+                                              transition: opacity .75s ease-in .05s, transform .8s cubic-bezier(.55, 0, .85, .35); }
+  .dungeon.no-anim :global(.stp-in) { transition: none !important; }
+  /* Tilt-shift: above and below the focus line the view goes soft in three
+     steps, the way a photograph of a model goes soft away from its plane of
+     focus. A sticky layer over the descent that takes no room. */
+  .tilt { position: sticky; z-index: 4; pointer-events: none; top: var(--gate-h, 62px);
+          height: calc(100dvh - var(--gate-h, 62px)); margin-bottom: calc(-1 * (100dvh - var(--gate-h, 62px)));
+          margin-inline: -32px calc(-1 * max(24px, (100vw - 1080px) / 2 + 24px)); --sharp: 17vh; }
+  .tilt-band { position: absolute; left: 0; right: 0; }
+  .tilt-top { top: 0; height: max(0px, calc(var(--focus-in, 40vh) - var(--sharp))); }
+  .tilt-bottom { top: calc(var(--focus-in, 40vh) + var(--sharp)); bottom: 0; }
+  .tilt-band i { position: absolute; inset: 0; }
+  .tilt-band i:nth-child(1) { backdrop-filter: blur(1.5px); -webkit-backdrop-filter: blur(1.5px); }
+  .tilt-band i:nth-child(2) { backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  .tilt-band i:nth-child(3) { backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px); }
+  .tilt-top i:nth-child(1) { mask-image: linear-gradient(to top, transparent, #000 35%); -webkit-mask-image: linear-gradient(to top, transparent, #000 35%); }
+  .tilt-top i:nth-child(2) { mask-image: linear-gradient(to top, transparent 25%, #000 70%); -webkit-mask-image: linear-gradient(to top, transparent 25%, #000 70%); }
+  .tilt-top i:nth-child(3) { mask-image: linear-gradient(to top, transparent 55%, #000); -webkit-mask-image: linear-gradient(to top, transparent 55%, #000); }
+  .tilt-bottom i:nth-child(1) { mask-image: linear-gradient(to bottom, transparent, #000 35%); -webkit-mask-image: linear-gradient(to bottom, transparent, #000 35%); }
+  .tilt-bottom i:nth-child(2) { mask-image: linear-gradient(to bottom, transparent 25%, #000 70%); -webkit-mask-image: linear-gradient(to bottom, transparent 25%, #000 70%); }
+  .tilt-bottom i:nth-child(3) { mask-image: linear-gradient(to bottom, transparent 55%, #000); -webkit-mask-image: linear-gradient(to bottom, transparent 55%, #000); }
+  .crawl.is-detail .tilt { display: none; }
+  /* where the reader is */
+  .here-pin { position: absolute; left: 50%; top: 0; translate: -50% calc(-100% - 8px); z-index: 3; display: flex; align-items: center; gap: 7px;
+              white-space: nowrap; pointer-events: none; padding: 4px 9px 4px 7px; background: #0b0b0be8; border: 1px solid var(--color-gold);
+              font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--color-gold); }
+  .here-pin b { width: 7px; height: 7px; border-radius: 50%; background: var(--color-gold); box-shadow: 0 0 10px var(--color-gold); animation: pulse 2s ease-in-out infinite; }
+  .here-pin::after { content: ''; position: absolute; left: 50%; top: 100%; width: 1px; height: 8px; background: var(--color-gold); }
+  /* the gauge: eighteen floors, the one in view lit, the reader's marked */
+  .rail { position: fixed; z-index: 20; right: max(10px, calc((100vw - 1080px) / 2 - 52px)); top: calc(var(--gate-h, 62px) + (100dvh - var(--gate-h, 62px)) / 2);
+          translate: 0 -50%; display: flex; flex-direction: column; gap: 4px; }
+  .tick { display: flex; align-items: center; justify-content: flex-end; gap: 7px; height: 14px; text-decoration: none; color: var(--color-grey-500); }
+  .tick-no { font-family: var(--font-mono); font-size: 10px; letter-spacing: .04em; opacity: 0; translate: 4px 0; transition: opacity .25s, translate .25s; }
+  .tick-bar { width: 12px; height: 3px; background: #3a3734; transition: width .35s cubic-bezier(.22, 1, .36, 1), background .3s; }
+  .tick-reached .tick-bar { background: color-mix(in srgb, var(--tile) 70%, #000); }
+  .tick:hover .tick-no, .tick:focus-visible .tick-no, .tick.in-view .tick-no, .tick.is-here .tick-no { opacity: 1; translate: 0 0; }
+  .tick.in-view { color: #fff; }
+  .tick.in-view .tick-bar { width: 28px; background: var(--tile); }
+  .tick-sealed.in-view .tick-bar { background: var(--color-grey-300); }
+  .tick.is-here .tick-no { color: var(--color-gold); }
+  .tick.is-here .tick-bar { box-shadow: 0 0 0 1px var(--color-gold); }
+  .tick:focus-visible { outline: none; }
+  .crawl.is-detail ~ .rail, .crawl.is-detail .rail { opacity: .35; }
+  .rail-keys { display: none; justify-content: flex-end; gap: 3px; margin: 12px 0 0; }
+  @media (hover: hover) and (pointer: fine) { .rail-keys { display: flex; } }
+  .rail-keys kbd { font-family: var(--font-mono); font-size: 10px; line-height: 1; color: var(--color-grey-500);
+                   border: 1px solid var(--color-line); border-bottom-width: 2px; border-radius: 2px; padding: 2px 4px; }
+  /* where a finished floor's way down is */
+  .stairmark { position: absolute; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%;
+               background: var(--tile); box-shadow: 0 0 0 3px color-mix(in srgb, var(--tile) 30%, transparent), 0 0 14px var(--tile);
+               animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: .65; } 50% { opacity: 1; } }
+  /* the stairs: voxel steps with torches; drawn once, never animated, so the
+     drawing is painted once and only moved */
+  :global(.stairs .flight.fogged) { opacity: .55; }
+  :global(.stairs .torchglow) { fill: url(#torchglow); opacity: .8; }
+  :global(.stairs .torchfire) { fill: #ffc23d; stroke: #c8321a; stroke-width: 1; }
+
+  /* ---- a floor's card: the box widened across the column ---- */
+  .dcard { display: none; grid-column: 1 / -1; grid-row: 1; position: sticky; z-index: 6;
+           top: calc(var(--gate-h, 62px) + (100dvh - var(--gate-h, 62px) - min(76vh, 660px)) / 2);
+           height: min(76vh, 660px); grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) 46px; outline: none; }
+  /* the card's own panel is a separate layer, so opening and closing can grow
+     and shrink it with a transform while the content fades: nothing repaints */
+  .dcard-bg { position: absolute; inset: 0; z-index: -1; transform-origin: 0 0; background: var(--color-panel);
+              border: 1px solid var(--color-line); border-top: 2px solid var(--dcard-tile, var(--color-gold)); }
+  .crawl.is-detail .dcard { display: grid; }
+  .crawl.is-detail .hud { visibility: hidden; }
+  .crawl.is-detail .descent { opacity: .14; pointer-events: none; }
+  .crawl.is-detail.is-closing .descent { opacity: 1; }
+  .crawl.is-detail .level.is-picked .isle-img { visibility: hidden; }
+  .dcard-text { min-height: 0; overflow-y: auto; overscroll-behavior: contain; border-right: 1px solid var(--color-line); }
+  .dcard-text :global(.peek-art) { display: none; }
+  .dcard-art { display: grid; place-items: center; padding: 22px; min-width: 0; min-height: 0; }
+  .dcard-art .isle-img { width: auto; max-height: calc(min(76vh, 660px) - 60px); max-width: 100%; }
+  .dcard-nav { display: flex; flex-direction: column; border-left: 1px solid var(--color-line); }
+  .dnav { display: grid; place-items: center; height: 46px; color: var(--color-grey-200); text-decoration: none; font-size: 14px;
+          border-bottom: 1px solid var(--color-line); transition: color .2s, background .2s; }
+  .dnav:hover, .dnav:focus-visible { color: var(--color-gold); background: var(--color-raised); outline: none; }
+  .dnav.is-off { opacity: .3; pointer-events: none; }
+
+  /* ---- what a floor's card says (FloorPeek), here and in the fragment it is fetched from ---- */
+  :global(.peek) { padding: 18px 20px 26px; display: flex; flex-direction: column; gap: 16px; }
+  :global(.peek-head) { display: flex; gap: 14px; align-items: stretch; }
+  :global(.peek-no) { font-family: var(--font-display); font-weight: 800; font-size: 38px; line-height: 1; padding: 10px 12px 6px;
+                      background: var(--peek); color: var(--peek-ink); display: flex; align-items: center; }
+  :global(.peek h2) { font-size: var(--type-title); font-weight: 800; color: #fff; margin: 2px 0 0; }
+  :global(.peek h2.unnamed) { color: var(--color-grey-300); font-style: italic; }
+  :global(.peek-eyebrow), :global(.peek-named) { color: var(--color-grey-300); margin: 0; }
+  :global(.peek-arrival) { margin: 0; }
+  :global(.peek-sec h3) { color: var(--color-gold); margin: 0 0 4px; }
+  :global(.peek-sec h4) { font-size: var(--type-entry); color: #fff; margin: 0 0 4px; }
+  :global(.peek-sec p) { margin: 0; font-size: var(--type-meta); line-height: 1.6; color: var(--color-grey-200); }
+  :global(.peek-notes) { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  :global(.peek-notes li) { font-size: var(--type-meta); line-height: 1.55; color: var(--color-grey-200); }
+  :global(.peek-notes .label) { display: block; color: var(--color-grey-300); }
+  :global(.peek-go) { align-self: flex-start; font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label);
+                      text-transform: uppercase; color: var(--color-gold); border: 1px solid var(--color-line); padding: 9px 13px; text-decoration: none; }
+  :global(.peek-go:hover) { border-color: var(--color-gold); }
+
+  /* ---- a phone: the floor has the middle of the screen, the System's box is a console at the bottom ----
+     The first phone layout pinned the box as a 122px strip of 11px text under the header, clipped
+     mid-sentence, with the title over it at home: 300px of chrome before the floor, the floor low in
+     the dead space under it, the depth rail a column of ticks over the floors, and the card a screen
+     with a 42px column of buttons down its side. A reader called it wrong and wonky. Now the floor in
+     view stands in the middle of the room between the header (and the title, at home) and a console
+     docked at the bottom, in reach of a thumb; the console's text is at a size a phone can read and
+     scrolls inside it instead of being cut off, its button pinned at its foot; the depth rail is a
+     gauge of eighteen segments along the console's top edge; and the card is the whole screen with
+     its three buttons along the bottom. None of this reaches past 999px: the desktop is untouched. */
+  .hud-lede, .go-short { display: none; }
+  @media (max-width: 999px) {
+    .crawl { grid-template-columns: minmax(0, 1fr); gap: 0; padding-top: 18px; }
+    .descent { grid-column: 1; grid-row: 3; margin-bottom: calc(var(--sheet-h) + 24px); }
+    .dcard { grid-row: 1 / span 3; }
+    /* the box's own wrapper steps aside: the title is pinned against the whole crawl, the console against the screen */
+    .hud { display: contents; }
+    .hud-title { grid-column: 1; grid-row: 1; padding-bottom: 12px; }
+    .crawl.pinned-title .hud-title { z-index: 29; }
+    .crawl.pinned-title .hud-title-in { margin-inline: -24px; padding: 12px 24px 16px; background: linear-gradient(#0b0b0b 72%, #0b0b0b00); }
+    .hud h1 { font-size: 34px; }
+
+    /* The bar at the foot of the screen: the floor in view by number and name, and one button, What
+       happened, that opens its card (What is known, for a floor only heard of; nothing, for a sealed
+       one); for a first visit, the one rule in a line and Pick your book. It was a console of the
+       System's whole catch-up, 240px of text a phone scrolled inside, and a reader asked whether a
+       phone needed it at all: the card that button opens tells the floor's story better. */
+    .crawl { --sheet-h: 96px; }
+    .hud-cards { grid-column: 1; grid-row: 2; position: fixed; left: 0; right: 0; bottom: 0; top: auto !important; z-index: 30;
+                 height: calc(var(--sheet-h) + env(safe-area-inset-bottom, 0px)); margin: 0; padding: 0 0 env(safe-area-inset-bottom, 0px); overflow: hidden;
+                 background: #0b0b0b; border-top: 1px solid var(--color-line); box-shadow: 0 -24px 48px #000c; }
+    .hud-card { height: var(--sheet-h); box-sizing: border-box; padding: 26px 16px 8px 20px; margin: 0; border: 0; background: none; overflow: hidden; }
+    /* one row, everything on its middle: the floor's number and name on the left, the button on the right */
+    .hud-card.is-shown { display: flex; align-items: center; gap: 14px; }
+    .hud-card > * { margin: 0; }
+    .hud-head { flex: 1 1 auto; }
+    /* the opening card (before the first floor) has no name: its line stacks in the row's place */
+    .hud-card[data-floor="0"].is-shown { flex-direction: column; align-items: stretch; justify-content: center; gap: 3px; }
+    /* everything the desktop's box says beyond the name stays there */
+    .hud-card > b, .hud-card > p, .hud-book, .hud-depth { display: none; }
+    .hud-card[data-floor="0"] > b { display: block; font-size: var(--type-label); letter-spacing: .05em; }
+    .hud-card > p.hud-lede { display: block; font-size: var(--type-meta); line-height: 1.4; color: var(--color-grey-200); }
+    .hud-head { gap: 12px; align-items: center; min-width: 0; }
+    .hud-no { font-size: 30px; min-width: 0; flex: none; }
+    .hud-card h2 { font-size: 21px; line-height: 1.02; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .hud-card > .hud-go { flex: none; margin-left: auto; display: inline-flex; align-items: center; white-space: nowrap;
+              margin: 0; padding: 11px 13px; border: 1px solid var(--tile, var(--color-gold)); background: none; color: #fff; text-decoration: none; cursor: pointer;
+              font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label); text-transform: uppercase; }
+    .hud-card:has(h2.unnamed) .hud-go { border-color: var(--color-line); color: var(--color-grey-200); }
+    .hud-go:hover, .hud-go:focus-visible { background: color-mix(in srgb, var(--tile, var(--color-gold)) 18%, transparent); outline: none; }
+    .go-long { display: none; }
+    .go-short { display: inline; }
+    /* the narrowest phones: a long name takes a third line rather than an ellipsis */
+    @media (max-width: 360px) {
+      .hud-card h2 { font-size: 18px; -webkit-line-clamp: 3; }
+      .hud-no { font-size: 26px; }
+      .hud-card > .hud-go { padding-inline: 10px; }
+    }
+
+    /* the depth rail, as a gauge along the console's top edge: a segment a floor, the one in view lit and tall */
+    .rail { left: 14px; right: 14px; top: auto; bottom: calc(var(--sheet-h) + env(safe-area-inset-bottom, 0px) - 26px); translate: none;
+            flex-direction: row; gap: 3px; height: 24px; z-index: 31; }
+    .tick { flex: 1 1 0; min-width: 0; height: 100%; justify-content: center; gap: 0; }
+    .tick-no, .rail-keys { display: none; }
+    .tick-bar, .tick.in-view .tick-bar { width: 100%; }
+    .tick-bar { height: 3px; transition: height .35s cubic-bezier(.22, 1, .36, 1), background .3s; }
+    .tick.in-view .tick-bar { height: 7px; }
+    .crawl.is-detail .rail { display: none; }
+
+    /* the room between the title and the console is where the tilt-shift works */
+    .tilt { top: calc(var(--gate-h, 0px) + var(--under-h, 0px));
+            height: calc(100dvh - var(--gate-h, 0px) - var(--under-h, 0px) - var(--sheet-h));
+            margin-bottom: calc(-1 * (100dvh - var(--gate-h, 0px) - var(--under-h, 0px) - var(--sheet-h))); margin-inline: -24px; --sharp: 17vh; }
+    .tilt-band i:nth-child(3) { display: none; }
+
+    /* the floors, as big as the room lets them be */
+    .level, .level[data-side="r"] { justify-items: center; }
+    .crawl { --maxh: calc((100svh - var(--gate-h, 56px) - var(--sheet-h)) * .6); }
+    .shaft { --dwell: 150px; }
+    .isle, .level[data-side="r"] .isle { transform-origin: center; max-width: 92%; }
+    .level[style*="--ar"] .isle { width: min(92%, calc(var(--maxh) * var(--ar))); }
+    .level.in-view .isle { scale: 1.06; }
+    .level.in-view a.isle:hover { scale: 1.06; }
+    /* "You are here", lifted over the tilt-shift by the script and put on its island's top every frame */
+    .here-pin.is-lifted { position: fixed; left: 0; top: 0; z-index: 5; translate: none; will-change: transform;
+                          animation: bob 7s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -0.9s); }
+    .here-pin.is-lifted.is-gone, .crawl.is-detail .here-pin.is-lifted { opacity: 0; }
+
+    /* the card: the whole screen, the picture over the text, its buttons along the bottom */
+    .dcard { top: var(--gate-h, 0px); height: calc(100dvh - var(--gate-h, 0px)); grid-template-columns: minmax(0, 1fr);
+             grid-template-rows: minmax(0, 34%) minmax(0, 1fr) auto; }
+    .dcard-bg { border-inline: 0; border-bottom: 0; }
+    .dcard-art { grid-column: 1; grid-row: 1; padding: 14px 20px; border-bottom: 1px solid var(--color-line); }
+    /* the picture is a fresh <img> the script makes (see lend()), so a scoped rule never reaches it: :global */
+    .dcard-art { overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .dcard-art :global(.isle-img) { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .dcard-text { grid-column: 1; grid-row: 2; border-right: 0; }
+    .dcard-nav { grid-column: 1; grid-row: 3; flex-direction: row; border-left: 0; border-top: 1px solid var(--color-line);
+                 background: #0b0b0b; padding-bottom: env(safe-area-inset-bottom, 0px); }
+    .dnav { flex: 1 1 0; height: 56px; display: flex; align-items: center; justify-content: center; gap: 9px; border-left: 1px solid var(--color-line);
+            font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label); text-transform: uppercase; }
+    .dnav[data-step="-1"] { order: 1; border-left: 0; }
+    .dnav[data-close] { order: 2; }
+    .dnav[data-step="1"] { order: 3; }
+    .dnav[data-step="-1"]::after { content: 'Above'; }
+    .dnav[data-close]::after { content: 'Close'; }
+    .dnav[data-step="1"]::after { content: 'Below'; }
+    :global(.peek) { padding: 20px 20px 28px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .isle, .stairmark, .vox, .hud-card.is-shown, .here-pin b, .here-pin.is-lifted { animation: none; }
+    .isle, .descent, .crawl { transition: none; }
   }
 </style>

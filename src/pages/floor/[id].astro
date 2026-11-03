@@ -1,0 +1,682 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Sealed from '../../components/Sealed.astro';
+import MapVoxel from '../../components/MapVoxel.astro';
+import { reveals } from '../../lib/spoiler';
+import { getBooks, getFloors, getForetold, getAllBeats, getEntities, readGate, KIND_LABELS } from '../../lib/content';
+import { floorStatus, hasPage } from '../../lib/floorstatus';
+import { layersShown, mapSteps, pickStep, changesAt, stepLabel, type FloorMapData } from '../../lib/floormap';
+import { VOXEL_MAPS } from '../../lib/voxel/maps/index';
+import { stampOf, span } from '../../lib/stamps';
+import { figureFor, type FigureStep } from '../../lib/voxel/art';
+
+/* A floor's own page, and the one place its story lives: the arrival, the
+   map drawn as far as the reader has read, the crawl a stretch at a time, then
+   how the floor works, who lives there, what will kill you, and everyone met
+   on it. The homepage is the overview; every tile on it opens one of these. */
+
+const id = Number(Astro.params.id);
+const { gate } = await readGate(Astro.cookies);
+const [books, floors] = await Promise.all([getBooks(), getFloors()]);
+const floor = floors.find(f => f.id === id);
+
+/* A floor the reader has heard of but not reached shows the page for floors
+   ahead, at this same address; one they know nothing of redirects, the rule an
+   entity page follows, because a page that exists says there is something to say. */
+const foretold = await getForetold();
+if (!floor || !reveals(gate, floor.revealedAt)) {
+  if (id >= 1 && id <= 18 && hasPage(floorStatus(id, floors, foretold, gate))) return Astro.rewrite(`/floor/ahead/${id}`);
+  return Astro.redirect('/', 302);
+}
+
+interface Step { at: string; sortKey: number; text: string }
+interface Section { id: string; title: string; steps: Step[] }
+const guide = (floor.guide ?? []) as Section[];
+const map = (floor.map ?? null) as FloorMapData | null;
+const vmap = VOXEL_MAPS[floor.id];
+
+/* The story, a stretch at a time, each part unsealed at the end of the stretch
+   it tells (the build resolves every part's sortKey; the page only compares).
+   A database seeded before recaps became parts still holds one string; show it
+   as a single part rather than nothing. */
+interface Part { title: string; text: string; from: string; at: string; sortKey: number }
+const allParts: Part[] = Array.isArray(floor.recap) ? floor.recap as Part[]
+  : typeof floor.recap === 'string' && floor.recap
+    ? [{ title: 'What happened', text: floor.recap, from: floor.revealedAt, at: floor.recapAt, sortKey: floor.recapSortKey }]
+    : [];
+const storyShown = allParts.filter(p => gate.frontier >= p.sortKey);
+const storyNext = allParts.find(p => gate.frontier < p.sortKey);
+const storyLeft = allParts.length - storyShown.length;
+/* A part is written as one piece, and a quarter-page block reads as a wall:
+   break it once, at the sentence nearest its middle. */
+function paragraphs(text: string): string[] {
+  const cuts = [...text.matchAll(/[.!?] (?=[A-Z])/g)].map(m => (m.index ?? 0) + 1);
+  if (text.length < 700 || !cuts.length) return [text];
+  const mid = text.length / 2;
+  const at = cuts.reduce((best, c) => (Math.abs(c - mid) < Math.abs(best - mid) ? c : best));
+  return [text.slice(0, at).trim(), text.slice(at).trim()];
+}
+
+const book = books.find(b => b.id === floor.book);
+
+/* Each section shows the latest step reached; the tagline rule, a floor wide. */
+const sections = guide.map(s => {
+  const reached = s.steps.filter(st => gate.frontier >= st.sortKey);
+  return { ...s, step: reached.at(-1) ?? null, next: s.steps.find(st => gate.frontier < st.sortKey) ?? null };
+});
+
+
+/* The map can be rewound. Its timeline is the points where it changes, cut off
+   at the reader's frontier; `?at=` picks one and is clamped to that frontier,
+   so the address can rewind the map and never fast-forward it. */
+const steps = mapSteps(map, gate.frontier);
+const atParam = Astro.url.searchParams.get('at');
+const mapAt = pickStep(steps, atParam == null ? null : Number(atParam), gate.frontier);
+const rewound = mapAt != null && mapAt !== steps.at(-1);
+const mapGate = mapAt == null ? gate : { ...gate, frontier: mapAt };
+const layers = layersShown(map, mapGate);
+const stepIdx = mapAt == null ? -1 : steps.indexOf(mapAt);
+/* Only features with a marker count as a change; the caption is chrome. */
+const changes = (() => {
+  if (mapAt == null || !vmap) return { added: [], removed: [] };
+  const c = changesAt(map, mapAt), marked = (id: string) => !!vmap.anchors[id];
+  return { added: c.added.filter(l => marked(l.id)), removed: c.removed.filter(l => marked(l.id)) };
+})();
+const span0 = steps[0] ?? 0, spanN = steps.at(-1) ?? 0;
+const tickPos = (k: number) => (spanN > span0 ? ((k - span0) / (spanN - span0)) * 100 : 0);
+/* Labels where there is room for them: changes bunch up (chapters 26 to 29
+   on this floor), and a label every few percent is all a track can carry. The
+   last one always shows; it is where the reader is. */
+const labelled = new Set<number>();
+{
+  let last = -Infinity;
+  steps.forEach((k, i) => { const x = tickPos(k); if (x - last >= 6) { labelled.add(i); last = x; } });
+  const n = steps.length - 1;
+  if (n >= 0 && !labelled.has(n)) {
+    for (const i of [...labelled]) if (tickPos(steps[n]) - tickPos(steps[i]) < 6) labelled.delete(i);
+    labelled.add(n);
+  }
+}
+const qs = (o: Record<string, string | number | null>) =>
+  '?' + Object.entries(o).filter(([, v]) => v != null).map(([k, v]) => `${k}=${encodeURIComponent(String(v))}`).join('&');
+const caption = layers.find(l => l.id === 'caption')?.label ?? null;
+const mapTitle = map?.title && reveals(gate, floor.revealedAt) ? map.title : floor.name;
+/* The key is the same numbered list both renderers draw from. */
+/* Numbered in the data's own order: every reached layer with a label and an
+   anchor in the scene. The key and the picture read this one list. */
+const callouts = vmap ? layers.filter(l => l.label && vmap.anchors[l.id]).map((l, i) => ({ n: i + 1, id: l.id, label: l.label!, at: l.at })) : [];
+const location0 = `/floor/${floor.id}`;
+const moreToCome = map ? map.layers.some(l => gate.frontier < l.sortKey) : false;
+
+/* Who turns up here: every entry with a reached beat on this floor, in the
+   order the reader met them on it. The beat's sortKey already carries its
+   entity's own gate, so an unmet name cannot be in this list. */
+const [beats, entities] = await Promise.all([getAllBeats(), getEntities()]);
+const byId = new Map(entities.map(e => [e.id, e]));
+const seen = new Map<string, number>();
+for (const b of beats) {
+  if (b.floor !== floor.id || gate.frontier < b.sortKey) continue;
+  seen.set(b.entityId, (seen.get(b.entityId) ?? 0) + 1);
+}
+const cast = [...seen].map(([eid, n]) => ({ e: byId.get(eid)!, n })).filter(x => x.e);
+const KINDS = ['character', 'faction', 'place', 'item', 'mechanic', 'thread'];
+const castByKind = KINDS.map(k => ({ k, rows: cast.filter(x => x.e.kind === k) })).filter(g => g.rows.length);
+/* The characters on the floor stand in a line-up, each as they looked on this
+   floor: the latest look by the time the crawl leaves it (never past the
+   reader's own point), so the fourth floor's Mordecai is the skyfowl, not
+   whatever he is by the reader's book. One first described after the floor
+   shows the first look the reader has reached; one not drawn yet, the shadow. */
+const floorEnd = floor.recapSortKey ?? Infinity;
+const castFigures = new Map(await Promise.all(cast.filter(x => x.e.kind === 'character')
+  .map(async ({ e }) => {
+    const steps = (e.figures ?? []) as FigureStep[];
+    const then = await figureFor(e.id, steps, k => reveals(gate, k) && k <= floorEnd);
+    const first = then.own || !steps.length ? then : await figureFor(e.id, steps, k => reveals(gate, k) && k <= steps[0].sortKey);
+    return [e.id, first.small] as const;
+  })));
+
+
+/* Neighbours, only where the reader has arrived. A link to floor 6 from a book-4
+   page would say there is a sixth floor waiting, which the premise already does,
+   but its name would not be ours to give. */
+const near = (d: number) => {
+  const n = floor.id + d;
+  const st = n >= 1 && n <= 18 ? floorStatus(n, floors, foretold, gate) : null;
+  return st && hasPage(st) ? st : null;
+};
+const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n => n.s) as { s: NonNullable<ReturnType<typeof near>>; dir: string }[];
+---
+<Layout title={floor.name}>
+  <section class="wrap head">
+    <a class="back label" href="/">← All floors</a>
+    <div class="titlerow">
+      <div class="floorno" style={`background:${floor.accent};color:${floor.ink}`}>{String(floor.id).padStart(2, '0')}</div>
+      <div>
+        <p class="eyebrow">Floor {floor.id} · Book {floor.bookSpan ?? floor.book} · {book?.title}</p>
+        <h1 style={`view-transition-name:floor-name-${floor.id}`}>{floor.name}</h1>
+      </div>
+    </div>
+    <p class="sys arrival"><b>*** Now entering ***</b>{floor.premise}</p>
+    {/* on a phone: a bar of the page's sections, pinned under the header once the head has scrolled away */}
+    <nav class="jump" id="jump" aria-label="On this page">
+      {map && vmap && <a href="#map">The map</a>}
+      <a href="#crawl">The crawl</a>
+      {sections.map(s => <a href={`#g-${s.id}`}>{s.title}</a>)}
+      {castByKind.length > 0 && <a href="#cast">Who turns up here</a>}
+    </nav>
+  </section>
+
+  {map && vmap && (
+    <section class="wrap" id="map">
+      <div class="maphead">
+        <h2 class="sect">The map</h2>
+      </div>
+      {steps.length > 1 && (
+        <div class="scrub" id="scrub" data-steps={steps.join(',')}>
+          <div class="scrub-row">
+            <button type="button" class="playbtn" id="playbtn" aria-label="Play the map through">
+              <svg viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><path class="i-play" d="M2 1L9 5L2 9Z" fill="currentColor" /><path class="i-pause" d="M2 1h2v8H2zM6 1h2v8H6z" fill="currentColor" /></svg>
+            </button>
+            <div class="scrub-track">
+              {/* The slider runs in chapters, so its thumb sits over the tick it
+                  stands for; the script snaps it to the nearest change. */}
+              <input type="range" id="scrubber" min={span0} max={spanN} value={mapAt ?? spanN} step="1"
+                     aria-label="Rewind the map" aria-valuetext={stepLabel(mapAt!)} />
+              <ol class="ticks" aria-label="Where the map changes">
+                {steps.map((k, i) => (
+                  <li style={`left:${tickPos(k).toFixed(2)}%`}>
+                    <a href={qs({ at: i === steps.length - 1 ? null : k })} data-i={i} aria-current={i === stepIdx ? 'step' : undefined}
+                       title={stepLabel(k)}><span class={labelled.has(i) ? undefined : 'quiet'}>{stepLabel(k, floor.book)}</span></a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+          <p class="scrub-now" id="scrubnow" aria-live="polite">
+            <b>{rewound ? 'Rewound to' : 'Now'} · {stepLabel(mapAt!)}</b>
+            {changes.added.length > 0 && <span class="chg chg-add">New: {changes.added.map(l => l.label).join(' · ')}</span>}
+            {changes.removed.length > 0 && <span class="chg chg-gone">Gone: {changes.removed.map(l => l.label).join(' · ')}</span>}
+            {rewound && <a class="scrub-back" href={location0}>Back to where you are</a>}
+          </p>
+        </div>
+      )}
+      <figure class="slab mapframe" id="mapframe" style={`--map-accent:${floor.accent};--map-ink:${floor.ink};view-transition-name:floor-art-${floor.id}`}>
+        {/* on a phone the map opens full screen to be explored at its own size */}
+        <div class="explore-bar"><span class="label">The map · Floor {floor.id}</span><button type="button" class="explore-close" data-explore-close>✕ Close</button></div>
+        <div class="mapscroll">
+        <MapVoxel map={vmap} layers={layers} callouts={callouts} accent={floor.accent} ink={floor.ink} title={mapTitle} caption={caption} />
+        <button type="button" class="explore-open" data-explore>Explore <span aria-hidden="true">⤢</span></button>
+        </div>
+        {callouts.length > 0 &&
+          <ol class="mapkey">
+            {callouts.map(c => (
+              <li>
+                <button type="button" class="keyrow" data-layer={c.id} aria-pressed="false">
+                  <span class="keyno">{c.n}</span><span class="keytext">{c.label}</span><span class="label">{stampOf(c.at)}</span>
+                </button>
+              </li>
+            ))}
+          </ol>}
+        {callouts.length > 6 && <button type="button" class="keymore" data-keymore><span class="km-more">All {callouts.length} places</span><span class="km-less">Fewer</span></button>}
+        <figcaption class="label">
+          <span class="hint">Point at a number or a name to find it; tap to keep it lit. </span>
+          {rewound
+            ? `Showing the map as it stood at ${stepLabel(mapAt!)}. Drag the timeline forward, as far as you have read.`
+            : moreToCome
+            ? 'Drawn as far as you have read. More of it opens as you go.'
+            : 'Drawn as far as you have read. That is all of it.'}
+        </figcaption>
+      </figure>
+    </section>
+  )}
+
+  <section class="wrap story" id="crawl">
+    <h2 class="sect">The crawl</h2>
+    {storyShown.length > 0 && (
+      <ol class="parts">
+        {storyShown.map(p => (
+          <li class="part">
+            <span class="label part-span">{span(p.from, p.at)}</span>
+            <h3>{p.title}</h3>
+            {paragraphs(p.text).map(t => <p>{t}</p>)}
+          </li>
+        ))}
+      </ol>
+    )}
+    {storyNext && <Sealed at={storyNext.sortKey} count={storyLeft} noun="part" compact />}
+  </section>
+
+  {sections.length > 0 && <section class="wrap guide">
+    {sections.map(s => (
+      <article class="gsec" id={`g-${s.id}`}>
+        <h2 class="sect">{s.title}</h2>
+        {s.step
+          ? <>
+              <span class="label stamp">As of {stampOf(s.step.at)}</span>
+              <p>{s.step.text}</p>
+            </>
+          : s.next && <Sealed at={s.next.sortKey} compact />}
+      </article>
+    ))}
+  </section>}
+
+  {castByKind.length > 0 && (
+    <section class="wrap" id="cast">
+      <h2 class="sect">Who turns up here</h2>
+      <p class="intro">Everyone and everything with an entry on this floor, as far as you have read, in the order you meet them here.</p>
+      {castByKind.map(g => (
+        <div class="castgroup">
+          <h3 class="label">{KIND_LABELS[g.k] ?? g.k} · {g.rows.length}</h3>
+          {g.k === 'character'
+            ? <ul class="lineup">
+                {g.rows.map(({ e, n }) => { const f = castFigures.get(e.id)!; return (
+                  <li><a href={`/entity/${e.id}`}>
+                    <img src={f.src} width={f.width} height={f.height} alt="" loading="lazy" decoding="async" />
+                    <span class="who">{e.name}</span><span class="label">{n} {n === 1 ? 'entry' : 'entries'}</span>
+                  </a></li>
+                ); })}
+              </ul>
+            : <ul class="cast">
+                {g.rows.map(({ e, n }) => (
+                  <li><a href={`/entity/${e.id}`}>{e.name}</a><span class="label">{n}</span></li>
+                ))}
+              </ul>}
+        </div>
+      ))}
+    </section>
+  )}
+
+  {nav.length > 0 && (
+    <nav class="wrap floornav" aria-label="Other floors">
+      {nav.map(({ s, dir }) => (
+        <a href={`/floor/${s.id}`} class="slab">
+          <span class="label">{dir} · Floor {s.id}{s.kind === 'reached' ? '' : ' · not reached yet'}</span>
+          <b>{s.name ?? 'Not yet named'}</b>
+        </a>
+      ))}
+    </nav>
+  )}
+</Layout>
+
+<script>
+  /* The map and its key point at each other. Pointing at an entry in the key,
+     a numbered marker or the feature itself lights all three and dims the
+     rest; a click or a tap pins it, Escape or a second click lets it go.
+     Everything is markup the server already rendered: the script only toggles
+     classes, so with no JavaScript the map and key are simply a map and a key. */
+  const fig = document.getElementById('mapframe');
+  if (fig) {
+    let pinned: string | null = null;
+    const all = (id: string) => fig.querySelectorAll(`[data-layer="${CSS.escape(id)}"]`);
+    function show(id: string | null) {
+      fig!.querySelectorAll('.is-hl').forEach(el => el.classList.remove('is-hl'));
+      if (id) {
+        fig!.dataset.hl = id;
+        all(id).forEach(el => el.classList.add('is-hl'));
+        reveal();
+      }
+      else delete fig!.dataset.hl;
+      fig!.querySelectorAll<HTMLButtonElement>('.keyrow').forEach(b =>
+        b.setAttribute('aria-pressed', String(b.dataset.layer === pinned)));
+    }
+    /* On a phone the map is a strip that scrolls sideways, so a lit name can
+       sit outside it: bring the number and its name into view. */
+    function reveal() {
+      const sc = fig!.querySelector<HTMLElement>('.mapscroll');
+      if (!sc || (sc.scrollWidth <= sc.clientWidth && sc.scrollHeight <= sc.clientHeight)) return;
+      const parts = [...fig!.querySelectorAll('.fmap-callout.is-hl, .co-label.is-hl')].map(el => el.getBoundingClientRect());
+      if (!parts.length) return;
+      const l = Math.min(...parts.map(r => r.left)), r = Math.max(...parts.map(r => r.right)), box = sc.getBoundingClientRect();
+      const dx = l < box.left + 8 ? l - box.left - 8 : r > box.right - 8 ? Math.min(r - box.right + 8, l - box.left - 8) : 0;
+      const t = Math.min(...parts.map(r => r.top)), b = Math.max(...parts.map(r => r.bottom));
+      const dy = sc.scrollHeight <= sc.clientHeight ? 0 : t < box.top + 8 ? t - box.top - 8 : b > box.bottom - 8 ? Math.min(b - box.bottom + 8, t - box.top - 8) : 0;
+      if (dx || dy) sc.scrollBy({ left: dx, top: dy, behavior: 'smooth' });
+    }
+    const HIT = '.keyrow, .fmap-callout, .map-hit';
+    const find = (el: EventTarget | null) => (el instanceof Element ? el.closest(HIT) : null) as HTMLElement | SVGElement | null;
+    const target = (e: Event) => find(e.target);
+    const idOf = (el: Element | null) => (el as HTMLElement | null)?.dataset?.layer ?? null;
+
+    fig.addEventListener('pointerover', e => { const id = idOf(target(e)); if (id) show(id); });
+    fig.addEventListener('pointerout', e => {
+      // Moving from one marked thing straight onto another: the pointerover will handle it.
+      if (find((e as PointerEvent).relatedTarget)) return;
+      show(pinned);
+    });
+    fig.addEventListener('focusin', e => { const id = idOf(target(e)); if (id) show(id); });
+    fig.addEventListener('focusout', () => show(pinned));
+    fig.addEventListener('click', e => {
+      const id = idOf(target(e));
+      if (!id) return;
+      pinned = pinned === id ? null : id;
+      show(pinned ?? id);
+    });
+    fig.addEventListener('keydown', e => {
+      const el = target(e);
+      if ((e.key === 'Enter' || e.key === ' ') && el && el.classList.contains('fmap-callout')) {
+        e.preventDefault(); (el as SVGElement).dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      }
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && pinned) { pinned = null; show(null); } });
+
+    /* On a phone the map is the whole floor at a glance, fitted to the width, and
+       Explore opens it full screen at its own size, to be dragged around, with
+       the key as a row along the bottom. The state lives on the figure, which the
+       timeline never replaces (only its children), so a rewind keeps it. */
+    fig.classList.add('phone-ready');
+    const exploring = () => fig!.classList.contains('is-explore');
+    function explore(on: boolean) {
+      fig!.classList.toggle('is-explore', on);
+      document.documentElement.classList.toggle('map-exploring', on);
+      const sc = fig!.querySelector<HTMLElement>('.mapscroll');
+      if (on && sc) requestAnimationFrame(() => { sc.scrollLeft = (sc.scrollWidth - sc.clientWidth) / 2; sc.scrollTop = (sc.scrollHeight - sc.clientHeight) / 2; });
+      fig!.querySelector<HTMLElement>(on ? '[data-explore-close]' : '[data-explore]')?.focus({ preventScroll: true });
+    }
+    fig.addEventListener('click', e => {
+      const el = e.target as Element;
+      if (el.closest('[data-explore]')) explore(true);
+      else if (el.closest('[data-explore-close]')) explore(false);
+      else if (el.closest('[data-keymore]')) fig!.classList.toggle('keys-open');
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && exploring() && !pinned) explore(false); });
+    addEventListener('resize', () => { if (exploring() && !matchMedia('(max-width: 640px)').matches) explore(false); });
+
+    /* The timeline. Each step is a server render of the same page at that
+       point (clamped to the reader there, too), fetched and swapped into the
+       figure: the map, the key and the caption, nothing else. The slider is
+       never replaced, so it keeps focus while it is dragged. Only a failed
+       fetch falls back to a navigation; a failed address write is ignored. */
+    const scrub = document.getElementById('scrub');
+    const slider = document.getElementById('scrubber') as HTMLInputElement | null;
+    if (scrub && slider) {
+      const steps = (scrub.dataset.steps ?? '').split(',').map(Number);
+      const cache = new Map<number, Promise<Document | null>>();
+      const urlFor = (i: number) => `${location.pathname}${i === steps.length - 1 ? '' : `?at=${steps[i]}`}`;
+      const load = (i: number) => {
+        if (!cache.has(i)) cache.set(i, fetch(urlFor(i), { credentials: 'same-origin' })
+          .then(r => (r.ok ? r.text() : Promise.reject(r.status)))
+          .then(t => new DOMParser().parseFromString(t, 'text/html'))
+          .catch(() => null));
+        return cache.get(i)!;
+      };
+      const nearest = (v: number) => steps.reduce((best, k, i) => (Math.abs(k - v) < Math.abs(steps[best] - v) ? i : best), 0);
+      let want = nearest(Number(slider.value)), timer = 0;
+      async function go(i: number) {
+        want = i;
+        const doc = await load(i);
+        if (want !== i) return;                        // a later move overtook this one
+        if (!doc) { location.href = urlFor(i); return; }
+        const nf = doc.getElementById('mapframe'), nn = doc.getElementById('scrubnow');
+        if (nf) fig!.replaceChildren(...[...nf.childNodes].map(n => document.importNode(n, true)));
+        if (nn) document.getElementById('scrubnow')!.replaceChildren(...[...nn.childNodes].map(n => document.importNode(n, true)));
+        scrub!.querySelectorAll('.ticks a').forEach(a => a.toggleAttribute('aria-current', Number((a as HTMLElement).dataset.i) === i));
+        scrub!.querySelectorAll('.ticks a[aria-current]').forEach(a => a.setAttribute('aria-current', 'step'));
+        slider!.value = String(steps[i]);
+        slider!.setAttribute('aria-valuetext', (scrub!.querySelectorAll('.ticks a')[i] as HTMLElement)?.title ?? '');
+        if (pinned && !fig!.querySelector(`[data-layer="${CSS.escape(pinned)}"]`)) pinned = null;
+        show(pinned);
+        try { history.replaceState(null, '', urlFor(i)); } catch { /* the view is already right */ }
+      }
+      slider.addEventListener('input', () => {
+        stop();
+        const i = nearest(Number(slider.value));
+        slider.value = String(steps[i]);
+        clearTimeout(timer); timer = window.setTimeout(() => go(i), 60);
+      });
+      /* Arrow keys move one change, not one chapter: most chapters change nothing. */
+      slider.addEventListener('keydown', e => {
+        const i = nearest(Number(slider.value));
+        const to = ({ ArrowLeft: i - 1, ArrowDown: i - 1, ArrowRight: i + 1, ArrowUp: i + 1, PageDown: i - 3, PageUp: i + 3, Home: 0, End: steps.length - 1 } as Record<string, number>)[e.key];
+        if (to == null) return;
+        e.preventDefault(); stop();
+        const j = Math.max(0, Math.min(steps.length - 1, to));
+        slider.value = String(steps[j]); go(j);
+      });
+      scrub.addEventListener('click', e => {
+        const a = (e.target as Element).closest?.('.ticks a') as HTMLElement | null;
+        if (!a || (e as MouseEvent).button !== 0 || (e as MouseEvent).metaKey || (e as MouseEvent).ctrlKey) return;
+        e.preventDefault(); stop(); go(Number(a.dataset.i));
+      });
+
+      /* Play: walk the map through every state from the first, a beat apart. */
+      const btn = document.getElementById('playbtn')!;
+      let playing = 0;
+      function stop() { if (playing) { clearInterval(playing); playing = 0; btn.classList.remove('is-playing'); btn.setAttribute('aria-label', 'Play the map through'); } }
+      btn.addEventListener('click', () => {
+        if (playing) return stop();
+        steps.forEach((_, i) => load(i));               // warm every state first
+        let i = nearest(Number(slider.value)) >= steps.length - 1 ? 0 : nearest(Number(slider.value));
+        go(i);
+        btn.classList.add('is-playing'); btn.setAttribute('aria-label', 'Pause');
+        playing = window.setInterval(() => {
+          i += 1;
+          if (i >= steps.length) return stop();
+          go(i);
+        }, 1100);
+      });
+    }
+  }
+
+  /* On a phone the page's sections are a bar pinned under the header once the
+     head has scrolled away: the page is long, and a reader on the cast wants the
+     crawl without scrolling back through it. The section in view is marked, and
+     the bar scrolls itself to keep that chip in sight. */
+  const jump = document.getElementById('jump');
+  const head = document.querySelector<HTMLElement>('.head');
+  if (jump && head) {
+    const links = [...jump.querySelectorAll<HTMLAnchorElement>('a')];
+    const targets = links.map(a => document.getElementById(a.hash.slice(1)));
+    const hdr = () => document.getElementById('top')?.offsetHeight ?? 53;
+    let raf = 0, cur = -1;
+    const update = () => {
+      raf = 0;
+      const h = hdr();
+      document.documentElement.style.setProperty('--hdr-h', `${h}px`);
+      jump.classList.toggle('is-on', head.getBoundingClientRect().bottom < h + 8);
+      let i = -1;
+      targets.forEach((t, k) => { if (t && t.getBoundingClientRect().top < h + jump.offsetHeight + 24) i = k; });
+      if (i !== cur) {
+        cur = i;
+        links.forEach((a, k) => a.toggleAttribute('aria-current', k === i));
+        const a = links[i];
+        if (a) jump.scrollTo({ left: a.offsetLeft - (jump.clientWidth - a.offsetWidth) / 2, behavior: 'smooth' });
+      }
+    };
+    addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
+    addEventListener('resize', () => { if (!raf) raf = requestAnimationFrame(update); });
+    update();
+  }
+</script>
+
+<style>
+  .head { padding-block: 36px 8px; }
+  .back { color: var(--color-grey-300); text-decoration: none; }
+  .back:hover { color: var(--color-gold); }
+  .titlerow { display: flex; gap: 18px; align-items: stretch; margin-top: 14px; }
+  .floorno { font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1;
+             min-width: 96px; display: flex; align-items: center; justify-content: center; padding: 14px 16px 10px; }
+  h1 { font-size: clamp(38px, 6vw, 64px); font-weight: 800; margin-top: 4px; }
+  .arrival { max-width: calc(var(--measure) + 34px); margin: 24px 0 0; }
+  section + section, section + nav { margin-top: 44px; }
+  .maphead { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  /* The timeline: a track with a mark at every point the map changes, spaced
+     by chapter, so the stretches where nothing moves look like stretches. */
+  .scrub { margin-top: 14px; border: 1px solid var(--color-line); background: var(--color-panel); padding: 12px 14px 10px; }
+  .scrub-row { display: flex; align-items: flex-start; gap: 14px; }
+  .playbtn { all: unset; flex: none; width: 30px; height: 30px; display: grid; place-items: center; cursor: pointer;
+             border: 1px solid var(--color-line); color: var(--color-gold); margin-top: 2px; }
+  .playbtn:hover, .playbtn:focus-visible { border-color: var(--color-gold); }
+  .playbtn .i-pause, .playbtn.is-playing .i-play { display: none; }
+  .playbtn.is-playing .i-pause { display: inline; }
+  .scrub-track { position: relative; flex: 1 1 auto; min-width: 0; padding-bottom: 24px; }
+  #scrubber { width: 100%; margin: 8px 0 0; accent-color: var(--color-gold); cursor: pointer; }
+  .ticks { list-style: none; margin: 0; padding: 0; position: absolute; left: 8px; right: 8px; top: 30px; height: 20px; }
+  .ticks li { position: absolute; transform: translateX(-50%); }
+  .ticks a { display: block; text-decoration: none; color: var(--color-grey-500); font-family: var(--font-mono);
+             font-size: var(--type-label); letter-spacing: .04em; white-space: nowrap; padding-top: 6px; position: relative; }
+  .ticks a::before { content: ''; position: absolute; top: 0; left: 50%; width: 1px; height: 5px; background: currentColor; }
+  .ticks a:hover, .ticks a[aria-current] { color: var(--color-gold); }
+  .ticks .quiet { visibility: hidden; }
+  .ticks a:hover .quiet, .ticks a[aria-current] .quiet { visibility: visible; }
+  .scrub-now { margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline;
+               font-size: var(--type-meta); color: var(--color-grey-200); }
+  .scrub-now b { font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label);
+                 text-transform: uppercase; color: var(--color-gold); font-weight: 600; }
+  .chg-add::first-letter { color: var(--color-gold); }
+  .chg-gone { color: var(--color-grey-300); }
+  .scrub-back { margin-left: auto; color: var(--color-gold); font-family: var(--font-mono); font-size: var(--type-label);
+                letter-spacing: var(--ls-label); text-transform: uppercase; }
+  @media (max-width: 760px) {
+    /* too little width for chapter labels: the marks stay, the label line says where */
+    .ticks a span { visibility: hidden !important; }
+  }
+  .mapframe { margin: 14px 0 0; padding: 0; overflow: hidden; }
+  /* Under ~720px the labels would shrink past reading, so the drawing keeps a
+     floor width and its own strip scrolls; the page never does. */
+  .mapscroll { overflow-x: auto; overscroll-behavior-x: contain; min-width: 0; }
+  .mapframe :global(svg) { display: block; width: 100%; min-width: 640px; height: auto; }
+  .mapkey { list-style: none; margin: 0; padding: 14px; border-top: 1px solid var(--color-line);
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 6px 22px; }
+  .mapkey li { min-width: 0; }
+  .keyrow { all: unset; box-sizing: border-box; width: 100%; display: flex; align-items: baseline; gap: 10px;
+            padding: 5px 8px; margin: 0 -8px; border: 1px solid transparent; cursor: pointer; }
+  .keyrow:focus-visible { outline: 2px solid var(--color-gold); outline-offset: -2px; }
+  .keyrow:global(.is-hl) { background: var(--color-raised); border-color: var(--map-accent); }
+  .keyrow:global(.is-hl) .keyno { background: var(--map-accent); color: var(--map-ink); border-color: var(--map-accent); }
+  .keyrow[aria-pressed="true"] .keytext { color: #fff; }
+  .hint { color: var(--color-grey-500); }
+  .keyno { flex: none; font-family: var(--font-mono); font-size: var(--type-label); color: var(--color-gold);
+           border: 1px solid var(--color-gold); min-width: 22px; text-align: center; padding: 1px 4px; }
+  .keytext { color: var(--color-grey-100); font-size: var(--type-meta); flex: 1 1 auto; min-width: 0; }
+  .mapkey .label { color: var(--color-grey-500); flex: none; }
+  .mapframe figcaption { padding: 10px 14px; border-top: 1px solid var(--color-line); color: var(--color-grey-300); }
+  .guide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 40px; }
+  .gsec p { font-size: var(--type-body); line-height: 1.7; color: var(--color-grey-200); margin: 8px 0 0; }
+  .stamp { color: var(--color-gold); display: block; margin-top: 6px; }
+  .intro { color: var(--color-grey-300); font-size: var(--type-meta); margin: 6px 0 18px; max-width: var(--measure); }
+  .castgroup + .castgroup { margin-top: 18px; }
+  .castgroup h3 { color: var(--color-grey-300); margin-bottom: 8px; }
+  .cast { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .cast li { display: inline-flex; align-items: baseline; gap: 8px; border: 1px solid var(--color-line);
+             background: var(--color-raised); padding: 5px 10px; }
+  .cast a { color: var(--color-grey-100); text-decoration: none; font-size: var(--type-meta); }
+  .cast a:hover { color: var(--color-gold); }
+  .cast .label { color: var(--color-grey-500); }
+  /* the characters stand in a line-up, each a figure with a name under it */
+  .lineup { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 6px; }
+  /* every figure stands on one ground line, whatever its height, so the names line up */
+  .lineup a { display: grid; grid-template-rows: 1fr auto auto; justify-items: center; gap: 2px; padding: 4px 6px 10px; border: 1px solid var(--color-line);
+              background: var(--color-raised); text-decoration: none; text-align: center; height: 100%; box-sizing: border-box; }
+  .lineup a:hover, .lineup a:focus-visible { border-color: var(--color-gold); outline: none; }
+  .lineup a:hover .who { color: var(--color-gold); }
+  .lineup img { image-rendering: pixelated; max-width: 100%; height: auto; align-self: end; }
+  .lineup .who { color: var(--color-grey-100); font-size: var(--type-meta); line-height: 1.25; }
+  .parts { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 28px; }
+  .part { max-width: var(--measure); }
+  .part-span { color: var(--color-gold); }
+  .part h3 { font-size: var(--type-entry); font-weight: 700; color: #fff; margin: 4px 0 8px; }
+  .part p { margin: 0 0 12px; font-size: var(--type-body); line-height: 1.7; color: var(--color-grey-200); }
+  .part p:last-child { margin-bottom: 0; }
+  .story :global(.sealed) { margin-top: 22px; max-width: var(--measure); }
+  .partlinks { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 1px; background: var(--color-line);
+               border: 1px solid var(--color-line); }
+  .partlinks a { display: flex; gap: 16px; align-items: baseline; padding: 11px 14px; background: var(--color-panel);
+                 color: var(--color-grey-100); text-decoration: none; font-size: var(--type-body); }
+  .partlinks a:hover { color: var(--color-gold); }
+  .partlinks .label { color: var(--color-gold); min-width: 150px; }
+  .floornav { display: flex; gap: 12px; justify-content: space-between; padding-bottom: 40px; }
+  .floornav a { flex: 1 1 0; padding: 14px 16px; text-decoration: none; display: flex; flex-direction: column; gap: 4px; }
+  .floornav a:hover { border-color: var(--color-gold); }
+  .floornav b { color: #fff; font-family: var(--font-display); font-size: var(--type-entry); }
+  .floornav .label { color: var(--color-grey-300); }
+  /* Map text is set in the System's face; sizes are in the drawing's own units. */
+  /* Highlighting. The scene dims itself and redraws the one feature through
+     its own mask, so the lit feature keeps its colours. */
+  :global(.fmap g[data-layer]), :global(.fmap .fmap-callout) { transition: opacity .15s ease; }
+  :global(.fmap .fmap-callout) { cursor: pointer; outline: none; }
+  :global(.fmap .map-hit) { cursor: pointer; }
+  :global(.mapframe[data-hl] .fmap .fmap-callout:not(.is-hl)) { opacity: .3; }
+  :global(.fmap .fmap-callout.is-hl .co-face) { fill: var(--map-accent); }
+  :global(.fmap .fmap-callout.is-hl .co-num) { fill: var(--map-ink); }
+  :global(.fmap .fmap-callout:focus-visible .co-face) { stroke: #fff; stroke-width: 1.5; }
+  :global(.fmap-pixel .px-dim) { opacity: 0; pointer-events: none; transition: opacity .15s ease; }
+  :global(.mapframe[data-hl] .fmap-pixel .px-dim) { opacity: .68; }
+  :global(.fmap-pixel .px-hl) { display: none; pointer-events: none; }
+  :global(.fmap-pixel .px-hl.is-hl) { display: inline; }
+  @media (prefers-reduced-motion: reduce) {
+    :global(.fmap g[data-layer]), :global(.fmap .fmap-callout), :global(.fmap-pixel .px-dim) { transition: none; }
+  }
+  :global(.fmap-small) { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .1em; }
+  :global(.fmap-num) { font-family: var(--font-mono); font-size: 10px; font-weight: 700; }
+  :global(.fmap-title) { font-family: var(--font-display); font-weight: 800; font-size: 20px; letter-spacing: .08em; }
+  :global(.fmap-px) { font-weight: 700; }
+  /* the voxel map's own units are pixels of the picture, about half a screen pixel */
+  :global(.vx-num) { font-size: 7px; }
+  :global(.vx-title) { font-size: 9px; letter-spacing: .08em; }
+  :global(.fmap-voxel) { background: #0c0c0c; }
+  /* a lit callout says what it is, so the reader need not look down at the key */
+  :global(.fmap-voxel .co-label) { display: none; pointer-events: none; }
+  :global(.fmap-voxel .co-label.is-hl) { display: inline; }
+  :global(.fmap-voxel .fmap-callout.is-hl) { opacity: 1; }
+  :global(.vx-label) { font-family: var(--font-mono); font-size: 7px; letter-spacing: .03em; fill: #f2f2f2; }
+  @media (max-width: 760px) {
+    .guide { grid-template-columns: minmax(0, 1fr); }
+    .partlinks a { flex-direction: column; gap: 2px; }
+  }
+  @media (max-width: 560px) {
+    .floorno { font-size: 38px; min-width: 66px; }
+    .floornav { flex-direction: column; }
+  }
+
+  /* ---- a phone: the page's sections in a bar, the map whole at a glance and explored full screen ----
+     The map used to be a strip that scrolled sideways, showing a corner of the floor, and the page ran
+     to nineteen thousand pixels with no way through it but scrolling. Nothing here reaches past 640px. */
+  .jump, .explore-bar, .explore-open, .keymore { display: none; }
+  @media (max-width: 640px) {
+    .head { padding-top: 26px; }
+    .jump { display: flex; position: fixed; z-index: 45; left: 0; right: 0; top: var(--hdr-h, 53px); gap: 6px; margin: 0;
+            padding: 9px 16px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
+            background: #0b0b0bf2; border-bottom: 1px solid var(--color-line);
+            translate: 0 -100%; opacity: 0; pointer-events: none; transition: translate .3s cubic-bezier(.22, 1, .36, 1), opacity .2s ease; }
+    .jump::-webkit-scrollbar { display: none; }
+    .jump.is-on { translate: 0 0; opacity: 1; pointer-events: auto; }
+    .jump a { flex: none; white-space: nowrap; text-decoration: none; padding: 7px 11px; border: 1px solid var(--color-line);
+              font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--color-grey-200); }
+    .jump a[aria-current] { color: var(--color-gold); border-color: var(--color-gold); }
+    #map, #crawl, #cast, .gsec { scroll-margin-top: calc(var(--hdr-h, 53px) + 56px); }
+
+    /* the map, the whole floor at a glance: fitted to the width, its numbers drawn larger so they still read */
+    .mapscroll { position: relative; overflow: hidden; }
+    .mapframe :global(svg) { min-width: 0; }
+    .mapframe :global(.fmap-voxel .fmap-callout rect), .mapframe :global(.fmap-voxel .fmap-callout text) { transform-box: fill-box; transform-origin: center; scale: 1.55; }
+    .mapframe.phone-ready .explore-open { display: inline-flex; align-items: center; gap: 8px; position: absolute; right: 10px; bottom: 10px; z-index: 2;
+                    padding: 9px 13px; border: 1px solid var(--map-accent); background: #0c0c0cee; color: #fff; cursor: pointer;
+                    font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label); text-transform: uppercase; }
+    .mapframe.phone-ready .explore-open span { color: var(--map-accent); }
+    /* the key: its first places, the rest one tap away */
+    .mapframe.phone-ready:not(.keys-open) .mapkey li:nth-child(n+7) { display: none; }
+    .mapframe.phone-ready .keymore { display: flex; width: 100%; justify-content: center; padding: 12px; margin: 0; border: 0; border-top: 1px solid var(--color-line);
+               background: none; color: var(--color-gold); cursor: pointer;
+               font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label); text-transform: uppercase; }
+    .keymore .km-less, .mapframe.keys-open .keymore .km-more { display: none; }
+    .mapframe.keys-open .keymore .km-less { display: inline; }
+    .mapframe :global(.hint) { display: none; }
+
+    /* Explore: the map full screen at its own size, dragged around, the key a row of places along the bottom */
+    .mapframe.is-explore { position: fixed; inset: 0; z-index: 200; margin: 0; border: 0; display: flex; flex-direction: column; background: #0c0c0c; }
+    .is-explore .explore-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex: none;
+                               padding: 0 0 0 18px; height: 54px; border-bottom: 1px solid var(--color-line); color: var(--color-grey-200); }
+    .explore-close { align-self: stretch; padding: 0 18px; border: 0; border-left: 1px solid var(--color-line); background: none; color: var(--color-gold); cursor: pointer;
+                     font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label); text-transform: uppercase; }
+    .is-explore .mapscroll { flex: 1 1 auto; overflow: auto; overscroll-behavior: contain; }
+    .is-explore .mapscroll :global(svg) { width: 1000px; max-width: none; }
+    .is-explore :global(.fmap-voxel .fmap-callout rect), .is-explore :global(.fmap-voxel .fmap-callout text) { scale: 1; }
+    .is-explore .explore-open, .is-explore .keymore, .is-explore figcaption { display: none !important; }
+    .is-explore .mapkey { flex: none; display: flex; flex-wrap: nowrap; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
+                          padding: 10px 12px calc(12px + env(safe-area-inset-bottom, 0px)); }
+    .is-explore .mapkey li { display: block !important; flex: none; }
+    .is-explore .keyrow { width: auto; white-space: nowrap; }
+    .is-explore .mapkey .label { display: none; }
+    :global(html.map-exploring), :global(html.map-exploring body) { overflow: hidden; }
+  }
+</style>

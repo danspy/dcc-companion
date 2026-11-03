@@ -347,6 +347,19 @@ test('descriptions are a list in reading order, floored to the entity', () => {
   assert.ok(warnings.some(w => w.includes('y: description 1')));
 });
 
+test("a character's figure opens with the character or later, in reading order, and only on a character", () => {
+  const { errors } = lint({ books: [one], floors: [], entities: [
+    mk({ kind: 'character', voiceNote: 'n', figure: [{ at: '1:5', look: 'a' }, { at: '1:9', look: 'b' }] }),
+    mk({ id: 'early', kind: 'character', voiceNote: 'n', revealedAt: '1:10', figure: [{ at: '1:3', look: 'a' }] }),
+    mk({ id: 'shuffled', kind: 'character', voiceNote: 'n', figure: [{ at: '1:9', look: 'a' }, { at: '1:6', look: 'b' }] }),
+    mk({ id: 'thing', figure: [{ at: '1:5', look: 'a' }] }),
+  ] });
+  assert.equal(errors.filter(e => e.includes('entity x')).length, 0);
+  assert.ok(errors.some(e => e.includes('early') && e.includes('before the character')));
+  assert.ok(errors.some(e => e.includes('shuffled figure 2')));
+  assert.ok(errors.some(e => e.includes('thing') && e.includes('on a character')));
+});
+
 test("a floor's name may not appear before the floor does", () => {
   const base = {
     books: [{ id: 4, title: 'Four', chapters: 34 }, { id: 5, title: 'Five', chapters: 77 }],

@@ -18,6 +18,15 @@ const nav = [
   { href: '/achievement', label: 'Achievements' },
 ];
 const here = Astro.url.pathname;
+/* The section a page belongs to: its own entry, or the one it lives under. A
+   floor's page (and a floor ahead) is part of Floors, an entry's page part of
+   Who & What, which lists them. The section is marked in the header on every
+   page under it, not only on its own, and named on the narrow screen's menu. */
+const PARENTS: [RegExp, string][] = [[/^\/floor(\/|$)/, '/'], [/^\/entity(\/|$)/, '/who']];
+const sectionHref = PARENTS.find(([re]) => re.test(here))?.[1] ?? nav.find(n => n.href !== '/' && (here === n.href || here.startsWith(`${n.href}/`)))?.href ?? (here === '/' ? '/' : null);
+const section = nav.find(n => n.href === sectionHref);
+// aria-current: "page" on the page itself, "true" on the section a subpage lives under
+const current = (href: string) => (here === href ? 'page' : href === sectionHref ? 'true' : undefined);
 ---
 <html lang="en">
 <head>
@@ -26,27 +35,98 @@ const here = Astro.url.pathname;
   <meta name="description" content={description} />
   <meta name="robots" content="noindex" />
   <title>{title} · Crawler's Companion</title>
+  <script is:inline>
+    /* Moving between pages, a floor's picture and name travel between the
+       homepage and the floor's own page (global.css). Only a pair both pages
+       really show may travel: every element that keeps a name and has no
+       partner becomes a piece of its own that ignores the page's sink and rise
+       (the homepage names all eighteen islands, most of them off screen or
+       collapsed), which is what made the map's transition go wrong now and
+       then. So leaving a page keeps only the names the next page shares, and
+       only if they are on screen, and tells the next page which; it drops any
+       name not on that list. A homepage freshly loaded rises like every page
+       (the new page is shown live, so its floors appear as the script places
+       them), but has not put the reader's floor in view yet when its first
+       frame is taken, so none of its floors pairs. The header has a layer of
+       its own that never animates (global.css). Names taken away are put back
+       afterwards, and when the page is shown again from the back-forward cache. */
+    (function () {
+      var KEY = 'dcc-vt';
+      var floorOf = function (u) { var m = /^\/floor\/(\d+)\/?$/.exec(u.pathname); return m ? m[1] : null; };
+      var named = function () { return document.querySelectorAll('[style*="view-transition-name"]'); };
+      var shows = function (el) {
+        var r = el.getBoundingClientRect();
+        if (!r.width || r.bottom <= 0 || r.top >= innerHeight) return false;
+        return el.checkVisibility ? el.checkVisibility({ opacityProperty: true, visibilityProperty: true }) : true;
+      };
+      addEventListener('pageswap', function (e) {
+        if (!e.viewTransition) return;
+        var to = e.activation && e.activation.entry && e.activation.entry.url ? new URL(e.activation.entry.url) : null;
+        var n = !to || to.origin !== location.origin ? null : location.pathname === '/' ? floorOf(to) : to.pathname === '/' ? floorOf(location) : null;
+        var pair = n ? ['floor-art-' + n, 'floor-name-' + n] : [], kept = [];
+        named().forEach(function (el) {
+          var name = el.style.viewTransitionName;
+          if (!name || name === 'none') return;
+          if (pair.indexOf(name) >= 0 && shows(el)) kept.push(name);
+          else { el.dataset.vtName = name; el.style.viewTransitionName = 'none'; }
+        });
+        try { sessionStorage.setItem(KEY, JSON.stringify(kept)); } catch (err) { /* then nothing pairs */ }
+      });
+      addEventListener('pagereveal', function (e) {
+        document.querySelectorAll('[data-vt-name]').forEach(function (el) { el.style.viewTransitionName = el.dataset.vtName; delete el.dataset.vtName; });
+        var kept = [];
+        try { kept = JSON.parse(sessionStorage.getItem(KEY) || '[]'); sessionStorage.removeItem(KEY); } catch (err) { /* nothing pairs */ }
+        if (!e.viewTransition) return;
+        // a homepage that has not placed the reader's floor yet still rises like any page; only its floors do not pair
+        var unplaced = location.pathname === '/' && !window.__descentPlaced;
+        named().forEach(function (el) {
+          var name = el.style.viewTransitionName;
+          if (name && name !== 'none' && (unplaced || kept.indexOf(name) < 0 || !shows(el))) { el.dataset.vtName = name; el.style.viewTransitionName = 'none'; }
+        });
+        // and once it is over, every name is back for the next time
+        e.viewTransition.finished.finally(function () { document.querySelectorAll('[data-vt-name]').forEach(function (el) { el.style.viewTransitionName = el.dataset.vtName; delete el.dataset.vtName; }); });
+      });
+    })();
+  </script>
 </head>
 <body>
-  <GateBar prefs={prefs} books={books} />
-
-  <header class="masthead">
-    <div class="wrap masthead-inner">
-      <a href="/" class="brand">
+  {/* One header on every page, pinned: home, the sections, search and the
+      reader's position in a single row, the position's panel opening under it.
+      The masthead used to scroll away under a pinned bar of its own, and the
+      homepage opens on the reader's floor, so a reader on floor 11 saw no way to
+      another page and no name for the one they were on. On a narrow screen the
+      sections fold into a menu that names the section the reader is in. */}
+  <header class="top" id="top">
+    <div class="wrap top-row">
+      <a href="/" class="brand" aria-label="Crawler's Companion: the crawl so far">
         <span class="brand-mark">DCC</span>
-        <span class="brand-name">Crawler's Companion</span>
       </a>
-      <!-- Without JavaScript this is a link to /who, which filters the same set. -->
-      <a href="/who" class="findbtn" id="findbtn" aria-haspopup="dialog">
-        <svg class="findbtn-glass" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" /><path d="M11 11l3.5 3.5" /></svg>
-        <span class="findbtn-text">Search the record</span><kbd>Ctrl K</kbd>
-      </a>
-      <nav>
+      <nav class="navlinks" aria-label="Sections">
         {nav.map(n => (
-          <a href={n.href} class="navlink" aria-current={here === n.href ? 'page' : undefined}>{n.label}</a>
+          <a href={n.href} class="navlink" aria-current={current(n.href)}>{n.label}</a>
         ))}
       </nav>
+      <details class="menu">
+        <summary class="menu-btn" aria-label={`Sections${section ? `, now ${section.label}` : ''}`}>
+          <span>{section?.label ?? 'Menu'}</span>
+          <svg class="menu-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" /></svg>
+          <svg class="menu-icon" viewBox="0 0 14 12" aria-hidden="true"><path d="M1 2h12M1 6h12M1 10h12" /></svg>
+        </summary>
+        <nav class="menu-list wrap" aria-label="Sections">
+          {nav.map(n => (
+            <a href={n.href} class="navlink" aria-current={current(n.href)}>{n.label}</a>
+          ))}
+        </nav>
+      </details>
+      <span class="top-gap"></span>
+      <!-- Without JavaScript this is a link to /who, which filters the same set. -->
+      <a href="/who" class="findbtn" id="findbtn" aria-haspopup="dialog" aria-label="Search the record">
+        <svg class="findbtn-glass" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" /><path d="M11 11l3.5 3.5" /></svg>
+        <span class="findbtn-text">Search</span><kbd>Ctrl K</kbd>
+      </a>
+      <GateBar prefs={prefs} books={books} part="chip" />
     </div>
+    <GateBar prefs={prefs} books={books} part="panel" />
   </header>
 
   <dialog id="quickfind" class="qf" aria-label="Search the record">
@@ -196,33 +276,61 @@ const here = Astro.url.pathname;
 </html>
 
 <style>
-  .masthead { border-bottom: 1px solid var(--color-line); }
-  .masthead-inner { display: flex; align-items: center; justify-content: space-between;
-                    gap: 20px; flex-wrap: wrap; padding-block: 16px; }
-  .brand { display: flex; align-items: baseline; gap: 10px; color: inherit; text-decoration: none; }
+  .top { position: sticky; top: 0; z-index: 50; background: #0b0b0bf2;
+         backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-line); }
+  .top-row { display: flex; align-items: center; gap: 14px; min-height: 56px; }
+  .brand { display: flex; align-items: center; color: inherit; text-decoration: none; flex: none; }
   .brand:hover { text-decoration: none; }
-  .brand-mark { font-family: var(--font-display); font-weight: 800; font-size: 24px;
-                letter-spacing: .02em; color: #0e0e0e; background: var(--color-gold);
-                padding: 2px 8px 0; }
-  .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 22px;
-                text-transform: uppercase; color: var(--color-grey-100); }
-  /* One row, always. Wrapping left "Position" orphaned on a second line on a
-     phone, which reads as a mistake rather than a menu. The strip scrolls
-     itself: `min-width: 0` is what lets a flex item shrink below its content
-     so `overflow-x` has something to do, and `overscroll-behavior-x: contain`
-     stops a sideways swipe turning into the browser's back gesture.
-
-     The scroll lives here and nowhere else. `overflow-x: hidden` on the page
-     would hide this symptom while silently clipping anything else that
-     overflows — and it would break the gate bar's `position: sticky`. */
-  nav { display: flex; gap: 4px; flex-wrap: nowrap; min-width: 0;
-        overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
+  .brand:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; }
+  .brand-mark { font-family: var(--font-display); font-weight: 800; font-size: 22px; line-height: 1.25;
+                letter-spacing: .02em; color: #0e0e0e; background: var(--color-gold); padding: 1px 8px 0; }
+  /* One row, never wrapped: wrapping once left "Position" orphaned on a second
+     line, which reads as a mistake rather than a menu. */
+  .navlinks { display: flex; gap: 2px; flex-wrap: nowrap; min-width: 0; }
   .navlink { font-family: var(--font-mono); font-size: var(--type-ui);
              letter-spacing: var(--ls-label); flex: none; white-space: nowrap;
              text-transform: uppercase; color: var(--color-grey-300);
-             border: 1px solid transparent; padding: 6px 10px; }
+             border: 1px solid transparent; padding: 6px 9px; }
   .navlink:hover { color: var(--color-grey-100); border-color: var(--color-line); text-decoration: none; }
-  .navlink[aria-current="page"] { color: var(--color-gold); border-color: var(--color-line); }
+  .navlink[aria-current] { color: var(--color-gold); border-color: var(--color-line); }
+  .top-gap { flex: 1 1 auto; }
+  /* search, in the header: the glass, a word and the key, never a wide field */
+  .top .findbtn { flex: none; margin: 0; gap: 8px; }
+  /* the menu is for a narrow screen; it drops a panel the width of the header */
+  .menu { display: none; }
+  .menu-btn { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; cursor: pointer;
+              list-style: none; border: 1px solid var(--color-line); font-family: var(--font-mono); font-size: var(--type-ui);
+              letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--color-gold); white-space: nowrap; }
+  .menu-btn::-webkit-details-marker { display: none; }
+  .menu-btn:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 2px; }
+  .menu-btn svg { width: 10px; height: 6px; fill: none; stroke: currentColor; stroke-width: 1.6; transition: rotate .2s; }
+  .menu[open] .menu-caret { rotate: 180deg; }
+  .menu-icon { display: none; }
+  .menu-list { position: absolute; left: 0; right: 0; top: 100%; display: flex; flex-direction: column; gap: 2px;
+               padding-block: 10px 14px; background: var(--color-panel); border-top: 3px solid var(--color-gold);
+               border-bottom: 1px solid var(--color-line); box-shadow: 0 18px 40px #000a; }
+  .menu-list .navlink { padding: 11px 10px; font-size: var(--type-ui); }
+  @media (max-width: 980px) {
+    .navlinks { display: none; }
+    .menu { display: block; }
+    .top-row { gap: 8px; min-height: 52px; }
+    .top .findbtn-text, .top .findbtn kbd { display: none; }
+    .top .findbtn { width: 34px; height: 34px; justify-content: center; padding: 0; }
+    /* the section's name gives way before anything else does */
+    .menu { flex: 0 1 auto; min-width: 0; }
+    .menu-btn { display: flex; min-width: 0; max-width: 100%; }
+    .menu-btn span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  }
+  @media (max-width: 420px) {
+    .top .top-row { padding-inline: 14px; gap: 6px; }
+    .menu-btn { padding: 0 8px; gap: 6px; }
+    .brand-mark { font-size: 19px; padding: 1px 6px 0; }
+  }
+  /* too narrow to name the section without cutting it: the menu is an icon */
+  @media (max-width: 360px) {
+    .menu-btn span, .menu-caret { display: none; }
+    .menu-btn .menu-icon { display: block; width: 14px; height: 12px; }
+  }
   footer { border-top: 1px solid var(--color-line); margin-top: 48px; padding: 32px 0 64px;
            font-size: 13.5px; color: var(--color-grey-500); }
   footer p { max-width: var(--measure); margin: 0 0 10px; }

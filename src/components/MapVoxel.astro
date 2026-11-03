@@ -1,0 +1,107 @@
+---
+/* A floor's map in voxels (src/lib/voxel/maps/): the scene built from the
+   layers the reader has reached, as one pixel-art image, with numbered
+   callouts and a mask per layer so the page can light a feature and dim the
+   rest. Same classes as the highlighting script and styles expect. */
+import type { MapLayer } from '../lib/floormap';
+import { mapScene } from '../lib/voxel/mapscene';
+import type { VoxelMap } from '../lib/voxel/maps/index';
+
+interface Callout { n: number; id: string; label: string }
+interface Props { map: VoxelMap; layers: MapLayer[]; callouts: Callout[]; accent: string; ink: string; title: string; caption?: string | null }
+const { map, layers, callouts, accent, ink, title, caption } = Astro.props;
+
+const scene = await mapScene(map, layers.map(l => l.id), accent);
+const W = scene.width, H = scene.height;
+/* Where everything goes, decided here so nothing collides: the title plate,
+   then each numbered marker on the first free spot near what it points at
+   (above and to the outside first, so it does not cover the thing it names),
+   then each name beside its number, kept inside the picture. A name is only
+   ever shown one at a time, so names may cover other numbers but never the
+   edge of the picture. */
+type Box = { x: number; y: number; w: number; h: number };
+const hit = (a: Box, b: Box) => a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
+const inside = (b: Box) => b.x >= 3 && b.y >= 3 && b.x + b.w <= W - 3 && b.y + b.h <= H - 3;
+/** Monospace at 7px with the label's tracking: the text is also told this length, so it always fits. */
+const CHAR = 3.8;
+const titleText = title.toUpperCase();
+const titleBox: Box = { x: 6, y: 6, w: Math.ceil(titleText.length * 4.5) + 12, h: 14 };
+const NUM = 13, GAP = 2;
+const taken: Box[] = [titleBox];
+/** Does the leader from (x, y) to the target pass through a marker already placed? */
+const crosses = (x: number, y: number, tx: number, ty: number) => {
+  for (let i = 1; i < 10; i++) {
+    const px = x + ((tx - x) * i) / 10, py = y + ((ty - y) * i) / 10;
+    if (taken.slice(1).some(b => px > b.x && px < b.x + b.w && py > b.y && py < b.y + b.h)) return true;
+  }
+  return false;
+};
+const OFFSETS: [number, number][] = [];
+for (const d of [24, 32, 18, 42, 54]) for (const [dx, dy] of [[1, -0.75], [1, 0], [0.4, -1], [1, 0.75], [0, -1.1], [0.4, 1], [0, 1.1]]) OFFSETS.push([dx * d, dy * d]);
+const placed = callouts.filter(c => scene.points[c.id]).map(c => {
+  const [tx, ty] = scene.points[c.id];
+  const out = tx < W / 2 ? -1 : 1;
+  let best: { x: number; y: number; cost: number } | null = null;
+  for (const [i, [dx, dy]] of OFFSETS.entries()) for (const side of [out, -out]) {
+    const x = Math.round(tx + dx * side), y = Math.round(ty + dy);
+    const b = { x: x - NUM / 2 - GAP, y: y - NUM / 2 - GAP, w: NUM + 2 * GAP, h: NUM + 2 * GAP };
+    if (!inside(b)) continue;
+    const cost = i * 2 + (side === out ? 0 : 1) + taken.filter(t => hit(t, b)).length * 1000 + (crosses(x, y, tx, ty) ? 40 : 0);
+    if (!best || cost < best.cost) best = { x, y, cost };
+    if (cost < 2) break;
+  }
+  const { x, y } = best ?? { x: Math.max(10, Math.min(W - 10, tx)), y: Math.max(10, ty - 18) };
+  taken.push({ x: x - NUM / 2 - GAP, y: y - NUM / 2 - GAP, w: NUM + 2 * GAP, h: NUM + 2 * GAP });
+  return { ...c, tx, ty, x, y };
+}).map(c => {
+  /* The name: right of its number, else left, else on the row above or below
+     — whichever fits inside the picture and clear of the title. */
+  const tl = Math.ceil(c.label.length * CHAR), w = tl + 10, h = 13;
+  const spots: [number, number][] = [
+    [c.x + 9, c.y - 6.5], [c.x - 9 - w, c.y - 6.5],
+    [c.x - w / 2, c.y - 22], [c.x - w / 2, c.y + 9],
+  ];
+  const ok = (lx: number, ly: number) => { const b = { x: lx, y: ly, w, h }; return inside(b) && !hit(b, titleBox); };
+  let [lx, ly] = spots.find(([a, b]) => ok(a, b)) ?? spots[0];
+  lx = Math.max(3, Math.min(W - 3 - w, lx)); ly = Math.max(3, Math.min(H - 3 - h, ly));
+  return { ...c, lw: w, tl, lx, ly };
+});
+const titleLine = [title, caption].filter(Boolean).join(' · ');
+---
+<svg class="fmap fmap-pixel fmap-voxel" viewBox={`0 0 ${W} ${H}`} role="img"
+     aria-label={`${titleLine}. ${callouts.map(c => `${c.n}: ${c.label}`).join('; ')}`}>
+  <defs>
+    {callouts.filter(c => scene.masks[c.id]).map(c => <clipPath id={`pxm-${c.id}`}><path d={scene.masks[c.id]} /></clipPath>)}
+    <image id="vxscene-img" href={scene.src} width={W} height={H} style="image-rendering:pixelated" />
+  </defs>
+  <g id="pxscene"><use href="#vxscene-img" /></g>
+  <rect class="px-dim" width={W} height={H} fill="#060606" />
+  {callouts.filter(c => scene.masks[c.id]).map(c => (
+    <g class="px-hl" data-layer={c.id}><use href="#vxscene-img" clip-path={`url(#pxm-${c.id})`} /></g>
+  ))}
+  <g class="px-hits">
+    {callouts.filter(c => scene.masks[c.id]).map(c => <path class="map-hit" data-layer={c.id} d={scene.masks[c.id]} fill="transparent" />)}
+  </g>
+  {placed.map(c => (
+    <g class="fmap-callout" data-layer={c.id} tabindex="0" role="button" aria-label={`${c.n}: ${c.label}`}>
+      <path d={`M${c.x} ${c.y}L${c.tx} ${c.ty}`} stroke="#0c0c0c" stroke-width="2.2" />
+      <path d={`M${c.x} ${c.y}L${c.tx} ${c.ty}`} stroke={accent} stroke-width="0.9" />
+      <rect x={c.tx - 1.5} y={c.ty - 1.5} width="3" height="3" fill={accent} />
+      <rect x={c.x - 6.5} y={c.y - 6.5} width="13" height="13" fill="#0c0c0c" />
+      <rect x={c.x - 5.5} y={c.y - 5.5} width="11" height="11" fill={accent} />
+      <rect class="co-face" x={c.x - 4.5} y={c.y - 4.5} width="9" height="9" fill="#0c0c0c" />
+      <text x={c.x} y={c.y + 2.6} text-anchor="middle" class="fmap-num fmap-px co-num vx-num" fill={accent}>{c.n}</text>
+    </g>
+  ))}
+  {/* The names, drawn last so a lit one is never under a neighbour's number. */}
+  <g class="co-labels" aria-hidden="true">
+    {placed.map(c => (
+      <g class="co-label" data-layer={c.id}>
+        <rect x={c.lx} y={c.ly} width={c.lw} height="13" fill="#0c0c0c" stroke={accent} stroke-width="0.8" />
+        <text x={c.lx + 5} y={c.ly + 8.9} class="vx-label" textLength={c.tl} lengthAdjust="spacingAndGlyphs">{c.label}</text>
+      </g>
+    ))}
+  </g>
+  <rect x={titleBox.x} y={titleBox.y} width={titleBox.w} height={titleBox.h} fill={accent} />
+  <text x="12" y="16.5" class="fmap-title fmap-px vx-title" fill={ink} textLength={titleBox.w - 12} lengthAdjust="spacingAndGlyphs">{titleText}</text>
+</svg>

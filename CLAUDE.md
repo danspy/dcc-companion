@@ -106,8 +106,9 @@ part too. The lint also fails a part that unseals before its floor, parts out of
 part that is not at `recapAt`; a floor with no recap at all is only a warning, because it leaks
 nothing.
 
-**The top of the page follows the reader.** With no book picked it is a *Welcome, viewer*: what
-the site is, the one rule, and the back cover. With a position it is *Previously, on Dungeon Crawler
+**The top of the page follows the reader.** With no book picked it is the start screen (see *A reader
+who has told us nothing gets the start screen*): what the site is, the one rule, the way in, and the
+back cover. With a position it is *Previously, on Dungeon Crawler
 World*: the System's catch-up on everything before the floor the reader stands on, stored per floor
 as `previously` and gated at the floor's own `revealedAt` (it only tells what came before
 arrival, and the lint and `check-facts` read it like a part), then a line saying where they are and
@@ -152,6 +153,492 @@ arrives with the floor. The lint fails a `nameAt` later than `revealedAt`.
 **The general rule: any field that summarises a span must be gated at the end of that span, not
 the start.** If you add per-floor bosses, quests or events, they need the same treatment.
 
+### A floor guide is a set of taglines, and a map is gated layer by layer
+
+`/floor/N` is the guide to the ground the story happens on: *How the floor works*, *The lay of the
+land*, *Who lives here*, *What will kill you*, then a map, every entry with a beat on the floor
+(*Who turns up here*), links to the recap parts, and the floors above and below. Floor 5 is the
+pilot; a floor with no `guide` redirects to `/#floor-N`, and the front page links only the ones
+that have one.
+
+- **`guide`** on a floor in `books.json` is `[{ id, title, steps: [{ at, text }] }]`. Steps
+  **supersede**, like taglines: the page shows the latest step reached, stamped *As of Book 4 ·
+  Ch 10*, so each step is a whole rewrite of the section as it stands at its own `at`. The lint
+  holds every step to the forward-phrase and forward-name rules and fails a step before the floor
+  or out of order.
+- **`map`** is `{ title, layers: [{ id, at, until?, label }] }`. **A picture is content**: Floor 5
+  at 4:1 is the dome, the bowl, Hump Town, a speck in the sky and hatched fog over everything below,
+  because that is all Carl has seen; the island arrives with Gwen at 4:2, the flood at 4:10. A state
+  that is replaced (a castle that falls) carries `until` and is not drawn from that point. The
+  server renders only the layers reached, so a sealed layer is not hidden in the document: it was
+  never drawn.
+- **The words live in the data, the shapes in code.** A floor's page map is a voxel scene
+  (`src/lib/voxel/maps/floorN.ts`): a `build(shown)` that adds voxels **only for the layers the
+  reader has reached**, each tagged with its layer (`v.tag`), and an anchor point per layer for its
+  callout. Shapes and hand-placed pixels only, no text, so `check-pages` reads it like any page
+  source and the lint reads every label at its layer's own point. `scripts/test-maps.mjs` fails a
+  floor with map layers and no voxel map, an anchor for a layer that does not exist, a labelled
+  layer with no anchor, and any timeline state that does not render.
+- **One renderer for tiles and maps** (`src/lib/voxel/vox.ts`, see *Tile pictures are voxel
+  dioramas*). For a map it also returns which layer each pixel shows; `mapscene.ts` turns that into
+  one SVG mask per layer, embeds the PNG as a data URI, projects each anchor into the picture, and
+  caches per floor and layer set. `MapVoxel.astro` draws the picture, the numbered callouts and the
+  masks with the same classes the highlighting script already used, so pointing at a key entry, a
+  marker or the feature lights it and dims the rest exactly as before. The earlier flat pixel and
+  section renderers are gone; the history has them.
+- **Glass is see-through**, because floor 5 is a bubble: a material with `alpha` blends over what is
+  behind it, shows only its outer skin (never every block inside a pane), never takes a seam, and
+  over open air its silhouette gets a bright cyan rim instead of the dark outline. **A dome reads
+  round only on a round base, about 1.4 radii high**: an oval base and a tall dome drew an egg.
+- **The map can be rewound, never fast-forwarded.** Above it is a timeline of the points where the
+  map changes (`mapSteps()`: every layer's `sortKey` and `untilKey` up to the reader's frontier),
+  with Play and a line saying what each step added and took away. `?at=` picks a step and
+  `pickStep()` clamps it to the frontier, so the address cannot look ahead either; a reader who has
+  finished the book can walk back through every state. Each step is a server render of the same
+  page, fetched and swapped into the figure (map, key, caption) with the slider left in place so it
+  keeps focus; ticks are real links for no JavaScript. Two details: the slider's value is the
+  *chapter*, snapped to the nearest change, because evenly spaced stops put the thumb nowhere near
+  its tick; and arrow keys move one change, not one chapter. Only the map rewinds; the guide stays
+  at the reader's position.
+- **Under 640px the map is the whole floor at a glance, and Explore opens it full screen.** It used to
+  keep a 640px width in a strip that scrolled sideways, so a phone saw a corner of the floor. Now it is
+  fitted to the width, its numbered markers drawn 1.55× so they still read (each rect and number scales
+  round its own centre, `transform-box: fill-box`), the key folded to its first six places behind *All N
+  places*. **Explore** puts the same figure `position: fixed` over the screen at 1000px, scrolling both
+  ways, the key a row of places along the bottom; lighting one scrolls the map to it on both axes. The
+  state is classes on the figure (`phone-ready`, `is-explore`, `keys-open`), because the timeline swaps
+  the figure's children and never the figure, so a rewind keeps it; the buttons are server-rendered
+  and their clicks delegated for the same reason. A fixed bar of the page's sections (`#jump`) slides
+  in under the header once the head has scrolled away, the section in view marked; it lives inside the
+  head section so that `section + section` spacing, which counts hidden elements too, is unchanged on
+  the desktop.
+- **Nothing on the picture may collide.** `MapVoxel.astro` places the title plate first, then each
+  number on the first free spot round its target (outside and up first, never on another number, the
+  title or the edge, preferring a leader that crosses no marker), then each name right of its number,
+  else left, else above or below, inside the picture. Names and the title carry `textLength`, so a
+  wider fallback font squeezes the text instead of running it out of its box. A first version put
+  every number at a fixed offset and 80 map states had two numbers on top of each other; check any
+  change by measuring every timeline state of every floor, not by looking at the last one.
+
+### The homepage is the overview; a floor's page is its story
+
+The homepage used to carry two lists of the same floors: an overview and the whole crawl, folded.
+They are one now. The top follows the reader (*Welcome* or *Previously*), and under it is **The World
+Dungeon**: eighteen tiles, one per floor. Eighteen is on the back cover, so the count is safe; what
+fills each tile is not.
+
+| tile | when | shows |
+|---|---|---|
+| reached | `revealedAt` passed | its book's colour, its picture once `artAt` is passed, a link to `/floor/N` |
+| current | the last floor reached | spans two columns: the picture, the arrival, the last stretch reached |
+| named | `nameAt` passed, not reached | the name and where it was printed; **no colour**, which would say which book it is in |
+| foretold | a note or a name reached (floors 12–18) | what the books have said so far, note by note; "Not yet named" where no name exists |
+| sealed | otherwise | its number on the rail and the uncharted island (below), dimmer, with a stone question mark |
+
+Every reached floor has a page (`/floor/N`), and it is where the story lives: the map if one is
+drawn, then **The crawl**, the recap a stretch at a time with the sealed tail, then the guide sections
+if curated, then everyone met on the floor. Quick-find's floor hits and the *Previously* line link
+there. The app fixtures accept both `/#floor-N` and `/floor/N` as a floor target.
+
+### A reader who has told us nothing gets the start screen
+
+With no position (book 0, `mode === 'welcome'`) the homepage is not the descent: with nothing read it
+would be eighteen sealed islands, which says nothing. It is `StartScreen.astro`: the homepage's masthead
+(*The Crawl So Far*), the System's one rule, **Enter the dungeon**, which opens the position picker in the
+header (its click kept from the document, or the panel's close-on-click-outside shuts it at once), and
+the back cover below. Beside them is the way in as the first chapter has it (`scenes/entry.ts`): a
+January night in Seattle, every building simply gone, the cars' car-shaped dents of dirt in the asphalt,
+the bare tree, the bikes in the rack, the moped still in its parking boot, the stop sign with its street
+sign gone, a fire far off, and in the lot where the thrift store stood the brightly lit hole with its
+wrought-iron staircase going down into the light, Carl in his pink Crocs at its rim and the cat at his
+feet. She is drawn for the scene at a cat's size, on a slab of the gone building's concrete so her
+tortoiseshell shows against the dirt: her own figure is made to stand alone and is as big as he is.
+It is back-cover and opening-page material and nothing past it, so `/art/entry.png` is public and
+immutable like the uncharted island, and the figures are copied in without their gated addresses (a
+fresh reader's `/art/figure/carl-0.png` is a 404). The spotlight is the page's, not the picture's: a
+blurred cone raised from the hole's mouth (`entryArt().beam`, projected from `ENTRY_HOLE`) into the dark
+over it, cut inside its element and blurred outside it, because a filter on the clipped element runs
+before the clip and left hard edges. Drawn in voxels it read as a beige pillar. On a phone it stacks,
+title, picture, rule, and the button pinned in reach at the foot (`position: sticky`, so the section
+clips with `overflow: clip`: `hidden` would make it the button's scroll container and unpin it). The
+eyebrow names *Dungeon Crawler World*, tagged 1:4, under the same documented exemption as the
+homepage's. Picking a book reloads the page, and the page is then the descent.
+
+### The homepage is a descent, and a floor opens in place
+
+The eighteen floors hang one below the other down a shaft (`src/pages/index.astro`), zig-zagging,
+joined by stairwells the page script draws in SVG from each floor's way down to the top of the next.
+The stairs are measured from **layout boxes** (`offsetLeft/Top`), not painted ones, so the islands'
+float and the rise-in do not drag them. A finished floor's stairwell leaves from its real stairs
+(`STAIRS` in `src/lib/voxel/art.ts`, a map anchor projected into its picture); an unfinished one
+leaves from the island's underside, because a shaft from the stairs would say where the stairs are.
+Lit only between reached floors, dashed fog after.
+
+**The homepage is the crawl, and the crawl is a descent.** The System's box (the HUD) sits in the
+left column, as tall as what it says (the script measures every card and eases the box's height
+itself, up to the room there is), pinned with its middle on the middle of the view under the header.
+**The focus line** is the middle of that box, and the floor in view is centred on it. The descent's
+top padding (`lead()`) puts floor 1 on it at scroll 0 beside its own card, which is why there is no
+intro block above the first floor. **On a phone the box is a bar docked at the foot of the
+screen** (`--sheet-h`, 96px) and the focus line is the middle of the room between the header (and the
+title's band, at home) and the bar. The bar says only the floor in view, by number in its book's colour
+and name, and one button on the same middle, **What happened**, that opens the floor's card (*What is
+known* for a floor only heard of, nothing for a sealed one); a first visit's bar is taller (`.is-welcome`,
+158px, 180 under 360px) and gives the one rule in a sentence over **Pick your book**, which opens the
+header's panel. The depth rail is a gauge of eighteen segments along the bar's top edge, and the card is
+the whole screen with *Above · Close · Below* along its foot. Everything else the desktop's box says (the
+*Previously*, the last stretch, the status) is left to the card: the phone markup carries a short label
+beside the long one (`.go-short` / `.go-long`) and a `.hud-lede`, both hidden on the desktop. It began as a
+122px strip of 11px text pinned under the header, clipped mid-sentence, which with the title over it left
+the floor low in dead space, and a reader called it wrong and wonky; then a 240px console of the whole
+catch-up that a phone scrolled inside, and a reader asked whether a phone needed it at all. All of it is
+inside `max-width: 999px` and the script's
+`narrow` branches; desktop screenshots diff to zero against the version before.
+**On a phone a swipe is one floor.** Scrolled freely under a finger the page fought the pin the way a
+mouse wheel did (held, then caught up at twice the finger's speed, then a glide that waited out the
+browser's own momentum), and a reader called it glitchy. Now the descent is a vertical slider: the
+finger drags it one to one with the pin off (`dragging`), and letting go travels to the next stop or
+back to this one, handing the mover the finger's speed (`travel(to, { v })`). Which way is read off the
+finger alone (its speed, else how far it moved since the touch began), never off where the view
+stands: measured from the stop a glide was heading for, a swipe begun mid-glide read as a swipe back.
+That stop is taken on `pointerdown`, because a touch's pointerdown comes before its touchstart and an
+older handler stops the glide there. A second swipe during a glide goes one on from where it was going.
+Native scrolling stays wherever something scrolls by itself (the console's long text), for a sideways
+or two-finger touch, and in the header and the position panel. To test it, drive it with
+CDP `Input.dispatchTouchEvent`: in headless Chrome each synthetic "100ms" swipe takes about 600ms, so it is a slow
+drag, decided by distance.
+**On a phone *You are here* is lifted over the blur.** Inside its island it sat under the tilt-shift
+(the levels are transformed, so nothing in them can rise above it), so the script moves it into the
+crawl as `position: fixed`, z-index 5 (over the tilt at 4, under the console and the title), stands it
+on the island's top every frame from the level's box and the island's own offset in it (the
+transformed level may itself be the island's `offsetParent`), runs the island's `bob` in step by
+copying its `currentTime`, and fades it when its floor collapses or a card opens. **The card's
+picture is made by the script (`lend()`), so a scoped rule never reaches it**: on a phone it is sized
+by a `:global(.isle-img)` rule, or a tall floor's picture ran 50 to 120px out of its row (and 650px
+in landscape).
+
+**Home is the reader's own floor, and the title stands over it.** The page opens on the reader's
+floor, so that view is the homepage: *The Crawl So Far* full size over the box, the box under it, the
+floor beside them. Moving off toward the next floor or the one above, the title shrinks into a small
+title over the box by a little over halfway there (`homeAt()`, `kAt()`), tied to the scroll like
+everything else, and grows again on the way back; with nothing read, home is the top. On a phone it
+is a band over the strip at home that slides away under the header elsewhere. It used to sit at the
+top of the page in the flow, so a reader opened on floor 11 never saw it, and a reader called the
+page "no longer home". Once the script runs the title is out of the flow (`.pinned-title`: a sticky
+line of no height, scaled on its own compositor layer, or every scroll frame repaints 72px text), so
+the box's place is worked out in `boxTopFor()`: centred, unless the title over it needs the room.
+The focus line therefore depends on the title, and `restOn()` puts each floor on the line with its
+own card in the box and the title at the size it has there (full only over home). At home the box
+takes the room left under the full title and its text scrolls if the card is longer, which a first
+visit's welcome is. The title hides while a card is open.
+
+**One header on every page, pinned** (`Layout.astro`): the DCC mark (home), the five sections, search
+and the reader's position as a chip, in one row of 57px (53 on a phone); the position's panel drops
+over the page from under it and never changes its height, which the homepage measures its room from
+(an in-flow panel once grew the header to 330px and the descent relaid itself for it). It replaced a
+pinned gate bar with the masthead scrolling away under it, which left a reader on the homepage with
+no way to another page and cost a phone 263px of chrome. Under 980px the sections fold into a menu
+that names the section the reader is in (a floor's page is Floors); under 360px it is an icon,
+because "FLOO…" reads as broken. Check a header change at 320, 390 and 1440 in every reader state:
+the chip's text is longest for a first visit.
+The header marks the section a page lives under, not only its own page: `aria-current="page"` on the
+page itself, `"true"` on the parent (`PARENTS` in `Layout.astro`: `/floor/…` is Floors, `/entity/…` is
+Who & What), styled the same.
+
+**Moving between pages is a view transition, and only a real pair travels.** `@view-transition
+{ navigation: auto }` (global.css) sinks the old page and raises the new one, and a floor's picture
+and name (`floor-art-N`, `floor-name-N`) travel between the homepage and `/floor/N`. Every element
+that keeps a name and has no partner becomes a piece of its own that ignores the page's sink and
+rise, and the homepage names all eighteen islands, most of them off screen or collapsed: that is
+what made the map's transition go wrong now and then. So an inline script in `Layout.astro`'s head
+strips names on `pageswap` down to the pair the next page shares, and only if it is on screen,
+hands the list over in `sessionStorage`, and on `pagereveal` the next page strips any name not on
+it; names come back afterwards and on a back-forward restore. A homepage freshly loaded rises like every
+page (the new view is live, so the floors appear in it as the script places them), but it has not
+put the reader's floor in view when its first frame is taken (`window.__descentPlaced`), so none of
+its floors pairs. Skipping its transition instead made the floors just pop up, and a reader called it
+out: keeping the header out of the animation was the whole request. **The header is a layer of its own** (`#top`,
+`view-transition-name: site-header`) that never animates, the new page's shown at once, so the
+section marked in it changes and nothing else does; sinking with the page it looked like a glitch.
+To see what a transition animates, read `document.getAnimations()`' pseudo-elements once
+`viewTransition.ready` resolves in `pagereveal`.
+
+
+The sequence, every part tied to the scroll and so reversible, and true to the book (a floor left
+behind collapses):
+1. The floor on the focus line is whole and lit; the next waits below, dark but solid (a filter,
+   never opacity, or the stairs behind it would show through) and soft in the tilt-shift; the
+   floors above are gone.
+2. Scrolling down, the stairwell builds out of the floor step by step (`.stp` / `.stp.on`, a few
+   already at rest as the way down), to the next floor.
+3. The next floor **clicks onto the focus line and is pinned there**: within `PIN` of the line its
+   drawn distance from it is 0, beyond `PIN + LEAP` it is its laid-out distance, and between them
+   a Hermite curve that starts at rest and ends at the page's own speed, so the floor catches up at
+   up to about 2.4× the scroll for a moment and stops dead, with no jump. `PIN` is about one wheel
+   notch (100px; 64 on a phone), so a notch never shakes a floor loose and the second releases it.
+   The first version eased with `tanh` over 220px and a reader called it loose: a floor that is
+   always drifting a little is never anywhere. The layout leaves `--dwell` between floors for the
+   pin, and the steps follow the two floors they join through it.
+   **The wheel and the keys step; they never scroll.** Scrolled freely, a mouse wheel fought the
+   pin: a notch inside it moved nothing, the next flung the floor off at twice the page's speed, and
+   the glide to rest started in the pause between notches only to be cut off by the next one. So a
+   wheel gesture (a run of events with no pause of 180ms, read off the events' own `timeStamp`) is
+   one floor: it steps as soon as it has moved 30px, and steps again only if it keeps coming at
+   full strength once that step is 60% done, which a wheel rolled on does and a trackpad's momentum,
+   dying away, does not; turning back answers at once. ↓ ↑, Page Down / Page Up and Space /
+   Shift+Space step too, Home and End go to the top and the bottom, Enter opens the floor in view,
+   and keyboard focus on a floor's link follows the view. The stops are each floor on the line (the
+   first at scroll 0), and the bottom of the page past the last. Left alone: zoom, a sideways
+   scroll, an open dialog, the card, anything that scrolls by itself (`scrollsItself()`), typing,
+   and Space or Enter on a control. A key hint sits under the rail on a fine pointer.
+   **One mover** (`travel()`) runs every step, the rail, the card's moves and the rest glide: a
+   cubic Hermite from where the view is, at the speed it already has, to the stop, arriving at rest,
+   so a step asked for mid-step carries its speed into the next and never hitches. A fresh one
+   leaves at 2.6× its average speed (an ease-out; above 3× it would overshoot). **The pin is off
+   while a step runs** (`pinW`), so the floors move as one and the curve is the snap; ridden through
+   the pin, a step held the floor for its first notch and then flung it. The pin eases back in over
+   about 90ms if the reader takes over halfway. A finger or a button on the page, or the page moved
+   by anything else, stops a move where it is. Past the last floor there is no pin: it scrolls away
+   to the bottom. Headless Chrome delivers real wheel events hundreds of milliseconds apart, so the
+   tests dispatch synthetic ones on a timed plan; `page.mouse.wheel` there proves nothing about
+   gestures.
+   **Scrolled freely** (a finger, the scrollbar), the view always comes to rest on a floor, never
+   between two: 170ms after the last scroll (never while a finger or a button is down or a card is
+   open, never at the very bottom) it glides, pin on, to the next floor in the direction of travel
+   if the one left has moved past its pin, otherwise back onto it, which inside its pin never moved
+   on screen, so that correction is invisible.
+4. Behind, the floor left collapses: from a little before halfway to the next floor it cracks,
+   its underside and rim give first, its chunks sink, tip over their outer edge and fade into the
+   dark with crumbs and dust, the middle of the surface last (see below), and its stairs crumble
+   top first. Without WebGL, or before its blocks have arrived, a floor sinks and fades whole. The
+   reader's pin goes with it.
+5. Scrolling up rewinds it.
+
+**Every floor is as wide as the stage** between the box and the rail: 88% of the shaft, so the
+floor in view (scaled 1.14) reaches its edges exactly, whatever its picture's proportions. Its
+height follows the picture, up to `--maxh` (72% of the view under the header, 640px at most; on a
+phone 54% of what the strip leaves). The first rule capped every picture at 320px tall, so a wide
+one (floor 7) filled the stage and a tall one (floors 1, 5, 9, the uncharted islands) came out half
+as wide, and a reader called it ridiculous. Check a sizing change on every floor side by side, at
+1440×900, 1366×768 and a phone, not on the floor in front of you.
+
+The box speaks of the floor in view: its number in its book colour, its name, its *Previously*,
+where the reader is, or what is known (a visitor with nothing read keeps the welcome). The floor in
+view also grows a little (`scale`; the float is `translate`, so the two never override each other —
+a `transform` float once silently cancelled the zoom). **Tilt-shift**: a sticky layer over the
+descent blurs above and below the focus line in three backdrop-filter steps, placed from where the
+layer actually is (at the very top it has not reached its pinned place yet). The reader's floor
+carries a gold *You are here* pin; a depth rail on the right shows all eighteen floors (colour only
+where reached), lights the one in view, rings the reader's, and takes you to a floor on click.
+
+**The page always opens on the reader's floor** — on a reload too. Only *Back* (to the floor left
+from, `sessionStorage` `dcc-descent`) and a `#floor-N` link open elsewhere. The browser's own scroll
+restore is switched off in an inline script before it can act (set from the module script, it came
+too late and restored the old position over the reader's floor), the fonts are waited for before the
+floor is placed, and it is placed again on `load` unless the reader has started to scroll.
+
+**A floor collapses as its own cubes.** `render()` reports every opaque block that shows at least
+one pixel in the picture, with the colour its faces are lit from; `/art/cubes-N.bin` serves them
+packed (count, int16 x/y/z, rgb + flags; 1–5k cubes, 12–54 KB a floor), gated exactly like the
+picture they come from. A floor about to go gets a WebGL2 canvas at the picture's own resolution,
+reaching well below it for the fall, and three passes a frame:
+
+- **The picture itself**, less every chunk that has broken away. An id buffer, drawn once by
+  rendering every block at rest, says per pixel which chunk owns it and how deep it sits (pixels
+  next to a block, the outline, a flame, a banner's edge, are dilated onto it); the picture pass
+  writes that depth, so a chunk falling behind the part still standing is hidden by it.
+- **The chunks that have broken**, as cubes, their visible faces coloured from the picture at their
+  place of rest (a face the picture hid gets its block's own tone). So a chunk looks exactly like
+  the picture when it starts to move and carries its own pixels down with it.
+- **Crumbs and dust** as points, born where a chunk breaks.
+
+Chunks are irregular: a jittered grid of column seeds in the plane, each block to the nearest
+(measured from its 2×2 cell so a big block stays whole), cut into bands four deep. Each cracks and
+settles (`LEAD`), then drops (`DUR`, gravity, a tilt over its outer edge, a little drift), darkening
+and fading to nothing. **Nothing is still visible when the floor counts as gone**, which is what
+made the first version pop: its cubes were opaque to the last frame and the canvas was then
+removed. The picture fades over the canvas across the first `HAND` of the collapse rather than
+swapping in one frame, because a browser places two scaled images a sub-pixel apart and the swap
+showed as a shimmer; nothing cracks before that. Whether a floor falls as cubes or sinks whole is
+decided once as it starts to go, so it never switches halfway.
+
+**Building a rig never costs a frame.** It is a generator resumed in idle time (prepare chunks,
+compile with `KHR_parallel_shader_compile` where there is one, upload, id pass, dilate), started
+while the floor is still on the focus line so it is ready before it is needed, paused while a card
+is open or has just moved, and given one slice a second on a page that never idles. Rigs live from
+the floor on the focus line to the one just left and are released beyond that. The rules for the
+canvas are `:global` because the script makes it. Earlier tries, all gone: the next floor
+*building* as it rose (backwards for the book), opaque cubes flung outward and spinning (read as an
+explosion, not a collapse), gated sheets of height cuts, and 16px tiles of the picture flying in.
+
+**The card's picture is a fresh `<img>`, never a clone of the island's.** A clone carried the
+island's own state: half faded mid-collapse, or `opacity: 0`, which is why stepping *down* in the
+card showed nothing while stepping up (to whole floors) worked.
+
+**Details** widens the box into one card across the column: text left, the floor's picture flown in
+on the right, ▲ ▼ ✕ beside it (↑ ↓ and Escape too). The page is held still while it is open
+(`html:has(.crawl.is-detail)`); ▲ ▼ move the descent behind the card so closing lands on that floor.
+The card's panel is its own layer grown with a transform, never a clip-path, and nothing animates a
+blur: both repainted every frame. `?floor=N` renders the card open on the server. The box, the
+descent and the card are placed in the grid explicitly: auto-placed, the card pushed the other two a
+row down and the whole descent jumped 692px on every open. Floor positions are measured from layout
+boxes when the layout changes, never read per frame, and every island's box is fixed by its
+picture's aspect ratio before it loads. The reader asked for this exact shape after an overlay, a
+sidebar and an in-row card; do not swap it for another. Everything stays inside the 1080px column;
+only the debris behind it runs full width.
+
+### A floor ahead has a page too
+
+Every floor that is not sealed has a page at `/floor/N`. For one the reader has reached it is the
+floor's own; for one they have only heard of, `/floor/N` rewrites to `src/pages/floor/ahead/[id].astro`:
+the name if printed (with where), the picture once its `artAt` is passed, and every foretold note
+reached, as a timeline. The homepage tile links there instead of folding the notes into an
+accordion. `src/lib/floorstatus.ts` is the one place that decides reached / named / foretold / sealed,
+for the homepage, both pages and the up/down links. The page says nothing about **when** the floor
+arrives or **how many** notes are still sealed: the first would name its book, the second would say
+how much the books have left to tell. A sealed floor still redirects home.
+
+### Floors the crawl has not reached: `foretold`
+
+`books.json` carries `foretold: [{ id, name?, nameAt?, artAt?, notes: [{ at, text }] }]` for floors
+12–18: what the books say about a floor before anyone stands on it. Notes **accumulate** (each adds a
+fact at its own `at`), unlike guide steps, which supersede. The lint reads every note against its own
+point, puts each foretold name in the same forward-reference list as entity and floor names, and
+`check-pages` treats it as gated too. A floor the books describe but never title has no name, and the
+tile says so rather than drawing a redaction bar that suggests one is hidden.
+
+### Tile pictures are voxel dioramas, gated by `artAt`
+
+Each tile's picture is a small floating voxel diorama (`src/lib/voxel/`): a scene built in code from
+cubes, rendered in true 2:1 isometric with a lit top, a mid left face, a dark right face, a seam
+between blocks, a hard outline round the silhouette and warm light round anything that burns, then
+written as a PNG and scaled with `image-rendering: pixelated`. Pictures are drawn at `ART_SCALE` (2):
+at scale 1 a block is a 4px cube and a scene reads as Lego noise; at 2 every block is bevelled (lit upper
+edges, shaded lower ones), carries a three-step grain, and a flame is a four-heat teardrop drawn over
+everything. The page keeps its coordinates at scale 1 (mapscene divides), so callouts did not move. At
+that size an RGBA PNG of a map was 350-450KB, so the site encodes a 256-colour palette PNG with `sharp`
+(`encodePalettePng`, a third of the bytes); `encodePng` stays for the scripts.
+The look was set by the reader pointing at manatoastmedia.com's floor art: **take each floor's essence,
+not its pixels**, in this site's own palette. Their character sprites are left out (a face is a
+spoiler); only Carl and Donut, who are on the back cover, appear.
+
+**The look runs one way: manatoast's art → the tile → the page map.** Each floor's tile is
+`src/lib/voxel/tiles/floorN.ts` (floors 12–18 still live in `floors.ts`), and its page map
+(`maps/floorN.ts`) is drawn in the tile's materials, building style and props, scaled up to the whole
+floor. A pass that "corrected" the tiles for book accuracy made them worse in the reader's eyes and
+was reverted: accuracy decides what a map layer depicts and when, never the look. When a tile shows
+something before its point, move `artAt` later rather than redraw the tile; that is why floors 2, 4,
+6, 8, 9, 10 and 11 open their pictures a few chapters after arrival.
+
+**Big blocks and small ones.** `v.chunk = 2` (or 3) before drawing groups each aligned 2×2×2 cell
+of one material into a single block with one bevel and one tone; `slab()` builds every island that
+way by default, so ground and masonry read big and whatever stands on them reads small. Vary a
+surface per cell, not per voxel, or neighbours differ in material and the big block falls apart.
+`banner()` hangs cloth down any face, including an island's own side; `slab()` takes `under` for
+the colour of its rock. Floor 12 is the model for a dynamic island: stepped levels, a terrace, a
+loose chunk, banners over the edge.
+
+**A floor can have two pictures.** `VOXEL_HEROES` in `floors.ts` holds a floor's hero moment, and
+`/art/floor-N.png` answers with it once the reader has passed the floor's `recapSortKey` (the end
+of its story), at the same address with a different `?v=`. While reading, the tile stays the
+spoiler-free one. Floor 11 is the pilot: the arena while reading, Scolopendra rearing over the gate
+once it is done. A hero picture may show what the floor's own story shows, faces included, because
+only a reader who has finished it is sent one.
+
+A picture is a summary of a floor in one image, so it obeys the summary rule: **`artAt` on a floor or a
+foretold floor is the point by which everything in the picture has been read** (floor 1's dozer at
+1:2, floor 5's sky castle at 4:2, Sheol's fire at 2:24). `/art/floor-N.png` checks the reader's own
+cookie against it and answers **404** before that point, so a sealed picture cannot be fetched by
+typing its address; past it the PNG is drawn once per process and served `private`, `Vary: Cookie`.
+The lint fails an `artAt` before its floor; `test-maps.mjs` fails a picture with no `artAt` and one
+that does not render. Floors 13 and 14 have no picture of their own: the books give nothing to draw.
+
+**A floor with no picture to show still gets one in the house style: the uncharted island.**
+Floors 13 and 14 always, every floor a reader has not reached the picture of, and all eighteen for
+a first visit. It used to be a CSS slab with a number on it, which was the one thing on the page
+not drawn in voxels, and a reader called it out. `tiles/uncharted.ts` draws a rounded oblong of
+dark rock in big blocks with a dirt underside, a terrace and a loose chunk, rock spires standing in
+it, banks of cloud in big 2×2×2 blocks piled over the floor so whatever is there is lost in them, a
+thin veil spilling over the rim, and the System's question mark floating over it: **gold** with
+sparks where the books have said something (foretold, named, or reached before its `artAt`),
+**stone** over night cloud where the reader has been told nothing. **It is as big as the drawn floors
+beside it** (12, 15–18) and at least 0.9 as wide as it is tall, which `test-maps.mjs` asserts: the
+first island was two thirds their size and an oval, which in the iso comes out narrow because the
+corners are what make an island wide, and on a page where every floor is drawn as wide as the stage
+it read as a smaller floor. A see-through fog (the `mist` material over the whole top) read as frosted
+glass over a tiled floor, and an opaque bank stepped per 2×2 cell read as gravel; puffs of cloud in
+big blocks read as cloud. The shape is seeded by the floor number
+(`test-maps.mjs` fails two floors drawing the same island), so the descent is not eighteen copies,
+and nothing in it is a fact, so `/art/uncharted/N-known.png` and `-sealed.png` (and `.bin`, its
+blocks, so it collapses like any floor) are served to anyone, `public, immutable`. `pictureFor()`
+in `art.ts` is the one place that decides own picture or island, for the homepage, the card and
+`/floor/ahead/N`; the gate stays with the caller. Mind the iso when placing anything over a heap:
+whatever stands in front covers what is higher up behind it, which is why the mark stands near the
+front and well above the cloud, or its foot and its dot vanish.
+
+### A character is a voxel figure, gated look by look
+
+Every character stands beside their name on their page as a small voxel figure on a patch of
+ground (`src/lib/voxel/figures/`), drawn in the floors' renderer. The look comes from the reader
+pointing at manatoastmedia.com's character portraits: a chibi, a big head on a short body, dot eyes,
+one or two things that make the character who they are. Like the tiles, **take the essence, not the
+pixels**, and draw each look from the edition's own description at its point, not from the
+reference: the reference gives Donut a gold crown where the book's is smoky dark gems round a purple
+stone, and Zev a grey mech where the book's is a white mesh 1950s spacesuit.
+
+- **A figure is a summary of how someone looks, so it obeys the summary rule.** `figure` on a
+  character in `data/entities/characters.json` is `[{ at, look }]`, superseding like taglines; the
+  build writes `figures: [{ look, at, sortKey }]` (the `figures` column), and the page shows the
+  latest look reached, stamped *As of Book 1 · Ch 35* when the look changes over the story. Carl is
+  the model: the pink Crocs at 1:1, barefoot at 1:2 (they went flying), the jacket's right arm gone at
+  1:15, the heart-covered BigBoi boxers at 1:35. The lint fails a look before its character, looks
+  out of order, and a figure on anything but a character; `test-maps.mjs` fails a look named in the
+  data and not drawn, or one that does not render.
+- **`/art/figure/<id>-<n>.png` is gated like a floor's picture**: 404 short of the character's reveal
+  or of look n's own point, `private`, `Vary: Cookie`, the address carrying the picture's hash. A
+  character not drawn yet, or whose first look the reader has not reached (Zev is named at 1:35 and
+  described at 1:36), gets the shadow figure with the System's question mark, `unpictured.png`,
+  public: a placeholder in the house style, as the uncharted island is.
+- **Drawn smooth.** `v.chunk = 0` makes every voxel of a material one piece, bevelled only where it
+  meets another, or a figure reads as a pile of bricks; a part that touches another of the same skin
+  uses `twin()` (the colour one step off) to keep its edge. A colour can be a material (`'#e3a77c'`).
+  The figure faces +y, the lit left face of the iso, with +x its right side.
+- **Shapes and colours only** in `cast.ts`, keyed by entity id: `check-pages` reads it like any page.
+- **Where a figure stands:** beside the name on the character's page (the page's size), in every
+  character's cell on `/who` and in the line-up of characters under *Who turns up here* on a floor's
+  page (the small size, `-s.png`, drawn at scale 1 rather than scaled down, which smears the
+  blocks). A sealed cell on `/who` gets the shadow figure, which says nothing. A floor's line-up shows
+  each character **as they looked on that floor**: the latest look by the floor's `recapSortKey`, never
+  past the reader, or their first look if the book only describes them later. Showing the reader's
+  latest look put Mordecai on the sixth floor's page as the crafting table he is by 8:89. The line-up stands
+  every figure on one ground line so the names under them align, whatever a figure's height.
+  A `/who` character cell is a **portrait card** at every width: a stage of one height (188px, the
+  tallest small figure) across the top, the figure standing on its floor at its own pixels, the name,
+  role and tagline under it at the card's full width, and the whole card one link. Beside the text,
+  figures from 72 to 132px wide started every name somewhere else, and a reader asked for the boxes to
+  be restyled; it is now the same shape as a floor's line-up. On a character's own page the figure
+  stands beside the name, and under 560px over it, centred: beside it, a phone squeezed the tagline
+  into a third of the screen and a reader called it cramped.
+- **Most of the cast are people**, so `person()` in `parts.ts` draws one from a short spec (skin,
+  hair and how it is worn, what they wear and on their feet, a beard, glasses, a hat, a cape, what
+  they carry); a non-human gets a builder of its own in `cast.ts`. Research a look by reading the
+  character's first description in the edition (`data/index/books/text`), never from memory.
+- **The whole cast is drawn where the books allow**: 192 of 218 characters, 310 looks, each at the
+  chapter the edition describes it, researched from the text and drawn from that research. Book 1's
+  cast is in `cast.ts`; books 2 to 8 each have a file (`book2.ts` … `book8.ts`, exporting
+  `BOOKn_FIGURES`), spread into `VOXEL_FIGURES`. The main cast changes most: Carl gets the
+  nightgaunt cloak at 1:6 (the first pass missed it) and twelve more looks through the kangaroo
+  suit; Mordecai is a new creature on almost every floor and the crafting table from 8:89; Mongo
+  grows up; Katia's fighting form, crossbow and riot shield arrive in book 3. A character the books
+  never describe (26 of them: Yvette, Mukta, Menerva, Theia, the Night Wyrm…) stays a shadow, and one
+  described only much later starts there, because an early look would be invented. Where the book
+  leaves a colour unsaid, a figure takes a plain one (`PLAIN_*` in `parts.ts`). The System AI has no
+  body, so its figure is one of its own message boxes; a god seen only as a symbol is the symbol.
+  A look name may appear once per character: a return to an earlier look is a new name on the same
+  builder (Bomo's `unarmored`, Carl's `unsuited`).
+- After changing figure data, `npm run content:build` **and restart the dev server**: the seed runs
+  at boot, so a running server keeps serving the old looks (a shadow where a figure now is).
+
 ### Static copy in a page is ungated by construction
 
 The other half of the same problem. However correct the data is, a sentence typed into an `.astro`
@@ -190,11 +677,15 @@ Defaulting to book 1 (as this did) spoils book 1 for someone who has not read it
 
 **Choosing a book opens a picker; it does not commit.** A tap on a book number used to mean *I have
 finished this book* on the spot, so a reader who had just started book 3 unsealed all of it with one
-click. Now the tap opens a panel under the gate bar: the book's title, *Where are you in it?*, a
-chapter slider that starts at chapter 1 (or where the reader left off, for the saved book), and three
-explicit commits: **Save · up to ch N**, **I finished book N**, and **Clear my progress**. Cancel or
-Escape writes nothing. The cookie shape is unchanged — chapter 0 still means finished, and that
-reading now only ever comes from the button that says so.
+click. The position is a chip in the header now (*I've read up to · Book 5 · ch 40*, *Pick your book*
+in blood for a first visit) that opens a panel under the header: the eight books and *Show
+everything*, and for the chosen book (the saved one when it opens) its title, *Where are you in it?*,
+a chapter slider that starts at chapter 1 (or where the reader left off, for the saved book), and
+three explicit commits: **Save · up to ch N**, **I finished book N**, and **Clear my progress**.
+Cancel, Escape or a click outside writes nothing. The cookie shape is unchanged — chapter 0 still
+means finished, and that reading now only ever comes from the button that says so. The panel's
+selectors are scoped to `#pick`: a beat's book stamp is a `.bk` too, and the old bare `.bk` handler
+caught clicks on stamps.
 
 ### A tagline is a summary, so it obeys the summary rule
 
@@ -699,8 +1190,9 @@ on the first entry so the page is never a blank shell.
 ### Strips scroll themselves; the page never does
 
 The masthead nav wrapped on a phone and left "Position" orphaned on a second
-line, which reads as a mistake rather than a menu. It is one row that scrolls
-itself now, and so is the gate bar's row of book numbers. Three details make
+line, which reads as a mistake rather than a menu. On a narrow screen the
+sections are a menu now; the row of book numbers in the position panel still
+scrolls itself. Three details make
 that work rather than merely exist:
 
 - **`min-width: 0`** on the strip. A flex item will not shrink below its content
