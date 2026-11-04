@@ -307,12 +307,15 @@ Native scrolling stays wherever something scrolls by itself (the console's long 
 or two-finger touch, and in the header and the position panel. To test it, drive it with
 CDP `Input.dispatchTouchEvent`: in headless Chrome each synthetic "100ms" swipe takes about 600ms, so it is a slow
 drag, decided by distance.
-**On a phone *You are here* is lifted over the blur.** Inside its island it sat under the tilt-shift
-(the levels are transformed, so nothing in them can rise above it), so the script moves it into the
-crawl as `position: fixed`, z-index 5 (over the tilt at 4, under the console and the title), stands it
-on the island's top every frame from the level's box and the island's own offset in it (the
-transformed level may itself be the island's `offsetParent`), runs the island's `bob` in step by
-copying its `currentTime`, and fades it when its floor collapses or a card opens. **The card's
+***You are here* is lifted over the blur, on every width.** Inside its island it sat under the tilt-shift
+(the levels are transformed, so nothing in them can rise above it), and even at home its label stands in
+the soft band over the floor. So the script moves it into the crawl as `position: fixed`, z-index 5 (over
+the tilt at 4, under the card at 6, the console and the title), stands it on the island's top every frame
+from the level's box and the island's own offset in it (the transformed level may itself be the island's
+`offsetParent`), scales it with the island round the island's own `transform-origin` (its outer edge on
+the desktop, its middle on a phone), runs the island's `bob` in step by copying its `currentTime`, and
+fades it when its floor collapses or a card opens. It was lifted on the phone first and left inside on the
+desktop, and a reader asked why it was still under the blur there. **The card's
 picture is made by the script (`lend()`), so a scoped rule never reaches it**: on a phone it is sized
 by a `:global(.isle-img)` rule, or a tall floor's picture ran 50 to 120px out of its row (and 650px
 in landscape).

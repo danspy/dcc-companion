@@ -1469,38 +1469,39 @@ const PILOT = [
     document.addEventListener('touchmove', e => { if (open != null && !(e.target as Element).closest?.('.dcard-text')) e.preventDefault(); }, { passive: false });
     addEventListener('pagehide', () => { try { sessionStorage.setItem('dcc-descent', String(open ?? shown)); } catch { /* a convenience */ } });
 
-    /* ---- on a phone, "You are here" stands above the tilt-shift ----
+    /* ---- "You are here" stands above the tilt-shift ----
        Drawn inside its island it is under the blur whenever its floor is not the
        one on the focus line, and even then its label sits in the soft band over
-       the floor. So on a phone it is lifted out into a layer of its own over the
-       blur (still under the console and the title), put on its island's top every
-       frame from the island's own place, with the island's bob run in step, and
-       it fades when its floor goes or a card opens, as it did inside it. */
+       the floor. So it is lifted out into a layer of its own over the blur (still
+       under the console, the title and the header), put on its island's top every
+       frame from the island's own place, at the island's own scale round its own
+       origin, with the island's bob run in step, and it fades when its floor goes
+       or a card opens, as it did inside it. */
     const hereLevel = levelOf(homeId), hereIsle = hereLevel?.querySelector<HTMLElement>('.isle') ?? null;
     const herePin = hereIsle?.querySelector<HTMLElement>('.here-pin') ?? null;
     let lifted = false, pinLoop = 0;
     function liftPin() {
-      if (!herePin || !hereIsle || !hereLevel || narrow.matches === lifted) return;
-      lifted = narrow.matches;
-      if (lifted) {
-        herePin.style.setProperty('--i', hereLevel.style.getPropertyValue('--i'));
-        crawl!.appendChild(herePin); herePin.classList.add('is-lifted');
-        requestAnimationFrame(() => {
-          const a = hereIsle.getAnimations().find(x => (x as CSSAnimation).animationName === 'bob'), b = herePin.getAnimations().find(x => (x as CSSAnimation).animationName === 'bob');
-          if (a && b && a.currentTime != null) b.currentTime = a.currentTime;
-        });
-        placePin();
-      } else { herePin.classList.remove('is-lifted', 'is-gone'); herePin.style.transform = ''; hereIsle.appendChild(herePin); }
+      if (!herePin || !hereIsle || !hereLevel || lifted) return;
+      lifted = true;
+      herePin.style.setProperty('--i', hereLevel.style.getPropertyValue('--i'));
+      crawl!.appendChild(herePin); herePin.classList.add('is-lifted');
+      requestAnimationFrame(() => {
+        const a = hereIsle.getAnimations().find(x => (x as CSSAnimation).animationName === 'bob'), b = herePin.getAnimations().find(x => (x as CSSAnimation).animationName === 'bob');
+        if (a && b && a.currentTime != null) b.currentTime = a.currentTime;
+      });
+      placePin();
     }
     function placePin() {
       if (!lifted) return;
-      const lr = hereLevel!.getBoundingClientRect(), sc = parseFloat(getComputedStyle(hereIsle!).scale) || 1;
-      const w = hereIsle!.offsetWidth, h = hereIsle!.offsetHeight;
+      const lr = hereLevel!.getBoundingClientRect(), cs = getComputedStyle(hereIsle!), sc = parseFloat(cs.scale) || 1;
+      const w = hereIsle!.offsetWidth;
       // the island's place in its level, untransformed (the level, being transformed, may itself be its offset parent)
       const own = hereIsle!.offsetParent === hereLevel;
       const ox = hereIsle!.offsetLeft - (own ? 0 : hereLevel!.offsetLeft), oy = hereIsle!.offsetTop - (own ? 0 : hereLevel!.offsetTop);
-      const x = lr.left + ox + w / 2, y = lr.top + oy + h / 2 - sc * h / 2;
-      herePin!.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0) translate(-50%, calc(-100% - 8px))`;
+      // the middle of its top edge, scaled round the island's own origin (its outer edge on the desktop, its middle on a phone)
+      const [tx, ty] = cs.transformOrigin.split(' ').map(parseFloat);
+      const x = lr.left + ox + tx + (w / 2 - tx) * sc, y = lr.top + oy + ty - ty * sc;
+      herePin!.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0) scale(${sc.toFixed(4)}) translate(-50%, calc(-100% - 8px))`;
       const state = hereLevel!.dataset.state;
       herePin!.classList.toggle('is-gone', state === 'collapsing' || state === 'gone');
     }
@@ -1513,7 +1514,7 @@ const PILOT = [
       pinLoop = requestAnimationFrame(go);
     }
     hereIsle?.addEventListener('transitionrun', followPin);
-    narrow.addEventListener('change', () => { liftPin(); followPin(); });
+    narrow.addEventListener('change', followPin);
     liftPin();
 
     /* ---- first paint: the reader's floor ----
@@ -1704,6 +1705,10 @@ const PILOT = [
               font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--color-gold); }
   .here-pin b { width: 7px; height: 7px; border-radius: 50%; background: var(--color-gold); box-shadow: 0 0 10px var(--color-gold); animation: pulse 2s ease-in-out infinite; }
   .here-pin::after { content: ''; position: absolute; left: 50%; top: 100%; width: 1px; height: 8px; background: var(--color-gold); }
+  /* lifted over the tilt-shift by the script and put on its island's top every frame (over the blur at 4, under the card at 6) */
+  .here-pin.is-lifted { position: fixed; left: 0; top: 0; z-index: 5; translate: none; transform-origin: 0 0; will-change: transform;
+                        animation: bob 7s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -0.9s); }
+  .here-pin.is-lifted.is-gone, .crawl.is-detail .here-pin.is-lifted { opacity: 0; }
   /* the gauge: eighteen floors, the one in view lit, the reader's marked */
   .rail { position: fixed; z-index: 20; right: max(10px, calc((100vw - 1080px) / 2 - 52px)); top: calc(var(--gate-h, 62px) + (100dvh - var(--gate-h, 62px)) / 2);
           translate: 0 -50%; display: flex; flex-direction: column; gap: 4px; }
@@ -1859,10 +1864,6 @@ const PILOT = [
     .level[style*="--ar"] .isle { width: min(92%, calc(var(--maxh) * var(--ar))); }
     .level.in-view .isle { scale: 1.06; }
     .level.in-view a.isle:hover { scale: 1.06; }
-    /* "You are here", lifted over the tilt-shift by the script and put on its island's top every frame */
-    .here-pin.is-lifted { position: fixed; left: 0; top: 0; z-index: 5; translate: none; will-change: transform;
-                          animation: bob 7s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -0.9s); }
-    .here-pin.is-lifted.is-gone, .crawl.is-detail .here-pin.is-lifted { opacity: 0; }
 
     /* the card: the whole screen, the picture over the text, its buttons along the bottom */
     .dcard { top: var(--gate-h, 0px); height: calc(100dvh - var(--gate-h, 0px)); grid-template-columns: minmax(0, 1fr);
