@@ -21,7 +21,7 @@ import { span, stampOf } from './stamps.ts';
 
 export const APP_SCHEMA = 1;
 
-const SITE = 'https://dcc.dev.innovativstud.io';
+const SITE = 'https://crawlers-companion.info';
 
 export interface AppContent {
   schema: number;

@@ -15,7 +15,7 @@ import { WIKI_TO_EDITION } from './edition.mjs';
 
 export const ALTERNATE_EDITIONS = WIKI_TO_EDITION;
 
-const SITE = 'https://dcc.dev.innovativstud.io';
+const SITE = 'https://crawlers-companion.info';
 
 /* An integer key back to the stamp it carries. 999 is the end of the book and is left as
    is; the plugin renders it as "end". A book-level tag is chapter 0 for the same reason. */

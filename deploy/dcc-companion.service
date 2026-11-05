@@ -3,7 +3,7 @@
 # Then:  systemctl daemon-reload && systemctl enable --now dcc-companion
 #
 # Mirrors the other Astro SSR apps on this box. Port 4336 is the next free slot
-# after mcu-timeline (4335). Served at dcc.dev.innovativstud.io.
+# after mcu-timeline (4335). Served at crawlers-companion.info.
 #
 # This app is STATELESS on the server. There is no user database: reading
 # position lives in the reader's own `dcc_pos` cookie, and data/dcc.db holds

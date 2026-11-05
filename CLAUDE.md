@@ -2473,7 +2473,9 @@ set -a && . ./.env && set +a
 
 ## Deploy
 
-Live at **https://dcc.dev.innovativstud.io** on port 4336, the next slot after mcu-timeline.
+Live at **https://crawlers-companion.info** on port 4336, the next slot after mcu-timeline.
+The old address, `dcc.dev.innovativstud.io`, 308-redirects to it (308 rather than 301 so the
+iOS app's POST to `/app/achievement.json` keeps its method and body).
 
 Push to `main` deploys. `.github/workflows/deploy.yml` runs two jobs:
 
@@ -2502,7 +2504,8 @@ workflow has to grow that dance too, and `src/lib/prefs.ts` is where it would st
 |---|---|
 | systemd unit | `deploy/dcc-companion.service`, installed at `/etc/systemd/system/` |
 | working copy | `/srv/previews/dcc-companion` (a clone of `origin/main`) |
-| reverse proxy | `dcc.dev.innovativstud.io` → `127.0.0.1:4336` in `/etc/caddy/Caddyfile` |
+| reverse proxy | `crawlers-companion.info` → `127.0.0.1:4336` in `/etc/caddy/Caddyfile`; `www.` and `dcc.dev.innovativstud.io` redirect to it |
+| DNS | `crawlers-companion.info` and `www` A → `91.99.148.198`, at United Domains |
 | Ollama key | `/etc/dcc-companion.env`, read by the unit's `EnvironmentFile=-` (optional by design) |
 | deploy key | `~/.ssh/dcc-companion-deploy`, public half in `authorized_keys` |
 | repo secrets | `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_KEY` |
