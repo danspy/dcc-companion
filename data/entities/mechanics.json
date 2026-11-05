@@ -478,7 +478,7 @@
       "role": "Institution",
       "revealedAt": "1:19",
       "sort": 8,
-      "tagline": "The Desperado Pass is a tattoo, branded onto Donut's shoulder blade and Carl's neck, and it grants access to the Desperado Club. What the club actually is, the description does not say.",
+      "tagline": "The Desperado Club is somewhere a Desperado Pass gets you into, and Carl and Donut both have one now, as tattoos. What the club actually is, the pass does not say.",
       "beats": [
         {
           "kind": "origin",
@@ -488,7 +488,7 @@
           "at": "1:19",
           "confidence": "verified",
           "headline": "Entry is a tattoo",
-          "text": "Carl and Donut are both branded with the Desperado Pass out of their Asshole Boxes in a first-floor safe room — his on the neck, hers on the right shoulder blade, glowing gold through the fur. Donut is appalled."
+          "text": "The club arrives as a name on a tattoo. Carl and Donut are both branded with a Desperado Pass out of their Asshole Boxes in a first-floor safe room, and all its description says is that it allows access to the Desperado Club. It explains nothing about what that means."
         },
         {
           "kind": "arc",
@@ -587,9 +587,7 @@
       "id": "personal-spaces",
       "kind": "mechanic",
       "name": "Personal Spaces",
-      "aka": [
-        "the Doggy Door"
-      ],
+      "aka": [],
       "role": "Rules",
       "revealedAt": "1:9",
       "sort": 9,
@@ -2586,6 +2584,16 @@
       "beats": [
         {
           "kind": "origin",
+          "book": 4,
+          "chapter": 32,
+          "floor": 5,
+          "at": "4:32",
+          "confidence": "verified",
+          "headline": "A skull on the cover",
+          "text": "The platinum quest box Carl earned for keeping Orthrus alive holds a magical tome: black leather, a skull on the cover. Opened, it glows and adds the spell to his list. Ping costs five mana, cools down in five minutes, and reaches one kilometre round the caster plus 500 metres for every ten points of intelligence, marking every non-crawler and non-red-tagged mob, even past the edge of the map. Everything it hits hears the ping, but not where it came from. The elven gunnery officers of the Dream all learn it the moment they reach adulthood. Carl is disappointed that it does not work on mobs or crawlers, but reckons it is a spell for the sixth and ninth floors, where it will find NPCs, elites and hunters."
+        },
+        {
+          "kind": "use",
           "book": 7,
           "chapter": 79,
           "floor": 9,

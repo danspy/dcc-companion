@@ -78,19 +78,23 @@ const hiddenRelations = relations.length - visibleRelations.length;
 const onTimeline = beats.some(b => gate.frontier >= b.sortKey);
 
 const description = descriptionFor(entity, gate);
-/* A character stands beside their name as a voxel figure: the latest look the
-   reader has reached, stamped when the look changes over the story, or the
-   shadow figure where none is drawn yet or none reached. */
-const figure = entity.kind === 'character'
-  ? await figureFor(entity.id, (entity.figures ?? []) as FigureStep[], key => reveals(gate, key))
+/* A character stands beside their name as a voxel figure, and an item floats
+   there as a sprite: the latest look the reader has reached, stamped when the
+   look changes over the story, or the shadow (the unidentified pouch, for an
+   item) where none is drawn yet or none reached. */
+const isItem = entity.kind === 'item';
+const figure = entity.kind === 'character' || isItem
+  ? await figureFor(entity.id, (entity.figures ?? []) as FigureStep[], key => reveals(gate, key), entity.kind)
   : null;
 ---
 <Layout title={entity.name}>
   <article class="wrap">
     <header class={`hero${figure ? ' has-figure' : ''}`}>
       {figure && (
-        <figure class={`hero-fig${figure.own ? '' : ' unpictured'}`}>
-          <img src={figure.src} width={figure.width} height={figure.height} alt={figure.own ? '' : 'Not yet pictured'} />
+        <figure class={`hero-fig${figure.own ? '' : ' unpictured'}${isItem ? ' is-item' : ''}`}>
+          {isItem
+            ? <span class="float"><img src={figure.src} width={figure.width} height={figure.height} alt={figure.own ? '' : 'Not yet pictured'} /></span>
+            : <img src={figure.src} width={figure.width} height={figure.height} alt={figure.own ? '' : 'Not yet pictured'} />}
           {figure.own && figure.changes && figure.at && <figcaption>As of {stampOf(figure.at)}</figcaption>}
           {!figure.own && <figcaption>Not yet pictured</figcaption>}
         </figure>
@@ -221,6 +225,18 @@ const figure = entity.kind === 'character'
   .hero-fig.unpictured img { opacity: .8; }
   .hero-fig figcaption { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
                          text-transform: uppercase; color: var(--color-grey-500); margin-top: 2px; }
+  /* An item has no ground: it floats, as a thing dropped in a game does, over
+     a soft shadow that tightens as it rises. The one thing on the page that
+     moves by itself, and still under reduced motion. The shadow is the page's,
+     not the picture's, under the image wherever the caption falls. */
+  .hero-fig.is-item { align-self: center; margin-bottom: 0; }
+  .float { position: relative; display: block; padding-bottom: 24px; }
+  .float img { animation: hover 3.6s ease-in-out infinite alternate; }
+  .float::after { content: ''; position: absolute; left: 50%; bottom: 0; width: 60%; height: 14px; translate: -50% 0; border-radius: 50%;
+                  background: radial-gradient(closest-side, #000d, #0000); animation: hover-shadow 3.6s ease-in-out infinite alternate; }
+  @keyframes hover { from { translate: 0 0; } to { translate: 0 -9px; } }
+  @keyframes hover-shadow { from { scale: 1; opacity: .9; } to { scale: .78; opacity: .55; } }
+  @media (prefers-reduced-motion: reduce) { .float img, .float::after { animation: none; } }
   @media (max-width: 600px) {
     .hero.has-figure { column-gap: 12px; }
     .hero-fig { width: 34vw; }

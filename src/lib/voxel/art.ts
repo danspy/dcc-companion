@@ -5,6 +5,7 @@ import { render } from './vox.ts';
 import { uncharted } from './tiles/uncharted.ts';
 import { encodePalettePng } from './png.ts';
 import { VOXEL_FIGURES, unpictured } from './figures/cast.ts';
+import { unpicturedItem } from './figures/items.ts';
 import { entry, ENTRY_HOLE, ENTRY_Z } from './scenes/entry.ts';
 
 /* A floor's tile picture, drawn once per process, and a short hash of its
@@ -126,9 +127,9 @@ export async function pictureFor(id: number, show: { accent: string; hero: boole
            width: u.width, height: u.height, origin: u.origin, scale: u.scale, stair: null, own: false };
 }
 
-/* ---- a character's figure ----
+/* ---- a character's figure, and an item's sprite ----
    Drawn once per process and look, like a floor's picture, and gated the same
-   way: `/art/figure/<id>-<n>.png` answers only a reader past the character's
+   way: `/art/figure/<id>-<n>.png` answers only a reader past the entity's
    reveal and past look n's own point. A character not drawn yet, or whose
    first look the reader has not reached, gets the shadow figure, which shows
    nothing and is the same for everyone. */
@@ -155,17 +156,19 @@ export const figureArt = (id: string, look: string, small = false): Promise<Figu
   return build ? drawFigure(`${id}|${look}`, build, small) : null;
 };
 export const unpicturedArt = (small = false) => drawFigure('unpictured', unpictured, small);
+/* an item not drawn yet, or not reached: the unidentified pouch, public like the shadow figure */
+export const unpicturedItemArt = (small = false) => drawFigure('unpictured-item', unpicturedItem, small);
 
 export interface FigureStep { look: string; at: string; sortKey: number }
 export interface FigureImage { src: string; width: number; height: number }
 export interface Figure extends FigureImage { small: FigureImage; own: boolean; at: string | null; changes: boolean }
-/** The figure a page shows for a character: the latest look the reader has reached, or the shadow. */
-export async function figureFor(id: string, steps: FigureStep[], reached: (sortKey: number) => boolean): Promise<Figure> {
+/** The figure a page shows for a character or an item: the latest look the reader has reached, or the shadow (the unidentified pouch for an item). */
+export async function figureFor(id: string, steps: FigureStep[], reached: (sortKey: number) => boolean, kind = 'character'): Promise<Figure> {
   let n = -1;
   steps.forEach((s, i) => { if (reached(s.sortKey) && VOXEL_FIGURES[id]?.[s.look]) n = i; });
-  const own = n >= 0;
-  const [big, small] = own ? await Promise.all([figureArt(id, steps[n].look)!, figureArt(id, steps[n].look, true)!]) : await Promise.all([unpicturedArt(), unpicturedArt(true)]);
-  const name = own ? `${id}-${n}` : 'unpictured';
+  const own = n >= 0, shadow = kind === 'item' ? unpicturedItemArt : unpicturedArt;
+  const [big, small] = own ? await Promise.all([figureArt(id, steps[n].look)!, figureArt(id, steps[n].look, true)!]) : await Promise.all([shadow(), shadow(true)]);
+  const name = own ? `${id}-${n}` : kind === 'item' ? 'unpictured-item' : 'unpictured';
   return { src: `/art/figure/${name}.png?v=${big.version}`, width: big.width, height: big.height,
            small: { src: `/art/figure/${name}-s.png?v=${small.version}`, width: small.width, height: small.height },
            own, at: own ? steps[n].at : null, changes: steps.length > 1 };

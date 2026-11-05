@@ -11914,6 +11914,16 @@
         {
           "kind": "origin",
           "book": 4,
+          "chapter": 21,
+          "floor": 5,
+          "at": "4:21",
+          "confidence": "verified",
+          "headline": "It's sticky",
+          "text": "In a glass fountain in this crystal castle stands a statue, with a plaque: Lika, my love, my wife, and a promise to burn and bury anyone who gets in the way. Mongo sniffs it, it wobbles, and over it goes. CRASH. Nearly all of it turns to dust except the head, which keeps its looks apart from a chip out of the chin. Carl puts it in his inventory with a few big pieces of the glass, fulgurite, the inventory calls it. Decapitated glass head depicting Lika from Troubadour's Bounty, says the description. And then: it's sticky. STICKY."
+        },
+        {
+          "kind": "arc",
+          "book": 4,
           "chapter": 24,
           "floor": 5,
           "at": "4:24",
@@ -31018,7 +31028,7 @@
           "at": "8:1",
           "confidence": "verified",
           "headline": "What his papers say",
-          "text": "Princess Donut, mid-negotiation across a table, mentions some legal papers Carl took from his father's trailer and has not read. She has. Carl's grandparents set money aside for Carl, and his father was trying to get at it without Carl knowing. A marriage certificate, for the father and his new wife. Court documents from several arrests. Together, she says, they paint a very distinct picture of who Carl's father was."
+          "text": "Carl's father's papers, taken from the trailer, are still unread by Carl, but Princess Donut has read them. Carl's grandparents set money aside for Carl, and his father was trying to get at it without Carl knowing. A marriage certificate, for the father and his new wife. Court documents from several arrests. Together, she says, they paint a very distinct picture of who Carl's father was."
         }
       ],
       "relations": [

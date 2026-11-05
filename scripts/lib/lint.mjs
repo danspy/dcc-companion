@@ -159,11 +159,11 @@ export function lint({ books, floors, entities, achievements = [], foretold = []
       });
     }
 
-    /* A figure is a picture of how a character looks, so it is a summary and
-       opens where everything in it has been read: each look at its own point,
-       never before the character, in order, superseding like taglines. */
+    /* A figure is a picture of how a character or an item looks, so it is a
+       summary and opens where everything in it has been read: each look at its
+       own point, never before the entity, in order, superseding like taglines. */
     if (e.figure != null) {
-      if (!Array.isArray(e.figure) || e.kind !== 'character') errors.push(`${where}: figure must be a list of { at, look }, on a character`);
+      if (!Array.isArray(e.figure) || !['character', 'item'].includes(e.kind)) errors.push(`${where}: figure must be a list of { at, look }, on a character or an item`);
       else {
         let prevF = -1;
         e.figure.forEach((f, i) => {
@@ -171,7 +171,7 @@ export function lint({ books, floors, entities, achievements = [], foretold = []
           const fAt = at(f.at, fw);
           if (fAt === null) return;
           if (!f.look || typeof f.look !== 'string') errors.push(`${fw}: no look`);
-          if (entityAt !== null && fAt < entityAt) errors.push(`${fw}: opens at "${f.at}", before the character itself ("${e.revealedAt}")`);
+          if (entityAt !== null && fAt < entityAt) errors.push(`${fw}: opens at "${f.at}", before the ${e.kind} itself ("${e.revealedAt}")`);
           if (fAt <= prevF) errors.push(`${fw}: does not come after the one before it`);
           prevF = fAt;
         });

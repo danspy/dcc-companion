@@ -121,17 +121,22 @@ for (const b of beats) {
 const cast = [...seen].map(([eid, n]) => ({ e: byId.get(eid)!, n })).filter(x => x.e);
 const KINDS = ['character', 'faction', 'place', 'item', 'mechanic', 'thread'];
 const castByKind = KINDS.map(k => ({ k, rows: cast.filter(x => x.e.kind === k) })).filter(g => g.rows.length);
-/* The characters on the floor stand in a line-up, each as they looked on this
-   floor: the latest look by the time the crawl leaves it (never past the
+/* The characters on the floor stand in a line-up, and its items float in one,
+   each as they looked on this floor: the latest look by the time the crawl leaves it (never past the
    reader's own point), so the fourth floor's Mordecai is the skyfowl, not
    whatever he is by the reader's book. One first described after the floor
    shows the first look the reader has reached; one not drawn yet, the shadow. */
 const floorEnd = floor.recapSortKey ?? Infinity;
-const castFigures = new Map(await Promise.all(cast.filter(x => x.e.kind === 'character')
+/* A floor can turn up eighty items. The line-up shows the first ITEM_FOLD met and
+   folds the rest behind "All N items", the way a map's key folds its places; with
+   no JavaScript nothing is folded. The CSS repeats the number (nth-child(n+17)). */
+const ITEM_FOLD = 16;
+const PICTURED = new Set(['character', 'item']);
+const castFigures = new Map(await Promise.all(cast.filter(x => PICTURED.has(x.e.kind))
   .map(async ({ e }) => {
     const steps = (e.figures ?? []) as FigureStep[];
-    const then = await figureFor(e.id, steps, k => reveals(gate, k) && k <= floorEnd);
-    const first = then.own || !steps.length ? then : await figureFor(e.id, steps, k => reveals(gate, k) && k <= steps[0].sortKey);
+    const then = await figureFor(e.id, steps, k => reveals(gate, k) && k <= floorEnd, e.kind);
+    const first = then.own || !steps.length ? then : await figureFor(e.id, steps, k => reveals(gate, k) && k <= steps[0].sortKey, e.kind);
     return [e.id, first.small] as const;
   })));
 
@@ -265,10 +270,10 @@ const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n =
       <h2 class="sect">Who turns up here</h2>
       <p class="intro">Everyone and everything with an entry on this floor, as far as you have read, in the order you meet them here.</p>
       {castByKind.map(g => (
-        <div class="castgroup">
+        <div class={`castgroup${g.k === 'item' && g.rows.length > ITEM_FOLD ? ' can-fold' : ''}`}>
           <h3 class="label">{KIND_LABELS[g.k] ?? g.k} · {g.rows.length}</h3>
-          {g.k === 'character'
-            ? <ul class="lineup">
+          {PICTURED.has(g.k)
+            ? <ul class={`lineup${g.k === 'item' ? ' is-items' : ''}`}>
                 {g.rows.map(({ e, n }) => { const f = castFigures.get(e.id)!; return (
                   <li><a href={`/entity/${e.id}`}>
                     <img src={f.src} width={f.width} height={f.height} alt="" loading="lazy" decoding="async" />
@@ -281,6 +286,8 @@ const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n =
                   <li><a href={`/entity/${e.id}`}>{e.name}</a><span class="label">{n}</span></li>
                 ))}
               </ul>}
+          {g.k === 'item' && g.rows.length > ITEM_FOLD &&
+            <button type="button" class="lineupmore" data-lineupmore><span class="lm-more">All {g.rows.length} items</span><span class="lm-less">Fewer</span></button>}
         </div>
       ))}
     </section>
@@ -486,6 +493,17 @@ const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n =
     addEventListener('resize', () => { if (!raf) raf = requestAnimationFrame(update); });
     update();
   }
+
+  /* A long item line-up folds to its first items once the script is here; the
+     button opens and shuts it. Without the script every item simply shows. */
+  for (const g of document.querySelectorAll('.castgroup.can-fold')) g.classList.add('fold-ready');
+  document.addEventListener('click', e => {
+    const b = (e.target as Element).closest?.('[data-lineupmore]');
+    if (!b) return;
+    const g = b.closest('.castgroup')!;
+    g.classList.toggle('is-open');
+    if (!g.classList.contains('is-open')) g.scrollIntoView({ block: 'nearest' });
+  });
 </script>
 
 <style>
@@ -571,6 +589,19 @@ const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n =
   .lineup a:hover .who { color: var(--color-gold); }
   .lineup img { image-rendering: pixelated; max-width: 100%; height: auto; align-self: end; }
   .lineup .who { color: var(--color-grey-100); font-size: var(--type-meta); line-height: 1.25; }
+  /* items float in the middle of their box rather than standing on its floor */
+  .lineup.is-items img { align-self: center; margin-block: 8px 6px; }
+  /* the fold: the first sixteen items (ITEM_FOLD), the rest one press away, like a map's key */
+  .castgroup.fold-ready:not(.is-open) .lineup li:nth-child(n+17) { display: none; }
+  /* a phone shows two to a row, so half as many before the fold: four rows, not eight */
+  @media (max-width: 560px) { .castgroup.fold-ready:not(.is-open) .lineup li:nth-child(n+9) { display: none; } }
+  .lineupmore { display: none; }
+  .castgroup.fold-ready .lineupmore { display: flex; width: 100%; justify-content: center; margin-top: 6px; padding: 12px; border: 1px solid var(--color-line);
+                background: none; color: var(--color-gold); cursor: pointer;
+                font-family: var(--font-mono); font-size: var(--type-ui); letter-spacing: var(--ls-label); text-transform: uppercase; }
+  .castgroup.fold-ready .lineupmore:hover, .castgroup.fold-ready .lineupmore:focus-visible { border-color: var(--color-gold); outline: none; }
+  .lineupmore .lm-less, .castgroup.is-open .lineupmore .lm-more { display: none; }
+  .castgroup.is-open .lineupmore .lm-less { display: inline; }
   .parts { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 28px; }
   .part { max-width: var(--measure); }
   .part-span { color: var(--color-gold); }

@@ -7,6 +7,7 @@ import { BOOK5_FIGURES } from './book5.ts';
 import { BOOK6_FIGURES } from './book6.ts';
 import { BOOK7_FIGURES } from './book7.ts';
 import { BOOK8_FIGURES } from './book8.ts';
+import { ITEM_FIGURES } from './items.ts';
 
 /* ---- the cast, one builder per character, one look per stretch of the story ----
    A figure is a summary of how someone looks, so it obeys the summary rule:
@@ -1014,4 +1015,5 @@ export const VOXEL_FIGURES: Record<string, Record<string, () => Vox>> = {
   ...BOOK6_FIGURES,
   ...BOOK7_FIGURES,
   ...BOOK8_FIGURES,
+  ...ITEM_FIGURES,          // items are drawn by the same pipeline, keyed by their own ids
 };

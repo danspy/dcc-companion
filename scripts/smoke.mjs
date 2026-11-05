@@ -76,6 +76,7 @@ const ROUTES = [
   ['/art/figure/unpictured.png', []],
   // the start screen's picture: the way in on the first night, public like the uncharted island
   ['/art/entry.png', []],
+  ['/art/figure/unpictured-item.png', []],
   /* The book filter is resolved on the server: ?book=3 arrives with the other
      books' entries already hidden and the Book 3 chip pressed. */
   ['/entity/carl?book=3', ['data-book="3" aria-pressed="true"', 'data-book="1" hidden']],

@@ -595,7 +595,7 @@ stone, and Zev a grey mech where the book's is a white mesh 1950s spacesuit.
   latest look reached, stamped *As of Book 1 · Ch 35* when the look changes over the story. Carl is
   the model: the pink Crocs at 1:1, barefoot at 1:2 (they went flying), the jacket's right arm gone at
   1:15, the heart-covered BigBoi boxers at 1:35. The lint fails a look before its character, looks
-  out of order, and a figure on anything but a character; `test-maps.mjs` fails a look named in the
+  out of order, and a figure on anything but a character or an item; `test-maps.mjs` fails a look named in the
   data and not drawn, or one that does not render.
 - **`/art/figure/<id>-<n>.png` is gated like a floor's picture**: 404 short of the character's reveal
   or of look n's own point, `private`, `Vary: Cookie`, the address carrying the picture's hash. A
@@ -641,6 +641,64 @@ stone, and Zev a grey mech where the book's is a white mesh 1950s spacesuit.
   builder (Bomo's `unarmored`, Carl's `unsuited`).
 - After changing figure data, `npm run content:build` **and restart the dev server**: the seed runs
   at boot, so a running server keeps serving the old looks (a shadow where a figure now is).
+
+### An item is a voxel sprite, floating, gated the same way
+
+Items get the same treatment, from the same pipeline: `figure: [{ at, look }]` on an item in
+`data/entities/items.json`, the same `figures` column, the same gated `/art/figure/<id>-<n>.png` (the
+route serves characters and items), the same rule that a look opens where everything in it has been
+read. The registry is `src/lib/voxel/figures/items.ts` (`ITEM_FIGURES`, spread into `VOXEL_FIGURES`),
+with the batches' files beside it (`items-a/b/c.ts` for the first 23, `items-b1a.ts` … `items-b9.ts` for
+the rest, one per batch of a book), the shape helpers in `itemparts.ts` and the plain forms in
+`itemforms.ts`.
+
+- **The look is the reader's reference again**: manatoastmedia.com's item sprites, one object, a
+  three-quarter view, a hard outline, a few strong colours, floating with no slot or ground. Essence,
+  not pixels, and each look from the edition's own words: theirs gives the enhanced pet biscuit a bone,
+  where the book's is "small… brown, hard, and round with a crumbly texture"; the crown's metal is never
+  named, so it is a plain one, not their gold.
+- **Blocks, not spheres.** The first pilot drew a round thing as a voxel sphere and it read as a dirt
+  heap, because every step of a sphere draws its own edge. `chamfer()` (a block with its vertical edges
+  cut back) reads round; `lathe()` is for a bottle or a ring, `blob()` only for a lump.
+- **An item floats.** On its own page it hovers beside the name over a soft shadow that tightens as it
+  rises (the page's shadow, not the picture's; the one thing there that moves by itself, still under
+  reduced motion). On `/who` an item is a portrait card like a character, on a shorter stage (150px),
+  centred and still. On a floor's page its items float in a line-up beside the characters', as they
+  looked on that floor.
+- **An item not drawn, or not reached, is the unidentified pouch** (`unpicturedItem()`,
+  `/art/figure/unpictured-item.png`, public): a dark drawstring bag with the System's question mark,
+  the item's answer to the shadow figure. `figureFor(id, steps, reached, kind)` picks which shadow.
+- **Every item in the reader's reference is on the site.** The reader asked for all of manatoast's item
+  guide (325 entries across the eight books), so there are 328 items: the first 26 and 302 more, each
+  built the way the 2:5 sweep built entities (reveal at the first printing of its name, the System's own
+  description where there is one, taglines and beats from the edition, then read against the edition a
+  second time by a separate pass, which changed about one beat in three). Their names are the book's,
+  not the guide's ("Donut's crupper" is the Enchanted Fae Scale Quadruped Crupper of the Fleet); a guide
+  entry that bundles things ("Laboratory kit and Blitz Sticks") became the named items in it; one that is
+  not an object (an inventory tab, a guild, a status) was left out, and so was one the edition never
+  prints at all (a "Ring of Sting", a "Shugo patch", "Beautiful Princesses Who Enjoy Spicy Foods"). A
+  specific instance of something already here (a memorial crystal, a skill potion named only by its
+  skill, the Kimaris plush) is told by that entry. A spell tome is its own item where the book hands it
+  over as an object, and `teaches` its spell; an unnamed one read on the spot is told by the spell.
+- **A thing the book gives only by its noun is that noun's plain form** (`itemforms.ts`: potion, vial,
+  scroll, tome, card, ring, ticket, patch, crystal, key, bomb, table, piercing, and the T'Ghee card's back
+  with the Syndicate's rings), coloured only where the text gives a colour. So two dozen tomes and potions
+  look alike, which is the honest answer: the book did not tell them apart. **316 of the 328 are drawn,
+  389 looks**, each opened where the text has given everything in it: the Gate is a pouch until 4:21 and
+  broken from 7:87; the war gauntlet's spikes lengthen at 4:13; Spunky Jefferson swells at 7:68, is giant
+  at 8:24 and shrinks at 8:59; the Battle Rattle gains a patch at each chapter one is sewn on. Twelve stay
+  the pouch on purpose: a place (the Nothing), a box or a trap the book never shows the same way twice or
+  at all (the Benefactor, Fan and Hunter-Killer Boxes, the summoning and spirit-box traps, the Dazzlers),
+  and a few things that are never described (the borough field guide, a doggie-door module).
+- **A floor's line-up folds its items.** A floor can turn up eighty items, so its line-up shows the first
+  sixteen met (eight on a phone) and folds the rest behind *All N items*, as a map's key folds its places;
+  with no JavaScript nothing folds. Characters do not fold.
+- **`check-pages` blanks an entity's own id used as a quoted key** (`'war-gauntlet': { … }`): it is how a
+  registry looks a thing up and never reaches a reader, and an item's lower-case alias ("gauntlet",
+  "toraline") matched inside it. A gated name used as a *function* name in a sprite file still fails it,
+  rightly: name the function for its shape (`rootTuber`, not `toraline`).
+- `test-maps.mjs` holds an item to its stage: wider and taller than 48 at page size, at most 300×280,
+  and at most 150×140 small, or it would not fit a `/who` card at its own pixels.
 
 ### Static copy in a page is ungated by construction
 
@@ -2580,6 +2638,16 @@ currently has a dev server running. It is not this deployment, and only one proj
   "The 11th Floor Arena", the book's own phrase at 8:67. Scolopendra as a crawler from 8:98 lives in
   the existing Scolopendra entry rather than a second one. The Night Wyrm's own name "Hamed" is an alias
   with its own reveal point at 6:32; see *An alias can have its own reveal point*.
+- **Then every item in manatoast's item guide: 302 more, 657 entities in all**, 328 of them items (see
+  *An item is a voxel sprite*). Each was written from the edition and read against it again by a separate
+  pass, which changed 334 of about 1,100 beats, for the same five reasons as ever plus one new one: a
+  writer folding a neighbouring object into an item's beats (a salve inside the duct tape's page). The
+  second pass also reopened 29 things the first had wrongly called covered, and fixed older entries it
+  tripped over: the enhanced biscuit at 1:45 was an ordinary one, the 8:97 throw was a banger sphere and
+  not "a bomb", "the Doggy Door" alias opened at 1:9 for a door first printed at 6:63, and the
+  `hand-that-claws-the-master` award is 5:6, not the wiki's 6:6 (a fresh `achievements:refresh` would put
+  the wiki's tag back; the pull has no override map). `content:anchors` reads 608 exact, 60 reviewed,
+  none early or late.
 - Coverage gaps it noticed: the Gate in book 7 (waiting in a mailbox at 7:1, taken from Elle by Akuma
   at 7:61); `no-respawns` as a name, which 7:8 contradicts for outworlders; Rishi's death is only
   confirmed at 8:10 while his fate beat sits at 7:58.

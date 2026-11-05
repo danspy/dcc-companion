@@ -1089,6 +1089,22 @@
       "confidence": "verified"
     },
     {
+      "id": "hand-that-claws-the-master",
+      "name": "Hand that Claws the Master",
+      "at": "5:6",
+      "floor": 6,
+      "for": "Killing a non-crawler biological",
+      "box": "Gold Hunter-Killer Box",
+      "text": "New Achievement! The Hand that Claws the Master (x35) You have permanently killed a non-crawler biological. They ain’t just dead. They dead dead. Their children are now orphans. Their mothers are gnashing their teeth and cursing your name. And you’re just sitting there all alive and shit, and girlfriend, I am all in. We all know you should have received this achievement, uh, a little earlier, but I figured it’d be in your best interest not to reward you this one just yet. But you sure deserved it, so I may have slipped an extra one in there. Shhh. Don’t tell the mudskippers.",
+      "reward": "You’ve received a Gold Hunter-Killer Box (x34) Note: This achievement may be awarded more than once, but Hunter-Killer Boxes are only awarded on the sixth floor.",
+      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Hand_that_Claws_the_Master_Achievement",
+      "recipients": [
+        "carl",
+        "bomo"
+      ],
+      "confidence": "verified"
+    },
+    {
       "id": "i-wanna-go-home",
       "name": "I Wanna Go Home",
       "at": "5:6",
@@ -1302,22 +1318,6 @@
       "source": "https://dungeon-crawler-carl.fandom.com/wiki/Fashion_of_the_Gods!_Achievement",
       "recipients": [
         "carl"
-      ],
-      "confidence": "verified"
-    },
-    {
-      "id": "hand-that-claws-the-master",
-      "name": "Hand that Claws the Master",
-      "at": "6:6",
-      "floor": 6,
-      "for": "Killing a non-crawler biological",
-      "box": "Gold Hunter-Killer Box",
-      "text": "New Achievement! The Hand that Claws the Master (x35) You have permanently killed a non-crawler biological. They ain’t just dead. They dead dead. Their children are now orphans. Their mothers are gnashing their teeth and cursing your name. And you’re just sitting there all alive and shit, and girlfriend, I am all in. We all know you should have received this achievement, uh, a little earlier, but I figured it’d be in your best interest not to reward you this one just yet. But you sure deserved it, so I may have slipped an extra one in there. Shhh. Don’t tell the mudskippers.",
-      "reward": "You’ve received a Gold Hunter-Killer Box (x34) Note: This achievement may be awarded more than once, but Hunter-Killer Boxes are only awarded on the sixth floor.",
-      "source": "https://dungeon-crawler-carl.fandom.com/wiki/Hand_that_Claws_the_Master_Achievement",
-      "recipients": [
-        "carl",
-        "bomo"
       ],
       "confidence": "verified"
     },

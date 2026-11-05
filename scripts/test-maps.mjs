@@ -79,6 +79,7 @@ import { VOXEL_FLOORS, VOXEL_HEROES } from '../src/lib/voxel/floors.ts';
 import { render } from '../src/lib/voxel/vox.ts';
 import { uncharted } from '../src/lib/voxel/tiles/uncharted.ts';
 import { VOXEL_FIGURES, unpictured } from '../src/lib/voxel/figures/cast.ts';
+import { unpicturedItem } from '../src/lib/voxel/figures/items.ts';
 import { entry, ENTRY_HOLE } from '../src/lib/voxel/scenes/entry.ts';
 
 test('every floor with a tile picture has a reveal point for it, and every picture renders', () => {
@@ -110,16 +111,23 @@ test('every floor with a tile picture has a reveal point for it, and every pictu
     if (known) shapes.add(`${img.width}x${img.height}x${img.cubes.length}`);
   }
   assert.equal(shapes.size, 18, 'two floors drew the same uncharted island');
-  /* every look a character's figure names exists in code and renders, the
-     shadow figure too, and no look is named twice on one character */
+  /* every look a character's figure or an item's sprite names exists in code
+     and renders, the shadow figure and the unidentified pouch too, and no look
+     is named twice on one entity. An item floats in a stage of its own, so it
+     is held to that stage: small enough for a /who card at the small size. */
   for (const e of snap.entities) for (const f of e.figures ?? []) {
     const build = VOXEL_FIGURES[e.id]?.[f.look];
     assert.ok(build, `${e.id}: figure look "${f.look}" is named in the data but not drawn`);
     const img = render(build(), '#ffc10a', 8, 2);
-    assert.ok(img.width > 60 && img.height > 80, `${e.id}: figure look "${f.look}" is ${img.width}x${img.height}`);
+    if (e.kind === 'item') {
+      const sm = render(build(), '#ffc10a', 4, 1);
+      assert.ok(img.width > 48 && img.height > 48 && img.width <= 300 && img.height <= 280, `${e.id}: item look "${f.look}" is ${img.width}x${img.height}`);
+      assert.ok(sm.width <= 150 && sm.height <= 140, `${e.id}: item look "${f.look}" is ${sm.width}x${sm.height} small, too big for its stage`);
+    } else assert.ok(img.width > 60 && img.height > 80, `${e.id}: figure look "${f.look}" is ${img.width}x${img.height}`);
     assert.equal(e.figures.filter(g => g.look === f.look).length, 1, `${e.id}: figure look "${f.look}" named twice`);
   }
   assert.ok(render(unpictured(), '#ffc10a', 8, 2).width > 60, 'the shadow figure does not render');
+  assert.ok(render(unpicturedItem(), '#ffc10a', 8, 2).width > 48, 'the unidentified pouch does not render');
   /* the start screen's scene renders, and its lit hole is where the page raises the spotlight from */
   const way = render(entry(), '#ffc10a', 10, 2);
   assert.ok(way.width > 400 && way.height > 300 && way.cubes.length > 1000, `the start screen's scene is ${way.width}x${way.height}`);

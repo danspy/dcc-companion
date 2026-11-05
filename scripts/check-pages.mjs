@@ -22,6 +22,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const snap = JSON.parse(readFileSync(join(root, 'data/content.snapshot.json'), 'utf8'));
 
 const START = parseAt('1:1');
+const ids = new Set(snap.entities.map(e => e.id));
 
 /* Whole words; case-blind for a name of more than one word, as written for a
    name of one. Each part is load-bearing: the leak that shipped read "the Great
@@ -92,7 +93,13 @@ for (const file of files) {
      job, `Floor 7 — the Great Race` in literal copy is not. */
   const src = readFileSync(file, 'utf8')
     .replace(/\/\*[\s\S]*?\*\//g, m => m.replace(/[^\n]/g, ' '))
-    .replace(/(^|[^:])\/\/[^\n]*/g, (m, p) => p + ' '.repeat(m.length - p.length));
+    .replace(/(^|[^:])\/\/[^\n]*/g, (m, p) => p + ' '.repeat(m.length - p.length))
+    /* An entity's own id as a quoted key ('war-gauntlet': { ... }) is not copy: it
+       is how the figure registries and the pages look a thing up, it never reaches
+       a reader as text, and every sprite it keys is served from a gated address.
+       Without this, an item's lower-case alias ("gauntlet") matched inside its own
+       id, and each of several hundred registry keys would need an exemption. */
+    .replace(/(['"])([a-z0-9]+(?:-[a-z0-9]+)*)\1/g, (m, q, id) => (ids.has(id) ? ' '.repeat(m.length) : m));
 
   const lines = src.split('\n');
   lines.forEach((line, i) => {
