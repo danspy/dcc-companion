@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Sealed from '../../components/Sealed.astro';
 import BeatEntry from '../../components/BeatEntry.astro';
+import LinkedText from '../../components/LinkedText.astro';
 import { reveals } from '../../lib/spoiler';
 import { aliasesSeen } from '../../lib/aliases';
 import {
@@ -61,8 +62,35 @@ const bookCounts = new Map<number, number>();
 for (const b of shownAll) bookCounts.set(b.book, (bookCounts.get(b.book) ?? 0) + 1);
 const bookList = [...bookCounts.keys()].sort((a, b) => a - b);
 const filterable = shownAll.length > 12 && bookList.length > 1;
-const asked = Number(Astro.url.searchParams.get('book'));
-const pick = filterable && bookCounts.has(asked) ? asked : 0;
+/* A long life opens on the reader's own book, the part they are in: the
+   earlier books are one chip away, each with its count, and "All books" is an
+   explicit `?book=all`. A short page opens whole. */
+const lastBook = bookList.at(-1) ?? 0;
+const param = Astro.url.searchParams.get('book');
+const asked = Number(param);
+const longLog = shownAll.length > 24;
+const pick = !filterable ? 0 : param === 'all' ? 0 : bookCounts.has(asked) ? asked : param == null && longLog ? lastBook : 0;
+/* Latest: the reader's three newest entries, newest first, at the top, so
+   "where do things stand" is answered before the history starts. Only where
+   there is a history long enough to bury them. */
+const latest = shownAll.length > 6 ? [...shownAll].sort((a, b) => b.sortKey - a.sortKey || b.id - a.id).slice(0, 3) : [];
+/* Each text links the names in it from its own point (linkify.ts). */
+const stepKey = (rows: unknown) => { const r = (rows ?? []) as { sortKey: number }[]; return r.filter(t => gate.frontier >= t.sortKey).at(-1)?.sortKey ?? r[0]?.sortKey ?? gate.frontier; };
+const tagKey = stepKey(entity.taglines), descKey = stepKey(entity.descriptions);
+/* Where the reader came from, when it was a page here: one tap back to the floor,
+   the index or the entry they were reading. Only a name they can see now. */
+const from = (() => {
+  let r: URL; try { r = new URL(Astro.request.headers.get('referer') ?? ''); } catch { return null; }
+  if (r.host !== Astro.url.host || r.pathname === Astro.url.pathname) return null;
+  const fl = r.pathname.match(/^\/floor\/(\d+)/);
+  if (fl) return { href: r.pathname, label: `Floor ${fl[1]}` };
+  if (r.pathname === '/who') return { href: `/who${r.search}`, label: 'Who & What' };
+  if (r.pathname === '/when') return { href: `/when${r.search}`, label: 'Timeline' };
+  const en = r.pathname.match(/^\/entity\/([^/]+)/);
+  const other = en ? all.find(e => e.id === decodeURIComponent(en[1])) : null;
+  if (other && reveals(gate, other.revealedAt)) return { href: r.pathname, label: other.name };
+  return null;
+})();
 const off = (b: { book: number }) => pick !== 0 && b.book !== pick;
 const useOn = useLog.shown.some(b => !off(b));
 const storyOn = storyLog.shown.some(b => !off(b));
@@ -99,9 +127,10 @@ const figure = entity.kind === 'character' || isItem
           {!figure.own && <figcaption>Not yet pictured</figcaption>}
         </figure>
       )}
+      {from && <a class="from label" href={from.href}>← {from.label}</a>}
       <p class="eyebrow">{KIND_LABELS[entity.kind]} · {entity.role}</p>
       <h1>{entity.name}</h1>
-      <p class={`tagline${entity.voice === 'self' ? ' spoken' : ''}`}>{taglineFor(entity, gate)}</p>
+      <p class={`tagline${entity.voice === 'self' ? ' spoken' : ''}`}><LinkedText text={taglineFor(entity, gate)} at={tagKey} self={entity.id} /></p>
       {aka.length > 0 && <p class="aka">Also known as {aka.join(', ')}</p>}
       {onTimeline && (
         <p class="totime wide-only">
@@ -116,15 +145,23 @@ const figure = entity.kind === 'character' || isItem
         {description && (
           <section>
             <div class="sys">
-              <b>*** Description ***</b>{description.text}
+              <b>*** Description ***</b><LinkedText text={description.text} at={descKey} self={entity.id} />
               <span class="src">{stampOf(description.source)}</span>
             </div>
           </section>
         )}
 
+        {latest.length > 0 && (
+          <section class="latest">
+            <h2 class="sect">Latest</h2>
+            <ol class="log">
+              {latest.map(b => <BeatEntry beat={b} floor={b.floor ? floorById.get(b.floor) : null} />)}
+            </ol>
+          </section>
+        )}
         {filterable && (
-          <nav class="booknav" aria-label="Show one book">
-            <a href={Astro.url.pathname} class="chip-btn" data-book="0" aria-pressed={pick === 0 ? 'true' : 'false'}>
+          <nav class="booknav" aria-label="Show one book" data-last={lastBook}>
+            <a href={`${Astro.url.pathname}?book=all`} class="chip-btn" data-book="0" aria-pressed={pick === 0 ? 'true' : 'false'}>
               All books <span class="n">{shownAll.length}</span>
             </a>
             {bookList.map(book => (
@@ -144,7 +181,7 @@ const figure = entity.kind === 'character' || isItem
                 <BeatEntry beat={b} id={`b${b.id}`} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
               ))}
               {useLog.hidden.length > 0 && (
-                <li class="entry more" hidden={pick !== 0}>
+                <li class="entry more" hidden={pick !== 0 && pick !== lastBook}>
                   <Sealed at={useLog.nextAt!} compact
                           count={useLog.hidden.length} noun="use" />
                 </li>
@@ -161,7 +198,7 @@ const figure = entity.kind === 'character' || isItem
                 <BeatEntry beat={b} id={`b${b.id}`} floor={b.floor ? floorById.get(b.floor) : null} hidden={off(b)} />
               ))}
               {storyLog.hidden.length > 0 && (
-                <li class="entry more" hidden={pick !== 0}>
+                <li class="entry more" hidden={pick !== 0 && pick !== lastBook}>
                   <Sealed at={storyLog.nextAt!} compact
                           count={storyLog.hidden.length} noun="entry" />
                 </li>
@@ -269,6 +306,9 @@ const figure = entity.kind === 'character' || isItem
   .main > .booknav + * { margin-top: 0; }
   .none { color: var(--color-grey-500); font-size: 14px; }
   .back { margin-top: 20px; font-family: var(--font-mono); font-size: 12px; }
+  /* the way back to where the reader came from, above the eyebrow */
+  .from { display: inline-block; margin-bottom: 10px; color: var(--color-grey-300); text-decoration: none; }
+  .from:hover, .from:focus-visible { color: var(--color-gold); }
 </style>
 
 <script>
@@ -284,7 +324,8 @@ const figure = entity.kind === 'character' || isItem
         const on = !book || Number(li.dataset.book) === book;
         li.hidden = !on; any ||= on;
       });
-      sec.querySelectorAll<HTMLElement>('.log .entry.more').forEach(li => { li.hidden = book !== 0; });
+      const last = Number(document.querySelector<HTMLElement>('.booknav')?.dataset.last ?? 0);
+      sec.querySelectorAll<HTMLElement>('.log .entry.more').forEach(li => { li.hidden = book !== 0 && book !== last; });
       sec.hidden = !any && book !== 0;
     });
   }
@@ -305,7 +346,7 @@ const figure = entity.kind === 'character' || isItem
     if (!li || !li.classList.contains('entry')) return;
     if (li.hidden || li.closest('section[hidden]')) {
       show(0);
-      try { history.replaceState(null, '', location.pathname + location.hash); } catch { /* shown either way */ }
+      try { history.replaceState(null, '', `${location.pathname}?book=all${location.hash}`); } catch { /* shown either way */ }
     }
     document.querySelectorAll('.log .entry.is-hit').forEach(x => x.classList.remove('is-hit'));
     li.classList.add('is-hit');

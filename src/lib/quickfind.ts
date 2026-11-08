@@ -138,3 +138,26 @@ export function quickFind(
 
   return hits.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name)).slice(0, limit);
 }
+
+/* Recent lookups. The browser keeps only the addresses of the last pages a reader
+   opened (localStorage, never a name); the names come from here, gated for this
+   reader now, so a reader who moves their position back is not shown a name they
+   have not reached any more. */
+export function recentHits(paths: string[], entities: FindEntity[], floors: FindFloor[], gate: Gate): Omit<Hit, 'score' | 'tier'>[] {
+  const byId = new Map(entities.map(e => [e.id, e]));
+  const out: Omit<Hit, 'score' | 'tier'>[] = [];
+  for (const p of paths.slice(0, 8)) {
+    const en = /^\/entity\/([a-z0-9-]+)$/.exec(p), fl = /^\/floor\/(\d+)$/.exec(p);
+    if (en) {
+      const e = byId.get(en[1]);
+      if (!e || !reveals(gate, e.revealedAt)) continue;
+      const label = KIND_LABELS[e.kind] ?? e.kind;
+      out.push({ href: p, name: e.name, kind: label.replace(/s( &.*)?$/, ''), detail: e.role ?? '' });
+    } else if (fl) {
+      const f = floors.find(x => x.id === Number(fl[1]));
+      if (!f || !reveals(gate, f.nameAt ?? f.revealedAt)) continue;
+      out.push({ href: p, name: f.name, kind: 'Floor', detail: `Floor ${f.id}` });
+    }
+  }
+  return out;
+}

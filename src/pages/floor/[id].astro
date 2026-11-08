@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import LinkedText from '../../components/LinkedText.astro';
 import Sealed from '../../components/Sealed.astro';
 import MapVoxel from '../../components/MapVoxel.astro';
 import { reveals } from '../../lib/spoiler';
@@ -243,7 +244,7 @@ const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n =
           <li class="part">
             <span class="label part-span">{span(p.from, p.at)}</span>
             <h3>{p.title}</h3>
-            {paragraphs(p.text).map(t => <p>{t}</p>)}
+            {paragraphs(p.text).map(t => <p><LinkedText text={t} at={p.sortKey} /></p>)}
           </li>
         ))}
       </ol>
@@ -258,7 +259,7 @@ const nav = [{ s: near(-1), dir: 'Up' }, { s: near(1), dir: 'Down' }].filter(n =
         {s.step
           ? <>
               <span class="label stamp">As of {stampOf(s.step.at)}</span>
-              <p>{s.step.text}</p>
+              <p><LinkedText text={s.step.text} at={s.step.sortKey} /></p>
             </>
           : s.next && <Sealed at={s.next.sortKey} compact />}
       </article>

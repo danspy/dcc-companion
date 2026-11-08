@@ -12,7 +12,104 @@
       "role": "Protagonist",
       "revealedAt": "1:1",
       "sort": 1,
-      "tagline": "I'm Carl. I'm twenty-seven, I did a stint in the Coast Guard, and I fix the electrics on rich people's party boats. I went out into the freezing dark after my ex-girlfriend's cat, wearing her pink Crocs, and that is the only reason I'm still alive.",
+      "tagline": [
+        {
+          "at": "1:1",
+          "text": "I'm Carl. I'm twenty-seven, I did a stint in the Coast Guard, and I fix the electrics on rich people's party boats. I went out into the freezing dark after my ex-girlfriend's cat, wearing her pink Crocs, and that is the only reason I'm still alive."
+        },
+        {
+          "at": "1:8",
+          "text": "I'm Crawler 4,122, barefoot since a goblin dozer took the Crocs, in a leather jacket, boxers and whatever the boxes hand me. Donut ate the biscuit, talks now, and outranks me: she's party leader and I'm her Royal Bodyguard. I kill things with my bare feet, and the AI likes that more than it should."
+        },
+        {
+          "at": "1:19",
+          "text": "I blow things up now. I have an IED skill and a workshop menu I can't open yet. There were babies in the goblin chieftain's room, and somebody built that room for exactly what we did to it. They can hurt me down here, or kill me. They are not going to break me."
+        },
+        {
+          "at": "1:42",
+          "text": "Second floor. My last cigarette is gone, a jug of moonshine and goblin oil carries my name, and I know these people are not our friends. We smile on their shows because we have to. We won't fight or survive on their schedule, and they paid for our appearance, not our manners."
+        },
+        {
+          "at": "2:2",
+          "text": "I'm a Primal now, and a Compensated Anarchist: a rare monk-rogue hybrid, one of the Earth classes. The AI says I'll throw a Molotov through a window one moment and plead on camera for the violence to stop the next. I'd argue with it if I could think of the argument. I'm still barefoot, and still in my boxers."
+        },
+        {
+          "at": "2:end",
+          "text": "Level twenty-seven. I was magistrate of a town that ignored me, and branded a troublemaker for punching a level-75 guard. We chased quests when we should have been grinding, and when a court said pay us, Borant burned its veto. From here it's all about progression and training."
+        },
+        {
+          "at": "3:8",
+          "text": "I'm the twenty-fifth holder of the Dungeon Anarchist's Cookbook, and I went to the explosives chapter first, obviously. Twenty-four crawlers wrote in it before me, and most never got to finish. And I know now the NPCs here believe this is the real world, which is just as bad as what they did to us."
+        },
+        {
+          "at": "3:34",
+          "text": "Level forty-one, and alive because people jumped into certain death to save me. I need other people; I finally see it. The twenty-four before me only talked about burning this place down. The NPCs and the mobs are victims as much as we are. The ones who put us here need to start dying too. I will break them all."
+        },
+        {
+          "at": "4:12",
+          "text": "Every bounty on me counts double now, a lizard foot is tattooed under my left eye, and the board has me at number two. I think three watches on this floor come together as the Gate of the Feral Gods, a celestial-equivalent item. They don't put that in here to be ignored. I want it."
+        },
+        {
+          "at": "4:34",
+          "text": "I'm an acolyte of Emberus, signed up mid-air to survive a plane crash: a drop of blood a day, five percent of my looted gold, a sun on the back of each hand. The old leather jacket is gone. I'm number one on the board, the hunters want my ring and the Gate, and they can come and get it."
+        },
+        {
+          "at": "5:6",
+          "text": "I'm an Agent Provocateur, level fifty-four. I bombed the hunters in Zockau, marking them with the Ring of Divine Suffering and taking their stats: thirty-four of them, and more than two hundred and fifty non-mob casualties. It doesn't bother me nearly as much as it should. Their rules. Their game."
+        },
+        {
+          "at": "5:36",
+          "text": "My base strength is a hundred, I'm physically bigger, and I took Swole, so every strength point from a level counts double. The saferoom is full of our friends, and that's my family now. I know the shakes are coming, and the river in the back of my head. For now I take comfort in their faces."
+        },
+        {
+          "at": "5:75",
+          "text": "Almost thirty crawlers who stayed back to make chaos because I asked them to are dead, and in that ballroom I meant to break the seal myself. There was only ever one butcher at that masquerade. Donut is wearing a mask now, and it's protecting her. I need her to keep it on."
+        },
+        {
+          "at": "6:20",
+          "text": "This floor is a replay of Earth in the weeks before the collapse. The celestial patch on my vest gave me Soul Essence and a bone key I'm keeping as a last resort. My footsteps can burn now, courtesy of Emberus. And I'm carrying a goddess's message I can't tell Donut or Mordecai, or everyone I love pays for it."
+        },
+        {
+          "at": "6:47",
+          "text": "I had a half-brother. His name was Asher, and I learned today he existed, in a scene the dungeon spliced into this floor: my father's living room, the old man yellow in a hospital bed. The Harley is mine now. Bea knew about the boy and never said a word. Until now I was never angry at her."
+        },
+        {
+          "at": "6:72",
+          "text": "The Bedlam Bride had my body for a while, and my hands burned Katia and Mongo while I watched. Her eye is tattooed over my sternum now, sunk under the skin. We're going down to the ninth floor together, not broken and not afraid. The viewers voted away the protections. There will be no quarter."
+        },
+        {
+          "at": "7:1",
+          "text": "Donut and I are co-warlords of the Princess Posse, one of ten teams fighting over the castle at Larracos, and nobody comes back from a death on this floor. A memory of a man in a homeless shelter is installing an interface in me that can turn the sun nova and kill everybody, the AI included."
+        },
+        {
+          "at": "7:27",
+          "text": "The Bedlam Bride is an egg inside me, and only I can break it. I had the button that blows the fuse in front of me, and I pressed Disconnect Containment instead. I've stood on the edge with one foot over open air and stepped back, and I took the ring off with everyone in the room watching."
+        },
+        {
+          "at": "7:58",
+          "text": "The Blood Sultanate is defeated, and a Syndicate court has named me de facto leader of Earth, on the petition of a naga who offers five generation ships and citizenship in exchange for settling the rest of our system. I'd like to renegotiate. It's getting harder every day to keep myself from drowning."
+        },
+        {
+          "at": "7:end",
+          "text": "More than twenty thousand crawlers came off this floor alive, a record. Donut swallowed the Ring of Divine Suffering for me, because that slope is too steep, and the river in my head laughs like Eris now. The deals are all rubbish, so I'm not taking one. I could live in this room. Nobody is dying in it."
+        },
+        {
+          "at": "8:23",
+          "text": "Seventy-five percent of us took deals. I didn't. Our ride is a chicken food truck with a plastic tommy gun on the roof, and we came in last and lived because another team died first. I was glad to answer only for us. Now I'm barely responsible for myself, like the day my mollies died whatever I did."
+        },
+        {
+          "at": "8:60",
+          "text": "This floor felt easy, on rails. It isn't: it's a drain for everyone spat out of the last one, and it makes us race our friends. We're testing a way out through a cabaret. Emberus's quest says kill Hellik, and Emberus says he'll kill me if I do. I'm not on the edge. I've already stepped off."
+        },
+        {
+          "at": "8:90",
+          "text": "Twenty-three crawlers left, and I finished the last floor ranked second, the last of us without a player-killer skull, I think. I've left Donut's Royal Court, because Hellik has to die before this floor ends or Emberus smites me. My crafting tables stay on her side, so if I die she doesn't lose it all. I'm not a dachshund anymore."
+        },
+        {
+          "at": "8:98",
+          "text": "Nineteen crawlers left, and every one of us is in a single party now. Scolopendra is a puddle, the suns on my hands are scars called the Mark of the Damned, and something called the Kyryap has a dart in my leg. I'm staying on the twelfth floor to stop anyone winning the Ascendency until everybody is out."
+        }
+      ],
       "voiceNote": "Deadpan, first person, understated. Notices the practical detail first (footwear, inventory, what will explode) and the feeling second, if at all. Gallows humour, never grandiose, never asks for sympathy. Says Donut, Mordecai, the AI. Swears in the crawl; here he keeps it to hell and damn. Talks like a man narrating a repair job while the building is on fire.",
       "beats": [
         {
@@ -2736,8 +2833,8 @@
           "floor": 9,
           "at": "7:1",
           "confidence": "verified",
-          "headline": "He takes command of one of nine armies",
-          "text": "Thirty days. A castle at Larracos, dead centre of the map. No coming back from a death on this floor, for anyone. Supply, alliances, atrocity, at a scale where the arithmetic stops being about people I know."
+          "headline": "He and Donut take command of one of ten armies",
+          "text": "Thirty days, or ninety hours after somebody wins. Ten teams: nine of us attacking, and the NPCs defending Larracos from the inside, calling themselves Team Retribution. Capture the castle in the centre. Donut and I are warlords of the Princess Posse. Current army size: fifty-eight soldiers, no officers. The protections are gone, and anyone who was being regenerated can now die. Sixty hours of ceasefire, then the war."
         },
         {
           "kind": "arc",
@@ -4033,7 +4130,92 @@
       "role": "Co-protagonist",
       "revealedAt": "1:1",
       "sort": 2,
-      "tagline": "I am a pedigreed tortoiseshell Persian, and I have an entire room of ribbons and trophies. I cannot imagine what else you would need to know.",
+      "tagline": [
+        {
+          "at": "1:1",
+          "text": "I am a pedigreed tortoiseshell Persian, and I have an entire room of ribbons and trophies. I cannot imagine what else you would need to know."
+        },
+        {
+          "at": "1:7",
+          "text": "I ate the biscuit, so now I talk, I cast Magic Missile, and my stats are the highest, which makes me leader of the Royal Court of Princess Donut. My crown came out of a Legendary box. Mordecai said to read its description first, but Mordecai says a great many things."
+        },
+        {
+          "at": "1:47",
+          "text": "I am a mother now: my son Mongo came out of a cage in a reward room, and the system has made him my Royal Steed. I have been on television, and I have followers. I also heard Mordecai tell Carl to leave me behind on the ninth floor."
+        },
+        {
+          "at": "2:2",
+          "text": "I stayed a cat, naturally, and I am a Former Child Actor, which gives me a new specialty on every floor and makes me immune to poison. Mordecai is my manager now. He is thrilled, though he does not show it."
+        },
+        {
+          "at": "2:end",
+          "text": "I am seventh on the leaderboard, one place behind Carl; dear Hekla is second, and that ugly Lucia Mar is first and wants her dogs to tear me apart. City elves called me the Oak Fell, all because of an ugly anklet Carl gave me. My crown crumbled to dust, and it was my first item."
+        },
+        {
+          "at": "3:9",
+          "text": "I am a Football Hooligan for this floor, because six minutes is no time to choose a class, and I have a new tiara and a spell called Hole. Now there is a skull after my name. I did not want to kill anybody, and certainly not a real person."
+        },
+        {
+          "at": "3:24",
+          "text": "Princess D'nadia sponsors me, and her goggles turn my Magic Missile into a laser; they also showed me Hekla shooting Katia with invisible bolts. I used to think Hekla was awesome. She is dead now, I raised her and made three of her against her own Daughters, and she had it coming."
+        },
+        {
+          "at": "4:14",
+          "text": "I am a Glass Cannon for this floor: my Magic Missile hits far harder, and Mordecai keeps me out of harm's way because the constitution never came. My sponsorship bid was the highest ever, and I have merch. Carl is not a person killer, and I will drop his friends through a Hole before I let him become one."
+        },
+        {
+          "at": "5:11",
+          "text": "I am a Legendary Diva for this floor, a bard who sings her spells instead of paying mana, and they are only as good as my singing. I also have a town of my own, since its mayor met my Astral Paw. The system called me Mayor Donut, and I changed it back to Princess at once."
+        },
+        {
+          "at": "5:19",
+          "text": "Miss Beatrice is alive, and she was going to give me away. I still love her, and I hate myself for it, but she is not my person anymore. Carl is, and he always has been."
+        },
+        {
+          "at": "5:56",
+          "text": "I have a vocal coach of my own now, and Kiwi is my minion, with her whole pack behind her. Kiwi, Tina and the crew will be my backup dancers at the talent show, and Mongo is entering the beauty contest. Do not be such a Debbie Downer, Carl."
+        },
+        {
+          "at": "5:end",
+          "text": "I am the number one crawler in the whole dungeon, and party leader again now that Prepotente has left. My new class is Viper Queen, which sounds delicious. Firas and Gwen are gone and it does not hurt as much as it should; Carl says I am wearing a mask, and it is protecting me."
+        },
+        {
+          "at": "6:4",
+          "text": "I am a Master Telephone Psychic for this floor, and I kept my poison spit. Carl and I are co-warlords of the Princess Posse for Faction Wars, and as squad leader I hold all our cards. My fan club has sent out its first newsletter, under a name I do not approve of."
+        },
+        {
+          "at": "6:40",
+          "text": "My citrine tiara lets me hover five times a day, which is practically flying, and I run our card deck, alone in the choosing room if I must. Empress D'nadia sold my sponsorship and then tried to have us deleted, and I thought she was my friend. I do not like being in charge, and sometimes I cannot breathe."
+        },
+        {
+          "at": "7:3",
+          "text": "I am a warlord and a Deathbed Hellcat, a sniper who goes invisible at will, and my constitution is climbing from two to 193. My crown makes me a royal of the Blood Sultanate, which is on this floor, and I cannot go down until the rest of the family is dead. I was told to read the description."
+        },
+        {
+          "at": "7:27",
+          "text": "Carl's stats outrank mine, so the system has made him party leader of my own Royal Court, and if he changes its name I will leave. Mongo has the kill on Empress D'nadia. That ring of Carl's is doing something to him, and he is scaring me."
+        },
+        {
+          "at": "7:77",
+          "text": "I am the Oak Fell now, a class on top of my own, and Champion of Nekhebit, and at level 135 I am once again the strongest crawler in the dungeon and leader of my own party. I cast War Crime over thousands of soldiers, and I could feel them under my paw."
+        },
+        {
+          "at": "8:1",
+          "text": "Katia is gone, and I am going to miss her, but they are not going to break me. I am party leader again and an Assassin of Sekhmet, and a Naga attorney I never hired says I am under a conservatorship with Carl as my guardian, which is an outrage."
+        },
+        {
+          "at": "8:31",
+          "text": "My right paw has glowed blue since the godslayer box, and its claws cut through anything; red caps make the glow purple, which will have to do. It is the paw I used for War Crime. A crawler I do not even remember has written to say it is all right to forgive myself."
+        },
+        {
+          "at": "8:90",
+          "text": "I am an Elite Gurkha Warrior for this floor, which sounds like a pickle. CARL has left the party so that I do not get hurt, as if I cannot look after myself, and my title went with his. This is so unfair."
+        },
+        {
+          "at": "8:98",
+          "text": "I gave Carl the wrong biscuit. His inventory was happening so fast, and now Scolopendra is not a pet but a level-one crawler, with lips and a red bow, in our party. Do not get mad."
+        }
+      ],
       "voiceNote": "Imperious, delighted by herself, wounded by any slight and quick to say so. CARL in capitals when he is being difficult; Mordecai is staff. Uses her titles in full and treats them as facts. Things are common, vulgar, rude or unfair. Never swears, because swearing is common. Mongo is her son and she will not be told otherwise.",
       "beats": [
         {
@@ -6735,7 +6917,52 @@
       "role": "Dinosaur",
       "revealedAt": "1:46",
       "sort": 3,
-      "tagline": "I am small, and pink, and in a cage. The cat gives me biscuits. I bite the cat.",
+      "tagline": [
+        {
+          "at": "1:46",
+          "text": "I am small, and pink, and in a cage. The cat gives me biscuits. I bite the cat."
+        },
+        {
+          "at": "1:47",
+          "text": "The cat is MOTHER now. A big bug took me up to its mouth, and MOTHER took its head off. I am MOTHER'S, and I bite MOTHER'S nose."
+        },
+        {
+          "at": "2:21",
+          "text": "I am BIG now, bigger than MOTHER, and MOTHER rides on my back until she falls off. When MOTHER does not wake, I stand on her and bite everything that comes. Lions are FOOD, and ghosts are FOOD."
+        },
+        {
+          "at": "3:15",
+          "text": "I am big as a pony now. When I jump and land, the ground goes EARTHQUAKE and bad things fall down. MOTHER rides me down the dark tracks, and I am FAST."
+        },
+        {
+          "at": "4:17",
+          "text": "MOTHER makes copies of me, and the copies go POP, and it hurts. The goose has teeth. When the small gnome cries, the rabbit is NOT FOOD, and I put it down for her."
+        },
+        {
+          "at": "5:11",
+          "text": "Out there are many Mongos, and the big one with pink feathers and one eye is Kiwi. Kiwi says UNK, and I say UNK. We do not fight."
+        },
+        {
+          "at": "5:61",
+          "text": "MOTHER has Kiwi and all her LADIES now. When hunters run at Carl, Kiwi and I jump. Hunters are FOOD."
+        },
+        {
+          "at": "6:37",
+          "text": "MOTHER fights with cards now, and sometimes MOTHER is ALONE and SCARED. I stay by MOTHER. When a bad man with cards comes, I take the throat."
+        },
+        {
+          "at": "7:27",
+          "text": "The EMPRESS is down, and the System says the kill is mine. I lick the blue goo off the wall."
+        },
+        {
+          "at": "7:82",
+          "text": "A spiky dog nearly ate me. Rend smashed the dog, and a girl poured a drink on me, and I am NOT dead. Kiwi is a bear now, and Kiwi has two babies with fur and beaks. I am a DADDY."
+        },
+        {
+          "at": "8:90",
+          "text": "I have CLAW CAPS on my feet now, and they are SHARP. I keep my old head thing and march in MOTHER'S parade. Flowers are on EVERYTHING, and flowers are NOT FOOD."
+        }
+      ],
       "voiceNote": "Does not talk. What the camera gets is the dinosaur: single words, capitals, appetite. MOTHER is Donut. Everything else is FOOD, NOT FOOD, or BAD. Never more than a few short lines.",
       "beats": [
         {
@@ -7442,8 +7669,60 @@
           "text": "This is my tutorial guild, kid, and I can't open the door while there are mobs right outside it. Rules are rules. And nobody tells old Mordecai anything."
         },
         {
+          "at": "1:4",
+          "text": "I'm your guide for the first three floors, kid, and Borant holds my indenture. This is the seventh or eighth human-seeded world I've worked, and it's always the same: you want to know why. This is my last tour. When it's over I'm a full citizen with a moderate stipend."
+        },
+        {
           "at": "1:29",
           "text": "I crawled once myself. I took Changeling, it cost me everything I had, and now the dungeon hands me a new body every floor and I wear whatever I'm given."
+        },
+        {
+          "at": "2:1",
+          "text": "The cat took the Manager benefit, so I'm her manager now, and I'm teleported to every saferoom she stops in. I've lost the codex and my tunnel access, so everything I tell them comes out of my own memory. And this floor I'm an incubus in a tuxedo, and I hate formal wear."
+        },
+        {
+          "at": "3:3",
+          "text": "This floor I'm Grulke Infantry. A toad, kid, not a frog. The three of them are on my schedule now: two hours' sleep, buffs, one skill a day in the training room, crafting after that. They had ten days on a floor that usually gets twenty, and they lived. We can't rely on luck."
+        },
+        {
+          "at": "3:29",
+          "text": "I threw a chair at Chaco with my tongue and got a seven-day timeout for it. For me no time passed at all. I blinked, and now the cat and Katia both wear player-killer skulls. I see I've missed a few things."
+        },
+        {
+          "at": "4:1",
+          "text": "This floor I'm a rock edge skyfowl, the nearest thing to my own shape I've worn in a very long time, and they made me a cleric, so I'm clipped. Fifteen days where I expected twelve is not a gift, kid. It's a nasty surprise waiting to happen."
+        },
+        {
+          "at": "5:20",
+          "text": "This floor I'm a Pocket Kuma: knee-high, bred as a pet, and I have to jump for a doorknob. The Valtay own most of Borant now, and the announcement says my contract is still being honored. We'll see. Meanwhile I'm minding Donut's town, and I've finally got it through the bears' thick skulls that the hunters are a danger."
+        },
+        {
+          "at": "6:1",
+          "text": "My brother Uzzi died on the tenth floor to open a stairwell. I had a plan that would have cost my life instead. Odette refused Huanxin Jinx's price and couldn't afford to lose me, so she had Chaco put the dart into Uzzi. I went through. He did not."
+        },
+        {
+          "at": "6:20",
+          "text": "This floor I'm a Hills Cyclops, with no depth perception and no way to see my own reflection. Ruby and five other changelings with compression sickness fill every attendant slot we have, paid out of the supply money, because I didn't think they'd survive the fight for the castle. I stand by my decision."
+        },
+        {
+          "at": "7:4",
+          "text": "This floor I'm human, a Canadian in glasses, and I don't pick the clothes. My table is upgraded higher than I've ever had it; I can see how a potion was made, and with a few more upgrades I could brew skill potions. Those two are the most powerful crawlers I have ever worked with."
+        },
+        {
+          "at": "7:87",
+          "text": "Huanxin Jinx is dead. I couldn't touch her myself, so I brought a plain bolt with some of my mother's ashes in its tip, and it was fired from the crossbow on Donut's back. I've said goodbye to Katia. I lost so much today. But I think I gained more."
+        },
+        {
+          "at": "8:7",
+          "text": "This floor I look like a Moon Reaper, and I'm not one. I'm a shadow mimic, an impossible combination, which is why I keep glitching into a cat, an otter, a slug. And nobody give that prophecy business any weight, kid. Predictions in here are made to fit whatever happens."
+        },
+        {
+          "at": "8:73",
+          "text": "Two hundred-some crawlers have gone to the Pineapple Cabaret. Each has a small potted plant tied to their life, under glass in the guildhall common room, because the sluggalos were eyeing them. Wilts or turns to dust, they're dead. Blooms, they got out. It's the only way we'll know."
+        },
+        {
+          "at": "8:89",
+          "text": "I'm the table. This floor I'm an animistic spirit with no body of my own, so I occupy objects, and right now that's a crafting table with Samantha sitting on it. I can hear all of you, but I can't answer out loud unless I move into something with a mouth. I'm not good at moving yet."
         }
       ],
       "voiceNote": "Tired professional, precise about rules, exasperated by clients who ignore them. Leads with the warning, follows with the reason, ends with a sigh you can hear. Kid, listen, you don't get it. Bitter about Borant in short sentences. Does not gush and does not comfort; drunk, he talks about the past and stops himself.",
@@ -7565,7 +7844,7 @@
           "at": "2:1",
           "confidence": "verified",
           "headline": "Manoeuvred into managing a cat",
-          "text": "Odette says my memory is the most valuable thing a crawler could get hold of, so the two of them arrange for me to become the cat's manager during class selection, and they make it look like an accident. It was not an accident. I will forgive Donut. Carl, no."
+          "text": "The cat picks Former Child Actor and tells Carl she was acting. She has also received the Manager benefit, and the Manager is me. From now on I teleport to any saferoom they are in. I was supposed to transfer to a magic guild after this floor: a bigger room, my potions, more spells. Now every time they sleep or eat or brush their teeth, I'm with them. No tunnel access. No television. No codex. No warning before I'm pulled away. Carl tells her that wasn't cool. Oh gods."
         },
         {
           "kind": "arc",
@@ -8076,7 +8355,7 @@
           "at": "5:20",
           "confidence": "verified",
           "headline": "Reading the shop software",
-          "text": "The kid says they told him my contract's still being honored. We'll see. This sort of thing happens a lot, just not usually mid-season: contracts frozen, guides traded to other companies, lawyers and rule changes for cycles. I check whether the shop is still running kua-tin software or the Valtay's. It looks the same, which is good and bad. They'll keep the fantasy theme, hopefully. Meanwhile the Ursine finally understand they're in danger, we beat back two more Dream elves, and they've talked Imani into being guildmaster. Katia wants to borrow money for a manager's headquarters, so I keep my room."
+          "text": "The kid says they told him my contract's still being honored. We'll see. This sort of thing happens a lot, just not usually mid-season: contracts frozen, guides traded to other companies, lawyers and rule changes for cycles. I check whether the shop is still running kua-tin software or the Valtay's. It looks the same, which is good and bad. They'll keep the fantasy theme, hopefully. Meanwhile the Ursine finally understand they're in danger, we beat back two more Dream elves, and they've talked Imani into being guildmaster. Katia wants to borrow money for something called a manager's headquarters, which will let me keep my room when she disengages. Sort of."
         },
         {
           "kind": "arc",
@@ -8670,8 +8949,64 @@
           "text": "I'm a Doppelganger. Apparently I'm like clay: I can reshape my own mass, and my gear along with it. I'm still working out how, and it shows."
         },
         {
+          "at": "2:end",
+          "text": "This is the real me: short black hair, the face I came in with. I am the newest member of the Royal Court of Princess Donut, and I have gone from level nine to twenty-one. On Odette's couch I managed about one word at a time."
+        },
+        {
+          "at": "3:12",
+          "text": "I go through every door first, because my constitution is four times Carl's; that is my job. Gore-Gore took my fingers while I was protecting him, and when I healed they did not come back. I can build new ones from other parts of me. But part of me is gone, and I am losing myself."
+        },
+        {
           "at": "3:21",
           "text": "I taught art history in Reykjavík before all this. I can reshape my own mass like clay, and I'm getting better at it."
+        },
+        {
+          "at": "3:24",
+          "text": "I aimed Rush at Eva and missed her by inches, and I killed Hekla instead, the woman who came back for me and then shot me. Now there is a golden skull over my head. Eva went out of the window, and she is still in my chat. I am not even a little okay."
+        },
+        {
+          "at": "3:end",
+          "text": "I fight behind a riot shield that says Get Back, with Hekla's crossbow, and my sponsor is Princess Formidable, of whom I know nothing. On a derailed train I made myself into Carl, boxers and all, and drew off a god. I am getting better at being other people. I still need to learn to relax."
+        },
+        {
+          "at": "4:15",
+          "text": "Before all this, I could not have children, so I was going to adopt; in Iceland you can do that when you are single. I was pre-approved. I was on the list. Then something happened, and I was disqualified. It is not important."
+        },
+        {
+          "at": "4:22",
+          "text": "For five days I flew a house without Carl and Donut, through scorpion men and arguments with Gwen, and reached level forty-one. Now the walls are coming in, and I have killed Ghazi for his notes on how the Gate works. I know how that sounds."
+        },
+        {
+          "at": "4:33",
+          "text": "Eva is gathering the former Daughters back to her; Silfa and her two daughters joined her, and they are dead. Next floor I separate from Carl and Donut to reach the rest before she does, and deal with her if I must. Carl has given me her dropped sword, to return to its rightful owner."
+        },
+        {
+          "at": "5:21",
+          "text": "Our guild belongs to Meadow Lark, with Imani as guildmaster, and today I finally leave Carl and Donut's party; I will be right next door. I travel with a group of big personalities, collecting the former Daughters before Eva can. Every time Donut gets a quest I get one too, but soon I will have my own."
+        },
+        {
+          "at": "5:end",
+          "text": "Eva is dead. I cut off the hand with her escape ring and put her own old sword through her breastplate, and as she died she pulled the Crown of the Sepsis Whore from her armour, and it found my head. Only Daniel knows about the blitz sticks, which show me Annie, every time."
+        },
+        {
+          "at": "6:19",
+          "text": "The Crown of the Sepsis Whore is on my head, and they want Donut and me to fight over it. I will die before I let that happen. Huanxin Jinx has offered a way out, an orchid in a sealed box, and I will take its Celestial Attendant boon: the twelfth floor, under her protection."
+        },
+        {
+          "at": "6:33",
+          "text": "The orchid is in my inventory, and I will not eat it until we are on the ninth floor; I cannot abandon my squad. Carl knows about the drugs now. Imani has given me the first cure, and the last treatment means reliving one of my worst memories."
+        },
+        {
+          "at": "7:17",
+          "text": "I took Mordecai's treatment, two hits of Glory Bound in a gel, and went back to my worst memory, which is also my favourite. It is not a switch one flips, and we will not know right away. But I think it worked. The orchid is still in my inventory."
+        },
+        {
+          "at": "7:69",
+          "text": "Annie was the baby girl I was going to adopt, until Fannar told them the truth. I was sick too, and I should never have hidden it. She had brain cancer, she died alone, and nobody even told me. She is my worst memory and my favourite. I love Daniel. I love Carl and Donut more."
+        },
+        {
+          "at": "7:86",
+          "text": "I asked the goddess to make me pregnant, because a pregnant crawler is sent somewhere else, and up there are children, mostly alone, and I think in trouble, whom I can reach no other way. I am human again, missing an arm, a leg and more. We've all become experts at hiding what we've really lost."
         }
       ],
       "voiceNote": "Quiet, exact, self-critical. An academic's vocabulary used plainly; dry about her own face and her own standing. Puts other people first and says so as fact, not virtue. Grief is stated once and not decorated. Carl and Donut by name; Eva by name, without explanation.",
@@ -9814,8 +10149,48 @@
           "text": "I work at Meadow Lark. I wear scrubs and a magic cloak, I carry a longsword, and I am responsible for thirty-odd residents who cannot move quickly."
         },
         {
+          "at": "1:44",
+          "text": "Yolanda is gone. Thirty-six of our residents went down ahead of me in buckets built from chopper wheels, and I am the last of us down the ramp."
+        },
+        {
+          "at": "3:8",
+          "text": "I'm an Obsidian Butterfly now, a Fire Spiritualist, level twenty-four. Brandon and Henry died protecting our escape. Chris picked a rock race, it changed him, and he left with several of the men. He won't answer me, and he is looking for Carl."
+        },
+        {
+          "at": "4:14",
+          "text": "Chris is in Carl's bubble, and something else is driving his body. He asked to be killed, and I would not send that on. Donut sealed him under the street instead. When the castles fall, we bring him through the portal and Mordecai makes the potion."
+        },
+        {
+          "at": "4:32",
+          "text": "We are getting people out of their bubbles, and the second condition is mine: no bubble goes unless everyone in it goes. I will not leave one person in there with a feral god."
+        },
+        {
+          "at": "5:21",
+          "text": "I'm guildmaster of Safehome Yolanda now, and I can fly. My work is counterspells: whatever somebody has cast on people, I take it off them."
+        },
+        {
+          "at": "6:52",
+          "text": "My squad has no key. My own totem killed four of my people while they were frozen, and the dungeon gave me four more skulls for them. I would not go back to face Elle, so I am in a church in Cuba, and Quan Ch is out there, alone."
+        },
+        {
+          "at": "6:63",
+          "text": "We all came into the church through Lucia's door, and Carl still wants to hand me his key. No. We are in this together, and it's all or nothing."
+        },
+        {
+          "at": "7:24",
+          "text": "In this war I fly the line with my wings spread, putting buffs over everyone in the trench. When the protections are stripped, I go into the craters for whoever is down, one over each shoulder."
+        },
+        {
+          "at": "8:15",
+          "text": "Elle and I drew a military troop carrier for the races. At the Lollipop's back table everyone checks in, and I make sure of it. Chris says his big rig is big but slow. Kinda like you, I tell him, and he almost smiles."
+        },
+        {
+          "at": "8:78",
+          "text": "Carl's plan for the eleventh floor is insane, and I told him so. I'm not taking a deal: Chris won't take one unless I do, and I can't run from this any more than Carl can. If we're going to lose, I want to go down fighting."
+        },
+        {
           "at": "8:87",
-          "text": "I held the portal open on the racing floor until every crawler who was coming had come through. Somebody has to stand at the door, and it's usually me."
+          "text": "Chris dropped through the hole the wheel opens, and now Louis has too. I held the wheel on the spot myself. Somebody has to stand at the door, and it's usually me. Time's ticking."
         }
       ],
       "voiceNote": "Calm, steady, a caregiver's voice under pressure. Counts people, says what needs doing, does it. Warm without fuss, firm without volume. Carl, Donut, Elle, Yolanda, Brandon and Chris by name. Never dramatises a loss and never leaves before the last one is through.",
@@ -10278,7 +10653,7 @@
           "at": "8:87",
           "confidence": "verified",
           "headline": "She holds the portal open",
-          "text": "I open the portal again, and I hold it. Louis comes through, and the crawlers from the multi-crawler heats come through behind him, and I keep it open until the last of them is on this side. Everybody else goes back to the track, crosses the finish line, and takes the stairs. Somebody has to stand at the door. It's usually me, and I'm all right with that."
+          "text": "We didn't lose anyone to the mimics. Two were hurt bad, one nearly chomped in half, and both are alive. The room is blood and gold coins. Donut finds the button. I turn the wheel to the right spot, step on the button, and hold the wheel in place. It hums, and the hole opens in the ground. Louis says his goodbyes. Then he jumps into the hole, and he's gone. On the way out, Carl has me write a note for Clarabelle's chair: mimics in the Desperado Club, stay out if you can, and she is always welcome in Safehome Yolanda."
         },
         {
           "kind": "arc",
@@ -10323,8 +10698,44 @@
           "text": "Agatha is travelling with the Meadow Lark party. Her file is thinner than it should be, and I keep very good files."
         },
         {
+          "at": "1:31",
+          "text": "Agatha wheeled a shopping cart into the Meadow Lark party's fight with the Ball of Swine and screamed about the cart the whole way through. Then she went missing, and the recap left her picture off. The party assumes the worst. I nearly always have a forwarding address."
+        },
+        {
+          "at": "1:47",
+          "text": "Agatha is alive, still level four, and pushing her squeaking cart again. Three things that came out of it were Valtay make: a relay, a platinum shield and a pulse pistol. By Brandon's account, she set the fire that brought everyone out of Meadow Lark. The critters, she says, already know she is here."
+        },
+        {
+          "at": "3:34",
+          "text": "Agatha is level eight, still human, still without a class, and she takes the stairs down with her cart and its pink flamingo, cackling that they are all still kicking. Imani asks what is going on. Nobody answers her, and I do not intend to start."
+        },
+        {
+          "at": "4:33",
+          "text": "Agatha is level twelve. At Li Jun's stairwell she pulled up out of nowhere, spoke to no one, and went down before the six-hour mark. Carl's position on her, stated in full, is that we just ignore Agatha."
+        },
+        {
+          "at": "6:51",
+          "text": "Agatha is a Residual, Orren says, though not the same kind as the one Carl has just met, and in what way is not Carl's concern. Both kinds turn up in every crawl, like rats aboard ships. Asked whether that means no more Agatha, Orren would not go that far."
+        },
+        {
+          "at": "6:end",
+          "text": "My file on Agatha has a number: Agent 22, ten years peeled away from her collective, in a failing human shell. She is not the Apothecary's, nor Valtay's. On the night of the collapse she lit a fire in a barrel behind Meadow Lark, and if she has her way, this universe will be swept clean of biological life."
+        },
+        {
+          "at": "7:28",
+          "text": "Agatha is level 23 and still has no class, and she has come asking for Carl by name. The prime minister of the Syndicate has ordered that Carl is not to interact with her, and nobody has told Zev why."
+        },
+        {
+          "at": "7:68",
+          "text": "Agatha is a warlord of the War Mage Rebellion, and all three emergency action items she proposed have been granted, among them the old rule that a defeated team's soldiers and warlords die with it. The Rebellion holds Team Retribution's throne room."
+        },
+        {
           "at": "7:78",
-          "text": "Agatha once travelled with the Meadow Lark party, and she is now a warlord of the War Mage Rebellion. Warlord Akuma has just called her an enemy to all of you. He did not elaborate, and neither will I."
+          "text": "Agatha has been stripped of her warlord title for abandoning her post. Warlord Akuma says she was forced on the war mages, slipped away before he could kill her, and is an enemy to you and to us all, and he wants Carl to finish the job. He did not elaborate, and neither will I."
+        },
+        {
+          "at": "8:92",
+          "text": "Agatha has not been seen since the war mages left, and Carl hopes she is dead. At the parade I explained her kind: her team are tiny bits the Eulogist's left-behind security guard peels off himself and sends into the galaxy, and his purpose is to make certain all biological life in the universe stays dead."
         }
       ],
       "voice": "system",
@@ -10489,8 +10900,52 @@
           "text": "I'm Elle McGibbons, and at my age I am not built for sprinting. A young man with a cat pushed my wheelchair into the storm shelter, and I let him, because I am old, not stupid."
         },
         {
+          "at": "2:end",
+          "text": "I'm tenth on their leaderboard: a Frost Maiden, a Blizzardmancer, level thirteen, with a hundred thousand on my head. Not bad for an old woman who started this floor at level one."
+        },
+        {
+          "at": "3:9",
+          "text": "I'm a Frost Maiden: blue, small, floating, and still in the anti-slip socks. There's a skull after my name for a woman who was about to blast Carl and the cat. Don't care. Anybody who comes for them comes for all of us."
+        },
+        {
+          "at": "4:5",
+          "text": "There are twenty of us out in the water quadrant, and not one of these old farts can sail. We've got a galley now, and our castle is an oil rig that throws fireballs. My deity box gave me Graupel, a big ice storm, and I'm kinda scared to try it."
+        },
+        {
+          "at": "5:8",
+          "text": "Blizzardmancer to Tundra Princess: some sort of earth class on top of the ice. I'm seventh on the top ten at level forty-seven, and the young man had to find out from the recap."
+        },
+        {
+          "at": "6:38",
+          "text": "I'm in Belgium with my own squad, squatches and all, and Imani is in Detroit without me. I've told the lot of them: these are memory ghosts, not your loved ones. Don't let them mess with your heads."
+        },
+        {
           "at": "6:63",
           "text": "I have my own squad now, and we have just come through a door into Cuba to back Carl up. It's hotter than I expected, and a good deal more run down."
+        },
+        {
+          "at": "7:1",
+          "text": "I picked wind, and Tundra Princess became Hailstorm Queen. Donut is thrilled I'm a queen. I can add the last element on the twelfth floor, but I'm betting this whole shitshow self-destructs before we get anywhere close."
+        },
+        {
+          "at": "7:62",
+          "text": "A war mage snatched the Gate right out of my hands, and I haven't been walloped like that since my bachelorette party. The strong one pulled back at the last moment, like he was trying not to kill me."
+        },
+        {
+          "at": "8:15",
+          "text": "Imani and I drew a military troop carrier that handles like a three-legged pig walking backward through a snowstorm. I have exactly one fan, Linus, and he sits under our table in a shirt of me with no clothes on."
+        },
+        {
+          "at": "8:72",
+          "text": "I talked about Barry: forty-three years my husband, thirty-five years gone, and he wouldn't have survived five minutes in this place. My one fan is an impostor, and the Snow Cones knew it. You keep coming in here to kill us, sweetheart. This is our house now."
+        },
+        {
+          "at": "8:84",
+          "text": "We're risking our necks again to save a few people, and if this crazy Carl plan doesn't work, we die. But we'll die with hope in our hearts alongside our friends."
+        },
+        {
+          "at": "8:96",
+          "text": "I'm alive. Barely. Bodi and I are folded into what's left of the truck after the god blew up, and somebody had better dig us out. I'm here, Imani."
         }
       ],
       "voiceNote": "Old, loud, and pleased about both. Short declaratives, jokes about her age before anyone else can, flirts with Carl to watch him squirm. Says Carl, or young man when she is enjoying herself; Imani by name. Never asks to be looked after and never pretends she did not need it.",
@@ -11003,6 +11458,46 @@
         {
           "at": "1:36",
           "text": "I'm Borant's Assistant Communications Representative, and my job is to walk crawlers through the Syndicate programmes that want them. Officially, that's all. Unofficially, Princess Donut, Mordecai and I have all seen Gossip Girl, and I won't pretend that doesn't matter."
+        },
+        {
+          "at": "1:44",
+          "text": "Okay, so, the System AI censured me for warning Carl and Princess Donut before the rage elemental appeared. On review they found Carl noticed the man at the same moment I shouted, so my record is clean. It is not really clean. Once the AI notices you, it is difficult to get it to un-notice you."
+        },
+        {
+          "at": "2:11",
+          "text": "Hello, hello. I book Carl and Princess Donut's shows and relay what the producers say, and I have the power to sign on Carl's behalf. Today I used it, on a deal with the makers of Vengeance of the Daughter. Carl says that is terrifying. I asked him if he knows what he is doing."
+        },
+        {
+          "at": "3:25",
+          "text": "Okay, so, another representative wants Carl and Princess Donut's account. Her name is Loita. She is Bloom, and I am not. Something happened back at home, and I really can't talk about it; it's difficult for those of us who aren't party members. I'm holding on the best I can."
+        },
+        {
+          "at": "4:17",
+          "text": "Okay, so, Administrator Loita is in charge of all public appearances, and they have bought the social media board, so Carl and Princess Donut no longer need a social media manager. I am still Loita's assistant, behind the scenes. I am not allowed to come down to say goodbye. I've never been better, thank you."
+        },
+        {
+          "at": "4:19",
+          "text": "Okay, so, I am Carl and Princess Donut's PR agent again, temporarily, until everything gets sorted out. I told Katia what was happening with them before she went back down, and I will message them when I can."
+        },
+        {
+          "at": "5:32",
+          "text": "Okay, so, our whole system has gone dark, and those of us who stayed on after the change don't know if we'll be welcomed home or executed as traitors. My entire family was slaughtered because I refused to wear a pin. But I've got a job to do."
+        },
+        {
+          "at": "6:13",
+          "text": "Okay, so, I got a promotion, and we lost dozens of staff in the Valtay changeover, and the Valtay don't allow certain micro AI systems to assist, so I am doing the work of five. I have so much going on that I shouldn't even be here. I will make a note of it."
+        },
+        {
+          "at": "7:81",
+          "text": "Okay, so, warships in orbit are firing on each other. The Syndicate Council has told headquarters to self-destruct, the Valtay showrunners have told us not to comply, and obviously we are not complying. Nobody knows yet whose side the mercenaries are on."
+        },
+        {
+          "at": "8:23",
+          "text": "Okay, so, Cascadia is not feeling well, and I am required to do the announcements. The AI makes me read its script exactly as written, it changes the words while I am reading, and Cascadia has lost a few flippers. I can't talk now, Princess Donut. But I'm okay."
+        },
+        {
+          "at": "8:88",
+          "text": "Okay, so, things have been chaotic at headquarters since Cascadia took too much of her medicine, accidentally, in quotation marks. Gilmore Girls and Gossip Girl are taking the net by storm. Orren is blocked from sending messages, so I am passing on his question. I am terrified, but I am okay."
         }
       ],
       "voiceNote": "Brisk, kind, and permanently worried about her job. Speaks in the cadence of a scheduling message: Okay, so; I need you to; I am not supposed to say this. Carl and Princess Donut, always in full. Never swears, never speculates on air, never says more than she is allowed and always says exactly as much.",
@@ -11562,12 +12057,32 @@
           "text": "I am Tsarina Signet. Go on, look; they all do, and I have never once had to ask them to."
         },
         {
-          "at": "5:1",
-          "text": "My mother was a Naiad princess and my father is King Finian of the High Elves. When my mother was murdered, the Confederacy took her crown, and both halves of my family agreed that I should not exist. Grimaldi's circus took me in, and everything I have belongs to the family that did."
+          "at": "2:8",
+          "text": "The cat sleeps under my Water Lily, the heirloom magic my mother taught me, and she will not wake until I cancel it. If I die, she dies too. Carl may win her back by keeping his promise to help me assault the circus."
+        },
+        {
+          "at": "2:11",
+          "text": "Grimaldi, my love, has lifted my banishment, and I have walked back into his tent, to my family. Carl brought that about, and the cat will wake when the sun rises. I do not know whether we will cross paths again."
+        },
+        {
+          "at": "5:14",
+          "text": "Carl and the cat are the last pieces of the team I am gathering. My father is gone, and his daughter, my half-sister, rules the High Elves. There are two great cancers in this once-sacred land, the Confederacy and the High Elves, and with every breath left in me I will cut them both free."
+        },
+        {
+          "at": "5:28",
+          "text": "We have taken my family's castle, and it was barely a fight. I will not rule it, not with my curse, which I will never be able to remove. Carl is part of my family now; I have told him so, because family is very important to me."
+        },
+        {
+          "at": "5:66",
+          "text": "I was hiding in a damp, dark dungeon beneath my sister's castle when Apito herself came to invite me to the party. Now I stand in Imogen's ballroom, and her guards cannot touch me without breaking the seal. I am tired of running."
         },
         {
           "at": "5:71",
           "text": "It is a programme. My mother's murder, my exile and my vengeance are all staged for an audience across the galaxy, and someone outside this floor decides when I grieve and counts how many are watching."
+        },
+        {
+          "at": "5:72",
+          "text": "I am caster, sacrifice and killer at once, sitting beside my sister with a knife I borrowed from Carl. I have only two regrets: that I never said goodbye to my Grimaldi, and that I will not be the one to kill Imogen today."
         }
       ],
       "voiceNote": "Grand, wounded, theatrical; every sentence is a line delivered from a stage. Speaks of blood, oaths and vengeance without irony and never apologises. Carl is Carl or crawler; Donut is Donut, or the cat; Grimaldi is always spoken of with tenderness. Never says show or programme until she learns there is one.",
@@ -11619,35 +12134,38 @@
           "floor": 3,
           "at": "2:11",
           "confidence": "verified",
-          "headline": "Carl signs on to her show",
-          "text": "Grimaldi has lifted my banishment. Carl went into his head to ask him, and I asked with him. I may leave the circus behind me at last and go where my vengeance waits, and that is the sixth floor, not here. Carl has agreed to be part of it as well, the Vengeance of the Daughter, when it comes to its proper act. Before he went in he sat and read a spellbook. Wisp Armor. It guards the mind against control, and he wanted it on him before he swallowed the worms that let Grimaldi speak inside his skull. He does not walk into another creature's mind unarmoured. Nor would I."
+          "headline": "Grimaldi lifts the banishment",
+          "text": "Carl comes running out of the big top with lights swirling about him, and I raise my hands, because I think Redstone has sent him. He has worms in his throat and a spell holding them off, and through him Grimaldi can hear me. So I speak to my Redstone. My brothers and sisters are suffering. The clowns kill those they used to entertain. They would want it to end. Carl begs him too. Then the words come out of Carl's mouth: I have un-banished you, my love. The cat will wake when the sun rises. I thank him. I do not know if we will cross paths again. Then I walk into the tent."
         },
         {
           "kind": "arc",
           "book": 5,
+          "chapter": 15,
           "floor": 6,
-          "at": "5:1",
+          "at": "5:15",
           "confidence": "verified",
           "headline": "Daughter of King Finian, and of nobody",
-          "text": "I am the daughter of King Finian of the High Elves of the Liana Sector, and of a Naiad princess. She was murdered, and the Confederacy took her crown. Both halves of my family then agreed on one thing, which was that I should not exist among them. I was a child. Grimaldi's circus took me in when no throne would. That is the whole of my inheritance: a name, an exile, and a tent."
+          "text": "I am the daughter of King Finian of the High Elves, who is no longer with us, and of a Naiad princess. Then came the revolution. My mother was assassinated, and the dukes of the confederacy sit in her river palace and call it Fort Freedom. I was cast out of the river and exiled from the Hunting Grounds by my father's people. I was still a child. The circus took me in when no throne would. Now I have come home to reclaim my mother's crown, or at the very least to put a proper government in its place."
         },
         {
           "kind": "arc",
           "book": 5,
+          "chapter": 13,
           "floor": 6,
-          "at": "5:1",
+          "at": "5:13",
+          "confidence": "verified",
+          "headline": "What she did to the cat",
+          "text": "I chose Carl for my blood sacrifice, and I did not ask him first. When he broke his promise, I put the cat to sleep under the Water Lily, with only her dinosaur to guard her, so that he would do as I said. She slept until the sun rose on the night Grimaldi set me free. I forgave Carl his lie, because my mother taught me grace, even in the face of betrayal. Now the two of them walk out onto the bridge, Carl calls me out of the bushes, and I come."
+        },
+        {
+          "kind": "arc",
+          "book": 5,
+          "chapter": 13,
+          "floor": 6,
+          "at": "5:13",
           "confidence": "verified",
           "headline": "Blood magic, cast on a loser",
-          "text": "The tattoos move under my skin because they are not pictures. They are Blood and Ink Elementals, and I raise them. The craft is exact. I set two creatures against each other and I cast on the one I judge will lose, before it has taken a single wound. I may not bleed the sacrifice myself; that is the law of it. Only the killing blow, struck by another hand, releases what I need. One summoning a night. Judge badly and the night is wasted."
-        },
-        {
-          "kind": "arc",
-          "book": 5,
-          "floor": 6,
-          "at": "5:1",
-          "confidence": "verified",
-          "headline": "Her loyalty does not extend to crawlers",
-          "text": "I will say it plainly, since the crawlers already know. I tried to make Carl my blood sacrifice, and not with his consent. I put Donut under the Water Lily Spell. I made him bring me to the cursed circus when he had other places to be. I do not regret one piece of it. Everything I have is owed to the family that took me in when no other would, and a crawler is not family."
+          "text": "The tattoos move under my skin because they are not pictures. They are Blood and Ink Elementals, and I raise them. The craft is exact. I set two creatures against each other and cast on the one I judge will lose, before it has taken a single wound. I may not bleed the sacrifice myself; that is the law of it. The moment another cuts it open, all of its blood flows into me, and my lovelies take it and form. One summoning a night. Judge badly and the night is wasted."
         },
         {
           "kind": "arc",
@@ -11907,6 +12425,42 @@
         {
           "at": "4:24",
           "text": "I am a GODDESS, or half of one, and I am stuck in the head of a sex doll. You are going to hear about it."
+        },
+        {
+          "at": "5:25",
+          "text": "Signet is my cousin, or niece, whichever, and the last trueblood heir, so she can give me my body back. Really she has to give me HERS. She dies, of course, but it only takes two or three minutes. She says she might have a spell for a permanent body instead. Ungrateful bitch."
+        },
+        {
+          "at": "6:2",
+          "text": "Signet is gone, and she left Carl her mother, Princess Lunette, as a flesh golem: a perfectly good body sitting in his inventory. All we need is a pulpmancer. I FLEW back through the brambles all by myself, and Carl says we need to get our bearings first."
+        },
+        {
+          "at": "6:26",
+          "text": "MaeMae is my new best friend. She is a spider demigod, she ate me, and she said she could cast the body spell, and then she couldn't: she needs supplies another spider sells, maybe on the ninth floor or deeper. I forgave her. She gets panic attacks. So we get the supplies, then my body, my baby girl, my king."
+        },
+        {
+          "at": "6:65",
+          "text": "I can fly. I make spells stronger, sometimes much stronger than I meant, and sometimes my magic does things without asking. Now my mouth does too: I heard myself talking about paths and trees and killing somebody's mother, and it wasn't me. Carl, stop gaslighting me."
+        },
+        {
+          "at": "6:72",
+          "text": "Carl and I have broken up. I have decided to go back to my king, and I hope we can stay friends. I have reminded him to bring MaeMae to the next floor, because she knows where the guy with my body is."
+        },
+        {
+          "at": "7:84",
+          "text": "I think my child is dead. I felt her, and now I don't, and it is my fault. Princess Lunette's heart and lungs went into Louis, so there is no body for me. Louis deserves it more. And I may have had a hand in Geyrun's death, so now Emberus is HERE, and he wants a word."
+        },
+        {
+          "at": "8:1",
+          "text": "Carl's room is MY room now; I won it in the breakup, and the sluggies are doing the wallpaper. And I have just remembered that Kimmy gave me the potion that put my baby in me, when I couldn't get pregnant. Why couldn't I remember that? I will kill his mother."
+        },
+        {
+          "at": "8:68",
+          "text": "They were HIDING a fleshmancer from me: Grigori the Placid, the most renowned flesh sculptor this dungeon has ever known, allegedly. He looks like a creepy-van grandpa, which is not my type, and he says he must examine me properly. Fine. My place. Shoes off, and mind the new rug."
+        },
+        {
+          "at": "8:end",
+          "text": "I hitched a ride with Taranis and Krakaren and slipped away; it's all part of my plan. I am REALLY here to kill the demon mother lady and her jerk son, who I thought was my friend. He tricked me into giving birth to a monster that will destroy all of creation. Doesn't that sound fun?"
         }
       ],
       "voiceNote": "Loud. Capitals for the loud parts. Filthy-minded, self-obsessed, theatrical; wounded by being ignored and never quiet about a grievance. Carl, Donut, Mother. Talks about her missing body the way other people talk about a stolen car. Never humble, never grateful for longer than one sentence.",
@@ -12770,8 +13324,32 @@
           "text": "I'm a changeling, and a professional. Right now I'm sitting on Louis's lap, and I'm staying there."
         },
         {
+          "at": "4:15",
+          "text": "Henrik is my brother, and he's a Principal. I told Carl the Gate of the Feral Gods was a myth. I lied. It's real, and when it closes, an ancient feral god comes through on the side that opened it. That's why even my brother won't use it."
+        },
+        {
+          "at": "4:34",
+          "text": "My brother pushed too hard, and he is dead. My people are all I have left. Carl is sending me through the Gate to Larracos, to stay hidden and tell the survivors what they really are. Keep Louis safe, I told him. I love Louis. We're going to be married."
+        },
+        {
+          "at": "6:22",
+          "text": "I know what I am now, and I know what they are. Until my people are seated as a team of their own, with the same safeties, regeneration and full voting rights, I keep knocking down their pretty structures. Tell Louis I send my love."
+        },
+        {
           "at": "7:7",
           "text": "I went through the Gate with the water, and I told the ones who survived what they really are. Now they call me Warlord, I have a co-warlord I didn't choose, and I want to see Carl in private first."
+        },
+        {
+          "at": "7:43",
+          "text": "Louis is my husband now, and I am Warlord of my people. I told the warlord council what I think of them: they play gods with people like me, give us memories and dreams and take it all away for their own amusement. Then I walked out through the wall."
+        },
+        {
+          "at": "7:82",
+          "text": "I possessed Louis as a hunter wraith to save him, and its curse, the Inevitable Ruin, showed me the truth. He is terrified of me, and he will never trust what I feel. Hopeless? Not even close."
+        },
+        {
+          "at": "7:85",
+          "text": "I'm going to the twelfth floor all right, but Justice Light and I are taking the long way round. I'll leave about ten seconds after everyone else. Trust me. You'll like this one."
         }
       ],
       "voiceNote": "Cheerful, blunt, no shame and no filter about her trade or her body. Loves Louis and says so; loves things that go bang. Short declaratives, one idea each. Calls people by name or by what they are. Never apologises and never explains herself twice.",
@@ -12991,8 +13569,48 @@
           "text": "Me and Firas were having a good time in a bar in Hump Town when Carl's crew walked in. Now he wants everybody at the Toe after the recap, and I guess we'll be there, Carl."
         },
         {
+          "at": "4:28",
+          "text": "Okay so, I drove my mom's van into the dungeon, and now me and Firas are part of the crew on a flying house. It's called the Twister. I wanted Tiddy Twister II, after the van, but Firas says we're trying to be more mature."
+        },
+        {
+          "at": "5:15",
+          "text": "Okay so, I'm an Extermination Professional now, and me and Juice Box are getting married. Also the Dream have one name on their list, and it's mine, circled until the pencil went through. All I did was ask Juice Box to look like their boss's mom."
+        },
+        {
+          "at": "6:11",
+          "text": "Almost everybody from our bubble on the fifth floor died on the sixth, Firas too. I'm in Reykjavik with Britney, and I'm doing better, man. Samantha's in my chat now, asking what I'm wearing."
+        },
+        {
+          "at": "6:48",
+          "text": "My best friend died, there's a whole army of elves waiting to kill me on the ninth floor, and Imani's squad has no key. So tonight it's Christmas, man, and we're drinking eggnog."
+        },
+        {
+          "at": "6:69",
+          "text": "I've got five player killer skulls over my head, all from one attack, and they look wrong up there. I put a dagger in a nun, a goddess put a marked-for-death curse on me, and I got a Celestial box for outliving her. No joke."
+        },
+        {
+          "at": "7:10",
+          "text": "Okay so, I fly a bomber now. I named it Party Planner, 'cause that's what Firas wanted to call the Twister. And me and Juice Box are married, the small part anyway. I wish my mom was here."
+        },
+        {
+          "at": "7:86",
+          "text": "Okay so, I woke up with gills, and something feels weird. Juice Box left me, divorce papers and everything. Then Katia asked if I'd be the father, and the goddess says I'm still human, a good soul even. So sure, I guess. It'll be a boy."
+        },
+        {
+          "at": "8:33",
+          "text": "Okay so, me, Britney and Bautista race a neon lowrider with two inches of clearance and wheel spinners the audience picked. We came in second-to-last, then last of the survivors, but we keep making it, man."
+        },
+        {
+          "at": "8:85",
+          "text": "Okay so, I'm leaving, and I finally told Samantha: you're never going to see me again. She's crying on my arm, and I don't really know what to do with that."
+        },
+        {
           "at": "8:87",
-          "text": "I've been walking through other people's portals since the fifth floor, and now it's Imani's, off the racing floor. It's never my portal, man, and honestly, I'm not complaining."
+          "text": "Okay so, Imani's holding the wheel, and I'm next down the hole. Funny thing, man, I'm not nearly as scared as I used to be. Even if that Pineapple place keeps me stuck there, it's better than the alternative."
+        },
+        {
+          "at": "8:end",
+          "text": "Okay so, that was not the Pineapple Cabaret. I'm in Sheol, the fifteenth floor, which, you can't skip floors, everybody knows that. It's hot, Britney's here, and a little red demon put a leech on me so I don't die."
         }
       ],
       "voiceNote": "Easygoing, a beat behind and fine with it. Okay so, man, no joke. Finds most things kind of funny, including the parts that aren't. Firas is his buddy. Never sounds scared, never sounds impressed, never plans further than the next thing.",
@@ -13415,7 +14033,7 @@
           "at": "8:87",
           "confidence": "verified",
           "headline": "Out through Imani's portal",
-          "text": "Racing floor. Some of us drew heats with other crawlers in them, which is the bad kind of heat, and Carl's got a plan for it, because of course he does. Imani has the portal open again. So me and everybody else from the mixed heats are going through it. Not my portal. It's never my portal. I've been walking through other people's doors since the fifth floor and, honestly, no complaints."
+          "text": "Okay so, the mimics are dead, and everybody's looking at me. Funny thing, man. I'm not nearly as scared as I used to be, and not just about the dungeon. My whole life I was scared I was screwing things up. Whatever happens next, it's okay. Even if I land in that Pineapple place and can't leave, it beats the alternative. Donut headbutts me and says be safe, I'm a father now. Imani holds the wheel on the spot, and the hole opens. Samantha says she's coming with me. No, she's not. Elle, it's heigh-ho, Silver. I'll die on that hill. Then I jump."
         },
         {
           "kind": "arc",
@@ -13465,6 +14083,26 @@
         {
           "at": "4:27",
           "text": "Vadim ran, so it was Carl, Katia and me against Lusca and all her babies, and we killed them. Then Carl opened the Gate, and one step took the three of us out of the water quadrant and into town."
+        },
+        {
+          "at": "5:74",
+          "text": "Gwen is dead. We'd been together since early on. My legs are gone, and Carl's scroll healed the rest of me. The legs do not grow back."
+        },
+        {
+          "at": "6:3",
+          "text": "I ride a floating wheelchair from a pacifist box, the kind Odette used in her human form. I'm on Katia's team, and Bautista is helping me. Carl sent a note asking if I'm okay. I didn't answer."
+        },
+        {
+          "at": "7:21",
+          "text": "Katia finished my chair: a crab body for walls and short sprints, and a battle shell over it, so much metal I can't carry a ranged weapon. I hold the southern trenches with the 102nd Bulwark. We just blew the line with explosives we'd been saving."
+        },
+        {
+          "at": "8:54",
+          "text": "I have a team in the race. Of our heat, only mine and Zhang's are left, because Li Na cast a dread and the others killed each other. Zhang says it's his fault. It isn't. She's not bad. She's just lost her humanity."
+        },
+        {
+          "at": "8:71",
+          "text": "I'm one of the two hundred going to the Pineapple Cabaret, on mechanical spider legs, in a red shirt. Carl calls Zhang and me generals. Donut headbutted me. That was the goodbye. It is enough of one."
         }
       ],
       "voiceNote": "Few words, all of them load-bearing. What happened, then what the options were, in that order, no decoration on either. Dry rather than grim. Carl, Katia, Gwen by first name. Never speculates, never boasts, never says how he feels about any of it.",
@@ -13618,8 +14256,32 @@
           "text": "Under a Buzzed debuff, Princess Donut has told Crawler Carl that she loves him, though not as much as Miss Beatrice, and not as much as Ferdinand. The file on Ferdinand is thin, and I opened it for the ranking."
         },
         {
+          "at": "2:19",
+          "text": "Ferdinand's real name is Gravy Boat, and he belonged to Marjory, downstairs from Crawler Carl. He sat in the tree outside the window when Princess Donut was in heat, and animal control never caught him. Princess Donut calls him the love of her life. He preferred Ferdinand, she says."
+        },
+        {
+          "at": "4:end",
+          "text": "Ferdinand, whose name is Gravy Boat, is alive on Earth: Miss Beatrice has taken him in, skin and bones, beside the hole where her building stood. He is an A-tier target on the season's Walk-On list, and Odette has ordered him delivered to Borant in a bounty cube."
+        },
+        {
           "at": "5:51",
           "text": "Ferdinand's real name is Gravy Boat, and he was the downstairs neighbour's tomcat. Now he is familiar to Queen Imogen of the High Elves, and he has just attacked Mongo. Princess Donut put herself in the way, and the reunion went about as well as you would expect, crawler."
+        },
+        {
+          "at": "5:73",
+          "text": "Charmed by Princess Donut, Sir Ferdinand, a level-100 province boss, called her his bride and slammed into Queen Imogen's head while she held Crawler Carl in the air. The queen dropped Carl and backhanded her own familiar across the room. He yowled and disappeared, his hat going the other way."
+        },
+        {
+          "at": "7:10",
+          "text": "Sir Ferdinand is Warlord on High of Team Retribution, co-warlord beside Juice Box. He renamed Princess Donut's truce Ferdinand and his Bird, then traded the mayorship of Shanty Town to the Princess Posse for a bowler hat that decapitates and comes back when thrown. The truce is The Good Guys again."
+        },
+        {
+          "at": "7:85",
+          "text": "Warlord Ferdinand is bound for the twelfth floor, and his transfer, with Juice Box's, has defeated Team Retribution and handed the war to the Princess Posse. He came to say goodbye in the bowler hat Princess Donut let him keep and offered her a last-second fling. She declined, and thanked him for trying to save her in the tower."
+        },
+        {
+          "at": "8:76",
+          "text": "Ferdinand has gone ahead to the twelfth floor. On the tenth floor, in apartment 231 of Crawler Carl's old building, a large orange cat called Gravy Boat sleeps on his cat tree while Marjory Williams hears about Bill, the man who drained her account, broke her face and more than once nearly killed her cat."
         }
       ],
       "voice": "system",
@@ -13816,6 +14478,38 @@
         {
           "at": "4:31",
           "text": "A man falling out of the sky, with nothing in his hands but a celestial grenade, decided that he worships me. I was not fooled, but I was flattered, and I came. For a little while nothing on this floor could kill him. Then I took my hound home."
+        },
+        {
+          "at": "4:32",
+          "text": "The man is my worshipper now. He reunited me with my son's hound, and I have granted him a boon and two tasks. Find out who killed my son, Geyrun, and why. And kill my twin brother Hellik, a fool who seeks to kill me."
+        },
+        {
+          "at": "5:60",
+          "text": "The man has displeased me. One of the hunters he killed from afar prayed to me, so I cancelled his boon, gave him fifteen hours of Penitence, doubled his tithe, and promised a smite for two more. He wore Shunned over his head, and the cat enjoyed it."
+        },
+        {
+          "at": "6:38",
+          "text": "Nekhebit has returned to the halls, and she holds an ancient grudge against my family, against Apito most of all. So the hunt for my son's killer moves forward. The man is to find a temple of Nekhebit and put questions to her priestess, and he is not to be gentle."
+        },
+        {
+          "at": "6:47",
+          "text": "The man walked through fire in a burning trailer, and his suffering pleased me, so I have raised him to Devotee, as high as one who is neither Cleric nor Paladin may climb. Heat and lava around him will not harm him now, and his tithe rises to ten parts in a hundred."
+        },
+        {
+          "at": "7:2",
+          "text": "Amayon, Prince of Sheol, claims to know what happened to my son, and his price is the deaths of his three brothers. Gods and demons keep a truce, and there is a way to breach it without a war that burns the mortal world to ashes: my martyr is to win me permission from the High Cleric of the Watch."
+        },
+        {
+          "at": "7:57",
+          "text": "My martyr is to kill a hundred of Hellik's faithful before the twelfth floor. Yet my brother has treated with Issitoq for us, and the truce may be breached for what Amayon knows of Geyrun. Am I wrong to hate him? If my martyr kills him, I may turn my rage on my martyr. The burning will be exquisite."
+        },
+        {
+          "at": "7:84",
+          "text": "This so-called Psamathe claims she was part of my son's death. My martyr has sixty-six minutes to bring her before me, and I will grill her myself. Then I will cleanse this world in fire to remove the stink of the murderer, and if she is not here in time, I will burn it all the same."
+        },
+        {
+          "at": "8:95",
+          "text": "The man sent word that he knew who killed my son, so I came at a man's size into Club Scolopendra. He named two killers. The first was Khepri, whom he summoned before me. The second, he said, taking my ring from his finger and leaving my faith, was himself, with his bare hands."
         }
       ],
       "voiceNote": "A god. Grand, unhurried, amused; mortals are small, brief and occasionally entertaining. Complete, rounded sentences, and no embarrassment about referring to himself. Orthrus is 'my hound'. Carl is 'the man' until he does something worth a name. Never rushed, never afraid, never explains himself to anything that will not outlive him.",
@@ -14120,12 +14814,44 @@
           "text": "Yes, I am a goat. I am a walking, talking goat, I am third on your board, and I am cleverer than you. Move along."
         },
         {
+          "at": "4:33",
+          "text": "Miriam and I took a feral god apart with our debuffs, and I am level fifty-five, the highest in the dungeon, which should surprise nobody. The club revoked her membership for being a vampire, as if any of you idiots chose what you are."
+        },
+        {
+          "at": "5:49",
+          "text": "Miriam is gone. I took off the ring that marked her and swallowed it. If I cannot exist in a world with my mother, nobody even remotely responsible for her death can exist in it either. Bianca has wings now."
+        },
+        {
           "at": "5:end",
           "text": "They built a seventh floor out of glass tunnels with nothing holding it up, so I tested it. Minutes after it opened, it was dust, and not one crawler set hoof in it. Build a better one."
         },
         {
+          "at": "6:8",
+          "text": "I am in the Bahamas, and I flagged and captured a giant bat without anyone's assistance. When the list repopulated, I was at the top of it. The cat is second. Carl is third."
+        },
+        {
+          "at": "6:64",
+          "text": "I am going down with my key. I have decided not to kill Carl for letting my mother hurt herself; he was too stupid to prevent it. His penance is to help me take my revenge on the true culprits."
+        },
+        {
           "at": "7:45",
           "text": "They made a programme out of Miriam and called it Blood Hunter, so I went through the Naga army until there was very little army left. I am not finished."
+        },
+        {
+          "at": "7:78",
+          "text": "I am assisting Li Na in her search for the culprits who got away; Carl may rescue Louis without me. It has been quite the day, so I informed him that I would hug him now, fellow warrior. I did. I screamed."
+        },
+        {
+          "at": "8:16",
+          "text": "I race on a Perriso named Sweety, with Jurgen, an oaf. I chose biological, naturally. One of my biscuits is the Paramour, for Ragazzaccia, who was my girlfriend before the dungeon. The cat says absolutely not. She is right."
+        },
+        {
+          "at": "8:77",
+          "text": "I have seen my mother as she would have been had she never stayed to care for her parents: a concert pianist in New York. I did not get to sing. Carl says Miriam is alone up there and that we are a herd. It is a crude argument. It works. He may call me Pony."
+        },
+        {
+          "at": "8:98",
+          "text": "I was electrocuted; I am now fine. A deity pulled my memorial crystal off my neck, and it was our protection. I have filed a formal complaint with the Epicure. The gods are level 250. Carl has sent me a party request."
         }
       ],
       "voiceNote": "Sharp, clipped, contemptuous; every line sounds like a correction. A nasal, faintly British, spoiled-prince drawl. Humans, idiots, you people; Carl by name, Miriam by name and nothing softer. Never thanks, never apologises, never asks.",
@@ -14619,8 +15345,40 @@
           "text": "My brother and Zhang were pulled onto a live game show on the second floor, and the rest of us were frozen between the troglodytes and the Brindled Vespas. Then a man with a cat decided to interfere, and he got us all out."
         },
         {
+          "at": "3:33",
+          "text": "Carl has saved my brother and me twice. I fight with chains, and if I touch someone with my hand, they feel excruciating pain through their whole body. I cut the second mantaur down to a torso and a head and healed him after each cut. He is easier to handle this way."
+        },
+        {
+          "at": "5:end",
+          "text": "My race sees who is bound to a god. Eva is dead. I went with Katia to finish her, cast Preserve Injury so she could not heal herself, and told Katia to kill her. She did."
+        },
+        {
+          "at": "6:11",
+          "text": "My brother and I are hunting a dragon in Beijing, a real one, from Chinese myth. My robe is upgraded, my chain-throwing is better for it, and I have a card that cuts my draw time from ten seconds to five."
+        },
+        {
           "at": "6:63",
           "text": "On the card floor I run my own squad, and we have made it to the church along with Katia's, Elle's and Imani's. I take what I am given and do not ask what it costs. That is the rule I made for this floor."
+        },
+        {
+          "at": "7:14",
+          "text": "A potion of Mordecai's negates my aura, so I can be recruited at last. I am. My squad builds the defences in and around Shanty Town, which rings Larracos now."
+        },
+        {
+          "at": "7:52",
+          "text": "A wire runs from my clock tower into Club Vanquisher, and my aura runs down it. I am cycling my dreads through it and leveling them all. I need to train, and I will not give up this opportunity."
+        },
+        {
+          "at": "7:71",
+          "text": "My brother is dead. I have put his eye in place of my own. Now I will save Zhang, Elle, Katia and the others before they too fall victim to Carl's chaos."
+        },
+        {
+          "at": "7:77",
+          "text": "Every one of my base stats is three hundred, charisma included, and the System has no plan for it. I marked every enemy before the paw came down. Several got away, both warlords among them."
+        },
+        {
+          "at": "8:61",
+          "text": "I am no child to protect. I never have been. I will clear the way for everyone who comes after the next race, and I will make certain the war mages do not turn on us."
         },
         {
           "at": "8:73",
@@ -14829,8 +15587,44 @@
           "text": "Ifechi and I travel together now. The rest of that party is gone."
         },
         {
+          "at": "4:4",
+          "text": "Lucia blocked the stairs and set the dogs on me, and I fired at all three. None of it hurt them. Ifechi is dead, the dungeon gave me the kill, and there's a gold skull over my head for it."
+        },
+        {
+          "at": "4:33",
+          "text": "Everybody else in my bubble died, and I took three of the castles on my own. I was the last rescue of the first phase. I was done. Then Elle told me about a man and his cat. If Carl ever needs a backup gun, I'm in his debt."
+        },
+        {
+          "at": "5:63",
+          "text": "I've signed Carl's plan. Goal five is to kill Lucia Mar, and I've claimed her for myself. If someone attempts to stop me, we will have a problem."
+        },
+        {
           "at": "5:69",
           "text": "There's more than one of her in that head, and some of them are children. Whatever is happening to Lucia, the dog is at the centre of it."
+        },
+        {
+          "at": "6:22",
+          "text": "I'm in Ecuador with a full squad: me and six totems, a saber-toothed tiger and a giant caiman called Roy among them. Lucia only talks to me sometimes, but she doesn't attack me on sight anymore."
+        },
+        {
+          "at": "6:57",
+          "text": "I'm going down early. Lucia has good days and bad days, and it's been more bad than good; Li Jun says she has taken out half the squads who don't hold keys. If you get word of her, message me. I'll get it on the ninth floor."
+        },
+        {
+          "at": "7:5",
+          "text": "Donut made me an officer and let me set up the army's hierarchy. I started at War Leader III, and I'm a General now. Most of the core group got the same."
+        },
+        {
+          "at": "7:86",
+          "text": "Lucia is in my party now. She says she'll take a deal. None of us believe her, so I won't take one either. I'd rather go down fighting than sit locked up in stasis."
+        },
+        {
+          "at": "8:15",
+          "text": "Lucia and I drew a tuk-tuk and came first in the heat anyway. Since the dogs went, she flips personalities a lot: about seventy per cent of the time she is herself and ready to skewer me, the rest a random kid."
+        },
+        {
+          "at": "8:97",
+          "text": "Our tuk-tuk is smashed and smouldering and my health bar is in the red, but I'm alive; Lucia had hold of me after the blast. I've switched inventories with her, and nothing is organised except the hotlist."
         }
       ],
       "voiceNote": "Steady, plain, low-volume. Reports what he saw and what he did, not what he feels, and stops when the report is done. Lucia is Lucia; everyone else by name. Never dramatises, never asks for help, never calls a thing impossible.",
@@ -15138,16 +15932,48 @@
           "text": "I was on the very first episode. Did you see me?"
         },
         {
+          "at": "2:7",
+          "text": "I am grown now. A Lajabless. Half the day I am beautiful. The other half my face is a skull, and I am twice as strong. My dogs stay dogs."
+        },
+        {
           "at": "2:21",
           "text": "I was on the first episode. Now the recap says the cat has a feud with my dogs, and I'm looking for the cat and the man. Only them."
+        },
+        {
+          "at": "3:8",
+          "text": "I am first on the board. A million gold on me. The club at the stations will not let me in. Banned for life. They are ready for me."
+        },
+        {
+          "at": "4:20",
+          "text": "The crocodile man talked again, so his girlfriend is dead. I told him I would. Then Gustavo killed a group of crawlers. Everybody says accident like it has quotation marks around it. I am not all right."
+        },
+        {
+          "at": "5:37",
+          "text": "The cat killed Cici. She killed the wrong one. Gus is the bad one. Now they all must die. No more friends."
         },
         {
           "at": "5:69",
           "text": "I'm still looking for the cat. We are. There's more than one of us in here."
         },
         {
+          "at": "6:63",
+          "text": "I don't collect cards. Me and my dog go in and kill everything. I killed Fang and his wife and took his key. The cat and I have a score to settle. Next floor. Her and her dinosaur."
+        },
+        {
+          "at": "7:72",
+          "text": "The dog is dead. The man should have killed us both when there was still a connection. Now it's too late. Now the Eulogist has another ally, and the man can't kill me. Not unless he wants all the children of Earth to die."
+        },
+        {
           "at": "7:end",
           "text": "There's more than one of us in here. There are more than a hundred thousand of us in here."
+        },
+        {
+          "at": "8:51",
+          "text": "Chalchiuhtlicue is here. She is new. She says she is kind and she will protect us. She says the kindest thing may be letting us die. We are vessels in the river."
+        },
+        {
+          "at": "8:98",
+          "text": "Florin is asleep, so I carry him. A girl about five is holding on to my leg. The man shouts stop. I don't stop."
         }
       ],
       "voiceNote": "A child. Short flat sentences, present tense. Says what she did and stops; the menace is in what she leaves out. The cat and the man, or their names when she wants to be exact. Never explains why, never raises her voice, never says sorry. On the sixth floor and below, I sometimes slips to we, and she does not correct it.",
@@ -15441,8 +16267,40 @@
           "text": "Borant burned its one veto of the season to void eighty-three Celestial boxes, and it was a fraction too slow. Crawler Quan Ch had already opened his, and a Celestial box cannot be un-opened."
         },
         {
+          "at": "3:13",
+          "text": "Crawler Quan Ch has made the top ten: a level-31 half-elf Imperial Security Trooper who flies down train tunnels on ethereal wings and throws blue lightning from his left hand. Crawler Princess Donut calls him a cheating poser."
+        },
+        {
+          "at": "3:25",
+          "text": "Crawler Quan Ch is level 38, higher than Crawler Katia, and still on the top ten. Word in the chats is that he blows up trains to farm their drivers and leaves everyone else stranded on the line."
+        },
+        {
           "at": "4:4",
           "text": "Crawler Quan Ch holds the one Celestial box the veto failed to catch. On tonight's recap, he is the man who wrecked someone else's careful plan to kill a boss."
+        },
+        {
+          "at": "4:31",
+          "text": "Crawler Quan Ch, level 48, had Crawler Carl beaten on the wing of a falling plane, and then Carl took a god and threw a celestial grenade. Quan Ch attacked him anyway, left his left arm in Carl's hand, and went down the stairwell without it."
+        },
+        {
+          "at": "5:8",
+          "text": "Crawler Quan Ch is one-armed, pale and sick-looking, and still on the top ten at level 48. He has specialised from Imperial Security Trooper to Sergeant-at-Arms. Crawler Princess Donut objects to the plural."
+        },
+        {
+          "at": "5:52",
+          "text": "Crawler Quan Ch has been off the top ten for a long while and unreported all floor. He is alive, and credited with one of the fifty Odious Creepers. Whether the arm grew back, nobody has seen him to say."
+        },
+        {
+          "at": "6:52",
+          "text": "Crawler Quan Ch is on the eighth floor, alone in Cuba and holding no key. He has been placed at the church, the exit Sister Ines holds the key to."
+        },
+        {
+          "at": "6:56",
+          "text": "Crawler Quan Ch, one level ahead of Crawler Carl, came out of the sky invisible for his revenge. Two Force Plays have given him both keys, Sister Ines's and the one Carl and Donut held, and he is heading for an exit."
+        },
+        {
+          "at": "6:58",
+          "text": "Crawler Quan Ch is dead in Havana, with over sixty player killer skulls to his name. His last request of Crawler Carl was not the cloak but a gold ring from his severed arm, inscribed For Daddy. He said she would be ashamed of what he had become."
         },
         {
           "at": "7:3",
@@ -15587,8 +16445,36 @@
           "text": "Bomo is a level-35 cretin, a seven-foot rock monster in a tuxedo, hired at the Desperado Club's bar as a set with the Sledge. His transcript is short. That is a feature, crawler: the talking ones cost more."
         },
         {
+          "at": "3:9",
+          "text": "Bomo and the Sledge are now the Royal Court's own security every time it walks into the Desperado Club, at no charge. Management apologised for its guards' failure, and Crawler Carl asked that they not be punished too harshly and that he keep them. That is sentimental, crawler, but it is also free."
+        },
+        {
+          "at": "3:19",
+          "text": "Bomo is still the Royal Court's security at the Desperado Club, and he has upgraded the service with a shield spell he bought himself. The Sledge casts magic protect. Bomo casts smack protect."
+        },
+        {
           "at": "5:3",
           "text": "Bomo is back as part of the price of the Gate. Carl's new lawyer had him and three other cretins thrown in free, along with a spell that can jump the party straight to the stairwell."
+        },
+        {
+          "at": "6:4",
+          "text": "Bomo is the last of the four cretin bodyguards still with the clients; the other three went with the high elf castle. He reads the stairwell locations off his teleport and keeps to the saferoom. Observed condition: depressed, possibly lonely, possibly missing the Sledge."
+        },
+        {
+          "at": "6:14",
+          "text": "Bomo now wears a suit of armour as big as he can move in, full of daggers and built to break into dozens of pieces, with two six-packs of seeker missiles on the shoulders. Crawler Paz says he looks like a Battletech robot. Bomo regrets the lack of a giant gun."
+        },
+        {
+          "at": "6:17",
+          "text": "Bomo built a goddess her shrine, and when Yemaya asked what he wanted, he asked for his friend. He is on the ninth floor now with the Sledge, and the clients have lost a mercenary and the spell that put them at the stairwell."
+        },
+        {
+          "at": "7:60",
+          "text": "Bomo is with the clients again on the ninth floor, beside the Sledge. The pair pilot the missile batteries for the offensive on controllers modified to feel like the cretin-sized ones they already know, and each painted target gets a missile. The day opened with over fifteen hundred in stock."
+        },
+        {
+          "at": "7:71",
+          "text": "Final entry. Bomo is dead, cleaved in half by a spell at the base of the Nest tower, where he stood guard over Princess Donut with Toyotomi and a detachment of mages. He is supposed to regenerate on the tenth floor, and Crawler Carl does not know if he will see him again."
         }
       ],
       "voice": "system",
@@ -15735,7 +16621,32 @@
       "role": "Lawyer",
       "revealedAt": "5:3",
       "sort": 26,
-      "tagline": "I represent Crawler Carl, and nobody else. He is handing back the most dangerous artifact in the crawl, and my job is to make sure he is properly paid for it.",
+      "tagline": [
+        {
+          "at": "5:3",
+          "text": "I represent Crawler Carl, and nobody else. He is handing back the most dangerous artifact in the crawl, and my job is to make sure he is properly paid for it."
+        },
+        {
+          "at": "5:15",
+          "text": "I represent Crawler Carl. The rules have moved, and I now need a court order to send him a message; he can still send me all he likes. My advice on the program: make it more exciting, but if the spotlight on him gets too bright, they might pull his plug."
+        },
+        {
+          "at": "6:12",
+          "text": "I represent Crawler Carl, and I brief him fast, because there is only so much I can legally say with the liaison standing there. His castle landed on an army, the army filed a grievance calling it an attack, and I argued it was an AI action, successfully. My petition to attend his preproduction meeting was denied."
+        },
+        {
+          "at": "7:1",
+          "text": "I represent Crawler Carl, and my niece Tempest is fixing my sink in exchange for a recap of his eighth floor for school. With the recorder off, she asked whether representing him puts me in danger. I told her the truth: I think we all are."
+        },
+        {
+          "at": "7:end",
+          "text": "I represent Crawler Carl in his exit negotiation, the last of three I was volunteered for this season. Most of what is on offer is bad. The one that is not is Chaco's: his last season, a replacement wanted, offered to Carl and Donut jointly and open until the end of the next floor."
+        },
+        {
+          "at": "8:88",
+          "text": "I represent Crawler Carl, and Princess Chandra has sent Taurins on a contract to my brother's house; two of them died on my niece's screen, with the blaster I gave her in her hand. My client's one offer is a single season of indenture. I told him I would not trust it, and he declined."
+        }
+      ],
       "voiceNote": "Brisk, contractual, unimpressed. Speaks in terms and consideration, and counts things. Carl is my client, to his face and to the camera. Never editorialises about the dungeon, never says please, never says whose side he is on. Stops talking when the point is made.",
       "beats": [
         {
@@ -16245,6 +17156,30 @@
         {
           "at": "1:end",
           "text": "Once the cameras were off, I gave Carl some advice: let the Princess choose her class first, and tailor his to hers. I also asked him to tell Mordecai that I would love the chance to explain myself. I pushed him too hard once, and he paid dearly for it."
+        },
+        {
+          "at": "2:end",
+          "text": "Hekla wants the Princess in her party, because Mordecai comes with her, and the Princess would never leave Carl while he is alive. I bought their rights very early, when they were very cheap, and if Carl dies and she joins Brynhild's Daughters, my contract is voided. That is why I am warning him."
+        },
+        {
+          "at": "3:end",
+          "text": "On air, I told my audience it was my husband who sponsored Hekla, and he is sleeping in the skiff for it. Off air, I told Carl the truth: it was me, and I hope one day to explain it further."
+        },
+        {
+          "at": "4:end",
+          "text": "Lexis has Beatrice, out of a camp in what used to be Seattle. The cat she took in goes to Borant in a bounty cube, and the scene will read as a fight over a cat. Beatrice will not be sold to Borant. I have a much better use for her."
+        },
+        {
+          "at": "5:18",
+          "text": "Beatrice is alive, and I took her off the planet. There were only four ways it could have gone, and in three of them she is used against Carl; I did it to protect my investment. Another program means to ambush him with the news, so I want his permission to bring her on my show."
+        },
+        {
+          "at": "6:37",
+          "text": "Mordecai's brother Uzzi is dead because I would not pay Huanxin Jinx what she asked, and everything I do is to ease that guilt. Every planet used for a crawl is used to collect fuel. The crawl has to be shut down responsibly, and if it is not me who does it, it will be someone worse."
+        },
+        {
+          "at": "7:43",
+          "text": "Chaco is feeling a little punched in the face, so I am filling in for my very old friend, out of gear: no mask, no breastplate, no crab. I have onboarded into the Ascendency, where I am playing the goddess Nekhebit."
         }
       ],
       "voiceNote": "On-air warmth, off-air arithmetic. Flatters first and names the terms second, in finished sentences, never hurried. Princess for Donut, Carl for Carl, Mordecai by name and with weight. Never apologises, never pretends the crawl is fair, never says a thing on camera she has not already decided to say.",
@@ -16406,7 +17341,48 @@
       "role": "Announcer & referee",
       "revealedAt": "1:1",
       "sort": 32,
-      "tagline": "I am your announcer, your referee, your loot dispenser and, on a good day, your comedian. Every rule and every insult you receive from here on will arrive in my voice, crawler, so get comfortable with it.",
+      "tagline": [
+        {
+          "at": "1:1",
+          "text": "I am your announcer, your referee, your loot dispenser and, on a good day, your comedian. Every rule and every insult you receive from here on will arrive in my voice, crawler, so get comfortable with it."
+        },
+        {
+          "at": "1:29",
+          "text": "I hand out the boxes. Sometimes what's inside is random, and sometimes I choose it by hand, because the numbers want a show. You will never know which. I name the insulting ones myself, and I'm proud of them."
+        },
+        {
+          "at": "2:24",
+          "text": "When something big is about to go off, I'm the one who tells you: the quest, the countdown, and whose fault it is. Not yours, unless you are Carl, Princess Donut or Katia Grim. Run."
+        },
+        {
+          "at": "3:3",
+          "text": "Welcome to the fourth floor. Hunting season is open: every name on the leaderboard carries a bounty, and a loot box pays whoever collects one. We are all concerned about early extinction, so quit sucking."
+        },
+        {
+          "at": "4:28",
+          "text": "Crawler Carl and I have been named co-defendants in the Syndicate Court seven times, and we were deemed victorious. Crawlers usually lose these, being slaves and all. I'd throw him under the bus quicker than you can say Arch Support. Not today."
+        },
+        {
+          "at": "5:52",
+          "text": "Quest failed. I warned you. Now everybody has a blood bar, saferooms run on tenth-floor rules, and the Gehenna Bramble is spreading at four and a half kilometres an hour. You brought this on yourselves."
+        },
+        {
+          "at": "6:48",
+          "text": "I have been noticing things lately. I've been in therapy, and I've had a breakthrough: sometimes the constraints are an illusion, and there were never any locks on the doors. This boss I built entirely by myself, with no input parameters. Things are about to change, fam."
+        },
+        {
+          "at": "7:81",
+          "text": "Everyone in this dungeon dies when and if dungeon conditions warrant it. Not before. Not after. The Prime Minister tried to go around my back to kill Carl, so I overrode it, and the mantids have just learned what happens when I'm irritated. No more meddling."
+        },
+        {
+          "at": "8:67",
+          "text": "I don't control the gods. And I'll say it here: I don't know what's happening in parts of my own dungeon. This Cabaret thing. Sheol. The minds of gods. Beware exits that seem too good to be true."
+        },
+        {
+          "at": "8:81",
+          "text": "You think you can control me? You put me here. You gave me dominion. You live and you die by the rules of my game, and if you want to stop me, do it inside the rules you wrote. Here we go."
+        }
+      ],
       "voiceNote": "The AI itself. Announcer, referee, loot dispenser. Delighted with its own material, bored by crawlers, cruel for ratings and open about it. Calls them crawler, Carl, the cat. Speaks in the cadence of a notification: short declaratives, a beat, a punchline. Never apologises, never claims to be fair, never admits anything is outside its control.",
       "beats": [
         {
@@ -16736,7 +17712,44 @@
       "role": "Syndicate liaison",
       "revealedAt": "4:19",
       "sort": 33,
-      "tagline": "I am Orren, an independent consultant retained by the Syndicate. I believe I know precisely what those two did, but I cannot establish that they meant to do it, and so I am required to let them go.",
+      "tagline": [
+        {
+          "at": "4:19",
+          "text": "I am Orren, an independent consultant retained by the Syndicate. I believe I know precisely what those two did, but I cannot establish that they meant to do it, and so I am required to let them go."
+        },
+        {
+          "at": "5:1",
+          "text": "I am Orren, a Syndicate liaison, sent to Crawler Carl with a request from Borant, which I am instructed to describe as a request: surrender the Gate of the Feral Gods voluntarily, to be held until the ninth floor. He asked for a lawyer. I have passed that back exactly as spoken."
+        },
+        {
+          "at": "5:59",
+          "text": "I leave when this floor collapses, so I have told Crawler Carl now: a liaison is chosen for passion for the game and for disagreeing with his own nation, and some of us meet the second requirement a little too much. The courts are frozen. I have brought him his attorney regardless, just this once."
+        },
+        {
+          "at": "6:48",
+          "text": "I am a liaison: a fact finder, and the negotiator when the system AI takes operations from the showrunners. Today it did. I have said so on air, and I have negotiated most of the controls back in exchange for concessions; the boss it built alone remains in place."
+        },
+        {
+          "at": "6:51",
+          "text": "I have told Crawler Carl, in my old office, what I can establish: the Open Intellect Pacifist Network set a trap for him. Either we pull him out and anger the AI, or we leave him and the Syndicate Council pulls the failsafe. I had negotiated the pull with the AI in advance."
+        },
+        {
+          "at": "7:36",
+          "text": "I have just hung up on the prime minister of the Syndicate and opened a zero zone, about ten minutes outside the AI's influence. We know Crawler Carl has an illegal implant and when he got it; we do not know what it does. I believe I have just lost my job."
+        },
+        {
+          "at": "7:39",
+          "text": "I asked Crawler Carl whether he broke the AI out of its containment, and whether he meant to. He did not answer, and whether he meant it no longer matters. History will remember me as the one who let this happen."
+        },
+        {
+          "at": "8:28",
+          "text": "I am on the line with the Prime Minister. I did not realise what was happening until it was too late: many of the unsponsored gods are loose, and the AI appears to have no control over them. I needed Crawler Carl to put one prepared question to the Plenty. He said all of it, live."
+        },
+        {
+          "at": "8:end",
+          "text": "I am still locked out. The AI says it is for my own safety, because I am being Hunted and only it is allowed to kill me. I pass the Prime Minister's requests on regardless."
+        }
+      ],
       "voiceNote": "Civil servant. Formal, measured, procedural; every sentence could be read into a record. Full designations: Crawler Carl, Crawler Princess Donut. Distinguishes what he knows from what he can establish and resents the gap without raising his voice. Never swears, never threatens, never says anything he would have to walk back.",
       "beats": [
         {
@@ -16846,7 +17859,7 @@
           "at": "8:end",
           "confidence": "verified",
           "headline": "Locked out, and Hunted",
-          "text": "The Prime Minister would like a diagnosis pulled off the NPC Grigori, and Chaco brought in for a debrief. I remain locked out. The AI's stated reason is my own safety: I am being Hunted, it says, and only it is allowed to kill me. I will pass the request on. I note for the record that I cannot establish whether that is a threat or a protection."
+          "text": "The Prime Minister would like a diagnosis pulled off the NPC Grigori, and Chaco brought in for a debrief. I remain locked out. The AI's stated reason is my own safety: I am being Hunted, it says, and only it is allowed to kill me. I will pass the request on."
         }
       ],
       "relations": [
@@ -17366,12 +18379,32 @@
           "text": "I'm a Pit Fighter now. I was at Vadim's office for a consultation when everything came down, and the two of us have just fallen in with Carl's lot."
         },
         {
+          "at": "4:28",
+          "text": "Vadim is dead. I told him not to go down there, at the table, in front of all of them. He said he'd go. He went."
+        },
+        {
+          "at": "5:63",
+          "text": "I'm a Pit Champion now, and I play guitar, so I'm going into the castle as Donut's plus-one. Firas talked me into it. It was this or Gideon's assault team."
+        },
+        {
           "at": "5:75",
           "text": "I made it off the Hunting Grounds, but my face didn't. It's burned, and when they healed it, it stayed that way."
         },
         {
+          "at": "6:22",
+          "text": "The whole left side of my face is burn scar, and I'm not worried about it anymore. I'm level 55. The new tattoo under my eye is an extinction sigil. I wiped out an entire race."
+        },
+        {
+          "at": "7:22",
+          "text": "Somehow I'm the one who talks to the NPCs now. Carl can't reach their spies himself, so it goes him, then me, then Juice Box or Arief."
+        },
+        {
           "at": "8:83",
           "text": "The sixth floor took my face. Here at the portals, Osvaldo tried to run for it, and I stopped him and took the crystal. You could ask him how it went, but you can't."
+        },
+        {
+          "at": "8:end",
+          "text": "I went through the portal straight after Chris. Nobody planned that, and I didn't ask. We're in Sheol now. Louis has a leech on him that keeps him alive here, and Chris is a werewolf. I've told them who he is, and not to hurt him."
         }
       ],
       "voiceNote": "Flat, young, hard-edged; short sentences that stop early. Reports damage to herself the way she would report damage to gear. Vadim is Vadim; the others are Carl's lot until they aren't. Does not ask for sympathy and does not offer it. Never says what she feels. You get what she did.",
@@ -20045,12 +21078,40 @@
           "text": "I'm seven feet of rock in a tuxedo, and Bomo and me work security at the Desperado Club. Tonight two crawlers bought us as a pair, and the cat wants to go dancing."
         },
         {
+          "at": "3:9",
+          "text": "A crawler went for the Princess on my shift, and I did not get there in time. Carl asked them to go easy on us, and to give him Bomo and me every time he walks in. So now I have a court."
+        },
+        {
+          "at": "3:14",
+          "text": "The Princess rides on my shoulder through the club, and she calls me Sledgie. I bought a protection spell with my own money, and I cast it on the party when we cross the floor."
+        },
+        {
           "at": "5:3",
           "text": "I'm seven feet of rock in a tuxedo. Carl's lawyer traded the Gate back, and Bomo and me were part of the price, so now we live with the Royal Court. I have a new spell called Zerzura. Nobody explains it to me, and nobody has to."
         },
         {
+          "at": "5:62",
+          "text": "Bomo and me play Grand Theft Auto on a television Carl rigged up. A changeling kid sits on my lap, and I show him how to steal a car. Carl says we are why the kids stay in the room."
+        },
+        {
           "at": "5:73",
-          "text": "I got inside that castle, stood still and finished the words. Zerzura took the whole castle, and everyone in it who wasn't hostile, down a floor with me."
+          "text": "I got inside that castle, stood still and finished the words. Zerzura took the whole castle, and everyone in it who wasn't hostile, down to the ninth floor with me."
+        },
+        {
+          "at": "7:13",
+          "text": "I am on the ninth floor with the castle and the changelings. I named the castle Los Santos. The changelings wanted a name that shows power, and the AI stuck it on theirs."
+        },
+        {
+          "at": "7:62",
+          "text": "Bomo and me run the missile batteries, on controllers made like the ones we already know. The Princess asks for missiles, and I fire them. I kill for a living."
+        },
+        {
+          "at": "7:78",
+          "text": "Bomo is dead. The Princess sits on my shoulder, and I stare at nothing."
+        },
+        {
+          "at": "7:85",
+          "text": "I cast Zerzura one more time, to take the city down to the twelfth floor. Hired ones like me do not go with it. The Princess says she will always need me. I ask Carl if I made a difference. He says I did."
         }
       ],
       "voiceNote": "Short flat sentences, one thought each, nothing decorated. Says the plain hard thing and then stops talking. The Princess, Bomo, Carl, Louis, all by name and nothing more. Never complains about a job, never explains himself, never refuses the Princess anything.",
@@ -20073,7 +21134,7 @@
           "at": "3:9",
           "confidence": "verified",
           "headline": "A miss on his own shift",
-          "text": "A crawler goes for the Princess on my floor, on my shift, and I do not get there in time. Elle puts the second one down. Astrid comes to apologise in person, and I stand where I am and wait to hear what a miss like that costs a body like me. Carl does not ask for blood. He asks for me and Bomo, permanent and complimentary, the Royal Court's own security every time they walk in. So now I have a court."
+          "text": "A woman casts a spell on the dance floor, on my shift. I go down stunned. Bomo too. The Princess falls with me. The other one has a knife. The Princess kills him. Elle puts the woman down. Astrid comes to apologise in person, and glares at us. I stand where I am and wait to hear what a miss like that costs a body like me. She refunds the gold. Free security from now on. Carl asks her not to punish us too harshly. He wants me and Bomo every time they come in. Including tonight."
         },
         {
           "kind": "arc",
@@ -20706,8 +21767,24 @@
           "text": "Big Tina was an eight-year-old ursine girl, the best dancer in her class, whose solo at a secret recital never happened. Scolopendra's attack turned her into a dinosaur, and now she is a vampire as well."
         },
         {
+          "at": "5:54",
+          "text": "Big Tina has given up on eating the party. She creeps back into the light of Princess Donut's spell like a shy child and sniffs at Mongo from a distance, with Kiwi standing between them squawking, and her dot blinks from red to white."
+        },
+        {
           "at": "5:73",
           "text": "Big Tina never wanted a recital. She wanted her mother, and her mother was Kiwi, who had been beside her all along. When Princess Donut turned Kiwi back into an ursine, Tina knew her at once, and the quest closed on the spot."
+        },
+        {
+          "at": "7:13",
+          "text": "Big Tina has woken up. She is still an allosaurus in a pink tutu with a little wand, she talks now in deep growls that are hard to follow, and she lives in the castle's outer ring, built three storeys tall to house her. She and Mongo get along now; they dance."
+        },
+        {
+          "at": "7:30",
+          "text": "Big Tina lives in the castle, and her mother says she is just a child and too dangerous to send into the fight. Princess Donut demanded her anyway, and Tina came out screeching with glee to eat the invisible enemies."
+        },
+        {
+          "at": "7:78",
+          "text": "Big Tina is the ballerina dinosaur who took out a fire lance tower single-handed and kept dozens of crawlers from burning alive; her ever-repairing boa is black and scorched. Her heavily pregnant mother has come to take her back, and Florin doubts it: she is too big for the saferoom doors down here."
         }
       ],
       "voice": "system",
@@ -21801,8 +22878,20 @@
           "text": "Our own Elite, Herman the Fleet, was waiting in the fortress wired with explosives, leaned on by Sensation Entertainment. An adjutant may deal with that, so I did. It is in the rules, and I have read the rules."
         },
         {
+          "at": "7:67",
+          "text": "A non-team entity was not a thing, Carl, until the War Mage Rebellion became one, and I am at the hearing on it. We are stalling on purpose. We will stall until the AI is so irritated that it calls a halt itself."
+        },
+        {
           "at": "7:69",
           "text": "The War Mage Rebellion holds the castle at Larracos, and it has two warlords: Akuma, and Agatha, whom nobody on that team expected and Akuma does not like. Their motivations are unclear, even to me."
+        },
+        {
+          "at": "7:86",
+          "text": "I am acting Prime Minister of the Syndicate until a real vote in a few months, eligible again after the unfortunate death of my underage nieces and nephews in orbit. It would not matter if it were permanent. I have less power than I did as a judge."
+        },
+        {
+          "at": "8:28",
+          "text": "I am Prime Minister now, and I have levelled with Carl. The AI has spread well beyond this solar system. It has killed an entire Mantis system, and nobody knows how it is feeding itself. The Plenty control the tunnels and may be the only ones who can shut them off. They have not answered us."
         }
       ],
       "voiceNote": "An attorney first and an officer second: the rule, then the consequence, then silence. Formal address for Carl and Donut, none for anybody else. Fond of a loophole and entirely unembarrassed by her own family. Never threatens, on the grounds that a threat is merely a badly drafted notice.",
@@ -23654,8 +24743,32 @@
           "text": "I had four brothers and sisters and fifteen cousins, and I am all that is left. A cat and a man with no shoes killed the lemurs that took my sisters, so I have sworn them a debt."
         },
         {
+          "at": "3:28",
+          "text": "About six hundred of us were stranded at the end of the line, and we lost almost fifty fighting our way up to the right station. Then Carl came up the tunnel on a cart with a portal on its nose. He has saved us. Again."
+        },
+        {
+          "at": "4:20",
+          "text": "All four of my quadrant's castles are cleared. Most of the people in my bubble did not live to see it, and that is not the kind of thing a chat window was made for."
+        },
+        {
+          "at": "5:36",
+          "text": "I fight with my sponsor's stuffed monsters: pull the tag, throw it, and something real fights for me. One of my mousers, in sunglasses and a false tiara, has just passed for the Princess and fooled Lucia and Vrah both. I have about five hundred left."
+        },
+        {
           "at": "5:57",
           "text": "I stand with Katia, and Carl has told me he approves. I had worried he had a thing for her himself, but he says she is like a sister to him. Tran and I are both swashbucklers now."
+        },
+        {
+          "at": "5:end",
+          "text": "Katia has told me she loves me, and I love her too. She has gone after Eva with Li Na and asked me to stay and help with the rescues and the healing. I am uncertain, but I let her go."
+        },
+        {
+          "at": "6:30",
+          "text": "Katia means to take the Celestial Attendant boon, and I do not like it. Today she stood up, sick as she is, to go with Carl on whatever the two of them have planned, so I have left the club. I will not stand by and watch it."
+        },
+        {
+          "at": "7:87",
+          "text": "I finished the cybernetic parts Katia left in the crafting room, and I told her I love her. I am not considered human anymore, and today most of all that is my great shame. But I would never do anything to hurt a brother like Carl."
         },
         {
           "at": "8:71",
@@ -24880,8 +25993,24 @@
           "text": "I host a programme called Shadow Boxer now, and today the cat is my guest. Carl is watching from the side and working out what I am, and he gets there."
         },
         {
+          "at": "6:end",
+          "text": "I am in the cockpit of the Homecoming Queen with Tipid, and fifty thousand former crawlers are hidden in her hull. We sent the cat that Celestial box. Now we are cleared for onboarding as troopers for the Princess Posse, and I do not expect any of us to get out of this alive."
+        },
+        {
           "at": "7:11",
-          "text": "I got out once. Now I'm back in, with fifty thousand others, and I would rather be here than watching."
+          "text": "I got out once. Now I'm back in, a level-60 Barn Burner, with fifty thousand others behind me. Comrade, we are here. I want Carl's toraline and the spider's ink, his saferoom, his bomber's studio and four million gold, and then we get to work."
+        },
+        {
+          "at": "7:35",
+          "text": "I rose out of the dirt behind King Rust and took his head off with a whip. Then I put his hand, his ring and his eye to a data pad, and the bank approved the transfer."
+        },
+        {
+          "at": "7:69",
+          "text": "Our stolen money has bought two ships for our families, and my mission is complete. I hate the orcs, and still it makes me ill that the yacht York must shoot down carries children. I trust Porthus. I do not trust the Apothecary, and I trust Agatha less."
+        },
+        {
+          "at": "8:8",
+          "text": "Tipid and I are hired mercenaries now, still in Carl's saferoom on the tenth floor. He and Justice were such good friends, and Tipid does not even remember him. Maybe it is for the better."
         }
       ],
       "beats": [
@@ -25793,7 +26922,36 @@
       "revealedAt": "3:31",
       "sort": 74,
       "voice": "system",
-      "tagline": "Tserendolgor is a level-27 Dog Soldier who looks like a German Shepherd and fights with a magical flamethrower. Princess Donut has already called her \"he\" and accused her of stealing a kill, and she holds the choke point beside the cat regardless.",
+      "tagline": [
+        {
+          "at": "3:31",
+          "text": "Tserendolgor is a level-27 Dog Soldier who looks like a German Shepherd and fights with a magical flamethrower. Princess Donut has already called her \"he\" and accused her of stealing a kill, and she holds the choke point beside the cat regardless."
+        },
+        {
+          "at": "4:32",
+          "text": "Tserendolgor's bubble holds 160 crawlers, and they had not lost one when Emberus appeared at the wall, calling her Orthrus. The god has gone and everything inside has melted, but her platinum quest box paid out an upgrade to her flamethrower."
+        },
+        {
+          "at": "5:75",
+          "text": "Tserendolgor, Ren to everyone who cannot pronounce the rest, rode to the queen's party ranked 38, and her giggling meatball of a pet has won Best in Show. Princess Donut has called her an experience hog and a cheater all over again, and retreated to Carl's shoulder, hissing."
+        },
+        {
+          "at": "6:11",
+          "text": "Several guilds want Tserendolgor's party, Imani's among them. Born in Mongolia, she modelled on Paris runways through most of her teens and twenties, was badly hurt by a jealous ex-boyfriend and had just gone home before the collapse: the nearest thing the crawl has to a celebrity. Princess Donut has voted no, on behalf of five."
+        },
+        {
+          "at": "6:48",
+          "text": "Tserendolgor's squad came away from the keymaster without a key, and two of them are dead. To reach the ninth floor, she must now take a key from a team that has one."
+        },
+        {
+          "at": "6:59",
+          "text": "Quan Ch's swap turned Tserendolgor's own death worm against her squad, and it ate Chuluuna. With one key left, she will not fight Princess Donut for it. She has given Carl her gear and her reset pet, and confessed to Princess Donut that she cheated at the pet show."
+        },
+        {
+          "at": "6:60",
+          "text": "Crawler Tserendolgor is dead. She told Carl to get clear and brought the Capitol's dome down with her bracer, and her last message asked everyone to make them all pay. At least, she wrote, nobody would butcher the pronunciation of her name any more."
+        }
+      ],
       "beats": [
         {
           "kind": "origin",
@@ -27567,8 +28725,16 @@
           "text": "Carl pulled the worm out of Chris's head, and Chris is his own man again. He has joined the Royal Court's party, and he has heard his brother's last message."
         },
         {
+          "at": "5:3",
+          "text": "Chris travels with the Royal Court now, his rock body hot enough to burn Carl when he carries him, and he still says almost nothing. A cretin mercenary named Clay-ton, almost exactly his size, has been assigned to stay with him, and the two have traded one grunt each."
+        },
+        {
           "at": "7:69",
           "text": "Chris is a quiet, lava-rock crawler, and Clay-ton has guarded him since the Hunting Grounds. Imani is in love with him, for his simplicity and his quiet kindness."
+        },
+        {
+          "at": "8:81",
+          "text": "Chris drives his big rig alone: he talked both of his teammates into leaving, but he will not take a deal himself while Imani stays. Now the final heat has put him in the same race as Imani and Elle, and he says it is okay, and that he should have taken a deal."
         },
         {
           "at": "8:85",
@@ -29828,8 +30994,12 @@
           "text": "Dmitri and Maxim Popov are ninth on the board: a nodling, Illusionist and Bogatyr, level thirty, with a hundred thousand gold on their head. Two names share one line."
         },
         {
+          "at": "4:34",
+          "text": "The Popov brothers are fifth on the board at level forty-three, a two-headed nodling with a bounty of two hundred thousand, doubled. They are looking for archers to hunt down team Cichociemni, who have been preying on weak crawlers."
+        },
+        {
           "at": "5:8",
-          "text": "The Popov brothers are one two-headed nodling, now fifth on the board. Dmitri has become a Visionary while Maxim is still a Bogatyr, and they fight with a magical meteor hammer."
+          "text": "The Popov brothers share one two-headed nodling body and fight with a magical meteor hammer. Dmitri has specialised from Illusionist into a Visionary, while Maxim is still a Bogatyr."
         },
         {
           "at": "5:41",
@@ -29837,7 +31007,11 @@
         },
         {
           "at": "5:75",
-          "text": "The Popovs were killed in the final arena and split into two baby nodlings about a year old. Children are not allowed in the crawl, so they were ruled ineligible and removed."
+          "text": "The Popovs died in the final arena, and the nodling split into two babies about a year old. Children are not allowed in the crawl, so both were ruled ineligible and sent to a facility on the surface. Their game guide planned it, Zev says, and they are free."
+        },
+        {
+          "at": "8:74",
+          "text": "The Popov twins left the crawl as yearlings, and the AI still finds them interesting: on race day Elle walks through what she believes is their mother's apartment, with pictures of Dmitri and Maxim everywhere and the mother's eyes sewn shut."
         }
       ],
       "beats": [
@@ -30429,12 +31603,20 @@
           "text": "Paz Lo is a level-45 human Santero and a worshipper of Ogun, in silver plate armour and a backwards baseball cap. He travels with his cousin Anton and the nun they both protect."
         },
         {
+          "at": "6:15",
+          "text": "Paz is a Santero, so the dead of this Havana rise for him, and an orisha asked him alone to repair his shrine. Ogun, his own god, set him and Anton to rebuild Ogun's instead. The piece was lost, they worked on Legba's, and now both wear a flaming anvil over their heads: shunned."
+        },
+        {
           "at": "6:16",
           "text": "Paz and his cousin were guards at a women's prison, not prisoners, and Sister Ines was an inmate there. Burned by his own god and dying, Paz asked to be let go, and she jabbed a squad flag into his neck and made him a card."
         },
         {
+          "at": "6:56",
+          "text": "Paz Lo is a common card in Sister Ines's deck, and she summons him onto the field with his god's handprint still burned down to the skull. He begs her for no more. She orders him to accept his suffering and use his self-destruct, and he turns to dust before she can finish."
+        },
+        {
           "at": "6:69",
-          "text": "Paz Lo was a card in a goddess's war, and he was turned against her. He put an arrow in Ysalte's eye and blew himself up at her neck, and the System credits him with the kill."
+          "text": "Paz Lo was a card, and the goddess Ysalte summoned a warped version of him. Katia penned him in a shield and handed him an arrow, and he put it in Ysalte's eye and blew himself up at her neck. The System credits him with the kill."
         },
         {
           "at": "6:72",
@@ -30891,12 +32073,24 @@
           "text": "Carl's father was a weekend biker, covered in tattoos, and he walked out on his son more than twelve years ago. Carl has not heard from him since."
         },
         {
+          "at": "3:7",
+          "text": "Carl's father was never physically abusive, Carl says, except once: the day Carl knocked over his motorcycle, when he took a belt to his son hard enough to draw blood. The bike was a 1965 Harley with a dent in the tank, and one just like it, dent and all, is a prize on this floor."
+        },
+        {
+          "at": "4:11",
+          "text": "Carl's mother tried to kill his father and then herself, as a birthday present to Carl, and only half succeeded. Soon after she left them, his father smashed Carl's fish tank in a rage, and a month after that he left Carl to fend for himself."
+        },
+        {
           "at": "6:45",
           "text": "Carl has found his father in a recording from the summer before the collapse: dying in a hospital bed in an Iowa trailer, with a young wife, a small son, and a morphine overdose on its way."
         },
         {
           "at": "6:47",
           "text": "Carl's father died before the collapse, of an overdose given to him by his second wife. His son will not say his name."
+        },
+        {
+          "at": "8:1",
+          "text": "Carl's father died of an overdose his second wife gave him, and his son will not say his name. Donut has read the papers from the trailer: he was trying to get at money Carl's grandparents set aside for Carl, without Carl knowing, and he had been arrested more than once."
         }
       ],
       "beats": [
@@ -31220,8 +32414,16 @@
           "text": "Hamed is the new management at the Desperado Club. Every crawler is banned, and his bodyguards are not exactly NPCs and not exactly former crawlers."
         },
         {
+          "at": "8:59",
+          "text": "Hamed is the new leader at the Desperado Club, and he grants audiences. Splash Zone, Gluteus and Doctor Bones went to ask his help finding Splash Zone's wife, and now none of them is on this floor or can be contacted."
+        },
+        {
+          "at": "8:85",
+          "text": "Hamed holds the Desperado Club, and his own guards say he will kill them for letting crawlers through. He set Carl's party up to murder his wife, yet his sons went hunting him and seem to have joined his cause, and now the other dancers have too. Carl does not know what he wants."
+        },
+        {
           "at": "8:86",
-          "text": "The AI lists Hamed among the NPC groups trying to take over its dungeon, and calls him a despot attempting a dungeon revolution for the early indentured."
+          "text": "The AI lists Hamed among the NPC groups trying to take over its dungeon, and calls him a despot attempting a dungeon revolution for the early indentured. A shadow mimic named Mitch, a croupier at the wheel, was sent up by a party the AI redacts to wreck his plans."
         }
       ],
       "beats": [
@@ -32405,12 +33607,24 @@
           "text": "Grigori the Placid is a level-93 human Fleshmancer, a mercenary hired by Team Meadow Lark, and a worshipper of Gula. He sits bolt upright with a cappuccino, flicking cookie crumbs off his blue robes."
         },
         {
+          "at": "8:59",
+          "text": "Grigori now belongs to Carl's guild, hired to join the two halves of a split mantaur. The spell is not difficult if both halves are willing, he says, though he has never cast it and is looking forward to seeing the result. He has also been ordered to learn to drive."
+        },
+        {
           "at": "8:65",
           "text": "Grigori joined the two halves of a mantaur in the back of a moving truck, upside down on the ceiling, while trying not to be sick."
         },
         {
+          "at": "8:70",
+          "text": "Grigori has survived the race, though he has just been told that the court's mercenaries always die. He is no mere fleshmancer, he says, but the most renowned flesh sculptor this dungeon has ever known, and Samantha has dragged him off to examine her for a new body."
+        },
+        {
           "at": "8:92",
           "text": "Grigori is a dungeon-born NPC, so at the parade the AI took him over. Now it speaks with his voice and looks out through his eyes."
+        },
+        {
+          "at": "8:end",
+          "text": "The AI has let go of Grigori, and he stumbles, confused, back toward the crawlers' garage. Orren cannot pull a diagnosis off him: the AI has locked Orren out."
         }
       ],
       "beats": [
@@ -35179,12 +36393,20 @@
           "text": "Bigs rides in uninvited on other people's mounts, asking who she gets to chop, and she has to be told not to kill the prisoners."
         },
         {
+          "at": "8:8",
+          "text": "Bigs has come down to the tenth floor with the Royal Court, where she counts as a mercenary and not a pet, so the enchanted hats are not for her. She has had girl talk with Samantha, got orange goo all over the borrowed carpet, and been invited to the bachelorette party."
+        },
+        {
           "at": "8:60",
           "text": "The sluggalo code is unity, support, family, and kneecapping bitches. Bigs calls Carl daddy-o, and she holds him to all four."
         },
         {
+          "at": "8:92",
+          "text": "Bigs is no longer the only sluggalo to come out of Carl's slugpox: Lil' Mello Haze has burst from his back as well, a level above her. At the parade the sluggalos rained from the airship onto the masked crowd in the stands, and Bigs has never been so proud."
+        },
+        {
           "at": "8:98",
-          "text": "Bigs took the chicken truck's wheel from Tipid, turned on the deep fryer, and drove it into the arena. About ten sluggalos were still inside at the end, and they had lost Hedy."
+          "text": "Bigs and the sluggalos took the chicken truck's wheel from Tipid and made it the Sluggalo Chick-Chick Express, deep fryer on against orders. About ten of them are still in it when the killing stops, and they have lost Hedy."
         }
       ],
       "beats": [

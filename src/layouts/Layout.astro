@@ -36,6 +36,10 @@ const current = (href: string) => (here === href ? 'page' : href === sectionHref
   <meta name="robots" content="noindex" />
   <title>{title} · Crawler's Companion</title>
   <script is:inline>
+    /* the viewport's width, so a page can leave out what a narrow screen would only hide (/when's chart) */
+    try { document.cookie = 'dcc_vw=' + Math.round(innerWidth) + '; path=/; max-age=31536000; samesite=lax'; } catch (e) {}
+  </script>
+  <script is:inline>
     /* Moving between pages, a floor's picture and name travel between the
        homepage and the floor's own page (global.css). Only a pair both pages
        really show may travel: every element that keeps a name and has no
@@ -158,7 +162,7 @@ const current = (href: string) => (here === href ? 'page' : href === sectionHref
        built with DOM nodes and textContent, never innerHTML, so their styles
        live in the global component layer: a scoped rule cannot reach markup a
        script built. */
-    type Hit = { href: string; name: string; kind: string; detail: string; tier: 'name' | 'story' };
+    type Hit = { href: string; name: string; kind: string; detail: string; tier: 'name' | 'story' | 'recent' };
     const dlg = document.getElementById('quickfind') as HTMLDialogElement;
     const input = document.getElementById('qf-input') as HTMLInputElement;
     const box = document.getElementById('qf-results') as HTMLDivElement;
@@ -211,8 +215,27 @@ const current = (href: string) => (here === href ? 'page' : href === sectionHref
       return sec;
     }
 
+    /* Recent: the last pages opened, kept as addresses only and named by the server. */
+    const RECENT = 'dcc-recent';
+    const recentPaths = (): string[] => { try { return JSON.parse(localStorage.getItem(RECENT) || '[]'); } catch { return []; } };
+    if (/^\/(entity\/[a-z0-9-]+|floor\/\d+)$/.test(location.pathname)) {
+      try { localStorage.setItem(RECENT, JSON.stringify([location.pathname, ...recentPaths().filter(p => p !== location.pathname)].slice(0, 8))); } catch { /* fine without it */ }
+    }
+    let recent: Hit[] = [];
+    async function loadRecent() {
+      const paths = recentPaths().filter(p => p !== location.pathname);
+      if (!paths.length) { recent = []; return; }
+      try { recent = await (await fetch(`/find.json?recent=${encodeURIComponent(paths.join(','))}`, { credentials: 'same-origin' })).json(); } catch { recent = []; }
+    }
+
     function render(h: Hit[]) {
       const q = input.value.trim();
+      if (!q && recent.length) {
+        rows = []; hits = recent; active = -1;
+        box.replaceChildren(group('Recent', recent, '', 0));
+        dlg.dataset.state = 'hits'; note.textContent = IDLE; mark(false);
+        return;
+      }
       hits = [...h.filter(x => x.tier === 'name'), ...h.filter(x => x.tier === 'story')];
       rows = []; active = hits.length ? 0 : -1;
       const named = hits.filter(x => x.tier === 'name');
@@ -251,6 +274,7 @@ const current = (href: string) => (here === href ? 'page' : href === sectionHref
     function open() {
       if (dlg.open) return;
       dlg.showModal(); input.value = ''; render([]); input.focus();
+      loadRecent().then(() => { if (dlg.open && !input.value.trim()) render([]); });
     }
 
     btn.addEventListener('click', e => {

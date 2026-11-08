@@ -3,7 +3,7 @@
    why the index never leaves the server. */
 import type { APIRoute } from 'astro';
 import { readGate, getEntities, getFloors, getAllBeats } from '../lib/content';
-import { quickFind } from '../lib/quickfind';
+import { quickFind, recentHits } from '../lib/quickfind';
 
 /* The content is re-seeded on every deploy and never changes while a process
    runs, so it is read once. Every request still gates it for its own reader. */
@@ -14,8 +14,12 @@ export const GET: APIRoute = async ({ url, cookies }) => {
   const q = (url.searchParams.get('q') ?? '').slice(0, 80);
   const { gate } = await readGate(cookies);
   const [entities, floors, beats] = await load();
-  const hits = quickFind(q, entities, floors, gate, 12, beats)
-    .map(({ href, name, kind, detail, tier }) => ({ href, name, kind, detail, tier }));
+  // ?recent=/entity/a,/floor/5 : the reader's recent pages, named only if reached now
+  const recent = url.searchParams.get('recent');
+  const hits = recent != null
+    ? recentHits(recent.split(',').slice(0, 8), entities, floors, gate).map(h => ({ ...h, tier: 'recent' }))
+    : quickFind(q, entities, floors, gate, 12, beats)
+      .map(({ href, name, kind, detail, tier }) => ({ href, name, kind, detail, tier }));
   return new Response(JSON.stringify(hits), {
     headers: {
       'content-type': 'application/json; charset=utf-8',

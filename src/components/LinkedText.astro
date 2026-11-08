@@ -1,0 +1,11 @@
+---
+import { linkify } from '../lib/linkify';
+
+/* A text with every name in it linked to its page, the first time (see linkify.ts).
+   `at` is the text's own point; `self` the entity whose page this is. Rendered on
+   one line on purpose: whitespace between the segments would show in the prose. */
+interface Props { text: string; at: number | string; self?: string }
+const { text, at, self } = Astro.props;
+const segs = await linkify(text, at, self);
+---
+{segs.map(s => s.href ? <a class="nm" href={s.href}>{s.t}</a> : s.t)}

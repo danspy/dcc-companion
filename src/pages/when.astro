@@ -19,6 +19,13 @@ const [books, floors, entities, beats, relations] = await Promise.all([
 /* The view lives in the URL so the switch is three links and the whole page
    still works with no JavaScript, which is the property /who already has. */
 const params = Astro.url.searchParams;
+/* A phone is told the chart will not fit, and it used to download all of it
+   anyway (2.4 MB) because the server cannot see the screen. Every page writes the
+   viewport's width to a cookie (Layout.astro), so from a reader's second page on
+   a narrow screen gets the notice alone. A first visit without the cookie still
+   gets the whole page, hidden by CSS, as before. */
+const vw = Number(Astro.cookies.get('dcc_vw')?.value);
+const narrowVw = vw > 0 && vw < 900;
 const VIEWS = ['braid', 'grid', 'downstream'] as const;
 type View = (typeof VIEWS)[number];
 const view: View = (VIEWS as readonly string[]).includes(params.get('view') ?? '')
@@ -90,7 +97,7 @@ const BLURBS: Record<View, string> = {
     )}
   </section>
 
-  <section class="wrap wide-only">
+  {!narrowVw && <section class="wrap wide-only">
     <div class="finder-wrap"><div class="finder">
       <div class="finder-row heads">
         <nav class="switch" aria-label="How to lay the entries out">
@@ -129,7 +136,7 @@ const BLURBS: Record<View, string> = {
             : filtering ? `${shown.size} of ${met} shown` : `${met} with entries`}</p>
         </div>
     </div></div>
-  </section>
+  </section>}
 
   {/* With no JavaScript nothing can pick an entry, so the panel opens every card
       and reads as a list of what is drawn. This has to sit outside #stage: a view
@@ -138,7 +145,7 @@ const BLURBS: Record<View, string> = {
   <noscript><style is:inline>.dcard { display: block !important; }</style></noscript>
 
   {!empty && (
-    <section class="wrap narrow-only">
+    <section class={narrowVw ? 'wrap' : 'wrap narrow-only'}>
       <p class="sys" style="max-width:var(--measure)">
         <b>*** Display too narrow ***</b>Eleven floors will not fit through a porthole, crawler.
         Come back on a wider screen and the chart will be waiting. The record itself reads
@@ -148,7 +155,7 @@ const BLURBS: Record<View, string> = {
     </section>
   )}
 
-  {empty ? (
+  {narrowVw && !empty ? null : empty ? (
     <section class="wrap">
       <p class="sealed empty"><b>*** Sealed ***</b>{gate.fresh
         ? 'Nothing to lay out until you say where you are.'

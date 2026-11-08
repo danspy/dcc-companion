@@ -69,6 +69,7 @@ const ROUTES = [
       entries the data happens to hold. */
    ['class="pickrow entryrow" hidden', 'class="stagerow gridrow" hidden', ' shown']],
   ['/progress', ['class="stats"', 'tbl-head']],
+  ['/since', ['Since you were last here']],
   /* Quick-find answers per reader from the cookie; Carl is met at 1:1. */
   ['/find.json?q=car', ['"href":"/entity/carl"']],
   ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"', 'class="hero-fig"', 'src="/art/figure/carl-']],

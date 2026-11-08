@@ -5,6 +5,9 @@ import { floorStatus } from '../lib/floorstatus';
 import { pictureFor, showsHero, FALLBACK_ACCENT } from '../lib/voxel/art';
 import { VOXEL_FLOORS } from '../lib/voxel/floors';
 import { stampOf, span } from '../lib/stamps';
+import { getAllBeats } from '../lib/content';
+import { readSince, sinceLabel } from '../lib/since';
+import { reveals } from '../lib/spoiler';
 
 /* One floor, as the homepage's side panel shows it: everything a reader may
    know about it at a glance, and a door to its full page. Rendered on the
@@ -36,6 +39,10 @@ const hero = reached ? showsHero(id, gate.frontier, floor.recapSortKey) : showsH
 const art = await pictureFor(id, artOk ? { accent: reached ? floor.accent : FALLBACK_ACCENT, hero } : null, status.kind !== 'sealed');
 const accent = reached ? floor.accent : '#3a3a3a', ink = reached ? floor.ink : '#ffffff';
 const name = status.name;
+/* on the floor the reader stands on, what opened since their last session (since.ts) */
+const current = reached && floors.filter(f => reveals(gate, f.revealedAt)).at(-1)?.id === id;
+const since = current ? readSince(Astro.cookies, gate, b => books.find(x => x.id === b)?.chapters ?? null) : null;
+const sinceCount = since ? (await getAllBeats()).filter(b => b.sortKey > since.key && b.sortKey <= gate.frontier).length : 0;
 const short = (t: string, n = 420) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + ' …' : t);
 ---
 <article class="peek" data-floor={id} style={`--peek:${accent};--peek-ink:${ink}`}>
@@ -50,6 +57,7 @@ const short = (t: string, n = 420) => (t.length > n ? t.slice(0, t.lastIndexOf('
 
   <figure class="peek-art"><img src={art.src} alt={`Floor ${id}${name ? `, ${name}` : ''}${art.own ? '' : ', not yet pictured'}`} width={art.width} height={art.height} /></figure>
 
+  {since && sinceCount > 0 && <a class="peek-new" href="/since">New since {sinceLabel(since)}: {sinceCount} {sinceCount === 1 ? 'entry' : 'entries'} →</a>}
   {reached && <p class="sys peek-arrival"><b>*** Now entering ***</b>{floor.premise}</p>}
   {status.kind === 'named' && <p class="sys peek-arrival"><b>*** Not yet entered ***</b>You have heard its name, crawler. You have not stood on it.</p>}
 

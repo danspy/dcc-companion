@@ -1,5 +1,6 @@
 ---
 import type { BeatRow, FloorRow } from '../lib/content';
+import LinkedText from './LinkedText.astro';
 
 /* One beat, rendered the one way this site renders a beat. The entity page and
    the /when panel both use it, so a System beat is a `*** ... ***` block and a
@@ -19,10 +20,10 @@ const { beat, floor = null, id, hidden = false } = Astro.props;
   </div>
   <div class="entry-body">
     {beat.voice === 'system'
-      ? <div class="sys"><b>*** {beat.headline} ***</b>{beat.text}</div>
+      ? <div class="sys"><b>*** {beat.headline} ***</b><LinkedText text={beat.text} at={beat.sortKey} self={beat.entityId} /></div>
       : <>
           <h3>{beat.headline}</h3>
-          <p class={beat.voice === 'self' ? 'spoken' : undefined}>{beat.text}</p>
+          <p class={beat.voice === 'self' ? 'spoken' : undefined}><LinkedText text={beat.text} at={beat.sortKey} self={beat.entityId} /></p>
         </>}
     {beat.confidence === 'draft' && <span class="draft">unverified</span>}
   </div>

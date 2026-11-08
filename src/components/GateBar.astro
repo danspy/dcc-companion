@@ -19,6 +19,15 @@ const tint = (n: number) => {
   return b?.accent ? `--bk:${b.accent};--bk-ink:${b.ink ?? '#0e0e0e'}` : undefined;
 };
 const saved = prefs.spoilers && prefs.book ? prefs.book : 0;
+/* The one thing a reader does every visit is read on. So the panel opens on a
+   single button for it: the next chapter, or the end of the book after its last,
+   or the first chapter of the next book after a finished one. */
+const countOf = (n: number) => bookOf(n)?.chapters ?? 0;
+const next = !saved ? null
+  : prefs.chapter && prefs.chapter < countOf(saved) ? { book: saved, chapter: prefs.chapter + 1, label: `Read another · ch ${prefs.chapter + 1}` }
+  : prefs.chapter ? { book: saved, chapter: 0, label: `I finished book ${saved}` }
+  : saved < BOOK_COUNT && countOf(saved + 1) ? { book: saved + 1, chapter: 1, label: `Started book ${saved + 1} · ch 1` }
+  : null;
 const state = !prefs.spoilers ? 'off' : prefs.book ? 'set' : 'unset';
 ---
 {part === 'chip' && (
@@ -39,6 +48,12 @@ const state = !prefs.spoilers ? 'off' : prefs.book ? 'set' : 'unset';
       <!-- A book button opens its chapter picker below; it does not commit
            anything. One tap used to mean "I have finished this book", which
            unsealed the whole of it for a reader who had only just started. -->
+      {next && (
+        <div class="pick-next">
+          <button class="btn btn-set" id="pick-next" type="button" data-book={next.book} data-chapter={next.chapter} style={tint(next.book)}>{next.label}</button>
+          <span class="pick-now">Now: book {saved}{prefs.chapter ? `, chapter ${prefs.chapter}` : ', finished'}</span>
+        </div>
+      )}
       <div class="pick-books">
         <span class="pick-ask">Which book are you reading?</span>
         <div class="books" role="group" aria-label="Which book are you reading?">
@@ -60,7 +75,11 @@ const state = !prefs.spoilers ? 'off' : prefs.book ? 'set' : 'unset';
         <p class="pick-q">Where are you in it?</p>
         <div class="pick-row" id="pick-range-row">
           <input type="range" id="pick-range" min="1" value="1" aria-label="Chapter" />
-          <span class="pick-ch">Ch <input type="number" id="pick-num" min="1" value="1" aria-label="Chapter number" /> <span id="pick-of"></span></span>
+          <span class="pick-ch">
+            <button class="btn pick-step" type="button" data-step="-1" aria-label="One chapter back">−</button>
+            Ch <input type="number" id="pick-num" min="1" value="1" aria-label="Chapter number" /> <span id="pick-of"></span>
+            <button class="btn pick-step" type="button" data-step="1" aria-label="One chapter on">+</button>
+          </span>
         </div>
         <p class="pick-hint" id="pick-hint"></p>
         <div class="pick-actions">
@@ -134,6 +153,11 @@ const state = !prefs.spoilers ? 'off' : prefs.book ? 'set' : 'unset';
   .pick-q { margin: 0; color: var(--color-grey-300); font-size: var(--type-meta); }
   .pick-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
   .pick-row[hidden] { display: none; }
+  /* read on: the panel's first and biggest button, in the book's colour */
+  .pick-next { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 0 16px; padding-bottom: 16px; border-bottom: 1px solid var(--color-line); }
+  .pick-next .btn-set { background: var(--bk, var(--color-gold)); color: var(--bk-ink, #0e0e0e); border-color: var(--bk, var(--color-gold)); font-size: var(--type-ui); padding: 11px 16px; }
+  .pick-now { font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--color-grey-300); }
+  .pick-step { min-width: 34px; padding-inline: 0; justify-content: center; }
   #pick-range { flex: 1 1 220px; min-width: 0; accent-color: var(--acc, var(--color-gold)); }
   .pick-ch { font-family: var(--font-mono); font-size: var(--type-ui); color: var(--color-grey-300);
              display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
@@ -168,6 +192,20 @@ const state = !prefs.spoilers ? 'off' : prefs.book ? 'set' : 'unset';
   }
 
   function write(next: Record<string, unknown>) {
+    /* Where the reader moved from: the homepage offers what is new since then.
+       Only a real position counts, and only the latest move. */
+    const prev = read();
+    if (prev.spoilers && prev.book && (prev.book !== next.book || prev.chapter !== next.chapter)) {
+      /* A reading session is moves less than eight hours apart: tapping on a chapter
+         at a time keeps the session's starting point, so "what's new" covers all of it. */
+      let since = { book: prev.book, chapter: prev.chapter, t: Date.now() };
+      try {
+        const hit = document.cookie.split('; ').find(c => c.startsWith('dcc_since='));
+        const old = hit ? JSON.parse(decodeURIComponent(hit.slice(10))) : null;
+        if (old && Date.now() - (Number(old.t) || 0) < 8 * 3600e3) since = { book: old.book, chapter: old.chapter, t: Date.now() };
+      } catch { /* a fresh session, then */ }
+      document.cookie = `dcc_since=${encodeURIComponent(JSON.stringify(since))}; path=/; max-age=31536000; samesite=lax`;
+    }
     const value = encodeURIComponent(JSON.stringify(next));
     document.cookie = `${COOKIE}=${value}; path=/; max-age=31536000; samesite=lax`;
     location.reload();
@@ -248,6 +286,10 @@ const state = !prefs.spoilers ? 'off' : prefs.book ? 'set' : 'unset';
     const book = target.closest<HTMLElement>('#pick .bk');
     if (book) { show(book); return; }
     const state = read();
+    const stepBtn = target.closest<HTMLElement>('.pick-step');
+    if (stepBtn) { setChapter(Number($<HTMLInputElement>('pick-num').value) + Number(stepBtn.dataset.step)); return; }
+    const nextBtn = target.closest<HTMLElement>('#pick-next');
+    if (nextBtn) { write({ ...state, book: Number(nextBtn.dataset.book), chapter: Number(nextBtn.dataset.chapter), spoilers: true }); return; }
     if (target.closest('#pick-set')) {
       write({ ...state, book: open, chapter: Number($<HTMLInputElement>('pick-num').value) || 1, spoilers: true });
       return;

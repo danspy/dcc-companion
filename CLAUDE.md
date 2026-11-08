@@ -890,6 +890,44 @@ masthead trigger is an icon. A result says "also X" only when the name itself di
 **The static-copy check caught the placeholder.** It read "Carl, the Bedlam Bride, a floor…" — a
 gated alias in page source, shown to a reader on book 1. It names only premise names now.
 
+### The fastest paths: what a reader comes for, and how fast they get it
+
+A usability pass measured the live site for a reader at book 4, chapter 12, on a phone, and rebuilt the
+paths readers take most. `npm run ux` holds the budgets against a running server (like `npm run smoke`),
+reading the server's HTML with a phone's cookies, so no browser is needed.
+
+1. **"Who or what is this?"** Search, then the page. The answer at the top used to be stale for exactly the
+   people looked up most: Carl's and Donut's taglines were one step at 1:1. The 40 most-written characters
+   now have taglines through all eight books (a step wherever who they are changes), and an entity page
+   opens with **Latest**: the reader's three newest entries, newest first, above the history. A long life
+   (over 24 entries) opens on the reader's own book; the other books are a chip away and "All books" is
+   `?book=all` (a quick-find hit in another book still opens everything). **Every name in a beat, tagline,
+   description, recap part or guide step is a link** (`src/lib/linkify.ts`, `LinkedText.astro`), the first
+   time it appears in that text, matched by the lint's rules (multi-word in any case, one word as written,
+   no lower-case alias, nothing under four letters, the longest name first, a repeated long name still
+   owning its span so the "Carl" inside "Carl's Doomsday Scenario" never links). It cannot leak: the lint
+   already fails a text naming anything past its own point, and each name is matched only from its own
+   reveal point as a second fence. Search opens on the reader's **recent pages**: the browser keeps only
+   their addresses (`dcc-recent`), and `/find.json?recent=` names them, gated for the reader *now*, so
+   moving the position back never shows a name they have not reached. Arriving from a floor, the index,
+   the timeline or another entry, the page offers the way back ("← Floor 5", from the `Referer`).
+2. **"I've read more."** The picker opens on **Read another · ch 13** in the book's colour (after the last
+   chapter, *I finished book 4*; after a finished book, *Started book 5 · ch 1*), with − / + beside the
+   chapter box. Two taps from any page. `/at/4:12` (or `/at/4`, `/at/4:end`) sets the position by address
+   and opens the floor, for an e-reader or a bookmark.
+3. **"Catch me up."** Every move of the position remembers where it moved from (the `dcc_since` cookie, written by the picker and by `/at`),
+   and `/since` lists what opened in between: the stretches of the crawl, then every entry that changed,
+   grouped by who or what, each headline a link to its own line. Moves less than eight hours apart are one
+   reading session, so tapping on a chapter at a time keeps the session's starting point. The current
+   floor's card offers it ("New since book 4, chapter 9: 41 entries"); on a phone it is in the opened card,
+   not the slim bar, where it squeezed the floor's name.
+4. **Browsing.** Who & What opens on **Met only** (a reader with nothing met keeps the sealed cards, which
+   are all there is), each kind showing its first dozen (six on a phone) and the rest behind *All N
+   characters*; a search or a kind chip shows every match. A sealed card says nothing, and at book 4 there
+   were 341 of them: the page went from 253 phone screens to 12. A phone is never sent the timeline's
+   chart: every page writes the viewport's width to `dcc_vw`, and `/when` renders only its notice under
+   900px (2.4 MB to 98 KB); a first visit with no cookie still gets the old page, hidden by CSS.
+
 ### Plain words for the chrome
 
 A reader asked why a character page said **"Where it's used"**. It was the usage-log heading for

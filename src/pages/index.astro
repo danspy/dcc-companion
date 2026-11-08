@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { reveals } from '../lib/spoiler';
-import { getBooks, getFloors, getForetold, readGate } from '../lib/content';
+import { getBooks, getFloors, getForetold, getAllBeats, readGate } from '../lib/content';
+import { readSince, sinceLabel } from '../lib/since';
 import { VOXEL_FLOORS } from '../lib/voxel/floors';
 import { pictureFor, showsHero, FALLBACK_ACCENT } from '../lib/voxel/art';
 import { stampOf, span } from '../lib/stamps';
@@ -11,6 +12,9 @@ import StartScreen from '../components/StartScreen.astro';
 const { gate } = await readGate(Astro.cookies);
 const [books, floors, foretoldRows] = await Promise.all([getBooks(), getFloors(), getForetold()]);
 const bookById = new Map(books.map(b => [b.id, b]));
+/* What is new since the reader's last move, offered on the floor they stand on (see since.ts). */
+const since = readSince(Astro.cookies, gate, b => bookById.get(b)?.chapters ?? null);
+const sinceCount = since ? (await getAllBeats()).filter(b => b.sortKey > since.key && b.sortKey <= gate.frontier).length : 0;
 
 /* A floor's story arrives in parts, each unsealed at the end of the stretch
    it tells: the summary rule, applied a few chapters at a time. The build
@@ -204,6 +208,7 @@ const PILOT = [
                   <p>{t.previously}</p>
                   {t.latest && <p class="hud-last"><span class="label">{t.current ? 'Where you are' : 'Last stretch'} · {span(t.latest.from, t.latest.at)}</span>{t.latest.title}</p>}
                   {t.current && <p class="status">{positionLabel}.</p>}
+                  {t.current && since && sinceCount > 0 && <a class="hud-new" href="/since">New since {sinceLabel(since)}: {sinceCount} {sinceCount === 1 ? 'entry' : 'entries'} →</a>}
                   <a class="hud-go" href={`/floor/${t.id}`} data-peek={t.id}><span class="go-long">Details →</span><span class="go-short">What happened</span></a>
                 </>
               : t.kind === 'sealed'
@@ -1623,6 +1628,10 @@ const PILOT = [
             text-transform: uppercase; color: var(--color-gold); border: 1px solid var(--color-line); padding: 7px 11px; text-decoration: none;
             transition: border-color .2s; }
   .hud-go:hover, .hud-go:focus-visible { border-color: var(--color-gold); outline: none; }
+  /* what opened since the reader's last move: a quiet line under the status, gold like every way in */
+  .hud-new { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
+             text-transform: uppercase; color: var(--color-gold); text-decoration: none; }
+  .hud-new:hover, .hud-new:focus-visible { text-decoration: underline; outline: none; }
 
   /* ---- the descent ---- */
   .descent { grid-column: 2; grid-row: 1; position: relative; min-width: 0; margin-bottom: 72px; transition: opacity .45s ease; }
@@ -1820,7 +1829,7 @@ const PILOT = [
     /* the opening card (before the first floor) has no name: its line stacks in the row's place */
     .hud-card[data-floor="0"].is-shown { flex-direction: column; align-items: stretch; justify-content: center; gap: 3px; }
     /* everything the desktop's box says beyond the name stays there */
-    .hud-card > b, .hud-card > p, .hud-book, .hud-depth { display: none; }
+    .hud-card > b, .hud-card > p, .hud-book, .hud-depth, .hud-new { display: none; }
     .hud-card[data-floor="0"] > b { display: block; font-size: var(--type-label); letter-spacing: .05em; }
     .hud-card > p.hud-lede { display: block; font-size: var(--type-meta); line-height: 1.4; color: var(--color-grey-200); }
     .hud-head { gap: 12px; align-items: center; min-width: 0; }

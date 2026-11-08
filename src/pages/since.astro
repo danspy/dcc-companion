@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllBeats, getEntities, getFloors, getBooks, readGate, KIND_LABELS } from '../lib/content';
+import { readSince, sinceLabel } from '../lib/since';
+import { span, stampOf } from '../lib/stamps';
+
+/* What the reader has read since their last move: the stretches of the crawl
+   that opened, then every entry that changed, grouped by who or what, the most
+   changed first, each headline a link to its own line. Bounded above by the
+   reader's frontier, so it cannot show anything past them (see since.ts). */
+const { prefs, gate } = await readGate(Astro.cookies);
+const books = await getBooks();
+const since = readSince(Astro.cookies, gate, b => books.find(x => x.id === b)?.chapters ?? null);
+const inRange = (k: number) => since != null && k > since.key && k <= gate.frontier;
+
+const [beats, entities, floors] = since ? await Promise.all([getAllBeats(), getEntities(), getFloors()]) : [[], [], []];
+const byId = new Map(entities.map(e => [e.id, e]));
+type Part = { title: string; from: string; at: string; sortKey: number };
+const parts = floors.flatMap(f => ((Array.isArray(f.recap) ? f.recap : []) as Part[])
+  .filter(p => inRange(p.sortKey)).map(p => ({ ...p, floor: f })));
+const groups = new Map<string, typeof beats>();
+for (const b of beats) if (inRange(b.sortKey) && byId.has(b.entityId)) (groups.get(b.entityId) ?? groups.set(b.entityId, []).get(b.entityId)!).push(b);
+const rows = [...groups].map(([id, bs]) => ({ e: byId.get(id)!, bs }))
+  .sort((a, b) => b.bs.length - a.bs.length || a.e.name.localeCompare(b.e.name));
+const total = rows.reduce((n, r) => n + r.bs.length, 0);
+const now = prefs.chapter ? `book ${prefs.book}, chapter ${prefs.chapter}` : `the end of book ${prefs.book}`;
+---
+<Layout title="What's new">
+  <section class="wrap head">
+    <p class="eyebrow">Since you were last here</p>
+    {since
+      ? <>
+          <h1>New since {sinceLabel(since)}</h1>
+          <p class="intro">Everything that unsealed between there and where you are now, {now}: {total} {total === 1 ? 'entry' : 'entries'} across {rows.length} {rows.length === 1 ? 'page' : 'pages'}{parts.length ? `, and ${parts.length} ${parts.length === 1 ? 'stretch' : 'stretches'} of the crawl` : ''}.</p>
+        </>
+      : <>
+          <h1>Nothing new yet</h1>
+          <p class="intro">Each time you move your position on, this page lists what opened since your last one: the crawl, and every page with something new.</p>
+        </>}
+  </section>
+
+  {parts.length > 0 && (
+    <section class="wrap">
+      <h2 class="sect">The crawl</h2>
+      <ul class="parts">
+        {parts.map(p => (
+          <li><a href={`/floor/${p.floor.id}#crawl`}><span class="label">Floor {p.floor.id} · {span(p.from, p.at)}</span><b>{p.title}</b></a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {rows.length > 0 && (
+    <section class="wrap">
+      <h2 class="sect">Who and what</h2>
+      <ul class="groups">
+        {rows.map(({ e, bs }) => (
+          <li class="group">
+            <a class="who" href={`/entity/${e.id}`}><b>{e.name}</b><span class="label">{KIND_LABELS[e.kind]} · {bs.length} new</span></a>
+            <ol class="lines">
+              {bs.map(b => <li><a href={`/entity/${e.id}?book=all#b${b.id}`}><span class="label">{stampOf(b.at)}</span>{b.headline}</a></li>)}
+            </ol>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Layout>
+
+<style>
+  .head { padding-block: 44px 10px; }
+  h1 { font-size: clamp(34px, 6vw, 60px); font-weight: 800; margin: 10px 0 0; }
+  .intro { color: var(--color-grey-200); max-width: var(--measure); margin: 14px 0 0; }
+  section + section { margin-top: 34px; }
+  .parts, .groups, .lines { list-style: none; margin: 0; padding: 0; }
+  .parts { display: grid; gap: 1px; background: var(--color-line); border: 1px solid var(--color-line); }
+  .parts a { display: grid; gap: 4px; padding: 12px 16px; background: var(--color-ink); text-decoration: none; color: var(--color-grey-100); }
+  .parts a:hover, .parts a:focus-visible { color: var(--color-gold); }
+  .groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 12px; }
+  .group { border: 1px solid var(--color-line); padding: 14px 16px 12px; }
+  .who { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; text-decoration: none; color: var(--color-grey-50, #fff); }
+  .who b { font-family: var(--font-display); font-size: var(--type-sect); font-weight: 700; }
+  .who:hover b, .who:focus-visible b { color: var(--color-gold); }
+  .who .label { color: var(--color-gold); }
+  .lines { margin-top: 8px; display: grid; gap: 6px; }
+  .lines a { display: grid; gap: 1px; text-decoration: none; color: var(--color-grey-200); font-size: var(--type-meta); line-height: 1.35; }
+  .lines a:hover, .lines a:focus-visible { color: var(--color-gold); }
+  .lines .label { color: var(--color-grey-500); }
+</style>

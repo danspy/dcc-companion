@@ -37,6 +37,14 @@ const groups = KIND_ORDER.map(kind => {
   };
 }).filter(g => g.rows.length);
 const metTotal = groups.reduce((n, g) => n + g.met, 0);
+/* A reader at book 4 has met a few hundred entries and not yet met as many
+   again, and the sealed cards say nothing: on a phone the page ran to 250
+   screens. So it opens on what they have met ("Met only" pressed), and each kind
+   shows its first dozen (half that on a phone), the rest one press away behind
+   "All N …". A search or a kind chip shows every match. With nothing met yet
+   there is nothing to narrow to, and the sealed cards stay. */
+const metOnlyDefault = metTotal > 0;
+const FOLD = 12, FOLD_PHONE = 6;
 
 /* Every character's cell carries their figure, small, and every item's its
    sprite: the latest look this reader has reached, or the shadow (the
@@ -92,7 +100,7 @@ const findable = (e: (typeof entities)[number]) =>
           </button>
         ))}
         <button type="button" class="chip-btn solo" id="metonly"
-                aria-pressed="false" disabled={metTotal === 0}>Met only</button>
+                aria-pressed={metOnlyDefault ? 'true' : 'false'} disabled={metTotal === 0}>Met only</button>
       </div>
       <p class="tally" id="tally" aria-live="polite" role="status"></p>
     </div>
@@ -105,16 +113,19 @@ const findable = (e: (typeof entities)[number]) =>
     </p>
   </section>
 
-  {groups.map(group => (
-    <section class="wrap group" data-group={group.kind}>
+  {groups.map(group => { let nth = 0; return (
+    <section class={`wrap group${group.met > FOLD_PHONE ? ' can-fold' : ''}`} data-group={group.kind} hidden={metOnlyDefault && group.met === 0}>
       <h2>{group.label}</h2>
       <div class="grid-cells">
         {group.rows.map(e => {
           const known = reveals(gate, e.revealedAt);
+          if (known) nth++;
+          const fold = known ? `${nth > FOLD ? ' fold' : ''}${nth > FOLD_PHONE ? ' fold-s' : ''}` : '';
           const own = beatsByEntity.get(e.id) ?? [];
           const cov = coverage(own, gate);
           return (
-            <div class={`cell${PICTURED.has(e.kind) ? ' has-fig' : ''}`} data-kind={e.kind} data-met={known ? '1' : '0'}
+            <div class={`cell${PICTURED.has(e.kind) ? ' has-fig' : ''}${fold}`} data-kind={e.kind} data-met={known ? '1' : '0'}
+                 hidden={metOnlyDefault && !known}
                  data-find={known ? findable(e) : ''}>
               {PICTURED.has(e.kind) && (() => { const f = figures.get(e.id) ?? shadows[e.kind]; return (
                 <div class={`cell-stage${e.kind === 'item' ? ' is-item' : ''}`}>
@@ -139,8 +150,13 @@ const findable = (e: (typeof entities)[number]) =>
           );
         })}
       </div>
+      {group.met > FOLD_PHONE && (
+        <button type="button" class={`foldmore${group.met > FOLD ? '' : ' phone-only'}`} data-foldmore>
+          <span class="fm-more">All {group.met} {group.chip.toLowerCase()}</span><span class="fm-less">Fewer</span>
+        </button>
+      )}
     </section>
-  ))}
+  ); })}
 </Layout>
 
 <style>
@@ -148,6 +164,19 @@ const findable = (e: (typeof entities)[number]) =>
   h1 { font-size: clamp(40px, 7vw, 72px); font-weight: 800; margin-top: 10px; }
   .standfirst { font-size: 16.5px; color: var(--color-grey-200); max-width: var(--measure); margin-top: 18px; }
   .group { padding-top: 40px; }
+  .group[hidden] { display: none; }
+  /* the fold: a dozen per kind, six on a phone, the rest behind "All N …" (not while searching) */
+  :global(body:not(.who-narrowed)) .group.fold-ready:not(.is-open) .cell.fold { display: none; }
+  .foldmore { display: none; }
+  .group.fold-ready .foldmore { display: flex; width: 100%; justify-content: center; margin-top: 10px; padding: 12px; border: 1px solid var(--color-line);
+              background: none; color: var(--color-gold); cursor: pointer; font-family: var(--font-mono); font-size: var(--type-ui);
+              letter-spacing: var(--ls-label); text-transform: uppercase; }
+  .group.fold-ready .foldmore:hover, .group.fold-ready .foldmore:focus-visible { border-color: var(--color-gold); outline: none; }
+  .foldmore .fm-less, .group.is-open .foldmore .fm-more { display: none; }
+  .group.is-open .foldmore .fm-less { display: inline; }
+  :global(body.who-narrowed) .foldmore { display: none !important; }
+  @media (min-width: 561px) { .group.fold-ready .foldmore.phone-only { display: none; } }
+  @media (max-width: 560px) { :global(body:not(.who-narrowed)) .group.fold-ready:not(.is-open) .cell.fold-s { display: none; } }
   .group h2 { font-size: 26px; font-weight: 700; color: var(--color-gold); margin-bottom: 14px; }
   /* A character is a portrait card: a stage of one height across the top of the
      cell, every figure standing on its floor at its own pixels, the name, role
@@ -218,7 +247,14 @@ const findable = (e: (typeof entities)[number]) =>
     const metTotal = cells.filter(c => c.dataset.met === '1').length;
 
     const kinds = new Set<string>();
-    let metOnly = false;
+    let metOnly = metOnlyBtn?.getAttribute('aria-pressed') === 'true';
+    /* the fold is for browsing: a search or a kind chip shows every match */
+    for (const g of groups) if (g.classList.contains('can-fold')) g.classList.add('fold-ready');
+    document.addEventListener('click', e => {
+      const b = (e.target as Element).closest?.('[data-foldmore]'); if (!b) return;
+      const g = b.closest('.group')!; g.classList.toggle('is-open');
+      if (!g.classList.contains('is-open')) g.scrollIntoView({ block: 'start' });
+    });
 
     /* Match at word starts, not anywhere. `check-pages.mjs` learned this the
        hard way: without a boundary, "Tran" matches inside "transparent" and the
@@ -254,6 +290,7 @@ const findable = (e: (typeof entities)[number]) =>
         group.hidden = !any;
       }
 
+      document.body.classList.toggle('who-narrowed', q.length > 0 || kinds.size > 0);
       const filtering = q.length > 0 || kinds.size > 0 || metOnly;
       tally.textContent = filtering ? `${shown} of ${metTotal} shown` : '';
       if (nomatch) nomatch.hidden = shown > 0 || !filtering;

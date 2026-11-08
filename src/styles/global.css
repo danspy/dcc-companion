@@ -97,6 +97,16 @@
 }
 
 @layer components {
+  /* a name in the prose is a link to its page (linkify.ts): quiet until pointed at,
+     so a beat full of names still reads as prose */
+  .nm { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+        text-decoration-color: color-mix(in srgb, var(--color-gold) 40%, transparent); }
+  .nm:hover, .nm:focus-visible { color: var(--color-gold); text-decoration-color: var(--color-gold); }
+  /* the homepage's floor card (FloorPeek, swapped in as markup): what opened since the reader's last session */
+  .peek-new { display: block; margin: 0 0 14px; font-family: var(--font-mono); font-size: var(--type-label); letter-spacing: var(--ls-label);
+              text-transform: uppercase; color: var(--color-gold); text-decoration: none; }
+  .peek-new:hover, .peek-new:focus-visible { text-decoration: underline; }
+
   .wrap { max-width: 1080px; margin-inline: auto; padding-inline: 24px; }
 
   /* The page's own eyebrow: tracked wide, used once at the top of a page. */

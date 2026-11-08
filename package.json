@@ -23,7 +23,8 @@
     "content:gaps": "node scripts/check-gaps.mjs",
     "smoke": "node scripts/smoke.mjs",
     "export:koreader": "node scripts/export-koreader.mjs",
-    "export:app": "node --disable-warning=ExperimentalWarning --experimental-strip-types scripts/export-app.mjs"
+    "export:app": "node --disable-warning=ExperimentalWarning --experimental-strip-types scripts/export-app.mjs",
+    "ux": "node scripts/ux-budget.mjs"
   },
   "dependencies": {
     "@astrojs/db": "^0.20.0",
