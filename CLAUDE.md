@@ -2281,6 +2281,25 @@ clamps a cookie does. The Ollama key never leaves the server.
 `APP_SCHEMA` and the app's `Library.schema` are one number written twice. Changing the export's
 shape means bumping both; an older build then says it needs updating instead of misreading.
 
+**Schema 2 and the art pack (November 2026).** The app had fallen behind the descent, the floor
+pages, the figures and the linked names, so the export grew: each floor's `guide` steps and `map`
+layers (`key`, `until`, `stamp`), `artKey`, `recapKey` and `nameStamp`; `foretold` for floors 12 to
+18; every entity's looks; each recap part's paragraphs (`paras`, broken as the floor page breaks
+them); and in every beat, tagline, description, paragraph and guide step the names `linkify.ts`
+links, as UTF-16 spans `[start, length, target]`. A link depends only on the text, its point and
+its page, so it is worked out here once and the app never re-implements the matching; for that,
+`linkify.ts` is split into a pure `buildLinkIndex`/`linkifyWith` and the database-backed `linkify`
+the pages keep. `npm run export:app-art -- --out <dir>` (`scripts/export-app-art.mjs`) draws every
+picture with the site's own renderer into `<dir>/art/`: floor tiles and heroes, both uncharted
+islands per floor, the entry scene, every look at both sizes, both shadows, and every state a map's
+timeline can stop on, named by its layers, with markers placed by `src/lib/voxel/placement.ts`
+(moved out of `MapVoxel.astro` unchanged; a local build's floor-5 map markup diffs to zero against
+live) and each layer's mask as runs. The art pack says which picture is which, never when: that
+stays in content and in the app's reader. The fixtures add the eighteen floors' status and picture,
+each reached floor's guide steps, map steps, layers and line-up looks, pinned figures, an entry
+page's Latest and opening book, and five since-moves. A deploy of schema 2 makes an old app build
+say it needs updating; the schema-2 app reads a schema-1 site as older and keeps its bundled copy.
+
 ## Content pipeline
 
 ```
@@ -2497,6 +2516,7 @@ npm run content:check   # lint only; prints the draft/chapter-count work queue
 npm run achievements:refresh  # re-pull the awards + the voice corpus from the wiki
 npm run test:gate       # frontier arithmetic + the lint rules
 npm run export:app -- --out <dir>   # the iOS app's content, manifest and gate fixtures
+npm run export:app-art -- --out <dir>   # the iOS app's pictures (art/, about 26 MB)
 
 # Always build against a throwaway DB so data/dcc.db isn't half-written:
 ASTRO_DATABASE_FILE=./.astro/build.db npm run build
