@@ -245,3 +245,49 @@ test('a pinned page names the beats and the connections it shows, in order', () 
   const gate = at('8:finished').pages['gate-of-the-feral-gods'];
   assert.ok(gate.uses.ids.length > 0 && gate.story.ids.length > 0);
 });
+
+/* ---- schema 2 ---- */
+
+test('every link in a text points at something reached by the text\'s own point', () => {
+  const keyOf = new Map(content.entities.map(e => [e.id, e.key]));
+  for (const e of content.entities) for (const a of e.aka) keyOf.set(`alias:${e.id}:${a.name}`, a.key);
+  for (const f of content.floors) keyOf.set(`floor-${f.id}`, f.nameKey);
+  const check = (links, text, at, where) => {
+    for (const [start, len, target] of links) {
+      assert.ok(keyOf.has(target), `${where}: link to unknown ${target}`);
+      assert.ok(start >= 0 && start + len <= text.length, `${where}: link outside the text`);
+      // an alias may open before its entity, but the text must be past the alias or the name
+      const own = keyOf.get(target);
+      const aliasOk = content.entities.find(e => e.id === target)?.aka.some(a => a.key <= at && text.slice(start, start + len).toLowerCase() === a.name.toLowerCase());
+      assert.ok(own <= at || aliasOk, `${where}: ${target} (${own}) linked from a text at ${at}`);
+    }
+  };
+  for (const b of content.beats) check(b.links, b.text, b.key, `beat ${b.id}`);
+  for (const e of content.entities) {
+    for (const t of e.taglines) check(t.links, t.text, t.key, `${e.id} tagline`);
+    for (const d of e.descriptions) check(d.links, d.text, d.key, `${e.id} description`);
+  }
+  for (const f of content.floors) {
+    for (const p of f.parts) for (const q of p.paras) check(q.links, q.text, p.key, `floor ${f.id} part`);
+    for (const g of f.guide) for (const st of g.steps) check(st.links, st.text, st.key, `floor ${f.id} ${g.id}`);
+  }
+});
+
+test('a page never links to itself', () => {
+  for (const b of content.beats) assert.ok(!b.links.some(l => l[2] === b.entity), `beat ${b.id} links its own entry`);
+  for (const e of content.entities) for (const t of e.taglines) assert.ok(!t.links.some(l => l[2] === e.id));
+});
+
+test('looks, guide steps, map layers and foretold notes carry integer keys in order', () => {
+  for (const e of content.entities) {
+    const keys = e.figures.map(f => f.key);
+    assert.deepEqual(keys, [...keys].sort((a, b) => a - b), `${e.id} looks out of order`);
+    for (const k of keys) assert.ok(Number.isInteger(k) && k >= e.key, `${e.id} look before its reveal`);
+  }
+  for (const f of content.floors) {
+    for (const g of f.guide) for (const st of g.steps) assert.ok(Number.isInteger(st.key));
+    for (const l of f.map?.layers ?? []) assert.ok(Number.isInteger(l.key) && (l.until == null || Number.isInteger(l.until)));
+  }
+  assert.equal(content.foretold.length, 7);
+  for (const f of content.foretold) for (const n of f.notes) assert.ok(Number.isInteger(n.key));
+});

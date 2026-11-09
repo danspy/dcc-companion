@@ -1,4 +1,4 @@
-import { reveals } from './spoiler';
+import { reveals } from './spoiler.ts';
 import type { ForetoldRow } from './content';
 
 /* What the reader knows of each of the eighteen floors, in one place, because

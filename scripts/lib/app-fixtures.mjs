@@ -10,6 +10,12 @@ import { gateFor, reveals } from '../../src/lib/spoiler.ts';
 import { aliasesSeen } from '../../src/lib/aliases.ts';
 import { quickFind } from '../../src/lib/quickfind.ts';
 import { KIND_ORDER } from '../../src/lib/kinds.ts';
+import { floorStatus } from '../../src/lib/floorstatus.ts';
+import { layersShown, mapSteps } from '../../src/lib/floormap.ts';
+import { frontierOf } from '../../src/lib/progress.ts';
+import { VOXEL_FLOORS, VOXEL_HEROES } from '../../src/lib/voxel/floors.ts';
+import { VOXEL_FIGURES } from '../../src/lib/voxel/figures/cast.ts';
+import { showsHero } from '../../src/lib/voxel/art.ts';
 
 /* None, a first chapter, mid-book in several books, a finished book, a floor name printed
    early (2:3), a name on a ring (3:19) and the man it belongs to (6:32), a last chapter, a
@@ -48,8 +54,23 @@ export const QUERIES = [
   ['5:60', 'great race'], ['8:40', 'parade'], ['7:30', 'faction'], ['4:20', 'gate'],
 ];
 
+/* Moves for "what's new since": within a book, across books, a finished book onwards. */
+const SINCE = [[[1, 9], [1, 22]], [[4, 9], [4, 12]], [[3, 0], [5, 40]], [[7, 30], [8, 0]], [[1, 1], [1, 2]]];
+
 /* Entries whose whole page is pinned: the two leads, the manager, and an item with a log. */
 const PAGES = ['carl', 'princess-donut', 'mordecai', 'gate-of-the-feral-gods'];
+
+/* Figures pinned besides the pages': a look that changes often, a character described
+   after being named (Zev), an item that changes (the war gauntlet) and one never drawn. */
+const FIGURES = ['carl', 'princess-donut', 'mordecai', 'zev', 'katia-grim', 'war-gauntlet',
+  'gate-of-the-feral-gods', 'spunky-jefferson', 'enhanced-pet-biscuit'];
+
+/* `figureFor` in art.ts: the latest look reached that is drawn, or none (-1, the shadow). */
+const lookOf = (e, reached) => {
+  let n = -1;
+  (e.figures ?? []).forEach((s, i) => { if (reached(s.sortKey) && VOXEL_FIGURES[e.id]?.[s.look]) n = i; });
+  return n;
+};
 
 const gateOf = (pos, snapshot) => {
   const chapters = snapshot.books.find(b => b.id === pos.book)?.chapters ?? null;
@@ -157,6 +178,66 @@ function fixtureAt(pos, snapshot, beats) {
     };
   });
 
+  /* The eighteen floors as the homepage and the floor pages see them (floorstatus.ts),
+     and which picture each shows (index.astro: own at artKey, hero per showsHero). */
+  const foretold = snapshot.foretold ?? [];
+  const atlas = Array.from({ length: 18 }, (_, i) => {
+    const id = i + 1;
+    const st = floorStatus(id, snapshot.floors, foretold, gate);
+    const f = snapshot.floors.find(x => x.id === id), fo = foretold.find(x => x.id === id);
+    const artKey = f ? f.artKey : fo?.artKey;
+    const art = st.kind !== 'sealed' && !!VOXEL_FLOORS[id] && artKey != null && frontier >= artKey
+      && (st.kind === 'reached' || st.kind === 'foretold');
+    const hero = art && showsHero(id, frontier, st.kind === 'reached' ? f.recapSortKey : fo?.heroKey);
+    return { id, kind: st.kind, name: st.name, notes: st.notes.length, picture: hero ? 'hero' : art ? 'tile' : st.kind === 'sealed' ? 'sealed' : 'known' };
+  });
+
+  /* Each reached floor's page: the guide step shown per section, the map's timeline
+     and the layers it draws, and the line-up with the look each figure stands in. */
+  const floorPages = {};
+  for (const f of snapshot.floors.filter(x => reveals(gate, x.revealedAt))) {
+    const guide = Object.fromEntries((f.guide ?? []).map(g => [g.id, g.steps.filter(st => frontier >= st.sortKey).at(-1)?.sortKey ?? null]));
+    const steps = mapSteps(f.map, frontier);
+    const layers = layersShown(f.map, gate).map(l => l.id).sort();
+    const seen = new Map();
+    for (const b of beats.ordered) if (b.floor === f.id && frontier >= b.sortKey) seen.set(b.entityId, (seen.get(b.entityId) ?? 0) + 1);
+    const floorEnd = f.recapSortKey ?? Infinity;
+    const lineup = [...seen].map(([id, n]) => {
+      const e = snapshot.entities.find(x => x.id === id);
+      if (!e) return null;
+      let look = null;
+      if (e.kind === 'character' || e.kind === 'item') {
+        const steps = e.figures ?? [];
+        look = lookOf(e, k => frontier >= k && k <= floorEnd);
+        if (look < 0 && steps.length) look = lookOf(e, k => frontier >= k && k <= steps[0].sortKey);
+      }
+      return [id, n, look];
+    }).filter(Boolean);
+    floorPages[f.id] = { guide, steps, layers, lineup };
+  }
+
+  const figures = {};
+  for (const id of FIGURES) {
+    const e = met.find(x => x.id === id);
+    if (e) figures[id] = lookOf(e, k => frontier >= k);
+  }
+
+  /* An entry page's Latest and the book it opens on (entity/[id].astro). */
+  const opens = {};
+  for (const id of PAGES) {
+    const e = met.find(x => x.id === id);
+    if (!e) continue;
+    const shownAll = beats.ordered.filter(b => b.entityId === id && frontier >= b.sortKey);
+    const counts = new Map();
+    for (const b of shownAll) counts.set(b.book, (counts.get(b.book) ?? 0) + 1);
+    const books = [...counts.keys()].sort((a, b) => a - b);
+    const filterable = shownAll.length > 12 && books.length > 1;
+    opens[id] = {
+      book: filterable && shownAll.length > 24 ? books.at(-1) : 0,
+      latest: shownAll.length > 6 ? [...shownAll].reverse().slice(0, 3).map(b => beats.idOf.get(b)) : [],
+    };
+  }
+
   const reachedFloors = snapshot.floors.filter(f => reveals(gate, f.revealedAt));
   const lastFloor = reachedFloors.at(-1) ?? null;
   const lastPart = lastFloor
@@ -174,7 +255,7 @@ function fixtureAt(pos, snapshot, beats) {
     entries: met.map(e => e.id),
     taglines, descriptions, aliases,
     beats: reachedBeats,
-    pages, floors,
+    pages, floors, atlas, floorPages, figures, opens,
     opening: {
       mode: gate.spoilers && gate.fresh ? 'welcome' : 'previously',
       floor: lastFloor ? lastFloor.id : null,
@@ -215,9 +296,23 @@ export function fixturesFor(snapshot, content, version) {
       .map(h => ({ name: h.name, kind: h.kind, detail: h.detail, tier: h.tier, target: targetOf(h.href) }));
     return { label, q, hits };
   });
+  /* What's new since a move (since.astro): from one position to another, the parts of
+     the crawl and the beats that opened between them, grouped by entry. */
+  const keyOf = (book, chapter) => frontierOf({ book, chapter }, snapshot.books.find(b => b.id === book)?.chapters ?? null);
+  const since = SINCE.map(([from, to]) => {
+    const lo = keyOf(...from), hi = keyOf(...to);
+    const inRange = k => k > lo && k <= hi;
+    const parts = snapshot.floors.flatMap(f => (Array.isArray(f.recap) ? f.recap : []).filter(p => inRange(p.sortKey)).map(p => `${f.id}:${p.title}`));
+    const groups = new Map();
+    for (const b of beats.ordered) if (inRange(b.sortKey)) groups.set(b.entityId, (groups.get(b.entityId) ?? 0) + 1);
+    const byId = new Map(snapshot.entities.map(e => [e.id, e]));
+    const rows = [...groups].filter(([id]) => byId.has(id))
+      .sort((a, b) => b[1] - a[1] || byId.get(a[0]).name.localeCompare(byId.get(b[0]).name));
+    return { from, to, parts, rows: rows.map(([id, n]) => [id, n]), total: rows.reduce((n, r) => n + r[1], 0) };
+  });
   return {
     schema: content.schema, version,
     positions: POSITIONS.map(pos => fixtureAt(pos, snapshot, beats)),
-    finds,
+    finds, since,
   };
 }

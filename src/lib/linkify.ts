@@ -18,7 +18,6 @@
    and the longest name first, so "Lucia Mar" is one link and not "Lucia" plus
    text. Words are found once and looked up by their first word, which keeps a
    page of a hundred beats against a thousand names cheap. */
-import { getEntities, getFloors } from './content';
 import { aliasesOf } from './aliases.ts';
 import { parseAt } from './progress.ts';
 
@@ -29,27 +28,38 @@ const WORD = /[\p{L}\p{N}]+/gu;
 const isWordChar = (c: string | undefined) => !!c && /[\p{L}\p{N}]/u.test(c);
 const firstWord = (s: string) => (s.match(/[\p{L}\p{N}]+/u)?.[0] ?? '').toLowerCase();
 
-let built: Promise<Map<string, Name[]>> | null = null;
-function index(): Promise<Map<string, Name[]>> {
+/* The names, by their first word, longest first. Pure, so the iOS export and its
+   fixtures build the very same index from the snapshot. */
+export type LinkIndex = Map<string, Name[]>;
+export function buildLinkIndex(
+  entities: { id: string; name: string; revealedAt: string; aka?: unknown }[],
+  floors: { id: number; name: string; revealedAt: string; nameAt?: string | null }[],
+): LinkIndex {
+  const names: Name[] = [];
+  const add = (text: string, at: string | null | undefined, href: string, id: string, isAlias: boolean) => {
+    if (!text || text.length < 4 || !at) return;
+    if (isAlias && text[0] === text[0].toLowerCase()) return;           // a lower-case alias is a noun phrase
+    let key: number; try { key = parseAt(at); } catch { return; }
+    names.push({ text, low: text.toLowerCase(), oneWord: !/\s/.test(text), key, href, id });
+  };
+  for (const e of entities) {
+    const href = `/entity/${e.id}`;
+    add(e.name, e.revealedAt, href, e.id, false);
+    for (const a of aliasesOf(e as Parameters<typeof aliasesOf>[0])) add(a.name, a.at, href, e.id, true);
+  }
+  for (const f of floors) add(f.name, f.nameAt ?? f.revealedAt, `/floor/${f.id}`, `floor-${f.id}`, false);
+  const byFirst: LinkIndex = new Map();
+  for (const n of names) { const k = firstWord(n.text); if (!k) continue; (byFirst.get(k) ?? byFirst.set(k, []).get(k)!).push(n); }
+  for (const list of byFirst.values()) list.sort((a, b) => b.text.length - a.text.length);
+  return byFirst;
+}
+
+let built: Promise<LinkIndex> | null = null;
+function index(): Promise<LinkIndex> {
   built ??= (async () => {
+    const { getEntities, getFloors } = await import('./content');
     const [entities, floors] = await Promise.all([getEntities(), getFloors()]);
-    const names: Name[] = [];
-    const add = (text: string, at: string | null | undefined, href: string, id: string, isAlias: boolean) => {
-      if (!text || text.length < 4 || !at) return;
-      if (isAlias && text[0] === text[0].toLowerCase()) return;           // a lower-case alias is a noun phrase
-      let key: number; try { key = parseAt(at); } catch { return; }
-      names.push({ text, low: text.toLowerCase(), oneWord: !/\s/.test(text), key, href, id });
-    };
-    for (const e of entities) {
-      const href = `/entity/${e.id}`;
-      add(e.name, e.revealedAt, href, e.id, false);
-      for (const a of aliasesOf(e)) add(a.name, a.at, href, e.id, true);
-    }
-    for (const f of floors) add(f.name, f.nameAt ?? f.revealedAt, `/floor/${f.id}`, `floor-${f.id}`, false);
-    const byFirst = new Map<string, Name[]>();
-    for (const n of names) { const k = firstWord(n.text); if (!k) continue; (byFirst.get(k) ?? byFirst.set(k, []).get(k)!).push(n); }
-    for (const list of byFirst.values()) list.sort((a, b) => b.text.length - a.text.length);
-    return byFirst;
+    return buildLinkIndex(entities as never, floors as never);
   })();
   return built;
 }
@@ -61,8 +71,13 @@ function index(): Promise<Map<string, Name[]>> {
  */
 export async function linkify(text: string, at: number | string, self?: string): Promise<Seg[]> {
   if (!text) return [];
+  return linkifyWith(await index(), text, at, self);
+}
+
+/** `linkify` over an index already built: pure. */
+export function linkifyWith(byFirst: LinkIndex, text: string, at: number | string, self?: string): Seg[] {
+  if (!text) return [];
   const point = typeof at === 'number' ? at : parseAt(at);
-  const byFirst = await index();
   const out: Seg[] = [];
   const seen = new Set<string>(self ? [self] : []);
   let last = 0;

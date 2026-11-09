@@ -24,6 +24,7 @@
     "smoke": "node scripts/smoke.mjs",
     "export:koreader": "node scripts/export-koreader.mjs",
     "export:app": "node --disable-warning=ExperimentalWarning --experimental-strip-types scripts/export-app.mjs",
+    "export:app-art": "node --disable-warning=ExperimentalWarning --experimental-strip-types scripts/export-app-art.mjs",
     "ux": "node scripts/ux-budget.mjs"
   },
   "dependencies": {
