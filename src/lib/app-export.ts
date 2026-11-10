@@ -24,7 +24,9 @@ import { buildLinkIndex, linkifyWith, type LinkIndex } from './linkify.ts';
    layers, its picture and hero keys, the floors foretold past the eleventh, every
    character's and item's looks, and the names linked in every text. Pictures are
    not in here: they are the art pack (scripts/export-app-art.mjs), and this file
-   only says when each may be shown. */
+   only says when each may be shown. Later in November, still schema 2 because
+   an older build ignores them: each entity's recap and each beat's gist, the
+   story so far the entry page tells. */
 export const APP_SCHEMA = 2;
 
 const SITE = 'https://crawlers-companion.info';
@@ -99,6 +101,11 @@ export function exportForApp(snapshot: any): AppContent {
       floor: b.floor ?? null, use: b.kind === 'use', headline: b.headline ?? '', text: b.text ?? '',
       voice: b.voice ?? 'narrator', draft: b.confidence === 'draft',
       links: L(b.text ?? '', b.sortKey, b.entityId),
+      /* The beat in one line, for the story so far; the headline stands in without one. */
+      gist: b.gist ?? null, gistDraft: !!b.gistDraft,
+      /* The story line's stamp takes the chapter off the beat's own tag, as the entity
+         page does: 999 is a book's end, where `chapter` above says 0. */
+      tagChapter: b.chapter ?? parseAt(b.at) % 1000,
     }));
 
   return {
@@ -153,6 +160,8 @@ export function exportForApp(snapshot: any): AppContent {
         const key = d.sortKey ?? parseAt(d.at);
         return { key, stamp: stampOf(d.source ?? d.at), text: d.text, links: L(d.text, key, e.id) };
       }),
+      /* The recap: a paragraph per book, keyed at that book's end (src/lib/story.ts). */
+      recap: (e.recap ?? []).map((r: any) => ({ key: r.sortKey, text: r.text, draft: r.confidence !== 'verified' })),
       /* Superseding looks; whether one is drawn is the art pack's to say. */
       figures: (e.figures ?? []).map((f: any) => ({ look: f.look, key: f.sortKey, stamp: stampOf(f.at) })),
     })),

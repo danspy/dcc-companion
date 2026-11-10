@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* npm run recaps:draft [-- --entity carl --book 4 --redo --limit 10 --dry]
+/* npm run recaps:draft [-- --entity carl --book 4 --redo --limit 10 --dry --via claude]
 
    Drafts the missing recap paragraphs — one per entity per book it has a beat
    in — with the model, screens each through the lint, and writes what passes
@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { loadBooks } from './lib/books.mjs';
 import { ask, readEnv } from './lib/ollama.mjs';
+import { askClaude } from './lib/claude.mjs';
 import { recapWork, recapMessages, screenRecap, draftOne, applyRecap } from './lib/recaps.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -19,6 +20,8 @@ const only = flag('entity');
 const onlyBook = flag('book') ? Number(flag('book')) : undefined;
 const limit = flag('limit') ? Number(flag('limit')) : Infinity;
 const redo = args.includes('--redo'), dry = args.includes('--dry');
+/* --via claude drafts with the Claude Code CLI instead of Ollama (scripts/lib/claude.mjs). */
+const via = flag('via') ?? 'ollama';
 const PARALLEL = 4;
 
 const env = readEnv(root);
@@ -40,7 +43,8 @@ if (onlyBook) work = work.filter(w => w.book === onlyBook);
 work = work.slice(0, limit);
 console.log(`${work.length} recap step(s) to draft${dry ? ' (dry run)' : ''}`);
 if (dry) { for (const w of work) console.log(`  ${w.entity.id} book ${w.book} (${w.beats.length} beats)`); process.exit(0); }
-if (!opts.key) { console.error('OLLAMA_API_KEY is not set in .env'); process.exit(1); }
+if (via === 'ollama' && !opts.key) { console.error('OLLAMA_API_KEY is not set in .env'); process.exit(1); }
+const askModel = via === 'claude' ? m => askClaude(m) : m => ask(m, opts);
 
 const failed = [];
 let done = 0;
@@ -53,7 +57,7 @@ async function worker() {
     const { text, problems } = await draftOne(
       recapMessages(w.entity, w.book, w.beats),
       t => screenRecap(t, w.entity, w.book, books),
-      m => ask(m, opts),
+      askModel,
     );
     if (problems.length) failed.push(`${w.entity.id} book ${w.book}: ${problems.join('; ')}`);
     else applyRecap(w.entity, w.book, text);

@@ -12,7 +12,7 @@ const content = exportForApp(snapshot);
 
 const TAG = /^\d+(:(\d+|end))?$/;
 /* Fields that hold prose, a name or an id, where "5" or "1:2" would be text and not a gate. */
-const TEXT = /\.(name|text|title|headline|role|note|premise|previously|blurb|forWhat|box|reward|span|stamp|source|bookSpan|id|from|to|entity|kind|voice|tier|accent|ink)$/;
+const TEXT = /\.(name|text|title|headline|gist|role|note|premise|previously|blurb|forWhat|box|reward|span|stamp|source|bookSpan|id|from|to|entity|kind|voice|tier|accent|ink)$/;
 
 test('no reveal tag survives into the app export', () => {
   const seen = [];
@@ -290,4 +290,26 @@ test('looks, guide steps, map layers and foretold notes carry integer keys in or
   }
   assert.equal(content.foretold.length, 7);
   for (const f of content.foretold) for (const n of f.notes) assert.ok(Number.isInteger(n.key));
+});
+
+test('the story so far crosses over: a recap per book at its end, a gist per beat, each with its draft mark', () => {
+  const byId = new Map(snapshot.entities.map(e => [e.id, e]));
+  let steps = 0, gists = 0;
+  for (const e of content.entities) {
+    const keys = e.recap.map(r => r.key);
+    assert.deepEqual(keys, [...keys].sort((a, b) => a - b), `${e.id} recap out of order`);
+    for (const r of e.recap) {
+      assert.ok(Number.isInteger(r.key) && r.key % 1000 === 999 && r.key >= e.key, `${e.id} recap not at a book's end`);
+      assert.equal(typeof r.draft, 'boolean');
+    }
+    assert.equal(e.recap.length, (byId.get(e.id).recap ?? []).length);
+    steps += e.recap.length;
+  }
+  for (const b of content.beats) {
+    assert.equal(typeof b.gistDraft, 'boolean');
+    if (b.gist != null) { gists++; assert.ok(b.gist.length > 0); }
+    else assert.equal(b.gistDraft, false);
+  }
+  assert.ok(steps > 0 && gists > 0);
+  assert.equal(gists, snapshot.beats.filter(b => b.gist).length);
 });

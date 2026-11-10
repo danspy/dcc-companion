@@ -12,7 +12,8 @@ import { quickFind } from '../../src/lib/quickfind.ts';
 import { KIND_ORDER } from '../../src/lib/kinds.ts';
 import { floorStatus } from '../../src/lib/floorstatus.ts';
 import { layersShown, mapSteps } from '../../src/lib/floormap.ts';
-import { frontierOf } from '../../src/lib/progress.ts';
+import { frontierOf, parseAt } from '../../src/lib/progress.ts';
+import { storySoFar } from '../../src/lib/story.ts';
 import { VOXEL_FLOORS, VOXEL_HEROES } from '../../src/lib/voxel/floors.ts';
 import { VOXEL_FIGURES } from '../../src/lib/voxel/figures/cast.ts';
 import { showsHero } from '../../src/lib/voxel/art.ts';
@@ -163,6 +164,14 @@ function fixtureAt(pos, snapshot, beats) {
       connections: shownRels.length,
       sealedConnections: rels.length - shownRels.length,
       others: shownRels.map(r => (r.fromId === id ? r.toId : r.fromId)),
+      /* The story so far, composed as the entity page composes it. */
+      soFar: storySoFar(
+        (e.recap ?? []).map(r => ({ sortKey: r.sortKey, text: r.text, confidence: r.confidence })),
+        (usable ? own.filter(b => b.kind !== 'use') : own).map(b => ({
+          sortKey: b.sortKey, book: b.book, chapter: b.chapter ?? parseAt(b.at) % 1000,
+          headline: b.headline, gist: b.gist ?? null, gistDraft: b.gistDraft,
+        })),
+        frontier),
     };
   }
 

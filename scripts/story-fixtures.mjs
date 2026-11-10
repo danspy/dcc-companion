@@ -13,8 +13,9 @@ const args = process.argv.slice(2);
 const out = args[args.indexOf('--out') + 1];
 if (!out) { console.error('usage: story-fixtures.mjs --out <file>'); process.exit(1); }
 
-const beat = (sortKey, headline, gist) => ({
+const beat = (sortKey, headline, gist, gistDraft) => ({
   sortKey, book: Math.floor(sortKey / 1000), chapter: sortKey % 1000, headline, gist: gist ?? null,
+  ...(gistDraft ? { gistDraft: true } : {}),
 });
 
 /* The plugin's fixture Carl (tests/fixtures/data/entities/carl.json) and the site test's steps. */
@@ -22,7 +23,7 @@ const carlRecap = [{ sortKey: 1999, text: 'Carl goes down the stairs after the c
 const carlBeats = [beat(1001, 'Pink Crocs'), beat(1002, 'The stairs', 'Carl and the cat take the stairs.'), beat(1999, 'Footwear'), beat(7012, 'Larracos')];
 const steps = [{ sortKey: 1999, text: 'Book one.', confidence: 'verified' }, { sortKey: 3999, text: 'Book three.', confidence: 'draft' }];
 const sbeats = [beat(1003, 'h1', 'Gist one.'), beat(3002, 'h3'), beat(4001, 'h4a', 'Four a.'), beat(4002, 'h4b', 'Four b.'),
-  beat(4005, 'h4e', 'Four e.'), beat(4006, 'h4f', 'Four f.'), beat(4009, 'h4i', 'Four i.')];
+  beat(4005, 'h4e', 'Four e.', true), beat(4006, 'h4f', 'Four f.'), beat(4009, 'h4i', 'Four i.')];
 const many = Array.from({ length: 12 }, (_, i) => beat(5001 + i, `h${i}`, `g${i}`));
 
 const CASES = [
@@ -49,8 +50,8 @@ const CASES = [
 const cases = CASES.map(([label, recap, beats, frontier, cut, max]) => ({
   label,
   /* Inputs in the export's shape, which is what the Lua reads: `key`, not `sortKey`. */
-  recap: recap.map(r => ({ key: r.sortKey, book: Math.floor(r.sortKey / 1000), text: r.text })),
-  beats: beats.map(b => ({ key: b.sortKey, book: b.book, chapter: b.chapter, headline: b.headline, ...(b.gist ? { gist: b.gist } : {}) })),
+  recap: recap.map(r => ({ key: r.sortKey, book: Math.floor(r.sortKey / 1000), text: r.text, draft: r.confidence !== 'verified' })),
+  beats: beats.map(b => ({ key: b.sortKey, book: b.book, chapter: b.chapter, headline: b.headline, ...(b.gist ? { gist: b.gist } : {}), ...(b.gistDraft ? { gistDraft: true } : {}) })),
   frontier, cut: cut ?? null, max: max ?? null,
   expected: storySoFar(recap, beats, frontier, { ...(cut != null ? { cut } : {}), ...(max != null ? { max } : {}) }),
 }));
