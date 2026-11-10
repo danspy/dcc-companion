@@ -104,3 +104,41 @@ test('a tagline step carries the stamp of its own point', () => {
     assert.ok(t.text.length > 0);
   }
 });
+
+test('an entity file carries its recap steps, gists and both sides of every relation', () => {
+  const { index, entities } = exportForKoreader(snapshot);
+  const ids = new Set(index.entries.map(e => e.id));
+  let relations = 0;
+  for (const [id, file] of entities) {
+    assert.ok(Array.isArray(file.recap), `${id} recap`);
+    assert.ok(Array.isArray(file.relations), `${id} relations`);
+    for (const r of file.recap) {
+      assert.ok(Number.isInteger(r.key) && r.key % 1000 === 999, `${id} recap key ${r.key}`);
+      assert.equal(typeof r.text, 'string');
+    }
+    for (const r of file.relations) {
+      assert.ok(Number.isInteger(r.key), `${id} relation key`);
+      assert.ok(ids.has(r.other), `${id} -> ${r.other} is in the index`);
+      assert.doesNotMatch(r.kind, /-/, 'kind is in display form');
+      relations++;
+    }
+    for (let i = 1; i < file.relations.length; i++) assert.ok(file.relations[i - 1].key <= file.relations[i].key, `${id} relations in key order`);
+    for (const b of file.beats) if ('gist' in b) assert.equal(typeof b.gist, 'string');
+  }
+  assert.equal(relations, snapshot.relations.length * 2, 'every relation appears on both sides');
+  const carl = entities.get('carl');
+  const donut = carl.relations.find(r => r.other === 'princess-donut');
+  assert.ok(donut, 'Carl lists Donut');
+  assert.ok(entities.get('princess-donut').relations.some(r => r.other === 'carl' && r.kind === donut.kind), 'Donut lists Carl with the same kind');
+  /* The kind reads from the declaring side ("killed by"), so each row says which side it is
+     on: the declaring side carries outgoing: true, the mirrored one false. */
+  const declared = snapshot.relations.find(r => r.fromId === 'carl' && r.toId === 'princess-donut');
+  assert.equal(donut.outgoing, !!declared, 'Carl\'s row is outgoing when Carl declared it');
+  assert.equal(entities.get('princess-donut').relations.find(r => r.other === 'carl').outgoing, !declared);
+  for (const [, file] of entities) for (const r of file.relations) assert.equal(typeof r.outgoing, 'boolean');
+  const carlAt = index.entries.find(e => e.id === 'carl').revealedAt;
+  for (const r of carl.relations) {
+    const other = index.entries.find(e => e.id === r.other);
+    assert.ok(r.key >= other.revealedAt && r.key >= carlAt, 'a relation waits for both ends');
+  }
+});

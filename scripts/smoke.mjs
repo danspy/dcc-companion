@@ -72,7 +72,7 @@ const ROUTES = [
   ['/since', ['Since you were last here']],
   /* Quick-find answers per reader from the cookie; Carl is met at 1:1. */
   ['/find.json?q=car', ['"href":"/entity/carl"']],
-  ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"', 'class="hero-fig"', 'src="/art/figure/carl-']],
+  ['/entity/carl', ['class="log"', 'class="entry"', 'class="stamp"', 'class="sofar"', 'class="hero-fig"', 'src="/art/figure/carl-']],
   // a character stands as a voxel figure, gated look by look; the shadow figure is the same for everyone
   ['/art/figure/unpictured.png', []],
   // the start screen's picture: the way in on the first night, public like the uncharted island
@@ -93,8 +93,8 @@ const ROUTES = [
   ['/achievement?q=donut&box=Silver',
    ['recrow"', ' hidden data-find=', 'aria-pressed="true"', 'id="rectally"', ' shown']],
   /* The iOS app's feed: the manifest it asks for first, and the content behind it. */
-  ['/app/manifest.json', ['"schema":1', '"version":"', '"counts":{']],
-  ['/app/content.json', ['"schema":1', '"beats":[', '"awards":[']],
+  ['/app/manifest.json', ['"schema":2', '"version":"', '"counts":{']],
+  ['/app/content.json', ['"schema":2', '"beats":[', '"awards":[']],
 ];
 
 let failed = 0;

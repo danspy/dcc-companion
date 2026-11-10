@@ -2,6 +2,7 @@ import { db, Book, Floor, Foretold, Entity, Beat, Relation, Achievement, asc, eq
 import type { AstroCookies } from 'astro';
 import { readPrefs, type Prefs } from './prefs';
 import { gateFor, type Gate } from './spoiler';
+import type { RecapStep } from './story';
 
 /* Reads. The catalogue is small enough (8 books, 11 floors, a few dozen
    entities) that every list is fetched whole and filtered in memory — which
@@ -63,6 +64,11 @@ export function taglineFor(entity: EntityRow, gate: Gate): string {
   let out = rows[0]?.text ?? '';
   for (const t of rows) if (gate.frontier >= t.sortKey) out = t.text;
   return out;
+}
+
+/** The recap steps as the snapshot resolved them; storySoFar() picks the reached ones. */
+export function recapSteps(entity: EntityRow): RecapStep[] {
+  return ((entity as { recap?: RecapStep[] }).recap ?? []) as RecapStep[];
 }
 
 /* The latest of the System's own descriptions the reader has reached, or null

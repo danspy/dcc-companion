@@ -9,35 +9,17 @@ import { dirname, join } from 'node:path';
 import { parseAt } from './lib/gate.mjs';
 import { lint } from './lib/lint.mjs';
 import { entityVoice, beatVoice } from './lib/voice.mjs';
+import { loadBooks } from './lib/books.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = p => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const checkOnly = process.argv.includes('--check');
 
-const { books, floors, foretold = [] } = read('data/books.json');
-
-/* Chapter counts come from data/chapters.json (npm run chapters:refresh), not
-   from books.json — one source, refreshed on its own schedule. A book with no
-   entry keeps a null count, which switches the chapter dial off for it. */
-const chapterIndex = new Map(read('data/chapters.json').books.map(b => [b.book, b]));
-for (const b of books) {
-  const entry = chapterIndex.get(b.id);
-  b.chapters = entry ? entry.count : null;
-  b.divisions = entry ? entry.divisions : [];
-  b.chapterTitles = entry ? entry.titles : [];
-}
-
-/* Each book's own colour, as published on mattdinniman.com, plus the ink that
-   is readable on it (npm run colors:refresh). A floor takes the colour of the
-   book it is told in — two floors from one book therefore match, which is the
-   honest answer rather than a coincidence to design around. */
-const colorIndex = new Map(read('data/book-colors.json').books.map(c => [c.book, c]));
-for (const b of books) {
-  const c = colorIndex.get(b.id);
-  if (!c) throw new Error(`book ${b.id} has no colour in data/book-colors.json`);
-  b.accent = c.accent;
-  b.ink = c.ink;
-}
+/* Books with their chapter counts and colours (scripts/lib/books.mjs). A floor
+   takes the colour of the book it is told in — two floors from one book
+   therefore match, which is the honest answer rather than a coincidence to
+   design around. */
+const { books, floors, foretold, colorIndex } = loadBooks(root);
 const entities = ['characters', 'items', 'mechanics', 'factions', 'places', 'threads']
   .flatMap(f => read(`data/entities/${f}.json`).entities);
 
@@ -83,11 +65,17 @@ for (const e of entities) {
   const figures = (e.figure ?? []).map(f => ({ look: f.look, at: f.at, sortKey: Math.max(parseAt(f.at), entityAt) }))
     .sort((a, b) => a.sortKey - b.sortKey);
 
+  /* The recap: one paragraph per book, each unsealing at that book's end. The
+     lint has already pinned the shape; this only resolves the key. */
+  const recap = (e.recap ?? []).map(r => ({
+    at: r.at, sortKey: Math.max(parseAt(r.at), entityAt), text: r.text, confidence: r.confidence ?? 'draft',
+  }));
+
   resolvedEntities.push({
     id: e.id, kind: e.kind, name: e.name, aka: e.aka ?? [],
     role: e.role, taglines, revealedAt: e.revealedAt, sort: e.sort ?? 0,
     // voiceNote stays in the curation file: it is guidance, not content.
-    voice: entityVoice(e), descriptions, figures,
+    voice: entityVoice(e), descriptions, figures, recap,
   });
 
   for (const b of e.beats ?? []) {
@@ -99,6 +87,8 @@ for (const e of entities) {
       headline: b.headline, text: b.text, confidence: b.confidence ?? 'draft',
       // Who speaks, already decided, so no view has to know the defaults.
       voice: beatVoice(e, b),
+      // One sentence restating the beat, gated by the beat's own key. Its review state is its own.
+      gist: b.gist ?? null, gistDraft: !!b.gistDraft,
     });
   }
 
@@ -183,11 +173,16 @@ const snapshot = {
 };
 
 const drafts = resolvedBeats.filter(b => b.confidence === 'draft').length;
+const recapSteps = resolvedEntities.reduce((n, e) => n + e.recap.length, 0);
+const recapDrafts = resolvedEntities.reduce((n, e) => n + e.recap.filter(r => r.confidence === 'draft').length, 0);
+const gists = resolvedBeats.filter(b => b.gist).length;
+const gistDrafts = resolvedBeats.filter(b => b.gistDraft).length;
 const chapterTotal = books.reduce((a, b) => a + (b.chapters ?? 0), 0);
 const summary =
   `${books.length} books · ${chapterTotal} chapters · ${floors.length} floors · ` +
   `${resolvedEntities.length} entities · ${resolvedBeats.length} beats (${drafts} draft) · ` +
-  `${resolvedRelations.length} relations · ${snapshot.achievements.length} achievements`;
+  `${resolvedRelations.length} relations · ${snapshot.achievements.length} achievements · ` +
+  `${recapSteps} recap steps (${recapDrafts} draft) · ${gists} gists (${gistDrafts} draft)`;
 
 if (checkOnly) {
   console.log(`\nOK — ${summary}`);

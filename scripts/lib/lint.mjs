@@ -22,6 +22,44 @@ const FORWARD_PHRASE =
 
 const escapeRe = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
+/* Faithfulness. Model-drafted text enters a project where every sentence has
+   been read against the book; the rule that makes that tolerable is that a
+   text may name only what its sources name. A token is a run of letters,
+   digits, apostrophes, and the commas or periods inside a number ("2,145",
+   "1.5"); a possessive drops its 's so "Donut's" names Donut. A capitalised
+   word at the start of a sentence is English, not a name, and is skipped.
+   Like the forward-phrase rule this flags honest sentences now and then, and
+   like it has no exemption list: the sentence is reworded instead. */
+const TOKEN = /[\p{L}\p{N}]+(?:[,.](?=\p{N})[\p{N}]+)*(?:'s)?/gu;
+
+export function tokensOf(text) {
+  const out = new Set();
+  for (const m of (text ?? '').matchAll(TOKEN)) out.add(m[0].replace(/'s$/, ''));
+  return out;
+}
+
+export function faithfulness(text, sources) {
+  const have = new Set();
+  for (const s of sources) for (const t of tokensOf(s)) have.add(t);
+  /* A plural of a name the sources have in the singular is the same name —
+     "Boxes" for a Box, "Biscuits" for a Biscuit — and so is the other way round. */
+  const known = tok => have.has(tok)
+    || (/s$/.test(tok) && (have.has(tok.slice(0, -1)) || (/es$/.test(tok) && have.has(tok.slice(0, -2)))))
+    || have.has(`${tok}s`) || have.has(`${tok}es`);
+  const offending = [];
+  const sentences = (text ?? '').split(/(?<=[.!?…])\s+/);
+  for (const sentence of sentences) {
+    let first = true;
+    for (const m of sentence.matchAll(TOKEN)) {
+      const tok = m[0].replace(/'s$/, '');
+      const checked = /\p{N}/u.test(tok) || (!first && /^\p{Lu}/u.test(tok));
+      first = false;
+      if (checked && !known(tok) && !offending.includes(tok)) offending.push(tok);
+    }
+  }
+  return offending;
+}
+
 export function lint({ books, floors, entities, achievements = [], foretold = [] }) {
   const errors = [];
   const warnings = [];
@@ -208,6 +246,46 @@ export function lint({ books, floors, entities, achievements = [], foretold = []
       });
     }
 
+    /* The recap: a paragraph per book, each telling that book only. A paragraph
+       about a book is a summary of a span and unseals at the span's end, so
+       `at` is always "N:end". A step for a book the entity has no beat in would
+       be a paragraph written from nothing, and two steps for one book is a
+       duplicated list. Steps are born draft; the warning is the work queue. */
+    if (e.recap != null) {
+      if (!Array.isArray(e.recap)) {
+        errors.push(`${where}: recap must be a list of { at, text, confidence }`);
+      } else {
+        const beatBooks = new Set((e.beats ?? []).map(b => b.book));
+        let prevBook = 0;
+        e.recap.forEach((r, i) => {
+          const rw = `${where} recap ${i + 1}`;
+          const rAt = at(r.at, rw);
+          if (rAt === null) return;
+          if (rAt % 1000 !== 999) { errors.push(`${rw}: "${r.at}" is not a book's end — a recap is a summary of a span`); return; }
+          const book = bookOf(rAt);
+          if (book === prevBook) errors.push(`${rw}: a second step for book ${book}`);
+          else if (book < prevBook) errors.push(`${rw}: book ${book} comes after book ${prevBook} in the list`);
+          prevBook = Math.max(prevBook, book);
+          if (!beatBooks.has(book)) errors.push(`${rw}: book ${book} has no beat of ${e.id} to recap`);
+          if (rAt < entityAt) errors.push(`${rw}: unseals at "${r.at}", before the entity itself ("${e.revealedAt}")`);
+          if (!r.text) errors.push(`${rw}: no text`);
+          if (!VALID_CONFIDENCE.has(r.confidence ?? 'draft')) errors.push(`${rw}: confidence must be "verified" or "draft"`);
+          checkForward(r.text, rAt, rw);
+          /* Faithfulness: the step's sources are this book's beats, and the
+             taglines, descriptions, name and aliases open at its gate. */
+          const sources = [
+            e.name, ...aliasesOf(e).map(a => a.name),
+            ...(e.beats ?? []).filter(b => b.book === book).flatMap(b => [b.headline, b.text]),
+            ...(Array.isArray(taglines) ? taglines : []).filter(t => (at(t.at, rw) ?? Infinity) <= rAt).map(t => t.text),
+            ...(Array.isArray(descriptions) ? descriptions : []).filter(d => (at(d.at, rw) ?? Infinity) <= rAt).map(d => d.text),
+          ];
+          const off = faithfulness(r.text, sources);
+          if (off.length) errors.push(`${rw}: names ${off.map(t => `"${t}"`).join(', ')}, which none of its sources do`);
+          if ((r.confidence ?? 'draft') === 'draft') warnings.push(`draft recap — ${e.id}: book ${book}`);
+        });
+      }
+    }
+
     for (const b of e.beats ?? []) {
       const bw = `${where} beat "${b.headline}"`;
       if (!VALID_BEATS.has(b.kind)) errors.push(`${bw}: unknown beat kind "${b.kind}"`);
@@ -256,6 +334,19 @@ export function lint({ books, floors, entities, achievements = [], foretold = []
       }
       /* A beat may not name something the reader has not met yet either. */
       checkForward(b.text, beatAt, `${bw}`);
+
+      /* A gist is one sentence restating the beat, gated by the beat's own key.
+         Its review state is its own: a drafted gist on a verified beat does not
+         make the beat draft. */
+      if (b.gist != null) {
+        if (!b.gist.trim()) errors.push(`${bw} gist: empty`);
+        else {
+          checkForward(b.gist, Math.max(beatAt, entityAt), `${bw} gist`);
+          const off = faithfulness(b.gist, [e.name, ...aliasesOf(e).map(a => a.name), b.headline, b.text]);
+          if (off.length) errors.push(`${bw} gist: names ${off.map(t => `"${t}"`).join(', ')}, which none of its sources do`);
+        }
+        if (b.gistDraft) warnings.push(`draft gist — ${e.id}: ${b.headline}`);
+      }
 
       if ((b.confidence ?? 'draft') === 'draft') {
         warnings.push(`draft — ${e.id}: ${b.headline}`);

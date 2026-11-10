@@ -106,6 +106,10 @@ const Entity = defineTable({
     /* A character's figure, a look per stretch of the story, gated like
        taglines: [{ look, at, sortKey }], ascending (src/lib/voxel/figures). */
     figures: column.json({ default: [] }),
+    /* The recap: one paragraph per book the entity has a beat in, each telling
+       that book only and unsealing at its end — a summary of a span, gated at
+       the end of the span. [{ at, sortKey, text, confidence }], ascending. */
+    recap: column.json({ default: [] }),
   },
 });
 
@@ -126,6 +130,11 @@ const Beat = defineTable({
     text: column.text(),
     confidence: column.text({ default: 'draft' }),    // verified | draft
     voice: column.text({ default: 'narrator' }),      // self | system | narrator, resolved in the build
+    /* One sentence restating the beat in the narrator's third person, gated by
+       the beat's own sortKey. gistDraft is its own review state: a drafted gist
+       on a verified beat does not make the beat draft. */
+    gist: column.text({ optional: true }),
+    gistDraft: column.boolean({ default: false }),
   },
 });
 

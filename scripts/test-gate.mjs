@@ -1,9 +1,11 @@
 import test from 'node:test';
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { parseAt, describeAt, bookOf, END_OF_BOOK, CHAPTER_STRIDE } from './lib/gate.mjs';
-import { lint } from './lib/lint.mjs';
+import { lint, faithfulness, tokensOf } from './lib/lint.mjs';
 import { entityVoice, beatVoice, VOICES } from './lib/voice.mjs';
 import { toEdition, editionCount, unsummarised, tagToEdition } from './lib/edition.mjs';
+import { storySoFar } from '../src/lib/story.ts';
 
 test('reveal tags parse to a total order', () => {
   assert.equal(parseAt('4'), 4000);
@@ -916,4 +918,184 @@ test('book 5 counts in the edition\'s chapters, and the map never runs backwards
   assert.equal(tagToEdition('5:end'), '5:end');
   assert.equal(tagToEdition('5'), '5');
   assert.equal(tagToEdition('6:77'), '6:77');
+});
+
+/* ---------------------------------------------------------------------------
+   The recap: a paragraph per book at the book's end, and a gist per beat.
+   --------------------------------------------------------------------------- */
+
+const recapBooks = [{ id: 1, title: 'One', chapters: 47 }, { id: 2, title: 'Two', chapters: 25 }];
+const recapEntity = (recap, beats) => ({
+  id: 'x', kind: 'character', name: 'Xan', role: 'r', tagline: 't', revealedAt: '1:1', voice: 'system',
+  beats: beats ?? [{ kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', confidence: 'verified' }],
+  recap,
+});
+const recapLint = (recap, beats) => lint({ books: recapBooks, floors: [], entities: [recapEntity(recap, beats)] });
+
+test('a recap step must be gated at the end of its book', () => {
+  const { errors } = recapLint([{ at: '1:12', text: 'Xan arrives.', confidence: 'draft' }]);
+  assert.ok(errors.some(e => /recap 1: "1:12" is not a book's end/.test(e)), errors.join('\n'));
+  assert.equal(recapLint([{ at: '1:end', text: 'Xan arrives.', confidence: 'draft' }]).errors.length, 0);
+});
+
+test('one recap step per book, in order, and only for a book with a beat', () => {
+  const two = recapLint([
+    { at: '1:end', text: 'Xan arrives.', confidence: 'draft' },
+    { at: '1:end', text: 'Xan arrives again.', confidence: 'draft' },
+  ]);
+  assert.ok(two.errors.some(e => /recap 2: a second step for book 1/.test(e)), two.errors.join('\n'));
+  const empty = recapLint([{ at: '2:end', text: 'Xan rests.', confidence: 'draft' }]);
+  assert.ok(empty.errors.some(e => /recap 1: book 2 has no beat of x to recap/.test(e)), empty.errors.join('\n'));
+});
+
+test('a recap step before its entity, or with no text, or an unknown confidence, is an error', () => {
+  const late = recapLint([{ at: '1:end', text: 'Xan arrives.', confidence: 'draft' }], [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', confidence: 'verified' },
+  ]);
+  assert.equal(late.errors.length, 0);
+  const e2 = lint({ books: recapBooks, floors: [], entities: [{ ...recapEntity([{ at: '1:end', text: 'Xan.', confidence: 'draft' }]), revealedAt: '2:1',
+    beats: [{ kind: 'arc', book: 2, at: '2:3', headline: 'h', text: 'Xan.', confidence: 'verified' }] }] });
+  assert.ok(e2.errors.some(e => /recap 1: unseals at "1:end", before the entity itself/.test(e)), e2.errors.join('\n'));
+  assert.ok(recapLint([{ at: '1:end', text: '', confidence: 'draft' }]).errors.some(e => /recap 1: no text/.test(e)));
+  assert.ok(recapLint([{ at: '1:end', text: 'Xan.', confidence: 'maybe' }]).errors.some(e => /recap 1: confidence must be/.test(e)));
+});
+
+test('recap and gist text obey the forward rules, and a blank gist is an error', () => {
+  const fwd = recapLint([{ at: '1:end', text: 'Xan arrives and later dies.', confidence: 'draft' }]);
+  assert.ok(fwd.errors.some(e => /recap 1: "later" points past/.test(e)), fwd.errors.join('\n'));
+  const gist = recapLint(undefined, [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: 'Xan arrives, and ends up dead.', confidence: 'verified' },
+  ]);
+  assert.ok(gist.errors.some(e => /beat "h" gist: "ends up" points past/.test(e)), gist.errors.join('\n'));
+  const blank = recapLint(undefined, [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: '', confidence: 'verified' },
+  ]);
+  assert.ok(blank.errors.some(e => /beat "h" gist: empty/.test(e)), blank.errors.join('\n'));
+});
+
+test('draft recaps and draft gists are warnings, which is the work queue', () => {
+  const { warnings } = recapLint([{ at: '1:end', text: 'Xan arrives.', confidence: 'draft' }], [
+    { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: 'Xan arrives.', gistDraft: true, confidence: 'verified' },
+  ]);
+  assert.ok(warnings.some(w => w === 'draft recap — x: book 1'), warnings.join('\n'));
+  assert.ok(warnings.some(w => w === 'draft gist — x: h'), warnings.join('\n'));
+});
+
+test('a text may name only what its sources name', () => {
+  const src = ['The stairwell drops us into a sandstorm and an achievement. The Quarry pays 2,145 gold.', 'Every bounty on me, doubled'];
+  assert.deepEqual(faithfulness('The stairwell drops them into a sandstorm; the Quarry pays 2,145 gold.', src), []);
+  assert.deepEqual(faithfulness('The cat Donut watches from the Quarry.', src), ['Donut']);
+  assert.deepEqual(faithfulness('The Quarry pays 2145 gold.', src), ['2145']);
+  assert.deepEqual(faithfulness('He wins 1.5 million.', src), ['1.5']);
+});
+
+test('a sentence-initial capital is not a name, and a possessive still counts as the name', () => {
+  assert.deepEqual(faithfulness('Stairwells drop. Sandstorms follow.', ['the stairwell and the sandstorm']), []);
+  assert.deepEqual(faithfulness("Carl finds Donut's biscuit.", ["Donut's biscuit is in Carl's pocket"]), []);
+  assert.deepEqual(faithfulness('He meets Mordecai-the-guide.', ['Mordecai is the guide']), []);
+  assert.ok(tokensOf("Donut's 2,145 Quarry-side").has('Donut'));
+  assert.ok(tokensOf("Donut's 2,145 Quarry-side").has('2,145'));
+  assert.ok(tokensOf("Donut's 2,145 Quarry-side").has('Quarry'));
+});
+
+test('the lint fails a recap or a gist that names what its sources do not', () => {
+  const { errors } = lint({ books: recapBooks, floors: [], entities: [{
+    ...recapEntity([{ at: '1:end', text: 'Xan arrives with Bea.', confidence: 'draft' }], [
+      { kind: 'arc', book: 1, at: '1:3', headline: 'h', text: 'Xan arrives.', gist: 'Xan arrives at Meadow Lark.', confidence: 'verified' },
+    ]),
+  }] });
+  assert.ok(errors.some(e => /recap 1: names "Bea", which none of its sources do/.test(e)), errors.join('\n'));
+  assert.ok(errors.some(e => /beat "h" gist: names "Meadow", "Lark", which none of its sources do/.test(e)), errors.join('\n'));
+});
+
+test('a recap may draw on taglines and descriptions reached by its gate, and on the name and aliases', () => {
+  const ent = {
+    ...recapEntity([{ at: '1:end', text: 'Xan, the Coast Guard man, arrives.', confidence: 'draft' }]),
+    aka: ['Xan the Bold'],
+    tagline: [{ at: '1:1', text: 'A Coast Guard man.' }, { at: '2:end', text: 'A Navy man now.' }],
+  };
+  const ok = lint({ books: recapBooks, floors: [], entities: [ent] });
+  assert.equal(ok.errors.filter(e => /none of its sources/.test(e)).length, 0, ok.errors.join('\n'));
+  const bad = lint({ books: recapBooks, floors: [], entities: [{ ...ent, recap: [{ at: '1:end', text: 'Xan the Navy man arrives.', confidence: 'draft' }] }] });
+  assert.ok(bad.errors.some(e => /recap 1: names "Navy"/.test(e)), 'a tagline past the step\'s gate is not a source');
+});
+
+test('the snapshot carries recap steps and gists in resolved form', () => {
+  const snap = JSON.parse(readFileSync(new URL('../data/content.snapshot.json', import.meta.url), 'utf8'));
+  for (const e of snap.entities) {
+    assert.ok(Array.isArray(e.recap), `${e.id}: recap is a list`);
+    for (const r of e.recap) {
+      assert.equal(typeof r.sortKey, 'number');
+      assert.equal(r.sortKey % 1000, 999, `${e.id}: a recap step sits at a book's end`);
+      assert.ok(['verified', 'draft'].includes(r.confidence));
+    }
+  }
+  for (const b of snap.beats) {
+    assert.ok('gist' in b && 'gistDraft' in b, `${b.entityId} "${b.headline}": gist fields present`);
+    assert.equal(typeof b.gistDraft, 'boolean');
+  }
+});
+
+/* ---------------------------------------------------------------------------
+   storySoFar: the one composition rule for "the story so far".
+   --------------------------------------------------------------------------- */
+
+const steps = [{ sortKey: 1999, text: 'Book one.', confidence: 'verified' }, { sortKey: 3999, text: 'Book three.', confidence: 'draft' }];
+const sbeat = (sortKey, headline, gist) => ({ sortKey, book: Math.floor(sortKey / 1000), chapter: sortKey % 1000, headline, gist: gist ?? null });
+const sbeats = [sbeat(1003, 'h1', 'Gist one.'), sbeat(3002, 'h3'), sbeat(4001, 'h4a', 'Four a.'), sbeat(4002, 'h4b', 'Four b.'),
+  sbeat(4005, 'h4e', 'Four e.'), sbeat(4006, 'h4f', 'Four f.'), sbeat(4009, 'h4i', 'Four i.')];
+
+test('storySoFar lists every reached book paragraph and the current book to the cut', () => {
+  const s = storySoFar(steps, sbeats, 4006, { cut: 4005 });
+  assert.deepEqual(s.books.map(b => b.book), [1, 3]);
+  assert.equal(s.books[1].draft, true);
+  assert.equal(s.current.book, 4);
+  assert.deepEqual(s.current.lines.map(l => l.text), ['Four a.', 'Four b.', 'Four e.']);
+  assert.equal(s.current.thisChapter, 1, 'the beat at 4:6 is counted, not shown');
+  assert.deepEqual(s.sealed, { count: 1, nextKey: 4009 });
+});
+
+test('on the site the cut is the frontier, so the current chapter is listed and nothing is counted', () => {
+  const s = storySoFar(steps, sbeats, 4006);
+  assert.deepEqual(s.current.lines.map(l => l.text), ['Four a.', 'Four b.', 'Four e.', 'Four f.']);
+  assert.equal(s.current.thisChapter, 0);
+});
+
+test('a finished book has its paragraph and no current list; a reader before any recap gets lines only', () => {
+  const done = storySoFar(steps, sbeats, 3999);
+  assert.deepEqual(done.books.map(b => b.book), [1, 3]);
+  assert.equal(done.current, null);
+  const early = storySoFar(steps, sbeats, 1005);
+  assert.deepEqual(early.books, []);
+  assert.deepEqual(early.current.lines.map(l => l.text), ['Gist one.']);
+});
+
+test('a beat with no gist is listed by its headline, and long lists fold', () => {
+  const s = storySoFar([], sbeats, 3002);
+  assert.deepEqual(s.current.lines.map(l => l.text), ['h3']);
+  const many = Array.from({ length: 12 }, (_, i) => sbeat(5001 + i, `h${i}`, `g${i}`));
+  const folded = storySoFar([], many, 5020, { max: 8 });
+  assert.equal(folded.current.lines.length, 8);
+  assert.equal(folded.current.earlier, 4);
+  assert.equal(folded.current.lines[0].text, 'g4');
+});
+
+test('a current book with no beat yet is an empty list, not nothing', () => {
+  const s = storySoFar(steps, [sbeat(1003, 'h1', 'g'), sbeat(4009, 'h4i', 'g')], 4001);
+  assert.deepEqual(s.current, { book: 4, lines: [], earlier: 0, thisChapter: 0 });
+  assert.deepEqual(s.sealed, { count: 1, nextKey: 4009 });
+});
+
+test('no position means no story', () => {
+  const s = storySoFar(steps, sbeats, 0);
+  assert.deepEqual(s.books, []);
+  assert.equal(s.current, null);
+});
+
+test('a plural of a name the sources have in the singular is the same name', () => {
+  assert.deepEqual(faithfulness('He opens three Boxes and eats two Biscuits.', ['a Gold Box', 'an Enhanced Pet Biscuit']), []);
+  assert.deepEqual(faithfulness('He meets the Nagas.', ['a Naga']), []);
+  assert.deepEqual(faithfulness('He meets the Nagas.', ['a Nagas']), [], 'and the other way round');
+  assert.deepEqual(faithfulness('He meets Bea.', ['Beas']), [], 'a singular of a plural source');
+  assert.deepEqual(faithfulness('He meets Ben.', ['Bea']), ['Ben'], 'but not a different word');
 });
