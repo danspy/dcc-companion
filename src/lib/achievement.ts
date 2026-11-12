@@ -332,6 +332,15 @@ export function buildMessages(deed: string, lore: LoreEntry[], tier: Tier) {
 const env = (name: string): string | undefined =>
   process.env[name] ?? (import.meta as { env?: Record<string, string> }).env?.[name];
 
+/* Two providers, one model. OpenRouter is used when its key is set: Ollama Cloud
+   dropped its free tier in November 2026. Gemma 4 31B is tried on OpenRouter's
+   free pool first and falls through to the paid copy of the same weights
+   (fractions of a cent a report) when Google's shared pool is rate-limited,
+   which it often is — the voice stays the one that was benched, whichever
+   route answers. Ollama remains for a deploy that only has that key. */
+const OPENROUTER_MODELS = (env('OPENROUTER_MODELS') ?? 'google/gemma-4-31b-it:free,google/gemma-4-31b-it')
+  .split(',').map(s => s.trim()).filter(Boolean);
+
 const ENDPOINT = env('OLLAMA_HOST') ?? 'https://ollama.com';
 /* Benched against every model this key can reach, on the one thing that is
    hard here: holding a voice. gpt-oss:120b and nemotron-3-super both keep
@@ -341,15 +350,45 @@ const ENDPOINT = env('OLLAMA_HOST') ?? 'https://ollama.com';
    else in this file assumes a particular model. */
 const MODEL = env('OLLAMA_MODEL') ?? 'gemma4:31b';
 
+/** True when some provider has a key; without one the desk is offline. */
+const hasKey = () => Boolean(env('OPENROUTER_API_KEY') || env('OLLAMA_API_KEY'));
+
 /** Some models answer JSON mode inside a fenced block anyway. */
 function parseReply(raw: string): Partial<Grant> {
   const body = raw.trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
   return JSON.parse(body);
 }
 
+async function askOpenRouter(key: string, messages: unknown[], signal: AbortSignal): Promise<Partial<Grant>> {
+  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    signal,
+    headers: {
+      Authorization: `Bearer ${key}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': 'https://crawlers-companion.info',
+      'X-Title': "Crawler's Companion",
+    },
+    body: JSON.stringify({
+      models: OPENROUTER_MODELS,
+      response_format: { type: 'json_object' },
+      reasoning: { exclude: true },
+      temperature: 1.0,
+      top_p: 0.95,
+      messages,
+    }),
+  });
+  if (!res.ok) throw new SystemOffline(`openrouter ${res.status}`);
+  const body = await res.json();
+  return parseReply(body?.choices?.[0]?.message?.content ?? '');
+}
+
 async function ask(messages: unknown[], signal: AbortSignal): Promise<Partial<Grant>> {
+  const routerKey = env('OPENROUTER_API_KEY');
+  if (routerKey) return askOpenRouter(routerKey, messages, signal);
+
   const key = env('OLLAMA_API_KEY');
-  if (!key) throw new SystemOffline('OLLAMA_API_KEY is not set');
+  if (!key) throw new SystemOffline('neither OPENROUTER_API_KEY nor OLLAMA_API_KEY is set');
 
   const res = await fetch(`${ENDPOINT}/api/chat`, {
     method: 'POST',
@@ -496,7 +535,7 @@ export async function grantAchievement(opts: {
       return { grant, screened, attempts: attempt };
     } catch (e) {
       /* A missing key is fatal and retrying it just wastes the reader's time. */
-      if (e instanceof SystemOffline && !env('OLLAMA_API_KEY')) throw e;
+      if (e instanceof SystemOffline && !hasKey()) throw e;
       last = e as Error;
     } finally {
       clearTimeout(timer);

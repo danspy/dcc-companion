@@ -677,7 +677,9 @@ test('a style blemish is not a leak, and must not cost the reader the award', ()
 test('a candidate naming something sealed never reaches the reader', async () => {
   const realFetch = globalThis.fetch;
   const realKey = process.env.OLLAMA_API_KEY;
+  const realRouterKey = process.env.OPENROUTER_API_KEY;
   process.env.OLLAMA_API_KEY = 'test-key';
+  delete process.env.OPENROUTER_API_KEY;
 
   const reply = grant => ({
     ok: true,
@@ -710,6 +712,38 @@ test('a candidate naming something sealed never reaches the reader', async () =>
     globalThis.fetch = realFetch;
     if (realKey === undefined) delete process.env.OLLAMA_API_KEY;
     else process.env.OLLAMA_API_KEY = realKey;
+    if (realRouterKey !== undefined) process.env.OPENROUTER_API_KEY = realRouterKey;
+  }
+});
+
+/* OpenRouter is preferred when its key is set, asks for the free Gemma first
+   with the paid copy of the same model behind it, and is read in the
+   OpenAI shape. Stubbed like the test above: no network, no key. */
+test('with an OpenRouter key the desk asks OpenRouter, free model first', async () => {
+  const realFetch = globalThis.fetch;
+  const realRouterKey = process.env.OPENROUTER_API_KEY;
+  process.env.OPENROUTER_API_KEY = 'test-router-key';
+  let sent;
+  try {
+    globalThis.fetch = async (url, init) => {
+      sent = { url: String(url), init, body: JSON.parse(init.body) };
+      return { ok: true, json: async () => ({ choices: [{ message: { content: JSON.stringify({
+        title: 'Toast Arsonist', citation: 'You burned it, and the sponsors saw.', reward: '-1 Cooking',
+      }) } }] }) };
+    };
+    const { grant } = await achievement.grantAchievement({
+      deed: 'burned the toast', lore: [], entities: [], floors: [],
+      frontier: parseAt('1:5'), tier: TIERS[0], attempts: 1,
+    });
+    assert.equal(grant.title, 'Toast Arsonist');
+    assert.equal(sent.url, 'https://openrouter.ai/api/v1/chat/completions');
+    assert.equal(sent.init.headers.Authorization, 'Bearer test-router-key');
+    assert.deepEqual(sent.body.models, ['google/gemma-4-31b-it:free', 'google/gemma-4-31b-it']);
+    assert.equal(sent.body.response_format.type, 'json_object');
+  } finally {
+    globalThis.fetch = realFetch;
+    if (realRouterKey === undefined) delete process.env.OPENROUTER_API_KEY;
+    else process.env.OPENROUTER_API_KEY = realRouterKey;
   }
 });
 

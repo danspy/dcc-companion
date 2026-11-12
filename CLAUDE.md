@@ -2339,7 +2339,7 @@ empty every time and never refused anyone. As a module it works — and behind C
 loopback, so keyed on `clientAddress` it would have been one bucket for the whole world. It is
 keyed with `clientKey()` (`src/lib/client-address.ts`): the last hop of `X-Forwarded-For` when the
 peer is local, the peer itself when it is not. The app's position goes through `prefsFrom()`, the same
-clamps a cookie does. The Ollama key never leaves the server.
+clamps a cookie does. The model key never leaves the server.
 
 `APP_SCHEMA` and the app's `Library.schema` are one number written twice. Changing the export's
 shape means bumping both; an older build then says it needs updating instead of misreading.
@@ -2518,9 +2518,11 @@ puts it on. Treat an anchor as a proposal and read the surrounding summary befor
 - **TailwindCSS v4** via `@tailwindcss/vite`; tokens + component layer in `src/styles/global.css`
 - **HTTPS in dev** — `basicSsl` + `security: { checkOrigin: false }` (both, always — the origin
   check rejects cross-site POSTs from the self-signed dev origin)
-- **Ollama** for `/achievement`, and nothing else — one `fetch` to `/api/chat`, no SDK.
-  `OLLAMA_API_KEY` in `.env` locally and in `/etc/dcc-companion.env` on the box; the key is
-  the only secret this project has. Without it every other page is unaffected and that one
+- **OpenRouter** for `/achievement` (and the app's `/app/achievement.json`), and nothing else —
+  one `fetch` to `/api/v1/chat/completions`, no SDK, `models` = Gemma 4 31B free then paid
+  (`OPENROUTER_MODELS` overrides). Ollama Cloud dropped its free tier in 2026-11 and is only the
+  fallback when no `OPENROUTER_API_KEY` is set. The key sits in `.env` locally and in
+  `/etc/dcc-companion.env` on the box; it is the only secret this project has. Without it every other page is unaffected and that one
   degrades in character.
 - Fonts self-hosted via `@fontsource`
 
@@ -2622,7 +2624,7 @@ Push to `main` deploys. `.github/workflows/deploy.yml` runs two jobs:
 **Nothing on the server is worth preserving.** There is no user database — reading position lives
 in the reader's own `dcc_pos` cookie, and `data/dcc.db` holds only content, re-seeded from the
 committed snapshot on every build. The one thing on the box that is not in the repo is
-`/etc/dcc-companion.env`, which holds the Ollama key; it sits outside the working copy precisely
+`/etc/dcc-companion.env`, which holds the model key; it sits outside the working copy precisely
 so `git reset --hard` cannot take it. So there is no backup/verify/restore dance around the build,
 which is most of what `mcu-timeline`'s workflow does. If that changes — if accounts land — this
 workflow has to grow that dance too, and `src/lib/prefs.ts` is where it would start.
@@ -2635,7 +2637,7 @@ workflow has to grow that dance too, and `src/lib/prefs.ts` is where it would st
 | working copy | `/srv/previews/dcc-companion` (a clone of `origin/main`) |
 | reverse proxy | `crawlers-companion.info` → `127.0.0.1:4336` in `/etc/caddy/Caddyfile`; `www.` and `dcc.dev.innovativstud.io` redirect to it |
 | DNS | `crawlers-companion.info` and `www` A → `91.99.148.198`, at United Domains |
-| Ollama key | `/etc/dcc-companion.env`, read by the unit's `EnvironmentFile=-` (optional by design) |
+| model key | `OPENROUTER_API_KEY` in `/etc/dcc-companion.env`, read by the unit's `EnvironmentFile=-` (optional by design) |
 | deploy key | `~/.ssh/dcc-companion-deploy`, public half in `authorized_keys` |
 | repo secrets | `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_KEY` |
 
