@@ -371,6 +371,10 @@ async function askOpenRouter(key: string, messages: unknown[], signal: AbortSign
     },
     body: JSON.stringify({
       models: OPENROUTER_MODELS,
+      /* Some of the many hosts of these weights hang for the whole timeout,
+         and the cheapest run fp4. The price spread is a fraction of a cent, so
+         route by latency and keep to full-quality weights. */
+      provider: { sort: 'latency', quantizations: ['bf16', 'fp8'] },
       response_format: { type: 'json_object' },
       reasoning: { exclude: true },
       temperature: 1.0,
